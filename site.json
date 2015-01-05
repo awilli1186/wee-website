@@ -1,0 +1,280 @@
+{
+	"name": "Wee",
+	"description": "Project style guide description.",
+	"config": {
+		"watch": true,
+		"minify": true,
+		"typographer": true,
+		"paths": {
+			"templates": "templates",
+			"partials": "partials",
+			"extensions": "extensions"
+		}
+	},
+	"env": {
+		"prod": {
+			"cdnUrl": "https://www.weepower.com",
+			"assetUrl": "https://www.weepower.com/assets"
+		},
+		"default": {
+			"cdnUrl": "",
+			"assetUrl": "/assets"
+		}
+	},
+	"data": {
+		"version": "2.1.0",
+		"twitter": "weecss",
+		"googlePageID": "+weecss",
+		"analyticsID": "UA-40595891-1",
+		"gitHubRoot": "https://github.com/weepower/wee/tree/master"
+	},
+	"sections": {
+		"home": {
+			"name": "Homepage",
+			"data": {
+				"excludeNav": true
+			},
+			"template": "index",
+			"target": "public_html/index.html",
+			"content": "content/home/body.md"
+		},
+		"blog": {
+			"name": "Blog",
+			"data": {
+				"excludeNav": true
+			},
+			"template": "docs",
+			"target": "public_html/blog/{{name|slug}}.html",
+			"content": "content/blog/*.md"
+		},
+		"start": {
+			"name": "Get Started",
+			"data": {
+				"seoTitle": "Get Started",
+				"seoDesc": ""
+			},
+			"template": "docs",
+			"target": "public_html/start/index.html",
+			"content": [
+				"content/start/intro.md",
+				"content/start/features.md",
+				"content/start/installation.md",
+				"content/start/compatibility.md",
+				"content/start/bugs.md",
+				"content/start/versioning.md",
+				"content/start/community.md",
+				"content/start/license.md"
+			],
+			"sections": {
+				"structure": {
+					"name": "Structure",
+					"data": {
+						"seoTitle": "Structure",
+						"seoDesc": ""
+					},
+					"template": "docs",
+					"target": "public_html/start/structure.html",
+					"content": [
+						"content/start/structure/intro.md",
+						"content/start/structure/*.md"
+					]
+				},
+				"compiling": {
+					"name": "Compiling",
+					"template": "docs",
+					"target": "public_html/start/compiling.html",
+					"content": [
+						"content/start/compiling/intro.md",
+						"content/start/compiling/*.md"
+					]
+				},
+				"markup": {
+					"name": "Markup",
+					"template": "docs",
+					"target": "public_html/start/markup.html",
+					"content": [
+						"content/start/markup/intro.md",
+						"content/start/markup/html5.md",
+						"content/start/markup/doctype.md",
+						"content/start/markup/meta.md",
+						"content/start/markup/icons.md",
+						"content/start/markup/publisher.md",
+						"content/start/markup/twitter.md",
+						"content/start/markup/opengraph.md",
+						"content/start/markup/legacy.md",
+						"content/start/markup/*.md"
+					]
+				}
+			}
+		},
+		"build": {
+			"name": "Build",
+			"template": "docs",
+			"target": "public_html/build/index.html",
+			"content": [
+				"content/build/*.md"
+			],
+			"sections": {
+				"validation": {
+					"name": "Validation",
+					"template": "docs",
+					"target": "public_html/build/validation.html",
+					"content": [
+						"build/validation/*.md"
+					]
+				}
+			}
+		},
+		"generator": {
+			"name": "Generator",
+			"template": "docs",
+			"target": "public_html/generator/index.html",
+			"content": [
+				"content/generator/*.md"
+			],
+			"sections": {
+				"config": {
+					"name": "Config",
+					"template": "docs",
+					"target": "public_html/generator/config.html",
+					"content": [
+						"build/generator/config/*.md"
+					]
+				}
+			}
+		},
+		"style": {
+			"name": "Style",
+			"template": "docs",
+			"target": "public_html/style/index.html",
+			"content": [
+				"content/style/intro.md",
+				"content/style/reset.md",
+				"content/style/print.md",
+				"content/style/legacy.md"
+			],
+			"sections": {
+				"variables": {
+					"name": "Variables",
+					"template": "docs",
+					"target": "public_html/style/variables.html",
+					"content": [
+						"content/style/variables/intro.md",
+						"content/style/variables/base.md",
+						"content/style/variables/*.md"
+					]
+				},
+				"mixins": {
+					"name": "Mixins",
+					"template": "docs",
+					"target": "public_html/style/mixins.html",
+					"content": [
+						"content/style/mixins/*.md"
+					]
+				},
+				"classes": {
+					"name": "Classes",
+					"template": "docs",
+					"target": "public_html/style/classes.html",
+					"content": [
+						"content/style/classes/intro.md",
+						"content/style/classes/*.md"
+					]
+				}
+			}
+		},
+		"script": {
+			"name": "Script",
+			"template": "docs",
+			"target": "public_html/script/index.html",
+			"content": [
+				"content/script/intro.md",
+				"content/script/*.md"
+			],
+			"sections": {
+				"core": {
+					"name": "Core",
+					"data": {
+						"seoTitle": "Core Script",
+						"seoDesc": "Wee includes a foundation of utilities, helpers, and module structure."
+					},
+					"template": "docs",
+					"target": "public_html/script/core.html",
+					"content": [
+						"content/script/core/intro.md",
+						"content/script/core/fn.make.md",
+						"content/script/core/fn.extend.md",
+						"content/script/core/$set.md",
+						"content/script/core/$get.md",
+						"content/script/core/*.md"
+					]
+				},
+				"assets": {
+					"name": "Assets",
+					"template": "docs",
+					"target": "public_html/script/assets.html",
+					"content": [
+						"content/script/assets/*.md"
+					]
+				},
+				"data": {
+					"name": "Data",
+					"template": "docs",
+					"target": "public_html/script/data.html",
+					"content": [
+						"content/script/data/*.md"
+					]
+				},
+				"dom": {
+					"name": "DOM",
+					"template": "docs",
+					"target": "public_html/script/dom.html",
+					"content": [
+						"content/script/dom/*.md"
+					]
+				},
+				"events": {
+					"name": "Events",
+					"template": "docs",
+					"target": "public_html/script/events.html",
+					"content": [
+						"content/script/events/*.md"
+					]
+				},
+				"routes": {
+					"name": "Routes",
+					"template": "docs",
+					"target": "public_html/script/routes.html",
+					"content": [
+						"content/script/routes/*.md"
+					]
+				},
+				"screen": {
+					"name": "Screen",
+					"template": "docs",
+					"target": "public_html/script/screen.html",
+					"content": [
+						"content/script/screen/*.md"
+					]
+				},
+				"view": {
+					"name": "View",
+					"template": "docs",
+					"target": "public_html/script/view.html",
+					"content": [
+						"content/script/assets/*.md"
+					]
+				},
+				"polyfills": {
+					"name": "Polyfills",
+					"template": "docs",
+					"target": "public_html/script/polyfills.html",
+					"content": [
+						"content/script/polyfills/intro.md",
+						"content/script/polyfills/*.md"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,72 @@
+---
+name: Files
+---
+
+<div class="collapsible">
+
+* .csscomb.json
+* .csslintrc
+* .editorconfig
+* .gitattributes
+* .gitignore
+* .jscs.json
+* .jshintrc
+* Gruntfile.js
+* package.json
+* project.json
+* public
+	* .htaccess
+	* 404.html
+	* browserconfig.xml
+	* favicon.ico
+	* humans.txt
+	* index.html
+	* robots.txt
+	* share.png
+	* tileicon.png
+	* tileicon-wide.png
+	* touchicon.png
+	* assets/
+		* css/
+			* build/
+				* vendor/
+			* custom/
+				* mixins.less
+				* print.less
+				* screen.less
+				* variables.less
+				* breakpoints/
+					* desktop-large.less
+					* desktop-medium.less
+					* desktop-small.less
+					* mobile-tablet.less
+					* tablet-portrait.less
+			* lib/
+				* vendor/
+		* fonts/
+		* guide/
+		* img/
+		* js/
+			* build/
+				* vendor/
+			* custom/
+				* script.js
+			* lib/
+				* vendor/
+			* polyfill/
+				* es5-shim.js
+				* html5shiv.js
+				* sizzle.js
+				* wee.placeholder.js
+				* wee.slice.js
+				* wee.svg.js
+		* modules/
+		* wee/
+			* build/
+			* maps/
+			* script/
+			* style/
+			* temp/
+			* tests/
+
+</div>

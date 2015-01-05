@@ -1,0 +1,120 @@
+{{> header}}
+<body class="page">
+<div class="canvas-outer">
+	<div class="canvas-inner">
+		<header role="banner" class="scrollable sidebar" data-ref="scroll">
+			<div class="viewport">
+				<div class="overview js-overview">
+					<a href="/" rel="home" class="logo">
+						<img src="{{site.assetUrl}}/img/wee.svg" alt="Wee Framework">
+					</a>
+					{{#site.sections}}
+						{{#data.excludeNav|isEmpty}}
+						<h3><a href="/{{$key}}/"{{#active|notEmpty}} class="active"{{/active}}>{{name}}</a></h3>
+						<ul>
+							{{#sections}}
+							<li><a href="/{{../$key}}/{{$key}}"{{#active|notEmpty}} class="active"{{/active}}>{{name}}</a></li>
+							{{/sections}}
+						</ul>
+						{{/data.excludeNav}}
+					{{/site.sections}}
+				</div>
+			</div>
+			<div class="scrollbar">
+				<div class="track">
+					<div class="thumb"></div>
+				</div>
+			</div>
+		</header>
+		<div class="scrollable subnav" data-ref="scroll subnav">
+			<div class="viewport">
+				<div class="overview js-overview">
+					<h3>Contents</h3>
+					<ul>
+						{{#content}}
+						{{#intro|isEmpty}}
+						<li><a href="#{{name|slug}}">{{name}}</a></li>
+						{{/intro}}
+						{{/content}}
+					</ul>
+				</div>
+			</div>
+			<div class="scrollbar">
+				<div class="track">
+					<div class="thumb"></div>
+				</div>
+			</div>
+		</div>
+		<div class="container primary" data-ref="primary">
+			<div class="mobile-nav" data-ref="mobileNav">&#9776;</div>
+			<main role="main">
+				<ol itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumb">
+					<li><a href="/" rel="home" itemprop="url"><span itemprop="title">Home</span></a></li>
+					{{#parent|notEmpty}}<li><a href="{{parent}}" rel="prev">{{parent.name}}</a></li>{{/parent}}
+					<li>{{section.name}}</li>
+				</ol>
+				{{#content}}
+					{{#intro|notEmpty}}
+					<div class="intro">
+						<h1 class="intro__title">{{name}}{{#path|notEmpty}} <a href="{{$root.gitHubRoot}}{{path}}">→</a>{{/path}}</h1>
+						{{#heading|notEmpty}}
+						<p class="intro__heading">{{heading}}</p>
+						{{/heading}}
+					</div>
+					{{output|raw}}
+					{{/intro}}
+					{{#intro|isEmpty}}
+					<div class="doc">
+						<h2 class="doc__title">
+							{{name}}
+							<a href="#{{name|slug}}" class="doc__anchor" id="{{name|slug}}">#</a>
+							{{#path|notEmpty}}<a href="{{$root.gitHubRoot}}{{path}}" class="doc__link">→</a>{{/path}}
+						</h2>
+						{{#heading|notEmpty}}
+						<p class="doc__heading">{{heading}}</p>
+						{{/heading}}
+						{{description.output|raw}}
+						<div class="variables">
+							<table>
+								<thead>
+									<tr>
+										<th>Variable</th>
+										<th>Type</th>
+										<th>Default</th>
+										<th>Description</th>
+										<th>Required</th>
+									</tr>
+								</thead>
+								<tbody>
+									{{#variables}}
+									<tr>
+										<td>{{var}}</td>
+										<td>{{type}}</td>
+										<td>{{#default|isEmpty}}&ndash;{{/default}}</td>
+										<td>{{desc}}</td>
+										<td>{{#req|notEmpty}}✓{{/req}}</td>
+									</tr>
+									{{/variables}}
+								</tbody>
+							</table>
+						</div>
+						{{#blocks}}
+						{{#name|not(description)}}
+						<div class="{{name}}">
+							{{output|raw}}
+						</div>
+						{{/name}}
+						{{/blocks}}
+					</div>
+					{{/intro}}
+				{{/content}}
+			</main>
+			<footer role="contentinfo" class="footer">
+				{{> footer}}
+			</footer>
+		</div>
+	</div>
+</div>
+<script src="{{site.assetUrl}}/js/script.min.js"></script>
+</body>
+</html>

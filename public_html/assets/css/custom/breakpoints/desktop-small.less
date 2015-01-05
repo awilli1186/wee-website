@@ -1,0 +1,38 @@
+/*------------------------------------*\
+	# Global
+\*------------------------------------*/
+
+.page {
+	.padding(left; 18);
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Docs
+\*------------------------------------*/
+
+.primary {
+	.background(transparent);
+}
+.doc {
+	&__anchor {
+		.inline();
+	}
+	th,
+	td {
+		white-space: normal;
+	}
+}
+.code {
+	pre {
+		&:first-child {
+			.column-modify(spaced; 5; 9; 3%);
+		}
+		&:last-child {
+			.column-modify(spaced; 4; 9; 3%);
+		}
+	}
+}

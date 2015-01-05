@@ -1,0 +1,114 @@
+/*------------------------------------*\
+	# Global
+\*------------------------------------*/
+
+.top {
+	.spaced(-9.5);
+	&:after {
+		.height(9.5);
+	}
+}
+.bottom {
+	.height(9.5);
+}
+.mobile-nav {
+	.hide();
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Sidebar
+\*------------------------------------*/
+
+.sidebar {
+	.block();
+	.fixed(0; false; false; 0);
+}
+.viewport {
+	.crop();
+	.inline-block(16.8; 100%);
+	.relative();
+}
+.overview {
+	.absolute(0; false; false; 0);
+	.fill();
+	.padding(bottom; 2);
+}
+.scrollbar {
+	.relative();
+	.inline-block(1.2; 100%);
+}
+.track {
+	.fill(vertical);
+}
+.thumb {
+	.absolute(0; false; false; 0);
+	.background(@black);
+	.cursor(pointer);
+	.transition(opacity);
+	.transparent();
+	.width(1.2);
+	&:hover {
+		.opacity(25%);
+	}
+	&:active {
+		.opacity(35%);
+	}
+}
+.disable {
+	.hide();
+}
+.noSelect {
+	.user-select();
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Footer
+\*------------------------------------*/
+
+.footer {
+	&__license {
+		.left();
+	}
+	&__links {
+		.right();
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Index
+\*------------------------------------*/
+
+.heading {
+	.font-size(2.8);
+	.spaced(7);
+}
+.nav {
+	.row(2%);
+	&__button {
+		.column(spaced; 1; 3; 2%);
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Docs
+\*------------------------------------*/
+
+.page {
+	.padding(left; 18);
+}

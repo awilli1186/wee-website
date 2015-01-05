@@ -1,0 +1,57 @@
+#------------------------------------
+	# Project
+#------------------------------------
+
+# custom rules here
+
+
+#------------------------------------
+	# Wee
+#------------------------------------
+
+node_modules
+bower_components
+
+
+#------------------------------------
+	# Tools
+#------------------------------------
+
+.idea
+.idea/
+.idea/*
+.settings
+.bundle
+mixture.json
+prepros.json
+codekit-config.json
+browserstack.json
+BrowserStackLocal
+*.sublime-*
+
+
+#------------------------------------
+	# System
+#------------------------------------
+
+Thumbs.db
+.DS_Store
+.tmp
+.cache
+*.diff
+*.tmproj
+*.err
+*.orig
+*.swp
+*.out
+*.gem
+*.log
+*.lock
+*.vi
+
+
+#------------------------------------
+	# Gitkeep
+#------------------------------------
+
+!.gitkeep

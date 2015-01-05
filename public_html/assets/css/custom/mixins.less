@@ -1,0 +1,9 @@
+.responseText(@val) {
+	pre {
+		&:last-child {
+			&:before {
+				.content(@val);
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{{> header}}
+<body>
+<div class="top">
+	<div class="container">
+		<header role="banner">
+			<a href="/" rel="home" class="logo">
+				<img src="{{site.assetUrl}}/img/wee.svg" alt="Wee Framework">
+			</a>
+		</header>
+		<main role="main">
+			<h1 class="heading">{{#content}}{{input}}{{/content}}</h1>
+			<nav role="navigation" class="nav">
+				<a href="/start" class="button nav__button">Documentation</a>
+				<a href="//fast.wistia.net/embed/iframe/e0l125pqcn?popover=true" class="button nav__button wistia-popover[height=394,playerColor=006e8c,width=700]">Watch Video</a>
+				<a href="https://github.com/weepower/wee/archive/master.zip" class="button nav__button">Download {{site.version}}</a>
+			</nav>
+		</main>
+	</div>
+</div>
+<div class="bottom">
+	<footer role="contentinfo" class="container footer">
+		{{> footer}}
+	</footer>
+</div>
+<script src="{{site.assetUrl}}/js/script.min.js"></script>
+<script src="//fast.wistia.com/assets/external/popover-v1.js"></script>
+</body>
+</html>
