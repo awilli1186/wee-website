@@ -214,6 +214,7 @@
 					"template": "docs",
 					"target": "public_html/script/assets.html",
 					"content": [
+						"content/script/assets/intro.md",
 						"content/script/assets/*.md"
 					]
 				},
@@ -222,6 +223,7 @@
 					"template": "docs",
 					"target": "public_html/script/data.html",
 					"content": [
+						"content/script/data/intro.md",
 						"content/script/data/*.md"
 					]
 				},
@@ -230,6 +232,7 @@
 					"template": "docs",
 					"target": "public_html/script/dom.html",
 					"content": [
+						"content/script/dom/intro.md",
 						"content/script/dom/*.md"
 					]
 				},

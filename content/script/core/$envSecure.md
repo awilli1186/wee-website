@@ -1,8 +1,9 @@
 ---
+name: $envSecure
 heading: Determine if the current environment is secured over HTTPS
 ---
 
-<div class="code code__boolean">
+---code|type:boolean---
 
 ```javascript
 Wee.$envSecure();
@@ -11,5 +12,3 @@ Wee.$envSecure();
 ```html
 true
 ```
-
-</div>

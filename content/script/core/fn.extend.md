@@ -1,16 +1,13 @@
 ---
+name: fn.extend
 heading: Extend existing controller with additional methods and properties
+variables:
+  - { var: "a", desc: "If extending a controller the name else if extending the core begin with your public variables and methods", type: "string, object", req: true }
+  - { var: "b", desc: "Either the public functions for controllers or the private functions for the core", type: "object", req: true }
+  - { var: "c", desc: "Object of private variables and methods when extending controllers", type: "object" }
 ---
 
-<div class="variables">
-
-Variable | Type | Default | Description | Required
--------- | ---- | ------- | ----------- | --------
-a | string, object | &ndash; | If extending a controller the name else if extending the core begin with your public variables and methods | ✓
-b | object | &ndash; | Either the public functions for controllers or the private functions for the core | ✓
-c | object | &ndash; | Object of private variables and methods when extending controllers ||
-
-</div>
+---doc---
 
 ### Extend Controller
 
@@ -22,7 +19,7 @@ Wee.fn.extend('controllerName', {
 });
 ```
 
-<div class="code">
+---code---
 
 ```javascript
 Wee.controllerName.extendedPublicFunction();
@@ -32,7 +29,7 @@ Wee.controllerName.extendedPublicFunction();
 Success
 ```
 
-</div>
+---doc---
 
 ### Extend Core
 
@@ -43,5 +40,5 @@ Wee.fn.extend({
 	}
 });
 
-Wee.coreFunction(2, 4);
+Wee.addNumbers(2, 4);
 ```

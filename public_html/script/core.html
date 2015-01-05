@@ -36,23 +36,23 @@
         console.log('Destroyed');
     }
 });
-</code></pre></div></div><div class="doc"><h2 class="doc__title">fn.extend <a href="#fnextend" class="doc__anchor" id="fnextend">#</a></h2><p class="doc__heading">Extend existing controller with additional methods and properties</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><div class="variables"><p>Variable | Type | Default | Description | Required</p></div><div class="-----"><p>a | string, object | – | If extending a controller the name else if extending the core begin with your public variables and methods | ✓ b | object | – | Either the public functions for controllers or the private functions for the core | ✓ c | object | – | Object of private variables and methods when extending controllers ||</p></div><h3>Extend Controller</h3><pre><code class="language-javascript">Wee.fn.extend('controllerName', {
+</code></pre></div></div><div class="doc"><h2 class="doc__title">fn.extend <a href="#fnextend" class="doc__anchor" id="fnextend">#</a></h2><p class="doc__heading">Extend existing controller with additional methods and properties</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>a</td><td>string, object</td><td>&ndash;</td><td>If extending a controller the name else if extending the core begin with your public variables and methods</td><td>✓</td></tr><tr><td>b</td><td>object</td><td>&ndash;</td><td>Either the public functions for controllers or the private functions for the core</td><td>✓</td></tr><tr><td>c</td><td>object</td><td>&ndash;</td><td>Object of private variables and methods when extending controllers</td><td></td></tr></tbody></table></div><div class="doc"><h3>Extend Controller</h3><pre><code class="language-javascript">Wee.fn.extend('controllerName', {
     extendedPublicFunction: function() {
         this.finalPublicFunction('output');
     }
 });
-</code></pre><div class="code"><pre><code class="language-javascript">Wee.controllerName.extendedPublicFunction();
+</code></pre></div><div class="code"><pre><code class="language-javascript">Wee.controllerName.extendedPublicFunction();
 </code></pre><pre><code class="language-html">Success
-</code></pre></div><h3>Extend Core</h3><pre><code class="language-javascript">Wee.fn.extend({
+</code></pre></div><div class="doc"><h3>Extend Core</h3><pre><code class="language-javascript">Wee.fn.extend({
     addNumbers: function(num1, num2) {
         return num1 + num2;
     }
 });
 
-Wee.coreFunction(2, 4);
-</code></pre></div></div><div class="doc"><h2 class="doc__title">$set <a href="#set" class="doc__anchor" id="set">#</a></h2><p class="doc__heading">Set public variable</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><div class="variables"><p>Variable | Type | Default | Description | Required</p></div><div class="-----"><p>key | string | – | Reference to store the value under | ✓ val | any | – | Value to store | ✓ opt | object | – | Callback options ||</p></div><h3>Simple</h3><div class="code"><pre><code class="language-javascript">Wee.$set('key', 'Success');
+Wee.addNumbers(2, 4);
+</code></pre></div></div><div class="doc"><h2 class="doc__title">$set <a href="#set" class="doc__anchor" id="set">#</a></h2><p class="doc__heading">Set public variable</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>key</td><td>string</td><td>&ndash;</td><td>Reference to store the value under</td><td>✓</td></tr><tr><td>val</td><td>any</td><td>&ndash;</td><td>Value to store</td><td>✓</td></tr><tr><td>opt</td><td>object</td><td>&ndash;</td><td>Callback options</td><td></td></tr></tbody></table></div><div class="doc"><h3>Simple</h3></div><div class="code"><pre><code class="language-javascript">Wee.$set('key', 'Success');
 </code></pre><pre><code class="language-html">Success
-</code></pre></div><h3>Callbacks</h3><div class="code"><pre><code class="language-javascript">Wee.$set('key', function() {
+</code></pre></div><div class="doc"><h3>Callbacks</h3></div><div class="code"><pre><code class="language-javascript">Wee.$set('key', function() {
     return 5 * 5;
 });
 
@@ -68,25 +68,25 @@ Wee.$set('key', 'controllerName:publicFunction', {
 </code></pre><pre><code class="language-html">25
 Success
 Success
-</code></pre></div></div></div><div class="doc"><h2 class="doc__title">$get <a href="#get" class="doc__anchor" id="get">#</a></h2><p class="doc__heading">Get public variable with optional default</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><div class="variables"><p>Variable | Type | Default | Description | Required</p></div><div class="-----"><p>key | string | – | Reference to stored value | ✓ def | any | – | Default value if the key doesn’t exist || set | boolean | false | If the value doesn’t exist should the default be permanently set || opt | object | – | Callback options ||</p></div><div class="code"><pre><code class="language-javascript">Wee.$get('key');
+</code></pre></div></div><div class="doc"><h2 class="doc__title">$get <a href="#get" class="doc__anchor" id="get">#</a></h2><p class="doc__heading">Get public variable with optional default</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>key</td><td>string</td><td>&ndash;</td><td>Reference to stored value</td><td>✓</td></tr><tr><td>def</td><td>any</td><td>&ndash;</td><td>Default value if the key doesn't exist</td><td></td></tr><tr><td>set</td><td>boolean</td><td>false</td><td>If the value doesn't exist should the default be permanently set</td><td></td></tr><tr><td>opt</td><td>object</td><td>&ndash;</td><td>Callback options</td><td></td></tr></tbody></table></div><div class="code"><pre><code class="language-javascript">Wee.$get('key');
 Wee.$get('anotherKey');
 Wee.$get('anotherKey', 'Fallback');
 Wee.$get('anotherKey');
 Wee.$get('anotherKey', 'Fallback', true);
 Wee.$get('anotherKey');
 </code></pre><pre><code class="language-html">Success
-undefined
+null
 Fallback
-undefined
+null
 Fallback
 Fallback
-</code></pre></div></div></div><div class="doc"><h2 class="doc__title">$env <a href="#env" class="doc__anchor" id="env">#</a></h2><p class="doc__heading">Get current environment or detect current environment against specified object</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>obj</td><td>object</td><td>&ndash;</td><td>Object of {key: value} environment pairs</td><td></td></tr><tr><td>def</td><td>string</td><td></td><td>Override the fallback environment</td><td></td></tr></tbody></table></div><div class="doc"><h3>Set</h3></div><div class="code"><pre><code class="language-javascript">Wee.$env({
+</code></pre></div></div><div class="doc"><h2 class="doc__title">$env <a href="#env" class="doc__anchor" id="env">#</a></h2><p class="doc__heading">Get current environment or detect current environment against specified object</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>obj</td><td>object</td><td>&ndash;</td><td>Object of {key: value} environment pairs</td><td></td></tr><tr><td>def</td><td>string</td><td>local</td><td>Override the fallback environment</td><td></td></tr></tbody></table></div><div class="doc"><h3>Set</h3></div><div class="code"><pre><code class="language-javascript">Wee.$env({
     prod: 'www.weepower.com',
     stage: 'www.weepower.stage'
 });
 </code></pre><pre><code class="language-html">prod
 </code></pre></div><div class="doc"><h3>Get</h3></div><div class="code"><pre><code class="language-javascript">Wee.$env();
 </code></pre><pre><code class="language-html">prod
-</code></pre></div></div><div class="doc"><h2 class="doc__title">$envSecure <a href="#envsecure" class="doc__anchor" id="envsecure">#</a></h2><p class="doc__heading">Determine if the current environment is secured over HTTPS</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><div class="code code__boolean"><pre><code class="language-javascript">Wee.$envSecure();
+</code></pre></div></div><div class="doc"><h2 class="doc__title">$envSecure <a href="#envsecure" class="doc__anchor" id="envsecure">#</a></h2><p class="doc__heading">Determine if the current environment is secured over HTTPS</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="code"><pre><code class="language-javascript">Wee.$envSecure();
 </code></pre><pre><code class="language-html">true
-</code></pre></div></div></div></main><footer role="contentinfo" class="footer"><small class="footer__license"><a href="/">Wee Powered</a> &ndash; licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a></small><ul class="footer__links"><li><a href="https://github.com/weepower/wee">GitHub</a></li><li><a href="https://github.com/weepower/wee/issues">Issues</a></li><li><a href="https://github.com/weepower/wee/releases">Releases</a></li><li><a href="https://twitter.com/weecss">Twitter</a></li></ul></footer></div></div></div><script src="/assets/js/script.min.js"></script></body></html>
+</code></pre></div></div></main><footer role="contentinfo" class="footer"><small class="footer__license"><a href="/">Wee Powered</a> &ndash; licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a></small><ul class="footer__links"><li><a href="https://github.com/weepower/wee">GitHub</a></li><li><a href="https://github.com/weepower/wee/issues">Issues</a></li><li><a href="https://github.com/weepower/wee/releases">Releases</a></li><li><a href="https://twitter.com/weecss">Twitter</a></li></ul></footer></div></div></div><script src="/assets/js/script.min.js"></script></body></html>

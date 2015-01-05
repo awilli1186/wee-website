@@ -1,21 +1,17 @@
 ---
 name: $set
 heading: Set public variable
+variables:
+  - { var: "key", desc: "Reference to store the value under", type: "string", req: true }
+  - { var: "val", desc: "Value to store", type: "any", req: true }
+  - { var: "opt", desc: "Callback options", type: "object" }
 ---
 
-<div class="variables">
-
-Variable | Type | Default | Description | Required
--------- | ---- | ------- | ----------- | --------
-key | string | &ndash; | Reference to store the value under | ✓
-val | any | &ndash; | Value to store | ✓
-opt | object | &ndash; | Callback options ||
-
-</div>
+---doc---
 
 ### Simple
 
-<div class="code">
+---code---
 
 ```javascript
 Wee.$set('key', 'Success');
@@ -25,11 +21,11 @@ Wee.$set('key', 'Success');
 Success
 ```
 
-</div>
+---doc---
 
 ### Callbacks
 
-<div class="code">
+---code---
 
 ```javascript
 Wee.$set('key', function() {
@@ -52,5 +48,3 @@ Wee.$set('key', 'controllerName:publicFunction', {
 Success
 Success
 ```
-
-</div>
