@@ -7,9 +7,7 @@ variables:
   - { var: "c", desc: "Object of private variables and methods when extending controllers", type: "object" }
 ---
 
----doc---
-
-### Extend Controller
+---doc|label:Extend Controller---
 
 ```javascript
 Wee.fn.extend('controllerName', {
@@ -29,9 +27,7 @@ Wee.controllerName.extendedPublicFunction();
 Success
 ```
 
----doc---
-
-### Extend Core
+---doc|label:Extend Core---
 
 ```javascript
 Wee.fn.extend({

@@ -11,9 +11,7 @@ variables:
 
 Controllers serve as the wrapper for all custom script. They can be created per page, section, or for specific reusable components. If placed in your build directory you easily create a well-organized, extensible structure.
 
----doc---
-
-### Public
+---doc|label:Public---
 
 ```javascript
 Wee.fn.make('controllerName', {
@@ -33,9 +31,7 @@ Wee.controllerName.init();
 Initialized
 ```
 
----doc---
-
-### Private/Public
+---doc|label:Private/Public---
 
 Private functions can be accessed from public methods by using ```this.$private('functionName, arguments..)``` syntax. To call back into a public method from a private one use ```this.$public.functionName(arguments...)```.
 
@@ -74,9 +70,7 @@ Wee.controllerName.init();
 Success
 ```
 
----doc---
-
-### Constructor/Destructor
+---doc|label:Constructor/Destructor---
 
 The construct method is immediately invoked when the controller is created. Alternatively the destruct method is called when the controller is destroyed by using ```this.$destroy()``` inside the controller or ```Wee.controllerName.$destroy()``` externally.
 

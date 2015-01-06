@@ -11,8 +11,6 @@ variables:
   - { var: "failure", desc: "Failure callback", type: "callback" }
 ---
 
----doc---
-
 ### Single File
 
 ```javascript

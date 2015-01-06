@@ -11,14 +11,12 @@ options:
 
 ---doc---
 
-The parsing engine allows you to access attributes at any level of the object in dot notation such as ```craft_top.second.third```. If a match is not found it will be replaced with an empty string. Optionally you can pass a fallback in the format of ```craft_top.second.third || Fallback```.
+The parsing engine allows you to access attributes at any level of the object in dot notation such as ```top.second.third```. If a match is not found it will be replaced with an empty string. Optionally you can pass a fallback in the format of ```top.second.third || Fallback```.
 
-### Nested Object
-
----code---
+---code|label:Nested Object---
 
 ```javascript
-Wee.data.parse('Hello craft_name.first craft_name.last', {
+Wee.data.parse('Hello name.first name.last', {
 	name: {
 		first: 'Matthew',
 		last: 'Wallace'
@@ -30,14 +28,10 @@ Wee.data.parse('Hello craft_name.first craft_name.last', {
 Hello Matthew Wallace
 ```
 
----doc---
-
-### Fallback
-
----code---
+---code|label:Fallback---
 
 ```javascript
-Wee.data.parse('You have craft_count || 0 items in your cart', {
+Wee.data.parse('You have {{count || 0}} items in your cart', {
 	empty: true
 });
 ```

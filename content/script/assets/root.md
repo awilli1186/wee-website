@@ -5,9 +5,7 @@ variables:
   - { var: "val", desc: "root request path", type: "string" }
 ---
 
----doc---
-
-### Set
+---doc|label:Set---
 
 The value set here is prepended to every request unless it is overridden when loading.
 
@@ -29,9 +27,7 @@ Wee.assets.root();
 https://cdn.domain.com
 ```
 
----doc---
-
-### Advanced
+---doc|label:Advanced---
 
 Only set the asset root to a CDN in the production [environment](https://www.weepower.com/script/core#env).
 

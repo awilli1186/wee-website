@@ -7,11 +7,7 @@ variables:
   - { var: "opt", desc: "Callback options", type: "object" }
 ---
 
----doc---
-
-### Simple
-
----code---
+---code|label:Simple---
 
 ```javascript
 Wee.$set('key', 'Success');
@@ -21,11 +17,7 @@ Wee.$set('key', 'Success');
 Success
 ```
 
----doc---
-
-### Callbacks
-
----code---
+---code|label:Callbacks---
 
 ```javascript
 Wee.$set('key', function() {

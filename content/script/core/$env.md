@@ -6,11 +6,7 @@ variables:
 - { var: "def", desc: "Override the fallback environment", type: "string", default: "local" }
 ---
 
----doc---
-
-### Set
-
----code|type:string---
+---code|label:Set|type:string---
 
 ```javascript
 Wee.$env({
@@ -23,11 +19,7 @@ Wee.$env({
 prod
 ```
 
----doc---
-
-### Get
-
----code|type:string---
+---code|label:Get|type:string---
 
 ```javascript
 Wee.$env();

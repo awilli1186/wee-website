@@ -6,7 +6,7 @@ variables:
   - { var: "child", desc: "Child element", type: "element, selector", req: true }
 ---
 
----code---
+---code|type:boolean---
 
 ```javascript
 Wee.$contains('body', '.element');

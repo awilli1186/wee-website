@@ -15,9 +15,7 @@ options:
   - { var: "template", desc: "Template string to parse response JSON into",type: "string"}
 ---
 
----doc---
-
-### Get
+---doc|label:Get---
 
 ```javascript
 Wee.data.request({
@@ -46,7 +44,7 @@ Retrieve JSON and immediately [parse it](https://www.weepower.com/script/data#pa
 ```javascript
 Wee.data.request({
 	url: '/path/to/file.json',
-	template: 'Hey craft_person.firstName || Guest',
+	template: 'Hey person.firstName || Guest',
 	success: function(parsed, raw) {
 		console.log(parsed);
 		console.log(raw);
@@ -59,9 +57,7 @@ Hey Don
 {json}
 ```
 
----doc---
-
-### Post w/ Data
+---doc|label:Post w/ Data---
 
 ```javascript
 Wee.data.request({
