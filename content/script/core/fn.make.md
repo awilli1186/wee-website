@@ -27,7 +27,7 @@ Wee.fn.make('controllerName', {
 Wee.controllerName.init();
 ```
 
-```html
+```javascript
 Initialized
 ```
 
@@ -66,7 +66,7 @@ Wee.fn.make('controllerName', {
 Wee.controllerName.init();
 ```
 
-```html
+```javascript
 Success
 ```
 

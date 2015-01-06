@@ -15,7 +15,7 @@ Wee.$env({
 });
 ```
 
-```html
+```javascript
 prod
 ```
 
@@ -25,6 +25,6 @@ prod
 Wee.$env();
 ```
 
-```html
+```javascript
 prod
 ```

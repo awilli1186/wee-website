@@ -2,7 +2,7 @@
 name: $children
 heading: Get children of specified element with optional filter
 variables:
-  - { var: "sel", desc: "Parent element",type: "element, selector", req: true }
+  - { var: "sel", desc: "Parent element",type: "selector, element", req: true }
   - { var: "filter", desc: "Filter selector", type: "selector" }
 ---
 

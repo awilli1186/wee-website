@@ -23,7 +23,7 @@ Wee.fn.extend('controllerName', {
 Wee.controllerName.extendedPublicFunction();
 ```
 
-```html
+```javascript
 Success
 ```
 

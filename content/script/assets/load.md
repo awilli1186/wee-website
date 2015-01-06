@@ -3,6 +3,7 @@ name: Load
 heading: Load specified assets with specified set of options
 variables:
   - { var: "conf", desc: "Object parameters below", type: "object", req: true }
+options:
   - { var: "files", desc: "Single file path or array of file paths", type: "string, array", req: true }
   - { var: "group", desc: "Optional reference for use with the [ready()](https://www.weepower.com/script/assets#ready) function", type: "string" }
   - { var: "root", desc: "Request root path or domain", type: "string", default: "current root" }
@@ -11,7 +12,7 @@ variables:
   - { var: "failure", desc: "Failure callback", type: "callback" }
 ---
 
-### Single File
+---doc|label:Single File---
 
 ```javascript
 Wee.assets.load({
@@ -22,7 +23,7 @@ Wee.assets.load({
 });
 ```
 
-### File Array
+---doc|label:File Array---
 
 ```javascript
 Wee.assets.load({
@@ -41,7 +42,7 @@ Wee.assets.load({
 });
 ```
 
-### Group
+---doc|label:Group---
 
 By providing a group name you can optionally check against the group later for completion.
 

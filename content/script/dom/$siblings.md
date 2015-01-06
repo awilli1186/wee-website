@@ -2,7 +2,7 @@
 name: $siblings
 heading: Get siblings of specified element with optional filter
 variables:
-  - { var: "sel", desc: "Sibling element",type: "element, selector", req: true }
+  - { var: "sel", desc: "Sibling element",type: "selector, element", req: true }
   - { var: "filter", desc: "Sibling filter", type: "selector" }
 ---
 

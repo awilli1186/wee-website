@@ -13,7 +13,7 @@ variables:
 Wee.$set('key', 'Success');
 ```
 
-```html
+```javascript
 Success
 ```
 
@@ -35,7 +35,7 @@ Wee.$set('key', 'controllerName:publicFunction', {
 });
 ```
 
-```html
+```javascript
 25
 Success
 Success

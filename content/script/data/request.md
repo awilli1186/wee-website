@@ -26,7 +26,7 @@ Wee.data.request({
 });
 ```
 
-### Get & Parse
+---doc|label:Get & Parse---
 
 Retrieve JSON and immediately [parse it](https://www.weepower.com/script/data#parse) into a template. No need to set the json parameter to true, it's assumed.
 
@@ -52,7 +52,7 @@ Wee.data.request({
 });
 ```
 
-```html
+```javascript
 Hey Don
 {json}
 ```

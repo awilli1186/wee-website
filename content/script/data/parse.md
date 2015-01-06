@@ -24,7 +24,7 @@ Wee.data.parse('Hello name.first name.last', {
 });
 ```
 
-```html
+```javascript
 Hello Matthew Wallace
 ```
 
@@ -36,6 +36,6 @@ Wee.data.parse('You have {{count || 0}} items in your cart', {
 });
 ```
 
-```html
+```javascript
 You have 0 items in your cart
 ```

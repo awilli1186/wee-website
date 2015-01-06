@@ -2,7 +2,7 @@
 name: $clone
 heading: Clone specified element
 variables:
-  - { var: "sel", desc: "Element to clone",type: "element, selector", req: true }
+  - { var: "sel", desc: "Element to clone",type: "selector, element", req: true }
 ---
 
 ```javascript

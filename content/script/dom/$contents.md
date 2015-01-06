@@ -2,7 +2,7 @@
 name: $contents
 heading: Get content of specified element
 variables:
-  - { var: "sel", desc: "Parent element",type: "element, selector", req: true }
+  - { var: "sel", desc: "Parent element",type: "selector, element", req: true }
 ---
 
 ---doc---

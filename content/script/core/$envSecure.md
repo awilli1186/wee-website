@@ -9,6 +9,6 @@ heading: Determine if the current environment is secured over HTTPS
 Wee.$envSecure();
 ```
 
-```html
+```javascript
 true
 ```

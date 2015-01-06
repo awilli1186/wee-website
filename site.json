@@ -231,6 +231,7 @@
 					"template": "docs",
 					"target": "public_html/script/events.html",
 					"content": [
+						"content/script/events/intro.md",
 						"content/script/events/*.md"
 					]
 				},
@@ -239,6 +240,7 @@
 					"template": "docs",
 					"target": "public_html/script/routes.html",
 					"content": [
+						"content/script/routes/intro.md",
 						"content/script/routes/*.md"
 					]
 				},
@@ -247,6 +249,7 @@
 					"template": "docs",
 					"target": "public_html/script/screen.html",
 					"content": [
+						"content/script/screen/intro.md",
 						"content/script/screen/*.md"
 					]
 				},

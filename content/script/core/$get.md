@@ -19,7 +19,7 @@ Wee.$get('anotherKey', 'Fallback', true);
 Wee.$get('anotherKey');
 ```
 
-```html
+```javascript
 Success
 null
 Fallback

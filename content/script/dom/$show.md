@@ -2,7 +2,7 @@
 name: $show
 heading: Show specified element
 variables:
-  - { var: "sel", desc: "Element to display",type: "element, selector", req: true }
+  - { var: "sel", desc: "Element to display",type: "selector, element", req: true }
 ---
 
 ---doc---
