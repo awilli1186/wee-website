@@ -1395,7 +1395,7 @@
 .background (@color: @bodyBackground) when (iscolor(@color)) {
 	background: @color;
 }
-.background (@color; @filename) when not (iskeyword(@color)) {
+.background (@color; @filename) when not (iskeyword(@color)) and not (isnumber(@filename)) {
 	background: @color url('@{imagePath}@{filename}');
 }
 .background (@color; @filename; @repeat) when (isstring(@repeat)), (iskeyword(@repeat)) {
@@ -1499,20 +1499,20 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{lighter}', endColorstr='@{darker}', GradientType=0);
 }
 .background-gradient (dark; @start: 0; @end: 1; @angle: 180) {
-	@start: rgba(0, 0, 0, @start);
-	@end: rgba(0, 0, 0, @end);
+	@startAlpha: rgba(0, 0, 0, @start);
+	@endAlpha: rgba(0, 0, 0, @end);
 	@deg: unit(@angle, deg);
 	@revDeg: unit(mod((450 - @angle), 360), deg);
-	.background('-webkit-linear-gradient(@{revDeg}, @{start}, @{end})');
-	.background('linear-gradient(@{deg}, @{start}, @{end})');
+	.background('-webkit-linear-gradient(@{revDeg}, @{startAlpha}, @{endAlpha})');
+	.background('linear-gradient(@{deg}, @{startAlpha}, @{endAlpha})');
 }
 .background-gradient (light; @start: 0; @end: 1; @angle: 180) {
-	@start: rgba(255, 255, 255, @start);
-	@end: rgba(255, 255, 255, @end);
+	@startAlpha: rgba(255, 255, 255, @start);
+	@endAlpha: rgba(255, 255, 255, @end);
 	@deg: unit(@angle, deg);
 	@revDeg: unit(mod((450 - @angle), 360), deg);
-	.background('-webkit-linear-gradient(@{revDeg}, @{start}, @{end})');
-	.background('linear-gradient(@{deg}, @{start}, @{end})');
+	.background('-webkit-linear-gradient(@{revDeg}, @{startAlpha}, @{endAlpha})');
+	.background('linear-gradient(@{deg}, @{startAlpha}, @{endAlpha})');
 }
 .background-attachment (...) {
 	background-attachment: @arguments;
