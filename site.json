@@ -6,8 +6,8 @@
 		"minify": true,
 		"typographer": true,
 		"paths": {
-			"templates": "templates",
 			"partials": "partials",
+			"templates": "templates",
 			"extensions": "extensions"
 		}
 	},
@@ -23,10 +23,12 @@
 	},
 	"data": {
 		"version": "2.1.0",
-		"twitter": "weecss",
-		"googlePageID": "+weecss",
 		"analyticsID": "UA-40595891-1",
-		"gitHubRoot": "https://github.com/weepower/wee/tree/master"
+		"gitHubRoot": "https://github.com/weepower/wee/tree/master",
+		"social": {
+			"twitter": "weecss",
+			"googlePageID": "+weecss"
+		}
 	},
 	"sections": {
 		"home": {
@@ -49,10 +51,6 @@
 		},
 		"start": {
 			"name": "Get Started",
-			"data": {
-				"seoTitle": "Get Started",
-				"seoDesc": ""
-			},
 			"template": "docs",
 			"target": "public_html/start/index.html",
 			"content": [
@@ -68,10 +66,6 @@
 			"sections": {
 				"structure": {
 					"name": "Structure",
-					"data": {
-						"seoTitle": "Structure",
-						"seoDesc": ""
-					},
 					"template": "docs",
 					"target": "public_html/start/structure.html",
 					"content": [
@@ -194,10 +188,6 @@
 			"sections": {
 				"core": {
 					"name": "Core",
-					"data": {
-						"seoTitle": "Core Script",
-						"seoDesc": "Wee includes a foundation of utilities, helpers, and module structure."
-					},
 					"template": "docs",
 					"target": "public_html/script/core.html",
 					"content": [
