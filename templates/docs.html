@@ -100,7 +100,8 @@
 						</div>
 						{{#blocks}}
 						{{#name|not(description)}}
-						<div class="{{name}}">
+						{{#label|notEmpty}}<h3>{{label}}</h3>{{/label}}
+						<div class="{{name}}{{#type|notEmpty}} {{name}}__{{type}}{{/type}}">
 							{{output|raw}}
 						</div>
 						{{/name}}
