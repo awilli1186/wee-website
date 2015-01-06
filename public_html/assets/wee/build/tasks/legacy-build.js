@@ -17,9 +17,9 @@ module.exports = function(grunt) {
 			legacy.dest = Wee.buildPath(styleRoot, legacy.dest);
 
 			// Build configured
-			for (; i < legacy.build.length; i++) {
-				legacyImports.push('../..' + Wee.buildPath(styleRoot, legacy.build[i]).replace(config.assetPath, ''));
-			}
+			legacy.build.forEach(function(name) {
+				legacyImports.push('../../' + Wee.buildPath(styleRoot, name).replace(config.assetPath, ''));
+			});
 
 			if (legacyImports.length > 0) {
 				// Process template

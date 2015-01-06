@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('configScript', function() {
 		// Set global config
 		script = {
-			rootPath: config.assetPath + '/js',
+			rootPath: path.join(config.assetPath, '/js'),
 			files: [],
 			project: {}
 		};
@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 		// Core Wee scripts
 		if (project.script.core.enable === true) {
 			var features = project.script.core.features,
-				weeScriptRoot = config.assetPath + '/wee/script/';
+				weeScriptRoot = path.join(config.assetPath, '/wee/script/');
 
 			// Primary base script
 			script.files.push(weeScriptRoot + 'wee.js');
@@ -114,11 +114,13 @@ module.exports = function(grunt) {
 		if (project.script.sourceMaps === true) {
 			grunt.config.set('uglify.options.sourceMap', true);
 			grunt.config.set('uglify.options.sourceMapName', function(dest) {
-				dest = dest.replace(script.rootPath + '/', '')
-					.replace(/\//g, '-')
+				var root = path.normalize(script.rootPath) + '\\';
+				dest = path.normalize(dest)
+					.replace(root, '')
+					.replace(/\\|\//g, '-')
 					.replace('.min.js', '');
 
-				return config.paths.sourceMaps + dest + '.js.map';
+				return path.join(config.paths.sourceMaps, dest + '.js.map');
 			});
 		}
 	});
