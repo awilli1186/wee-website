@@ -171,6 +171,9 @@ module.exports = function(grunt) {
 
 					fileSegments.splice(-1, 1);
 
+					// Inject current context
+					data.section = block;
+
 					var obj = {
 						name: fileSegments.join('.'),
 						original: template,
@@ -178,18 +181,31 @@ module.exports = function(grunt) {
 						blocks: []
 					};
 
+					// Check for js-yaml
 					if (template.substring(0, 3) == '---') {
 						var results = /^(---(?:\n|\r)([\w\W]+?)---)?([\w\W]*)*/.exec(template);
 
-						// If the YAML exists then extend it into the default
+						// Merge YAML into the data
 						if (results[2] !== undefined) {
 							try {
 								var front = yaml.load(results[2]);
 
 								// Check for global data
-								if (front.data) {
-									Wee.$extend(data, obj.data);
-									delete front.data;
+								if (front.global) {
+									Wee.$extend(data, front.global);
+									delete front.global;
+								}
+
+								// Check for site data
+								if (front.site) {
+									Wee.$extend(data.site, front.site);
+									delete front.site;
+								}
+
+								// Check for section data
+								if (front.section) {
+									Wee.$extend(data.section, front.section);
+									delete front.section;
 								}
 
 								// Merge in YAML data
@@ -259,6 +275,15 @@ module.exports = function(grunt) {
 									render: render
 								};
 
+							// Check for block values
+							helpers.forEach(function(helper) {
+								if (helper.indexOf(':') !== -1) {
+									var split = helper.split(':');
+
+									val[split[0]] = split[1];
+								}
+							});
+
 							// Handle array blocks
 							if (push === true) {
 								if (! obj.hasOwnProperty(name)) {
@@ -278,9 +303,6 @@ module.exports = function(grunt) {
 							}
 						}
 					});
-
-					// Inject current context
-					data.section = block;
 
 					// Inject current index
 					obj['#'] = i;
