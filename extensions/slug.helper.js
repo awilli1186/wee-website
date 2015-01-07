@@ -1,8 +1,10 @@
 Wee.view.addHelper('slug', function() {
-	return this.val.toLowerCase()
+	var val = this.val.toLowerCase()
 		.replace(/\s+/g, '-')
 		.replace(/[^\w\-]+/g, '')
 		.replace(/\-\-+/g, '-')
 		.replace(/^-+/, '')
 		.replace(/-+$/, '');
+
+	return val === '' ? 'core' : val;
 });
