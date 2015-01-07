@@ -194,6 +194,7 @@
 						"content/script/core/intro.md",
 						"content/script/core/fn.make.md",
 						"content/script/core/fn.extend.md",
+						"content/script/core/$.md",
 						"content/script/core/$set.md",
 						"content/script/core/$get.md",
 						"content/script/core/*.md"

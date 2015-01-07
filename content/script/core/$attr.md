@@ -7,10 +7,14 @@ variables:
   - { var: "val", desc: "Value to assign to attribute", type: "string" }
 ---
 
----code|label:Get---
-
 ```html
 <a class="element" href="http://www.weepower.com">Link</a>
+```
+
+---code|label:Get---
+
+```javascript
+Wee.$attr('.element', 'href');
 ```
 
 ```html

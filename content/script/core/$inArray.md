@@ -10,9 +10,9 @@ variables:
 
 ```javascript
 var arr = [
-'value',
-'value2',
-'value3'
+	'value',
+	'value2',
+	'value3'
 ];
 
 Wee.$inArray('value');

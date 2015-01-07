@@ -12,5 +12,4 @@ Separate multiple class names with spaces.
 
 ```javascript
 $('.element').addClass('modifier');
-
 ```

@@ -29,9 +29,9 @@ Wee.assets.load({
 Wee.assets.load({
 	root: 'https://cdn.domain.com/assets',
 	files: [
-	'/js/lib/dynamic.min.js',
-	'/css/lib/dynamic.css',
-	'/img/dynamic.img'
+		'/js/lib/dynamic.min.js',
+		'/css/lib/dynamic.css',
+		'/img/dynamic.img'
 	],
 	success: function() {
 		// Success logic

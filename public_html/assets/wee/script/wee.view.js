@@ -82,25 +82,33 @@
 					empty = val === false || val === U || val.length === 0,
 					resp = '';
 
-				if (! filter && ! empty && typeof val == 'object') {
+				if (! filter && empty === false) {
 					// Loop through objects and arrays
-					var isObj = W.$isObject(val),
-						i = 0;
+					if (typeof val == 'object') {
+						var isObj = W.$isObject(val),
+							i = 0;
 
-					for (var key in val) {
-						if (val.hasOwnProperty(key)) {
-							var el = val[key],
-								item = W.$extend({
-									$key: key,
-									'.': el,
-									'#': i,
-									'##': i + 1
-								}, W.$isObject(el) ? el : (isObj ? val : {}));
+						for (var key in val) {
+							if (val.hasOwnProperty(key)) {
+								var el = val[key],
+									item = W.$extend({
+										$key: key,
+										'.': el,
+										'#': i,
+										'##': i + 1
+									}, W.$isObject(el) ? el : (isObj ? val : {}));
 
-							resp += scope.process(inner, item, data, init, i);
+								resp += scope.process(inner, item, data, init, i);
 
-							i++;
+								i++;
+							}
 						}
+					} else if (W.$isString(val)) {
+						resp = scope.process(inner, {
+							'.': val,
+							'#': 0,
+							'##': 1
+						}, data, init, 0);
 					}
 				} else if (filter !== U) {
 					var filters = filter.split('|'),

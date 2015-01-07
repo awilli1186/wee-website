@@ -56,7 +56,7 @@
 				{{#content}}
 					{{#intro|notEmpty}}
 					<div class="intro">
-						<h1 class="intro__title">{{name}}{{#path|notEmpty}} <a href="{{$root.gitHubRoot}}{{path}}">→</a>{{/path}}</h1>
+						<h1 class="intro__title">{{name|upper}}{{#path|notEmpty}} <a href="{{$root.gitHubRoot}}{{path}}">→</a>{{/path}}</h1>
 						{{#heading|notEmpty}}
 						<p class="intro__heading">{{heading}}</p>
 						{{/heading}}
@@ -95,6 +95,33 @@
 										<td>{{#req|notEmpty}}✓{{/req}}</td>
 									</tr>
 									{{/variables}}
+								</tbody>
+							</table>
+							{{#variableNotes}}
+							<p class="variables__notes">{{.}}</p>
+							{{/variableNotes}}
+						</div>
+						<div class="variables options">
+							<table>
+								<thead>
+									<tr>
+										<th>Variable</th>
+										<th>Type</th>
+										<th>Default</th>
+										<th>Description</th>
+										<th>Required</th>
+									</tr>
+								</thead>
+								<tbody>
+									{{#options}}
+									<tr>
+										<td>{{var}}</td>
+										<td>{{type}}</td>
+										<td>{{#default|isEmpty}}&ndash;{{/default}} {{default}}</td>
+										<td>{{desc}}</td>
+										<td>{{#req|notEmpty}}✓{{/req}}</td>
+									</tr>
+									{{/options}}
 								</tbody>
 							</table>
 						</div>

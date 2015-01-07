@@ -15,8 +15,8 @@ Wee.$exec('controller:functions');
 Wee.$exec('controller:functions', {
 	scope: this,
 	arguments: [
-	'Hello',
-	123
+		'Hello',
+		123
 	]
 });
 
@@ -27,5 +27,5 @@ Wee.$exec(function() {
 Wee.$exec([
 	'controller:function',
 	'controller2:function'
-	]);
+]);
 ```
