@@ -4,7 +4,7 @@ heading: Get CSS value of first element or set matched elements CSS property wit
 variables:
   - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
   - { var: "a", desc: "CSS property or {property: value} object", type: "string, object", req: true }
-  - { var: "b", desc: "CSS value", type: "string" }
+  - { var: "b", desc: "CSS value or callback", type: "string, callback" }
 ---
 
 ---doc|label:Single---

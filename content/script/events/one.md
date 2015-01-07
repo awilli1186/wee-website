@@ -6,7 +6,12 @@ variables:
   - { var: "a", desc: "Event name or object of events", type: "selector, element", req: true }
   - { var: "b", desc: "Callback for events or options object",type: "selector, element" }
   - { var: "c", desc: "Option parameters, same as on", type: "array" }
+deprecated: true
 ---
+
+---notice---
+
+[Wee.events.on()](#on) should be used with the one property setting set to true.
 
 ---doc---
 

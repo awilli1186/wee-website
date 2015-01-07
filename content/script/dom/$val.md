@@ -2,6 +2,6 @@
 name: $val
 heading: Get value of specified element or set specified value
 variables:
-  - { var: "sel", type: "selector, element", req: true }
-  - { var: "val", type: "string", req: true }
+  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
+  - { var: "val", desc: "Value to set or a callback function taking the element, index, and existing value", type: "string, callback", req: true }
 ---

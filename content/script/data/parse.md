@@ -7,7 +7,12 @@ variables:
   - { var: "opt", desc: "Parse options below", type: "object"}
 options:
   - { var: "encode", desc: "Encode markup to output raw",type: "boolean", default: "false"}
+deprecated: true
 ---
+
+---notice---
+
+Replaced with Wee.view.render().
 
 ---doc---
 
