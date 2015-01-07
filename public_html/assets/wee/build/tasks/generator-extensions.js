@@ -14,6 +14,7 @@ module.exports = function(grunt) {
 
 		extensions.forEach(function(name) {
 			var extension = path.relative(__dirname, path.join(extensionRoot, name));
+			delete require.cache[require.resolve(extension)];
 			require(extension);
 		});
 	});

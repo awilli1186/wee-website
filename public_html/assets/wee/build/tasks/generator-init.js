@@ -88,7 +88,7 @@ module.exports = function(grunt) {
 
 			// Watch extensions
 			if (config.paths.extensions) {
-				var extensionPath = config.paths.partials;
+				var extensionPath = config.paths.extensions;
 
 				// Watch for partial updates
 				grunt.config.set('watch.loadExtensions-' + task, {
