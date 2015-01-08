@@ -6,6 +6,7 @@ variables:
 options:
   - { var: "url", desc: "URL endpoint to request", type: "string", req: true }
   - { var: "method", desc: "Request verb (get, post, put, etc)", type: "string", default: "get" }
+  - { var: "headers", desc: "Object to set request headers", type: "object" }
   - { var: "data", desc: "Object to serialize and pass along with request", type: "object" }
   - { var: "success", desc: "Callback if request succeeds", type: "callback" }
   - { var: "failure", desc: "Callback if request fails", type: "callback" }

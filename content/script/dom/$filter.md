@@ -2,7 +2,24 @@
 name: $filter
 heading: Return a subset of elements based on a specified filter from a specified element
 variables:
-  - { var: "sel", type: "selector, element", req: true }
-  - { var: "filter", type: "selector, callback", req: true }
-  - { var: "opt", type: "object" }
+  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
+  - { var: "filter", desc: "Filter selector", type: "selector, callback", req: true }
+  - { var: "opt", desc: "Callback arguments", type: "object" }
 ---
+
+```html
+<ul>
+    <li class="first"></li>
+    <li class="second"></li>
+</ul>
+```
+
+---code---
+
+```javascript
+Wee.$filter('li', '.second');
+```
+
+```html
+<li class="second"></li>
+```
