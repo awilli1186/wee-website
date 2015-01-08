@@ -395,6 +395,23 @@ body {
 code.hljs {
 	.padding(@codeBlockPaddingVertical; @codeBlockPaddingHorizontal);
 }
+.notice {
+	.relative();
+	p {
+		.background(#e6db74);
+		.padding(1.4; 2);
+	}
+}
+.deprecated {
+	&:before {
+		.absolute(-1.4; false; false; 0);
+		.background(#e6db74);
+		.content('Deprecated');
+		.font(Arial; .8);
+		.padding(.5; 2);
+		.uppercase();
+	}
+}
 
 
 

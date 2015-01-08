@@ -663,8 +663,8 @@
 				x = 0;
 
 			if (el.nodeName == 'FORM') {
-				for (; i < sel.elements.length; i++) {
-					var child = sel.elements[i];
+				for (; i < el.elements.length; i++) {
+					var child = el.elements[i];
 
 					if (child.name && child.type != 'file' && child.type != 'reset') {
 						if (child.type == 'select-multiple') {

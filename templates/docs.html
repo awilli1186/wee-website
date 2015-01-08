@@ -128,7 +128,7 @@
 						{{#blocks}}
 						{{#name|not(description)}}
 						{{#label|notEmpty}}<h3>{{label}}</h3>{{/label}}
-						<div class="{{name}}{{#type|notEmpty}} {{name}}__{{type}}{{/type}}">
+						<div class="{{name}}{{#type|notEmpty}} {{name}}__{{type}}{{/type}}{{#$root.deprecated}} deprecated{{/$root.deprecated}}">
 							{{output|raw}}
 						</div>
 						{{/name}}
