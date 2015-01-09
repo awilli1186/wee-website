@@ -106,15 +106,26 @@
 			"template": "docs",
 			"target": "public_html/build/index.html",
 			"content": [
+				"content/build/intro.md",
 				"content/build/*.md"
 			],
 			"sections": {
+				"config": {
+					"name": "Config",
+					"template": "docs",
+					"target": "public_html/build/config.html",
+					"content": [
+						"content/build/build/config/intro.md",
+						"content/build/build/config/*.md"
+					]
+				},
 				"validation": {
 					"name": "Validation",
 					"template": "docs",
 					"target": "public_html/build/validation.html",
 					"content": [
-						"build/validation/*.md"
+						"content/build/validation/intro.md",
+						"content/build/validation/*.md"
 					]
 				}
 			}
@@ -124,6 +135,7 @@
 			"template": "docs",
 			"target": "public_html/generator/index.html",
 			"content": [
+				"content/generator/intro.md",
 				"content/generator/*.md"
 			],
 			"sections": {
@@ -132,7 +144,17 @@
 					"template": "docs",
 					"target": "public_html/generator/config.html",
 					"content": [
-						"build/generator/config/*.md"
+						"content/build/generator/config/intro.md",
+						"content/build/generator/config/*.md"
+					]
+				},
+				"variables": {
+					"name": "Variables",
+					"template": "docs",
+					"target": "public_html/generator/variables.html",
+					"content": [
+						"content/build/generator/variables/intro.md",
+						"content/build/generator/variables/*.md"
 					]
 				}
 			}
@@ -163,6 +185,7 @@
 					"template": "docs",
 					"target": "public_html/style/mixins.html",
 					"content": [
+						"content/style/mixins/intro.md",
 						"content/style/mixins/*.md"
 					]
 				},
@@ -198,6 +221,15 @@
 						"content/script/core/$set.md",
 						"content/script/core/$get.md",
 						"content/script/core/*.md"
+					]
+				},
+				"chain": {
+					"name": "Chain",
+					"template": "docs",
+					"target": "public_html/script/chain.html",
+					"content": [
+						"content/script/chain/intro.md",
+						"content/script/chain/*.md"
 					]
 				},
 				"assets": {
@@ -259,7 +291,8 @@
 					"template": "docs",
 					"target": "public_html/script/view.html",
 					"content": [
-						"content/script/assets/*.md"
+						"content/script/view/intro.md",
+						"content/script/view/*.md"
 					]
 				},
 				"polyfills": {
