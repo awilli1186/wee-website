@@ -3,7 +3,7 @@ name: $html
 heading: Get HTML value of first element or set matched elements HTML with specified value
 variables:
   - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "val", desc: "HTML or callback function taking the element, index, and existing HTML", type: "string, callback" }
+  - { var: "val", desc: "HTML or callback taking the element, index, and existing HTML", type: "string, callback" }
 ---
 
 ```html

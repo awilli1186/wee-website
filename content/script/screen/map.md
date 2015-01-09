@@ -12,7 +12,9 @@ options:
   - { var: "callback", desc: "Matching callback", type: "callback", req: true }
   - { var: "args", desc: "Arguments to inject into callback", type: "array" }
   - { var: "scope", desc: "Callback scope", type: "object" }
+  - { var: "once", desc: "Disable callback after first execution", type: "boolean" }
 ---
+
 ---doc---
 
 You can setup as many breakpoint callbacks as you need. As they are mapped they are added to a global window resize event that evaluates against all the breakpoints in storage. An object with the direction, size, previous size, and init status is always injected as the first argument to the callback.

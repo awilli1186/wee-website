@@ -3,8 +3,8 @@ name: $attr
 heading: Get attribute of first element or set matched elements attribute with specified value
 variables:
   - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "key", desc: "Attribute to get or set", type: "string", req: true }
-  - { var: "val", desc: "Value to assign to attribute", type: "string" }
+  - { var: "a", desc: "Attribute to get or set or an object", type: "string, object", req: true }
+  - { var: "b", desc: "Value to assign to attribute", type: "string" }
 ---
 
 ```html

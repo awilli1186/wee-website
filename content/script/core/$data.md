@@ -3,8 +3,8 @@ name: $data
 heading: Get data value of first element or set matched elements data with specified value
 variables:
   - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "key", desc: "Data attribute to get or set", type: "string", req: true }
-  - { var: "val", desc: "Value to assign to data attribute", type: "string" }
+  - { var: "a", desc: "Data attribute to get or set or an object", type: "string", req: true }
+  - { var: "b", desc: "Value to assign to data attribute", type: "string" }
 ---
 
 ```html
