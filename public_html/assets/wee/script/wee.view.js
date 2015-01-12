@@ -109,7 +109,7 @@
 							'#': 0,
 							'##': 1
 						}, data, init, 0);
-					} else if (val !== false) {
+					} else {
 						resp = inner;
 					}
 				} else if (filter !== U) {

@@ -35,11 +35,11 @@ QUnit.test('render template', 8, function(assert) {
 
 	assert.strictEqual(Wee.view.render('{{firstName}} {{lastName}}', data), 'Keith Roberts', 'Two variables parsed successfully.');
 
-	assert.strictEqual(Wee.view.render('{{#children|notEmpty}}Has children{{/children|notEmpty}}', data), 'Has children', 'Children exist.');
+	assert.strictEqual(Wee.view.render('{{#children|notEmpty}}Has children{{/children}}', data), 'Has children', 'Children exist.');
 
-	assert.strictEqual(Wee.view.render('{{#cousins|notEmpty}}Has cousins{{/cousins|notEmpty}}', data), '', 'There are no cousins.');
+	assert.strictEqual(Wee.view.render('{{#cousins|notEmpty}}Has cousins{{/cousins}}', data), '', 'There are no cousins.');
 
-	assert.strictEqual(Wee.view.render('{{#cousins|empty}}No cousins{{/cousins|empty}}', data), 'No cousins', 'There are no cousins.');
+	assert.strictEqual(Wee.view.render('{{#cousins|isEmpty}}No cousins{{/cousins}}', data), 'No cousins', 'There are no cousins.');
 
 	assert.strictEqual(Wee.view.render('<ul>{{#children}}<li>{{firstName}}</li>{{/children}}</ul>', data), '<ul><li>Tim</li><li>Kathy</li></ul>', 'Child variables parsed successfully.');
 });
