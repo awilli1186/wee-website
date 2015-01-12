@@ -10,7 +10,7 @@ options:
   - { var: "success", desc: "Callback if request succeeds", type: "callback" }
   - { var: "failure", desc: "Callback if request fails", type: "callback" }
   - { var: "json", desc: "Evaluate the response as JSON",type: "boolean", default: "false"}
-  - { var: "jsonp", desc: "Override name for callback query string parameter", type: "boolean, string" }
+  - { var: "jsonp", desc: "Boolean or override name for callback query string parameter", type: "boolean, string" }
   - { var: "args", desc: "Callback arguments", type: "array" }
   - { var: "scope", desc: "Callback scope",type: "object"}
   - { var: "template", desc: "Template string to parse response JSON into",type: "string"}

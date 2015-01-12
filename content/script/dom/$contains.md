@@ -9,7 +9,7 @@ variables:
 ---code|type:boolean---
 
 ```javascript
-Wee.$contains('body', '.element');
+Wee.$contains('.parent', '.child');
 ```
 
 ```html

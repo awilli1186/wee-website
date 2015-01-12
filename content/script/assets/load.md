@@ -5,7 +5,7 @@ variables:
   - { var: "conf", desc: "Object parameters below", type: "object", req: true }
 options:
   - { var: "files", desc: "Single file path or array of file paths", type: "string, array", req: true }
-  - { var: "group", desc: "Optional reference for use with the [ready()](https://www.weepower.com/script/assets#ready) function", type: "string" }
+  - { var: "group", desc: "Optional reference for use with the ready() function", type: "string" }
   - { var: "root", desc: "Request root path or domain", type: "string", default: "current root" }
   - { var: "async", desc: "Load asset asynchronously, only applicable to scripts", type: "boolean", default: "true" }
   - { var: "success", desc: "Success callback", type: "callback" }

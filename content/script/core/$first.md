@@ -11,5 +11,5 @@ variables:
 Works the same as Wee.$() but only returns the first result from the result set.
 
 ```javascript
-Wee.$first('.element');
+var $first = Wee.$first('.element');
 ```

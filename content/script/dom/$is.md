@@ -3,7 +3,7 @@ name: $is
 heading: Determines if a particular element matches a specified criteria
 variables:
   - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "filter", desc: "Filter selector", type: "selector", req: true }
+  - { var: "filter", desc: "Filter selector or callback", type: "selector, callback", req: true }
   - { var: "opt", desc: "Callback arguments", type: "object" }
 ---
 
@@ -11,7 +11,7 @@ variables:
 <div class="element"></div>
 ```
 
----code---
+---code|type:boolean---
 
 ```javascript
 Wee.$is('.element', 'div');

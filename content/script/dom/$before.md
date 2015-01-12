@@ -10,3 +10,9 @@ variables:
 ```javascript
 Wee.$before('.second', '.first');
 ```
+
+```javascript
+Wee.$before('.element', function(el, i, pos.innerHTML) {
+    // Callback logic
+});
+```

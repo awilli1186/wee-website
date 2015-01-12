@@ -54,6 +54,7 @@ Wee.addNumbers(2, 4);
 </code></pre><pre><code class="language-javascript">[node, node]
 </code></pre></div><h3>Contextual</h3><div class="code"><pre><code class="language-javascript">Wee.$('li', '.element');
 </code></pre><pre><code class="language-javascript">[node, node]
+</code></pre></div><h3>Data-ref</h3><div class="doc"><p>Prefetched elements can be selected by using the ‘ref:name’ format.</p><pre><code class="language-javascript">Wee.$('ref:sidebar');
 </code></pre></div><h3>Third-party query engine</h3><div class="doc"><p>To use another query engine beside Wee you can set the WeeSelector variable. This is used out of the box for legacy support by falling back to Sizzle to expand selector limitations in IE8.</p><pre><code class="language-javascript">var WeeSelector = Sizzle;
 </code></pre></div></div><div class="doc"><h2 class="doc__title">$set <a href="#set" class="doc__anchor" id="set">#</a></h2><p class="doc__heading">Set public variable</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>key</td><td>string</td><td>&ndash;</td><td>Reference to store the value under</td><td>✓</td></tr><tr><td>val</td><td>any</td><td>&ndash;</td><td>Value to store</td><td>✓</td></tr><tr><td>opt</td><td>object</td><td>&ndash;</td><td>Callback options</td><td></td></tr></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><h3>Simple</h3><div class="code"><pre><code class="language-javascript">Wee.$set('key', 'Success');
 </code></pre><pre><code class="language-javascript">Success
@@ -138,7 +139,7 @@ Wee.$exec([
     'controller:function',
     'controller2:function'
 ]);
-</code></pre></div></div><div class="doc"><h2 class="doc__title">$extend <a href="#extend" class="doc__anchor" id="extend">#</a></h2><p class="doc__heading">Extend specified object with specified source object</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>obj</td><td>object</td><td>&ndash;</td><td>Target object</td><td>✓</td></tr><tr><td>src</td><td>object</td><td>&ndash;</td><td>Source object</td><td>✓</td></tr><tr><td>deep</td><td>boolean</td><td>false</td><td>Deep nesting</td><td></td></tr></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="code"><pre><code class="language-javascript">var obj1 = {
+</code></pre></div></div><div class="doc"><h2 class="doc__title">$extend <a href="#extend" class="doc__anchor" id="extend">#</a></h2><p class="doc__heading">Extend specified object with specified source object</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>obj</td><td>object</td><td>&ndash;</td><td>Target object</td><td>✓</td></tr><tr><td>src</td><td>object</td><td>&ndash;</td><td>Source object</td><td>✓</td></tr><tr><td>deep</td><td>boolean</td><td>false</td><td>Deep nesting</td><td></td></tr></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><pre><code class="language-javascript">var obj1 = {
     key1: 'val1',
     key2: 'val2'
 },
@@ -146,27 +147,15 @@ obj2 = {
     key3: 'val3',
     key4: 'val4'
 };
-
-Wee.$extend(obj1, obj2);
-</code></pre><pre><code class="language-javascript">{
-    key1: 'val1',
-    key2: 'val2',
-    key3: 'val3',
-    key4: 'val4'
-}
-</code></pre></div></div><div class="doc"><h2 class="doc__title">$first <a href="#first" class="doc__anchor" id="first">#</a></h2><p class="doc__heading">Get first match to specified element</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>sel</td><td>selector</td><td>&ndash;</td><td>Lookup selector</td><td>✓</td></tr><tr><td>context</td><td>selector, element</td><td>document</td><td>Selection context</td><td></td></tr></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="doc"><p>Works the same as Wee.$() but only returns the first result from the result set.</p><pre><code class="language-javascript">Wee.$first('.element');
-</code></pre></div></div><div class="doc"><h2 class="doc__title">$getKeys <a href="#getkeys" class="doc__anchor" id="getkeys">#</a></h2><p class="doc__heading">Get keys from an object</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>obj</td><td>object</td><td>&ndash;</td><td>Object (single level only)</td><td>✓</td></tr></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="code"><pre><code class="language-javascript">var obj = {
+</code></pre><pre><code class="language-javascript">var $obj3 = Wee.$extend(obj1, obj2);
+</code></pre></div></div><div class="doc"><h2 class="doc__title">$first <a href="#first" class="doc__anchor" id="first">#</a></h2><p class="doc__heading">Get first match to specified element</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>sel</td><td>selector</td><td>&ndash;</td><td>Lookup selector</td><td>✓</td></tr><tr><td>context</td><td>selector, element</td><td>document</td><td>Selection context</td><td></td></tr></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="doc"><p>Works the same as Wee.$() but only returns the first result from the result set.</p><pre><code class="language-javascript">var $first = Wee.$first('.element');
+</code></pre></div></div><div class="doc"><h2 class="doc__title">$getKeys <a href="#getkeys" class="doc__anchor" id="getkeys">#</a></h2><p class="doc__heading">Get keys from an object</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>obj</td><td>object</td><td>&ndash;</td><td>Object (single level only)</td><td>✓</td></tr></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><pre><code class="language-javascript">var obj = {
     key: 'val',
     key2: 'val',
     key3: 'val'
 };
 
-Wee.$getKeys(obj);
-</code></pre><pre><code class="language-javascript">[
-    'key',
-    'key2',
-    'key3'
-]
+var $keys = Wee.$getKeys(obj);
 </code></pre></div></div><div class="doc"><h2 class="doc__title">$hasClass <a href="#hasclass" class="doc__anchor" id="hasclass">#</a></h2><p class="doc__heading">Determine if specified element has specified class</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>sel</td><td>selector, element</td><td>&ndash;</td><td>Selector or element</td><td>✓</td></tr><tr><td>val</td><td>string</td><td>&ndash;</td><td>Class name to check for</td><td>✓</td></tr></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="code"><pre><code class="language-javascript">$('.element').hasClass('class-name');
 </code></pre><pre><code class="language-javascript">false
 </code></pre></div></div><div class="doc"><h2 class="doc__title">$html <a href="#html" class="doc__anchor" id="html">#</a></h2><p class="doc__heading">Get HTML value of first element or set matched elements HTML with specified value</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>sel</td><td>selector, element</td><td>&ndash;</td><td>Selector or element</td><td>✓</td></tr><tr><td>val</td><td>string, callback</td><td>&ndash;</td><td>HTML or callback taking the element, index, and existing HTML</td><td></td></tr></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><pre><code class="language-html">&lt;div class=&quot;element&quot;&gt;&lt;h1&gt;Heading&lt;/h1&gt;&lt;/div&gt;

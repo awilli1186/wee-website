@@ -6,18 +6,12 @@ variables:
   - { var: "html", desc: "HTML or callback taking the element and index", type: "string, callback", req: true }
 ---
 
-```html
-<div>Lorem ipsum</div>
+```javascript
+Wee.$wrapInner('.element', '<p></p>');
 ```
-
----code---
 
 ```javascript
-Wee.$wrapInner('div', '<p></p>');
-```
-
-```html
-<div>
-    <p>Lorem ipsum</p>
-</div>
+Wee.$wrapInner('.element', function(el, i) {
+    // Callback logic
+});
 ```

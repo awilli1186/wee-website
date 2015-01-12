@@ -9,3 +9,9 @@ variables:
 ```javascript
 Wee.$append('.parent', '.child');
 ```
+
+```javascript
+Wee.$append('.element', function(el, i, el.innerHTML) {
+    // Callback logic
+});
+```

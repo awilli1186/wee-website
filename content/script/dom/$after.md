@@ -10,3 +10,9 @@ variables:
 ```javascript
 Wee.$after('.first', '.second');
 ```
+
+```javascript
+Wee.$after('.element', function(el, i, el.innerHTML) {
+    // Callback logic
+});
+```

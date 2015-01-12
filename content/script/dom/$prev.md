@@ -7,19 +7,6 @@ variables:
   - { var: "opt", desc: "Callback arguments", type: "object" }
 ---
 
-```html
-<ul>
-	<li class="first"></li>
-	<li class="second"></li>
-</ul>
-```
-
----code---
-
 ```javascript
-Wee.$prev('.second');
-```
-
-```html
-<li class="first"></li>
+var $prev = Wee.$prev('.element');
 ```

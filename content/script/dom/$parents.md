@@ -6,23 +6,6 @@ variables:
   - { var: "filter", desc: "Filter selector", type: "selector, element" }
 ---
 
-```html
-<div>
-	<ul>
-		<li class="element"></li>
-	</ul>
-</div>
-```
-
----code---
-
 ```javascript
-Wee.$parents('.element');
-```
-
-```html
-[
-	<ul></ul>,
-	<div></div>
-]
+var $parents = Wee.$parents('.element');
 ```

@@ -7,7 +7,7 @@ variables:
   - { var: "b", desc: "Property value or callback taking the element, index, and existing property", type: "string, callback" }
 ---
 
----code---
+---code|label:Get|type:string---
 
 ```javascript
 Wee.$prop('a', 'href');
@@ -15,4 +15,12 @@ Wee.$prop('a', 'href');
 
 ```javascript
 https://www.weepower.com/
+```
+
+---doc|label:Set---
+
+```javascript
+Wee.$prop('a', {
+    'href': 'https://www.weepower.com/'
+});
 ```

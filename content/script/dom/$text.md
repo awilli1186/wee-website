@@ -7,5 +7,11 @@ variables:
 ---
 
 ```javascript
-Wee.$text('.element');
+var $text = Wee.$text('.element');
+```
+
+```javascript
+Wee.$text('.element', function(el, i, el.innerText) {
+    // Callback logic
+});
 ```

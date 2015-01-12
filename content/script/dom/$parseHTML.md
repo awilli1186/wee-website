@@ -6,12 +6,6 @@ variables:
   - { var: "obj", desc: "Converts to Wee DOM object ", type: "boolean" }
 ---
 
----code---
-
 ```javascript
-Wee.$parseHTML('<div></div>');
-```
-
-```html
-<div></div>
+var $parseHTML = Wee.$parseHTML('<div></div>');
 ```

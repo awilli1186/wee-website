@@ -5,8 +5,6 @@ variables:
   - { var: "obj", desc: "Object (single level only)", type: "object", req: true }
 ---
 
----code---
-
 ```javascript
 var obj = {
 	key: 'val',
@@ -14,13 +12,5 @@ var obj = {
 	key3: 'val'
 };
 
-Wee.$getKeys(obj);
-```
-
-```javascript
-[
-	'key',
-	'key2',
-	'key3'
-]
+var $keys = Wee.$getKeys(obj);
 ```

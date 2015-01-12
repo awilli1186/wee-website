@@ -9,3 +9,9 @@ variables:
 ```javascript
 Wee.$prepend('.parent', '.child');
 ```
+
+```javascript
+Wee.$prepend('.parent', function(el, i, el.innerHTML) {
+    // Callback logic
+});
+```

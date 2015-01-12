@@ -7,5 +7,5 @@ variables:
 ---
 
 ```javascript
-Wee.$find('table', 'tr');
+var $find = Wee.$find('table', 'tr');
 ```
