@@ -1567,11 +1567,8 @@
 	# Colors
 \*------------------------------------*/
 
-.color (@color) {
+.color (@color: @baseColor) {
 	color: @color;
-}
-.baseColor () {
-	color: @baseColor;
 }
 .white () {
 	color: @white;
@@ -2514,7 +2511,37 @@
 	display: none !important;
 }
 
-// DEPRECATED
+
+
+
+
+/*------------------------------------*\
+	# Deprecated
+\*------------------------------------*/
+
+.baseColor () {
+	color: @baseColor;
+}
+.centered () {
+	.centered(horizontal);
+}
+.centered (horizontal) {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+.centered (vertical) {
+	position: absolute;
+	&:before {
+		content: ' ';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+.centered (both) {
+	.centered();
+}
 .hide {
 	display: none;
 }

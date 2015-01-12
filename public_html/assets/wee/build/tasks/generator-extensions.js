@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
 	grunt.registerTask('loadExtensions', function(task) {
-		var build = grunt.util.toArray(project.generator.build),
+		var build = Wee.$toArray(project.generator.build),
 			configPath = build[task],
 			json = grunt.file.readJSON(configPath),
 			config = json.config,

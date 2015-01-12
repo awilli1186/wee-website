@@ -79,7 +79,7 @@
 
 			return temp.replace(this.pair, function(match, tag, filter, inner) {
 				var val = scope.getVal(data, prev, tag, U, init, index),
-					empty = val === false || val === U || val.length === 0,
+					empty = val === false || val == null || val.length === 0,
 					resp = '';
 
 				if (! filter && empty === false) {
@@ -109,6 +109,8 @@
 							'#': 0,
 							'##': 1
 						}, data, init, 0);
+					} else if (val !== false) {
+						resp = inner;
 					}
 				} else if (filter !== U) {
 					var filters = filter.split('|'),
@@ -136,7 +138,7 @@
 				var split = set.split('||'),
 					fb = split[1],
 					segs = split[0].split('|'),
-					tag = segs[0],
+					tag = segs[0].trim(),
 					val = scope.getVal(data, prev, tag, fb, init, index),
 					helpers = val === U ? segs : segs.slice(1);
 
@@ -146,7 +148,7 @@
 
 					if (arr) {
 						var args = arr[2] !== U ? arr[2].split(',') : [];
-						el = arr[1];
+						el = arr[1].trim();
 
 						if (scope.helpers.hasOwnProperty(el)) {
 							val = scope.helpers[el].apply({
@@ -212,7 +214,7 @@
 			}
 
 			// Return fallback
-			return fb;
+			return fb ? fb.trim() : fb;
 		}
 	});
 })(Wee, undefined);

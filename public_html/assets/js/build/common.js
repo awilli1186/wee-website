@@ -54,7 +54,7 @@ Wee.fn.make('common', {
 		for (; i < this.offsets.length; i++) {
 			if (this.offsets[i + 1] > min) {
 				if (this.active !== i) {
-					this.$subnavLinks.removeClass('active').eq(i).addClass('active');
+					this.$subnavLinks.removeClass('is-active').eq(i).addClass('is-active');
 					this.active = i;
 				}
 

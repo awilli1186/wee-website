@@ -637,7 +637,7 @@
 				func ?
 					val.call(el, i, el.className) :
 					val.split(' ').forEach(function(val) {
-						toggle === false ||  W.$hasClass(el, val) ?
+						toggle === false || (toggle === U && W.$hasClass(el, val)) ?
 							W.$removeClass(el, val) :
 							W.$addClass(el, val);
 					});
@@ -803,12 +803,15 @@
 			if (val === U) {
 				var el = sel ? W.$first(sel) : W._win;
 
-				if (W._legacy && el === W._win) {
-					el = W._html;
-					return el.scrollTop;
+				if (el === W._win) {
+					if (W._legacy) {
+						el = W._html;
+					} else {
+						return el.pageYOffset;
+					}
 				}
 
-				return el.pageYOffset;
+				return el.scrollTop;
 			}
 
 			W.$each(sel, function(el) {

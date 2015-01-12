@@ -2,7 +2,7 @@
 
 module.exports = function(grunt) {
 	grunt.registerTask('initGenerator', function(task) {
-		var build = grunt.util.toArray(project.generator.build),
+		var build = Wee.$toArray(project.generator.build),
 			configPath = build[task],
 			json = grunt.file.readJSON(configPath),
 			config = json.config,
@@ -19,13 +19,15 @@ module.exports = function(grunt) {
 					keys.forEach(function(key) {
 						var block = context[key],
 							root = block.contentRoot || '',
-							target = path.join(staticRoot, block.target),
-							template = path.join(staticRoot, config.paths.templates + '/' + block.template + '.html'),
-							content = Wee.$toArray(block.content);
+							content = block.content ? Wee.$toArray(block.content) : [],
+							template = path.join(staticRoot, config.paths.templates + '/' + block.template + '.html');
+
+						// Push targets to exclude from watch
+						Wee.$toArray(block.target).forEach(function(target) {
+							targets.push(path.join(staticRoot, target));
+						});
 
 						watchFiles.push(template);
-
-						targets.push(target);
 						templates.push(template);
 
 						// Watch template files

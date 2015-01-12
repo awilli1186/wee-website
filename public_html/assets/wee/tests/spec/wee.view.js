@@ -27,7 +27,7 @@ QUnit.test('render template', 8, function(assert) {
 		]
 	};
 
-	assert.strictEqual(Wee.view.render('{{firstName}}', data), 'Keith', 'Single variable parsed successfully.');
+	assert.strictEqual(Wee.view.render('{{ firstName }}', data), 'Keith', 'Single variable parsed successfully.');
 
 	assert.strictEqual(Wee.view.render('{{firstName}}', {}), '', 'Unavailable variable cleared successfully.');
 
