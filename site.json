@@ -4,7 +4,9 @@
 	"config": {
 		"watch": true,
 		"minify": true,
-		"typographer": true,
+		"enhanceTypography": true,
+		"removeIndex": true,
+		"removeTrailingSlashes": true,
 		"paths": {
 			"partials": "partials",
 			"templates": "templates",
@@ -13,10 +15,12 @@
 	},
 	"env": {
 		"prod": {
+			"domain": "https://www.weepower.com",
 			"cdnUrl": "https://www.weepower.com",
 			"assetUrl": "https://www.weepower.com/assets"
 		},
 		"default": {
+			"domain": "http://www.weepower.dev",
 			"cdnUrl": "",
 			"assetUrl": "/assets"
 		}
@@ -40,14 +44,37 @@
 			"target": "public_html/index.html",
 			"content": "content/home/body.md"
 		},
+		"404": {
+			"name": "Page Not Found",
+			"data": {
+				"excludeNav": true
+			},
+			"template": "404",
+			"target": "public_html/404.html"
+		},
 		"blog": {
 			"name": "Blog",
 			"data": {
 				"excludeNav": true
 			},
-			"template": "docs",
-			"target": "public_html/blog/{{name|slug}}.html",
-			"content": "content/blog/*.md"
+			"template": "blog",
+			"target": [
+				"public_html/blog/index.html"
+			],
+			"content": "content/blog/*.md",
+			"sections": {
+				"entries": {
+					"name": "Entries",
+					"data": {
+						"excludeNav": true
+					},
+					"template": "entry",
+					"target": [
+						"public_html/blog/{{name|slug}}.html"
+					],
+					"content": "content/blog/*.md"
+				}
+			}
 		},
 		"start": {
 			"name": "Get Started",

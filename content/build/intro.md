@@ -1,5 +1,8 @@
 ---
-name: Script
-heading: Simple APIs to interact with the DOM and organize your logic
+name: Build
+heading: Grunt process to compile, optimize, and minify your project
 intro: true
+global:
+  seoTitle: Web Build Automation
+  seoDesc:
 ---

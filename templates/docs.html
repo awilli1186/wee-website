@@ -1,5 +1,5 @@
 {{> header}}
-<body class="page">
+<body class="subpage section">
 <div class="canvas-outer">
 	<div class="canvas-inner">
 		<header role="banner" class="scrollable sidebar" data-ref="scroll">
@@ -9,20 +9,16 @@
 						<img src="{{site.assetUrl}}/img/wee.svg" alt="Wee Framework">
 					</a>
 					{{#site.sections}}
-						{{#data.excludeNav|isEmpty}}
-						<h3><a href="/{{$key}}/"{{#active|notEmpty}} class="active"{{/active}}>{{name}}</a></h3>
+					{{#data.excludeNav|isEmpty}}
+						<h3><a href="/{{$key}}"{{#isCurrent}} class="is-active"{{/isCurrent}}>{{name}}</a></h3>
 						<ul>
 							{{#sections}}
-							<li><a href="/{{../$key}}/{{$key}}"{{#active|notEmpty}} class="active"{{/active}}>{{name}}</a></li>
+							<li><a href="/{{../$key}}/{{$key}}"{{#isCurrent}} class="is-active"{{/isCurrent}}>{{name}}</a></li>
 							{{/sections}}
 						</ul>
-						{{/data.excludeNav}}
+						{{/sections}}
+					{{/data.excludeNav}}
 					{{/site.sections}}
-				</div>
-			</div>
-			<div class="scrollbar">
-				<div class="track">
-					<div class="thumb"></div>
 				</div>
 			</div>
 		</header>
@@ -39,11 +35,6 @@
 					</ul>
 				</div>
 			</div>
-			<div class="scrollbar">
-				<div class="track">
-					<div class="thumb"></div>
-				</div>
-			</div>
 		</div>
 		<div class="container primary" data-ref="primary">
 			<div class="mobile-nav" data-ref="mobileNav">&#9776;</div>
@@ -56,7 +47,7 @@
 				{{#content}}
 					{{#intro|notEmpty}}
 					<div class="intro">
-						<h1 class="intro__title">{{name|upper}}{{#path|notEmpty}} <a href="{{$root.gitHubRoot}}{{path}}">→</a>{{/path}}</h1>
+						<h1 class="intro__title">{{name}}{{#path|notEmpty}} <a href="{{$root.gitHubRoot}}{{path}}">→</a>{{/path}}</h1>
 						{{#heading|notEmpty}}
 						<p class="intro__heading">{{heading}}</p>
 						{{/heading}}

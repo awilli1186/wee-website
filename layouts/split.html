@@ -1,0 +1,59 @@
+{{> header}}
+<body class="{{layout.class}}">
+	<div class="canvas-outer">
+		<div class="canvas-inner">
+			<header role="banner" class="scrollable sidebar" data-ref="scroll">
+				<div class="viewport">
+					<div class="overview js-overview">
+						<a href="/" rel="home" class="logo">
+							<img src="{{site.assetUrl}}/img/wee.svg" alt="Wee Framework">
+						</a>
+						{{#site.sections}}
+						{{#data.excludeNav|isEmpty}}
+						<h3><a href="/{{$key}}"{{#isCurrent}} class="is-active"{{/isCurrent}}>{{name}}</a></h3>
+						<ul>
+							{{#sections}}
+							<li><a href="/{{../$key}}/{{$key}}"{{#isCurrent}} class="is-active"{{/isCurrent}}>{{name}}</a></li>
+							{{/sections}}
+						</ul>
+						{{/sections}}
+						{{/data.excludeNav}}
+						{{/site.sections}}
+					</div>
+				</div>
+			</header>
+			{{#layout.subnav}}
+			<div class="scrollable subnav" data-ref="scroll subnav">
+				<div class="viewport">
+					<div class="overview js-overview">
+						<h3>Contents</h3>
+						<ul>
+							{{#content}}
+							{{#intro|isEmpty}}
+							<li><a href="#{{name|slug}}">{{name}}</a></li>
+							{{/intro}}
+							{{/content}}
+						</ul>
+					</div>
+				</div>
+			</div>
+			{{/layout.subnav}}
+			<div class="container primary" data-ref="primary">
+				<div class="mobile-nav" data-ref="mobileNav">&#9776;</div>
+				<main role="main">
+					<ol itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumb">
+						<li><a href="/" rel="home" itemprop="url"><span itemprop="title">Home</span></a></li>
+						{{#parent|notEmpty}}<li><a href="{{parent}}" rel="prev">{{parent.name}}</a></li>{{/parent}}
+						<li>{{section.name}}</li>
+					</ol>
+					{{layout.content}}
+				</main>
+				<footer role="contentinfo" class="footer">
+					{{> footer}}
+				</footer>
+			</div>
+		</div>
+	</div>
+	<script src="{{site.assetUrl}}/js/script.min.js"></script>
+</body>
+</html>

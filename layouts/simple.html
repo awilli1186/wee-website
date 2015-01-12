@@ -1,0 +1,22 @@
+{{> header}}
+<body>
+	<div class="page-top">
+		<div class="container">
+			<header role="banner">
+				<a href="/" rel="home" class="logo">
+					<img src="{{site.assetUrl}}/img/wee.svg" alt="Wee Framework">
+				</a>
+			</header>
+			<main role="main"{{#layout.class}} class="{{layout.class}}"{{/layout.class}}>
+				{{layout.content}}
+			</main>
+		</div>
+	</div>
+	<div class="page-bottom">
+		<footer role="contentinfo" class="container footer">
+			{{> footer}}
+		</footer>
+	</div>
+	<script src="{{site.assetUrl}}/js/script.min.js"></script>
+</body>
+</html>

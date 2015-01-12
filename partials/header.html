@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="{{site.name}}">
 <meta property="og:title" content="{{#seoTitle|notEmpty}}{{seoTitle}}{{/seoTitle}}{{#seoTitle|isEmpty}}{{site.name}}{{/seoTitle}}" itemprop="name">
 {{#seoDesc|notEmpty}}<meta property="og:description" content="{{seoDesc}}" itemprop="description">{{/seoDesc}}
-<meta property="og:url" content="https://www.weepower.com" itemprop="url">
+<meta property="og:url" content="{{url}}" itemprop="url">
 <meta property="og:image" content="{{site.cdnUrl}}{{#shareImage|notEmpty}}{{shareImage}}{{/shareImage}}{{#shareImage|isEmpty}}/share.png{{/shareImage}}" itemprop="image">
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="{{site.assetUrl}}/css/ie8.min.css">
