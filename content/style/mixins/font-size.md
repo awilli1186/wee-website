@@ -1,7 +1,7 @@
 ---
 name: Font Size
 variables:
-  - { var: "@value", desc: "Font size rules", type: "unit", req: true }
+  - { var: "@value", desc: "Font size rules", type: "unit", default: "@baseFontSize" }
 ---
 
 ---code---
@@ -14,12 +14,12 @@ variables:
 font-size: 2rem;
 ```
 
----doc---
+---table---
 
 | Variable    | Type | Default | Description       | Required |
 | ----------- | ---- | ------- | ----------------- | :------: |
 | @value      | unit | --      | Font size rules   | ✓        |
-| @lineHeight | unit | --      | Line height rules |          |
+| @lineHeight | unit | --      | Line height rules | ✓        |
 
 ---code---
 

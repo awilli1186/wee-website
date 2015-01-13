@@ -5,6 +5,18 @@ name: Text Styling
 ---code---
 
 ```less
+.text-sharpen();
+```
+
+```less
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+font-smoothing: antialiased;
+```
+
+---code---
+
+```less
 .capitalize();
 ```
 
@@ -32,14 +44,20 @@ text-transform: lowercase;
 text-transform: uppercase;
 ```
 
+---table---
+
+| Variable | Type    | Default | Description          | Required |
+| -------- | ------- | ------- | -------------------- | -------- |
+| @value   | keyword | none    | Text transform rules |          |
+
 ---code---
 
 ```less
-.text-transform();
+.text-transform(uppercase);
 ```
 
 ```less
-text-transform: none;
+text-transform: uppercase;
 ```
 
 ---code---
@@ -74,6 +92,13 @@ white-space: nowrap;
 text-decoration: underline;
 ```
 
+---table---
+
+| Variable | Type    | Default | Description           | Required |
+| -------- | ------- | ------- | --------------------- | -------- |
+| @style   | keyword | --      | Text decoration style | ✓        |
+| @color   | color   | inherit | Text decoration color |          |
+
 ---code---
 
 ```less
@@ -81,7 +106,59 @@ text-decoration: underline;
 ```
 
 ```less
+text-decoration: underline;
+-moz-text-decoration-line: underline;
+-moz-text-decoration-style: solid;
+-moz-text-decoration-color: #fff;
 text-decoration: #fff solid underline;
+```
+
+---code---
+
+```less
+.line-through();
+```
+
+```less
+text-decoration: line-through;
+```
+
+---table---
+
+| Variable | Type    | Default   | Description           | Required |
+| -------- | ------- | --------- | --------------------- | -------- |
+| @value   | keyword | underline | Text decoration rules |          |
+
+---code---
+
+```less
+.text-decoration(overline);
+```
+
+```less
+text-decoration: overline;
+```
+
+---table---
+
+| Variable | Type    | Default | Description | Required |
+| -------- | ------- | ------- | ----------- | -------- |
+| @line    | keyword | --      | Line type   | ✓        |
+| @style   | keyword | --      | Line style  | ✓        |
+| @color   | color   | inherit | Line color  |          |
+
+---code---
+
+```less
+.text-decoration(underline; dotted; blue);
+```
+
+```less
+text-decoration: underline;
+-moz-text-decoration-line: underline;
+-moz-text-decoration-style: dotted;
+-moz-text-decoration-color: #00f;
+text-decoration: #00f dotted underline;
 ```
 
 ---table---
@@ -125,7 +202,7 @@ letter-spacing: 2rem;
 ---code---
 
 ```less
-.word-spacing();
+.word-spacing(3);
 ```
 
 ```less
@@ -141,18 +218,18 @@ word-spacing: 3rem;
 ---code---
 
 ```less
-.text-indent(1px);
+.text-indent(1rem);
 ```
 
 ```less
-text-indent: 1px;
+text-indent: 1rem;
 ```
 
 ---table---
 
 | Variable | Type    | Default | Description                  | Require |
 | -------- | ------- | ------- | ---------------------------- | ------- |
-| @value   | keyword | none    | Controls selection operation | ✓       |
+| @value   | keyword | none    | Controls selection operation |         |
 
 ---code---
 
@@ -161,5 +238,25 @@ text-indent: 1px;
 ```
 
 ```less
+-moz-user-select: text;
+-ms-user-select: text;
+-webkit-user-select: text;
 user-select: text;
+```
+
+---table---
+
+| Variable | Type    | Default           | Description | Required |
+| -------- | ------- | ----------------- | ----------- | -------- |
+| @value   | integer | @codeBlockTabSize | Tab length  |          |
+
+---code---
+
+```less
+.tab-size(4);
+```
+
+```less
+-moz-tab-size: 4;
+tab-size: 4;
 ```

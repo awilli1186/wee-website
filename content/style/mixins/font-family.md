@@ -1,15 +1,15 @@
 ---
 name: Font Family
 variables:
-  - { var: "@value", desc: "Font family rules", type: "string", req: true }
+  - { var: "@value", desc: "Font family rules", type: "string, keyword", default: "@baseFont" }
 ---
 
 ---code---
 
 ```less
-.font-family(georgia);
+.font-family(Georgia);
 ```
 
 ```less
-font-family: georgia;
+font-family: Georgia;
 ```

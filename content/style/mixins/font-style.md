@@ -1,7 +1,7 @@
 ---
 name: Font Style
 variables:
-  - { var: "@value", desc: "Font style rules", type: "keyword", default: "normal", req: true }
+  - { var: "@value", desc: "Font style rules", type: "keyword", default: "normal" }
 ---
 
 ---code---

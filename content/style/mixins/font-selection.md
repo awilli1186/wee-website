@@ -1,11 +1,11 @@
 ---
 name: Font Selection
 variables:
-  - { var: "@family", desc: "", type: "font", default: "Font family rules", req: true }
-  - { var: "@size", desc: "", type: "unit", default: "Font size rules", req: true }
-  - { var: "@weight", desc: "", type: "unit", default: "Font weight rules", req: true }
-  - { var: "@lineHeight", desc: "", type: "unit", default: "Line height rules", req: true }
-  - { var: "@style", desc: "", type: "keyword", default: "Font style rules", req: true }
+  - { var: "@family", desc: "Font family rules", type: "font", req: true }
+  - { var: "@size", desc: "Font size rules", type: "unit" }
+  - { var: "@weight", desc: "Font weight rules", type: "unit" }
+  - { var: "@lineHeight", desc: "Line height rules", type: "unit" }
+  - { var: "@style", desc: "Font style rules", type: "keyword" }
 ---
 
 ---code---

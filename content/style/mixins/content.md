@@ -1,7 +1,8 @@
 ---
 name: Content
 variables:
-  - { var: "@value", desc: "Generates content", type: "keyword", req: true }
+  - { var: "@value", desc: "Content", type: "string, keyword", default: "' '" }
+  - { var: "@font", desc: "Font family", type: "string, keyword", default: "false" }
 ---
 
 ---code---
@@ -13,13 +14,6 @@ variables:
 ```less
 content: 'text';
 ```
-
----table---
-
-| Variable | Type    | Default | Description       | Required |
-| -------- | ------- | ------- | ----------------- | -------- |
-| @value   | keyword | --      | Generates content |          |
-| @font    | keyword | --      | Font family rules |          |
 
 ---code---
 

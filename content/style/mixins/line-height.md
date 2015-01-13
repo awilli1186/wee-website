@@ -1,7 +1,7 @@
 ---
 name: Line Height
 variables:
-  - { var: "@value", desc: "Line height rules", type: "unit", default: ".8rem", req: true }
+  - { var: "@value", desc: "Line height rules", type: "unit", default: "@baseLineHeight" }
 ---
 
 ---code---

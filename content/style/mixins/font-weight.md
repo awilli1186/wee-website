@@ -1,7 +1,7 @@
 ---
 name: Font Weight
 variables:
-  - { var: "@value", desc: "Font weight rules", type: "unit", req: true }
+  - { var: "@value", desc: "Font weight rules", type: "unit", default: "@baseFontWeight" }
 ---
 
 ---code---

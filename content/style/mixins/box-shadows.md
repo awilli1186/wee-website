@@ -7,18 +7,38 @@ variables:
 ---code---
 
 ```less
-.shadow('2px 1px 1px 1px #000');
+.shadow('3px 2px 1px 0 #000');
 ```
 
 ```less
-box-shadow: 2px 1px 1px 1px #000;
+box-shadow: 3px 2px 1px 0 #000;
+```
+
+---code---
+
+```less
+.shadow(none);
+```
+
+```less
+box-shadow: none;
+```
+
+---code---
+
+```less
+.shadow();
+```
+
+```less
+box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
 ```
 
 ---table---
 
 | Variable | Type  | Default | Description       | Required |
 | -------- | ----- | ------- | ----------------- | :------: |
-| @color   | color | black   | Shadow color      | ✓        |
+| @color   | color | --      | Shadow color      | ✓        |
 | @x       | value | 1px     | Horizontal offset |          |
 | @y       | value | 1px     | Vertical offset   |          |
 | @blur    | value | 0       | Blur distance     |          |
@@ -37,29 +57,59 @@ box-shadow: 1px 1px 0 0 #00f;
 ---code---
 
 ```less
+.shadow(rgba(0, 0, 0, 0.6); 4px; 3px; 2px; 2px;);
+```
+
+```less
+box-shadow: 4px 3px 2px 2px rgba(0, 0, 0, 0.6);
+```
+
+---code---
+
+```less
 .shadow(inner; blue);
 ```
 
 ```less
-box-shadow:inset 1px 1px 0 0 #00f;
+box-shadow: inset 1px 1px 0 0 #00f;
 ```
 
 ---code---
 
 ```less
-.shadow(light; 50%);
+.shadow(light; 0.4);
 ```
 
 ```less
-box-shadow:1px 1px 0 0 rgba(255,255,255,.5);
+box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.4);
 ```
 
 ---code---
 
 ```less
-.shadow(dark, 50%);
+.shadow(inner; light; 40%);
 ```
 
 ```less
-box-shadow:1px 1px 0 0 rgba(0,0,0,.5);
+box-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.4);
+```
+
+---code---
+
+```less
+.shadow(dark; 0.5);
+```
+
+```less
+box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.5);
+```
+
+---code---
+
+```less
+.shadow(inner; dark; 50%);
+```
+
+```less
+box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.5);
 ```
