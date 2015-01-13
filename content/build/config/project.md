@@ -1,5 +1,5 @@
 ---
-name: Config
+name: Project
 heading: JSON-based configuration for your project
 ---
 

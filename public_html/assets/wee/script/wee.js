@@ -150,9 +150,9 @@
 						if (root.hasOwnProperty(key)) {
 							return root[key];
 						} else if (def !== U) {
-							def = W.$isFunction(def) ?
-								def() :
-								(opt ? W.$exec(def, opt) : def);
+							def = W._canExec(def) ?
+								W.$exec(def, opt) || opt :
+								def;
 
 							if (set) {
 								W.$set(key, def);
@@ -171,9 +171,9 @@
 				// Returns mixed
 				$set: function(key, val, opt) {
 					var split = W._storeData(key),
-						set = W.$isFunction(val) ?
-							val() :
-							(opt ? W.$exec(val, opt) : val);
+						set = W._canExec(val) || opt ?
+							W.$exec(val, opt) :
+							val;
 
 					split[0][split[1]] = set;
 
@@ -521,6 +521,21 @@
 				},
 				// Fallback for non-existent chaining
 				$chain: function() {},
+				// Determine if value can be executed
+				// Returns boolean
+				_canExec: function(val) {
+					if (W.$isString(val) && val.indexOf(':') !== -1) {
+						var split = val.split(':'),
+							fn = split[0],
+							method = split[1];
+
+						if (W[fn] && W[fn][method]) {
+							val = W[fn][method];
+						}
+					}
+
+					return W.$isFunction(val);
+				},
 				// Convert selection to array
 				// Returns array
 				_selArray: function(sel, opt) {

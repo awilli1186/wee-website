@@ -53,16 +53,16 @@ module.exports = function(grunt) {
 					},
 					single = false;
 
+				// Add parent reference
+				if (parent) {
+					data.parent = parent;
+				}
+
 				Wee.$toArray(block.target).forEach(function(target) {
 					target = path.join(staticRoot, target);
 
 					// Target writing function
 					var writeTarget = function() {
-						// Add parent reference
-						if (parent) {
-							data.parent = parent;
-						}
-
 						// Create target directory
 						var dir = target.substring(0, target.lastIndexOf('/'));
 

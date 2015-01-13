@@ -2,4 +2,4 @@
 name: Community
 ---
 
-Keep track of development and news by following [@weecss on Twitter](https://twitter.com/weecss).
+Keep track of development and news by following [@weecss](https://twitter.com/weecss) on Twitter.

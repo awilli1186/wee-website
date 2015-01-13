@@ -10,7 +10,7 @@ Mobile-first CSS framework with reset, base, and Less mixin library < *4KB gzipp
 * **Legacy rules** to ensure basic IE8 compatibility
 * **Print styling** to generate print optimized pages
 
-JavaScript toolset to build scalable, organized client-side interaction < *9KB gzipped*
+JavaScript toolset to build scalable, organized client-side interaction < *10KB gzipped*
 
 * **Foundation** of utilities, helpers, and module structure
 * **Chainable DOM** traversal and manipulation with familiar API

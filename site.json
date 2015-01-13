@@ -77,7 +77,7 @@
 			}
 		},
 		"start": {
-			"name": "Get Started",
+			"name": "Start",
 			"template": "docs",
 			"target": "public_html/start/index.html",
 			"content": [
@@ -98,15 +98,6 @@
 					"content": [
 						"content/start/structure/intro.md",
 						"content/start/structure/*.md"
-					]
-				},
-				"compiling": {
-					"name": "Compiling",
-					"template": "docs",
-					"target": "public_html/start/compiling.html",
-					"content": [
-						"content/start/compiling/intro.md",
-						"content/start/compiling/*.md"
 					]
 				},
 				"markup": {
@@ -142,8 +133,9 @@
 					"template": "docs",
 					"target": "public_html/build/config.html",
 					"content": [
-						"content/build/build/config/intro.md",
-						"content/build/build/config/*.md"
+						"content/build/config/intro.md",
+						"content/build/config/project.md",
+						"content/build/config/*.md"
 					]
 				},
 				"validation": {

@@ -1,5 +1,5 @@
 ---
-name: Compiling
+name: Configuration
 heading: Building your project with Wee is easy
 intro: true
 ---

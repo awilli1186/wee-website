@@ -52,11 +52,6 @@
 				this.$private('request', file, conf);
 			}
 		},
-		// Replace one or more loaded files with set of options
-		replace: function(conf) {
-			this.remove(conf.files);
-			this.load(conf);
-		},
 		// Remove one or more files from the DOM
 		remove: function(files) {
 			files = W.$toArray(files);
@@ -141,7 +136,7 @@
 				};
 
 				img.src = path;
-			} else if ((/(gif|jpg|jpeg|png|svg)$/i).test(ext)) {
+			} else if ((/(gif|jpe?g|png|svg)$/i).test(ext)) {
 				img.onload = function() {
 					scope.done(group);
 				};
