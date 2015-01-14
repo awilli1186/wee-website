@@ -542,6 +542,10 @@
 		$is: function(sel, filter, opt) {
 			var el = W.$first(sel);
 
+			if (filter.indexOf('ref:') === 0) {
+				filter = $(filter);
+			}
+
 			if (W.$isFunction(filter)) {
 				return W.$exec(filter, W.$extend({
 					scope: el

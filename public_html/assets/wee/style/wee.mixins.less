@@ -306,7 +306,7 @@
 
 
 /*------------------------------------*\
-	# Font Size
+	# Font Style
 \*------------------------------------*/
 
 .font-style (@value: normal) when not (@value = false) {
@@ -623,7 +623,9 @@
 	# Padding
 \*------------------------------------*/
 
-.padding (@value) when not (@value = false) {
+.padding (@value) when not (@value = false)
+		and not (@value = horizontal)
+		and not (@value = vertical) {
 	.check () when not (isnumber(@value)), (@value = 0) {
 		padding: @value;
 	}
@@ -807,7 +809,7 @@
 	}
 	.check(@opacity);
 }
-.border (top; @color: @baseColor; @value: 1px; @style: solid) {
+.border (top; @color: @baseColor; @value: 1px; @style: solid) when (iscolor(@color)) {
 	.check () when (@color = 0), (iskeyword(@color)) {
 		border-top: 0;
 	}
@@ -859,7 +861,7 @@
 	}
 	.check(@opacity);
 }
-.border (right; @color: @baseColor; @value: 1px; @style: solid) {
+.border (right; @color: @baseColor; @value: 1px; @style: solid) when (iscolor(@color)) {
 	.check () when (@color = 0), (iskeyword(@color)) {
 		border-right: 0;
 	}
@@ -911,7 +913,7 @@
 	}
 	.check(@opacity);
 }
-.border (bottom; @color: @baseColor; @value: 1px; @style: solid) {
+.border (bottom; @color: @baseColor; @value: 1px; @style: solid) when (iscolor(@color)) {
 	.check () when (@color = 0), (iskeyword(@color)) {
 		border-bottom: 0;
 	}
@@ -963,7 +965,7 @@
 	}
 	.check(@opacity);
 }
-.border (left; @color: @baseColor; @value: 1px; @style: solid) {
+.border (left; @color: @baseColor; @value: 1px; @style: solid) when (iscolor(@color)){
 	.check () when (@color = 0), (iskeyword(@color)) {
 		border-left: 0;
 	}
@@ -1110,7 +1112,7 @@
 	.border(right; @color; @right; @style);
 	.border(top; @color; @top; @style);
 }
-.border-image (@filename; @slice: 100%; @width; 1; @outset: 0; @repeat: stretch) {
+.border-image (@filename; @slice: 100%; @width: 1; @outset: 0; @repeat: stretch) {
 	-webkit-border-image: url('@{imagePath}@{filename}') @slice @width @outset @repeat;
 	border-image: url('@{imagePath}@{filename}') @slice @width @outset @repeat;
 }
@@ -1136,13 +1138,13 @@
 	border-top-style: @style;
 }
 .border-style (right; @style) {
-	border-top-style: @style;
+	border-right-style: @style;
 }
 .border-style (bottom; @style) {
-	border-top-style: @style;
+	border-bottom-style: @style;
 }
 .border-style (left; @style) {
-	border-top-style: @style;
+	border-left-style: @style;
 }
 .border-width (@width) {
 	border-width: @width;
