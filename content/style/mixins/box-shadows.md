@@ -38,7 +38,7 @@ box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
 
 | Variable | Type  | Default | Description       | Required |
 | -------- | ----- | ------- | ----------------- | :------: |
-| @color   | color | --      | Shadow color      | ✓        |
+| @color   | color | --      | Shadow color      | &#10003;        |
 | @x       | value | 1px     | Horizontal offset |          |
 | @y       | value | 1px     | Vertical offset   |          |
 | @blur    | value | 0       | Blur distance     |          |
