@@ -1492,7 +1492,7 @@
 	.background-image(@filename; @x; @y; @repeat; @attachment);
 	.background-size(@width; @height);
 }
-.background-gradient (@color: @gray; @start: rgba(0, 0, 0, .8); @end: rgba(0, 0, 0, .2); @angle: 180) {
+.background-gradient (@color: @gray; @start: rgba(0, 0, 0, .8); @end: rgba(0, 0, 0, .2); @angle: 180) when (iscolor(@color)) and (iscolor(@start)) {
 	@deg: unit(@angle, deg);
 	@revDeg: unit(mod((450 - @angle), 360), deg);
 	background-color: @color;
@@ -1500,7 +1500,7 @@
 	.background('-webkit-linear-gradient(@{revDeg}, @{start}, @{end})');
 	.background('linear-gradient(@{deg}, @{start}, @{end})');
 }
-.background-gradient (@color: @gray; @spread; @angle: 180) when (ispercentage(@spread)) {
+.background-gradient (@color; @spread; @angle: 180) when (iscolor(@color)) and (ispercentage(@spread)) {
 	@lighter: lighten(@color, @spread);
 	@darker: darken(@color, @spread);
 	@deg: unit(@angle, deg);
@@ -2136,7 +2136,7 @@
 	float: left;
 	width: ((100% / @columns) * @share);
 }
-.column (spaced; @share; @columns: @gridColumns; @margin: @gridMargin) {
+.column (spaced; @share; @columns: @gridColumns; @margin: @gridMargin) when (ispercentage(@margin)) {
 	float: left;
 	width: (((100% / @columns) * @share) - (@margin));
 	.margin(left; @margin);
@@ -2144,7 +2144,7 @@
 .column-modify (@share; @columns: @gridColumns) {
 	width: ((100% / @columns) * @share);
 }
-.column-modify (spaced; @share; @columns: @gridColumns; @margin: @gridMargin) {
+.column-modify (spaced; @share; @columns: @gridColumns; @margin: @gridMargin) when (ispercentage(@margin)) {
 	width: (((100% / @columns) * @share) - (@margin));
 	.margin(left; @margin);
 }
@@ -2170,7 +2170,7 @@
 .column-offset (@share; @columns: @gridColumns) {
 	margin-left: ((100% / @columns) * @share);
 }
-.column-offset (spaced; @share; @columns: @gridColumns; @margin: (@gridMargin / 2)) {
+.column-offset (spaced; @share; @columns: @gridColumns; @margin: (@gridMargin / 2)) when (ispercentage(@margin)) {
 	margin-left: (((100% / @columns) * @share) + (@margin * 2));
 }
 
@@ -2301,9 +2301,6 @@
 .list-style (@value) {
 	list-style: @value;
 }
-.list-style-position (@value: outside) {
-	list-style-position: @value;
-}
 .list-position (@value: outside) {
 	list-style-position: @value;
 }
@@ -2384,16 +2381,16 @@
 \*------------------------------------*/
 
 .input-placeholder (@color: @inputPlaceholderColor) {
-	:-moz-placeholder {
+	&:-moz-placeholder {
 		color: @color;
 	}
-	::-moz-placeholder {
+	&::-moz-placeholder {
 		color: @color;
 	}
-	:-ms-input-placeholder {
+	&:-ms-input-placeholder {
 		color: @color;
 	}
-	::-webkit-input-placeholder {
+	&::-webkit-input-placeholder {
 		color: @color;
 	}
 }
@@ -2427,10 +2424,10 @@
 		.background(@background);
 		.color(@color);
 	}
-	::-moz-selection {
+	&::-moz-selection {
 		.check();
 	}
-	::selection {
+	&::selection {
 		.check();
 	}
 }
@@ -2521,6 +2518,9 @@
 	# Deprecated
 \*------------------------------------*/
 
+.list-style-position (@value: outside) {
+	list-style-position: @value;
+}
 .baseColor () {
 	color: @baseColor;
 }

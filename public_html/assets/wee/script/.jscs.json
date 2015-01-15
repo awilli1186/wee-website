@@ -109,6 +109,7 @@
 		"beforeOpeningCurlyBrace": true
 	},
 	"requireSpacesInConditionalExpression": true,
+	"requireSpacesInForStatement": true,
 	"requireSpacesInFunction": {
 		"beforeOpeningCurlyBrace": true
 	},
