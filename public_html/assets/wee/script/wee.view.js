@@ -21,19 +21,18 @@
 		}
 	}, {
 		_construct: function() {
-			// Create extension objects
-			this.filters = {};
-			this.helpers = {};
-			this.partials = {};
-
 			// Set tag regex
 			this.pair = /{{#(.+?)(?:|\|([^}]*))}}((?:{{#\1[^}]*}}.*?{{\/\1}})*[\s\S]*?){{\/\1}}/g;
 			this.partial = /{{> (.+?)}}/g;
 			this.single = /{{(.+?)}}/g;
 			this.ext = /(.[^\(]+)(?:\((.*)\))?/;
 
+			// Create extension objects
+			this.helpers = {};
+			this.partials = {};
+
 			// Add default filters
-			this.extend('filters', {
+			this.filters = {
 				is: function(val) {
 					return this.val.toString() == val;
 				},
@@ -46,7 +45,7 @@
 				notEmpty: function() {
 					return ! this.empty;
 				}
-			});
+			};
 		},
 		extend: function(type, a, b) {
 			var obj = a;
