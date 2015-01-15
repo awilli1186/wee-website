@@ -96,7 +96,7 @@ text-decoration: underline;
 
 | Variable | Type    | Default | Description           | Required |
 | -------- | ------- | ------- | --------------------- | -------- |
-| @style   | keyword | --      | Text decoration style | ✓        |
+| @style   | keyword | --      | Text decoration style | &#10003;        |
 | @color   | color   | inherit | Text decoration color |          |
 
 ---code---
@@ -143,8 +143,8 @@ text-decoration: overline;
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |
-| @line    | keyword | --      | Line type   | ✓        |
-| @style   | keyword | --      | Line style  | ✓        |
+| @line    | keyword | --      | Line type   | &#10003;        |
+| @style   | keyword | --      | Line style  | &#10003;        |
 | @color   | color   | inherit | Line color  |          |
 
 ---code---
@@ -181,7 +181,7 @@ outline: thin dotted;
 
 | Variable | Type | Default | Description          | Require |
 | -------- | ---- | ------- | -------------------- | ------- |
-| @value   | unit | --      | Letter kerning rules | ✓       |
+| @value   | unit | --      | Letter kerning rules | &#10003;       |
 
 ---code---
 
@@ -197,7 +197,7 @@ letter-spacing: 2rem;
 
 | Variable | Type | Default | Description        | Require |
 | -------- | ---- | ------- | ------------------ | ------- |
-| @value   | unit | --      | Word spacing rules | ✓       |
+| @value   | unit | --      | Word spacing rules | &#10003;       |
 
 ---code---
 
@@ -213,7 +213,7 @@ word-spacing: 3rem;
 
 | Variable | Type | Default | Description          | Require |
 | -------- | ---- | ------- | -------------------- | ------- |
-| @value   | unit | --      | Text indention rules | ✓       |
+| @value   | unit | --      | Text indention rules | &#10003;       |
 
 ---code---
 

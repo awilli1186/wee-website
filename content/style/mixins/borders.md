@@ -82,7 +82,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 
 | Variable | Type     | Default    | Description | Required |
 | -------- | -------- | ---------- | ----------- | -------- |
-| @top     | unit     | --         | Top size    | ✓        |
+| @top     | unit     | --         | Top size    | &#10003;        |
 | @right   | unit     | --         | Right size  |          |
 | @bottom  | unit     | --         | Bottom size |          |
 | @left    | unit     | --         | Left size   |          |
@@ -106,7 +106,7 @@ border-top: 1px dotted #00f;
 
 | Variable  | Type    | Default | Description              | Required |
 | --------- | --------| ------- | ------------------------ | -------- |
-| @filename | string  | --      | Name of file             | ✓        |
+| @filename | string  | --      | Name of file             | &#10003;        |
 | @slice    | unit    | 100%    | Slice offset             |          |
 | @width    | unit    | 1       | Border width             |          |
 | @outset   | unit    | 0       | Extend beyond border box |          |
