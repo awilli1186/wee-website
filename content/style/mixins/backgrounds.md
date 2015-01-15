@@ -1,8 +1,12 @@
 ---
 name: Backgrounds
-variables:
-  - { var: "@value", desc: "Background rules", type: "string, keyword", req: true }
 ---
+
+---table---
+
+| Variable | Type            | Default | Description      | Required |
+| -------- | --------------- | ------- | ---------------- | -------- |
+| @value   | string, keyword | --      | Background rules | &#10003; |
 
 ---code---
 
@@ -36,6 +40,7 @@ background: #00f;
 | --------- | --------------- | ------- | ---------------- | -------- |
 | @color    | color           | --      | Background color | &#10003; |
 | @filename | string          | --      | Image file       | &#10003; |
+| @repeat   | string, keyword | --      | Image repeat     |          |
 
 ---code---
 
@@ -46,14 +51,6 @@ background: #00f;
 ```less
 background: #0000ff url('../img/bg.png');
 ```
-
----table---
-
-| Variable  | Type            | Default | Description      | Required |
-| --------- | --------------- | ------- | ---------------- | -------- |
-| @color    | color           | --      | Background color | &#10003; |
-| @filename | string          | --      | Image file       | &#10003; |
-| @repeat   | string, keyword | --      | Repeat           | &#10003; |
 
 ---code---
 
@@ -86,13 +83,13 @@ background-color: rgba(0, 0, 255, 0.2);
 
 ---table---
 
-| Variable  | Type            | Default   | Description         | Required |
-| --------- | --------------- | --------- | ------------------- | -------- |
-| @color    | color           | --        | Color               | &#10003; |
-| @filename | string          | --        | Image file          | &#10003; |
-| @x        | unit            | --        | Horizontal position | &#10003; |
-| @y        | unit            | 0         | Vertical position   |          |
-| @repeat   | string, keyword | no-repeat | Repeat              |          |
+| Variable  | Type    | Default   | Description       | Required |
+| --------- | ------- | --------- | ----------------- | -------- |
+| @color    | color   | --        | Color             | &#10003; |
+| @filename | string  | --        | Image file        | &#10003; |
+| @x        | unit    | --        | Horizontal offset | &#10003; |
+| @y        | unit    | 0         | Vertical offset   |          |
+| @repeat   | keyword | no-repeat | Image repeat      |          |
 
 ---code---
 
@@ -106,10 +103,11 @@ background: #0000ff url('../img/bg.png') 10% 15% no-repeat;
 
 ---table---
 
-| Variable  | Type  | Default         | Description        | Required |
-| --------- | ----- | --------------- | ------------------ | -------- |
-| @opacity  | unit  | @defaultOpacity | Background opacity |          |
-| @fallback | color | white           | Fallback color     |          |
+| Variable    | Type    | Default         | Description          | Required |
+| ----------- | ------- | --------------- | -------------------- | -------- |
+| light, dark | keyword | --              | Light or dark preset | &#10003; |
+| @opacity    | unit    | @defaultOpacity | Background opacity   |          |
+| @fallback   | color   | white, dark     | Fallback color       |          |
 
 ---code---
 
@@ -121,13 +119,6 @@ background: #0000ff url('../img/bg.png') 10% 15% no-repeat;
 background-color: #ffffff;
 background-color: rgba(255, 255, 255, 0.5);
 ```
-
----table---
-
-| Variable  | Type  | Default         | Description        | Required |
-| --------- | ----- | --------------- | ------------------ | -------- |
-| @opacity  | unit  | @defaultOpacity | Background opacity |          |
-| @fallback | color | black           | Fallback color     |          |
 
 ---code---
 
@@ -158,9 +149,10 @@ background-color: #00f;
 
 ---table---
 
-| Variable  | Type   | Default | Description | Required |
-| --------- | ------ | ------- | ----------- | -------- |
-| @filename | string | --      | Image file  | &#10003; |
+| Variable  | Type    | Default | Description  | Required |
+| --------- | ------- | ------- | ------------ | -------- |
+| @filename | string  | --      | Image file   | &#10003; |
+| @repeat   | keyword | --      | Image repeat |          |
 
 ---code---
 
@@ -171,13 +163,6 @@ background-color: #00f;
 ```less
 background-image: url('../img/bg.png');
 ```
-
----table---
-
-| Variable  | Type    | Default | Description | Required |
-| --------- | ------- | ------- | ----------- | -------- |
-| @filename | string  | --      | Image       | &#10003; |
-| @repeat   | keyword | --      | Repeat      | &#10003; |
 
 ---code---
 
@@ -194,7 +179,7 @@ background-repeat: no-repeat;
 
 | Variable  | Type   | Default | Description | Required |
 | --------- | ------ | ------- | ----------- | -------- |
-| @filename | string | --      | Image       | &#10003; |
+| @filename | string | --      | Image file  | &#10003; |
 | @width    | unit   | auto    | Width       |          |
 | @height   | unit   | auto    | Height      |          |
 
