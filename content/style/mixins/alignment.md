@@ -2,7 +2,7 @@
 name: Alignment
 ---
 
----doc|label:.wee-container()---
+---doc|label:Wee Container---
 
 `max-width` and `min-width` are set to the `@maxWidth` and `@minWidth` variables. If `@padContainer` has been set to true, the container will be given left and right padding set by `@bumperPadding`.
 

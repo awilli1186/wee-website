@@ -2,30 +2,6 @@
 name: Blocks
 ---
 
----code---
-
-```less
-.block-row();
-```
-
-```less
-display: block;
-margin-left: 0;
-width: auto;
-```
-
----code---
-
-```less
-.block-column();
-```
-
-```less
-display: block;
-margin-left: 0;
-width: auto;
-```
-
 ---table---
 
 | Variable  | Type | Default | Description   | Required |
