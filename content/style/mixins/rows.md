@@ -2,7 +2,7 @@
 name: Rows
 ---
 
----table---
+---table|label:Row &amp; Row-Modify---
 
 | Variable | Type       | Default     | Description  | Required |
 | -------- | ---------- | ----------- | ------------ | -------- |
@@ -39,7 +39,7 @@ margin-left: -2%;
 max-width: 102%;
 ```
 
----code---
+---code|label:Row Reset---
 
 ```less
 .row-reset();

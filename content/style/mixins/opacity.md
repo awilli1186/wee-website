@@ -19,7 +19,7 @@ filter: alpha(opacity=50);
 opacity: 0.5;
 ```
 
----code---
+---code|label:Transparent---
 
 ```less
 .transparent();
@@ -30,7 +30,7 @@ filter: alpha(opacity=0);
 opacity: 0;
 ```
 
----code---
+---code|label:Opaque---
 
 ```less
 .opaque();

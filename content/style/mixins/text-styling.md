@@ -2,7 +2,7 @@
 name: Text Styling
 ---
 
----code---
+---code|label:Text Sharpen---
 
 ```less
 .text-sharpen();
@@ -14,7 +14,7 @@ name: Text Styling
 font-smoothing: antialiased;
 ```
 
----code---
+---code|label:Capitalize---
 
 ```less
 .capitalize();
@@ -24,7 +24,7 @@ font-smoothing: antialiased;
 text-transform: capitalize;
 ```
 
----code---
+---code|label:Lowercase---
 
 ```less
 .lowercase();
@@ -34,7 +34,7 @@ text-transform: capitalize;
 text-transform: lowercase;
 ```
 
----code---
+---code|label:Uppercase---
 
 ```less
 .uppercase();
@@ -44,7 +44,7 @@ text-transform: lowercase;
 text-transform: uppercase;
 ```
 
----table---
+---table|label:Text Transform---
 
 | Variable | Type    | Default | Description          | Required |
 | -------- | ------- | ------- | -------------------- | -------- |
@@ -60,7 +60,7 @@ text-transform: uppercase;
 text-transform: uppercase;
 ```
 
----code---
+---code|label:No-Wrap---
 
 ```less
 .no-wrap();
@@ -70,7 +70,7 @@ text-transform: uppercase;
 white-space: nowrap;
 ```
 
----code---
+---code|label:Ellipsis---
 
 ```less
 .ellipsis();
@@ -82,7 +82,7 @@ text-overflow: ellipsis;
 white-space: nowrap;
 ```
 
----code---
+---code|label:Underline---
 
 ```less
 .underline();
@@ -113,7 +113,7 @@ text-decoration: underline;
 text-decoration: #fff solid underline;
 ```
 
----code---
+---code|label:Line-Through---
 
 ```less
 .line-through();
@@ -123,7 +123,7 @@ text-decoration: #fff solid underline;
 text-decoration: line-through;
 ```
 
----table---
+---table|label:Text Decoration---
 
 | Variable | Type    | Default   | Description           | Required |
 | -------- | ------- | --------- | --------------------- | -------- |
@@ -161,7 +161,7 @@ text-decoration: underline;
 text-decoration: #00f dotted underline;
 ```
 
----table---
+---table|label:Outline---
 
 | Variable | Type    | Default       | Description           | Require |
 | -------- | ------- | ------------- | --------------------- | ------- |
@@ -177,7 +177,7 @@ text-decoration: #00f dotted underline;
 outline: thin dotted;
 ```
 
----table---
+---table|label:Letter Spacing---
 
 | Variable | Type | Default | Description          | Require |
 | -------- | ---- | ------- | -------------------- | ------- |
@@ -193,7 +193,7 @@ outline: thin dotted;
 letter-spacing: 2rem;
 ```
 
----table---
+---table|label:Word Spacing---
 
 | Variable | Type | Default | Description        | Require |
 | -------- | ---- | ------- | ------------------ | ------- |
@@ -209,7 +209,7 @@ letter-spacing: 2rem;
 word-spacing: 3rem;
 ```
 
----table---
+---table|label:Text Indent---
 
 | Variable | Type | Default | Description          | Require |
 | -------- | ---- | ------- | -------------------- | ------- |
@@ -225,7 +225,7 @@ word-spacing: 3rem;
 text-indent: 1rem;
 ```
 
----table---
+---table|label:User Select---
 
 | Variable | Type    | Default | Description                  | Require |
 | -------- | ------- | ------- | ---------------------------- | ------- |
@@ -244,7 +244,7 @@ text-indent: 1rem;
 user-select: text;
 ```
 
----table---
+---table|label:Tab Size---
 
 | Variable | Type    | Default           | Description | Required |
 | -------- | ------- | ----------------- | ----------- | -------- |

@@ -1,8 +1,12 @@
 ---
 name: Font Size
-variables:
-  - { var: "@value", desc: "Font size rules", type: "unit", default: "@baseFontSize" }
 ---
+
+---table---
+
+| Variable | Type | Default       | Description | Required |
+| -------- | ---- | ------------- | ----------- | -------- |
+| @value   | unit | @baseFontSize | Font size   |          |
 
 ---code---
 

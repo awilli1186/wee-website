@@ -1,8 +1,12 @@
 ---
 name: Font Style
-variables:
-  - { var: "@value", desc: "Font style rules", type: "keyword", default: "normal" }
 ---
+
+---table---
+
+| Variable | Type    | Default | Description | Required |
+| -------- | ------- | ------- | ----------- | -------- |
+| @value   | keyword | normal  | Font style  |          |
 
 ---code---
 

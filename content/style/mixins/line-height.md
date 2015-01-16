@@ -1,8 +1,12 @@
 ---
 name: Line Height
-variables:
-  - { var: "@value", desc: "Line height rules", type: "unit", default: "@baseLineHeight" }
 ---
+
+---table---
+
+| Variable | Type | Default         | Description | Required |
+| -------- | ---- | --------------- | ----------- | -------- |
+| @value   | unit | @baseLineHeight | Line height |          |
 
 ---code---
 

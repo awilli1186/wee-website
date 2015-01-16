@@ -2,7 +2,7 @@
 name: Positioning
 ---
 
----table---
+---table|label:Top, Right, Bottom &amp; Left---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -28,7 +28,7 @@ top: 4rem;
 right: 2rem;
 ```
 
----table---
+---table|label:Position---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |
@@ -51,6 +51,15 @@ right: 3rem;
 bottom: 2%;
 left: 1rem;
 ```
+
+---table|label:Absolute &amp; Fixed---
+
+| Variable | Type | Default | Description     | Required |
+| -------- | ---- | ------- | --------------- | -------- |
+| @top     | unit | --      | Top position    |          |
+| @right   | unit | --      | Right position  |          |
+| @bottom  | unit | --      | Bottom position |          |
+| @left    | unit | --      | Left position   |          |
 
 ---code---
 
@@ -85,7 +94,7 @@ position: fixed;
 top: 2rem;
 ```
 
----code---
+---code|label:Relative---
 
 ```less
 .relative();
@@ -95,7 +104,7 @@ top: 2rem;
 position: relative;
 ```
 
----code---
+---code|label:Static---
 
 ```less
 .static();
@@ -105,7 +114,7 @@ position: relative;
 position: static;
 ```
 
----table---
+---table|label:Z-Index---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |

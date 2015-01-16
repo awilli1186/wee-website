@@ -1,12 +1,16 @@
 ---
 name: Font Selection
-variables:
-  - { var: "@family", desc: "Font family rules", type: "font", req: true }
-  - { var: "@size", desc: "Font size rules", type: "unit" }
-  - { var: "@weight", desc: "Font weight rules", type: "unit" }
-  - { var: "@lineHeight", desc: "Line height rules", type: "unit" }
-  - { var: "@style", desc: "Font style rules", type: "keyword" }
 ---
+
+---table---
+
+| Variable    | Type    | Default | Description       | Required |
+| ----------- | ------- | ------- | ----------------- | -------- |
+| @family     | font    | --      | Font family rules | &#10003; |
+| @size       | unit    | --      | Font size         |          |
+| @weight     | unit    | --      | Font weight       |          |
+| @lineHeight | unit    | --      | Line height       |          |
+| @style      | keyword | --      | Font style        |          |
 
 ---code---
 

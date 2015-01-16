@@ -1,8 +1,12 @@
 ---
 name: Font Weight
-variables:
-  - { var: "@value", desc: "Font weight rules", type: "unit", default: "@baseFontWeight" }
 ---
+
+---table---
+
+| Variable | Type | Default         | Description | Required |
+| -------- | ---- | --------------- | ----------- | -------- |
+| @value   | unit | @baseFontWeight | Font weight |          |
 
 ---code---
 

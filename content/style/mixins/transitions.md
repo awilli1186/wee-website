@@ -1,8 +1,12 @@
 ---
 name: Transitions
-variables:
-  - { var: "@value", desc: "Advanced transition rules", type: "string", default: "'all 0.2s ease-in-out 0s'" }
 ---
+
+---table|label:Transition---
+
+| Variable | Type   | Default                   | Description      | Required |
+| -------- | ------ | ------------------------- | ---------------- | -------- |
+| @value   | string | 'all 0.2s ease-in-out 0s' | Transition rules | &#10003; |
 
 ---code---
 
@@ -21,9 +25,9 @@ transition: all 4s ease-in 1s;
 | Variable  | Type    | Default          | Description         | Required |
 | --------- | ------- | ---------------- | ------------------- | -------- |
 | @property | keyword | all              | Animatable Property |          |
-| @duration | unit    | @defaultDuration | Duration            |          |
+| @duration | seconds | @defaultDuration | Duration            |          |
 | @ease     | keyword | ease-in-out      | Timing function     |          |
-| @delay    | unit    | 0s               | Delay               |          |
+| @delay    | seconds | 0s               | Delay               |          |
 
 ---code---
 
@@ -37,6 +41,12 @@ transition: all 4s ease-in 1s;
 transition: all 2s ease-in 0.2s;
 ```
 
+---table|label:Transition Delay---
+
+| Variable | Type    | Default | Description | Required |
+| -------- | ------- | ------- | ----------- | -------- |
+| @delay   | seconds | 1s      | Delay value |          |
+
 ---code---
 
 ```less
@@ -47,6 +57,12 @@ transition: all 2s ease-in 0.2s;
 -webkit-transition-delay: 3s;
 transition-delay: 3s;
 ```
+
+---table|label:Transition Duration---
+
+| Variable  | Type    | Default          | Description    | Required |
+| --------- | ------- | ---------------- | -------------- | -------- |
+| @duration | seconds | @defaultDuration | Duration value |          |
 
 ---code---
 

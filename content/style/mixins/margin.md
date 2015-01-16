@@ -1,8 +1,12 @@
 ---
 name: Margin
-variables:
-  - { var: "@value", desc: "Margin value", type: "unit", req: true }
 ---
+
+---table---
+
+| Variable | Type | Default | Description  | Required |
+| -------- | ---- | ------- | ------------ | -------- |
+| @value   | unit | --      | Margin value | &#10003; |
 
 ---code---
 
@@ -14,6 +18,13 @@ variables:
 margin: 5rem;
 ```
 
+---table---
+
+| Variable                 | Type    | Default | Description  | Required |
+| ------------------------ | ------- | ------- | ------------ | -------- |
+| top, right, bottom, left | keyword | --      | Side presets | &#10003; |
+| @value                   | unit    | --      | Margin value |          |
+
 ---code---
 
 ```less
@@ -23,6 +34,14 @@ margin: 5rem;
 ```less
 margin-left: 2rem;
 ```
+
+---table---
+
+| Variable             | Type    | Default | Description                   | Required |
+| -------------------- | ------- | ------- | ----------------------------- | -------- |
+| horizontal, vertical | keyword | --      | Horizontal or vertical preset | &#10003; |
+| @value               | unit    | --      | Margin value                  |          |
+
 
 ---code---
 
@@ -35,6 +54,14 @@ margin-top: 2rem;
 margin-bottom: 2rem;
 ```
 
+---table---
+
+| Variable             | Type    | Default | Description                   | Required |
+| -------------------- | ------- | ------- | ----------------------------- | -------- |
+| horizontal, vertical | keyword | --      | Horizontal or vertical preset | &#10003; |
+| @left, @top          | unit    | --      | Margin value                  |          |
+| @right, @bottom      | unit    | --      | Margin value                  |          |
+
 ---code---
 
 ```less
@@ -45,6 +72,13 @@ margin-bottom: 2rem;
 margin-left: 2rem;
 margin-right: 3rem;
 ```
+
+---table---
+
+| Variable | Type | Default | Description        | Required |
+| -------- | ---- | ------- | ------------------ | -------- |
+| @y       | unit | --      | Vertical margins   |          |
+| @x       | unit | --      | Horizontal margins |          |
 
 ---code---
 
@@ -58,6 +92,15 @@ margin-right: 3rem;
 margin-bottom: 2rem;
 margin-left: 3rem;
 ```
+
+---table---
+
+| Variable | Type | Default | Description   | Required |
+| -------- | ---- | ------- | ------------- | -------- |
+| @top     | unit | --      | Top margin    |          |
+| @right   | unit | --      | Right margin  |          |
+| @bottom  | unit | --      | Bottom margin |          |
+| @left    | unit | --      | Left margin   |          |
 
 ---code---
 

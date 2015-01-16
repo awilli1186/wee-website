@@ -1,8 +1,12 @@
 ---
 name: Font Family
-variables:
-  - { var: "@value", desc: "Font family rules", type: "string, keyword", default: "@baseFont" }
 ---
+
+---table---
+
+| Variable | Type            | Default   | Description       | Required |
+| -------- | --------------- | --------- | ----------------- | -------- |
+| @value   | string, keyword | @baseFont | Font family rules |          |
 
 ---code---
 

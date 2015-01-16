@@ -8,16 +8,39 @@
     }
     .check();
 }
+</code></pre></div><div class="code"><pre><code class="language-less">.container();
+</code></pre><pre><code class="language-less">display: block;
+margin-left: auto;
+margin-right: auto;
+-moz-box-sizing: content-box;
+-webkit-box-sizing: content-box;
+box-sizing: content-box;
+max-width: 1280px;
+min-width: 260px;
+padding-left: 6%;
+padding-right: 6%;
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Hide <a href="#hide" class="doc__anchor" id="hide">#</a></h2><p class="doc__heading">Used by the core Wee script to toggle visibility</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><pre><code class="language-less">.js-hide {
     display: none !important;
 }
+</code></pre></div><div class="code"><pre><code class="language-less">.js-hide();
+</code></pre><pre><code class="language-less">display: none !important;
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Image Left <a href="#image-left" class="doc__anchor" id="image-left">#</a></h2><p class="doc__heading">Perfect for alignment of images in content blocks</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><pre><code class="language-less">.img-left {
     float: left;
     .margin(.32em; @imageMarginSide; @imageMarginBottom; false);
 }
+</code></pre></div><div class="code"><pre><code class="language-less">.img-left();
+</code></pre><pre><code class="language-less">float: left;
+margin-top: 0.32em;
+margin-right: 2rem;
+margin-bottom: 2rem;
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Image Right <a href="#image-right" class="doc__anchor" id="image-right">#</a></h2><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><pre><code class="language-less">.img-right {
     float: right;
     .margin(.32em; false; @imageMarginBottom; @imageMarginSide);
 }
+</code></pre></div><div class="code"><pre><code class="language-less">.img-right();
+</code></pre><pre><code class="language-less">float: right;
+margin-top: 0.32em;
+margin-bottom: 2rem;
+margin-left: 2rem;
 </code></pre></div></div><div class="doc"><h2 class="doc__title">No Print <a href="#no-print" class="doc__anchor" id="no-print">#</a></h2><p class="doc__heading">If print styling is enabled exclude content from being printed</p><div class="variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="variables options"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody></tbody></table></div><div class="content"><pre><code class="language-html">&lt;div class=&quot;no-print&quot;&gt;This will no be output when printing the page.&lt;/div&gt;
 </code></pre></div></div></main><footer role="contentinfo" class="footer"><small class="footer__license"><a href="/">Wee Powered</a> &ndash; licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a></small><ul class="footer__links"><li><a href="https://github.com/weepower/wee">GitHub</a></li><li><a href="https://github.com/weepower/wee/issues">Issues</a></li><li><a href="https://github.com/weepower/wee/releases">Releases</a></li><li><a href="https://twitter.com/weecss">Twitter</a></li><li><a href="/blog">Blog</a></li></ul></footer></div></div></div><script src="/assets/js/script.min.js"></script></body></html>

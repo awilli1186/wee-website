@@ -1,8 +1,12 @@
 ---
 name: Box Shadows
-variables:
-  - { var: "@value", desc: "Advanced box shadow rules", type: "string, keyword", default: "'1px 1px 0 0 rgba(0, 0, 0, @{defaultOpacity})'" }
 ---
+
+---table---
+
+| Variable | Type            | Default                                        | Description      | Required |
+| -------- | --------------- | ---------------------------------------------- | ---------------- | -------- |
+| @value   | string, keyword | '1px 1px 0 0 rgba(0, 0, 0, @{defaultOpacity})' | Box-shadow rules |          |
 
 ---code---
 
@@ -14,35 +18,16 @@ variables:
 box-shadow: 3px 2px 1px 0 #000;
 ```
 
----code---
-
-```less
-.shadow(none);
-```
-
-```less
-box-shadow: none;
-```
-
----code---
-
-```less
-.shadow();
-```
-
-```less
-box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.2);
-```
-
 ---table---
 
-| Variable | Type  | Default | Description       | Required |
-| -------- | ----- | ------- | ----------------- | :------: |
-| @color   | color | --      | Shadow color      | &#10003;        |
-| @x       | value | 1px     | Horizontal offset |          |
-| @y       | value | 1px     | Vertical offset   |          |
-| @blur    | value | 0       | Blur distance     |          |
-| @spread  | value | 0       | Shadow size       |          |
+| Variable | Type    | Default | Description       | Required |
+| -------- | ------- | ------- | ----------------- | :------: |
+| inner    | keyword | --      | Inner preset      |          |
+| @color   | color   | --      | Shadow color      | &#10003; |
+| @x       | value   | 1px     | Horizontal offset |          |
+| @y       | value   | 1px     | Vertical offset   |          |
+| @blur    | value   | 0       | Blur distance     |          |
+| @spread  | value   | 0       | Shadow size       |          |
 
 ---code---
 
@@ -74,10 +59,21 @@ box-shadow: 4px 3px 2px 2px rgba(0, 0, 0, 0.6);
 box-shadow: inset 1px 1px 0 0 #00f;
 ```
 
+---table---
+
+| Variable    | Type       | Default         | Description          | Required |
+| ----------- | ---------- | --------------- | -------------------- | -------- |
+| light, dark | keyword    | --              | Light or dark preset | &#10003; |
+| @value      | percentage | @defaultOpacity | Opacity              |          |
+| @x          | unit       | 1px             | Horizontal offset    |          |
+| @y          | unit       | 1px             | Vertical offset      |          |
+| @blur       | unit       | 0               | Blur                 |          |
+| @spread     | unit       | 0               | Spread               |          |
+
 ---code---
 
 ```less
-.shadow(light; 0.4);
+.shadow(light; 40%);
 ```
 
 ```less
@@ -87,21 +83,33 @@ box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.4);
 ---code---
 
 ```less
+.shadow(dark; 50%);
+```
+
+```less
+box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.5);
+```
+
+---table---
+
+| Variable    | Type       | Default         | Description          | Required |
+| ----------- | ---------- | --------------- | -------------------- | -------- |
+| inner       | keyword    | --              | Inner preset         | &#10003; |
+| light, dark | keyword    | --              | Light or dark preset | &#10003; |
+| @opacity    | percentage | @defaultOpacity | Opacity              |          |
+| @x          | unit       | 1px             | Horizontal offset    |          |
+| @y          | unit       | 1px             | Vertical offset      |          |
+| @blur       | unit       | 0               | Blur                 |          |
+| @spread     | unit       | 0               | Spread               |          |
+
+---code---
+
+```less
 .shadow(inner; light; 40%);
 ```
 
 ```less
 box-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.4);
-```
-
----code---
-
-```less
-.shadow(dark; 0.5);
-```
-
-```less
-box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.5);
 ```
 
 ---code---

@@ -1,8 +1,12 @@
 ---
 name: Colors
-variables:
-  - { var: "@color", desc: "Color value", type: "color", default: "@baseColor" }
 ---
+
+---table---
+
+| Variable | Type  | Default    | Description | Required |
+| -------- | ----- | ---------- | ----------- | -------- |
+| @color   | color | @baseColor | Color value |          |
 
 ---code---
 

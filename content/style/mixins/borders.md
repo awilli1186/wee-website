@@ -1,8 +1,12 @@
 ---
 name: Borders
-variables:
-  - { var: "@value", desc: "Advanced border rules", type: "string, keyword", default: "'1px solid #404040'"}
 ---
+
+---table|label:Border---
+
+| Variable | Type            | Default             | Description  | Required |
+| -------- | --------------- | ------------------- | ------------ | -------- |
+| @value   | string, keyword | '1px solid #404040' | Border rules | &#10003; |
 
 ---code---
 
@@ -32,6 +36,16 @@ border: 2px dotted #00f;
 border: 4px dotted #f00;
 ```
 
+---table---
+
+| Variable    | Type    | Default         | Description          | Required |
+| ----------- | ------- | --------------- | -------------------- | -------- |
+| light, dark | keyword | --              | Light or dark preset | &#10003; |
+| @opacity    | integer | @defaultOpacity | Opacity              |          |
+| @value      | unit    | 1px             | Width                |          |
+| @style      | keyword | solid           | Border style         |          |
+| @fallback   | color   | @black          | Fallback color       |          |
+
 ---code---
 
 ```less
@@ -42,6 +56,36 @@ border: 4px dotted #f00;
 border: 2px solid #000000;
 border: 2px solid rgba(0, 0, 0, 0.4);
 ```
+
+---table---
+
+| Variable                 | Type    | Default    | Description | Required |
+| ------------------------ | ------- | ---------- | ----------- | -------- |
+| top, right, bottom, left | keyword | --         | Side preset | &#10003; |
+| @color                   | color   | @baseColor | Color       |          |
+| @value                   | unit    | 1px        | Width       |          |
+| @style                   | keyword | solid      | Style       |          |
+
+---code---
+
+```less
+.border(top; blue);
+```
+
+```less
+border-top: 1px solid #00f;
+```
+
+---table---
+
+| Variable                 | Type    | Default         | Description          | Required |
+| ------------------------ | ------- | --------------- | -------------------- | -------- |
+| top, right, bottom, left | keyword | --              | Side preset          | &#10003; |
+| light, dark              | keyword | --              | Light or dark preset | &#10003; |
+| @opacity                 | integer | @defaultOpacity | Color                |          |
+| @value                   | unit    | 1px             | Width                |          |
+| @style                   | keyword | solid           | Style                |          |
+| @fallback                | color   | @white, @black  | Fallback color       |          |
 
 ---code---
 
@@ -54,6 +98,16 @@ border: 3px dotted #ffffff;
 border: 3px dotted rgba(255, 255, 255, 0.5);
 ```
 
+---table---
+
+| Variable             | Type    | Default    | Description                   | Required |
+| -------------------- | ------- | ---------- | ----------------------------- | -------- |
+| horizontal, vertical | keyword | --         | Horizontal or vertical preset | &#10003; |
+| @color               | color   | @baseColor | Color                         |          |
+| @value               | unit    | 1px        | Width                         |          |
+| @style               | keyword | solid      | Style                         |          |
+
+
 ---code---
 
 ```less
@@ -64,6 +118,16 @@ border: 3px dotted rgba(255, 255, 255, 0.5);
 border-left: 2px dotted #ff0000;
 border-right: 2px dotted #ff0000;
 ```
+
+---table---
+
+| Variable             | Type    | Default         | Description                   | Required |
+| -------------------- | ------- | --------------- | ----------------------------- | -------- |
+| horizontal, vertical | keyword | --              | Horizontal or vertical preset | &#10003; |
+| light, dark          | keyword | --              | Light or dark preset          | &#10003; |
+| @opacity             | integer | @defaultOpacity | Opactiy                       |          |
+| @value               | unit    | 1px             | Width                         |          |
+| @style               | keyword | solid           | Style                         |          |
 
 ---code---
 
@@ -102,7 +166,7 @@ border-right: 3px dotted #00f;
 border-top: 1px dotted #00f;
 ```
 
----table---
+---table|label:Border Image---
 
 | Variable  | Type    | Default | Description              | Required |
 | --------- | --------| ------- | ------------------------ | -------- |
@@ -123,6 +187,12 @@ border-top: 1px dotted #00f;
 border-image: url('../img/border.png') 100% 1 0 stretch;
 ```
 
+---table|label:Border Color, Style &amp; Width---
+
+| Variable               | Type                 | Default | Description            | Required |
+| ---------------------- | -------------------- | ------- | ---------------------- | -------- |
+| @color, @style, @width | color, keyword, unit | --      | Color, style, or width | &#10003; |
+
 ---code---
 
 ```less
@@ -132,6 +202,13 @@ border-image: url('../img/border.png') 100% 1 0 stretch;
 ```less
 border-color: #00f;
 ```
+
+---table---
+
+| Variable                 | Type                 | Default | Description            | Required |
+| ------------------------ | -------------------- | ------- | ---------------------- | -------- |
+| top, right, bottom, left | keyword              | --      | Side presets           | &#10003; |
+| @color, @style, @width   | color, keyword, unit | --      | Color, style, or width | &#10003; |
 
 ---code---
 

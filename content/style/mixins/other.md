@@ -146,7 +146,7 @@ overflow-x: hidden;
 overflow-y: scroll;
 ```
 
----table|label:Crop & Scroll---
+---table|label:Crop &amp; Scroll---
 
 | Variable             | Type    | Default | Description                   | Required |
 | -------------------- | ------- | ------- | ----------------------------- | -------- |

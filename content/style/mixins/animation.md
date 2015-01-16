@@ -1,8 +1,12 @@
 ---
 name: Animation
-variables:
-  - { var: "@arguments", desc: "Animation rules", type: "keyword", req: true }
 ---
+
+---table---
+
+| Variable   | Type    | Default | Description     | Required |
+| ---------- | ------- | ------- | --------------- | -------- |
+| @arguments | keyword | --      | Animation rules | &#10003; |
 
 ---code---
 

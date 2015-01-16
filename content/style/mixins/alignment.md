@@ -4,7 +4,7 @@ name: Alignment
 
 ---doc|label:Wee Container---
 
-`max-width` and `min-width` are set to the `@maxWidth` and `@minWidth` variables. If `@padContainer` has been set to true, the container will be given left and right padding set by `@bumperPadding`.
+Create a centered container based on @minWidth, @minWidth, and @padContainer.
 
 ---code---
 
@@ -25,7 +25,7 @@ padding-left: 6%;
 padding-right: 6%;
 ```
 
----table---
+---table|label:Float---
 
 | Variable    | Type    | Default | Description          | Required |
 | ----------- | ------- | ------- | -------------------- | -------- |
@@ -53,7 +53,7 @@ float: right;
 width: 2rem;
 ```
 
----code---
+---code|label:Left &amp; Right---
 
 ```less
 .left();
@@ -66,6 +66,16 @@ float: left;
 ---code---
 
 ```less
+.right();
+```
+
+```less
+float: right;
+```
+
+---code|label:Clearfix---
+
+```less
 .clearfix();
 ```
 
@@ -75,7 +85,7 @@ content: ' ';
 display: table;
 ```
 
----table---
+---table|label:Clear---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |
@@ -91,7 +101,7 @@ display: table;
 clear: left;
 ```
 
----table---
+---table|label:Align---
 
 | Variable                                                    | Type    | Default | Description | Required |
 | ----------------------------------------------------------- | ------- | ------- | ----------- | -------- |
@@ -117,7 +127,7 @@ text-align: justify;
 vertical-align: middle;
 ```
 
----table---
+---table|label:Display---
 
 | Variable | Type    | Default | Description   | Required |
 | -------- | ------- | ------- | ------------- | -------- |
@@ -133,7 +143,7 @@ vertical-align: middle;
 display: block;
 ```
 
----code---
+---code|label:Inline---
 
 ```less
 .inline();
@@ -143,7 +153,7 @@ display: block;
 display: inline;
 ```
 
----table---
+---table|label:Inline-Block---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |

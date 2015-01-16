@@ -2,7 +2,7 @@
 name: Columns
 ---
 
----table---
+---table|label:Column &amp; Column-Modify---
 
 | Variable | Type | Default | Description  | Required |
 | -------- | ---- | ------- | ------------ | -------- |
@@ -62,7 +62,7 @@ width: 64.66666667%;
 margin-left: 2%;
 ```
 
----table---
+---table|label:Column Reset---
 
 | Variable     | Type    | Default | Description       | Required |
 | ------------ | ------- | ------- | ----------------- | -------- |
@@ -80,7 +80,7 @@ width: auto;
 margin-left: 0;
 ```
 
----table---
+---table|label:Column Pull &amp; Push---
 
 | Variable | Type    | Default      | Description       | Required |
 | -------- | ------- | ------------ | ----------------- | -------- |
@@ -109,7 +109,7 @@ left: 75%;
 position: relative;
 ```
 
----table---
+---table|label:Column Offset---
 
 | Variable | Type       | Default           | Description                | Required |
 | -------- | ---------- | ----------------- | -------------------------- | -------- |

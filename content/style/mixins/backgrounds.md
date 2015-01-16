@@ -18,16 +18,6 @@ name: Backgrounds
 background: url("bg.png") #00f no-repeat;
 ```
 
----code---
-
-```less
-.background(0);
-```
-
-```less
-background: none;
-```
-
 ---table---
 
 | Variable | Type  | Default         | Description      | Required |

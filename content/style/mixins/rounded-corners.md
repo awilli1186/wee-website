@@ -1,8 +1,12 @@
 ---
 name: Rounded Corners
-variables:
-  - { var: "@value", desc: "Size of radius", type: "unit", default: "3px" }
 ---
+
+---table---
+
+| Variable | Type | Default | Description    | Required |
+| -------- | ---- | ------- | -------------- | -------- |
+| @value   | unit | 3px     | Size of radius |          |
 
 ---code---
 
@@ -15,16 +19,12 @@ background-clip: border-box;
 border-radius: 3rem;
 ```
 
----code---
+---table---
 
-```less
-.rounded();
-```
-
-```less
-background-clip: border-box;
-border-radius: 3px;
-```
+| Variable                 | Type    | Default | Description  | Required |
+| ------------------------ | ------- | ------- | ------------ | -------- |
+| top, right, bottom, left | keyword | --      | Side presets | &#10003; |
+| @value                   | unit    | 3px     | Radius       |          |
 
 ---code---
 
@@ -51,6 +51,14 @@ border-bottom-right-radius: 5rem;
 
 ```
 
+---table---
+
+| Variable    | Type    | Default | Description           | Required |
+| ----------- | ------- | ------- | --------------------- | -------- |
+| top, bottom | keyword | --      | Top or bottom preset  | &#10003; |
+| left, right | keyword | --      | Left or right  preset | &#10003; |
+| @value      | unit    | 3px     | Radius                |          |
+
 ---code---
 
 ```less
@@ -72,6 +80,15 @@ border-bottom-left-radius: 3px;
 background-clip: border-box;
 border-top-right-radius: 4rem;
 ```
+
+---table---
+
+| Variable | Type | Default | Description   | Required |
+| -------- | ---- | ------- | ------------- | -------- |
+| @top     | unit | --      | Top radius    | &#10003; |
+| @right   | unit | --      | Right radius  | &#10003; |
+| @bottom  | unit | --      | Bottom radius | &#10003; |
+| @left    | unit | --      | Left radius   | &#10003; |
 
 ---code---
 

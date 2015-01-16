@@ -2,13 +2,7 @@
 name: Lists
 ---
 
----table---
-
-| Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| @spacing | unit | --      | Left margin |          |
-
----code---
+---code|label:Inline List---
 
 ```less
 .inline-list();
@@ -19,6 +13,12 @@ li {
 	display: inline;
 }
 ```
+
+---table---
+
+| Variable | Type | Default | Description | Required |
+| -------- | ---- | ------- | ----------- | -------- |
+| @spacing | unit | --      | Left margin |          |
 
 ---code---
 
@@ -36,7 +36,34 @@ li:first-child {
 }
 ```
 
+---table---
+
+| Variable | Type   | Default | Description  | Required |
+| -------- | ------ | ------- | ------------ | -------- |
+| @content | string | --      | Content      |          |
+| @margin  | unit   | 0       | Right margin |          |
+
 ---code---
+
+```less
+.inline-list('foo'; 2px);
+```
+
+```less
+li {
+	display: inline;
+	margin-right: 2px;
+}
+li:before {
+	content: 'foo';
+	margin-right: 2px;
+}
+li:first-child:before {
+	display: none;
+}
+```
+
+---code|label:Floated List---
 
 ```less
 .floated-list();
@@ -48,7 +75,7 @@ li {
 }
 ```
 
----table---
+---table|label:List Style---
 
 | Variable | Type       | Default | Description      | Required |
 | -------- | ---------- | ------- | ---------------- | -------- |
@@ -64,21 +91,11 @@ li {
 list-style: circle inside;
 ```
 
----table---
+---table|label:List Position---
 
 | Variable | Type    | Default | Description         | Required |
 | -------- | ------- | ------- | ------------------- | -------- |
 | @value   | keyword | outside | List-style position |          |
-
----code---
-
-```less
-.list-style-position(inside);
-```
-
-```less
-list-style-position: inside;
-```
 
 ---code---
 
@@ -90,7 +107,7 @@ list-style-position: inside;
 list-style-position: inside;
 ```
 
----code---
+---code|label:Unstyled---
 
 ```less
 .unstyled();

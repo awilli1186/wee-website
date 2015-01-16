@@ -2,7 +2,7 @@
 name: Blocks
 ---
 
----table---
+---table|label:Centered Block---
 
 | Variable  | Type | Default | Description   | Required |
 | --------- | ---- | ------- | ------------- | -------- |
