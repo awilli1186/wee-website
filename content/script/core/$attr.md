@@ -1,11 +1,17 @@
 ---
 name: $attr
 heading: Get attribute of first element or set matched elements attribute with specified value
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "a", desc: "Attribute to get or set or an object", type: "string, object", req: true }
-  - { var: "b", desc: "Value to assign to attribute", type: "string" }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description                          | Required |
+| -------- | ----------------- | ------- | ------------------------------------ | -------- |
+| sel      | selector, element | --      | Selector or element                  | &#10003; |
+| a        | string, object    | --      | Attribute to get or set or an object | &#10003; |
+| b        | string            | --      | Value to assign to attribute         |          |
+
+---doc---
 
 ```html
 <a class="element" href="http://www.weepower.com">Link</a>

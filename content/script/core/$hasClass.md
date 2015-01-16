@@ -1,10 +1,14 @@
 ---
 name: $hasClass
 heading: Determine if specified element has specified class
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "val", desc: "Class name to check for", type: "string", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description             | Required |
+| -------- | ----------------- | ------- | ----------------------- | -------- |
+| sel      | selector, element | --      | Selector or element     | &#10003; |
+| val      | string            | --      | Class name to check for | &#10003; |
 
 ---code---
 

@@ -1,10 +1,16 @@
 ---
 name: $html
 heading: Get HTML value of first element or set matched elements HTML with specified value
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "val", desc: "HTML or callback taking the element, index, and existing HTML", type: "string, callback" }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description                                                   | Required |
+| -------- | ----------------- | ------- | ------------------------------------------------------------- | -------- |
+| sel      | selector, element | --      | Selector or element                                           | &#10003; |
+| val      | string, callback  | --      | HTML or callback taking the element, index, and existing HTML |          |
+
+---doc---
 
 ```html
 <div class="element"><h1>Heading</h1></div>

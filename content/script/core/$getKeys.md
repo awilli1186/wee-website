@@ -1,9 +1,15 @@
 ---
 name: $getKeys
 heading: Get keys from an object
-variables:
-  - { var: "obj", desc: "Object (single level only)", type: "object", req: true }
 ---
+
+---table---
+
+| Variable | Type   | Default | Description                | Required |
+| -------- | ------ | ------- | -------------------------- | -------- |
+| obj      | object | --      | Object (single level only) | &#10003; |
+
+---doc---
 
 ```javascript
 var obj = {

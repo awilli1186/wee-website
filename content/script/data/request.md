@@ -1,24 +1,37 @@
 ---
 name: Request
 heading: Make Ajax request based on specified options
-variables:
-  - { var: "opt", desc: "Request options below", type: "object", req: true }
-options:
-  - { var: "url", desc: "URL endpoint to request", type: "string", req: true }
-  - { var: "method", desc: "Request verb (get, post, put, etc)", type: "string", default: "get" }
-  - { var: "data", desc: "Object to serialize and pass along with request", type: "object" }
-  - { var: "success", desc: "Callback if request succeeds", type: "callback" }
-  - { var: "failure", desc: "Callback if request fails", type: "callback" }
-  - { var: "json", desc: "Evaluate the response as JSON",type: "boolean", default: "false"}
-  - { var: "jsonp", desc: "Boolean or override name for callback query string parameter", type: "boolean, string" }
-  - { var: "args", desc: "Callback arguments", type: "array" }
-  - { var: "scope", desc: "Callback scope",type: "object"}
-  - { var: "template", desc: "Template string to parse response JSON into",type: "string"}
-  - { var: "headers", desc: "Object to set request headers", type: "object" }
-  - { var: "name", desc: "Name of header", type: "string" }
-  - { var: "value", desc: "Value of header", type: "string" }
-  - { var: "merge", desc: "Clear header", type: "boolean" }
 ---
+
+---table---
+
+| Variable | Type   | Default | Description           | Required |
+| -------- | ------ | ------- | --------------------- | -------- |
+| opt      | object | --      | Request options below | &#10003; |
+
+---table---
+
+| Variable | Type            | Default | Description                                                  | Required |
+| -------- | --------------- | ------- | ------------------------------------------------------------ | -------- |
+| url      | string          | --      | URL endpoint to request                                      | &#10003; |
+| method   | string          | get     | Request verb (get, post, put, etc)                           |          |
+| data     | object          | --      | Object to serialize and pass along with request              |          |
+| success  | callback        | --      | Callback if request succeeds                                 |          |
+| failure  | callback        | --      | Callback if request fails                                    |          |
+| json     | boolean         | false   | Evaluate the response as JSON                                |          |
+| jsonp    | boolean, string | --      | Boolean or override name for callback query string parameter |          |
+| args     | array           | --      | Callback arguments                                           |          |
+| scope    | object          | --      | Callback scope                                               |          |
+| template | string          | --      | Template string to parse response JSON into                  |          |
+| headers  | object          | --      | Object to set request headers (Options below)                |          |
+
+---table---
+
+| Variable | Type    | Default | Description     | Required |
+| -------- | ------- | ------- | --------------- | -------- |
+| name     | string  | --      | Name of header  |          |
+| value    | string  | --      | Value of header |          |
+| merge    | boolean | --      | Clear header    |          |
 
 ---doc|label:Get---
 

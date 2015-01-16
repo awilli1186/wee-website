@@ -1,11 +1,17 @@
 ---
 name: $extend
 heading: Extend specified object with specified source object
-variables:
-  - { var: "obj", desc: "Target object", type: "object", req: true }
-  - { var: "src", desc: "Source object", type: "object", req: true }
-  - { var: "deep", desc: "Deep nesting", type: "boolean", default: "false" }
 ---
+
+---table---
+
+| Variable | Type    | Default | Description   | Required |
+| -------- | ------- | ------- | ------------- | -------- |
+| obj      | object  | --      | Target object | &#10003; |
+| src      | object  | --      | Source object | &#10003; |
+| deep     | boolean | false   | Deep nesting  |          |
+
+---doc---
 
 ```javascript
 var obj1 = {

@@ -1,15 +1,25 @@
 ---
 name: $each
 heading: Execute specified function for specified elements|selector
-variables:
-  - { var: "sel", desc: "Array or selector", type: "selector, element", req: true }
-  - { var: "fn", desc: "Callback function", type: "callback", req: true }
-  - { var: "opt", desc: "Callback arguments below", type: "object" }
-options:
-  - { var: "args", desc: "Callback arguments (appended after element and index)", type: "array" }
-  - { var: "scope", desc: "Callback scope", type: "object" }
-  - { var: "reverse", desc: "Reverse the order of execution", type: "boolean", default: "false" }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description              | Required |
+| -------- | ----------------- | ------- | ------------------------ | -------- |
+| sel      | selector, element | --      | Array or selector        | &#10003; |
+| fn       | callback          | --      | Callback function        | &#10003; |
+| opt      | object            | --      | Callback arguments below |          |
+
+---table---
+
+| Variable | Type    | Default | Description                                           | Required |
+| -------- | ------- | ------- | ----------------------------------------------------- | -------- |
+| args     | array   | --      | Callback arguments (appended after element and index) |          |
+| scope    | object  | --      | Callback scope                                        |          |
+| reverse  | boolean | --      | Reverse the order of execution                        |          |
+
+---doc---
 
 ```javascript
 Wee.$each('.element', function(el, i) {

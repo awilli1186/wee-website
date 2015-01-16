@@ -1,13 +1,23 @@
 ---
 name: $exec
 heading: Execute specified function or controller method
-variables:
-  - { var: "fn", desc: "Function to execute", type: "callback, array", req: true }
-  - { var: "opt", desc: "Callback options below", type: "object" }
-options:
-  - { var: "scope", desc: "Callback scope", type: "object" }
-  - { var: "args", desc: "Injected callback arguments",type: "array" }
 ---
+
+---table---
+
+| Variable | Type            | Default | Description            | Required |
+| -------- | --------------- | ------- | ---------------------- | -------- |
+| fn       | callback, array | --      | Function to execute    | &#10003; |
+| opt      | object          | --      | Callback options below | &#10003; |
+
+---table---
+
+| Variable | Type   | Default | Description                 | Required |
+| -------- | ------ | ------- | --------------------------- | -------- |
+| scope    | object | --      | Callback scope              |          |
+| args     | array  | --      | Injected callback arguments |          |
+
+---doc---
 
 ```javascript
 Wee.$exec('controller:functions');

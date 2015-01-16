@@ -1,10 +1,16 @@
 ---
 name: $eq
 heading: Get indexed node of specified element
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "i", desc: "Index of the element", type: "number", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description          | Required |
+| -------- | ----------------- | ------- | -------------------- | -------- |
+| sel      | selector, element | --      | Selector or element  | &#10003; |
+| i        | number            | --      | Index of the element | &#10003; |
+
+---doc---
 
 ```html
 <ul>

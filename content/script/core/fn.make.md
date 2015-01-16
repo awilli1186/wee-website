@@ -1,15 +1,19 @@
 ---
 name: fn.make
 heading: Create namespaced controller with specified name, public object, and optional private object
-variables:
-  - { var: "name", desc: "Namespace of the controller", type: "string", req: true }
-  - { var: "pub", desc: "Object of public variables and methods", type: "object", req: true }
-  - { var: "priv", desc: "Object of private variables and methods", "priv", type: "object" }
 ---
 
 ---description---
 
 Controllers serve as the wrapper for all custom script. They can be created per page, section, or for specific reusable components. If placed in your build directory you easily create a well-organized, extensible structure.
+
+---table---
+
+| Variable | Type   | Default | Description                             | Required |
+| -------- | ------ | ------- | --------------------------------------- | -------- |
+| name     | string | --      | Namespace of the controller             | &#10003; |
+| pub      | object | --      | Object of public variables and methods  | &#10003; |
+| priv     | object | {}      | Object of private variables and methods |          |
 
 ---doc|label:Public---
 

@@ -1,10 +1,14 @@
 ---
 name: $env
 heading: Get current environment or detect current environment against specified object
-variables:
-- { var: "obj", desc: "Object of {key: value} environment pairs", type: "object" }
-- { var: "def", desc: "Override the fallback environment", type: "string", default: "local" }
 ---
+
+---table---
+
+| Variable | Type   | Default | Description                              | Required |
+| -------- | ------ | ------- | ---------------------------------------- | -------- |
+| obj      | object | --      | Object of {key: value} environment pairs |          |
+| def      | string | --      | Override the fallback environment        |          |
 
 ---code|label:Set|type:string---
 

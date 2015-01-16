@@ -1,10 +1,14 @@
 ---
 name: $first
 heading: Get first match to specified element
-variables:
-  - { var: "sel", desc: "Lookup selector", type: "selector", req: true }
-  - { var: "context", desc: "Selection context", type: "selector, element", default: "document" }
 ---
+
+---table---
+
+| Variable | Type              | Default  | Description       | Required |
+| -------- | ----------------- | -------- | ----------------- | -------- |
+| sel      | selector          | --       | Lookup selector   | &#10003; |
+| context  | selector, element | document | Selection context |          |
 
 ---doc---
 

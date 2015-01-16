@@ -1,11 +1,15 @@
 ---
 name: $set
 heading: Set public variable
-variables:
-  - { var: "key", desc: "Reference to store the value under", type: "string", req: true }
-  - { var: "val", desc: "Value to store", type: "any", req: true }
-  - { var: "opt", desc: "Callback options", type: "object" }
 ---
+
+---table---
+
+| Variable | Type   | Default | Description                        | Required |
+| -------- | ------ | ------- | ---------------------------------- | -------- |
+| key      | string | --      | Reference to store the value under | &#10003; |
+| val      | any    | --      | Value to store                     | &#10003; |
+| opt      | object | --      | Callback options                   |          |
 
 ---code|label:Simple---
 
