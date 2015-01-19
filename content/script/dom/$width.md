@@ -1,10 +1,14 @@
 ---
 name: $width
 heading: Get or set the width of a specified element, optionally accounting for margin
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "val", desc: "Value to set or callback taking the element, index, and existing value", type: "string, integer, callback" }
 ---
+
+---table---
+
+| Variable | Type                      | Default | Description                                                            | Required |
+| -------- | ------------------------- | ------- | ---------------------------------------------------------------------- | -------- |
+| sel      | selector, element         | --      | Selector or element                                                    | &#10003; |
+| val      | string, integer, callback | --      | Value to set or callback taking the element, index, and existing value |          |
 
 ---code|label:Get---
 

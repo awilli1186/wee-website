@@ -1,11 +1,17 @@
 ---
 name: $is
 heading: Determines if a particular element matches a specified criteria
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "filter", desc: "Filter selector or callback", type: "selector, callback", req: true }
-  - { var: "opt", desc: "Callback arguments", type: "object" }
 ---
+
+---table---
+
+| Variable | Type               | Default | Description                 | Required |
+| -------- | ------------------ | ------- | --------------------------- | -------- |
+| sel      | selector, element  | --      | Selector or element         | &#10003; |
+| filter   | selector, callback | --      | Filter selector or callback | &#10003; |
+| opt      | object             | --      | Callback arguments          |          |
+
+---doc---
 
 ```html
 <div class="element"></div>

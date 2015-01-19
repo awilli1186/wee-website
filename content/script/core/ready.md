@@ -1,9 +1,13 @@
 ---
 name: Ready
 heading: Execute specified function when document is ready
-variables:
-  - { var: "fn", desc: "Callback option", type: "callback", req: true }
 ---
+
+---table---
+
+| Variable | Type     | Default | Description     | Required |
+| -------- | -------- | ------- | --------------- | -------- |
+| fn       | callback | --      | Callback option | &#10003; |
 
 ---doc|label:Callback---
 

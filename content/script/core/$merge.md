@@ -1,11 +1,15 @@
 ---
 name: $merge
 heading: Merge specified array with specified source array
-variables:
-  - { var: "arr", desc: "Target array", type: "array", req: true }
-  - { var: "arr2", desc: "Source array", type: "array", req: true }
-  - { var: "dup", desc: "Remove duplicates", type: "boolean", default: "false" }
 ---
+
+---table---
+
+| Variable | Type    | Default | Description       | Required |
+| -------- | ------- | ------- | ----------------- | -------- |
+| arr      | array   | --      | Target array      | &#10003; |
+| arr2     | array   | --      | Source array      | &#10003; |
+| dup      | boolean | false   | Remove duplicates |          |
 
 ---code---
 

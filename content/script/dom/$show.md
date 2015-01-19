@@ -1,9 +1,13 @@
 ---
 name: $show
 heading: Show specified element
-variables:
-  - { var: "sel", desc: "Element to display",type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description        | Required |
+| -------- | ----------------- | ------- | ------------------ | -------- |
+| sel      | selector, element | --      | Element to display | &#10003; |
 
 ---doc---
 

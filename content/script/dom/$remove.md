@@ -1,10 +1,16 @@
 ---
 name: $remove
 heading: Remove specified element from document
-variables:
-  - { var: "sel", desc: "Element to remove", type: "selector, element", req: true }
-  - { var: "context", desc: "Context selector", type: "selector, element" }
 ---
+
+---table---
+
+| Variable | Type | Default | Description | Required |
+| -------- | ---- | ------- | ----------- | -------- |
+| sel      | selector, element | --      | Element to remove | &#10003; |
+| context  | selector, element | --      | Context selector  |          |
+
+---doc---
 
 ```javascript
 Wee.$remove('.element');

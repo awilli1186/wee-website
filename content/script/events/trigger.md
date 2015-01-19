@@ -1,10 +1,16 @@
 ---
 name: Trigger
 heading: Execute specific element|slector event by name and optional trigger
-variables:
-  - { var: "sel", desc: "Element to trigger event on", type: "selector, element", req: true }
-  - { var: "evt", desc: "Event name", type: "string", req: true }
 ---
+
+---table---
+
+| Variable | Type | Default | Description | Required |
+| -------- | ---- | ------- | ----------- | -------- |
+| sel      | selector, element | --      | Element to trigger event on | &#10003; |
+| evt      | string            | --      | Event name                  | &#10003; |
+
+---doc---
 
 ```javascript
 Wee.events.trigger('.element', 'click');

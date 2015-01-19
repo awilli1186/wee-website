@@ -1,10 +1,14 @@
 ---
 name: Path
 heading: Get the currently bound path or set the path with specified value
-variables:
-  - { var: "val", desc: "Relative path from root domain", type: "string" }
-  - { var: "opt", desc: "Callback parameters", type: "object" }
 ---
+
+---table---
+
+| Variable | Type | Default | Description | Required |
+| -------- | ---- | ------- | ----------- | -------- |
+| val      | string | --      | Relative path from root domain |          |
+| opt      | object | --      | Callback parameters            |          |
 
 ---doc|label:Get---
 

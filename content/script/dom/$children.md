@@ -1,10 +1,14 @@
 ---
 name: $children
 heading: Get children of specified element with optional filter
-variables:
-  - { var: "sel", desc: "Parent element",type: "selector, element", req: true }
-  - { var: "filter", desc: "Filter selector", type: "selector" }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description     | Required |
+| -------- | ----------------- | ------- | --------------- | -------- |
+| sel      | selector, element | --      | Parent element  | &#10003; |
+| filter   | selector          | --      | Filter selector |          |
 
 ---doc---
 

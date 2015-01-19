@@ -1,10 +1,14 @@
 ---
 name: $inArray
 heading: Determine if specified element belongs to specified array
-variables:
-  - { var: "obj", desc: "Source array", type: "array", req: true }
-  - { var: "el", desc: "Specified value to check for", type: "any", req: true }
 ---
+
+---table---
+
+| Variable | Type  | Default | Description                  | Required |
+| -------- | ----- | ------- | ---------------------------- | -------- |
+| obj      | array | --      | Source array                 | &#10003; |
+| el       | any   | --      | Specified value to check for | &#10003; |
 
 ---code---
 

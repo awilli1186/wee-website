@@ -1,19 +1,27 @@
 ---
 name: Map
 heading: Bind single or set of screen events with specified options
-variables:
-  - { var: "sets", desc: "Object parameters below", type: "object, array" }
-options:
-  - { var: "size", desc: "Specific breakpoint trigger", type: "number" }
-  - { var: "min", desc: "Minimum breakpoint trigger", type: "number" }
-  - { var: "max", desc: "Maximum breakpoint trigger", type: "number" }
-  - { var: "init", desc: "Immediately evaluate", type: "boolean", default: "true", req: true }
-  - { var: "watch", desc: "Evaluate on screen resize", type: "boolean", default: "true", req: true }
-  - { var: "callback", desc: "Matching callback", type: "callback", req: true }
-  - { var: "args", desc: "Arguments to inject into callback", type: "array" }
-  - { var: "scope", desc: "Callback scope", type: "object" }
-  - { var: "once", desc: "Disable callback after first execution", type: "boolean" }
 ---
+
+---table---
+
+| Variable | Type          | Default | Description             | Required |
+| -------- | ------------- | ------- | ----------------------- | -------- |
+| sets     | object, array | --      | Object parameters below |          |
+
+---table---
+
+| Variable | Type     | Default | Description                            | Required |
+| -------- | -------- | ------- | -------------------------------------- | -------- |
+| size     | number   | --      | Specific breakpoint trigger            |          |
+| min      | number   | --      | Minimum breakpoint trigger             |          |
+| max      | number   | --      | Maximum breakpoint trigger             |          |
+| init     | boolean  | true    | Immediately evaluate                   | &#10003; |
+| watch    | boolean  | true    | Evaluate on screen resize              | &#10003; |
+| callback | callback | --      | Matching callback                      | &#10003; |
+| args     | array    | --      | Arguments to inject into callback      |          |
+| scope    | object   | --      | Callback scope                         |          |
+| once     | boolean  | --      | Disable callback after first execution |          |
 
 ---doc---
 

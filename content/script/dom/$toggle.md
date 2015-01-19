@@ -1,9 +1,13 @@
 ---
 name: $toggle
 heading: Toggle the display of a specified element
-variables:
-  - { var: "sel", desc: "Element to toggle",type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description       | Required |
+| -------- | ----------------- | ------- | ----------------- | -------- |
+| sel      | selector, element | --      | Element to toggle | &#10003; |
 
 ---doc---
 

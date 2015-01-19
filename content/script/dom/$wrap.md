@@ -1,10 +1,16 @@
 ---
 name: $wrap
 heading: Wrap HTML around specified element
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "html", desc: "HTML or callback taking the element and index", type: "string, callback", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description                                   | Required |
+| -------- | ----------------- | ------- | --------------------------------------------- | -------- |
+| sel      | selector, element | --      | Selector or element                           | &#10003; |
+| html     | string, callback  | --      | HTML or callback taking the element and index | &#10003; |
+
+---doc---
 
 ```javascript
 Wee.$wrap('.element', '<div></div>');

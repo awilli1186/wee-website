@@ -1,10 +1,16 @@
 ---
 name: $text
 heading: Get text value of specified element or set text with specified value
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "val", desc: "Text or callback taking the element, index, and existing text", type: "string, callback", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description                                                   | Required |
+| -------- | ----------------- | ------- | ------------------------------------------------------------- | -------- |
+| sel      | selector, element | --      | Selector or element                                           | &#10003; |
+| val      | string, callback  | --      | Text or callback taking the element, index, and existing text | &#10003; |
+
+---doc---
 
 ```javascript
 var $text = Wee.$text('.element');

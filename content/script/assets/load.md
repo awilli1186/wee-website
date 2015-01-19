@@ -1,16 +1,24 @@
 ---
 name: Load
 heading: Load specified assets with specified set of options
-variables:
-  - { var: "conf", desc: "Object parameters below", type: "object", req: true }
-options:
-  - { var: "files", desc: "Single file path or array of file paths", type: "string, array", req: true }
-  - { var: "group", desc: "Optional reference for use with the ready() function", type: "string" }
-  - { var: "root", desc: "Request root path or domain", type: "string", default: "current root" }
-  - { var: "async", desc: "Load asset asynchronously, only applicable to scripts", type: "boolean", default: "true" }
-  - { var: "success", desc: "Success callback", type: "callback" }
-  - { var: "failure", desc: "Failure callback", type: "callback" }
 ---
+
+---table---
+
+| Variable | Type   | Default | Description             | Required |
+| -------- | ------ | ------- | ----------------------- | -------- |
+| conf     | object | --      | Object parameters below | &#10003; |
+
+---table---
+
+| Variable | Type          | Default      | Description                                                    | Required |
+| -------- | ------------- | ------------ | -------------------------------------------------------------- | -------- |
+| files    | string, array | --           | Single file path or array of file paths                        | &#10003; |
+| group    | string        | --           | Optional reference for use with the [ready()](#ready) function |          |
+| root     | string        | current root | Request root path or domain                                    |          |
+| async    | boolean       | true         | Load asset asynchronously, only applicable to scripts          |          |
+| success  | callback      | --           | Success callback                                               |          |
+| failure  | callback      | --           | Failure callback                                               |          |
 
 ---doc|label:Single File---
 

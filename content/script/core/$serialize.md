@@ -1,9 +1,13 @@
 ---
 name: $serialize
 heading: Serialize specified object
-variables:
-  - { var: "obj", desc: "Object to serialize (single level)", type: "object", req: true }
 ---
+
+---table---
+
+| Variable | Type   | Default | Description                        | Required |
+| -------- | ------ | ------- | ---------------------------------- | -------- |
+| obj      | object | --      | Object to serialize (single level) | &#10003; |
 
 ---code---
 

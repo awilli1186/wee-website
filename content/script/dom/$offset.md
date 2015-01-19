@@ -1,9 +1,15 @@
 ---
 name: $offset
 heading: Get the offset of a specified element
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description         | Required |
+| -------- | ----------------- | ------- | ------------------- | -------- |
+| sel      | selector, element | --      | Selector or element | &#10003; |
+
+---doc---
 
 ```javascript
 var $offset = Wee.$offset('body');

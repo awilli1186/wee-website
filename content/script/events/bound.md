@@ -1,11 +1,15 @@
 ---
 name: Bound
 heading: Get currently bound events to optional specified element and event|function
-variables:
-  - { var: "sel", desc: "Element to query for events", type: "selector, element" }
-  - { var: "evt", desc: "Event name", type: "string" }
-  - { var: "fn", desc: "Specific callback", type: "callback" }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description                 | Required |
+| -------- | ----------------- | ------- | --------------------------- | -------- |
+| sel      | selector, element | --      | Element to query for events |          |
+| evt      | string            | --      | Event name                  |          |
+| fn       | callback          | --      | Specific callback           |          |
 
 ---doc---
 

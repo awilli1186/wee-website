@@ -1,10 +1,16 @@
 ---
 name: $parents
 heading: Get unique ancestors of matched elements with optional filter
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "filter", desc: "Filter selector", type: "selector, element" }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description         | Required |
+| -------- | ----------------- | ------- | ------------------- | -------- |
+| sel      | selector, element | --      | Selector or element | &#10003; |
+| filter   | selector, element | --      | Filter selector     |          |
+
+---doc---
 
 ```javascript
 var $parents = Wee.$parents('.element');

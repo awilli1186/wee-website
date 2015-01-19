@@ -1,10 +1,16 @@
 ---
 name: $removeAttr
 heading: Remove specified attribute of specified element
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "key", desc: "Attribute name", type: "string", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description         | Required |
+| -------- | ----------------- | ------- | ------------------- | -------- |
+| sel      | selector, element | --      | Selector or element | &#10003; |
+| key      | string            | --      | Attribute name      | &#10003; |
+
+---doc---
 
 ```javascript
 Wee.$removeAttr('input', 'title');

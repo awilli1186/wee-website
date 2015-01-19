@@ -1,9 +1,13 @@
 ---
 name: $unique
 heading: Create new array with only unique values from specified array
-variables:
-- { var: "arr", desc: "Array of values", type: "array", req: true }
 ---
+
+---table---
+
+| Variable | Type  | Default | Description     | Required |
+| -------- | ----- | ------- | --------------- | -------- |
+| arr      | array | --      | Array of values | &#10003; |
 
 ---code---
 

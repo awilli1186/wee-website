@@ -1,9 +1,15 @@
 ---
 name: $index
 heading: Get the sibling index of a specified element
-variables:
-  - { var: "sel", desc: "Sibling element", type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description     | Required |
+| -------- | ----------------- | ------- | --------------- | -------- |
+| sel      | selector, element | --      | Sibling element | &#10003; |
+
+---doc---
 
 ```html
 <ul>

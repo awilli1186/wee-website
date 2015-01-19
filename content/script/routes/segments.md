@@ -1,9 +1,13 @@
 ---
 name: Segments
 heading: Get all segments or single segment at index
-variables:
-- { var: "i", desc: "Zero-based segment index", type: "integer" }
 ---
+
+---table---
+
+| Variable | Type    | Default | Description              | Required |
+| -------- | ------- | ------- | ------------------------ | -------- |
+| i        | integer | --      | Zero-based segment index |          |
 
 ---doc|label:Get all---
 

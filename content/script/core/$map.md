@@ -1,14 +1,22 @@
 ---
 name: $map
 heading: Translate items in an array|selection to new array
-variables:
-  - { var: "sel", desc: "Array or selector", type: "array, selector", req: true }
-  - { var: "fn", desc: "Callback function", type: "callback", req: true }
-  - { var: "opt", desc: "Callback options below", type: "object" }
-options:
-  - { var: "args", desc: "Callback arguments (appended after element and index)", type: "array" }
-  - { var: "scope", desc: "Callback scope", type: "object" }
 ---
+
+---table---
+
+| Variable | Type            | Default | Description            | Required |
+| -------- | --------------- | ------- | ---------------------- | -------- |
+| sel      | array, selector | --      | Array or selector      | &#10003; |
+| fn       | callback        | --      | Callback function      | &#10003; |
+| opt      | object          | --      | Callback options below |          |
+
+---table---
+
+| Variable | Type   | Default | Description                                           | Required |
+| -------- | ------ | ------- | ----------------------------------------------------- | -------- |
+| args     | array  | --      | Callback arguments (appended after element and index) |          |
+| scope    | object | --      | Callback scope                                        |          |
 
 ---code|label:Simple Array---
 

@@ -1,9 +1,13 @@
 ---
 name: $isObject
 heading: Determine if specified argument is an object
-variables:
-  - { var: "obj", desc: "Value to evaluate", type: "any", req: true }
 ---
+
+---table---
+
+| Variable | Type | Default | Description       | Required |
+| -------- | ---- | ------- | ----------------- | -------- |
+| obj      | any  | --      | Value to evaluate | &#10003; |
 
 ---code---
 

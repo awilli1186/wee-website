@@ -1,10 +1,16 @@
 ---
 name: $insertBefore
 heading: Insert specified element before specified element
-variables:
-  - { var: "prev", desc: "Target element", type: "selector, element", req: true }
-  - { var: "self", desc: "Source element", type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description    | Required |
+| -------- | ----------------- | ------- | -------------- | -------- |
+| prev     | selector, element | --      | Target element | &#10003; |
+| sel      | selector, element | --      | Source element | &#10003; |
+
+---doc---
 
 ```javascript
 Wee.$insertBefore('.first', '.second');

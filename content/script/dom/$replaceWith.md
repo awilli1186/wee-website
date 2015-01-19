@@ -1,10 +1,16 @@
 ---
 name: $replaceWith
 heading: Replace specified element with another specified element
-variables:
-  - { var: "sel", desc: "Element to replace", type: "selector, element", req: true }
-  - { var: "pos", desc: "Replacement element", type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description         | Required |
+| -------- | ----------------- | ------- | ------------------- | -------- |
+| sel      | selector, element | --      | Element to replace  | &#10003; |
+| pos      | selector, element | --      | Replacement element | &#10003; |
+
+---doc---
 
 ```javascript
 Wee.$replaceWith('.old', '.new');

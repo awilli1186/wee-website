@@ -1,13 +1,21 @@
 ---
 name: URI
 heading: Get currently bound URI values or set URI with a specified string or value object
-variables:
-  - { var: "val", desc: "URI value", type: "string, object" }
-options:
-  - { var: "path", desc: "", type: "string" }
-  - { var: "query", desc: "", type: "object"}
-  - { var: "hash", desc: "", type: "string" }
 ---
+
+---table---
+
+| Variable | Type           | Default | Description | Required |
+| -------- | -------------- | ------- | ----------- | -------- |
+| val      | string, object | --      | URI value   |          |
+
+---table---
+
+| Variable | Type   | Default | Description | Required |
+| -------- | ------ | ------- | ----------- | -------- |
+| path     | string | --      | Path        |          |
+| query    | object | --      | Query       |          |
+| hash     | string | --      | Hash        |          |
 
 ---doc|label:Get---
 

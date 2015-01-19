@@ -1,9 +1,13 @@
 ---
 name: $contents
 heading: Get content of specified element
-variables:
-  - { var: "sel", desc: "Parent element", type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description    | Required |
+| -------- | ----------------- | ------- | -------------- | -------- |
+| sel      | selector, element | --      | Parent element | &#10003; |
 
 ---doc---
 

@@ -1,11 +1,15 @@
 ---
 name: $push
 heading: Push specified value into public array
-variables:
-  - { var: "key", desc: "Reference to push the value into", type: "string", req: true }
-  - { var: "a", desc: "Storage value or key for value", type: "string, any", req: true }
-  - { var: "b", desc: "Storage value", type: "any" }
 ---
+
+---table---
+
+| Variable | Type        | Default | Description                      | Required |
+| -------- | ----------- | ------- | -------------------------------- | -------- |
+| key      | string      | --      | Reference to push the value into | &#10003; |
+| a        | string, any | --      | Storage value or key for value   | &#10003; |
+| b        | any         | --      | Storage value                    |          |
 
 ---code---
 

@@ -1,10 +1,16 @@
 ---
 name: $siblings
 heading: Get siblings of specified element with optional filter
-variables:
-  - { var: "sel", desc: "Sibling element",type: "selector, element", req: true }
-  - { var: "filter", desc: "Sibling filter", type: "selector" }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description     | Required |
+| -------- | ----------------- | ------- | --------------- | -------- |
+| sel      | selector, element | --      | Sibling element | &#10003; |
+| filter   | selector          | --      | Sibling filter  |          |
+
+---doc---
 
 ```javascript
 var $lis = Wee.$siblings('.element', 'li');

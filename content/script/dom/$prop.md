@@ -1,11 +1,15 @@
 ---
 name: $prop
 heading: Get property of specified element or set property with specified value
-variables:
-  - { var: "sel", desc: "Selector or element", type: "selector, element", req: true }
-  - { var: "a", desc: "Property name or an object of properties", type: "string, object", req: true }
-  - { var: "b", desc: "Property value or callback taking the element, index, and existing property", type: "string, callback" }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description                                                                 | Required |
+| -------- | ----------------- | ------- | --------------------------------------------------------------------------- | -------- |
+| sel      | selector, element | --      | Selector or element                                                         | &#10003; |
+| a        | string, object    | --      | Property name or object of properties                                       | &#10003; |
+| b        | string, callback  | --      | Property value or callback taking the element, index, and existing property |          |
 
 ---code|label:Get|type:string---
 

@@ -1,10 +1,14 @@
 ---
 name: Map
 heading: Retrieve or add route endpoints to route storage
-variables:
-  - { var: "routes", desc: "Object of {key: value} route mapping pairs", type: "object" }
-  - { var: "init", desc: "Immediately evaluate routes", type: "boolean", default: "false" }
 ---
+
+---table---
+
+| Variable | Type    | Default | Description                                | Required |
+| -------- | ------- | ------- | ------------------------------------------ | -------- |
+| routes   | object  | --      | Object of {key: value} route mapping pairs |          |
+| init     | boolean | --      | Immediately evaluate routes                |          |
 
 ---doc|label:Set---
 

@@ -1,10 +1,16 @@
 ---
 name: $last
 heading: Get last match of specified element
-variables:
-  - { var: "sel", desc: "Last element", type: "selector, element", req: true }
-  - { var: "context", desc: "Context selector", type: "selector, element" }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description      | Required |
+| -------- | ----------------- | ------- | ---------------- | -------- |
+| sel      | selector, element | --      | Last element     | &#10003; |
+| context  | selector, element | --      | Context selector |          |
+
+---doc---
 
 ```javascript
 var $li = Wee.$last('.element li');

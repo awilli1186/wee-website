@@ -1,9 +1,13 @@
 ---
 name: $toArray
 heading: Cast object to array if it isn't one
-variables:
-  - { var: "obj", desc: "Value to convert to array", type: "string, array", req: true }
 ---
+
+---table---
+
+| Variable | Type          | Default | Description               | Required |
+| -------- | ------------- | ------- | ------------------------- | -------- |
+| obj      | string, array | --      | Value to convert to array | &#10003; |
 
 ---code---
 

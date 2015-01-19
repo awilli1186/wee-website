@@ -1,9 +1,15 @@
 ---
 name: $clone
 heading: Clone specified element
-variables:
-  - { var: "sel", desc: "Element to clone",type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description      | Required |
+| -------- | ----------------- | ------- | ---------------- | -------- |
+| sel      | selector, element | --      | Element to clone | &#10003; |
+
+---doc---
 
 ```javascript
 var $clone = Wee.$clone('.element');

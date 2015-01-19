@@ -1,12 +1,20 @@
 ---
 name: Run
 heading: Process stored route options with optional config
-variables:
-  - { var: "opt", desc: "Object parameters below", type: "object" }
-options:
-  - { var: "routes", desc: "Object of {key: value} route mapping pairs", type: "object" }
-  - { var: "path", desc: "Relative path from root domain", type: "string" }
 ---
+
+---table---
+
+| Variable | Type   | Default | Description             | Required |
+| -------- | ------ | ------- | ----------------------- | -------- |
+| opt      | object | --      | Object parameters below |          |
+
+---table---
+
+| Variable | Type   | Default | Description                                | Required |
+| -------- | ------ | ------- | ------------------------------------------ | -------- |
+| routes   | object | --      | Object of {key: value} route mapping pairs |          |
+| path     | string | --      | Relative path from root domain             |          |
 
 ---doc---
 

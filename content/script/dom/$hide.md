@@ -1,9 +1,13 @@
 ---
 name: $hide
 heading: Hide specified element
-variables:
-  - { var: "sel", desc: "Element to hide", type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type              | Default | Description     | Required |
+| -------- | ----------------- | ------- | --------------- | -------- |
+| sel      | selector, element | --      | Element to hide | &#10003; |
 
 ---doc---
 

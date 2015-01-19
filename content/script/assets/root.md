@@ -1,10 +1,17 @@
 ---
 name: Root
 heading: Get currently bound resource root or set root with specified value
-variables:
-  - { var: "val", desc: "root request path", type: "string" }
-variableNotes: You can override the root on individual requests. For instance, you may want to load all your static assets from a CDN but need to pull JSON or other files from the local server.
 ---
+
+---table---
+
+| Variable | Type   | Default | Description       | Required |
+| -------- | ------ | ------- | ----------------- | -------- |
+| val      | string | --      | Root request path |          |
+
+---tableNotes---
+
+You can override the root on individual requests. For instance, you may want to load all your static assets from a CDN but need to pull JSON or other files from the local server.
 
 ---doc|label:Set---
 

@@ -1,11 +1,17 @@
 ---
 name: $before
 heading: Insert specified element before specified element
-variables:
-  - { var: "sel", desc: "Source element", type: "selector, element" }
-  - { var: "pos", desc: "Target element or callback taking the element, index, and existing HTML", type: "selector, element, callback" }
-  - { var: "rem", desc: "Remove target after target insertion", type: "boolean", default: "false" }
 ---
+
+---table---
+
+| Variable | Type                        | Default | Description                                                             | Required |
+| -------- | --------------------------- | ------- | ----------------------------------------------------------------------- | -------- |
+| sel      | selector, element           | --      | Source element                                                          | &#10003; |
+| pos      | selector, element, callback | --      | Target element or callback taking the element, index, and existing HTML | &#10003; |
+| rem      | boolean                     | false   | Remove target after target insertion                                    |          |
+
+---doc---
 
 ```javascript
 Wee.$before('.second', '.first');

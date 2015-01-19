@@ -1,10 +1,14 @@
 ---
 name: $contains
 heading: Determine if specified parent element contains specified child element
-variables:
-  - { var: "sel", desc: "Parent element", type: "selector, element", req: true }
-  - { var: "child", desc: "Child element", type: "selector, element", req: true }
 ---
+
+---table---
+
+| Variable | Type | Default | Description | Required |
+| -------- | ---- | ------- | ----------- | -------- |
+| sel      | selector, element | --      | Parent element | &#10003; |
+| child    | selector, element | --      | Child element  | &#10003; |
 
 ---code|type:boolean---
 
