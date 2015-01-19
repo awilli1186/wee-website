@@ -13,6 +13,24 @@
 
     }
 }
+</code></pre><h3>Core</h3><p>Part of the Style section of your project file as noted directly above, this allows you to enable or disable core features of Wee Style.</p><pre><code class="language-javascript">&quot;core&quot;: {
+    &quot;buttons&quot;: true,
+    &quot;code&quot;: true,
+    &quot;forms&quot;: true,
+    &quot;print&quot;: true,
+    &quot;tables&quot;: true,
+    &quot;responsive&quot;: {
+        &quot;enable&quot;: true,
+        &quot;offset&quot;: 25,
+        &quot;breakpoints&quot;: {
+            &quot;mobileLandscape&quot;: false,
+            &quot;tabletPortrait&quot;: 768,
+            &quot;desktopSmall&quot;: 1024,
+            &quot;desktopMedium&quot;: 1280,
+            &quot;desktopLarge&quot;: 1440
+        }
+    }
+}
 </code></pre><h3>Build</h3><p>Part of the “style” configuration as noted above. Wee Grunt outputs one primary CSS file. Build specifies an array of CSS or Less files that you want built into your primary style. The file paths should be considered relative to the Wee CSS directory (in “assets”) unless starting with &quot;./&quot;.</p><pre><code class="language-javascript">&quot;build&quot;: [
     &quot;directory/third-party-style.css&quot;,
     &quot;directory/other-third-party.less&quot;

@@ -163,8 +163,8 @@
 					"template": "docs",
 					"target": "public_html/generator/config.html",
 					"content": [
-						"content/build/generator/config/intro.md",
-						"content/build/generator/config/*.md"
+						"content/generator/config/intro.md",
+						"content/generator/config/*.md"
 					]
 				},
 				"variables": {
@@ -172,8 +172,12 @@
 					"template": "docs",
 					"target": "public_html/generator/variables.html",
 					"content": [
-						"content/build/generator/variables/intro.md",
-						"content/build/generator/variables/*.md"
+						"content/generator/variables/intro.md",
+						"content/generator/variables/name-description.md",
+						"content/generator/variables/config.md",
+						"content/generator/variables/env.md",
+						"content/generator/variables/data.md",
+						"content/generator/variables/*.md"
 					]
 				}
 			}
@@ -311,6 +315,7 @@
 					"target": "public_html/script/view.html",
 					"content": [
 						"content/script/view/intro.md",
+						"content/script/view/render.md",
 						"content/script/view/*.md"
 					]
 				},

@@ -1,5 +1,5 @@
 ---
-name: Script
-heading: Simple APIs to interact with the DOM and organize your logic
+name: Configuration
+heading: Static site generator
 intro: true
 ---

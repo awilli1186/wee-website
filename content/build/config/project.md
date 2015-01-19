@@ -46,6 +46,31 @@ This is where you tell grunt about additional files you would like to include. T
 }
 ```
 
+### Core
+
+Part of the Style section of your project file as noted directly above, this allows you to enable or disable core features of Wee Style.
+
+```javascript
+"core": {
+	"buttons": true,
+	"code": true,
+	"forms": true,
+	"print": true,
+	"tables": true,
+	"responsive": {
+		"enable": true,
+		"offset": 25,
+		"breakpoints": {
+			"mobileLandscape": false,
+			"tabletPortrait": 768,
+			"desktopSmall": 1024,
+			"desktopMedium": 1280,
+			"desktopLarge": 1440
+		}
+	}
+}
+```
+
 ### Build
 
 Part of the "style" configuration as noted above. Wee Grunt outputs one primary CSS file. Build specifies an array of CSS or Less files that you want built into your primary style. The file paths should be considered relative to the Wee CSS directory (in "assets") unless starting with "./".
