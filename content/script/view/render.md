@@ -12,5 +12,19 @@ name: Render
 ---doc---
 
 ```javascript
-Wee.view.render();
+var data = {
+	firstName: John,
+	lastName: Smith
+},
+template = "My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}";
+```
+
+---code---
+
+```javascript
+Wee.view.render(template, data);
+```
+
+```javascript
+"My name is John Smith"
 ```

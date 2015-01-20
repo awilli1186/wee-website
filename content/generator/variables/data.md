@@ -4,12 +4,12 @@ name: Data
 
 ```javascript
 "data": {
-	"version": "2.1.0",
-	"analyticsID": "UA-40595891-1",
-	"gitHubRoot": "https://github.com/weepower/wee/tree/master",
+	"version": "",
+	"analyticsID": "",
+	"gitHubRoot": "",
 	"social": {
-		"twitter": "weecss",
-		"googlePageID": "+weecss"
+		"twitter": "",
+		"googlePageID": ""
 	}
 }
 ```
@@ -17,26 +17,26 @@ name: Data
 ### Version
 
 ```javascript
-"version": "2.1.0"
+"version": ""
 ```
 
 ### Analytics ID
 
 ```javascript
-"analyticsID": "UA-40595891-1"
+"analyticsID": ""
 ```
 
 ### GitHub Root
 
 ```javascript
-"gitHubRoot": "https://github.com/weepower/wee/tree/master"
+"gitHubRoot": ""
 ```
 
 ### Social
 
 ```javascript
 "social": {
-	"twitter": "weecss",
-	"googlePageID": "+weecss"
+	"twitter": "",
+	"googlePageID": ""
 }
 ```

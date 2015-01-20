@@ -5,12 +5,12 @@ name: Env
 ```javascript
 "env": {
 	"prod": {
-		"domain": "https://www.weepower.com",
-		"cdnUrl": "https://www.weepower.com",
-		"assetUrl": "https://www.weepower.com/assets"
+		"domain": "",
+		"cdnUrl": "",
+		"assetUrl": ""
 	},
 	"default": {
-		"domain": "http://www.weepower.dev",
+		"domain": "",
 		"cdnUrl": "",
 		"assetUrl": "/assets"
 	}
@@ -21,9 +21,9 @@ name: Env
 
 ```javascript
 "prod": {
-	"domain": "https://www.weepower.com",
-	"cdnUrl": "https://www.weepower.com",
-	"assetUrl": "https://www.weepower.com/assets"
+	"domain": "",
+	"cdnUrl": "",
+	"assetUrl": ""
 }
 ```
 
@@ -31,7 +31,7 @@ name: Env
 
 ```javascript
 "default": {
-	"domain": "http://www.weepower.dev",
+	"domain": "",
 	"cdnUrl": "",
 	"assetUrl": "/assets"
 }

@@ -2,6 +2,8 @@
 name: Sections
 ---
 
+Sections can be nested.
+
 ```javascript
 "sections": {
 	"home": {
@@ -20,7 +22,7 @@ name: Sections
 		},
 		"template": "blog",
 		"target": [
-		"public_html/blog/index.html"
+			"public_html/blog/index.html"
 		],
 		"content": "content/blog/*.md",
 		"sections": {
@@ -31,11 +33,43 @@ name: Sections
 				},
 				"template": "entry",
 				"target": [
-				"public_html/blog/{{name|slug}}.html"
+					"public_html/blog/{{name|slug}}.html"
 				],
 				"content": "content/blog/*.md"
 			}
 		}
 	}
 }
+```
+
+### Name
+
+```javascript
+"name": "Section Name"
+```
+
+### Data
+
+```javascript
+"data": {
+	"excludeNav": true
+}
+```
+
+### Template
+
+```javascript
+"template": "index"
+```
+
+### Target
+
+```javascript
+"target": "public_html/index.html"
+```
+
+### Content
+
+```javascript
+"content": "content/*.md"
 ```

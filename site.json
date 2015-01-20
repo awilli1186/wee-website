@@ -252,6 +252,7 @@
 					"target": "public_html/script/chain.html",
 					"content": [
 						"content/script/chain/intro.md",
+						"content/script/chain/dom.md",
 						"content/script/chain/*.md"
 					]
 				},
