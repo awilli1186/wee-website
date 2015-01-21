@@ -2,6 +2,8 @@
 name: addHelper
 ---
 
+addHelper() allows the creation of custom helpers.
+
 ---table---
 
 | Variable | Type           | Default | Description           | Required |

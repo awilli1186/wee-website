@@ -2,14 +2,16 @@
 name: Sections
 ---
 
-Sections can be nested.
+This is where you will specify the different sections of your site, and
+information related to each section. As the example below demonstrates, sections
+can be nested.
 
 ```javascript
 "sections": {
 	"home": {
 		"name": "Homepage",
 		"data": {
-			"excludeNav": true
+
 		},
 		"template": "index",
 		"target": "public_html/index.html",
@@ -18,7 +20,7 @@ Sections can be nested.
 	"blog": {
 		"name": "Blog",
 		"data": {
-			"excludeNav": true
+
 		},
 		"template": "blog",
 		"target": [
@@ -29,7 +31,7 @@ Sections can be nested.
 			"entries": {
 				"name": "Entries",
 				"data": {
-					"excludeNav": true
+
 				},
 				"template": "entry",
 				"target": [
@@ -44,19 +46,25 @@ Sections can be nested.
 
 ### Name
 
+The name for the section is set here.
+
 ```javascript
 "name": "Section Name"
 ```
 
 ### Data
 
+Any custom data that you may need for a section can be stored in the data key.
+
 ```javascript
 "data": {
-	"excludeNav": true
+	
 }
 ```
 
 ### Template
+
+This is where you specify a section's template. The html extension isn't needed.
 
 ```javascript
 "template": "index"
@@ -64,11 +72,17 @@ Sections can be nested.
 
 ### Target
 
+This specifies the file to which the content will be added.
+
 ```javascript
 "target": "public_html/index.html"
 ```
 
 ### Content
+
+The files listed here contain the content that will be added to the target file
+specified above. Files are compiled in the order that they are listed. Wildcards
+can be used as necessary.
 
 ```javascript
 "content": "content/*.md"

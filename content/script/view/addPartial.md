@@ -2,6 +2,8 @@
 name: addPartial
 ---
 
+addPartial() allows the creation of custom partials.
+
 ---table---
 
 | Variable | Type           | Default | Description            | Required |

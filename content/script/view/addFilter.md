@@ -2,6 +2,8 @@
 name: addFilter
 ---
 
+Wee includes is, not, isEmpty, and notEmpty as default conditional filters. addFilter() allows the creation of custom filters.
+
 ---table---
 
 | Variable | Type           | Default | Description           | Required |

@@ -13,10 +13,10 @@ name: Render
 
 ```javascript
 var data = {
-	firstName: John,
-	lastName: Smith
+	firstName: "John",
+	lastName: "Smith"
 },
-template = "My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}";
+template = "My name is [[firstName]][[#lastName|notEmpty]] [[lastName]][[/lastName]]";
 ```
 
 ---code---

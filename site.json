@@ -164,6 +164,10 @@
 					"target": "public_html/generator/config.html",
 					"content": [
 						"content/generator/config/intro.md",
+						"content/generator/config/name-description.md",
+						"content/generator/config/config.md",
+						"content/generator/config/env.md",
+						"content/generator/config/data.md",
 						"content/generator/config/*.md"
 					]
 				},
@@ -173,10 +177,6 @@
 					"target": "public_html/generator/variables.html",
 					"content": [
 						"content/generator/variables/intro.md",
-						"content/generator/variables/name-description.md",
-						"content/generator/variables/config.md",
-						"content/generator/variables/env.md",
-						"content/generator/variables/data.md",
 						"content/generator/variables/*.md"
 					]
 				}
