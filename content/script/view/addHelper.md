@@ -2,7 +2,8 @@
 name: addHelper
 ---
 
-addHelper() allows the creation of custom helpers.
+This allows the creation of custom helpers. An example helper would be a
+function that changes a string to upper case.
 
 ---table---
 
@@ -14,5 +15,7 @@ addHelper() allows the creation of custom helpers.
 ---doc---
 
 ```javascript
-Wee.view.addHelper();
+Wee.view.addHelper('helperName', function() {
+	// Helper logic
+});
 ```

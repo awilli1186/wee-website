@@ -2,6 +2,8 @@
 name: Render
 ---
 
+Render parses your template using the data object.
+
 ---table---
 
 | Variable | Type   | Default | Description | Required |
@@ -16,7 +18,7 @@ var data = {
 	firstName: "John",
 	lastName: "Smith"
 },
-template = "My name is [[firstName]][[#lastName|notEmpty]] [[lastName]][[/lastName]]";
+template = "My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}";
 ```
 
 ---code---

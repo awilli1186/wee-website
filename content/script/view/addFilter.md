@@ -14,5 +14,7 @@ Wee includes is, not, isEmpty, and notEmpty as default conditional filters. addF
 ---doc---
 
 ```javascript
-Wee.view.addFilter();
+Wee.view.addFilter('filterName', function() {
+	// Filter logic
+});
 ```

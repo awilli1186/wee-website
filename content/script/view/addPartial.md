@@ -2,7 +2,7 @@
 name: addPartial
 ---
 
-addPartial() allows the creation of custom partials.
+Partials are code snippets that can be reused throughout your project.
 
 ---table---
 

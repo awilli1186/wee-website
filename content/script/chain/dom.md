@@ -2,14 +2,19 @@
 name: DOM
 ---
 
+In this example, the selector takes the place of the method's first
+argument, and the second argument is passed in as the first.
+
 ```javascript
 $('.second').insertAfter('.first');
 ```
 
+DOM traversal is made easy with chaining.
+
 ```html
 <ul>
-	<li></li>
-	<li></li>
+	<li class="first"></li>
+	<li class="second"></li>
 	<li class="last"></li>
 </ul>
 ```
@@ -17,9 +22,9 @@ $('.second').insertAfter('.first');
 ---code---
 
 ```javascript
-$('.last').parent().children().last();
+$('.last').prev();
 ```
 
 ```html
-<li class="last"></li>
+<li class="second"></li>
 ```

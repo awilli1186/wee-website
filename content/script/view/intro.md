@@ -20,5 +20,5 @@ var data = {
 Values from the data object are accessed inside of the template by using tags.
 
 ```javascript
-var template = "Hello, my name is [[firstName]].";
+var template = "Hello, my name is {{firstName}}.";
 ```
