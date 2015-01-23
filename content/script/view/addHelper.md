@@ -2,20 +2,34 @@
 name: addHelper
 ---
 
-This allows the creation of custom helpers. An example helper would be a
-function that changes a string to upper case.
+This allows the creation of custom helpers. Properties of the tag that the helper is being called on can be accessed via the current scope this. These include val, data, root, tag, index, helpers, and fallback.
 
 ---table---
 
-| Variable | Type           | Default | Description           | Required |
-| -------- | -------------- | ------- | --------------------- | -------- |
-| a        | string, object | --      | Helper name or object | &#10003; |
-| b        | callback       | --      | Helper logic          |          |
+| Variable | Type     | Default | Description  | Required |
+| -------- | -------- | ------- | ------------ | -------- |
+| a        | string   | --      | Helper name  | &#10003; |
+| b        | callback | --      | Helper logic | &#10003; |
 
 ---doc---
 
 ```javascript
-Wee.view.addHelper('helperName', function() {
-	// Helper logic
+Wee.view.addHelper('uppercase', function() {
+	return this.val.toUpperCase();
 });
+```
+
+---code---
+
+```javascript
+var data = {
+	name: "john"
+},
+template = "My name is {{name|uppercase|tag}}.";
+
+Wee.view.render(template, data);
+```
+
+```javascript
+"My name is JOHN."
 ```
