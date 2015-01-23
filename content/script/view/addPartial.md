@@ -14,5 +14,18 @@ Partials are code snippets that can be reused throughout your project.
 ---doc---
 
 ```javascript
-Wee.view.addPartial('copyright', '<small>&copy; 2015</small>');
+Wee.view.addPartial('copyright', '<small>&copy; {{year|tag}}</small>');
+```
+
+```javascript
+var data = {
+	year: 2015
+},
+template = "{{> copyright|tag}}";
+
+Wee.view.render(template, data);
+```
+
+```javascript
+"<small>&copy; 2015</small>"
 ```
