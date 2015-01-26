@@ -52,12 +52,10 @@ module.exports = function(grunt) {
 			}
 		});
 
-		less = grunt.template.process(less, {
-			data: {
-				imports: inject,
-				print: style.print,
-				responsive: style.responsive
-			}
+		less = Wee.view.render(less, {
+			imports: inject,
+			print: style.print,
+			responsive: style.responsive
 		});
 
 		// Write temporary file

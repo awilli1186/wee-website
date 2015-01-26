@@ -96,11 +96,9 @@ module.exports = function(grunt) {
 					}
 
 					// Process import injection
-					less = grunt.template.process(less, {
-						data: {
-							imports: inject,
-							responsive: responsive
-						}
+					less = Wee.view.render(less, {
+						imports: inject,
+						responsive: responsive
 					});
 
 					// Write temporary file

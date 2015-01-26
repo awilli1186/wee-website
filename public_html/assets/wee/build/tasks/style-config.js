@@ -84,20 +84,16 @@ module.exports = function(grunt) {
 		// Compile custom
 		for (var target in project.style.compile) {
 			var taskName = target.replace(/\./g, '-') + '-style',
-				sources = project.style.compile[target],
-				src = [];
+				sources = Wee.$toArray(project.style.compile[target]),
+				files = [];
 
-			if (sources instanceof Array) {
-				for (var source in sources) {
-					src.push(Wee.buildPath(style.rootPath, sources[source]));
-				}
-			} else {
-				src = Wee.buildPath(style.rootPath, sources);
+			for (var path in sources) {
+				files.push(Wee.buildPath(style.rootPath, sources[path]));
 			}
 
 			// Merge watch config
 			grunt.config.set('watch.' + taskName, {
-				files: src,
+				files: files,
 				tasks: [
 					'less:' + taskName
 				]
@@ -107,8 +103,13 @@ module.exports = function(grunt) {
 			grunt.config.set('less.' + taskName, {
 				files: [{
 					dest: Wee.buildPath(style.rootPath, target),
-					src: src
-				}]
+					src: files
+				}],
+				options: {
+					globalVars: {
+						weePath: '"' + config.tempPath + '/wee.less"'
+					}
+				}
 			});
 
 			// Push style task

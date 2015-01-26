@@ -1,7 +1,7 @@
 /* global Prism */
 
 Wee.fn.make('code', {
-	_construct: function() {
+	init: function() {
 		// Bind code toggle and selection
 		Wee.events.on({
 			'pre code': {

@@ -1,6 +1,6 @@
 {{> header}}
 <body>
-<div class="page-top">
+<div class="layout-top">
 	<div class="container">
 		<header role="banner">
 			<a href="/" rel="home" class="logo">
@@ -8,12 +8,14 @@
 			</a>
 		</header>
 		<main role="main" class="not-found">
-			<h1 class="heading">Page not found</h1>
-			<p>Sorry, the resource you are trying to view does not exist.</p>
+			{{#content}}
+			<h1 class="heading">{{name}}</h1>
+			{{output|raw}}
+			{{/content}}
 		</main>
 	</div>
 </div>
-<div class="page-bottom">
+<div class="layout-bottom">
 	<footer role="contentinfo" class="container footer">
 		{{> footer}}
 	</footer>

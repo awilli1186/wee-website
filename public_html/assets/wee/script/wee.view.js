@@ -5,7 +5,7 @@
 		// Render specified data into specified template string
 		// Return string
 		render: function(temp, data) {
-			return this.$private('render', temp, data);
+			return this.$private('render', temp, W.$extend({}, data, true));
 		},
 		// Add template conditional filters
 		addFilter: function(a, b) {
@@ -22,8 +22,9 @@
 	}, {
 		_construct: function() {
 			// Set tag regex
-			this.pair = /{{#(.+?)(?:|\|([^}]*))}}((?:{{#\1[^}]*}}.*?{{\/\1}})*[\s\S]*?){{\/\1}}/g;
+			this.tags = /{{([#\/])([^{\|\n]+)(\|[^{\n]+)?}}/g;
 			this.partial = /{{> (.+?)}}/g;
+			this.pair = /{{#(.+?)(?:|\|([^}]*))}}([\s\S]*?){{\/\1}}/g;
 			this.single = /{{(.+?)}}/g;
 			this.ext = /(.[^\(]+)(?:\((.*)\))?/;
 
@@ -34,10 +35,10 @@
 			// Add default filters
 			this.filters = {
 				is: function(val) {
-					return this.val.toString() == val;
+					return this.val == val;
 				},
 				not: function(val) {
-					return this.val.toString() != val;
+					return this.val != val;
 				},
 				isEmpty: function() {
 					return this.empty;
@@ -58,30 +59,87 @@
 			W.$extend(this[type], obj);
 		},
 		render: function(temp, data) {
-			var scope = this;
+			var scope = this,
+				tags = [];
 
 			// Make partial replacements
+			// Preprocess tags to allow for reliable tag matching
 			temp = temp.replace(this.partial, function(match, tag) {
-				if (scope.partials.hasOwnProperty(tag)) {
-					var partial = scope.partials[tag];
-					return W.$isFunction(partial) ? partial() : partial;
+				var partial = scope.partials[tag];
+				return partial ? (W.$isFunction(partial) ? partial() : partial) : '';
+			}).replace(this.tags, function(m, pre, tag, filter) {
+				var resp = '{{' + pre;
+
+				if (pre == '#') {
+					if (tags[tag]) {
+						tags[tag].i++;
+						tags[tag].o.push(tags[tag].i);
+					} else {
+						tags[tag] = {
+							i: 1,
+							o: [1]
+						};
+					}
+
+					resp += tag + '%' + tags[tag].i + (filter || '');
+				} else {
+					resp += tag + '%' + tags[tag].o.pop();
 				}
 
-				return '';
+				return resp + '}}';
 			});
 
-			// Process template tags
-			return this.process(temp, data, {}, data, 0);
+			// Parse template tags
+			return this.parse(temp, data, {}, data, 0);
 		},
-		process: function(temp, data, prev, init, index) {
+		parse: function(temp, data, prev, init, index) {
 			var scope = this;
 
-			return temp.replace(this.pair, function(match, tag, filter, inner) {
-				var val = scope.getVal(data, prev, tag, U, init, index),
+			return temp.replace(this.pair, function(m, tag, filter, inner) {
+				tag = tag.replace(/%\d+/, '');
+				var val = scope.get(data, prev, tag, U, init, index),
 					empty = val === false || val == null || val.length === 0,
 					resp = '';
 
-				if (! filter && empty === false) {
+				if (filter) {
+					// Loop through tag filters
+					var cont = filter.split('|').every(function(el) {
+						var arr = el.match(scope.ext),
+							args = arr[2] !== U ? arr[2].split(',') : [];
+						el = arr[1];
+						filter = scope.filters[el];
+
+						if (filter) {
+							var rv = filter.apply({
+								val: val,
+								data: data,
+								root: init,
+								tag: tag,
+								inner: inner,
+								empty: empty
+							}, args);
+
+							// If the filter response is true skip into interior
+							// If false abort the current process
+							if (rv === false) {
+								return false;
+							} else if (rv === true) {
+								resp = scope.parse(inner, data, prev, init, index);
+							}
+						}
+
+						return true;
+					});
+
+					if (cont === false) {
+						return '';
+					}
+
+					val = scope.get(data, prev, tag, U, init, index);
+					empty = val === false || val == null || val.length === 0;
+				}
+
+				if (empty === false && resp === '') {
 					// Loop through objects and arrays
 					if (typeof val == 'object') {
 						var isObj = W.$isObject(val),
@@ -97,49 +155,30 @@
 										'##': i + 1
 									}, W.$isObject(el) ? el : (isObj ? val : {}));
 
-								resp += scope.process(inner, item, data, init, i);
+								resp += scope.parse(inner, item, data, init, i);
 
 								i++;
 							}
 						}
-					} else if (W.$isString(val)) {
-						resp = scope.process(inner, {
+					} else if (val !== false) {
+						resp = scope.parse(inner, W.$extend({
 							'.': val,
 							'#': 0,
 							'##': 1
-						}, data, init, 0);
+						}, data), data, init, 0);
 					} else {
 						resp = inner;
-					}
-				} else if (filter !== U) {
-					var filters = filter.split('|'),
-						cont = filters.every(function(el) {
-							var arr = el.match(scope.ext),
-								args = arr[2] !== U ? arr[2].split(',') : [];
-							el = arr[1];
-
-							return scope.filters.hasOwnProperty(el) && scope.filters[el].apply({
-								val: val,
-								data: data,
-								root: init,
-								inner: inner,
-								empty: empty
-							}, args);
-						});
-
-					if (cont === true) {
-						return scope.process(inner, data, {}, init);
 					}
 				}
 
 				return resp;
-			}).replace(this.single, function(match, set) {
+			}).replace(this.single, function(m, set) {
 				var split = set.split('||'),
 					fb = split[1],
 					segs = split[0].split('|'),
 					tag = segs[0].trim(),
-					val = scope.getVal(data, prev, tag, fb, init, index),
-					helpers = val === U ? segs : segs.slice(1);
+					val = scope.get(data, prev, tag, fb, init, index),
+					helpers = segs.length > 1 ? segs.slice(1) : segs;
 
 				// Process helpers
 				helpers.forEach(function(el) {
@@ -148,14 +187,17 @@
 					if (arr) {
 						var args = arr[2] !== U ? arr[2].split(',') : [];
 						el = arr[1].trim();
+						var helper = scope.helpers[el];
 
-						if (scope.helpers.hasOwnProperty(el)) {
-							val = scope.helpers[el].apply({
+						if (helper) {
+							val = helper.apply({
 								val: val,
 								data: data,
 								root: init,
 								tag: tag,
-								index: index
+								index: index,
+								helpers: helpers,
+								fallback: fb
 							}, args);
 						}
 					}
@@ -173,7 +215,7 @@
 				return val === U || typeof val == 'object' ? '' : val;
 			});
 		},
-		getVal: function(data, prev, key, fb, init, x) {
+		get: function(data, prev, key, fb, init, x) {
 			var trim = key.trim(),
 				resp = trim == '.' ? key : key.split('.'),
 				orig = data,

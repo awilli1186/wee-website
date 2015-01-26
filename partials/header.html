@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
-<title>{{#seoTitle|notEmpty}}{{seoTitle}} | {{/seoTitle}}{{site.name}}</title>
+<title>{{#seoTitle|notEmpty}}{{seoTitle}}{{/seoTitle}}{{#seoTitle|isEmpty}}{{section.name}}{{/seoTitle}} | {{site.name}}</title>
 {{#seoDesc|notEmpty}}<meta name="description" content="{{seoDesc}}">{{/seoDesc}}
 {{#seoNoIndex|isEmpty}}
 <meta name="robots" content="noindex, follow">
@@ -26,6 +26,7 @@
 <script src="{{site.assetUrl}}/js/ie8.min.js"></script>
 <![endif]-->
 <!--[if lte IE 9]>
+<link rel="stylesheet" href="{{site.assetUrl}}/css/ie9.min.css">
 <script src="{{site.assetUrl}}/js/ie9.min.js"></script>
 <![endif]-->
 {{#site.env|is(prod)}}

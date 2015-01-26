@@ -271,7 +271,7 @@ module.exports = function(grunt) {
 							if (name === 'content') {
 								obj.input += content;
 							} else {
-								var push = helpers.indexOf('push') !== -1,
+								var append = helpers.indexOf('append') !== -1,
 									render = helpers.indexOf('render') !== -1,
 									val = {
 										name: name,
@@ -290,7 +290,7 @@ module.exports = function(grunt) {
 								});
 
 								// Handle array blocks
-								if (push === true) {
+								if (append === true) {
 									if (! obj.hasOwnProperty(name)) {
 										obj[name] = [];
 									}

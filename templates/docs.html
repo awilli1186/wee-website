@@ -41,7 +41,7 @@
 			<main role="main">
 				<ol itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumb">
 					<li><a href="/" rel="home" itemprop="url"><span itemprop="title">Home</span></a></li>
-					{{#parent|notEmpty}}<li><a href="{{parent}}" rel="prev">{{parent.name}}</a></li>{{/parent}}
+					{{#parent|notEmpty}}<li><a href="/{{parent.name|slug}}" rel="prev">{{parent.name}}</a></li>{{/parent}}
 					<li>{{section.name}}</li>
 				</ol>
 				{{#content}}
@@ -65,6 +65,7 @@
 						<p class="doc__heading">{{heading}}</p>
 						{{/heading}}
 						{{description.output|raw}}
+						{{#variables|notEmpty}}
 						<div class="variables">
 							<table>
 								<thead>
@@ -92,6 +93,7 @@
 							<p class="variables__notes">{{.}}</p>
 							{{/variableNotes}}
 						</div>
+						{{#options|notEmpty}}
 						<div class="variables options">
 							<table>
 								<thead>
@@ -116,6 +118,8 @@
 								</tbody>
 							</table>
 						</div>
+						{/options}}
+						{{/variables}}
 						{{#blocks}}
 						{{#name|not(description)}}
 						{{#label|notEmpty}}<h3>{{label}}</h3>{{/label}}

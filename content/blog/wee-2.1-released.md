@@ -1,6 +1,7 @@
 ---
 name: Wee 2.1.0 Released
 global:
+  seoTitle: Wee 2.1.0 Released
   seoDesc: A new feature-packed version of Wee has been released.
 ---
 

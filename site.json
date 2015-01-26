@@ -42,7 +42,7 @@
 			},
 			"template": "index",
 			"target": "public_html/index.html",
-			"content": "content/home/body.md"
+			"content": "content/pages/home.md"
 		},
 		"404": {
 			"name": "Page Not Found",
@@ -50,12 +50,14 @@
 				"excludeNav": true
 			},
 			"template": "404",
-			"target": "public_html/404.html"
+			"target": "public_html/404.html",
+			"content": "content/pages/404.md"
 		},
 		"blog": {
 			"name": "Blog",
 			"data": {
-				"excludeNav": true
+				"excludeNav": true,
+				"seoTitle": "Development Blog"
 			},
 			"template": "blog",
 			"target": [

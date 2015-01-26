@@ -1710,6 +1710,24 @@
 	-webkit-animation: @arguments;
 	animation: @arguments;
 }
+.keyframes (@name; @from; @to) {
+	@-webkit-keyframes ~'@{name}' {
+		0% {
+			@from();
+		}
+		100% {
+			@to();
+		}
+	}
+	@keyframes ~'@{name}' {
+		0% {
+			@from();
+		}
+		100% {
+			@to();
+		}
+	}
+}
 
 
 

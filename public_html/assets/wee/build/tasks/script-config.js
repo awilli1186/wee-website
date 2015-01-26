@@ -27,10 +27,6 @@ module.exports = function(grunt) {
 
 			if (features.data === true) {
 				script.files.push(weeScriptRoot + 'wee.data.js');
-
-				if (features.chain === true) {
-					script.files.push(weeScriptRoot + 'chain/wee.chain.data.js');
-				}
 			}
 
 			if (features.dom === true) {
@@ -59,6 +55,10 @@ module.exports = function(grunt) {
 
 			if (features.view === true) {
 				script.files.push(weeScriptRoot + 'wee.view.js');
+
+				if (features.chain === true) {
+					script.files.push(weeScriptRoot + 'chain/wee.chain.view.js');
+				}
 			}
 		}
 
