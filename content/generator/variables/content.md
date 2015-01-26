@@ -6,10 +6,10 @@ With the content tag pair a section's content can be iterated over.
 
 ```html
 {{#content|tag}}
-	<h3>{{name|tag}}</h3>
-	<div>
-		{{output|raw|tag}}
-	</div>
+<h3>{{name|tag}}</h3>
+<div>
+	{{output|raw|tag}}
+</div>
 {{/content}}
 ```
 

@@ -36,7 +36,7 @@ This will return the current development environment. Using this with the |is fi
 It also allows quick access to any data associated with an environment.
 
 ```html
-<link rel="stylesheet" href="{{site.assetUrl}}/style.css">
+<link rel="stylesheet" href="{{site.assetUrl|tag}}/style.css">
 ```
 
 ### Time
