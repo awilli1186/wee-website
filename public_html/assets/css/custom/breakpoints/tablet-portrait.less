@@ -2,17 +2,6 @@
 	# Global
 \*------------------------------------*/
 
-.layout {
-	&-top {
-		.spaced(-9.5);
-		&:after {
-			.height(9.5);
-		}
-	}
-	&-bottom {
-		.height(9.5);
-	}
-}
 .mobile-nav {
 	.hide();
 }
@@ -88,18 +77,77 @@
 
 
 
+
 /*------------------------------------*\
 	# Index
 \*------------------------------------*/
 
+.index-top {
+	.padding(bottom; 12%);
+	.min-height(calc(100vh - 14.6rem));
+}
+.header {
+	.border(bottom; light; 25%; 1px; dotted);
+	.padding(bottom; 3);
+	.spaced(6);
+}
 .heading {
 	.font-size(2.8);
-	.spaced(7);
 }
 .nav {
 	.row(2%);
 	&__button {
 		.column(spaced; 1; 3; 2%);
+	}
+}
+.post {
+	.padding(vertical; 3%);
+	&__columns {
+		.row();
+	}
+	&__left {
+		.column(spaced; 3; 4);
+	}
+	&__excerpt {
+		.spaced(.6);
+	}
+	&__right {
+		.column(spaced; 1; 4);
+	}
+	.button {
+		.margin(top; 2);
+	}
+}
+.features {
+	&__header {
+		.font-size(3.4);
+	}
+}
+.components {
+	&__list {
+		.row(6%);
+		li {
+			.column(spaced; 1; 3; 6%);
+			.spaced(0);
+		}
+	}
+	h3 {
+		.font-size(2.8);
+	}
+	p {
+		.spaced(0);
+	}
+}
+.highlights {
+	&__list {
+		.row(8%);
+		li {
+			.column(spaced; 1; 2; 8%);
+			.spaced(0);
+		}
+	}
+	h3 {
+		.font-size(3.4);
 	}
 }
 

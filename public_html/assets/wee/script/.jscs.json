@@ -105,9 +105,6 @@
 	],
 	"requireSpaceBeforeObjectValues": true,
 	"requireSpaceBetweenArguments": true,
-	"requireSpacesInAnonymousFunctionExpression": {
-		"beforeOpeningCurlyBrace": true
-	},
 	"requireSpacesInConditionalExpression": true,
 	"requireSpacesInForStatement": true,
 	"requireSpacesInFunction": {

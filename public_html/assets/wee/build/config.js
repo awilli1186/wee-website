@@ -8,7 +8,7 @@ var LessCssClean = require('less-plugin-clean-css');
 
 global.fs = require('fs');
 global.browserSync = require('browser-sync');
-global.Wee = require('../script/wee.js').Wee;
+global.Wee = require('../script/wee').Wee;
 global.path = require('path');
 global.jshint = require('jshint').JSHINT;
 global.JSCS = require('jscs');
@@ -135,6 +135,7 @@ module.exports = function(grunt) {
 	global.legacy = {};
 	global.reloadPaths = [];
 	global.legacyBuild = [];
+	global.legacyConvert = [];
 	global.version = '2.1.0';
 
 	grunt.initConfig({

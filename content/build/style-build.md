@@ -1,9 +1,10 @@
 ---
-name: Script Build
+name: Style Build
 description: Wee Grunt builds the styles in the following sequence
 ---
 
-1. style.min.css - this is the primary CSS file. The following items are compiled into this file
+1. style.min.css - this is the primary CSS file. The following items are 
+compiled:
 	1. Reset
 	2. Core components (as enabled in the project file)
 	3. Vendor build directory files

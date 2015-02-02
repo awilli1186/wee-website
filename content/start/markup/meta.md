@@ -2,7 +2,7 @@
 name: Meta
 ---
 
-It's best to serve the meta charset and http-equiv values through HTTP headers. There are commented lines in the sample [.htaccess](/start/structure#htaccess) file for that purpose. If uncommented you should remove the two tags from your HTML.
+It's best to serve the meta charset and http-equiv values through HTTP headers. There are commented lines in the sample [.htaccess](/start/structure#htaccess) file for that purpose. If uncommented, you should remove the two tags from your HTML.
 
 ```html
 <meta charset="utf-8">

@@ -16,7 +16,7 @@
 				"enable": true,
 				"offset": 25,
 				"breakpoints": {
-					"mobileLandscape": false,
+					"mobileLandscape": 480,
 					"tabletPortrait": 768,
 					"desktopSmall": 1024,
 					"desktopMedium": 1280,
@@ -38,7 +38,10 @@
 			"dest": "ie8.min.css",
 			"build": [
 				"custom/ie8.less"
-			]
+			],
+			"compile": {
+
+			}
 		}
 	},
 	"script": {

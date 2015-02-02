@@ -127,6 +127,9 @@
 			"target": "public_html/build/index.html",
 			"content": [
 				"content/build/intro.md",
+				"content/build/tasks.md",
+				"content/build/script-build.md",
+				"content/build/style-build.md",
 				"content/build/*.md"
 			],
 			"sections": {
@@ -152,7 +155,7 @@
 			}
 		},
 		"generator": {
-			"name": "Generator",
+			"name": "Generate",
 			"template": "docs",
 			"target": "public_html/generator/index.html",
 			"content": [

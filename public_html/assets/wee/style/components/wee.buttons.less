@@ -8,9 +8,11 @@
 		text-align: center;
 		text-shadow: none;
 		.background(@buttonBackground);
+		.border(@buttonBorderColor);
 		.font(@buttonFont; @buttonFontSize; @buttonFontWeight);
-		.spaced(@buttonMarginBottom);
 		.padding(@buttonPaddingVertical; @buttonPaddingHorizontal);
+		.spaced(@buttonMarginBottom);
+		.rounded(@buttonRounded);
 		&:hover {
 			color: @buttonColor;
 			.background-color(@buttonBackgroundHover);
@@ -19,12 +21,6 @@
 			color: @buttonColor;
 			.background-color(@buttonBackgroundActive);
 		}
-	}
-	.rules () when not (@buttonRounded = false) {
-		.rounded(@buttonRounded);
-	}
-	.rules () when not (@buttonBorderColor = false) {
-		.border(@buttonBorderColor);
 	}
 	.rules () when (@buttonBorderColor = false) {
 		.border(0);
@@ -58,7 +54,7 @@
 			.background(@disabledButtonBackground);
 		}
 	}
-	.disabled-rules () when not (@buttonBorderColor = false) {
+	.disabled-rules () when not (@disabledButtonBorderColor = false) {
 		.border(@disabledButtonBorderColor);
 	}
 	.check () when (@buttonStyled = true) {
@@ -68,11 +64,11 @@
 		input[type='submit'],
 		.button {
 			.rules();
-			&.button-colored {
+			&.button@{coloredButtonClassModifier} {
 				.colored-rules();
 			}
 			&[disabled],
-			&.button-disabled {
+			&.button@{disabledButtonClassModifier} {
 				.disabled-rules();
 			}
 		}
@@ -81,11 +77,11 @@
 		.button {
 			.rules();
 		}
-		.button-colored {
+		.button@{buttonColoredClassModifier} {
 			.colored-rules();
 		}
 		.button[disabled],
-		.button-disabled {
+		.button@{buttonDisabledClassModifier} {
 			.disabled-rules();
 		}
 	}

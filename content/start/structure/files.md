@@ -2,7 +2,7 @@
 name: Files
 ---
 
-<div class="collapsible">
+---collapsible---
 
 * .csscomb.json
 * .csslintrc
@@ -15,19 +15,20 @@ name: Files
 * package.json
 * project.json
 * public
-	* .htaccess
+	* [.htaccess](#htaccess)
 	* 404.html
 	* browserconfig.xml
 	* favicon.ico
-	* humans.txt
+	* [humans.txt](#humans)
 	* index.html
-	* robots.txt
+	* [robots.txt](#robots)
 	* share.png
 	* tileicon.png
 	* tileicon-wide.png
 	* touchicon.png
 	* assets/
 		* css/
+			style.min.css
 			* build/
 				* vendor/
 			* custom/
@@ -47,6 +48,7 @@ name: Files
 		* guide/
 		* img/
 		* js/
+			script.min.js
 			* build/
 				* vendor/
 			* custom/
@@ -68,5 +70,3 @@ name: Files
 			* style/
 			* temp/
 			* tests/
-
-</div>

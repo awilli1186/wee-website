@@ -1,28 +1,116 @@
 {{> header}}
-<body class="page-index">
-<div class="layout-top">
-	<div class="container">
-		<header role="banner">
+<body>
+<div class="index-top">
+	<header role="banner" class="header header--index">
+		<div class="container">
 			<a href="/" rel="home" class="logo">
 				<img src="{{site.assetUrl}}/img/wee.svg" alt="Wee Framework">
 			</a>
-		</header>
-		<main role="main">
 			<h1 class="heading">{{#content}}{{input}}{{/content}}</h1>
-			<nav role="navigation" class="nav">
-				<a href="/start" class="button nav__button">Documentation</a>
-				<a href="//fast.wistia.net/embed/iframe/e0l125pqcn?popover=true" class="button nav__button wistia-popover[height=394,playerColor=169ca3,width=700]">Watch Video</a>
-				<a href="https://github.com/weepower/wee/archive/master.zip" class="button nav__button">Download {{site.version}}</a>
-			</nav>
-		</main>
+		</div>
+	</header>
+	<div class="container">
+		<p class="welcome"><b>Welcome to Wee</b>, a lightweight front-end framework for logically building complex, responsive web projects.</p>
+		<nav role="navigation" class="nav">
+			<a href="/start" class="button nav__button">
+				Documentation</a>
+			<a href="//fast.wistia.net/embed/iframe/e0l125pqcn?popover=true" class="button nav__button wistia-popover[height=394,playerColor=169ca3,width=700]">Watch Video</a>
+			<a href="https://github.com/weepower/wee/archive/master.zip" class="button nav__button">Download {{site.version}}</a>
+		</nav>
 	</div>
 </div>
+<main role="main">
+	<div class="post">
+		<div class="container">
+			<div class="post__columns">
+				<div class="post__left">
+					<h2 class="post__title"><a href="#">Wee 2.1.0 Released</a></h2>
+					<p class="post__excerpt">Today marks an exciting milestone for Wee and brings some exciting new features.</p>
+				</div>
+				<div class="post__right">
+					<a href="#" class="button button-colored">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="features">
+		<div class="container">
+			<h2 class="features__header">Features</h2>
+			<p class="features__text">Wee gives you a bootstrap of HTML, CSS, and JavaScript components which are simple to use and easily extendable.</p>
+			<ul class="features__list">
+				<li>
+					<h3>Structured foundation</h3>
+					<p>Some of the busiest sites on the Web leverage Django’s ability to quickly and flexibly scale.</p>
+				</li>
+				<li>
+					<h3>Mobile-first CSS</h3>
+					<p>Django was designed to help developers take applications from concept to completion as quickly as possible.</p>
+				</li>
+				<li>
+					<h3>JavaScript toolset</h3>
+					<p>Django takes security seriously and helps developers avoid many common security mistakes.</p>
+				</li>
+				<li>
+					<h3>Build process</h3>
+					<p>Django takes security seriously and helps developers avoid many common security mistakes.</p>
+				</li>
+				<li>
+					<h3>Static generator</h3>
+					<p>Some of the busiest sites on the Web leverage Django’s ability to quickly and flexibly scale.</p>
+				</li>
+				<li>
+					<h3>Exceedingly scalable</h3>
+					<p>Wee powers tens of millions of pageviews each month and is trusted by many fortune 500 websites.</p>
+				</li>
+				<li>
+					<h3>Module extension</h3>
+					<p>Django takes security seriously and helps developers avoid many common security mistakes.</p>
+				</li>
+				<li>
+					<h3>Legacy fallback</h3>
+					<p>Django was designed to help developers take applications from concept to completion as quickly as possible.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="components">
+		<div class="container">
+			<ol class="components__list">
+				<li>
+					<h3>Agency inspired</h3>
+					<p>Founded and maintained by the team at <a href="https://www.caddis.co">Caddis</a>, Wee isn't a hipster experiment but fueled by solving real problems.</p>
+				</li>
+				<li>
+					<h3>Moving forward</h3>
+					<p>Not a day goes by we don't push to make Wee better. Our passion for front-end shows, just <a href="https://github.com/weepower/wee/commits/master">take a look</a>.</p>
+				</li>
+				<li>
+					<h3>Open source</h3>
+					<p>We're huge fans of open source. The <a href="#">Apache 2 License</a> allows the flexibility to use Wee without reservation.</p>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="highlights">
+		<div class="container">
+			<ul class="highlights__list">
+				<li>
+					<h3><a href="#">Get started →</a></h3>
+					<p>Dive into the basics of Wee. We'll walk you through downloading the framework and setting up your first project.</p>
+				</li>
+				<li>
+					<h3><a href="#">View source →</a></h3>
+					<p>There's no better way to get to know a project than reading the source. Check out out <a href="#">GitHub repo</a> to dive deep.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</main>
 <div class="layout-bottom">
 	<footer role="contentinfo" class="container footer">
 		{{> footer}}
 	</footer>
 </div>
 <script src="{{site.assetUrl}}/js/script.min.js"></script>
-<script src="//fast.wistia.com/assets/external/popover-v1.js"></script>
 </body>
 </html>

@@ -56,11 +56,11 @@ QUnit.test('render filter', 1, function(assert) {
 			}
 
 			if (Array.isArray(val)) {
-				val = val.filter(function (el, i) {
+				val = val.filter(function(el, i) {
 					return i >= offset && i < limit;
 				});
 			} else if (Wee.$isObject(val)) {
-				Object.keys(val).forEach(function (key, i) {
+				Object.keys(val).forEach(function(key, i) {
 					if (i < offset || i >= limit) {
 						delete val[key];
 					}
