@@ -2,6 +2,8 @@
 	# Global
 \*------------------------------------*/
 
+.load-font(wee);
+
 html,
 body {
 	.min-height(100%);
@@ -230,6 +232,8 @@ body {
 .welcome {
 	.animation(fade-in .6s .4s ease-out forwards);
 	.color(@colorMediumBlue);
+	.font(@headingFont; 1.7);
+	.font-weight(300);
 	.spaced(3);
 	.transparent();
 }
@@ -275,11 +279,18 @@ body {
 }, {
 	.translate();
 });
+.info {
+	p {
+		.darkGray();
+		.font(@headingFont);
+		.font-weight(300);
+		.spaced(0);
+	}
+}
 .post {
 	.padding(vertical; 5%; 8%);
 	&__title {
 		.font-size(2.4);
-		.font-weight(300);
 		.spaced(.4);
 		a {
 			.darkerGray();
@@ -289,7 +300,9 @@ body {
 		}
 	}
 	&__excerpt {
-		.lightGray();
+		.font(@headingFont);
+		.font-weight(300);
+		.darkGray();
 	}
 	.button {
 		.fill();
@@ -300,13 +313,18 @@ body {
 .features {
 	.background(@colorLightBlue);
 	.padding(vertical; 6%; 3%);
+	p {
+		.spaced(4);
+	}
 	&__header {
-		.color(@colorBlue);
 		.font-size(2.3);
 		.font-weight(300);
 		.spaced(.4);
 	}
 	&__text {
+		.darkerGray();
+		.font(@headingFont; 1.8);
+		.font-weight(300);
 		.spaced(4);
 	}
 	&__list {
@@ -315,13 +333,18 @@ body {
 			.spaced(3);
 		}
 		h3 {
-			.color(@colorBlue);
-			.font-size(2);
-			.font-weight(300);
+			.font-size(1.8);
+			.font-weight(400);
 			.spaced(1);
+			a {
+				.block();
+				.suffix(@iconRight; 1.2; Wee);
+				&:after {
+					.font-size(1.6);
+				}
+			}
 		}
 		p {
-			.darkGray();
 			.spaced(0);
 		}
 	}
@@ -335,12 +358,9 @@ body {
 		}
 	}
 	h3 {
+		.darkerGray();
 		.font-size(2.3);
-		.font-weight(300);
 		.spaced(1);
-	}
-	p {
-		.spaced(0);
 	}
 }
 .highlights {
@@ -358,14 +378,17 @@ body {
 		.font-weight(300);
 		.spaced(1);
 		a {
-			.color(@colorBlue);
-			&:hover {
-				.underline();
+			.block();
+			&.icon-help {
+				.prefix(@iconHelp; 1.2; Wee);
+			}
+			&.icon-github {
+				.prefix(@iconGithub; 1.2; Wee);
 			}
 		}
 	}
 	p {
-		.spaced(0);
+		.font-size(1.8);
 	}
 }
 

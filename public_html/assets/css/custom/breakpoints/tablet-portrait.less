@@ -144,6 +144,15 @@
 		li {
 			.column(spaced; 1; 2; 8%);
 			.spaced(0);
+			&:first-child {
+				.relative();
+				&:after {
+					.absolute(-20%; -4%; false; false);
+					.background(#d3d3d3);
+					.content();
+					.size(1px; 140%);
+				}
+			}
 		}
 	}
 	h3 {
