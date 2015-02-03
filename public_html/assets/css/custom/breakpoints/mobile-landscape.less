@@ -7,6 +7,21 @@
 		.row();
 		li {
 			.column(spaced; 1; 2);
+			&:first-child,
+			&:nth-child(6) {
+				.clear();
+				.column(spaced; 1; 1);
+			}
+			&:nth-child(6) {
+				.margin(top; 2);
+			}
+			&:nth-child(4),
+			&:nth-child(9) {
+				.clear();
+			}
 		}
+	}
+	figcaption {
+		.font-size(1.7);
 	}
 }

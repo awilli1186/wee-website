@@ -284,7 +284,7 @@ body {
 		.darkGray();
 		.font(@headingFont);
 		.font-weight(300);
-		.spaced(0);
+		.spaced();
 	}
 }
 .post {
@@ -308,6 +308,9 @@ body {
 		.fill();
 		.font(@headingFont; 1.2);
 		.uppercase();
+	}
+	p {
+		.spaced(2);
 	}
 }
 .features {
@@ -347,6 +350,18 @@ body {
 		p {
 			.spaced(0);
 		}
+	}
+	figure {
+		.padding(0);
+		.border(none);
+		.spaced(1);
+		img {
+			.spaced(1);
+		}
+	}
+	figcaption {
+		.font-size(1.5);
+		.line-height(1.8em);
 	}
 }
 .components {

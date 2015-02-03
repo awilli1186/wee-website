@@ -40,7 +40,24 @@
 	&__list {
 		li {
 			.column-modify(spaced; 1; 4);
+			.height(15);
+			&:first-child,
+			&:nth-child(6) {
+				.column(spaced; 1; 2);
+				.height(38);
+				.margin(top; .6);
+			}
+			&:nth-child(4),
+			&:nth-child(9) {
+				.clear(none);
+			}
+			&:nth-child(6) {
+				.right();
+			}
 		}
+	}
+	figcaption {
+		.font-size(1.5);
 	}
 }
 
