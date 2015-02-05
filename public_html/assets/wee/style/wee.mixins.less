@@ -996,15 +996,15 @@
 	.check();
 }
 .border (vertical; @color: @baseColor; @value: 1px; @style: solid) when (iscolor(@color)) {
-	.border(bottom; @color; @value; @style);
 	.border(top; @color; @value; @style);
+	.border(bottom; @color; @value; @style);
 }
 .border (@top; @right; @bottom; @left; @color: @baseColor; @style: solid) when not (iskeyword(@top))
 		and (isnumber(@bottom)) {
+	.border(top; @color; @top; @style);
+	.border(right; @color; @right; @style);
 	.border(bottom; @color; @bottom; @style);
 	.border(left; @color; @left; @style);
-	.border(right; @color; @right; @style);
-	.border(top; @color; @top; @style);
 }
 .border-image (@filename; @slice: 100%; @width: 1; @outset: 0; @repeat: stretch) {
 	-webkit-border-image: url('@{imagePath}@{filename}') @slice @width @outset @repeat;
@@ -1995,17 +1995,14 @@
 	# Rows
 \*------------------------------------*/
 
-.row (@margin: @gridMargin) when (ispercentage(@margin)) {
+.row (@margin: @gridMargin) {
+	margin-left: (@margin * -1);
+	max-width: (100% + @margin);
 	.clearfix();
-	.check () when not (@margin = false) {
-		.margin(left; (@margin * -1));
-		.max-width((100% + @margin));
-	}
-	.check();
 }
-.row-modify (@margin: @gridMargin) when (ispercentage(@margin)) {
-	.margin(left; (@margin * -1));
-	.max-width((100% + @margin));
+.row-modify (@margin: @gridMargin) {
+	margin-left: (@margin * -1);
+	max-width: (100% + @margin);
 }
 .row-reset () {
 	margin-left: 0;
@@ -2020,31 +2017,28 @@
 	# Columns
 \*------------------------------------*/
 
-.column (@width: false) when (ispercentage(@width)), (ispixel(@width)), (isunit(@width, 'rem')) and not (@width = false) {
+.column (...) {
 	float: left;
-	.width(@width);
 }
-.column (@share; @columns: @gridColumns) when not (iskeyword(@share))
-		and not (ispercentage(@share))
-		and not (ispixel(@share))
-		and not (isunit(@share, 'rem')) {
-	float: left;
+.column (@width: 100%) when not (isunit(@width, '')) {
+	width: @width;
+}
+.column (@share; @columns: @gridColumns) when (isunit(@share, '')) {
 	width: ((100% / @columns) * @share);
 }
-.column (spaced; @share; @columns: @gridColumns; @margin: @gridMargin) when (ispercentage(@margin)) {
-	float: left;
+.column (spaced; @share; @columns: @gridColumns; @margin: @gridMargin) {
+	margin-left: @margin;
 	width: (((100% / @columns) * @share) - (@margin));
-	.margin(left; @margin);
 }
 .column-modify (@share; @columns: @gridColumns) {
 	width: ((100% / @columns) * @share);
 }
-.column-modify (spaced; @share; @columns: @gridColumns; @margin: @gridMargin) when (ispercentage(@margin)) {
+.column-modify (spaced; @share; @columns: @gridColumns; @margin: @gridMargin) {
+	margin-left: @margin;
 	width: (((100% / @columns) * @share) - (@margin));
-	.margin(left; @margin);
 }
-.column-modify (@width) when (ispercentage(@width)), (ispixel(@width)), (isunit(@width, 'rem')) {
-	.width(@width);
+.column-modify (@width) when not (isunit(@width, '')) {
+	width: @width;
 }
 .column-reset (@resetMargin: false) {
 	float: none;
@@ -2065,7 +2059,7 @@
 .column-offset (@share; @columns: @gridColumns) {
 	margin-left: ((100% / @columns) * @share);
 }
-.column-offset (spaced; @share; @columns: @gridColumns; @margin: (@gridMargin / 2)) when (ispercentage(@margin)) {
+.column-offset (spaced; @share; @columns: @gridColumns; @margin: (@gridMargin / 2)) {
 	margin-left: (((100% / @columns) * @share) + (@margin * 2));
 }
 
@@ -2114,18 +2108,6 @@
 .clear (@value: both) {
 	clear: @value;
 }
-.align (center) {
-	text-align: center;
-}
-.align (justify) {
-	text-align: justify;
-}
-.align (left) {
-	text-align: left;
-}
-.align (right) {
-	text-align: right;
-}
 .align (baseline) {
 	vertical-align: baseline;
 }
@@ -2137,6 +2119,9 @@
 }
 .align (top) {
 	vertical-align: top;
+}
+.align (@value) when (default()) {
+	text-align: @value;
 }
 .display (@value) {
 	display: @value;
@@ -2163,12 +2148,12 @@
 \*------------------------------------*/
 
 .inline-list () {
-	li {
+	> li {
 		display: inline;
 	}
 }
 .inline-list (@spacing) when (isnumber(@spacing)) {
-	li {
+	> li {
 		display: inline;
 		.margin(left; @spacing);
 		&:first-child {
@@ -2177,7 +2162,7 @@
 	}
 }
 .inline-list (@content; @margin: 0) when (isstring(@content)) {
-	li {
+	> li {
 		display: inline;
 		.margin(right; @margin);
 		.prefix(@content; @margin);
@@ -2189,7 +2174,7 @@
 	}
 }
 .floated-list () {
-	li {
+	> li {
 		float: left;
 	}
 }
@@ -2311,19 +2296,20 @@
 	white-space: nowrap;
 }
 .hide (text) {
-	.hide-text();
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
 }
 .selection (@color: @selectionColor; @background: @selectionBackground) {
-	.check () {
-		text-shadow: none;
-		.background(@background);
-		.color(@color);
-	}
 	&::-moz-selection {
-		.check();
+		background: @background;
+		color: @color;
+		text-shadow: none;
 	}
 	&::selection {
-		.check();
+		background: @background;
+		color: @color;
+		text-shadow: none;
 	}
 }
 .cursor (@value: pointer) {
@@ -2419,14 +2405,6 @@
 .baseColor () {
 	color: @baseColor;
 }
-.centered () {
-	.centered(horizontal);
-}
-.centered (horizontal) {
-	display: table;
-	margin-left: auto;
-	margin-right: auto;
-}
 .centered (vertical) {
 	position: absolute;
 	&:before {
@@ -2436,8 +2414,10 @@
 		vertical-align: middle;
 	}
 }
-.centered (both) {
-	.centered();
+.centered () when (default()) {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
 }
 .block-row () {
 	display: block;

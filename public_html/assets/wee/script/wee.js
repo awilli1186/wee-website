@@ -8,7 +8,7 @@
 	var web = typeof window !== 'undefined',
 		W = (function() {
 			var _store = {},
-				D = web === true ? document : {};
+				D = web ? document : {};
 
 			return {
 				_body: D.body,
@@ -116,7 +116,7 @@
 
 								if (el == host || (W._canExec(el) && W.$exec(el, {
 										args: [host]
-									}) === true)) {
+									}))) {
 									return key;
 								}
 							});
@@ -334,7 +334,7 @@
 				// Returns array
 				$merge: function(arr, arr2, dup) {
 					arr = arr.concat(arr2);
-					return dup === true ? W.$unique(arr) : arr;
+					return dup ? W.$unique(arr) : arr;
 				},
 				// Create new array with only unique values from specified array
 				// Returns array
@@ -580,7 +580,7 @@
 	N.Wee = W;
 
 	// Set data variables and bind elements
-	if (web === true) {
+	if (web) {
 		W.$setVars();
 		W.$setRef();
 	}
