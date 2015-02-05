@@ -59,7 +59,8 @@
 						<h2 class="doc__title">
 							{{name}}
 							<a href="#{{name|slug}}" class="doc__anchor" id="{{name|slug}}">#</a>
-							{{#path|notEmpty}}<a href="{{$root.gitHubRoot}}{{path}}" class="doc__link">→</a>{{/path}}
+							{{#path|notEmpty}}<a href="{{$root.site.gitHubRoot}}{{path}}" class="doc__link">→</a>{{/path}}
+							{{#link|notEmpty}}<a href="{{link}}" class="doc__link">→</a>{{/link}}
 						</h2>
 						{{#heading|notEmpty}}
 						<p class="doc__heading">{{heading}}</p>

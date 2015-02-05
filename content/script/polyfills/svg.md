@@ -1,8 +1,9 @@
 ---
 name: SVG
+path: /public/assets/js/polyfill/wee.svg.js
 ---
 
-SVG images solve a [lot of problems](http://css-tricks.com/using-svg/) but are unsupported in IE8. The SVG polyfill allows for an automatic or specific fallback to a more widely supported image when needed.
+SVG solves a [lot of problems](http://css-tricks.com/using-svg/) but is unsupported in IE8. The SVG polyfill allows for an automatic or specific fallback to a more widely supported image format when necessary.
 
 ### Default
 
@@ -22,7 +23,7 @@ By default the polyfill will replace the source of any linked SVG files with a P
 
 ### Override
 
-If you need to specify the fallback set the data-fallback attribute which is useful if the fallback is in a different path or you are using ```<svg>``` directly in your markup.
+If you need to specify the fallback set the data-fallback attribute. This is useful if the fallback path is different than the originally linked SVG, it is in a different format than PNG, or you are using ```<svg>``` directly in your markup.
 
 ---code---
 
