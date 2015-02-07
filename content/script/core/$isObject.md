@@ -3,7 +3,7 @@ name: $isObject
 heading: Determine if specified argument is an object
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description       | Required |
 | -------- | ---- | ------- | ----------------- | -------- |

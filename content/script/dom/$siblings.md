@@ -3,7 +3,7 @@ name: $siblings
 heading: Get siblings of specified element with optional filter
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description     | Required |
 | -------- | ----------------- | ------- | --------------- | -------- |

@@ -3,7 +3,7 @@ name: $width
 heading: Get or set the width of a specified element, optionally accounting for margin
 ---
 
----table---
+---variables---
 
 | Variable | Type                      | Default | Description                                                            | Required |
 | -------- | ------------------------- | ------- | ---------------------------------------------------------------------- | -------- |

@@ -3,7 +3,7 @@ name: $getKeys
 heading: Get keys from an object
 ---
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description                | Required |
 | -------- | ------ | ------- | -------------------------- | -------- |

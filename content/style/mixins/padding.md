@@ -2,7 +2,7 @@
 name: Padding
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description   | Required |
 | -------- | ---- | ------- | ------------- | -------- |
@@ -18,7 +18,7 @@ name: Padding
 padding: 5rem;
 ```
 
----table---
+---variables---
 
 | Variable                 | Type    | Default | Description   | Required |
 | ------------------------ | ------- | ------- | ------------- | -------- |
@@ -35,7 +35,7 @@ padding: 5rem;
 padding-left: 2rem;
 ```
 
----table---
+---variables---
 
 | Variable   | Type    | Default | Description                    | Required |
 | ---------- | ------- | ------- | ------------------------------ | -------- |
@@ -52,7 +52,7 @@ padding-left: 6%;
 padding-right: 6%;
 ```
 
----table---
+---variables---
 
 | Variable             | Type    | Default | Description                   | Required |
 | -------------------- | ------- | ------- | ----------------------------- | -------- |
@@ -70,7 +70,7 @@ padding-top: 2rem;
 padding-bottom: 2rem;
 ```
 
----table---
+---variables---
 
 | Variable             | Type    | Default | Description                   | Required |
 | -------------------- | ------- | ------- | ----------------------------- | -------- |
@@ -89,7 +89,7 @@ padding-left: 2rem;
 padding-right: 3rem;
 ```
 
----table---
+---variables---
 
 | Variable    | Type | Default | Description        | Required |
 | ----------- | ---- | ------- | ------------------ | -------- |
@@ -109,7 +109,7 @@ padding-bottom: 2rem;
 padding-left: 3rem;
 ```
 
----table---
+---variables---
 
 | Variable | Type | Default | Description    | Required |
 | -------- | ---- | ------- | -------------- | -------- |
@@ -131,7 +131,7 @@ padding-bottom: 3rem;
 padding-left: 4rem;
 ```
 
----table---
+---variables---
 
 | Variable | Type | Default        | Description   | Required |
 | -------- | ---- | -------------- | ------------- | -------- |

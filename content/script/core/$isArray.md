@@ -3,7 +3,7 @@ name: $isArray
 heading: Determine if specified argument is array
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description       | Required |
 | -------- | ---- | ------- | ----------------- | -------- |

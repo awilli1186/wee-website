@@ -3,7 +3,7 @@ name: $insertAfter
 heading: Insert specified element after specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |

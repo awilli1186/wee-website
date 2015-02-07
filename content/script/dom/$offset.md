@@ -3,7 +3,7 @@ name: $offset
 heading: Get the offset of a specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description         | Required |
 | -------- | ----------------- | ------- | ------------------- | -------- |

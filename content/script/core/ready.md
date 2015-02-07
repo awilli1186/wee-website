@@ -3,7 +3,7 @@ name: Ready
 heading: Execute specified function when document is ready
 ---
 
----table---
+---variables---
 
 | Variable | Type     | Default | Description     | Required |
 | -------- | -------- | ------- | --------------- | -------- |

@@ -3,7 +3,7 @@ name: $attr
 heading: Get attribute of first element or set matched elements attribute with specified value
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                          | Required |
 | -------- | ----------------- | ------- | ------------------------------------ | -------- |

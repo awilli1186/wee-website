@@ -3,7 +3,7 @@ name: Segments
 heading: Get all segments or single segment at index
 ---
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description              | Required |
 | -------- | ------- | ------- | ------------------------ | -------- |
@@ -13,7 +13,7 @@ heading: Get all segments or single segment at index
 
 Retrieve segment array from the currently bound path.
 
----code---
+---code|type:array|modifier:split---
 
 ```javascript
 Wee.routes.segments();
@@ -27,12 +27,12 @@ Wee.routes.segments();
 
 Get single segment by defining zero-based index.
 
----code---
+---code|type:string|modifier:split---
 
 ```javascript
 Wee.routes.segments(1);
 ```
 
 ```javascript
-routing
+"routes"
 ```

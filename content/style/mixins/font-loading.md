@@ -2,7 +2,7 @@
 name: Font Loading
 ---
 
----table|label:Load Font---
+---variables|label:Load Font---
 
 | Variable | Type             | Default | Description       | Required |
 | -------- | ---------------- | ------- | ----------------- | -------- |

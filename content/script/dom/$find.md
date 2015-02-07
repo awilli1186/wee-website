@@ -3,7 +3,7 @@ name: $find
 heading: Get matching nodes based on a specified filter within a specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description     | Required |
 | -------- | ----------------- | ------- | --------------- | -------- |

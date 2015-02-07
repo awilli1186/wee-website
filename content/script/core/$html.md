@@ -3,7 +3,7 @@ name: $html
 heading: Get HTML value of first element or set matched elements HTML with specified value
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                                                   | Required |
 | -------- | ----------------- | ------- | ------------------------------------------------------------- | -------- |

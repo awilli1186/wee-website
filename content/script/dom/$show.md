@@ -3,7 +3,7 @@ name: $show
 heading: Show specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description        | Required |
 | -------- | ----------------- | ------- | ------------------ | -------- |

@@ -2,7 +2,7 @@
 name: Content
 ---
 
----table---
+---variables---
 
 | Variable | Type            | Default | Description | Required |
 | -------- | --------------- | ------- | ----------- | -------- |
@@ -30,7 +30,7 @@ content: 'example';
 font-family: georgia;
 ```
 
----table|label:Prefix, Suffix &amp; Bookends---
+---variables|label:Prefix, Suffix &amp; Bookends---
 
 | Variable | Type            | Default | Description | Required |
 | -------- | --------------- | ------- | ----------- | -------- |

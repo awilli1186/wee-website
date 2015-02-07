@@ -3,7 +3,7 @@ name: $filter
 heading: Return a subset of elements based on a specified filter from a specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type               | Default | Description                                              | Required |
 | -------- | ------------------ | ------- | -------------------------------------------------------- | -------- |

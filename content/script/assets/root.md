@@ -1,21 +1,21 @@
 ---
 name: Root
-heading: Get currently bound resource root or set root with specified value
+heading: Get currently bound asset root or set root with specified value
 ---
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description       | Required |
 | -------- | ------ | ------- | ----------------- | -------- |
 | val      | string | --      | Root request path |          |
 
----tableNotes---
+---note---
 
-You can override the root on individual requests. For instance, you may want to load all your static assets from a CDN but need to pull JSON or other files from the local server.
+<b>Note:</b> You can override the root on individual requests. For instance, you may want to load all your static assets from a CDN but pull JSON or other files from the local server.
 
 ---doc|label:Set---
 
-The value set here is prepended to every request unless it is overridden when loading.
+The value set here is prepended to every request if not specifically overridden.
 
 ```javascript
 Wee.assets.root('https://cdn.domain.com');
@@ -23,9 +23,9 @@ Wee.assets.root('https://cdn.domain.com');
 
 ---doc|label:Get---
 
-Retrieve the current root which defaults to an empty string, unless otherwise set.
+Retrieve the current root which defaults to an empty string, unless previously set.
 
----code---
+---code|modifier:split---
 
 ```javascript
 Wee.assets.root();

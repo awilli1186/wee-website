@@ -2,7 +2,7 @@
 name: Shapes
 ---
 
----table|label:Caret---
+---variables|label:Caret---
 
 | Variable                       | Type    | Default   | Description                 | Required |
 | ------------------------------ | ------- | --------- | --------------------------- | -------- |

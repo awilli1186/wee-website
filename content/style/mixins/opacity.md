@@ -2,7 +2,7 @@
 name: Opacity
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |

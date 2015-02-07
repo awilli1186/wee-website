@@ -3,7 +3,7 @@ name: $eq
 heading: Get indexed node of specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description          | Required |
 | -------- | ----------------- | ------- | -------------------- | -------- |

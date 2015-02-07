@@ -3,7 +3,7 @@ name: $not
 heading: Return a subset of elements based on a specified exclusion filter from a specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type               | Default | Description                                              | Required |
 | -------- | ------------------ | ------- | -------------------------------------------------------- | -------- |

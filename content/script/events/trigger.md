@@ -1,9 +1,9 @@
 ---
 name: Trigger
-heading: Execute specific element|slector event by name and optional trigger
+heading: Execute specific element or selector event by name and optional trigger
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |

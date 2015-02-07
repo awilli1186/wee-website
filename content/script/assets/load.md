@@ -3,22 +3,22 @@ name: Load
 heading: Load specified assets with specified set of options
 ---
 
----table---
+---variables---
 
-| Variable | Type   | Default | Description             | Required |
-| -------- | ------ | ------- | ----------------------- | -------- |
-| conf     | object | --      | Object parameters below | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| conf | object | --| Object parameters below | &#10003; |
 
----table---
+---variables|label:Configuration Object---
 
-| Variable | Type          | Default      | Description                                                    | Required |
-| -------- | ------------- | ------------ | -------------------------------------------------------------- | -------- |
-| files    | string, array | --           | Single file path or array of file paths                        | &#10003; |
-| group    | string        | --           | Optional reference for use with the [ready()](#ready) function |          |
-| root     | string        | current root | Request root path or domain                                    |          |
-| async    | boolean       | true         | Load asset asynchronously, only applicable to scripts          |          |
-| success  | callback      | --           | Success callback                                               |          |
-| failure  | callback      | --           | Failure callback                                               |          |
+| Variable | Type| Default| Description| Required |
+| -- | -- | -- | -- | -- |
+| files| string, array | -- | Single file path or array of file paths| &#10003; |
+| group| string | -- | Optional reference for use with [ready](#ready) ||
+| root | string | current root | Root path or domain override for [root](#root) ||
+| async| boolean | true | Load asset asynchronously, only applicable to scripts||
+| success| callback | -- | Success callback ||
+| failure| callback | -- | Failure callback ||
 
 ---doc|label:Single File---
 

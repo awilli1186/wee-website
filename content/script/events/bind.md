@@ -6,4 +6,4 @@ deprecated: true
 
 ---notice---
 
-[Wee.events.on()](#on) should be used instead using 'ref:id' selectors.
+<b>Deprecated:</b> [Wee.events.on()](#on) should be used instead using 'ref:id' selectors.

@@ -3,7 +3,7 @@ name: $wrapInner
 heading: Wrap HTML around the content of specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                                   | Required |
 | -------- | ----------------- | ------- | --------------------------------------------- | -------- |

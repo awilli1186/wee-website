@@ -3,7 +3,7 @@ name: $closest
 heading: Get the closest node of element with specified filter
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description         | Required |
 | -------- | ----------------- | ------- | ------------------- | -------- |

@@ -3,7 +3,7 @@ name: $env
 heading: Get current environment or detect current environment against specified object
 ---
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description                              | Required |
 | -------- | ------ | ------- | ---------------------------------------- | -------- |

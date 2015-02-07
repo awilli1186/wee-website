@@ -44,7 +44,7 @@ text-transform: lowercase;
 text-transform: uppercase;
 ```
 
----table|label:Text Transform---
+---variables|label:Text Transform---
 
 | Variable | Type    | Default | Description          | Required |
 | -------- | ------- | ------- | -------------------- | -------- |
@@ -92,7 +92,7 @@ white-space: nowrap;
 text-decoration: underline;
 ```
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description           | Required |
 | -------- | ------- | ------- | --------------------- | -------- |
@@ -123,7 +123,7 @@ text-decoration: #fff solid underline;
 text-decoration: line-through;
 ```
 
----table|label:Text Decoration---
+---variables|label:Text Decoration---
 
 | Variable | Type    | Default   | Description           | Required |
 | -------- | ------- | --------- | --------------------- | -------- |
@@ -139,7 +139,7 @@ text-decoration: line-through;
 text-decoration: overline;
 ```
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |
@@ -161,7 +161,7 @@ text-decoration: underline;
 text-decoration: #00f dotted underline;
 ```
 
----table|label:Outline---
+---variables|label:Outline---
 
 | Variable | Type    | Default       | Description           | Require |
 | -------- | ------- | ------------- | --------------------- | ------- |
@@ -177,7 +177,7 @@ text-decoration: #00f dotted underline;
 outline: thin dotted;
 ```
 
----table|label:Letter Spacing---
+---variables|label:Letter Spacing---
 
 | Variable | Type | Default | Description          | Require |
 | -------- | ---- | ------- | -------------------- | ------- |
@@ -193,7 +193,7 @@ outline: thin dotted;
 letter-spacing: 2rem;
 ```
 
----table|label:Word Spacing---
+---variables|label:Word Spacing---
 
 | Variable | Type | Default | Description        | Require |
 | -------- | ---- | ------- | ------------------ | ------- |
@@ -209,7 +209,7 @@ letter-spacing: 2rem;
 word-spacing: 3rem;
 ```
 
----table|label:Text Indent---
+---variables|label:Text Indent---
 
 | Variable | Type | Default | Description          | Require |
 | -------- | ---- | ------- | -------------------- | ------- |
@@ -225,7 +225,7 @@ word-spacing: 3rem;
 text-indent: 1rem;
 ```
 
----table|label:User Select---
+---variables|label:User Select---
 
 | Variable | Type    | Default | Description                  | Require |
 | -------- | ------- | ------- | ---------------------------- | ------- |
@@ -244,7 +244,7 @@ text-indent: 1rem;
 user-select: text;
 ```
 
----table|label:Tab Size---
+---variables|label:Tab Size---
 
 | Variable | Type    | Default           | Description | Required |
 | -------- | ------- | ----------------- | ----------- | -------- |

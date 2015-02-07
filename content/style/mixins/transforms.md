@@ -2,7 +2,7 @@
 name: Transforms
 ---
 
----table|label:Transform---
+---variables|label:Transform---
 
 | Variable   | Type     | Default | Description     | Required |
 | ---------- | -------- | ------- | --------------- | -------- |
@@ -20,7 +20,7 @@ name: Transforms
 transform: translateX(10px);
 ```
 
----table|label:Rotate---
+---variables|label:Rotate---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |
@@ -38,7 +38,7 @@ transform: translateX(10px);
 transform: rotate(30deg);
 ```
 
----table|label:Scale---
+---variables|label:Scale---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |
@@ -57,7 +57,7 @@ transform: rotate(30deg);
 transform: scale(2);
 ```
 
----table|label:Skew---
+---variables|label:Skew---
 
 | Variable | Type    | Default | Description     | Required |
 | -------- | ------- | ------- | --------------- | -------- |
@@ -76,7 +76,7 @@ transform: scale(2);
 transform: skew(30deg, 15deg);
 ```
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description   | Required |
 | -------- | ------- | ------- | ------------- | -------- |
@@ -95,7 +95,7 @@ transform: skew(30deg, 15deg);
 transform: skewY(15deg);
 ```
 
----table|label:Transform Origin---
+---variables|label:Transform Origin---
 
 | Variable | Type    | Default | Description       | Required |
 | -------- | ------- | ------- | ----------------- | -------- |
@@ -114,7 +114,7 @@ transform: skewY(15deg);
 transform: transform-origin(15%, 10%);
 ```
 
----table|label:Translate---
+---variables|label:Translate---
 
 | Variable | Type    | Default | Description   | Required |
 | -------- | ------- | ------- | ------------- | -------- |

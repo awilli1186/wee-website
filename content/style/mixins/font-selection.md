@@ -2,7 +2,7 @@
 name: Font Selection
 ---
 
----table---
+---variables---
 
 | Variable    | Type    | Default | Description       | Required |
 | ----------- | ------- | ------- | ----------------- | -------- |

@@ -2,7 +2,7 @@
 name: Rows
 ---
 
----table|label:Row &amp; Row-Modify---
+---variables|label:Row &amp; Row-Modify---
 
 | Variable | Type       | Default     | Description  | Required |
 | -------- | ---------- | ----------- | ------------ | -------- |

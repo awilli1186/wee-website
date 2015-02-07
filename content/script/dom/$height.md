@@ -3,7 +3,7 @@ name: $height
 heading: Get or set the height of an element, optionally accounting for margin
 ---
 
----table---
+---variables---
 
 | Variable | Type                      | Default | Description                                                            | Required |
 | -------- | ------------------------- | ------- | ---------------------------------------------------------------------- | -------- |

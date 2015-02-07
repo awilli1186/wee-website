@@ -257,7 +257,7 @@
 					"target": "public_html/script/chain.html",
 					"content": [
 						"content/script/chain/intro.md",
-						"content/script/chain/dom.md",
+						"content/script/chain/core.md",
 						"content/script/chain/*.md"
 					]
 				},
@@ -312,6 +312,7 @@
 					"target": "public_html/script/screen.html",
 					"content": [
 						"content/script/screen/intro.md",
+						"content/script/screen/values.md",
 						"content/script/screen/*.md"
 					]
 				},

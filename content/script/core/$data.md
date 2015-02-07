@@ -3,7 +3,7 @@ name: $data
 heading: Get data value of first element or set matched elements data with specified value
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                               | Required |
 | -------- | ----------------- | ------- | ----------------------------------------- | -------- |

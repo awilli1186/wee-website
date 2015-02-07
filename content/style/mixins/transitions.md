@@ -2,7 +2,7 @@
 name: Transitions
 ---
 
----table|label:Transition---
+---variables|label:Transition---
 
 | Variable | Type   | Default                   | Description      | Required |
 | -------- | ------ | ------------------------- | ---------------- | -------- |
@@ -20,7 +20,7 @@ name: Transitions
 transition: all 4s ease-in 1s;
 ```
 
----table---
+---variables---
 
 | Variable  | Type    | Default          | Description         | Required |
 | --------- | ------- | ---------------- | ------------------- | -------- |
@@ -41,7 +41,7 @@ transition: all 4s ease-in 1s;
 transition: all 2s ease-in 0.2s;
 ```
 
----table|label:Transition Delay---
+---variables|label:Transition Delay---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |
@@ -58,7 +58,7 @@ transition: all 2s ease-in 0.2s;
 transition-delay: 3s;
 ```
 
----table|label:Transition Duration---
+---variables|label:Transition Duration---
 
 | Variable  | Type    | Default          | Description    | Required |
 | --------- | ------- | ---------------- | -------------- | -------- |

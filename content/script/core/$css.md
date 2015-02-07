@@ -3,7 +3,7 @@ name: $css
 heading: Get CSS value of first element or set matched elements CSS property with specified value
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                              | Required |
 | -------- | ----------------- | ------- | ---------------------------------------- | -------- |

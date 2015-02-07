@@ -3,7 +3,7 @@ name: $replaceWith
 heading: Replace specified element with another specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description         | Required |
 | -------- | ----------------- | ------- | ------------------- | -------- |

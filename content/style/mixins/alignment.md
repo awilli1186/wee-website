@@ -25,7 +25,7 @@ padding-left: 6%;
 padding-right: 6%;
 ```
 
----table|label:Float---
+---variables|label:Float---
 
 | Variable    | Type    | Default | Description          | Required |
 | ----------- | ------- | ------- | -------------------- | -------- |
@@ -85,7 +85,7 @@ content: ' ';
 display: table;
 ```
 
----table|label:Clear---
+---variables|label:Clear---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |
@@ -101,7 +101,7 @@ display: table;
 clear: left;
 ```
 
----table|label:Align---
+---variables|label:Align---
 
 | Variable                                                    | Type    | Default | Description | Required |
 | ----------------------------------------------------------- | ------- | ------- | ----------- | -------- |
@@ -127,7 +127,7 @@ text-align: justify;
 vertical-align: middle;
 ```
 
----table|label:Display---
+---variables|label:Display---
 
 | Variable | Type    | Default | Description   | Required |
 | -------- | ------- | ------- | ------------- | -------- |
@@ -153,7 +153,7 @@ display: block;
 display: inline;
 ```
 
----table|label:Inline-Block---
+---variables|label:Inline-Block---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |

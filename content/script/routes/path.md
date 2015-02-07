@@ -3,7 +3,7 @@ name: Path
 heading: Get the currently bound path or set the path with specified value
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -14,7 +14,7 @@ heading: Get the currently bound path or set the path with specified value
 
 By default the path will be that of the current request.
 
----code---
+---code|modifier:split---
 
 ```javascript
 Wee.routes.path();

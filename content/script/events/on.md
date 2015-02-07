@@ -3,7 +3,7 @@ name: On
 heading: Bind specified function to specified element and event
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                           | Required |
 | -------- | ----------------- | ------- | ------------------------------------- | -------- |
@@ -12,7 +12,7 @@ heading: Bind specified function to specified element and event
 | b        | callback, object  | --      | Callback for events or options object |          |
 | c        | object            | --      | Option parameters below               |          |
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                                | Required |
 | -------- | ----------------- | ------- | ------------------------------------------ | -------- |

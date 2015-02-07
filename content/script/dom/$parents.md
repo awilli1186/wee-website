@@ -3,7 +3,7 @@ name: $parents
 heading: Get unique ancestors of matched elements with optional filter
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description         | Required |
 | -------- | ----------------- | ------- | ------------------- | -------- |

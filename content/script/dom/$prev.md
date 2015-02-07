@@ -3,7 +3,7 @@ name: $prev
 heading: Get the previous sibling of a specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type               | Default | Description                 | Required |
 | -------- | ------------------ | ------- | --------------------------- | -------- |

@@ -3,7 +3,7 @@ name: $remove
 heading: Remove specified element from document
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |

@@ -3,7 +3,7 @@ name: $each
 heading: Execute specified function for specified elements|selector
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description              | Required |
 | -------- | ----------------- | ------- | ------------------------ | -------- |
@@ -11,7 +11,7 @@ heading: Execute specified function for specified elements|selector
 | fn       | callback          | --      | Callback function        | &#10003; |
 | opt      | object            | --      | Callback arguments below |          |
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description                                           | Required |
 | -------- | ------- | ------- | ----------------------------------------------------- | -------- |

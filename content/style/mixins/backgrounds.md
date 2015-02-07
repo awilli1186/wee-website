@@ -2,7 +2,7 @@
 name: Backgrounds
 ---
 
----table|label:Background---
+---variables|label:Background---
 
 | Variable | Type            | Default | Description      | Required |
 | -------- | --------------- | ------- | ---------------- | -------- |
@@ -18,7 +18,7 @@ name: Backgrounds
 background: url("bg.png") #00f no-repeat;
 ```
 
----table---
+---variables---
 
 | Variable | Type  | Default         | Description      | Required |
 | -------- | ----- | --------------- | ---------------- | -------- |
@@ -34,7 +34,7 @@ background: url("bg.png") #00f no-repeat;
 background: #00f;
 ```
 
----table---
+---variables---
 
 | Variable  | Type            | Default | Description      | Required |
 | --------- | --------------- | ------- | ---------------- | -------- |
@@ -52,7 +52,7 @@ background: #00f;
 background: #0000ff url('../img/bg.png') no-repeat;
 ```
 
----table---
+---variables---
 
 | Variable  | Type  | Default | Description    | Required |
 | --------- | ----- | ------- | -------------- | -------- |
@@ -71,7 +71,7 @@ background-color: #fff;
 background-color: rgba(0, 0, 255, 0.2);
 ```
 
----table---
+---variables---
 
 | Variable  | Type    | Default   | Description       | Required |
 | --------- | ------- | --------- | ----------------- | -------- |
@@ -91,7 +91,7 @@ background-color: rgba(0, 0, 255, 0.2);
 background: #0000ff url('../img/bg.png') 10% 15% no-repeat;
 ```
 
----table---
+---variables---
 
 | Variable    | Type    | Default         | Description          | Required |
 | ----------- | ------- | --------------- | -------------------- | -------- |
@@ -110,7 +110,7 @@ background-color: #ffffff;
 background-color: rgba(255, 255, 255, 0.5);
 ```
 
----table|label:Background Color---
+---variables|label:Background Color---
 
 | Variable | Type  | Default         | Description      | Required |
 | -------- | ----- | --------------- | ---------------- | -------- |
@@ -126,7 +126,7 @@ background-color: rgba(255, 255, 255, 0.5);
 background-color: #00f;
 ```
 
----table|label:Background Image---
+---variables|label:Background Image---
 
 | Variable | Type    | Default | Description            | Required |
 | -------- | ------- | ------- | ---------------------- | -------- |
@@ -142,7 +142,7 @@ background-color: #00f;
 background-image: none;
 ```
 
----table---
+---variables---
 
 | Variable  | Type    | Default | Description  | Required |
 | --------- | ------- | ------- | ------------ | -------- |
@@ -160,7 +160,7 @@ background-image: url('../img/bg.png');
 background-repeat: no-repeat;
 ```
 
----table---
+---variables---
 
 | Variable  | Type    | Default   | Description       | Required |
 | --------- | ------- | --------- | ----------------- | -------- |
@@ -189,7 +189,7 @@ div {
 }
 ```
 
----table---
+---variables---
 
 | Variable  | Type    | Default   | Description       | Required |
 | --------- | ------- | --------- | ----------------- | -------- |
@@ -210,7 +210,7 @@ background-position: 10px 0;
 background-repeat: no-repeat;
 ```
 
----table---
+---variables---
 
 | Variable  | Type    | Default   | Description       | Required |
 | --------- | ------- | --------- | ----------------- | -------- |
@@ -244,7 +244,7 @@ div {
 }
 ```
 
----table---
+---variables---
 
 | Variable    | Type    | Default | Description       | Required |
 | ----------- | ------- | ------- | ----------------- | -------- |
@@ -267,7 +267,7 @@ background-position: 10px 8px;
 background-repeat: no-repeat;
 ```
 
----table---
+---variables---
 
 | Variable    | Type    | Default | Description       | Required |
 | ----------- | ------- | ------- | ----------------- | -------- |
@@ -303,7 +303,7 @@ div {
 }
 ```
 
----table---
+---variables---
 
 | Variable    | Type    | Default | Description       | Required |
 | ----------- | ------- | ------- | ----------------- | -------- |
@@ -328,7 +328,7 @@ background-repeat: no-repeat;
 background-size: 400px;
 ```
 
----table---
+---variables---
 
 | Variable    | Type    | Default | Description       | Required |
 | ----------- | ------- | ------- | ----------------- | -------- |
@@ -354,7 +354,7 @@ background-repeat: no-repeat;
 background-size: 400px 300px;
 ```
 
----table|label:Background Gradient---
+---variables|label:Background Gradient---
 
 | Variable | Type    | Default            | Description    | Required |
 | -------- | ------- | ------------------ | -------------- | -------- |
@@ -375,7 +375,7 @@ background: -webkit-linear-gradient(0deg, #008000, #ff0);
 background: linear-gradient(90deg, #008000, #ff0);
 ```
 
----table---
+---variables---
 
 | Variable | Type       | Default | Description    | Required |
 | -------- | ---------- | ------- | -------------- | -------- |
@@ -396,7 +396,7 @@ background: linear-gradient(90deg, #4d4dff, #0000b3);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4dff', endColorstr='#0000b3', GradientType=0);
 ```
 
----table---
+---variables---
 
 | Variable    | Type    | Default | Description          | Required |
 | ----------- | ------- | ------- | -------------------- | -------- |
@@ -417,7 +417,7 @@ background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 2));
 background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 ```
 
----table|label:Background Attachment---
+---variables|label:Background Attachment---
 
 | Variable   | Type    | Default | Description      | Required |
 | ---------- | ------- | ------- | ---------------- | -------- |
@@ -433,7 +433,7 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 background-attachment: scroll;
 ```
 
----table|label:Background Position---
+---variables|label:Background Position---
 
 | Variable | Type | Default | Description       | Required |
 | -------- | ---- | ------- | ----------------- | -------- |
@@ -450,7 +450,7 @@ background-attachment: scroll;
 background-position: 10px 5px;
 ```
 
----table|label:Background Repeat---
+---variables|label:Background Repeat---
 
 | Variable   | Type    | Default | Description  | Required |
 | ---------- | ------- | ------- | ------------ | -------- |
@@ -466,7 +466,7 @@ background-position: 10px 5px;
 background-repeat: repeat;
 ```
 
----table|label:Background Size---
+---variables|label:Background Size---
 
 | Variable | Type | Default | Description  | Required |
 | -------- | ---- | ------- | ------------ | -------- |
@@ -482,7 +482,7 @@ background-repeat: repeat;
 background-size: 3rem;
 ```
 
----table|label:Background Clip---
+---variables|label:Background Clip---
 
 | Variable | Type    | Default    | Description | Required |
 | -------- | ------- | ---------- | ----------- | -------- |
@@ -498,7 +498,7 @@ background-size: 3rem;
 background-clip: border-box;
 ```
 
----table|label:Sprite---
+---variables|label:Sprite---
 
 | Variable  | Type    | Default         | Description       | Required |
 | --------- | ------- | --------------- | ----------------- | -------- |
@@ -518,7 +518,7 @@ background-clip: border-box;
 background: #00f url('../img/sprite.png') 0 0 no-repeat;
 ```
 
----table---
+---variables---
 
 | Variable  | Type    | Default         | Description       | Required |
 | --------- | ------- | --------------- | ----------------- | -------- |
@@ -551,7 +551,7 @@ div {
 }
 ```
 
----table---
+---variables---
 
 | Variable  | Type    | Default         | Description       | Required |
 | --------- | ------- | --------------- | ----------------- | -------- |
@@ -572,7 +572,7 @@ background-position: 0 0;
 background-repeat: no-repeat;
 ```
 
----table---
+---variables---
 
 | Variable  | Type    | Default             | Description       | Required |
 | --------- | ------- | ------------------- | ----------------- | -------- |

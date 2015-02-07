@@ -2,7 +2,7 @@
 name: Box Shadows
 ---
 
----table---
+---variables---
 
 | Variable | Type            | Default                                        | Description      | Required |
 | -------- | --------------- | ---------------------------------------------- | ---------------- | -------- |
@@ -18,7 +18,7 @@ name: Box Shadows
 box-shadow: 3px 2px 1px 0 #000;
 ```
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description       | Required |
 | -------- | ------- | ------- | ----------------- | :------: |
@@ -59,7 +59,7 @@ box-shadow: 4px 3px 2px 2px rgba(0, 0, 0, 0.6);
 box-shadow: inset 1px 1px 0 0 #00f;
 ```
 
----table---
+---variables---
 
 | Variable    | Type       | Default         | Description          | Required |
 | ----------- | ---------- | --------------- | -------------------- | -------- |
@@ -90,7 +90,7 @@ box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.4);
 box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.5);
 ```
 
----table---
+---variables---
 
 | Variable    | Type       | Default         | Description          | Required |
 | ----------- | ---------- | --------------- | -------------------- | -------- |

@@ -3,7 +3,7 @@ name: $first
 heading: Get first match to specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default  | Description       | Required |
 | -------- | ----------------- | -------- | ----------------- | -------- |

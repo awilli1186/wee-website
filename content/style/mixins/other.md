@@ -2,7 +2,7 @@
 name: Other
 ---
 
----table|label:Resize---
+---variables|label:Resize---
 
 | Variable | Type    | Default | Description  | Required |
 | -------- | ------- | ------- | ------------ | -------- |
@@ -18,7 +18,7 @@ name: Other
 resize: horizontal;
 ```
 
----table|label:Resizable---
+---variables|label:Resizable---
 
 | Variable | Type    | Default | Description  | Required |
 | -------- | ------- | ------- | ------------ | -------- |
@@ -59,7 +59,7 @@ text-indent: 100%;
 white-space: nowrap;
 ```
 
----table|label:Selection---
+---variables|label:Selection---
 
 | Variable    | Type                   | Default              | Description          | Required |
 | ----------- | ---------------------- | -------------------- | -------------------- | -------- |
@@ -85,7 +85,7 @@ white-space: nowrap;
 }
 ```
 
----table|label:Cursor---
+---variables|label:Cursor---
 
 | Variable | Type    | Default | Description  | Required |
 | -------- | ------- | ------- | ------------ | -------- |
@@ -101,7 +101,7 @@ white-space: nowrap;
 cursor: pointer;
 ```
 
----table|label:Overflow---
+---variables|label:Overflow---
 
 | Variable | Type    | Default | Description    | Required |
 | -------- | ------- | ------- | -------------- | -------- |
@@ -128,7 +128,7 @@ overflow: hidden;
 overflow-x: scroll;
 ```
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description      | Required |
 | -------- | ------- | ------- | ---------------- | -------- |
@@ -146,7 +146,7 @@ overflow-x: hidden;
 overflow-y: scroll;
 ```
 
----table|label:Crop &amp; Scroll---
+---variables|label:Crop &amp; Scroll---
 
 | Variable             | Type    | Default | Description                   | Required |
 | -------------------- | ------- | ------- | ----------------------------- | -------- |
@@ -193,7 +193,7 @@ overflow: scroll;
 overflow-x: scroll;
 ```
 
----table|label:Fill---
+---variables|label:Fill---
 
 | Variable                   | Type           | Default | Description                          | Required |
 | -------------------------- | -------------- | ------- | ------------------------------------ | -------- |

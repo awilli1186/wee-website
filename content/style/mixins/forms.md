@@ -2,7 +2,7 @@
 name: Forms
 ---
 
----table|label:Input Placeholder---
+---variables|label:Input Placeholder---
 
 | Variable | Type  | Default                | Description       | Required |
 | -------- | ----- | ---------------------- | ----------------- | -------- |

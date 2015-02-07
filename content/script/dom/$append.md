@@ -3,7 +3,7 @@ name: $append
 heading: Append specified child element to parent element
 ---
 
----table---
+---variables---
 
 | Variable | Type                        | Default | Description                                                            | Required |
 | -------- | --------------------------- | ------- | ---------------------------------------------------------------------- | -------- |

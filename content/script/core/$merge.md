@@ -3,7 +3,7 @@ name: $merge
 heading: Merge specified array with specified source array
 ---
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description       | Required |
 | -------- | ------- | ------- | ----------------- | -------- |

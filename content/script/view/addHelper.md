@@ -4,7 +4,7 @@ name: addHelper
 
 This allows the creation of custom helpers. Properties of the tag that the helper is being called on can be accessed via the current scope this. These include val, data, root, tag, index, helpers, and fallback.
 
----table---
+---variables---
 
 | Variable | Type     | Default | Description  | Required |
 | -------- | -------- | ------- | ------------ | -------- |
@@ -19,7 +19,7 @@ Wee.view.addHelper('uppercase', function() {
 });
 ```
 
----code---
+---code|modifier:split---
 
 ```javascript
 var data = {

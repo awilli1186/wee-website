@@ -14,7 +14,7 @@ li {
 }
 ```
 
----table---
+---variables---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -36,7 +36,7 @@ li:first-child {
 }
 ```
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description  | Required |
 | -------- | ------ | ------- | ------------ | -------- |
@@ -75,7 +75,7 @@ li {
 }
 ```
 
----table|label:List Style---
+---variables|label:List Style---
 
 | Variable | Type       | Default | Description      | Required |
 | -------- | ---------- | ------- | ---------------- | -------- |
@@ -91,7 +91,7 @@ li {
 list-style: circle inside;
 ```
 
----table|label:List Position---
+---variables|label:List Position---
 
 | Variable | Type    | Default | Description         | Required |
 | -------- | ------- | ------- | ------------------- | -------- |

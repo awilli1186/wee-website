@@ -2,7 +2,7 @@
 name: Margin
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description  | Required |
 | -------- | ---- | ------- | ------------ | -------- |
@@ -18,7 +18,7 @@ name: Margin
 margin: 5rem;
 ```
 
----table---
+---variables---
 
 | Variable                 | Type    | Default | Description  | Required |
 | ------------------------ | ------- | ------- | ------------ | -------- |
@@ -35,7 +35,7 @@ margin: 5rem;
 margin-left: 2rem;
 ```
 
----table---
+---variables---
 
 | Variable             | Type    | Default | Description                   | Required |
 | -------------------- | ------- | ------- | ----------------------------- | -------- |
@@ -54,7 +54,7 @@ margin-top: 2rem;
 margin-bottom: 2rem;
 ```
 
----table---
+---variables---
 
 | Variable             | Type    | Default | Description                   | Required |
 | -------------------- | ------- | ------- | ----------------------------- | -------- |
@@ -73,7 +73,7 @@ margin-left: 2rem;
 margin-right: 3rem;
 ```
 
----table---
+---variables---
 
 | Variable | Type | Default | Description        | Required |
 | -------- | ---- | ------- | ------------------ | -------- |
@@ -93,7 +93,7 @@ margin-bottom: 2rem;
 margin-left: 3rem;
 ```
 
----table---
+---variables---
 
 | Variable | Type | Default | Description   | Required |
 | -------- | ---- | ------- | ------------- | -------- |

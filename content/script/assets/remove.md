@@ -3,7 +3,7 @@ name: Remove
 heading: Remove one or more files from the DOM
 ---
 
----table---
+---variables---
 
 | Variable | Type          | Default | Description                             | Required |
 | -------- | ------------- | ------- | --------------------------------------- | -------- |
@@ -12,5 +12,5 @@ heading: Remove one or more files from the DOM
 ---doc---
 
 ```javascript
-Wee.assets.remove('/assets/js/file.js');
+Wee.assets.remove('/assets/css/style.min.css');
 ```

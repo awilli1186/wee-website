@@ -3,7 +3,7 @@ name: $set
 heading: Set public variable
 ---
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description                        | Required |
 | -------- | ------ | ------- | ---------------------------------- | -------- |

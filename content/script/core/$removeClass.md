@@ -3,7 +3,7 @@ name: $removeClass
 heading: Removes specified class from specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                                                                            | Required |
 | -------- | ----------------- | ------- | -------------------------------------------------------------------------------------- | -------- |

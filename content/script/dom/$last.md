@@ -3,7 +3,7 @@ name: $last
 heading: Get last match of specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description      | Required |
 | -------- | ----------------- | ------- | ---------------- | -------- |

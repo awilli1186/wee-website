@@ -3,7 +3,7 @@ name: Off
 heading: Remove specified function to specified element and optional event|function
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                 | Required |
 | -------- | ----------------- | ------- | --------------------------- | -------- |
@@ -12,7 +12,7 @@ heading: Remove specified function to specified element and optional event|funct
 | fn       | callback          | --      | Specific callback to remove |          |
 | opt      | object            | --      | Option parameters below     |          |
 
----table---
+---variables|label:Options Object---
 
 | Variable | Type              | Default | Description                                | Required |
 | -------- | ----------------- | ------- | ------------------------------------------ | -------- |
@@ -25,11 +25,11 @@ heading: Remove specified function to specified element and optional event|funct
 ---doc|label:Remove All---
 
 ```javascript
-Wee.events.off('#logo');
+Wee.events.off('.element');
 ```
 
 ---doc|label:Remove Single---
 
 ```javascript
-Wee.events.off('#logo', 'click');
+Wee.events.off('.element', 'click');
 ```

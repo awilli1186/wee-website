@@ -3,7 +3,7 @@ name: $toArray
 heading: Cast object to array if it isn't one
 ---
 
----table---
+---variables---
 
 | Variable | Type          | Default | Description               | Required |
 | -------- | ------------- | ------- | ------------------------- | -------- |

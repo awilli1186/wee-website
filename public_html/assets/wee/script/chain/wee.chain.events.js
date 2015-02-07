@@ -10,6 +10,7 @@
 			E.off(this, evts, opt);
 			return this;
 		},
+		// DEPRECATED
 		one: function(a, b, c) {
 			E.one(this, a, b, c);
 			return this;

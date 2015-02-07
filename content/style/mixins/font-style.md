@@ -2,7 +2,7 @@
 name: Font Style
 ---
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |

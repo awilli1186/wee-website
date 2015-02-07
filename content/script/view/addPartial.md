@@ -4,7 +4,7 @@ name: addPartial
 
 Partials are code snippets that can be reused throughout your project.
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description       | Required |
 | -------- | ------ | ------- | ----------------- | -------- |
@@ -17,7 +17,7 @@ Partials are code snippets that can be reused throughout your project.
 Wee.view.addPartial('copyright', '<small>&copy; {{\year}}</small>');
 ```
 
----code---
+---code|modifier:split---
 
 ```javascript
 var template = '{{\> copyright}}',

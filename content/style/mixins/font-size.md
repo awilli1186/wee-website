@@ -2,7 +2,7 @@
 name: Font Size
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default       | Description | Required |
 | -------- | ---- | ------------- | ----------- | -------- |
@@ -18,7 +18,7 @@ name: Font Size
 font-size: 2rem;
 ```
 
----table---
+---variables---
 
 | Variable    | Type | Default | Description       | Required |
 | ----------- | ---- | ------- | ----------------- | :------: |

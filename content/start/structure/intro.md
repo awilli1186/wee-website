@@ -1,7 +1,6 @@
 ---
 name: Structure
 heading: Simple organization that's easy to navigate and extend
-intro: true
 path: /
 ---
 

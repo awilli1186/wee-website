@@ -3,7 +3,7 @@ name: $next
 heading: Get the next sibling of a specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type               | Default | Description                 | Required |
 | -------- | ------------------ | ------- | --------------------------- | -------- |

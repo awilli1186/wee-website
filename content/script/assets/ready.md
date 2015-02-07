@@ -3,7 +3,7 @@ name: Ready
 heading: When specified references are ready execute callback
 ---
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description                                         | Required |
 | -------- | ------- | ------- | --------------------------------------------------- | -------- |

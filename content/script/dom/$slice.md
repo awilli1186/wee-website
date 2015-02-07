@@ -3,7 +3,7 @@ name: $slice
 heading: Get subset of matches from index range
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                                  | Required |
 | -------- | ----------------- | ------- | -------------------------------------------- | -------- |

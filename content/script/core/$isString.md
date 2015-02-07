@@ -3,7 +3,7 @@ name: $isString
 heading: Determine if specified argument is a string
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description       | Required |
 | -------- | ---- | ------- | ----------------- | -------- |

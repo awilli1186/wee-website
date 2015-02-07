@@ -3,7 +3,7 @@ name: fn.extend
 heading: Extend existing controller with additional methods and properties
 ---
 
----table---
+---variables---
 
 | Variable | Type           | Default | Description                                                                                                | Required |
 | -------- | -------------- | ------- | ---------------------------------------------------------------------------------------------------------- | -------- |

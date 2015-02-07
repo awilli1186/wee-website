@@ -3,7 +3,7 @@ name: $get
 heading: Get public variable with optional default
 ---
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description                                                      | Required |
 | -------- | ------- | ------- | ---------------------------------------------------------------- | -------- |

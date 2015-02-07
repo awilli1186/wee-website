@@ -3,7 +3,7 @@ name: $inArray
 heading: Determine if specified element belongs to specified array
 ---
 
----table---
+---variables---
 
 | Variable | Type  | Default | Description                  | Required |
 | -------- | ----- | ------- | ---------------------------- | -------- |

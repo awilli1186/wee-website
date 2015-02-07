@@ -3,7 +3,7 @@ name: $toggle
 heading: Toggle the display of a specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description       | Required |
 | -------- | ----------------- | ------- | ----------------- | -------- |

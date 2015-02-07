@@ -1,7 +1,6 @@
 ---
 name: View
 heading: Powerful template rendering engine for content parsing
-intro: true
 global:
   seoTitle: View
   seoDesc:

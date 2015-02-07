@@ -3,7 +3,7 @@ name: $serialize
 heading: Serialize specified object
 ---
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description                        | Required |
 | -------- | ------ | ------- | ---------------------------------- | -------- |

@@ -2,7 +2,7 @@
 name: Sizing
 ---
 
----table|label:Width &amp; Height---
+---variables|label:Width &amp; Height---
 
 | Variable              | Type | Default | Description     | Required |
 | --------------------- | ---- | ------- | --------------- | -------- |
@@ -23,7 +23,7 @@ height: 3rem;
 max-height: 40%;
 ```
 
----table---
+---variables---
 
 | Variable | Type | Default | Description        | Required |
 | -------- | ---- | ------- | ------------------ | -------- |
@@ -53,7 +53,7 @@ max-height: 5rem;
 min-height: 3rem;
 ```
 
----table|label:Size---
+---variables|label:Size---
 
 | Variable   | Type | Default | Description | Required |
 | ---------- | ---- | ------- | ----------- | -------- |
@@ -85,7 +85,7 @@ max-height: 5rem;
 max-width: 4rem;
 ```
 
----table|label:Square---
+---variables|label:Square---
 
 | Variable | Type | Default | Description    | Required |
 | -------- | ---- | ------- | -------------- | -------- |
@@ -102,7 +102,7 @@ height: 50px;
 width: 50px;
 ```
 
----table|label:Ratio---
+---variables|label:Ratio---
 
 | Variable | Type    | Default  | Description | Required |
 | -------- | ------- | -------- | ----------- | -------- |
@@ -142,7 +142,7 @@ div:before {
 }
 ```
 
----table|label:Circle---
+---variables|label:Circle---
 
 | Variable  | Type    | Default | Description | Required |
 | --------- | ------- | ------- | ----------- | -------- |

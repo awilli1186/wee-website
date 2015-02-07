@@ -3,7 +3,7 @@ name: $parseHTML
 heading: Convert specified HTML string to a DOM object and optionally converts it to a Wee DOM object
 ---
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description               | Required |
 | -------- | ------- | ------- | ------------------------- | -------- |

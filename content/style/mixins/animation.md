@@ -2,7 +2,7 @@
 name: Animation
 ---
 
----table---
+---variables---
 
 | Variable   | Type    | Default | Description     | Required |
 | ---------- | ------- | ------- | --------------- | -------- |

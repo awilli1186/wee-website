@@ -1,7 +1,6 @@
 ---
 name: Polyfills
 heading: Patching legacy browsers for a consistent JavaScript API
-intro: true
 data:
   seoTitle: JavaScript Polyfills
   deoDesc: Wee patches legacy browsers for a consistent JavaScript API by using a collection of polyfills to support HTML5, ES5, placeholders, SVGs, and more.

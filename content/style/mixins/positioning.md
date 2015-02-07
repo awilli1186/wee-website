@@ -2,7 +2,7 @@
 name: Positioning
 ---
 
----table|label:Top, Right, Bottom &amp; Left---
+---variables|label:Top, Right, Bottom &amp; Left---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -28,7 +28,7 @@ top: 4rem;
 right: 2rem;
 ```
 
----table|label:Position---
+---variables|label:Position---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |
@@ -52,7 +52,7 @@ bottom: 2%;
 left: 1rem;
 ```
 
----table|label:Absolute &amp; Fixed---
+---variables|label:Absolute &amp; Fixed---
 
 | Variable | Type | Default | Description     | Required |
 | -------- | ---- | ------- | --------------- | -------- |
@@ -114,7 +114,7 @@ position: relative;
 position: static;
 ```
 
----table|label:Z-Index---
+---variables|label:Z-Index---
 
 | Variable | Type    | Default | Description | Required |
 | -------- | ------- | ------- | ----------- | -------- |

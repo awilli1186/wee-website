@@ -32,7 +32,7 @@
 		"grunt-contrib-uglify": "~0.7.0",
 		"grunt-contrib-watch": "~0.6.1",
 		"grunt-newer": "~1.1.0",
-		"browser-sync": "~2.0.0-rc6",
+		"browser-sync": "~2.0.0-rc8",
 		"html-minifier": "~0.6.9",
 		"js-yaml": "~3.2.5",
 		"jscs": "~1.10.0",

@@ -3,18 +3,18 @@ name: Run
 heading: Process stored route options with optional config
 ---
 
----table---
+---variables---
 
-| Variable | Type   | Default | Description             | Required |
-| -------- | ------ | ------- | ----------------------- | -------- |
-| opt      | object | --      | Object parameters below |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| opt| object | -- | Object parameters below ||
 
----table---
+---variables|label:Options Object---
 
-| Variable | Type   | Default | Description                                | Required |
-| -------- | ------ | ------- | ------------------------------------------ | -------- |
-| routes   | object | --      | Object of {key: value} route mapping pairs |          |
-| path     | string | --      | Relative path from root domain             |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| routes | object | -- | Mapping object ||
+| path | string | -- | Relative path from root domain ||
 
 ---doc---
 
@@ -26,7 +26,7 @@ Wee.routes.run();
 
 ---doc|label:Advanced---
 
-If the object is provided in the first argument, run() will evaluate only the routes given at the provided path.
+If an object is provided, only the passed routes will be evaluated.
 
 ```javascript
 Wee.routes.run({

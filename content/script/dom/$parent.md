@@ -3,7 +3,7 @@ name: $parent
 heading: Get parent of specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description   | Required |
 | -------- | ----------------- | ------- | ------------- | -------- |

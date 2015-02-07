@@ -3,7 +3,7 @@ name: $map
 heading: Translate items in an array|selection to new array
 ---
 
----table---
+---variables---
 
 | Variable | Type            | Default | Description            | Required |
 | -------- | --------------- | ------- | ---------------------- | -------- |
@@ -11,7 +11,7 @@ heading: Translate items in an array|selection to new array
 | fn       | callback        | --      | Callback function      | &#10003; |
 | opt      | object          | --      | Callback options below |          |
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description                                           | Required |
 | -------- | ------ | ------- | ----------------------------------------------------- | -------- |

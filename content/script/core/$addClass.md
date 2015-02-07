@@ -3,7 +3,7 @@ name: $addClass
 heading: Add specified class name to specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                                                                         | Required |
 | -------- | ----------------- | ------- | ----------------------------------------------------------------------------------- | -------- |

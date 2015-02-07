@@ -3,7 +3,7 @@ name: $clone
 heading: Clone specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description      | Required |
 | -------- | ----------------- | ------- | ---------------- | -------- |

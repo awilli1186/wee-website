@@ -12,18 +12,28 @@
 	&__anchor {
 		.inline();
 	}
-	th,
-	td {
-		white-space: normal;
-	}
-}
-.code {
-	pre {
-		&:first-child {
-			.column-modify(spaced; 5; 9; 3%);
+	&__variables {
+		th,
+		td {
+			white-space: normal;
 		}
-		&:last-child {
-			.column-modify(spaced; 4; 9; 3%);
+	}
+	&__code {
+		&--split {
+			pre {
+				&:first-child {
+					.column-modify(spaced; 5; 9; 3%);
+				}
+				&:last-child {
+					.column-modify(spaced; 4; 9; 3%);
+					.margin(top; 2.6);
+				}
+			}
+		}
+	}
+	&__methods {
+		ul {
+			-webkit-column-count: 3;
 		}
 	}
 }
@@ -60,6 +70,7 @@
 		.font-size(1.5);
 	}
 }
+
 
 
 

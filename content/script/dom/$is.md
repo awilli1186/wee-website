@@ -3,7 +3,7 @@ name: $is
 heading: Determines if a particular element matches a specified criteria
 ---
 
----table---
+---variables---
 
 | Variable | Type               | Default | Description                 | Required |
 | -------- | ------------------ | ------- | --------------------------- | -------- |

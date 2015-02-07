@@ -3,33 +3,37 @@ name: Map
 heading: Retrieve or add route endpoints to route storage
 ---
 
----table---
+---variables---
 
-| Variable | Type    | Default | Description                                | Required |
-| -------- | ------- | ------- | ------------------------------------------ | -------- |
-| routes   | object  | --      | Object of {key: value} route mapping pairs |          |
-| init     | boolean | --      | Immediately evaluate routes                |          |
+| Variable | Type| Default | Description| Required |
+| -- | -- | -- | -- | -- |
+| routes | object| -- | Mapping object ||
+| init | boolean | -- | Immediately evaluate routes ||
 
 ---doc|label:Set---
 
-Arguments can be nested as deep as necessary. Pass true as the second argument to immediately evaluate the specified routes from the first argument. If using the 'wee:fn' format you can exclude ':init' as it is assumed if no function is provided.
+Arguments can be nested as deep as necessary. Pass true as the second argument to immediately evaluate the specified routes from the first argument.
 
 ```javascript
 Wee.routes.map({
 	'$any': 'common:init',
 	'script': {
-		'routing': function() {
+		'routes': function() {
 			// Current page
 		}
 	}
 });
 ```
 
+---note---
+
+If using the <code>wee:fn</code> format to call an init method you can exclude <code>:init</code> as it is assumed if no function is provided.
+
 ---doc|label:Get---
 
 Retrieve all the routes currently in storage.
 
----code---
+---code|modifier:split---
 
 ```javascript
 Wee.routes.map();
@@ -39,7 +43,7 @@ Wee.routes.map();
 {
 	'$any': 'common:init',
 	'script': {
-		'routing': function(){}
+		'routes': function(){}
 	}
 }
 ```

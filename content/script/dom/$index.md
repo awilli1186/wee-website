@@ -3,7 +3,7 @@ name: $index
 heading: Get the sibling index of a specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description     | Required |
 | -------- | ----------------- | ------- | --------------- | -------- |

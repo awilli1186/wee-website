@@ -3,7 +3,7 @@ name: $children
 heading: Get children of specified element with optional filter
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description     | Required |
 | -------- | ----------------- | ------- | --------------- | -------- |

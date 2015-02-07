@@ -3,7 +3,7 @@ name: $prop
 heading: Get property of specified element or set property with specified value
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                                                                 | Required |
 | -------- | ----------------- | ------- | --------------------------------------------------------------------------- | -------- |

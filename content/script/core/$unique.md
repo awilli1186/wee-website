@@ -3,7 +3,7 @@ name: $unique
 heading: Create new array with only unique values from specified array
 ---
 
----table---
+---variables---
 
 | Variable | Type  | Default | Description     | Required |
 | -------- | ----- | ------- | --------------- | -------- |

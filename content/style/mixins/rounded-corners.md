@@ -2,7 +2,7 @@
 name: Rounded Corners
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description    | Required |
 | -------- | ---- | ------- | -------------- | -------- |
@@ -19,7 +19,7 @@ background-clip: border-box;
 border-radius: 3rem;
 ```
 
----table---
+---variables---
 
 | Variable                 | Type    | Default | Description  | Required |
 | ------------------------ | ------- | ------- | ------------ | -------- |
@@ -51,7 +51,7 @@ border-bottom-right-radius: 5rem;
 
 ```
 
----table---
+---variables---
 
 | Variable    | Type    | Default | Description           | Required |
 | ----------- | ------- | ------- | --------------------- | -------- |
@@ -81,7 +81,7 @@ background-clip: border-box;
 border-top-right-radius: 4rem;
 ```
 
----table---
+---variables---
 
 | Variable | Type | Default | Description   | Required |
 | -------- | ---- | ------- | ------------- | -------- |

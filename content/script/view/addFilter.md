@@ -4,7 +4,7 @@ name: addFilter
 
 This allows the creation of custom filters. Wee's default filters include is, not, isEmpty, and notEmpty. Properties of the tag that is being filtered can be accessed via the current scope this. These include val, data, root, tag, inner, and empty.
 
----table---
+---variables---
 
 | Variable | Type     | Default | Description  | Required |
 | -------- | -------- | ------- | ------------ | -------- |
@@ -19,7 +19,7 @@ Wee.view.addFilter('isNumber', function() {
 });
 ```
 
----code---
+---code|modifier:split---
 
 ```javascript
 var data = {

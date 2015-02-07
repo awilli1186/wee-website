@@ -1,7 +1,6 @@
 ---
 name: Style
 heading: Normalization to your brand with mixin library
-intro: true
 global:
   seoTitle: Web Build Automation
   seoDesc: 

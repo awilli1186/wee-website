@@ -7,7 +7,7 @@ heading: Create namespaced controller with specified name, public object, and op
 
 Controllers serve as the wrapper for all custom script. They can be created per page, section, or for specific reusable components. If placed in your build directory you easily create a well-organized, extensible structure.
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description                             | Required |
 | -------- | ------ | ------- | --------------------------------------- | -------- |

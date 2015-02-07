@@ -2,7 +2,7 @@
 name: Filters
 ---
 
----table|label:Filter---
+---variables|label:Filter---
 
 | Variable | Type            | Default | Description  | Required |
 | -------- | --------------- | ------- | ------------ | -------- |
@@ -19,7 +19,7 @@ name: Filters
 filter: grayscale(50%);
 ```
 
----table|label:Blur---
+---variables|label:Blur---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -36,7 +36,7 @@ filter: grayscale(50%);
 filter: blur(4px);
 ```
 
----table|label:Brightness---
+---variables|label:Brightness---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -53,7 +53,7 @@ filter: blur(4px);
 filter: brightness(0.8);
 ```
 
----table|label:Contrast---
+---variables|label:Contrast---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -70,7 +70,7 @@ filter: brightness(0.8);
 filter: contrast(1.2);
 ```
 
----table|label:Grayscale---
+---variables|label:Grayscale---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -87,7 +87,7 @@ filter: contrast(1.2);
 filter: grayscale(1);
 ```
 
----table|label:Hue Rotate---
+---variables|label:Hue Rotate---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -104,7 +104,7 @@ filter: grayscale(1);
 filter: hue-rotate(60deg);
 ```
 
----table|label:Invert---
+---variables|label:Invert---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -121,7 +121,7 @@ filter: hue-rotate(60deg);
 filter: invert(20%);
 ```
 
----table|label:Saturate---
+---variables|label:Saturate---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -138,7 +138,7 @@ filter: invert(20%);
 filter: saturate(200%);
 ```
 
----table|label:Sepia---
+---variables|label:Sepia---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -155,7 +155,7 @@ filter: saturate(200%);
 filter: sepia(100%);
 ```
 
----table|label:Drop Shadow---
+---variables|label:Drop Shadow---
 
 | Variable | Type            | Default                                      | Description       | Required |
 | -------- | --------------- | -------------------------------------------- | ----------------- | -------- |
@@ -171,7 +171,7 @@ filter: sepia(100%);
 filter: drop-shadow('2px 2px 1px rgba(120, 80, 40, 0.5)');
 ```
 
----table---
+---variables---
 
 | Variable | Type  | Default | Description | Required |
 | -------- | ----- | ------- | ----------- | -------- |

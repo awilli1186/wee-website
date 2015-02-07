@@ -1,7 +1,6 @@
 ---
 name: DOM
 heading: Easily interface with the DOM for updates and retrieval
-intro: true
 path: /public/assets/wee/script/wee.dom.js
 global:
   seoTitle: DOM Interaction

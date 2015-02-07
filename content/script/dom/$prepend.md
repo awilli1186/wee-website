@@ -3,7 +3,7 @@ name: $prepend
 heading: Prepend specified child element to specified parent element
 ---
 
----table---
+---variables---
 
 | Variable | Type                        | Default | Description                                                            | Required |
 | -------- | --------------------------- | ------- | ---------------------------------------------------------------------- | -------- |

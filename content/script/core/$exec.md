@@ -3,14 +3,14 @@ name: $exec
 heading: Execute specified function or controller method
 ---
 
----table---
+---variables---
 
 | Variable | Type            | Default | Description            | Required |
 | -------- | --------------- | ------- | ---------------------- | -------- |
 | fn       | callback, array | --      | Function to execute    | &#10003; |
 | opt      | object          | --      | Callback options below | &#10003; |
 
----table---
+---variables---
 
 | Variable | Type   | Default | Description                 | Required |
 | -------- | ------ | ------- | --------------------------- | -------- |

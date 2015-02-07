@@ -3,7 +3,7 @@ name: $hide
 heading: Hide specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description     | Required |
 | -------- | ----------------- | ------- | --------------- | -------- |

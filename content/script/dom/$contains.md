@@ -3,7 +3,7 @@ name: $contains
 heading: Determine if specified parent element contains specified child element
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |

@@ -3,7 +3,7 @@ name: $push
 heading: Push specified value into public array
 ---
 
----table---
+---variables---
 
 | Variable | Type        | Default | Description                      | Required |
 | -------- | ----------- | ------- | -------------------------------- | -------- |

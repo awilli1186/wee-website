@@ -2,7 +2,7 @@
 name: Font Weight
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default         | Description | Required |
 | -------- | ---- | --------------- | ----------- | -------- |

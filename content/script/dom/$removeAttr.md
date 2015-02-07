@@ -3,7 +3,7 @@ name: $removeAttr
 heading: Remove specified attribute of specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description         | Required |
 | -------- | ----------------- | ------- | ------------------- | -------- |

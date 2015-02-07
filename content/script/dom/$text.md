@@ -3,7 +3,7 @@ name: $text
 heading: Get text value of specified element or set text with specified value
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                                                   | Required |
 | -------- | ----------------- | ------- | ------------------------------------------------------------- | -------- |

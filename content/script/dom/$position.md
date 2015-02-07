@@ -3,7 +3,7 @@ name: $position
 heading: Get the position of a specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description         | Required |
 | -------- | ----------------- | ------- | ------------------- | -------- |

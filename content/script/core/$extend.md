@@ -3,7 +3,7 @@ name: $extend
 heading: Extend specified object with specified source object
 ---
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description   | Required |
 | -------- | ------- | ------- | ------------- | -------- |

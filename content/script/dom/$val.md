@@ -3,7 +3,7 @@ name: $val
 heading: Get value of specified element or set specified value
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description                                                            | Required |
 | -------- | ----------------- | ------- | ---------------------------------------------------------------------- | -------- |

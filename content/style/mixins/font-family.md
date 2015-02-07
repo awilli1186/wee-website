@@ -2,7 +2,7 @@
 name: Font Family
 ---
 
----table---
+---variables---
 
 | Variable | Type            | Default   | Description       | Required |
 | -------- | --------------- | --------- | ----------------- | -------- |

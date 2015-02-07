@@ -3,7 +3,7 @@ name: $empty
 heading: Remove child nodes from specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description      | Required |
 | -------- | ----------------- | ------- | ---------------- | -------- |

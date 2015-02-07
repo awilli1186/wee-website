@@ -6,4 +6,4 @@ deprecated: true
 
 ---notice---
 
-Replaced with Wee.view.render().
+<b>Deprecated:</b> [Wee.view.render()](/script/view#render) should be used instead.

@@ -22,7 +22,7 @@ visibility: hidden;
 visibility: visible;
 ```
 
----table|label:Block---
+---variables|label:Block---
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
@@ -41,7 +41,7 @@ width: 4rem;
 height: 3rem;
 ```
 
----table|label:Spaced---
+---variables|label:Spaced---
 
 | Variable | Type | Default            | Description   | Required |
 | -------- | ---- | ------------------ | ------------- | -------- |
@@ -57,7 +57,7 @@ height: 3rem;
 margin-bottom: 0.5rem;
 ```
 
----table|label:Spaced Block---
+---variables|label:Spaced Block---
 
 | Variable | Type | Default            | Description   | Required |
 | -------- | ---- | ------------------ | ------------- | -------- |
@@ -78,7 +78,7 @@ width: 2rem;
 height: 4rem;
 ```
 
----table|label:Box-Sizing---
+---variables|label:Box-Sizing---
 
 | Variable | Type    | Default    | Description      | Required |
 | -------- | ------- | ---------- | ---------------- | -------- |

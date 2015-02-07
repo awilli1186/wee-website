@@ -2,7 +2,7 @@
 name: Line Height
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default         | Description | Required |
 | -------- | ---- | --------------- | ----------- | -------- |

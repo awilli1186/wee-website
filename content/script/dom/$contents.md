@@ -3,7 +3,7 @@ name: $contents
 heading: Get content of specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description    | Required |
 | -------- | ----------------- | ------- | -------------- | -------- |

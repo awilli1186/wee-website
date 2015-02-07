@@ -3,35 +3,27 @@ name: Request
 heading: Make Ajax request based on specified options
 ---
 
----table---
+---variables---
 
-| Variable | Type   | Default | Description           | Required |
-| -------- | ------ | ------- | --------------------- | -------- |
-| opt      | object | --      | Request options below | &#10003; |
+ | Variable | Type | Default | Description | Required |
+ | -- | -- | -- | -- | -- |
+ | opt | object | -- | Request options below | &#10003; |
 
----table---
+---variables|label:Options Object---
 
-| Variable | Type            | Default | Description                                                  | Required |
-| -------- | --------------- | ------- | ------------------------------------------------------------ | -------- |
-| url      | string          | --      | URL endpoint to request                                      | &#10003; |
-| method   | string          | get     | Request verb (get, post, put, etc)                           |          |
-| data     | object          | --      | Object to serialize and pass along with request              |          |
-| success  | callback        | --      | Callback if request succeeds                                 |          |
-| failure  | callback        | --      | Callback if request fails                                    |          |
-| json     | boolean         | false   | Evaluate the response as JSON                                |          |
-| jsonp    | boolean, string | --      | Boolean or override name for callback query string parameter |          |
-| args     | array           | --      | Callback arguments                                           |          |
-| scope    | object          | --      | Callback scope                                               |          |
-| template | string          | --      | Template string to parse response JSON into                  |          |
-| headers  | object          | --      | Object to set request headers (Options below)                |          |
-
----table---
-
-| Variable | Type    | Default | Description     | Required |
-| -------- | ------- | ------- | --------------- | -------- |
-| name     | string  | --      | Name of header  |          |
-| value    | string  | --      | Value of header |          |
-| merge    | boolean | --      | Clear header    |          |
+ | Variable | Type | Default | Description | Required |
+ | -- | -- | -- | -- | -- |
+ | url | string | -- | URL endpoint to request | &#10003; |
+ | method | string | get | Request verb (get, post, put, etc) ||
+ | data | object | -- | Object to serialize and pass along with request ||
+ | success | callback | -- | Callback if request succeeds ||
+ | failure | callback | -- | Callback if request fails ||
+ | json | boolean | false | Evaluate the response as JSON ||
+ | jsonp | boolean, string | false | Boolean or override name for callback querystring parameter ||
+ | args | array | -- | Callback arguments ||
+ | scope | object | -- | Callback scope ||
+ | template | string | -- | Template string to parse response JSON into ||
+ | headers | object | -- | {key: val} object of request headers ||
 
 ---doc|label:Get---
 
@@ -57,7 +49,7 @@ Retrieve JSON and immediately [parse it](#parse) into a template. No need to set
 }
 ```
 
----code---
+---code|modifier:split---
 
 ```javascript
 Wee.data.request({

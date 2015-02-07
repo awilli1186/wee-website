@@ -2,7 +2,7 @@
 name: Text Shadows
 ---
 
----table---
+---variables---
 
 | Variable | Type            | Default                                      | Description       | Required |
 | -------- | --------------- | -------------------------------------------- | ----------------- | -------- |
@@ -18,7 +18,7 @@ name: Text Shadows
 text-shadow: 2px 1px 0 #000;
 ```
 
----table---
+---variables---
 
 | Variable | Type    | Default | Description       | Required |
 | -------- | ------- | ------- | ----------------- | -------- |
@@ -48,7 +48,7 @@ text-shadow: 4px 3px 2px #00f;
 text-shadow: -1px -1px 0 #00f;
 ```
 
----table---
+---variables---
 
 | Variable         | Type    | Default         | Description          | Required |
 | ---------------- | ------- | --------------- | -------------------- | -------- |

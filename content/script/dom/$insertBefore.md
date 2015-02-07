@@ -3,7 +3,7 @@ name: $insertBefore
 heading: Insert specified element before specified element
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description    | Required |
 | -------- | ----------------- | ------- | -------------- | -------- |

@@ -3,7 +3,7 @@ name: $hasClass
 heading: Determine if specified element has specified class
 ---
 
----table---
+---variables---
 
 | Variable | Type              | Default | Description             | Required |
 | -------- | ----------------- | ------- | ----------------------- | -------- |

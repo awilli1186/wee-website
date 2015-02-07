@@ -2,7 +2,7 @@
 name: Colors
 ---
 
----table---
+---variables---
 
 | Variable | Type  | Default    | Description | Required |
 | -------- | ----- | ---------- | ----------- | -------- |

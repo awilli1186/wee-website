@@ -6,4 +6,4 @@ deprecated: true
 
 ---notice---
 
-[Wee.events.trigger()](#trigger) should be used instead using 'ref:id' selectors.
+<b>Deprecated:</b> [Wee.events.trigger()](#trigger) should be used instead using 'ref:id' selectors.

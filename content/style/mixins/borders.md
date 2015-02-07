@@ -2,7 +2,7 @@
 name: Borders
 ---
 
----table|label:Border---
+---variables|label:Border---
 
 | Variable | Type            | Default             | Description  | Required |
 | -------- | --------------- | ------------------- | ------------ | -------- |
@@ -18,7 +18,7 @@ name: Borders
 border: 2px dotted #00f;
 ```
 
----table---
+---variables---
 
 | Variable | Type    | Default    | Description  | Required |
 | -------- | ------- | ---------- | ------------ | -------- |
@@ -36,7 +36,7 @@ border: 2px dotted #00f;
 border: 4px dotted #f00;
 ```
 
----table---
+---variables---
 
 | Variable    | Type    | Default         | Description          | Required |
 | ----------- | ------- | --------------- | -------------------- | -------- |
@@ -57,7 +57,7 @@ border: 2px solid #000000;
 border: 2px solid rgba(0, 0, 0, 0.4);
 ```
 
----table---
+---variables---
 
 | Variable                 | Type    | Default    | Description | Required |
 | ------------------------ | ------- | ---------- | ----------- | -------- |
@@ -76,7 +76,7 @@ border: 2px solid rgba(0, 0, 0, 0.4);
 border-top: 1px solid #00f;
 ```
 
----table---
+---variables---
 
 | Variable                 | Type    | Default         | Description          | Required |
 | ------------------------ | ------- | --------------- | -------------------- | -------- |
@@ -98,7 +98,7 @@ border: 3px dotted #ffffff;
 border: 3px dotted rgba(255, 255, 255, 0.5);
 ```
 
----table---
+---variables---
 
 | Variable             | Type    | Default    | Description                   | Required |
 | -------------------- | ------- | ---------- | ----------------------------- | -------- |
@@ -119,7 +119,7 @@ border-left: 2px dotted #ff0000;
 border-right: 2px dotted #ff0000;
 ```
 
----table---
+---variables---
 
 | Variable             | Type    | Default         | Description                   | Required |
 | -------------------- | ------- | --------------- | ----------------------------- | -------- |
@@ -142,7 +142,7 @@ border-top: 1px solid rgba(0, 0, 0, 0.4);
 border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 ```
 
----table---
+---variables---
 
 | Variable | Type     | Default    | Description | Required |
 | -------- | -------- | ---------- | ----------- | -------- |
@@ -166,7 +166,7 @@ border-right: 3px dotted #00f;
 border-top: 1px dotted #00f;
 ```
 
----table|label:Border Image---
+---variables|label:Border Image---
 
 | Variable  | Type    | Default | Description              | Required |
 | --------- | --------| ------- | ------------------------ | -------- |
@@ -187,7 +187,7 @@ border-top: 1px dotted #00f;
 border-image: url('../img/border.png') 100% 1 0 stretch;
 ```
 
----table|label:Border Color, Style &amp; Width---
+---variables|label:Border Color, Style &amp; Width---
 
 | Variable               | Type                 | Default | Description            | Required |
 | ---------------------- | -------------------- | ------- | ---------------------- | -------- |
@@ -203,7 +203,7 @@ border-image: url('../img/border.png') 100% 1 0 stretch;
 border-color: #00f;
 ```
 
----table---
+---variables---
 
 | Variable                 | Type                 | Default | Description            | Required |
 | ------------------------ | -------------------- | ------- | ---------------------- | -------- |

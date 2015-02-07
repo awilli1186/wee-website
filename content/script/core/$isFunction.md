@@ -3,7 +3,7 @@ name: $isFunction
 heading: Determine if specified argument is a function
 ---
 
----table---
+---variables---
 
 | Variable | Type | Default | Description       | Required |
 | -------- | ---- | ------- | ----------------- | -------- |
