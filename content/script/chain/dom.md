@@ -2,60 +2,62 @@
 name: DOM
 ---
 
----methods---
+---methods|modifier:bordered---
 
-* [$(selector).after()](/script/dom#after)
-* [$(selector).append()](/script/dom#append)
-* [$(selector).before()](/script/dom#before)
-* [$(selector).children()](/script/dom#children)
+* [$(selector).addClass(val)](/script/dom#addclass)
+* [$(selector).after(pos)](/script/dom#after)
+* [$(selector).append(child)](/script/dom#append)
+* [$(selector).appendTo(parent)](/script/dom#appendto)
+* [$(selector).before(pos)](/script/dom#before)
+* [$(selector).children(filter)](/script/dom#children)
 * [$(selector).clone()](/script/dom#clone)
-* [$(selector).closest()](/script/dom#closest)
-* [$(selector).contains()](/script/dom#contains)
+* [$(selector).closest(filter)](/script/dom#closest)
+* [$(selector).contains(child)](/script/dom#contains)
 * [$(selector).contents()](/script/dom#contents)
+* [$(selector).css(a, b)](/script/dom#css)
 * [$(selector).empty()](/script/dom#empty)
-* [$(selector).filter()](/script/dom#filter)
-* [$(selector).find()](/script/dom#find)
-* [$(selector).height()](/script/dom#height)
+* [$(selector).filter(filter)](/script/dom#filter)
+* [$(selector).find(filter)](/script/dom#find)
+* [$(selector).hasClass(val)](/script/dom#hasclass)
+* [$(selector).height(val)](/script/dom#height)
 * [$(selector).hide()](/script/dom#hide)
 * [$(selector).index()](/script/dom#index)
-* [$(selector).insertAfter()](/script/dom#insertafter)
-* [$(selector).insertBefore()](/script/dom#insertbefore)
-* [$(selector).is()](/script/dom#is)
+* [$(selector).insertAfter(sel)](/script/dom#insertafter)
+* [$(selector).insertBefore(sel)](/script/dom#insertbefore)
+* [$(selector).is(filter)](/script/dom#is)
 * [$(selector).last()](/script/dom#last)
 * [$(selector).next()](/script/dom#next)
-* [$(selector).not()](/script/dom#not)
+* [$(selector).not(filter)](/script/dom#not)
 * [$(selector).offset()](/script/dom#offset)
 * [$(selector).parent()](/script/dom#parent)
-* [$(selector).parents()](/script/dom#parents)
-* [$(selector).parseHTML()](/script/dom#parsehtml)
+* [$(selector).parents(filter)](/script/dom#parents)
 * [$(selector).position()](/script/dom#position)
-* [$(selector).prepend()](/script/dom#prepend)
+* [$(selector).prepend(child)](/script/dom#prepend)
+* [$(selector).prependTo(parent)](/script/dom#prependto)
 * [$(selector).prev()](/script/dom#prev)
-* [$(selector).prop()](/script/dom#prop)
+* [$(selector).prop(key, val)](/script/dom#prop)
 * [$(selector).remove()](/script/dom#remove)
-* [$(selector).removeAttr()](/script/dom#removeattr)
-* [$(selector).replaceWith()](/script/dom#replacewith)
-* [$(selector).scrollTop()](/script/dom#scrolltop)
+* [$(selector).removeAttr(key)](/script/dom#removeattr)
+* [$(selector).removeClass(val)](/script/dom#removeclass)
+* [$(selector).replaceWith(sel)](/script/dom#replacewith)
+* [$(selector).scrollTop(val)](/script/dom#scrolltop)
+* [$(selector).serialize(val)](/script/dom#serialize)
 * [$(selector).show()](/script/dom#show)
-* [$(selector).siblings()](/script/dom#siblings)
-* [$(selector).slice()](/script/dom#slice)
-* [$(selector).text()](/script/dom#text)
+* [$(selector).siblings(filter)](/script/dom#siblings)
+* [$(selector).slice(start, end)](/script/dom#slice)
+* [$(selector).text(val)](/script/dom#text)
 * [$(selector).toggle()](/script/dom#toggle)
-* [$(selector).toggleClass()](/script/dom#toggleclass)
-* [$(selector).val()](/script/dom#val)
-* [$(selector).width()](/script/dom#width)
-* [$(selector).wrap()](/script/dom#wrap)
-* [$(selector).wrapInner()](/script/dom#wraptnner)
+* [$(selector).toggleClass(val, toggle)](/script/dom#toggleclass)
+* [$(selector).val(val)](/script/dom#val)
+* [$(selector).width(val)](/script/dom#width)
+* [$(selector).wrap(html)](/script/dom#wrap)
+* [$(selector).wrapInner(html)](/script/dom#wraptnner)
 
 ---doc---
 
-In this example, the selector takes the place of the method's first argument, and the second argument is passed in as the first.
-
-```javascript
-$('.another-element').insertAfter('.element');
-```
-
 DOM traversal is made easy with chaining.
+
+---code---
 
 ```html
 <ul>
@@ -68,7 +70,7 @@ DOM traversal is made easy with chaining.
 ---code|modifier:split---
 
 ```javascript
-$('li').first().next();
+$('li').eq(1).text();
 ```
 
 ```javascript

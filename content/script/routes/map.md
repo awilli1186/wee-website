@@ -8,7 +8,7 @@ heading: Retrieve or add route endpoints to route storage
 | Variable | Type| Default | Description| Required |
 | -- | -- | -- | -- | -- |
 | routes | object| -- | Mapping object ||
-| init | boolean | -- | Immediately evaluate routes ||
+| init | boolean | false | Immediately evaluate routes ||
 
 ---doc|label:Set---
 
@@ -33,7 +33,7 @@ If using the <code>wee:fn</code> format to call an init method you can exclude <
 
 Retrieve all the routes currently in storage.
 
----code|modifier:split---
+---code|modifier:split|type:object---
 
 ```javascript
 Wee.routes.map();
@@ -41,9 +41,9 @@ Wee.routes.map();
 
 ```javascript
 {
-	'$any': 'common:init',
-	'script': {
-		'routes': function(){}
+	"$any": "common:init",
+	"script": {
+		"routes": function(){}
 	}
 }
 ```
@@ -80,6 +80,8 @@ Wee.routes.map({
 });
 
 Wee.ready(function() {
-	Wee.routes.run('category/name/123');
+	Wee.routes.run({
+		path: 'category/name/123'
+	});
 });
 ```

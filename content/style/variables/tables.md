@@ -7,6 +7,9 @@ name: Tables
 @tableBordered: true; // apply outer border by default
 @tableStriped: true;  // apply striping by default
 
+@tableBorderedClassModifier: -bordered;
+@tableStripedClassModifier: -striped;
+
 // Table Cells
 
 @tableCellLineHeight: @paragraphLineHeight;

@@ -5,27 +5,39 @@ heading: Execute specified function for specified elements|selector
 
 ---variables---
 
-| Variable | Type              | Default | Description              | Required |
-| -------- | ----------------- | ------- | ------------------------ | -------- |
-| sel      | selector, element | --      | Array or selector        | &#10003; |
-| fn       | callback          | --      | Callback function        | &#10003; |
-| opt      | object            | --      | Callback arguments below |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
+| fn | callback | -- | Callback function | &#10003; |
+| opt | object | -- | Object properties below ||
 
----variables---
+---variables|label:Options Object---
 
-| Variable | Type    | Default | Description                                           | Required |
-| -------- | ------- | ------- | ----------------------------------------------------- | -------- |
-| args     | array   | --      | Callback arguments (appended after element and index) |          |
-| scope    | object  | --      | Callback scope                                        |          |
-| reverse  | boolean | --      | Reverse the order of execution                        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| args | array | -- | Callback arguments ||
+| scope | object | -- | Callback scope ||
+| reverse | boolean | false | Reverse the order of execution ||
 
----doc---
+---code|label:Simple---
 
 ```javascript
-Wee.$each('.element', function(el, i) {
+Wee.$each('.js-element', function(el, i) {
+	// Callback logic
+});
+```
+
+---code|label:Advanced---
+
+```javascript
+Wee.$each('.js-element', function(el, i) {
 	// Callback logic
 }, {
 	reverse: true,
 	scope: this
 });
 ```
+
+---note---
+
+**Note:** The element and index are always injected as the first two callback parameters.

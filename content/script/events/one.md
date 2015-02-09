@@ -6,4 +6,4 @@ deprecated: true
 
 ---notice---
 
-<b>Deprecated:</b> [Wee.events.on()](#on) should be used with the one property setting set to true.
+<b>Deprecated:</b> [Wee.events.on()](#on) should be used with the one option set to true.

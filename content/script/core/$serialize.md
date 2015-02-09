@@ -5,11 +5,11 @@ heading: Serialize specified object
 
 ---variables---
 
-| Variable | Type   | Default | Description                        | Required |
-| -------- | ------ | ------- | ---------------------------------- | -------- |
-| obj      | object | --      | Object to serialize (single level) | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| obj | object | -- | Object to serialize | &#10003; |
 
----code---
+---code|type:string|modifier:split---
 
 ```javascript
 Wee.$serialize({
@@ -23,15 +23,6 @@ Wee.$serialize({
 key1=value1&key2=value2&key3=value3
 ```
 
----code---
+---note---
 
-```javascript
-Wee.$serialize({
-	'key': 'value',
-	'key2': 'value2'
-});
-```
-
-```javascript
-key=value&key2=value2
-```
+**Note:** Only the first level of the object and those with string values are serialized.

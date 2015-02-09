@@ -9,7 +9,7 @@ SVG solves a [lot of problems](http://css-tricks.com/using-svg/) but is unsuppor
 
 By default the polyfill will replace the source of any linked SVG files with a PNG from the same path.
 
----code---
+---code|modifier:split---
 
 ```html
 <img src="/assets/img/wee.svg" alt="Wee">
@@ -25,7 +25,7 @@ By default the polyfill will replace the source of any linked SVG files with a P
 
 If you need to specify the fallback set the data-fallback attribute. This is useful if the fallback path is different than the originally linked SVG, it is in a different format than PNG, or you are using ```<svg>``` directly in your markup.
 
----code---
+---code|modifier:stacked---
 
 ```html
 <svg viewBox="0 0 501.3 165.7" role="img" aria-label="Wee" data-fallback="/assets/img/wee.png">

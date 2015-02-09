@@ -31,6 +31,8 @@ name: Buttons
 
 // Colored Buttons
 
+@coloredButtonClassModifier: -colored;
+
 @coloredButtonColor: @white; // font color
 
 @coloredButtonBackground: @linkColor;
@@ -40,6 +42,8 @@ name: Buttons
 @coloredButtonBorderColor: darken(@coloredButtonBackground, 5%);
 
 // Disabled Buttons
+
+@disabledButtonClassModifier: -disabled;
 
 @disabledButtonColor: @darkGray;
 

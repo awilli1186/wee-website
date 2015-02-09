@@ -4,8 +4,8 @@ name: Code
 
 ```less
 @codeColor: @darkestGray;
-@codeFont: "Courier New", Courier, monospace;
-@codeFontSize: 1.4;
+@codeFont: monospace;
+@codeFontSize: @baseFontSize;
 @codeLineHeight: 1.4em;
 
 @codeBackground: @lighterGray;
@@ -13,14 +13,15 @@ name: Code
 @codeBorderColor: false;
 @codeRounded: 3px;
 
-@codePaddingHorizontal: .4em;
-@codePaddingVertical: .1em;
+@codePaddingHorizontal: .5em;
+@codePaddingVertical: .2em;
 
 @codeBlockColor: @lightestGray;
 @codeBlockFont: @codeFont;
-@codeBlockFontSize: 1.1;
-@codeBlockLineHeight: 1.6em;
+@codeBlockFontSize: 1.3;
+@codeBlockLineHeight: @paragraphLineHeight;
 @codeBlockTabSize: 4;
+@codeBlockWrap: false;
 
 @codeBlockBackground: @darkestGray;
 

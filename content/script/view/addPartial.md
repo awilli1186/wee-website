@@ -11,13 +11,13 @@ Partials are code snippets that can be reused throughout your project.
 | a        | string | --      | Partial name      | &#10003; |
 | b        | string | --      | Partial as string | &#10003; |
 
----doc---
+---code---
 
 ```javascript
 Wee.view.addPartial('copyright', '<small>&copy; {{\year}}</small>');
 ```
 
----code|modifier:split---
+---code|modifier:split|type:string---
 
 ```javascript
 var template = '{{\> copyright}}',
@@ -29,5 +29,5 @@ Wee.view.render(template, data);
 ```
 
 ```javascript
-<small>&copy; 2015</small>
+"<small>&copy; 2015</small>"
 ```

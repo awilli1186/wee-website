@@ -5,9 +5,9 @@ heading: Get children of specified element with optional filter
 
 ---variables---
 
-| Variable | Type              | Default | Description     | Required |
-| -------- | ----------------- | ------- | --------------- | -------- |
-| sel      | selector, element | --      | Parent element  | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| sel | selection | -- | [Wee selection](/script/core#core) of parent | &#10003; |
 | filter   | selector          | --      | Filter selector |          |
 
 ---doc---

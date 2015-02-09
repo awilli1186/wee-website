@@ -14,14 +14,14 @@ heading: Get the currently bound path or set the path with specified value
 
 By default the path will be that of the current request.
 
----code|modifier:split---
+---code|modifier:split|type:string---
 
 ```javascript
 Wee.routes.path();
 ```
 
 ```javascript
-/script/routes
+"/script/routes"
 ```
 
 ---doc|label:Set---

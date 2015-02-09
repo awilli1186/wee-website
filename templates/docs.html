@@ -1,6 +1,6 @@
 {{> header}}
 <body class="subpage section">
-<div class="canvas-outer">
+<div class="canvas-outer js-element" data-ref="element">
 	<div class="canvas-inner">
 		<header role="banner" class="scrollable sidebar" data-ref="scroll">
 			<div class="viewport">
@@ -31,7 +31,7 @@
 					<ul>
 						{{#content}}
 						{{#sourceName|not(intro)}}
-						<li><a href="#{{name|slug}}">{{name}}</a></li>
+						<li{{#deprecated}} class="subnav--deprecated"{{/deprecated}}><a href="#{{name|slug}}">{{name}}</a></li>
 						{{/sourceName}}
 						{{/content}}
 					</ul>

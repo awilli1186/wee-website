@@ -11,4 +11,4 @@ var arr = Array.prototype.slice.call(nodeList);
 
 ---note---
 
-<b>Note:</b> This is required for core Wee scripts in IE8 and below.
+**Note:** The slice polyfill is required for core Wee scripts in IE9 and below.

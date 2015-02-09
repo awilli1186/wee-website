@@ -5,35 +5,41 @@ heading: Execute specified function or controller method
 
 ---variables---
 
-| Variable | Type            | Default | Description            | Required |
-| -------- | --------------- | ------- | ---------------------- | -------- |
-| fn       | callback, array | --      | Function to execute    | &#10003; |
-| opt      | object          | --      | Callback options below | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| fn | function, array | -- | [Function](/script/#functions)(s) to execute | &#10003; |
+| opt | object | -- | Function options below ||
 
 ---variables---
 
-| Variable | Type   | Default | Description                 | Required |
-| -------- | ------ | ------- | --------------------------- | -------- |
-| scope    | object | --      | Callback scope              |          |
-| args     | array  | --      | Injected callback arguments |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| args | array | -- | Function arguments ||
+| scope | object | -- | Function scope ||
 
----doc---
+---code|modifier:stacked---
 
 ```javascript
-Wee.$exec('controller:functions');
+Wee.$exec('controller:function');
+```
 
-Wee.$exec('controller:functions', {
+```javascript
+Wee.$exec('controller:function', {
 	scope: this,
-	arguments: [
+	args: [
 		'Hello',
 		123
 	]
 });
+```
 
+```javascript
 Wee.$exec(function() {
 	//
 });
+```
 
+```javascript
 Wee.$exec([
 	'controller:function',
 	'controller2:function'

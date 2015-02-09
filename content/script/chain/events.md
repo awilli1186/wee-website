@@ -2,7 +2,7 @@
 name: Events
 ---
 
----methods---
+---methods|modifier:bordered---
 
 * [$(selector).on(a, b, c)](/script/events#on)
 * [$(selector).off(evts, opt)](/script/events#off)

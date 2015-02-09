@@ -5,46 +5,50 @@ heading: Make Ajax request based on specified options
 
 ---variables---
 
- | Variable | Type | Default | Description | Required |
- | -- | -- | -- | -- | -- |
- | opt | object | -- | Request options below | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| opt | object | -- | Request options below | &#10003; |
 
 ---variables|label:Options Object---
 
- | Variable | Type | Default | Description | Required |
- | -- | -- | -- | -- | -- |
- | url | string | -- | URL endpoint to request | &#10003; |
- | method | string | get | Request verb (get, post, put, etc) ||
- | data | object | -- | Object to serialize and pass along with request ||
- | success | callback | -- | Callback if request succeeds ||
- | failure | callback | -- | Callback if request fails ||
- | json | boolean | false | Evaluate the response as JSON ||
- | jsonp | boolean, string | false | Boolean or override name for callback querystring parameter ||
- | args | array | -- | Callback arguments ||
- | scope | object | -- | Callback scope ||
- | template | string | -- | Template string to parse response JSON into ||
- | headers | object | -- | {key: val} object of request headers ||
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| url | string | -- | URL endpoint to request | &#10003; |
+| args | array | -- | Callback arguments ||
+| data | object | -- | Object to serialize and pass along with request ||
+| failure | function | -- | [Callback](/script/#functions) if request fails ||
+| headers | object | -- | {key: val} object of request headers ||
+| json | boolean | false | Evaluate the response as JSON ||
+| jsonp | boolean, string | false | Boolean or override name for callback query string parameter ||
+| method | string | get | Request verb (get, post, put, etc) in lowercase ||
+| scope | object | -- | Callback scope ||
+| success | callback | -- | [Callback](/script/#functions) if request succeeds ||
+| template | string | -- | Template string to parse response JSON ||
 
 ---doc|label:Get---
 
+The callback receives the response as the first parameter followed by the XHR object. Any custom arguments provided are injected afterwards.
+
 ```javascript
 Wee.data.request({
-	url: '/path/to/file.json',
-	success: function(data) {
-		// Success logic
+	url: '/samples/test.json',
+	success: function(data, xhr) {
+		console.log(data);
 	}
 });
 ```
 
----doc|label:Get & Parse---
+---doc|label:Get & Render---
 
-Retrieve JSON and immediately [parse it](#parse) into a template. No need to set the json parameter to true, it's assumed.
+Retrieve JSON and immediately [render](/script/view/#render) it into a template. No need to set the json parameter to true, it's assumed. A third callback parameter is injected with the raw JSON response. The [view](/script/view) script is required.
+
+---code---
 
 ```javascript
 {
-	person: {
-		firstName: 'Don',
-		lastName: 'Draper'
+	"person": {
+		"firstName": "Don",
+		"lastName": "Draper"
 	}
 }
 ```
@@ -53,32 +57,45 @@ Retrieve JSON and immediately [parse it](#parse) into a template. No need to set
 
 ```javascript
 Wee.data.request({
-	url: '/path/to/file.json',
-	template: 'Hey person.firstName || Guest',
-	success: function(parsed, raw) {
-		console.log(parsed);
-		console.log(raw);
+	url: '/samples/test.json',
+	template: 'Hey {{person.firstName||Guest}}',
+	success: function(data, xhr, json) {
+		console.log(data);
+		console.log(json);
 	}
 });
 ```
 
 ```javascript
-Hey Don
-{json}
+"Hey Don"
+---
+{
+	"person": {
+		"firstName": "Don",
+		"lastName": "Draper"
+	}
+}
 ```
 
 ---doc|label:Post w/ Data---
 
 ```javascript
 Wee.data.request({
-	url: '/account/login.php',
+	url: '/samples/login.php',
 	method: 'post',
 	data: {
-		username: 'user@domain.com',
-		password: 'secret'
+		username: 'user@weepower.com',
+		password: 'pass123'
 	},
 	success: function(data) {
-		// Success logic
-	}
+		console.log('Login succeeded');
+	},
+	failure: function(data) {
+    	console.log('Login failed');
+    }
 });
 ```
+
+---note---
+
+**Note:** By default the X-Requested-With header is set to XMLHttpRequest. It can be overriden or removed if set to false.

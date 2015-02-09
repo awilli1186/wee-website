@@ -5,13 +5,13 @@ heading: Merge specified array with specified source array
 
 ---variables---
 
-| Variable | Type    | Default | Description       | Required |
-| -------- | ------- | ------- | ----------------- | -------- |
-| arr      | array   | --      | Target array      | &#10003; |
-| arr2     | array   | --      | Source array      | &#10003; |
-| dup      | boolean | false   | Remove duplicates |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| arr | array | -- | Target array| &#10003; |
+| arr2 | array | -- | Source array| &#10003; |
+| dup | boolean | false | Remove duplicates ||
 
----code---
+---code|type:array|modifier:split---
 
 ```javascript
 var arr1 = [1, 2, 3],

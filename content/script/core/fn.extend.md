@@ -5,13 +5,13 @@ heading: Extend existing controller with additional methods and properties
 
 ---variables---
 
-| Variable | Type           | Default | Description                                                                                                | Required |
-| -------- | -------------- | ------- | ---------------------------------------------------------------------------------------------------------- | -------- |
-| a        | string, object | --      | If extending a controller the name else if extending the core being with your public variables and methods | &#10003; |
-| b        | object         | --      | Either the public functions for controllers or the private functions for the core                          | &#10003; |
-| c        | object         | --      | Object of private variables and methods when extending controllers                                         |          |
+| Variable | Type | Default | Description| Required |
+| -- | -- | -- | -- | -- |
+| a | string, object | -- | Controller namespace or core object | &#10003; |
+| b | object | -- | Public object or private object ||
+| c | object | -- | Private object ||
 
----doc|label:Extend Controller---
+---code|label:Extend Controller---
 
 ```javascript
 Wee.fn.extend('controllerName', {
@@ -21,17 +21,21 @@ Wee.fn.extend('controllerName', {
 });
 ```
 
----code---
+---code|modifier:split---
 
 ```javascript
 Wee.controllerName.extendedPublicFunction();
 ```
 
 ```javascript
-Success
+"Success"
 ```
 
 ---doc|label:Extend Core---
+
+To extend the core simply exclude the first parameter. This can be done to add additional core methods or override default functionality.
+
+---code---
 
 ```javascript
 Wee.fn.extend({
@@ -42,3 +46,7 @@ Wee.fn.extend({
 
 Wee.addNumbers(2, 4);
 ```
+
+---note---
+
+**Note:** When extending a controller that doesn't exist a new controller is created.

@@ -3,7 +3,7 @@ name: Links
 ---
 
 ```less
-@linkColor: #006e8c;
+@linkColor: #167da3;
 @linkColorHover: darken(@linkColor, 10%);
 @linkColorActive: darken(@linkColor, 20%);
 

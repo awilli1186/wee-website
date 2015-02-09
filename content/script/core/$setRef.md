@@ -3,25 +3,28 @@ name: $setRef
 heading: Add bind elements to datastore
 ---
 
+Available data-ref values are pushed into the global storage for later retrieval.
+
+---code|modifier:stacked---
+
 ```html
-<div data-ref="id"></div>
+<div data-ref="element"></div>
 ```
-
----doc---
-
-This function is called by default with Wee core on page load. Available
-data-ref values are pushed into the global storage for later retrieval.
 
 ```javascript
 Wee.$setRef();
 ```
 
----code---
+---code|modifier:split---
 
 ```javascript
-$('ref:id');
+$('ref:element');
 ```
 
 ```html
-<div data-ref="id"></div>
+<div data-ref="element"></div>
 ```
+
+---note---
+
+**Note:** This function is called by default with on page load.

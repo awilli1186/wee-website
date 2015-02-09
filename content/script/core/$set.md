@@ -5,31 +5,31 @@ heading: Set public variable
 
 ---variables---
 
-| Variable | Type   | Default | Description                        | Required |
-| -------- | ------ | ------- | ---------------------------------- | -------- |
-| key      | string | --      | Reference to store the value under | &#10003; |
-| val      | any    | --      | Value to store                     | &#10003; |
-| opt      | object | --      | Callback options                   |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| key | string | -- | Storage reference | &#10003; |
+| val | any | -- | Stored value | &#10003; |
+| opt | object | -- | [Callback options](/script/#functions) ||
 
----code|label:Simple---
+---code|modifier:split|label:Simple---
 
 ```javascript
 Wee.$set('key', 'Success');
 ```
 
 ```javascript
-Success
+"Success"
 ```
 
----code|label:Callbacks---
+---code|type:response|modifier:stacked|label:Callbacks---
 
 ```javascript
 Wee.$set('key', function() {
 	return 5 * 5;
 });
+```
 
-Wee.$set('key', 'controllerName:publicFunction');
-
+```javascript
 Wee.$set('key', 'controllerName:publicFunction', {
 	scope: this,
 	args: [
@@ -37,10 +37,4 @@ Wee.$set('key', 'controllerName:publicFunction', {
 		123
 	]
 });
-```
-
-```javascript
-25
-Success
-Success
 ```

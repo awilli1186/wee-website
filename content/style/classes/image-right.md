@@ -2,6 +2,8 @@
 name: Image Right
 ---
 
+---code---
+
 ```less
 .img-right {
 	float: right;
@@ -9,7 +11,7 @@ name: Image Right
 }
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .img-right();
@@ -21,3 +23,7 @@ margin-top: 0.32em;
 margin-bottom: 2rem;
 margin-left: 2rem;
 ```
+
+---note---
+
+**Note:** The img-right class name can be overridden in variables.less.

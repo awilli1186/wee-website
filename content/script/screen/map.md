@@ -13,10 +13,10 @@ heading: Watch single or set of screen events with specified options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| callback | callback | -- | Matching callback | &#10003; |
+| callback | function | -- | [Matching callback](/script/#functions) | &#10003; |
 | init | boolean | true | Immediately evaluate breakpoint logic | &#10003; |
 | watch | boolean | true | Evaluate on screen resize | &#10003; |
-| args | array | -- | Arguments to inject into callback ||
+| args | array | -- | Callback arguments ||
 | max | number | -- | Maximum breakpoint value ||
 | min | number | -- | Minimum breakpoint value ||
 | once | boolean | false | Disable callback after first execution ||
@@ -25,7 +25,7 @@ heading: Watch single or set of screen events with specified options
 
 ---doc---
 
-You can setup as many breakpoint sets as you need. They are added to a global window resize event that evaluates against all stored callbacks.
+You can setup as many breakpoint sets as you need. They are added to a global window resize event that evaluates against all stored rules.
 
 ---doc|label:Single---
 
@@ -33,23 +33,23 @@ You can setup as many breakpoint sets as you need. They are added to a global wi
 Wee.screen.map({
 	size: 4,
 	callback: function(obj) {
-		// Small desktop logic
+		console.log(obj);
 	}
 });
 ```
 
----note---
+---doc---
 
-<b>Note:</b> An object with the direction, size, previous size, and init status is passed as the first callback argument.
+An object with the direction, size, previous size, and init status is passed as the first callback argument
 
----variables|class:table--response|label:Response Object---
+---variables|class:table--response---
 
 | Variable | Type | Description |
 | -- | -- | -- |
-| dir | number | 1 if increase in value, 0 if decrease |
+| dir | number | 1 if sized up, 0 if sized down |
 | size | number | 1-6 representing current value |
 | prev | number | 1-6 representing previous value |
-| init | boolean | true if this was run initially, else false |
+| init | boolean | true if run initially, else false |
 
 ---doc|label:Multiple---
 

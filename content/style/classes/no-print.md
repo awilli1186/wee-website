@@ -4,5 +4,5 @@ heading: If print styling is enabled exclude content from being printed
 ---
 
 ```html
-<div class="no-print">This will no be output when printing the page.</div>
+<div class="no-print">This won't be output when printing.</div>
 ```

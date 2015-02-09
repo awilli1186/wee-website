@@ -13,8 +13,8 @@ heading: Process stored route options with optional config
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| routes | object | -- | Mapping object ||
 | path | string | -- | Relative path from root domain ||
+| routes | object | -- | Mapping object ||
 
 ---doc---
 

@@ -11,21 +11,21 @@ This allows the creation of custom filters. Wee's default filters include is, no
 | a        | string   | --      | Filter name  | &#10003; |
 | b        | callback | --      | Filter logic | &#10003; |
 
----doc---
+---code---
 
 ```javascript
 Wee.view.addFilter('isNumber', function() {
-	return typeof this.val === "number";
+	return typeof this.val === 'number';
 });
 ```
 
----code|modifier:split---
+---code|modifier:split|type:string---
 
 ```javascript
-var data = {
-	age: 30
-},
-template = "{{#age|isNumber|tag}}I am {{age|tag}} years old.{{/age}}";
+var template = '{{#age|isNumber}}I am {{age}} years old.{{/age}}',
+	data = {
+		age: 30
+	};
 
 Wee.view.render(template, data);
 ```

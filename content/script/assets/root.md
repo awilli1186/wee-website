@@ -5,34 +5,34 @@ heading: Get currently bound asset root or set root with specified value
 
 ---variables---
 
-| Variable | Type   | Default | Description       | Required |
-| -------- | ------ | ------- | ----------------- | -------- |
-| val      | string | --      | Root request path |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| val | string | -- | Root request path ||
 
 ---note---
 
-<b>Note:</b> You can override the root on individual requests. For instance, you may want to load all your static assets from a CDN but pull JSON or other files from the local server.
+**Note:** You can override the root on individual requests. For instance, you may want to load all your static assets from a CDN but pull JSON or other files from the local server.
 
 ---doc|label:Set---
 
 The value set here is prepended to every request if not specifically overridden.
 
 ```javascript
-Wee.assets.root('https://cdn.domain.com');
+Wee.assets.root('https://cdn.weepower.com');
 ```
 
 ---doc|label:Get---
 
 Retrieve the current root which defaults to an empty string, unless previously set.
 
----code|modifier:split---
+---code|type:string|modifier:split---
 
 ```javascript
 Wee.assets.root();
 ```
 
-```html
-https://cdn.domain.com
+```javascript
+"https://cdn.weepower.com"
 ```
 
 ---doc|label:Advanced---
@@ -41,6 +41,6 @@ Only set the asset root to a CDN in the production [environment](https://www.wee
 
 ```javascript
 if (Wee.$env() == 'prod') {
-	Wee.assets.root('https://cdn.domain.com');
+	Wee.assets.root('https://cdn.weepower.com');
 }
 ```

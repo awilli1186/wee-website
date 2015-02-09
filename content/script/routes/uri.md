@@ -13,13 +13,13 @@ heading: Get currently bound URI values or set URI data with a specified string 
 
 | Variable | Type | Default | Description | Required |
 | -------- | ------ | ------- | ----------- | -------- |
-| path | string | -- | Current relative path ||
-| query| object | -- | Current relative querystring object ||
-| hash | string | -- | Current hash value ||
+| hash | string | -- | Hash value ||
+| path | string | -- | Relative path ||
+| query| object | -- | Query string object ||
 
 ---doc|label:Get---
 
-Based on <code>https://www.weepower.com/script/routes?success=yes#uri</code> the following object would be returned.
+Based on ```https://www.weepower.com/script/routes?success=yes#uri``` the following object would be returned.
 
 ---code|type:object|modifier:split---
 
@@ -37,24 +37,32 @@ Wee.routes.uri();
 }
 ```
 
----doc|label:Set---
+---doc|label:Set String---
 
 The set method accepts either an absolute URL, a relative path, or just a #hash.
 
----code|modifier:split---
+---code---
 
 ```javascript
 Wee.routes.uri('/another/page');
 ```
 
+---doc|label:Set Object---
+
+Only the properties you wish to update should be provided. They will be merged into the current values.
+
+---code---
+
 ```javascript
-{
-	hash: "",
-	path: "/another/page",
-	query: {}
-}
+Wee.routes.uri({
+    hash: 'uri',
+    path: '/script/routes',
+    query: {
+        success: 'yes'
+    }
+});
 ```
 
 ---note---
 
-<b>Note:</b> Setting the URI only updates the internal reference. It doesn't navigate the page.
+**Note:** Setting the URI only updates the internal reference. It doesn't navigate the page.

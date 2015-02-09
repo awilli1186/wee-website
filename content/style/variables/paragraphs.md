@@ -4,7 +4,7 @@ name: Paragraphs
 
 ```less
 @paragraphColor: @baseColor;
-@paragraphFontWeight: normal;
+@paragraphFontWeight: @baseFontWeight;
 @paragraphLineHeight: 1.8em;
 
 @paragraphMarginBottom: 2;

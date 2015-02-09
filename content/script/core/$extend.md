@@ -5,25 +5,49 @@ heading: Extend specified object with specified source object
 
 ---variables---
 
-| Variable | Type    | Default | Description   | Required |
-| -------- | ------- | ------- | ------------- | -------- |
-| obj      | object  | --      | Target object | &#10003; |
-| src      | object  | --      | Source object | &#10003; |
-| deep     | boolean | false   | Deep nesting  |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| obj | object | -- | Target object ||
+| src | object | -- | Source object | &#10003; |
+| deep | boolean | false | Deep nesting ||
 
----doc---
+---code|modifier:split|label:Clone Object---
 
 ```javascript
-var obj1 = {
-    key1: 'val1',
-    key2: 'val2'
-},
-obj2 = {
-    key3: 'val3',
-    key4: 'val4'
+var obj = {
+	key1: 'val1',
+	key2: 'val2'
 };
+
+Wee.$extend({}, obj);
 ```
 
 ```javascript
-var $obj3 = Wee.$extend(obj1, obj2);
+{
+	key1: "val1",
+	key2: "val2"
+}
+```
+
+---code|modifier:split|label:Merge Objects---
+
+```javascript
+var obj = {
+		key1: 'val1',
+		key2: 'val2'
+	},
+	obj2 = {
+		key2: 'val3',
+		key3: 'val4'
+	};
+
+Wee.$extend(obj, obj2);
+```
+
+```javascript
+{
+	key1: "val1",
+	key2: "val2",
+	key3: "val4"
+}
 ```

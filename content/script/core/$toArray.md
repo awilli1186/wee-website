@@ -5,11 +5,11 @@ heading: Cast object to array if it isn't one
 
 ---variables---
 
-| Variable | Type          | Default | Description               | Required |
-| -------- | ------------- | ------- | ------------------------- | -------- |
-| obj      | string, array | --      | Value to convert to array | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| obj | string, array | -- | Value to convert to array | &#10003; |
 
----code---
+---code|modifier:split---
 
 ```javascript
 Wee.$toArray(['test']);

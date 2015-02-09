@@ -5,12 +5,12 @@ heading: Determine if specified element belongs to specified array
 
 ---variables---
 
-| Variable | Type  | Default | Description                  | Required |
-| -------- | ----- | ------- | ---------------------------- | -------- |
-| obj      | array | --      | Source array                 | &#10003; |
-| el       | any   | --      | Specified value to check for | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| obj | array | -- | Source array | &#10003; |
+| el | any | -- | Value to check | &#10003; |
 
----code---
+---code|modifier:split---
 
 ```javascript
 var arr = [
@@ -19,9 +19,9 @@ var arr = [
 	'value3'
 ];
 
-Wee.$inArray('value');
-Wee.$inArray('value2');
-Wee.$inArray('value4');
+Wee.$inArray(arr, 'value');
+Wee.$inArray(arr, 'value2');
+Wee.$inArray(arr, 'value4');
 ```
 
 ```javascript

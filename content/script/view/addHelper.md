@@ -11,7 +11,7 @@ This allows the creation of custom helpers. Properties of the tag that the helpe
 | a        | string   | --      | Helper name  | &#10003; |
 | b        | callback | --      | Helper logic | &#10003; |
 
----doc---
+---code---
 
 ```javascript
 Wee.view.addHelper('uppercase', function() {
@@ -19,13 +19,13 @@ Wee.view.addHelper('uppercase', function() {
 });
 ```
 
----code|modifier:split---
+---code|modifier:split|type:string---
 
 ```javascript
-var data = {
-	name: "john"
-},
-template = "My name is {{name|uppercase|tag}}.";
+var template = 'My name is {{name|uppercase|tag}}.',
+	data = {
+		name: 'john'
+	};
 
 Wee.view.render(template, data);
 ```

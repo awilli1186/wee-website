@@ -111,7 +111,7 @@
 						W.$set('_env', function() {
 							var host = location.host;
 
-							Object.keys(obj).forEach(function(key) {
+							Object.keys(obj).foh(function(key) {
 								var el = obj[key];
 
 								if (el == host || (W._canExec(el) && W.$exec(el, {
@@ -564,15 +564,17 @@
 				// Execute specified function when document is ready
 				// Returns undefined
 				ready: function(fn) {
-					W._legacy ?
-						D.attachEvent('onreadystatechange', function() {
-							if (D.readyState == 'complete') {
+					document.readyState === 'complete' ?
+						W.$exec(fn) :
+						W._legacy ?
+							D.attachEvent('onreadystatechange', function() {
+								if (D.readyState == 'complete') {
+									W.$exec(fn);
+								}
+							}) :
+							D.addEventListener('DOMContentLoaded', function() {
 								W.$exec(fn);
-							}
-						}) :
-						D.addEventListener('DOMContentLoaded', function() {
-							W.$exec(fn);
-						});
+							});
 				}
 			};
 		})();

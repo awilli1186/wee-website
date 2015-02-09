@@ -7,39 +7,36 @@ heading: Load specified assets with specified set of options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| conf | object | --| Object parameters below | &#10003; |
+| conf | object | -- | Object parameters below | &#10003; |
 
 ---variables|label:Configuration Object---
 
-| Variable | Type| Default| Description| Required |
+| Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| files| string, array | -- | Single file path or array of file paths| &#10003; |
-| group| string | -- | Optional reference for use with [ready](#ready) ||
-| root | string | current root | Root path or domain override for [root](#root) ||
-| async| boolean | true | Load asset asynchronously, only applicable to scripts||
-| success| callback | -- | Success callback ||
-| failure| callback | -- | Failure callback ||
+| async | boolean | true | Load assets asynchronously, only applicable to scripts ||
+| failure | function | -- | Failure [callback](/script/#functions) ||
+| files | string, array | -- | Single file path or array of file paths| &#10003; |
+| group | string | -- | Optional reference for use with [ready](#ready) ||
+| root | string | -- | Root path or domain override for [root](#root) ||
+| success | function | -- | Success [callback](/script/#functions) ||
 
 ---doc|label:Single File---
 
 ```javascript
 Wee.assets.load({
-	files: '/assets/js/lib/dynamic.js',
-	success: function() {
-		// Success logic
-	}
+	files: '/samples/alert.js'
 });
 ```
 
----doc|label:File Array---
+---doc|label:Multiple Files---
 
 ```javascript
 Wee.assets.load({
-	root: 'https://cdn.domain.com/assets',
+	root: 'https://cdn.weepower.com',
 	files: [
-		'/js/lib/dynamic.min.js',
-		'/css/lib/dynamic.css',
-		'/img/dynamic.img'
+		'/samples/alert.js',
+		'/samples/override.css',
+		'/samples/sample.png'
 	],
 	success: function() {
 		// Success logic
@@ -56,7 +53,7 @@ By providing a group name you can optionally check against the group later for c
 
 ```javascript
 Wee.assets.load({
-	files: '/assets/js/dynamic.js',
+	files: '/samples/alert.js',
 	group: 'dynamicAssets'
 });
 ```

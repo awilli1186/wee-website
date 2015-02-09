@@ -9,13 +9,13 @@ Controllers serve as the wrapper for all custom script. They can be created per 
 
 ---variables---
 
-| Variable | Type   | Default | Description                             | Required |
-| -------- | ------ | ------- | --------------------------------------- | -------- |
-| name     | string | --      | Namespace of the controller             | &#10003; |
-| pub      | object | --      | Object of public variables and methods  | &#10003; |
-| priv     | object | {}      | Object of private variables and methods |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| name | string | -- | Namespace of the controller | &#10003; |
+| pub | object | -- | Public methods and variables | &#10003; |
+| priv | object | -- | Private methods and variables ||
 
----doc|label:Public---
+---code|label:Public---
 
 ```javascript
 Wee.fn.make('controllerName', {
@@ -25,21 +25,23 @@ Wee.fn.make('controllerName', {
 });
 ```
 
----code---
+---code|modifier:split---
 
 ```javascript
 Wee.controllerName.init();
 ```
 
 ```javascript
-Initialized
+"Initialized"
 ```
 
 ---doc|label:Private/Public---
 
-Private functions can be accessed from public methods by using ```this.$private('functionName, arguments..)``` syntax. To call back into a public method from a private one use ```this.$public.functionName(arguments...)```.
+Private functions can be accessed from public methods by using ```this.$private('functionName', arguments)``` syntax. To call back into a public method from a private one use ```this.$public.functionName(arguments)```.
 
-Also note that you have access to ```this.$set()```, ```this.$push()```, and ```this.$get()``` across both public and private methods. By default stored values are namespaced to the current controller scope. If you need to access variables globally use ```Wee.$set()```, ```Wee.$push()```, and ```Wee.$get()```.
+Also note that you have access to ```this.$get()```, ```this.$set()```, and ```this.$push()``` across both public and private methods. By default stored values are namespaced to the current controller scope. If you need to control global variables use ```Wee.$get()```, ```Wee.$set()```, and ```Wee.$push()```.
+
+---code---
 
 ```javascript
 Wee.fn.make('controllerName', {
@@ -64,27 +66,40 @@ Wee.fn.make('controllerName', {
 });
 ```
 
----code---
+---code|modifier:split---
 
 ```javascript
 Wee.controllerName.init();
 ```
 
 ```javascript
-Success
+"Success"
 ```
 
----doc|label:Constructor/Destructor---
+---doc|label:Constructor---
 
-The construct method is immediately invoked when the controller is created. Alternatively the destruct method is called when the controller is destroyed by using ```this.$destroy()``` inside the controller or ```Wee.controllerName.$destroy()``` externally.
+The construct method is immediately executed on controller creation.
 
 ```javascript
 Wee.fn.make('controllerName', {
 	_construct: function() {
 		console.log('Created');
-	},
+	}
+});
+```
+
+---doc|label:Destructor---
+
+The destruct method is executed when the controller is destroyed using ```this.$destroy()``` or ```Wee.controllerName.$destroy()``` outside the controller.
+
+```javascript
+Wee.fn.make('controllerName', {
 	_destruct: function() {
 		console.log('Destroyed');
 	}
 });
 ```
+
+---note---
+
+**Note:** The construct and destruct methods can be placed in the public object and/or the private object.

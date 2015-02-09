@@ -5,14 +5,17 @@ heading: Determine if specified argument is array
 
 ---variables---
 
-| Variable | Type | Default | Description       | Required |
-| -------- | ---- | ------- | ----------------- | -------- |
-| obj      | any  | --      | Value to evaluate | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| obj | any | -- | Value to evaluate | &#10003; |
 
----code---
+---code|type:boolean|modifier:split---
 
 ```javascript
-Wee.$isArray(['sring']);
+Wee.$isArray([
+	'string',
+	'string2'
+]);
 Wee.$isArray('string');
 ```
 

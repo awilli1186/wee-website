@@ -20,7 +20,7 @@ name: Forms
 @inputBorderWidth: 1px; // false to disable
 @inputRounded: 3px; // false to disable
 
-@inputMinWidth: 200px; // false to disable
+@inputMinWidth: 20; // false to disable
 @inputMinHeight: 3; // false to disable
 
 @inputPaddingHorizontal: .8;

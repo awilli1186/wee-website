@@ -1,7 +1,9 @@
 ---
 name: Container
-heading: Create a centered container based on @minWidth, @minWidth, and @padContainer
+heading: Create a centered container based on @minWidth, @maxWidth, and @padContainer
 ---
+
+---code---
 
 ```less
 .container {
@@ -15,7 +17,7 @@ heading: Create a centered container based on @minWidth, @minWidth, and @padCont
 }
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .container();

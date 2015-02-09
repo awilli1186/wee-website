@@ -6,4 +6,4 @@ global:
   seoDesc:
 ---
 
-Wee allows many methods to be chained to selectors by omitting the first argument of the method. This often makes code more readable and permits multiple methods to be called on the same selection.
+Wee allows many methods to be chained to selectors by omitting the first argument of the method. This often makes code more readable and permits multiple methods to be executed on the same selection.

@@ -2,7 +2,7 @@
 name: Core
 ---
 
----methods---
+---methods|modifier:bordered---
 
 * [$(selector).each(fn, opt)](/script/core#each)
 * [$(selector).map(fn)](/script/core#map)

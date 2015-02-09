@@ -27,5 +27,10 @@ name: Images
 
 @figCaptionColor: @darkGray;
 @figCaptionFontStyle: italic;
-@figCaptionLineHeight: 1.3em;
+@figCaptionLineHeight: @paragraphLineHeight;
+
+// Alignment
+
+@imageLeftClass: img-left;
+@imageRightClass: img-right;
 ```
