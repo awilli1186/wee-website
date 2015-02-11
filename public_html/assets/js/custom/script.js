@@ -12,7 +12,7 @@ Wee.routes.map({
 			Wee.assets.load({
 				files: '/assets/js/lib/vendor/CollapsibleLists.min.js',
 				success: function() {
-					CollapsibleLists.applyTo(Wee.$first('.collapsible ul'));
+					CollapsibleLists.applyTo(Wee.$first('.doc__collapsible ul'));
 				}
 			});
 		}

@@ -230,7 +230,7 @@
 					}
 
 					if (val.indexOf('{{') !== -1) {
-						scope.parse(val, data, prev, init, index);
+						val = scope.parse(val, data, prev, init, index);
 					}
 				}
 
