@@ -7,7 +7,7 @@ heading: Make Ajax request based on specified options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| opt | object | -- | Request options below | ✓ |
+| options | object | -- | Request options below | ✓ |
 
 ---variables|label:Options Object---
 
@@ -25,7 +25,7 @@ heading: Make Ajax request based on specified options
 | success | callback | -- | [Callback](/script/#functions) if request succeeds ||
 | template | string | -- | Template string to parse response JSON ||
 
----doc|label:Get---
+---code|label:Get---
 
 The callback receives the response as the first parameter followed by the XHR object. Any custom arguments provided are injected afterwards.
 
@@ -38,11 +38,9 @@ Wee.data.request({
 });
 ```
 
----doc|label:Get & Render---
+---code|label:Get & Render---
 
 Retrieve JSON and immediately [render](/script/view/#render) it into a template. No need to set the json parameter to true, it's assumed. A third callback parameter is injected with the raw JSON response. The [view](/script/view) script is required.
-
----code---
 
 ```javascript
 {
@@ -77,7 +75,7 @@ Wee.data.request({
 }
 ```
 
----doc|label:Post w/ Data---
+---code|label:Post w/ Data---
 
 ```javascript
 Wee.data.request({

@@ -7,7 +7,7 @@ heading: Process stored route options with optional config
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| opt| object | -- | Object parameters below ||
+| options | object | -- | Object parameters below ||
 
 ---variables|label:Options Object---
 

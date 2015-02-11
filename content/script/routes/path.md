@@ -6,9 +6,9 @@ heading: Get the currently bound path or set the path with specified value
 ---variables---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| val      | string | --      | Relative path from root domain |          |
-| opt      | object | --      | Callback parameters            |          |
+| -- | -- | -- | -- | -- |
+| value | string | -- | Relative path from root domain ||
+| options | object | -- | Callback parameters ||
 
 ---doc|label:Get---
 
@@ -24,7 +24,7 @@ Wee.routes.path();
 "/script/routes"
 ```
 
----doc|label:Set---
+---code|label:Set---
 
 Manually override the current path. Useful for dynamic navigation.
 

@@ -7,9 +7,9 @@ heading: Bind specified function to specified element and event
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | [selection](/script#selection) | -- | [Wee selection](/script/core#core) | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
 | a | string, object | -- | Event name or object of events | ✓ |
-| b | callback, object | -- | Event callback or options object ||
+| b | [function](/script/#functions), object | -- | Event callback or options object ||
 | c | object | -- | Option parameters below ||
 
 ---variables---
@@ -17,12 +17,12 @@ heading: Bind specified function to specified element and event
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | args | array | -- | Callback arguments ||
-| context | selector, element | -- | [Wee selection](/script/core#core) context ||
-| delegate | selector, element | -- | [Wee selection](/script/core#core) delegate ||
+| context | [selection](/script#selection) | -- | Context selection ||
+| delegate | [selection](/script#selection) | -- | Delegate selection ||
 | one | boolean | false | Remove the event after first execution ||
 | scope | object | -- | Callback scope ||
 
----doc|label:Simple---
+---code|label:Simple---
 
 ```javascript
 Wee.events.on('ref:element', 'click', function(e, el) {
@@ -31,7 +31,7 @@ Wee.events.on('ref:element', 'click', function(e, el) {
 });
 ```
 
----doc|label:Once---
+---code|label:Once---
 
 ```javascript
 Wee.events.on('ref:element', 'click', function(e, el) {
@@ -42,7 +42,7 @@ Wee.events.on('ref:element', 'click', function(e, el) {
 });
 ```
 
----doc|label:Delegation---
+---code|label:Delegation---
 
 ```javascript
 Wee.events.on('.js-descendant', 'click', function(e, el) {
@@ -53,7 +53,7 @@ Wee.events.on('.js-descendant', 'click', function(e, el) {
 });
 ```
 
----doc|label:Multiple Events---
+---code|label:Multiple Events---
 
 ```javascript
 Wee.events.on('ref:element', {
@@ -66,7 +66,7 @@ Wee.events.on('ref:element', {
 });
 ```
 
----doc|label:Multiple Targets---
+---code|label:Multiple Selections---
 
 ```javascript
 Wee.events.on({

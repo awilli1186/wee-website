@@ -5,9 +5,9 @@ heading: Get all segments or single segment at index
 
 ---variables---
 
-| Variable | Type    | Default | Description              | Required |
-| -------- | ------- | ------- | ------------------------ | -------- |
-| i        | integer | --      | Zero-based segment index |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| index | integer | -- | Zero-based segment index ||
 
 ---doc|label:Get all---
 

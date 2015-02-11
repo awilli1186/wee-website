@@ -4,10 +4,10 @@ name: Events
 
 ---methods|modifier:bordered---
 
-* [$(selector).on(a, b, c)](/script/events#on)
-* [$(selector).off(evts, opt)](/script/events#off)
-* [$(selector).one(a, b, c)](/script/events#one)
-* [$(selector).trigger(evt)](/script/events#trigger)
+* [$(sel).on(a, b, c)](/script/events#on)
+* [$(sel).off(events, options)](/script/events#off)
+* [$(sel).one(a, b, c)](/script/events#one)
+* [$(sel).trigger(event)](/script/events#trigger)
 
 ---doc---
 

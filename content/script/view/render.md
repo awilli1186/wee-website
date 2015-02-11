@@ -8,7 +8,7 @@ Render parses your template using a data object.
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| temp | string | -- | Template string | ✓ |
+| template | string | -- | Template string | ✓ |
 | data | object | -- | Data object | ✓ |
 
 ---code|modifier:stacked|type:string---

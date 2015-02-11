@@ -7,13 +7,13 @@ heading: Get currently bound asset root or set root with specified value
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| val | string | -- | Root request path ||
+| value | string | -- | Root request path ||
 
 ---note---
 
 **Note:** You can override the root on individual requests. For instance, you may want to load all your static assets from a CDN but pull JSON or other files from the local server.
 
----doc|label:Set---
+---code|label:Set---
 
 The value set here is prepended to every request if not specifically overridden.
 
@@ -35,7 +35,7 @@ Wee.assets.root();
 "https://cdn.weepower.com"
 ```
 
----doc|label:Advanced---
+---code|label:Advanced---
 
 Only set the asset root to a CDN in the production [environment](https://www.weepower.com/script/core#env).
 

@@ -7,9 +7,9 @@ heading: Get currently bound events to optional specified element, event, and fu
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | [selection](/script#selection) | -- | Specific [Wee selection](/script/core#core) ||
-| evt | string | -- | Specific event name ||
-| fn | function | -- | Specific callback ||
+| target | [selection](/script#selection) | -- | Target selection ||
+| event | string | -- | Specific event name ||
+| fn | [function](/script/#functions) | -- | Specific callback ||
 
 ---doc---
 
@@ -25,7 +25,7 @@ Wee.events.bound();
 [Object, Object, ...]
 ```
 
----code|type:array|modifier:split|label:Element---
+---code|type:array|modifier:split|label:Selection---
 
 ```javascript
 Wee.events.bound('ref:element');
@@ -35,7 +35,7 @@ Wee.events.bound('ref:element');
 [Object, Object, ...]
 ```
 
----code|type:array|modifier:split|label:Element Event---
+---code|type:array|modifier:split|label:Selection Event---
 
 ```javascript
 Wee.events.bound('ref:element', 'click');

@@ -7,7 +7,7 @@ heading: Load specified assets with specified set of options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| conf | object | -- | Object parameters below | ✓ |
+| options | object | -- | Object parameters below | ✓ |
 
 ---variables|label:Configuration Object---
 

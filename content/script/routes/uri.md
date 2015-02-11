@@ -6,16 +6,16 @@ heading: Get currently bound URI values or set URI data with a specified string 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
-| -- | --| ------- | -- | -- |
-| val | string, object | -- | Object parameters below ||
+| -- | -- | -- | -- | -- |
+| value | string, object | -- | Object parameters below ||
 
 ---variables|label:Value Object---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ------ | ------- | ----------- | -------- |
+| -- | -- | -- | -- | -- |
 | hash | string | -- | Hash value ||
 | path | string | -- | Relative path ||
-| query| object | -- | Query string object ||
+| query | object | -- | Query string object ||
 
 ---doc|label:Get---
 
@@ -37,21 +37,17 @@ Wee.routes.uri();
 }
 ```
 
----doc|label:Set String---
+---code|label:Set String---
 
 The set method accepts either an absolute URL, a relative path, or just a #hash.
-
----code---
 
 ```javascript
 Wee.routes.uri('/another/page');
 ```
 
----doc|label:Set Object---
+---code|label:Set Object---
 
 Only the properties you wish to update should be provided. They will be merged into the current values.
-
----code---
 
 ```javascript
 Wee.routes.uri({

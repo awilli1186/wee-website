@@ -4,7 +4,7 @@ name: View
 
 ---methods|modifier:bordered---
 
-* [$(selector).render(obj, opt)](/script/view#render)
+* [$(sel).render(data)](/script/view#render)
 
 ---doc---
 

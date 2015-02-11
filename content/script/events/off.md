@@ -7,9 +7,9 @@ heading: Remove specified function to specified element and optional event and f
 
 | Variable | Type| Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | [selection](/script#selection) | -- | [Wee selection](/script/core#core) | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
 | a | string | -- | Event name or object of events ||
-| b | callback | -- | Callback to remove ||
+| b | [function](/script/#functions) | -- | Callback to remove ||
 
 
 ---doc|label:Target---
@@ -22,13 +22,13 @@ If no event or callback is provided all element events will be removed.
 Wee.events.off('ref:element');
 ```
 
----code|label:Element Event---
+---code|label:Selection Event---
 
 ```javascript
 Wee.events.off('ref:element', 'click');
 ```
 
----code|label:Element Event Callback---
+---code|label:Selection Event Callback---
 
 ```javascript
 Wee.events.off('ref:element', 'click', function(e, el) {
@@ -36,7 +36,7 @@ Wee.events.off('ref:element', 'click', function(e, el) {
 });
 ```
 
----code|label:Multiple Elements---
+---code|label:Multiple Selections---
 
 ```javascript
 Wee.events.off({

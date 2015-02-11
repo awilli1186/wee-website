@@ -1,14 +1,14 @@
 ---
 name: Trigger
-heading: Execute specific element or selector event by name and optional trigger
+heading: Execute event for each matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | [selection](/script#selection) | -- | [Wee selection](/script/core#core) | ✓ |
-| a | string | -- | Event name | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| event | string | -- | Event name | ✓ |
 
 ---doc---
 

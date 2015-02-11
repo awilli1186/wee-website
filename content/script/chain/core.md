@@ -4,14 +4,14 @@ name: Core
 
 ---methods|modifier:bordered---
 
-* [$(selector).each(fn, opt)](/script/core#each)
-* [$(selector).map(fn)](/script/core#map)
-* [$(selector).attr(key, val)](/script/core#attr)
-* [$(selector).eq(i)](/script/core#eq)
-* [$(selector).first()](/script/core#first)
-* [$(selector).data(key, val)](/script/core#data)
+* [$(sel).each(fn, options)](/script/core#each)
+* [$(sel).map(fn)](/script/core#map)
+* [$(sel).attr(key, value)](/script/core#attr)
+* [$(sel).eq(index)](/script/core#eq)
+* [$(sel).first()](/script/core#first)
+* [$(sel).data(key, value)](/script/core#data)
 
----doc|label:Reverse---
+---code|label:Reverse---
 
 The reverse method simply reverses the order of the selection results.
 
