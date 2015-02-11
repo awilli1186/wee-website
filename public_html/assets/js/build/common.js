@@ -8,6 +8,9 @@ Wee.fn.make('common', {
 		// Active subnav highlighting
 		this.$private('initHighlight');
 
+		// Insert GitHub links to blocks
+		this.$private('matchBlocks');
+
 		// Mobile navigation
 		$('ref:mobileNav').on('click', function() {
 			$('ref:primary').toggleClass('primary--slide');
@@ -60,6 +63,26 @@ Wee.fn.make('common', {
 
 				return;
 			}
+		}
+	},
+	matchBlocks: function() {
+		var $link = $('.intro__link');
+
+		if ($link) {
+			Wee.data.request({
+				url: '/assets/js/map.json',
+				json: true,
+				success: function(data) {
+					var file = $link.attr('href'),
+						segment = Wee.routes.segments(1);
+
+					if (segment == 'script') {
+						$('doc__title').each(function () {
+
+						});
+					}
+				}
+			});
 		}
 	}
 });

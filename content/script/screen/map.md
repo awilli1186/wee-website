@@ -40,7 +40,7 @@ Wee.screen.map({
 
 ---doc---
 
-An object with the direction, size, previous size, and init status is passed as the first callback argument
+An object with the direction, size, previous size, and init status is passed as the first callback argument.
 
 ---variables|class:table--response---
 
