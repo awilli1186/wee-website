@@ -1,16 +1,16 @@
 ---
 name: $clone
-heading: Clone specified element
+heading: Clone each matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
 
----doc---
+---code---
 
 ```javascript
-var $clone = Wee.$clone('ref:element');
+Wee.$clone('ref:element');
 ```

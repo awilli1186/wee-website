@@ -8,19 +8,19 @@ Partials are code snippets that can be reused throughout your project.
 
 | Variable | Type   | Default | Description       | Required |
 | -------- | ------ | ------- | ----------------- | -------- |
-| a        | string | --      | Partial name      | &#10003; |
-| b        | string | --      | Partial as string | &#10003; |
+| a        | string | --      | Partial name      | ✓ |
+| b        | string | --      | Partial as string | ✓ |
 
 ---code---
 
 ```javascript
-Wee.view.addPartial('copyright', '<small>&copy; {{\year}}</small>');
+Wee.view.addPartial('copyright', '{{#!}}<small>&copy; {{\year}}</small>{{/!}}');
 ```
 
 ---code|modifier:split|type:string---
 
 ```javascript
-var template = '{{\> copyright}}',
+var template = '{{#!}}{{\> copyright}}{{/!}}',
 	data = {
 		year: 2015
 	};

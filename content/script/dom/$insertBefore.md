@@ -1,17 +1,17 @@
 ---
 name: $insertBefore
-heading: Insert specified element before specified element
+heading:  Insert each matching source selection element before each matching target selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description    | Required |
-| -------- | ----------------- | ------- | -------------- | -------- |
-| prev     | selector, element | --      | Target element | &#10003; |
-| sel      | selector, element | --      | Source element | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| source | [selection](/script#selection) | -- | Source selection | ✓ |
 
----doc---
+---code---
 
 ```javascript
-Wee.$insertBefore('.first', '.second');
+Wee.$insertBefore('ref:element', '.js-element');
 ```

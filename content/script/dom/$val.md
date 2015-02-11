@@ -1,29 +1,33 @@
 ---
 name: $val
-heading: Get value of specified element or set specified value
+heading: Get value of first matching selection or set values of each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description                                                            | Required |
-| -------- | ----------------- | ------- | ---------------------------------------------------------------------- | -------- |
-| sel      | selector, element | --      | Selector or element                                                    | &#10003; |
-| val      | string, callback  | --      | Value to set or callback taking the element, index, and existing value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| value | [function](/script/#functions), string | -- | Class name(s) to add or callback | ✓ |
 
----doc|label:Get---
+---code|label:Get---
 
 ```javascript
-var $val = Wee.$val('input');
+Wee.$val('ref:element');
 ```
 
----doc|label:Set---
+---code|label:Set---
 
 ```javascript
-Wee.$val('input', 'Input value');
+Wee.$val('ref:element', '123');
 ```
 
+---code|label:Function---
+
+The current index and value are injected into the callback. The scope of ```this``` is the element.
+
 ```javascript
-Wee.$val('input', function(el, i, el.value) {
+Wee.$val('ref:element', function(i, value) {
     // Callback logic
 });
 ```

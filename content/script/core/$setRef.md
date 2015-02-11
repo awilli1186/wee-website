@@ -1,6 +1,6 @@
 ---
 name: $setRef
-heading: Add bind elements to datastore
+heading: Add ref elements to datastore
 ---
 
 Available data-ref values are pushed into the global storage for later retrieval.

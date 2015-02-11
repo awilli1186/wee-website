@@ -26,7 +26,7 @@ visibility: visible;
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
-| @width   | unit | --      | Width       | &#10003; |
+| @width   | unit | --      | Width       | ✓ |
 | @height  | unit | --      | Height      |          |
 
 ---code---

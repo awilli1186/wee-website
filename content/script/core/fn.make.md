@@ -1,6 +1,6 @@
 ---
 name: fn.make
-heading: Create namespaced controller with specified name, public object, and optional private object
+heading: Create namespaced controller
 ---
 
 ---description---
@@ -11,8 +11,8 @@ Controllers serve as the wrapper for all custom script. They can be created per 
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| name | string | -- | Namespace of the controller | &#10003; |
-| pub | object | -- | Public methods and variables | &#10003; |
+| name | string | -- | Namespace of the controller | ✓ |
+| pub | object | -- | Public methods and variables | ✓ |
 | priv | object | -- | Private methods and variables ||
 
 ---code|label:Public---

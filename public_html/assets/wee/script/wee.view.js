@@ -61,6 +61,7 @@
 		render: function(temp, data) {
 			var scope = this,
 				tags = [];
+			this.esc = false;
 
 			// Make partial replacements
 			// Preprocess tags to allow for reliable tag matching
@@ -90,13 +91,24 @@
 			});
 
 			// Parse template tags
-			return this.parse(temp, data, {}, data, 0);
+			temp = this.parse(temp, data, {}, data, 0);
+
+			// Reconstitute replacements
+			return this.esc ?
+				temp.replace(/{~/g, '{{').replace(/~}/g, '}}').replace(/%\d+/g, '') :
+				temp;
 		},
 		parse: function(temp, data, prev, init, index) {
 			var scope = this;
 
 			return temp.replace(this.pair, function(m, tag, filter, inner) {
 				tag = tag.replace(/%\d+/, '');
+				// Escape child template tags
+				if (tag == '!') {
+					scope.esc = true;
+					return inner.replace(/{{/g, '{~').replace(/}}/g, '~}');
+				}
+
 				var val = scope.get(data, prev, tag, U, init, index),
 					empty = val === false || val == null || val.length === 0,
 					resp = '';
@@ -180,6 +192,10 @@
 					val = scope.get(data, prev, tag, fb, init, index),
 					helpers = segs.length > 1 ? segs.slice(1) : segs;
 
+				if (val === U || typeof val == 'object') {
+					return '';
+				}
+
 				// Process helpers
 				helpers.forEach(function(el) {
 					var arr = el.match(scope.ext);
@@ -204,15 +220,21 @@
 				});
 
 				// Encode output by default
-				if (typeof val == 'string' && helpers.indexOf('raw') == -1) {
-					val = val.replace(/&amp;/g, '&')
-						.replace(/&/g, '&amp;')
-						.replace(/</g, '&lt;')
-						.replace(/>/g, '&gt;')
-						.replace(/"/g, '&quot;');
+				if (typeof val == 'string') {
+					if (helpers.indexOf('raw') == -1) {
+						val = val.replace(/&amp;/g, '&')
+							.replace(/&/g, '&amp;')
+							.replace(/</g, '&lt;')
+							.replace(/>/g, '&gt;')
+							.replace(/"/g, '&quot;');
+					}
+
+					if (val.indexOf('{{') !== -1) {
+						scope.parse(val, data, prev, init, index);
+					}
 				}
 
-				return val === U || typeof val == 'object' ? '' : val;
+				return val;
 			});
 		},
 		get: function(data, prev, key, fb, init, x) {

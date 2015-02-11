@@ -6,7 +6,7 @@ name: Font Selection
 
 | Variable    | Type    | Default | Description       | Required |
 | ----------- | ------- | ------- | ----------------- | -------- |
-| @family     | font    | --      | Font family rules | &#10003; |
+| @family     | font    | --      | Font family rules | ✓ |
 | @size       | unit    | --      | Font size         |          |
 | @weight     | unit    | --      | Font weight       |          |
 | @lineHeight | unit    | --      | Line height       |          |

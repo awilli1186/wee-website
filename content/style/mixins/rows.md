@@ -6,7 +6,7 @@ name: Rows
 
 | Variable | Type       | Default     | Description  | Required |
 | -------- | ---------- | ----------- | ------------ | -------- |
-| @margin  | percentage | @gridMargin | Left margin  | &#10003; |
+| @margin  | percentage | @gridMargin | Left margin  | ✓ |
 
 ---code---
 

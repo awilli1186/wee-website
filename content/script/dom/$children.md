@@ -1,19 +1,29 @@
 ---
 name: $children
-heading: Get children of specified element with optional filter
+heading: Get unique direct children of each matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) of parent | &#10003; |
-| filter   | selector          | --      | Filter selector |          |
+| parent | [selection](/script#selection) | -- | Parent selection | ✓ |
+| filter | [selection](/script#selection) | -- | Filter selection ||
 
----doc---
+---code|label:All Children---
 
-Without a filter the function will return all direct children. Response excludes text and comment nodes.
+Without a filter all direct children will be returned.
 
 ```javascript
-var $lis = Wee.$children('.element', 'li');
+Wee.$children('ref:element');
 ```
+
+---code|label:Filtered---
+
+```javascript
+Wee.$children('ref:element', 'li');
+```
+
+---note---
+
+**Note:** The response excludes text and comment nodes.

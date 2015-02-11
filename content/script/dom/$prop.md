@@ -1,30 +1,37 @@
 ---
 name: $prop
-heading: Get property of specified element or set property with specified value
+heading: Get property of first matching selection or set property of each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description                                                                 | Required |
-| -------- | ----------------- | ------- | --------------------------------------------------------------------------- | -------- |
-| sel      | selector, element | --      | Selector or element                                                         | &#10003; |
-| a        | string, object    | --      | Property name or object of properties                                       | &#10003; |
-| b        | string, callback  | --      | Property value or callback taking the element, index, and existing property |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| a | string, object | -- | Property to get or set or an object | ✓ |
+| b | [function](/script/#functions), string | -- | Value to assign to property ||
 
----code|label:Get|type:string---
+---code|type:string|modifier:split|label:Get---
 
 ```javascript
-Wee.$prop('a', 'href');
+Wee.$prop('ref:element', 'checked');
 ```
 
 ```javascript
-https://www.weepower.com/
+true
 ```
 
----doc|label:Set---
+---code|label:Single---
 
 ```javascript
-Wee.$prop('a', {
-    'href': 'https://www.weepower.com/'
+Wee.$prop('ref:element', 'checked', true);
+```
+
+---code|label:Multiple---
+
+```javascript
+Wee.$prop('ref:element', {
+	checked: true,
+	required: false
 });
 ```

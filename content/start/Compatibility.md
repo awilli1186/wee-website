@@ -1,6 +1,6 @@
 ---
 name: Compatibility
-heading: The following indicates the earliest tested browser versions
+heading: Wee officially supports the following minimum browser versions
 ---
 
 * Android 4.1

@@ -60,8 +60,8 @@
 		parent: function() {
 			return $(W.$parent(this));
 		},
-		contains: function(child) {
-			return W.$contains(this, child);
+		contains: function(desc) {
+			return W.$contains(this, desc);
 		},
 		append: function(child) {
 			W.$append(this, child);

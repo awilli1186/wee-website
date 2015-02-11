@@ -7,7 +7,7 @@ heading: Load specified assets with specified set of options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| conf | object | -- | Object parameters below | &#10003; |
+| conf | object | -- | Object parameters below | ✓ |
 
 ---variables|label:Configuration Object---
 
@@ -15,7 +15,7 @@ heading: Load specified assets with specified set of options
 | -- | -- | -- | -- | -- |
 | async | boolean | true | Load assets asynchronously, only applicable to scripts ||
 | failure | function | -- | Failure [callback](/script/#functions) ||
-| files | string, array | -- | Single file path or array of file paths| &#10003; |
+| files | string, array | -- | Single file path or array of file paths| ✓ |
 | group | string | -- | Optional reference for use with [ready](#ready) ||
 | root | string | -- | Root path or domain override for [root](#root) ||
 | success | function | -- | Success [callback](/script/#functions) ||

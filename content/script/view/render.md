@@ -8,13 +8,13 @@ Render parses your template using a data object.
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| temp | string | -- | Template string | &#10003; |
-| data | object | -- | Data object | &#10003; |
+| temp | string | -- | Template string | ✓ |
+| data | object | -- | Data object | ✓ |
 
----code|modifier:split|type:string---
+---code|modifier:stacked|type:string---
 
 ```javascript
-var template = 'My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}'
+var template = '{{#!}}My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}{{/!}}'
 	data = {
 		firstName: 'John',
 		lastName: 'Smith'

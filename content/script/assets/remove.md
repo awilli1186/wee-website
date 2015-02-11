@@ -7,7 +7,7 @@ heading: Remove one or more files from the DOM
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| files | string, array | -- | Single file path or file array | &#10003; |
+| files | string, array | -- | Single file path or file array | ✓ |
 | root | string | -- | Root path or domain override for [root](#root) ||
 
 ---doc|label:Single File---

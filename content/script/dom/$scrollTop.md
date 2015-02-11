@@ -1,21 +1,25 @@
 ---
 name: $scrollTop
-heading: Get or set the top scroll position of an element
+heading: Get or set the top scroll position of each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description         | Required |
-| -------- | ----------------- | ------- | ------------------- | -------- |
-| sel      | selector, element | --      | Selector or element | &#10003; |
-| val      | integer           | --      | Value to set        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| value | integer | -- | Top position ||
 
----code---
+---code|type:number|modifier:split---
 
 ```javascript
 Wee.$scrollTop();
 ```
 
 ```javascript
-13567
+1560
 ```
+
+---note---
+
+**Note:** The value returned is a unitless pixel value.

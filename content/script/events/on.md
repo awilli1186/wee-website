@@ -7,8 +7,8 @@ heading: Bind specified function to specified element and event
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| a | string, object | -- | Event name or object of events | &#10003; |
+| sel | [selection](/script#selection) | -- | [Wee selection](/script/core#core) | ✓ |
+| a | string, object | -- | Event name or object of events | ✓ |
 | b | callback, object | -- | Event callback or options object ||
 | c | object | -- | Option parameters below ||
 

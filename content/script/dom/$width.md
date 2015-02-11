@@ -1,33 +1,41 @@
 ---
 name: $width
-heading: Get or set the width of a specified element, optionally accounting for margin
+heading: Get or set the width of each matching selection
 ---
 
 ---variables---
 
-| Variable | Type                      | Default | Description                                                            | Required |
-| -------- | ------------------------- | ------- | ---------------------------------------------------------------------- | -------- |
-| sel      | selector, element         | --      | Selector or element                                                    | &#10003; |
-| val      | string, integer, callback | --      | Value to set or callback taking the element, index, and existing value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| value | [function](/script/#functions), string | -- | Width to set or callback | ✓ |
 
----code|label:Get---
+---code|type:number|modifier:split|label:Get---
 
 ```javascript
-Wee.$width('.element');
+Wee.$width('ref:element');
 ```
 
 ```javascript
 100
 ```
 
----doc|label:Set---
+---note---
+
+**Note:** The value returned is a unitless pixel value.
+
+---code|label:Set---
 
 ```javascript
-Wee.$width('.element', '200px');
+Wee.$width('ref:element', '10rem');
 ```
 
+---code|label:Function---
+
+The current index and width are injected into the callback. The scope of ```this``` is the element.
+
 ```javascript
-Wee.$width('.element', function(el, i, width) {
-    // Callback logic
+Wee.$width('ref:element', function(el, i, width) {
+	// Callback logic
 });
 ```

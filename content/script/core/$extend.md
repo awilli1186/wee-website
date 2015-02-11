@@ -1,14 +1,14 @@
 ---
 name: $extend
-heading: Extend specified object with specified source object
+heading: Extend target object with source object
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| obj | object | -- | Target object ||
-| src | object | -- | Source object | &#10003; |
+| target | object | -- | Target object ||
+| source | object | -- | Source object | ✓ |
 | deep | boolean | false | Deep nesting ||
 
 ---code|modifier:split|label:Clone Object---

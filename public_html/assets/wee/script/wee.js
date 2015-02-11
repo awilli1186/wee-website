@@ -18,8 +18,7 @@
 				_slice: [].slice,
 				_win: N,
 
-				// Create namespaced controller with specified name, public object, and optional private object
-				// Returns undefined
+				// Create namespaced controller
 				fn: {
 					make: function(name, pub, priv) {
 						W[name] = (function() {
@@ -88,7 +87,6 @@
 						})();
 					},
 					// Extend existing controller with additional methods and properties
-					// Returns undefined
 					extend: function(a, b, c) {
 						if (W.$isObject(a)) {
 							// Merge into the global object
@@ -106,13 +104,13 @@
 				// Get current environment or detect current environment against specified object
 				// Defaults to local
 				// Returns string|undefined
-				$env: function(obj, def) {
-					if (obj) {
+				$env: function(rules, fallback) {
+					if (rules) {
 						W.$set('_env', function() {
 							var host = location.host;
 
-							Object.keys(obj).foh(function(key) {
-								var el = obj[key];
+							Object.keys(rules).forEach(function(key) {
+								var el = rules[key];
 
 								if (el == host || (W._canExec(el) && W.$exec(el, {
 										args: [host]
@@ -121,23 +119,23 @@
 								}
 							});
 
-							return def || 'local';
+							return fallback || 'local';
 						});
 					}
 
 					return W.$get('_env', 'local');
 				},
-				// Determine if the current environment is secured over https
+				// Determine if the environment is secured over https
 				// Optional url can be passed for evaluation
 				// Returns boolean
 				$envSecure: function(url) {
 					return (url || N.location.href).slice(0, 5) == 'https';
 				},
-				// Get public variable with optional default
+				// Get global variable
 				// Accepts optional boolean to set default value if variable doesn't exist
 				// Options can be passed if default value being set is a callback
 				// Returns mixed
-				$get: function(key, def, set, opt) {
+				$get: function(key, fallback, set, options) {
 					if (key) {
 						var split = W._storeData(key),
 							root = split[0];
@@ -147,16 +145,16 @@
 							return root[key];
 						}
 
-						if (def !== U) {
-							def = W._canExec(def) ?
-								W.$exec(def, opt) || opt :
-								def;
+						if (fallback !== U) {
+							fallback = W._canExec(fallback) ?
+								W.$exec(fallback, options) || options :
+								fallback;
 
 							if (set) {
-								W.$set(key, def);
+								W.$set(key, fallback);
 							}
 
-							return def;
+							return fallback;
 						}
 
 						return null;
@@ -164,20 +162,20 @@
 
 					return _store;
 				},
-				// Set public variable
+				// Set global variable
 				// Options can be passed if value is a callback
 				// Returns mixed
-				$set: function(key, val, opt) {
+				$set: function(key, value, options) {
 					var split = W._storeData(key),
-						set = W._canExec(val) || opt ?
-							W.$exec(val, opt) :
-							val;
+						set = W._canExec(value) || options ?
+							W.$exec(value, options) :
+							value;
 
 					split[0][split[1]] = set;
 
 					return set;
 				},
-				// Push specified value into public array
+				// Push value into global array
 				// Returns array
 				$push: function(key, a, b) {
 					var split = W._storeData(key),
@@ -224,12 +222,12 @@
 				// Arguments and scope can be set in the optional options object
 				// Arguments defaults to an empty array and the scope defaults to null
 				// Returns mixed
-				$exec: function(fn, opt) {
-					opt = opt || {};
+				$exec: function(fn, options) {
+					options = options || {};
 
 					var conf = W.$extend({
 							args: []
-						}, opt),
+						}, options),
 						fns = W.$toArray(fn),
 						len = fns.length,
 						i = 0;
@@ -241,7 +239,7 @@
 							var segs = fn.split(':');
 							fn = W[segs[0]][segs.length > 1 ? segs[1] : 'init'];
 
-							if (! opt.scope) {
+							if (! options.scope) {
 								conf.scope = W[segs[0]];
 							}
 						}
@@ -255,58 +253,60 @@
 						}
 					}
 				},
-				// Determine if specified argument is array
+				// Determine if value is an array
 				// Returns boolean
-				$isArray: function(obj) {
-					return Array.isArray(obj);
+				$isArray: function(value) {
+					return Array.isArray(value);
 				},
-				// Determine if specified element belongs to specified array
+				// Determine if value belongs to array
 				// Returns int|false
-				$inArray: function(obj, el) {
-					var i = obj.indexOf(el);
+				$inArray: function(array, value) {
+					var i = array.indexOf(value);
 					return i < 0 ? false : i;
 				},
 				// Cast object to array if it isn't one
 				// Returns array
-				$toArray: function(obj) {
-					return Array.isArray(obj) ? obj : [obj];
+				$toArray: function(value) {
+					return Array.isArray(value) ? value : [value];
 				},
-				// Determine if specified argument is a string
+				// Determine if value is a string
 				// Returns boolean
-				$isString: function(obj) {
-					return typeof obj == 'string';
+				$isString: function(value) {
+					return typeof value == 'string';
 				},
-				// Determine if specified argument is a function
+				// Determine if value is a function
 				// Returns boolean
-				$isFunction: function(obj) {
-					return obj && {}.toString.call(obj) == '[object Function]';
+				$isFunction: function(value) {
+					return value && {}.toString.call(value) == '[object Function]';
 				},
-				// Determine if specified argument is an object
+				// Determine if value is an object
 				// Returns boolean
-				$isObject: function(obj) {
-					return obj && obj.constructor === Object;
+				$isObject: function(value) {
+					return value && value.constructor === Object;
 				},
 				// Get keys from an object
 				// Returns array
 				// DEPRECATED
-				$getKeys: function(obj) {
-					return Object.keys(obj);
+				$getKeys: function(value) {
+					return Object.keys(value);
 				},
-				// Serialize specified object
+				// Serialize object
 				// Returns string
-				$serialize: function(obj) {
-					return Object.keys(obj).map(function(key) {
-						return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
+				$serialize: function(value) {
+					return Object.keys(value).map(function(key) {
+						if (typeof value[key] == 'string') {
+							return encodeURIComponent(key) + '=' + encodeURIComponent(value[key]);
+						}
 					}).join('&');
 				},
-				// Extend specified object with specified source object
+				// Extend target object with source object
 				// Optionally nest deep with third argument set to true
 				// Returns object
-				$extend: function(obj, src, deep) {
-					obj = obj || {};
+				$extend: function(target, source, deep) {
+					target = target || {};
 
-					if (src) {
-						var keys = Object.keys(src),
+					if (source) {
+						var keys = Object.keys(source),
 							i = 0;
 
 						for (; i < keys.length; i++) {
@@ -315,84 +315,84 @@
 							// Attempt to deep nest else set property of object
 							if (deep) {
 								try {
-									obj[key] = (W.$isObject(obj[key])) ?
-										W.$extend(obj[key], src[key]) :
-										src[key];
+									target[key] = (W.$isObject(target[key])) ?
+										W.$extend(target[key], source[key]) :
+										source[key];
 								} catch (e) {
-									obj[key] = src[key];
+									target[key] = source[key];
 								}
 							} else {
-								obj[key] = src[key];
+								target[key] = source[key];
 							}
 						}
 					}
 
-					return obj;
+					return target;
 				},
-				// Merge specified array with specified source array
+				// Merge source array into target array
 				// Optionally de-duplicate the arrays by passing true
 				// Returns array
-				$merge: function(arr, arr2, dup) {
-					arr = arr.concat(arr2);
-					return dup ? W.$unique(arr) : arr;
+				$merge: function(target, source, unique) {
+					target = target.concat(source);
+					return unique ? W.$unique(target) : target;
 				},
-				// Create new array with only unique values from specified array
+				// Create new array with only unique values from source array
 				// Returns array
-				$unique: function(arr) {
-					return arr.reverse().filter(function(e, i, arr) {
-						return arr.indexOf(e, i + 1) === -1;
+				$unique: function(array) {
+					return array.reverse().filter(function(e, i, array) {
+						return array.indexOf(e, i + 1) === -1;
 					}).reverse();
 				},
 				// Get matches to specified selector
 				// Accepts optional context
 				// Returns array
-				$: function(sel, context) {
+				$: function(selector, context) {
 					var el = null;
 
-					if (typeof sel != 'string') {
-						el = sel;
+					if (typeof selector != 'string') {
+						el = selector;
 					} else {
 						context = context !== U ? W.$first(context) : D;
 
 						// Check for pre-cached element
-						if (sel.indexOf('ref:') === 0) {
-							sel = W.$get(sel);
+						if (selector.indexOf('ref:') === 0) {
+							selector = W.$get(selector);
 
 							// Apply context filter if not document
-							return context === D || ! sel ?
-								sel :
-								sel.filter(function(el) {
+							return context === D || ! selector ?
+								selector :
+								selector.filter(function(el) {
 									return context.contains(el);
 								});
 						}
 
-						if (sel == 'window') {
+						if (selector == 'window') {
 							return [N];
 						}
 
-						if (sel == 'document') {
+						if (selector == 'document') {
 							return [D];
 						}
 
 						if (N.WeeSelector !== U) { // Use third-party selector engine if defined
-							el = N.WeeSelector(sel, context);
+							el = N.WeeSelector(selector, context);
 						} else {
 							context = context !== U ? W.$first(context) : D;
 
 							// Check for advanced query triggers
-							if (sel.indexOf(' ') > 0 || sel.indexOf(':') > -1 || sel.indexOf('[') > -1 || sel.indexOf('#') > -1 || sel.lastIndexOf('.') > 0) {
-								el = context.querySelectorAll(sel);
+							if (selector.indexOf(' ') > 0 || selector.indexOf(':') > -1 || selector.indexOf('[') > -1 || selector.indexOf('#') > -1 || selector.lastIndexOf('.') > 0) {
+								el = context.querySelectorAll(selector);
 							} else {
-								var c = sel.charAt(0);
+								var c = selector.charAt(0);
 
 								if (c == '#') {
-									el = context.getElementById(sel.substr(1));
+									el = context.getElementById(selector.substr(1));
 								} else if (c == '.') {
 									el = W._legacy ?
-										context.querySelectorAll(sel) :
-										context.getElementsByClassName(sel.substr(1));
+										context.querySelectorAll(selector) :
+										context.getElementsByClassName(selector.substr(1));
 								} else {
-									el = context.getElementsByTagName(sel);
+									el = context.getElementsByTagName(selector);
 								}
 							}
 						}
@@ -408,26 +408,25 @@
 
 					return W._slice.call(el, 0);
 				},
-				// Get indexed node of specified element
+				// Get indexed node of matching selection
 				// Returns element
-				$eq: function(sel, i, context) {
-					var el = W.$(sel, context);
-					return el[i < 0 ? el.length + i : i];
+				$eq: function(target, index, context) {
+					var el = W.$(target, context);
+					return el[index < 0 ? el.length + index : index];
 				},
-				// Get first match to specified element
+				// Get the first element of a matching selection
 				// Returns element
-				$first: function(sel, context) {
-					return W.$eq(sel, 0, context);
+				$first: function(target, context) {
+					return W.$eq(target, 0, context);
 				},
-				// Execute specified function for specified elements|selector
+				// Execute function for each matching selection
 				// Options include arguments, context, and scope
-				// Returns undefined
-				$each: function(sel, fn, opt) {
-					if (sel) {
+				$each: function(target, fn, options) {
+					if (target) {
 						var conf = W.$extend({
 								args: []
-							}, opt),
-							els = W._selArray(sel, conf),
+							}, options),
+							els = W._selArray(target, conf),
 							i = 0;
 
 						if (conf.reverse && ! els._$) {
@@ -446,19 +445,19 @@
 				},
 				// Translate items in an array|selection to new array
 				// Returns array
-				$map: function(sel, fn, opt) {
-					if (! Array.isArray(sel)) {
-						sel = W._selArray(sel, opt);
+				$map: function(target, fn, options) {
+					if (! Array.isArray(target)) {
+						target = W._selArray(target, options);
 					}
 
 					var conf = W.$extend({
 							args: []
-						}, opt),
+						}, options),
 						res = [],
 						i = 0;
 
-					for (; i < sel.length; i++) {
-						var el = sel[i],
+					for (; i < target.length; i++) {
+						var el = target[i],
 							val = W.$exec(fn, {
 								args: [el, i].concat(conf.args),
 								scope: conf.scope || el
@@ -471,26 +470,34 @@
 
 					return res;
 				},
-				// Get attribute of first element or set matched elements attribute with specified value
+				// Get attribute of first matching selection or set attribute of each matching selection
 				// Returns string|undefined
-				$attr: function(sel, a, b) {
+				$attr: function(target, a, b) {
 					var obj = W.$isObject(a);
 
 					if (b !== U || obj) {
-						W.$each(sel, function(el) {
+						var func = ! obj && W._canExec(b);
+
+						W.$each(target, function(el, i) {
 							obj ?
 								Object.keys(a).forEach(function(key) {
 									el.setAttribute(key, a[key]);
 								}) :
-								el.setAttribute(a, b);
+								el.setAttribute(a, func ?
+									W.$exec(b, {
+										args: [i, el[a]],
+										scope: el
+									}) :
+									b
+								);
 						});
 					} else {
-						return W.$first(sel).getAttribute(a);
+						return W.$first(target).getAttribute(a);
 					}
 				},
-				// Get data value of first element or set matched elements data with specified value
+				// Get data of first matching selection or set data of each matching selection
 				// Returns string|undefined
-				$data: function(sel, a, b) {
+				$data: function(target, a, b) {
 					if (W.$isObject(a)) {
 						var obj = {};
 
@@ -503,10 +510,9 @@
 						a = 'data-' + a;
 					}
 
-					return W.$attr(sel, a, b);
+					return W.$attr(target, a, b);
 				},
 				// Add metadata variables to datastore
-				// Returns undefined
 				$setVars: function() {
 					W.$each('[data-set]', function(el) {
 						var key = W.$data(el, 'set'),
@@ -517,8 +523,8 @@
 							W.$set(key, val);
 					});
 				},
-				// Add bind elements to datastore
-				// Returns undefined
+				// Add ref elements to datastore
+				// data-bind is DEPRECATED
 				$setRef: function() {
 					W.$each('[data-ref], [data-bind]', function(el) {
 						var ref = el.getAttribute('data-ref');
@@ -536,33 +542,32 @@
 				$chain: function() {},
 				// Determine if value can be executed
 				// Returns boolean
-				_canExec: function(val) {
-					if (W.$isString(val) && val.indexOf(':') !== -1) {
-						var split = val.split(':'),
+				_canExec: function(value) {
+					if (W.$isString(value) && value.indexOf(':') !== -1) {
+						var split = value.split(':'),
 							fn = split[0],
 							method = split[1];
 
 						if (W[fn] && W[fn][method]) {
-							val = W[fn][method];
+							value = W[fn][method];
 						}
 					}
 
-					return W.$isFunction(val);
+					return W.$isFunction(value);
 				},
 				// Convert selection to array
 				// Returns array
-				_selArray: function(sel, opt) {
-					if (sel._$) {
-						return sel;
+				_selArray: function(selector, options) {
+					if (selector._$) {
+						return selector;
 					}
 
-					opt = opt || {};
-					var el = W.$isString(sel) ? W.$(sel, opt.context) : sel;
+					options = options || {};
+					var el = W.$isString(selector) ? W.$(selector, options.context) : selector;
 
 					return el ? W.$toArray(el) : [];
 				},
 				// Execute specified function when document is ready
-				// Returns undefined
 				ready: function(fn) {
 					document.readyState === 'complete' ?
 						W.$exec(fn) :

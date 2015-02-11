@@ -1,18 +1,29 @@
 ---
 name: $filter
-heading: Return a subset of elements based on a specified filter from a specified element
+heading: Return a filtered subset of elements from a matching selection
 ---
 
 ---variables---
 
-| Variable | Type               | Default | Description                                              | Required |
-| -------- | ------------------ | ------- | -------------------------------------------------------- | -------- |
-| sel      | selector, element  | --      | Selector or element                                      | &#10003; |
-| filter   | selector, callback | --      | Filter selector or callback taking the element and index | &#10003; |
-| opt      | object             | --      | Callback arguments                                       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| filter | [function](/script/#functions), [selection](/script#selection) | -- | Filter selection or callback | ✓ |
+| options | object | -- | [Callback options](/script/#functions) ||
 
----doc---
+---code|label:Selection---
 
 ```javascript
-var $filter = Wee.$filter('div', '.element');
+Wee.$filter('ref:element', '.filter');
+```
+
+---code|label:Function---
+
+The current index and element are injected into the callback. The scope of ```this``` is the element.
+
+```javascript
+Wee.$filter('ref:element', function(i, el) {
+	// Return elements containing 'Hello'
+	return $(el).text().indexOf('Hello') !== -1;
+});
 ```

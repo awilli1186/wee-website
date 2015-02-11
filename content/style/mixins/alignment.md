@@ -30,7 +30,7 @@ padding-right: 6%;
 | Variable    | Type    | Default | Description          | Required |
 | ----------- | ------- | ------- | -------------------- | -------- |
 | left, right | keyword | --      | Left or right preset |          |
-| @value      | keyword | --      | Float value          | &#10003; |
+| @value      | keyword | --      | Float value          | ✓ |
 
 ---code---
 
@@ -105,7 +105,7 @@ clear: left;
 
 | Variable                                                    | Type    | Default | Description | Required |
 | ----------------------------------------------------------- | ------- | ------- | ----------- | -------- |
-| center, justify, left, right, baseline, bottom, middle, top | keyword | --      | Orientation | &#10003; |
+| center, justify, left, right, baseline, bottom, middle, top | keyword | --      | Orientation | ✓ |
 
 ---code---
 
@@ -131,7 +131,7 @@ vertical-align: middle;
 
 | Variable | Type    | Default | Description   | Required |
 | -------- | ------- | ------- | ------------- | -------- |
-| @value   | keyword | --      | Display value | &#10003; |
+| @value   | keyword | --      | Display value | ✓ |
 
 ---code---
 

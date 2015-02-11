@@ -24,7 +24,7 @@ width: 30%;
 | Variable | Type       | Default      | Description                | Required |
 | -------- | ---------- | ------------ | ---------------------------| -------- |
 | spaced   | keyword    | --           | Set margin between columns |          |
-| @share   | integer    | --           | Column span                | &#10003; |
+| @share   | integer    | --           | Column span                | ✓ |
 | @columns | integer    | @gridColumns | Number of columns          |          |
 | @margin  | percentage | @gridMargin  | Left margin                |          |
 
@@ -84,7 +84,7 @@ margin-left: 0;
 
 | Variable | Type    | Default      | Description       | Required |
 | -------- | ------- | ------------ | ----------------- | -------- |
-| @share   | integer | --           | Column span       | &#10003; |
+| @share   | integer | --           | Column span       | ✓ |
 | @columns | integer | @gridColumns | Number of columns |          |
 
 ---code---
@@ -114,7 +114,7 @@ position: relative;
 | Variable | Type       | Default           | Description                | Required |
 | -------- | ---------- | ----------------- | -------------------------- | -------- |
 | spaced   | keyword    | --                | Set margin between columns |          |
-| @share   | integer    | --                | Column span                | &#10003; |
+| @share   | integer    | --                | Column span                | ✓ |
 | @columns | integer    | @gridColumns      | Number of columns          |          |
 | @margin  | percentage | (@gridMargin / 2) | Left margin                |          |
 

@@ -1,14 +1,14 @@
 ---
 name: $data
-heading: Get data value of first element or set matched elements data with specified value
+heading: Get data of first matching selection or set data of each matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| a | string, object | -- | Data attribute to get or set or an object | &#10003; |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| a | string, object | -- | Data attribute to get or set or an object | ✓ |
 | b | string | -- | Value to assign to data attribute ||
 
 ---code|label:Get---

@@ -23,7 +23,7 @@ box-shadow: 3px 2px 1px 0 #000;
 | Variable | Type    | Default | Description       | Required |
 | -------- | ------- | ------- | ----------------- | :------: |
 | inner    | keyword | --      | Inner preset      |          |
-| @color   | color   | --      | Shadow color      | &#10003; |
+| @color   | color   | --      | Shadow color      | ✓ |
 | @x       | value   | 1px     | Horizontal offset |          |
 | @y       | value   | 1px     | Vertical offset   |          |
 | @blur    | value   | 0       | Blur distance     |          |
@@ -63,7 +63,7 @@ box-shadow: inset 1px 1px 0 0 #00f;
 
 | Variable    | Type       | Default         | Description          | Required |
 | ----------- | ---------- | --------------- | -------------------- | -------- |
-| light, dark | keyword    | --              | Light or dark preset | &#10003; |
+| light, dark | keyword    | --              | Light or dark preset | ✓ |
 | @value      | percentage | @defaultOpacity | Opacity              |          |
 | @x          | unit       | 1px             | Horizontal offset    |          |
 | @y          | unit       | 1px             | Vertical offset      |          |
@@ -94,8 +94,8 @@ box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.5);
 
 | Variable    | Type       | Default         | Description          | Required |
 | ----------- | ---------- | --------------- | -------------------- | -------- |
-| inner       | keyword    | --              | Inner preset         | &#10003; |
-| light, dark | keyword    | --              | Light or dark preset | &#10003; |
+| inner       | keyword    | --              | Inner preset         | ✓ |
+| light, dark | keyword    | --              | Light or dark preset | ✓ |
 | @opacity    | percentage | @defaultOpacity | Opacity              |          |
 | @x          | unit       | 1px             | Horizontal offset    |          |
 | @y          | unit       | 1px             | Vertical offset      |          |

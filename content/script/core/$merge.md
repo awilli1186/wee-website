@@ -1,15 +1,15 @@
 ---
 name: $merge
-heading: Merge specified array with specified source array
+heading: Merge source array into target array
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| arr | array | -- | Target array| &#10003; |
-| arr2 | array | -- | Source array| &#10003; |
-| dup | boolean | false | Remove duplicates ||
+| target | array | -- | Target array | ✓ |
+| source | array | -- | Source array | ✓ |
+| unique | boolean | false | Remove duplicates ||
 
 ---code|type:array|modifier:split---
 

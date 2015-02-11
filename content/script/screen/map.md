@@ -7,15 +7,15 @@ heading: Watch single or set of screen events with specified options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sets | object, array | -- | Object parameters below | &#10003; |
+| sets | object, array | -- | Object parameters below | ✓ |
 
 ---variables|class:table--variables|label:Set Object---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| callback | function | -- | [Matching callback](/script/#functions) | &#10003; |
-| init | boolean | true | Immediately evaluate breakpoint logic | &#10003; |
-| watch | boolean | true | Evaluate on screen resize | &#10003; |
+| callback | function | -- | [Matching callback](/script/#functions) | ✓ |
+| init | boolean | true | Immediately evaluate breakpoint logic | ✓ |
+| watch | boolean | true | Evaluate on screen resize | ✓ |
 | args | array | -- | Callback arguments ||
 | max | number | -- | Maximum breakpoint value ||
 | min | number | -- | Minimum breakpoint value ||

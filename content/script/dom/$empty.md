@@ -1,16 +1,16 @@
 ---
 name: $empty
-heading: Remove child nodes from specified element
+heading: Remove child nodes from each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description      | Required |
-| -------- | ----------------- | ------- | ---------------- | -------- |
-| sel      | selector, element | --      | Element to empty | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
 
----doc---
+---code---
 
 ```javascript
-Wee.$empty('.element');
+Wee.$empty('ref:element');
 ```

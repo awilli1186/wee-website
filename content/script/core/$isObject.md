@@ -1,13 +1,13 @@
 ---
 name: $isObject
-heading: Determine if specified argument is an object
+heading: Determine if value is an object
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| obj | any  | -- | Value to evaluate | &#10003; |
+| value | any  | -- | Value to evaluate | ✓ |
 
 ---code|type:boolean|modifier:split---
 

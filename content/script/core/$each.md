@@ -1,15 +1,15 @@
 ---
 name: $each
-heading: Execute specified function for specified elements|selector
+heading: Execute function for each matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| fn | callback | -- | Callback function | &#10003; |
-| opt | object | -- | Object properties below ||
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| fn | [function](/script/#functions) | -- | Callback function | ✓ |
+| options | object | -- | Object properties below ||
 
 ---variables|label:Options Object---
 
@@ -22,7 +22,7 @@ heading: Execute specified function for specified elements|selector
 ---code|label:Simple---
 
 ```javascript
-Wee.$each('.js-element', function(el, i) {
+Wee.$each('ref:element', function(el, i) {
 	// Callback logic
 });
 ```
@@ -30,7 +30,7 @@ Wee.$each('.js-element', function(el, i) {
 ---code|label:Advanced---
 
 ```javascript
-Wee.$each('.js-element', function(el, i) {
+Wee.$each('ref:element', function(el, i) {
 	// Callback logic
 }, {
 	reverse: true,
@@ -40,4 +40,4 @@ Wee.$each('.js-element', function(el, i) {
 
 ---note---
 
-**Note:** The element and index are always injected as the first two callback parameters.
+**Note:** The element and index are injected as the first two callback parameters.

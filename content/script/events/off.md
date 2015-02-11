@@ -7,7 +7,7 @@ heading: Remove specified function to specified element and optional event and f
 
 | Variable | Type| Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
+| sel | [selection](/script#selection) | -- | [Wee selection](/script/core#core) | ✓ |
 | a | string | -- | Event name or object of events ||
 | b | callback | -- | Callback to remove ||
 

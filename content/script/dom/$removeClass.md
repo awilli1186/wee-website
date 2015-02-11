@@ -1,23 +1,36 @@
 ---
 name: $removeClass
-heading: Removes specified class from specified element
+heading: Remove classes from each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description                                                                            | Required |
-| -------- | ----------------- | ------- | -------------------------------------------------------------------------------------- | -------- |
-| sel      | selector, element | --      | Selector or element                                                                    | &#10003; |
-| val      | string, callback  | --      | Class name(s) to remove, or callback taking the element, index, and existing classname | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| value | [function](/script/#functions), string | -- | Class name(s) to remove or callback | ✓ |
 
----doc---
+---code|label:Single---
 
-```html
-<div class="element modifier"></div>
+```javascript
+Wee.$removeClass('ref:element', 'modifier');
 ```
+
+---code|label:Multiple---
 
 Separate multiple class names with spaces.
 
 ```javascript
-$('.element').removeClass('modifier element');
+Wee.$removeClass('ref:element', 'modifier modifier2');
+```
+
+---code|label:Function---
+
+The current index and class value are injected into the callback. The scope of ```this``` is the element.
+
+```javascript
+Wee.$removeClass('ref:element', function(i, className) {
+	// Remove an indexed class
+	return className + i;
+});
 ```

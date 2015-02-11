@@ -9,7 +9,7 @@ The ready function will wait for the page to finish loading else immediately exe
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| fn | function, array | -- | Callback [function](/script/#functions)(s) | &#10003; |
+| fn | [function](/script/#functions), array | -- | Document ready function(s) | ✓ |
 
 ---code|modifier:stacked---
 
@@ -21,7 +21,7 @@ Wee.ready(function() {
 
 ```javascript
 Wee.ready([
-	'fn:function',
-	'fn:function2'
+	'controllerName:methodName',
+	'controllerName2:methodName2'
 ]);
 ```

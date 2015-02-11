@@ -6,7 +6,7 @@ name: Padding
 
 | Variable | Type | Default | Description   | Required |
 | -------- | ---- | ------- | ------------- | -------- |
-| @value   | unit | --      | Padding value | &#10003; |
+| @value   | unit | --      | Padding value | ✓ |
 
 ---code---
 
@@ -22,8 +22,8 @@ padding: 5rem;
 
 | Variable                 | Type    | Default | Description   | Required |
 | ------------------------ | ------- | ------- | ------------- | -------- |
-| top, right, bottom, left | keyword | --      | Side presets  | &#10003; |
-| @value                   | unit    | --      | Padding value | &#10003; |
+| top, right, bottom, left | keyword | --      | Side presets  | ✓ |
+| @value                   | unit    | --      | Padding value | ✓ |
 
 ---code---
 
@@ -39,7 +39,7 @@ padding-left: 2rem;
 
 | Variable   | Type    | Default | Description                    | Required |
 | ---------- | ------- | ------- | ------------------------------ | -------- |
-| horizontal | keyword | --      | Sets padding to @bumperPadding | &#10003; |
+| horizontal | keyword | --      | Sets padding to @bumperPadding | ✓ |
 
 ---code---
 
@@ -56,8 +56,8 @@ padding-right: 6%;
 
 | Variable             | Type    | Default | Description                   | Required |
 | -------------------- | ------- | ------- | ----------------------------- | -------- |
-| horizontal, vertical | keyword | --      | Horizontal or vertical preset | &#10003; |
-| @value               | unit    | --      | Padding value                 | &#10003; |
+| horizontal, vertical | keyword | --      | Horizontal or vertical preset | ✓ |
+| @value               | unit    | --      | Padding value                 | ✓ |
 
 ---code---
 
@@ -74,9 +74,9 @@ padding-bottom: 2rem;
 
 | Variable             | Type    | Default | Description                   | Required |
 | -------------------- | ------- | ------- | ----------------------------- | -------- |
-| horizontal, vertical | keyword | --      | Horizontal or vertical preset | &#10003; |
-| @left, @top          | unit    | --      | Left or top padding value     | &#10003; |
-| @right, @bottom      | unit    |--       | Right or bottom padding value | &#10003; |
+| horizontal, vertical | keyword | --      | Horizontal or vertical preset | ✓ |
+| @left, @top          | unit    | --      | Left or top padding value     | ✓ |
+| @right, @bottom      | unit    |--       | Right or bottom padding value | ✓ |
 
 ---code---
 
@@ -93,8 +93,8 @@ padding-right: 3rem;
 
 | Variable    | Type | Default | Description        | Required |
 | ----------- | ---- | ------- | ------------------ | -------- |
-| @vertical   | unit | --      | Vertical padding   | &#10003; |
-| @horizontal | unit | --      | Horizontal padding | &#10003; |
+| @vertical   | unit | --      | Vertical padding   | ✓ |
+| @horizontal | unit | --      | Horizontal padding | ✓ |
 
 ---code---
 
@@ -113,10 +113,10 @@ padding-left: 3rem;
 
 | Variable | Type | Default | Description    | Required |
 | -------- | ---- | ------- | -------------- | -------- |
-| @top     | unit | --      | Top padding    | &#10003; |
-| @right   | unit | --      | Right padding  | &#10003; |
-| @bottom  | unit | --      | Bottom padding | &#10003; |
-| @left    | unit | --      | Left padding   | &#10003; |
+| @top     | unit | --      | Top padding    | ✓ |
+| @right   | unit | --      | Right padding  | ✓ |
+| @bottom  | unit | --      | Bottom padding | ✓ |
+| @left    | unit | --      | Left padding   | ✓ |
 
 ---code---
 

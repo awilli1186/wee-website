@@ -1,6 +1,6 @@
 ---
 name: $get
-heading: Get public variable with optional default
+heading: Get global variable
 ---
 
 ---variables---
@@ -8,9 +8,9 @@ heading: Get public variable with optional default
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | key | string | -- | Storage reference ||
-| def | any | null | Default value if not set ||
+| fallback | any | null | Default value if not set ||
 | set | boolean | false | Set default permanently ||
-| opt | object | -- | [Callback options](/script/#functions) ||
+| options | object | -- | [Callback options](/script/#functions) ||
 
 ---code|modifier:split---
 

@@ -122,7 +122,7 @@
 					xrw = 'X-Requested-With';
 				a.href = conf.url;
 
-				if (a.hostname == Wee._win.location.hostname && ! conf.headers[xrw]) {
+				if (a.hostname == W._win.location.hostname && ! conf.headers[xrw]) {
 					conf.headers[xrw] = 'XMLHttpRequest';
 				}
 

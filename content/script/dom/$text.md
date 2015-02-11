@@ -1,23 +1,44 @@
 ---
 name: $text
-heading: Get text value of specified element or set text with specified value
+heading: Get inner text of first selection or set each matching selection's text
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description                                                   | Required |
-| -------- | ----------------- | ------- | ------------------------------------------------------------- | -------- |
-| sel      | selector, element | --      | Selector or element                                           | &#10003; |
-| val      | string, callback  | --      | Text or callback taking the element, index, and existing text | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| value | [function](/script/#functions), string | -- | Text to set or callback | ✓ |
 
----doc---
+---code---
+
+```html
+<div class="js-element">Inner text</div>
+```
+
+---code|type:string|modifier:split|label:Get---
 
 ```javascript
-var $text = Wee.$text('.element');
+Wee.$text('.js-element');
 ```
 
 ```javascript
-Wee.$text('.element', function(el, i, el.innerText) {
-    // Callback logic
+"Inner text"
+```
+
+---code|label:Set---
+
+```javascript
+Wee.$text('.js-element', 'New text');
+```
+
+---code|label:Function---
+
+The current index and text are injected into the callback. The scope of ```this``` is the element.
+
+```javascript
+Wee.$text('.js-element', function(el, i, text) {
+	// Return uppercase text
+	return text.toUpperCase();
 });
 ```

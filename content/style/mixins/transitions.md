@@ -6,7 +6,7 @@ name: Transitions
 
 | Variable | Type   | Default                   | Description      | Required |
 | -------- | ------ | ------------------------- | ---------------- | -------- |
-| @value   | string | 'all 0.2s ease-in-out 0s' | Transition rules | &#10003; |
+| @value   | string | 'all 0.2s ease-in-out 0s' | Transition rules | ✓ |
 
 ---code---
 

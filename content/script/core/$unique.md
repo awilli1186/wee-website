@@ -1,13 +1,13 @@
 ---
 name: $unique
-heading: Create new array with only unique values from specified array
+heading: Create new array with only unique values from source array
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| arr | array | -- | Value array | &#10003; |
+| array | array | -- | Value array | ✓ |
 
 ---code|type:string|modifier:split---
 

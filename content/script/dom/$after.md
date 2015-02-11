@@ -1,24 +1,34 @@
 ---
 name: $after
-heading: Insert specified element after specified element
+heading: Insert selection or markup after each matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| pos      | selector, element, callback | --      | Target element or callback taking the element, index, and existing HTML | &#10003; |
-| rem      | boolean                     | false   | Remove target after target insertion                                    |          |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✓ |
+| remove | boolean | false | Remove target after insertion ||
 
----doc|modifier:split---
+---code|label:Selection---
 
 ```javascript
-Wee.$after('.first', '.second');
+Wee.$after('ref:element', Wee.$('.js-element'));
 ```
 
+---code|label:Markup---
+
 ```javascript
-Wee.$after('.element', function(el, i, el.innerHTML) {
+Wee.$after('ref:element', '<span>Injected notice</span>');
+```
+
+---code|label:Function---
+
+The current index and HTML are injected into the callback. The scope of ```this``` is the element.
+
+```javascript
+Wee.$after('ref:element', function(i, html) {
     // Callback logic
 });
 ```

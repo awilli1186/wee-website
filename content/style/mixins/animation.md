@@ -6,7 +6,7 @@ name: Animation
 
 | Variable   | Type    | Default | Description     | Required |
 | ---------- | ------- | ------- | --------------- | -------- |
-| @arguments | keyword | --      | Animation rules | &#10003; |
+| @arguments | keyword | --      | Animation rules | ✓ |
 
 ---code---
 

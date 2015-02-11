@@ -1,17 +1,17 @@
 ---
 name: $remove
-heading: Remove specified element from document
+heading: Remove each matching selection from the document
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| sel      | selector, element | --      | Element to remove | &#10003; |
-| context  | selector, element | --      | Context selector  |          |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| context | [selection](/script#selection) | document | Context selection ||
 
----doc---
+---code---
 
 ```javascript
-Wee.$remove('.element');
+Wee.$remove('ref:element');
 ```

@@ -1,16 +1,27 @@
 ---
 name: $position
-heading: Get the position of a specified element
+heading: Get the position of the first matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description         | Required |
-| -------- | ----------------- | ------- | ------------------- | -------- |
-| sel      | selector, element | --      | Selector or element | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
 
----doc---
+---code|type:object|modifier:split---
 
 ```javascript
-var $position = Wee.$position('.element');
+Wee.$position('ref:element');
 ```
+
+```javascript
+{
+	top: 520,
+	left: 30
+}
+```
+
+---note---
+
+**Note:** The object values are returned as unitless pixel values.

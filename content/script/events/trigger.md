@@ -7,8 +7,8 @@ heading: Execute specific element or selector event by name and optional trigger
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| a | string | -- | Event name | &#10003; |
+| sel | [selection](/script#selection) | -- | [Wee selection](/script/core#core) | ✓ |
+| a | string | -- | Event name | ✓ |
 
 ---doc---
 

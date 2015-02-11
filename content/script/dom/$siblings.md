@@ -1,17 +1,25 @@
 ---
 name: $siblings
-heading: Get siblings of specified element with optional filter
+heading: Get unique siblings of each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description     | Required |
-| -------- | ----------------- | ------- | --------------- | -------- |
-| sel      | selector, element | --      | Sibling element | &#10003; |
-| filter   | selector          | --      | Sibling filter  |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| filter | [selection](/script#selection) | -- | Filter selection | ✓ |
 
----doc---
+---code|label:All Children---
+
+Without a filter all siblings will be returned.
 
 ```javascript
-var $lis = Wee.$siblings('.element', 'li');
+Wee.$siblings('ref:element');
+```
+
+---code|label:Filtered---
+
+```javascript
+Wee.$siblings('ref:element', 'li');
 ```

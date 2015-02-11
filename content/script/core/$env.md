@@ -7,8 +7,8 @@ heading: Get current environment or detect current environment against specified
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| obj | object | -- | Environment rules ||
-| def | string | "local" | Default environment ||
+| rules | object | -- | Environment rules ||
+| fallback | string | "local" | Default environment ||
 
 ---doc|label:Set---
 

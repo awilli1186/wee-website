@@ -1,29 +1,41 @@
 ---
 name: $height
-heading: Get or set the height of an element, optionally accounting for margin
+heading: Get or set the height of each matching selection
 ---
 
 ---variables---
 
-| Variable | Type                      | Default | Description                                                            | Required |
-| -------- | ------------------------- | ------- | ---------------------------------------------------------------------- | -------- |
-| sel      | selector, element         | --      | Selector or element                                                    | &#10003; |
-| val      | string, integer, callback | --      | Value to set or callback taking the element, index, and existing value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| value | [function](/script/#functions), string | -- | Height to set or callback | ✓ |
 
----code---
+---code|type:number|modifier:split|label:Get---
 
 ```javascript
-Wee.$height('.element');
+Wee.$height('ref:element');
 ```
 
 ```javascript
 100
 ```
 
----doc---
+---note---
+
+**Note:** The value returned is a unitless pixel value.
+
+---code|label:Set---
 
 ```javascript
-Wee.$height('.element', function(el, i, height) {
+Wee.$height('ref:element', '10rem');
+```
+
+---code|label:Function---
+
+The current index and height are injected into the callback. The scope of ```this``` is the element.
+
+```javascript
+Wee.$height('ref:element', function(i, height) {
 	// Callback logic
 });
 ```

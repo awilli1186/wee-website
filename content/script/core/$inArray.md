@@ -1,14 +1,14 @@
 ---
 name: $inArray
-heading: Determine if specified element belongs to specified array
+heading: Determine if value belongs to array
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| obj | array | -- | Source array | &#10003; |
-| el | any | -- | Value to check | &#10003; |
+| array | array | -- | Source array | ✓ |
+| value | any | -- | Value to check | ✓ |
 
 ---code|modifier:split---
 

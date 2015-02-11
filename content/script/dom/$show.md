@@ -1,18 +1,18 @@
 ---
 name: $show
-heading: Show specified element
+heading: Show each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description        | Required |
-| -------- | ----------------- | ------- | ------------------ | -------- |
-| sel      | selector, element | --      | Element to display | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
 
----doc---
+---code---
 
-Show works by removing the "js-hide" class.
+Show works by removing the ```js-hide``` class which forces the element to hide.
 
 ```javascript
-Wee.$show('.element');
+Wee.$show('ref:element');
 ```

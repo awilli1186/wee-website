@@ -6,7 +6,7 @@ name: Sizing
 
 | Variable              | Type | Default | Description     | Required |
 | --------------------- | ---- | ------- | --------------- | -------- |
-| @value                | unit | --      | Width or Height | &#10003;        |
+| @value                | unit | --      | Width or Height | ✓        |
 | @maxWidth, @maxHeight | unit | --      | Maximum         |          |
 
 ---code---
@@ -27,7 +27,7 @@ max-height: 40%;
 
 | Variable | Type | Default | Description        | Required |
 | -------- | ---- | ------- | ------------------ | -------- |
-| @value   | unit | --      | Minimum or maximum | &#10003;        |
+| @value   | unit | --      | Minimum or maximum | ✓        |
 
 ---code---
 
@@ -57,8 +57,8 @@ min-height: 3rem;
 
 | Variable   | Type | Default | Description | Required |
 | ---------- | ---- | ------- | ----------- | -------- |
-| @width     | unit | --      | Width       | &#10003; |
-| @height    | unit | --      | Height      | &#10003; |
+| @width     | unit | --      | Width       | ✓ |
+| @height    | unit | --      | Height      | ✓ |
 
 ---code---
 
@@ -89,7 +89,7 @@ max-width: 4rem;
 
 | Variable | Type | Default | Description    | Required |
 | -------- | ---- | ------- | -------------- | -------- |
-| @size    | unit | --      | Width &amp; height | &#10003;        |
+| @size    | unit | --      | Width &amp; height | ✓        |
 
 ---code---
 
@@ -146,7 +146,7 @@ div:before {
 
 | Variable  | Type    | Default | Description | Required |
 | --------- | ------- | ------- | ----------- | -------- |
-| @diameter | unit    | --      | Diameter    | &#10003;        |
+| @diameter | unit    | --      | Diameter    | ✓        |
 | @crop     | boolean | false   | Crop        |          |
 
 ---code---

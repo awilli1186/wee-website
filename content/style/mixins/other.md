@@ -6,7 +6,7 @@ name: Other
 
 | Variable | Type    | Default | Description  | Required |
 | -------- | ------- | ------- | ------------ | -------- |
-| @value   | keyword | --      | Resize value | &#10003; |
+| @value   | keyword | --      | Resize value | ✓ |
 
 ---code---
 
@@ -106,7 +106,7 @@ cursor: pointer;
 | Variable | Type    | Default | Description    | Required |
 | -------- | ------- | ------- | -------------- | -------- |
 | x, y     | keyword | --      | Overflow axis  |          |
-| @value   | keyword | --      | Overflow value | &#10003; |
+| @value   | keyword | --      | Overflow value | ✓ |
 
 ---code---
 

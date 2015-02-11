@@ -7,8 +7,8 @@ heading: Execute specified function or controller method
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| fn | function, array | -- | [Function](/script/#functions)(s) to execute | &#10003; |
-| opt | object | -- | Function options below ||
+| fn | [function](/script/#functions), array | -- | Functions to execute | ✓ |
+| options | object | -- | Function options below ||
 
 ---variables---
 
@@ -20,11 +20,11 @@ heading: Execute specified function or controller method
 ---code|modifier:stacked---
 
 ```javascript
-Wee.$exec('controller:function');
+Wee.$exec('controllerName:methodName');
 ```
 
 ```javascript
-Wee.$exec('controller:function', {
+Wee.$exec('controllerName:methodName', {
 	scope: this,
 	args: [
 		'Hello',
@@ -41,7 +41,7 @@ Wee.$exec(function() {
 
 ```javascript
 Wee.$exec([
-	'controller:function',
-	'controller2:function'
+	'controllerName:methodName',
+	'controllerName2:methodName2'
 ]);
 ```

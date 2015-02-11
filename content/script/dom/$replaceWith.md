@@ -1,17 +1,33 @@
 ---
 name: $replaceWith
-heading: Replace specified element with another specified element
+heading: Replace each matching selection with selection or markup
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description         | Required |
-| -------- | ----------------- | ------- | ------------------- | -------- |
-| sel      | selector, element | --      | Element to replace  | &#10003; |
-| pos      | selector, element | --      | Replacement element | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✓ |
 
----doc---
+---code|label:Selection---
 
 ```javascript
-Wee.$replaceWith('.old', '.new');
+Wee.$replaceWith('ref:element', Wee.$('.js-element'));
+```
+
+---code|label:Markup---
+
+```javascript
+Wee.$replaceWith('ref:element', '<span>Replacement element</span>');
+```
+
+---code|label:Function---
+
+The current index and HTML are injected into the callback. The scope of ```this``` is the element.
+
+```javascript
+Wee.$replaceWith('ref:element', function(i, html) {
+    // Callback logic
+});
 ```

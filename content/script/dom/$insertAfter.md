@@ -1,17 +1,17 @@
 ---
 name: $insertAfter
-heading: Insert specified element after specified element
+heading: Insert each matching source selection element after each matching target selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| next     | selector, element | --      | Target element | &#10003; |
-| sel      | selector, element | --      | Source element | &#10003; |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| source | [selection](/script#selection) | -- | Source selection | ✓ |
 
----doc---
+---code---
 
 ```javascript
-Wee.$insertAfter('.second', '.first');
+Wee.$insertAfter('ref:element', '.js-element');
 ```

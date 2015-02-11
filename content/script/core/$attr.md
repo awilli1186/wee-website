@@ -1,23 +1,18 @@
 ---
 name: $attr
-heading: Get attribute of first element or set matched elements attribute with specified value
+heading: Get attribute of first matching selection or set attribute of each matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| a | string, object | -- | Attribute to get or set or an object | &#10003; |
-| b | string | -- | Value to assign to attribute ||
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| a | string, object | -- | Attribute to get or set or an object | ✓ |
+| b | [function](/script/#functions), string | -- | Value to assign to attribute ||
 
----code|label:Get---
 
-```html
-<a href="https://www.weepower.com" data-ref="element">Link</a>
-```
-
----code|type:string|modifier:split---
+---code|type:string|modifier:split|label:Get---
 
 ```javascript
 Wee.$attr('ref:element', 'href');
@@ -27,13 +22,13 @@ Wee.$attr('ref:element', 'href');
 "https://www.weepower.com"
 ```
 
----code|label:Set Single---
+---code|label:Single---
 
 ```javascript
 Wee.$attr('ref:element', 'href', 'https://www.weepower.com/start');
 ```
 
----code|label:Set Multiple---
+---code|label:Multiple---
 
 ```javascript
 Wee.$attr('ref:element', {

@@ -1,18 +1,18 @@
 ---
 name: $slice
-heading: Get subset of matches from index range
+heading: Get subset of selection matches from specified range
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description                                  | Required |
-| -------- | ----------------- | ------- | -------------------------------------------- | -------- |
-| sel      | selector, element | --      | Selector or element                          | &#10003; |
-| start    | integer           | --      | Index at which to start                      |          |
-| end      | integer           | --      | Index at which to end exluding the last item |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| start | integer | -- | Starting index | ✓ |
+| end | integer | -- | Ending index | ✓ |
 
----doc---
+---code---
 
 ```javascript
-var $slice = Wee.$slice('li', 0, 3);
+Wee.$slice('li', 0, 3);
 ```

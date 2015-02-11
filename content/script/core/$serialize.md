@@ -1,13 +1,13 @@
 ---
 name: $serialize
-heading: Serialize specified object
+heading: Serialize object
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| obj | object | -- | Object to serialize | &#10003; |
+| value | object | -- | Object to serialize | ✓ |
 
 ---code|type:string|modifier:split---
 

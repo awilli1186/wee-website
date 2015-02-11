@@ -1,17 +1,17 @@
 ---
 name: $find
-heading: Get matching nodes based on a specified filter within a specified element
+heading: Get unique filtered descendants from each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description     | Required |
-| -------- | ----------------- | ------- | --------------- | -------- |
-| sel      | selector, element | --      | Source element  | &#10003; |
-| filter   | selector          | --      | Filter selector | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| parent | [selection](/script#selection) | -- | Parent selection | ✓ |
+| filter | [selection](/script#selection) | -- | Filter selection | ✓ |
 
----doc---
+---code---
 
 ```javascript
-var $find = Wee.$find('table', 'tr');
+Wee.$find('table', 'tr');
 ```

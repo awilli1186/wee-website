@@ -1,28 +1,28 @@
 ---
 name: $index
-heading: Get the sibling index of a specified element
+heading: Get the index of a matching selection relative to it's siblings
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description     | Required |
-| -------- | ----------------- | ------- | --------------- | -------- |
-| sel      | selector, element | --      | Sibling element | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
 
----doc---
+---code---
 
 ```html
 <ul>
     <li></li>
     <li></li>
-    <li class="last"></li>
+    <li class="js-last"></li>
 </ul>
 ```
 
----code---
+---code|type:number|modifier:split---
 
 ```javascript
-Wee.$index('.last');
+Wee.$index('.js-last');
 ```
 
 ```javascript

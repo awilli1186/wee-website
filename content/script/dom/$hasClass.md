@@ -1,21 +1,35 @@
 ---
 name: $hasClass
-heading: Determine if specified element has specified class
+heading: Determine if the matching selection has a class
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description             | Required |
-| -------- | ----------------- | ------- | ----------------------- | -------- |
-| sel      | selector, element | --      | Selector or element     | &#10003; |
-| val      | string            | --      | Class name to check for | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| className | string | -- | Specific class name(s) | ✓ |
 
----code---
+---code|type:boolean|modifier:split|label:Single---
 
 ```javascript
-$('.element').hasClass('class-name');
+$('ref:element').hasClass('class');
 ```
 
 ```javascript
 false
+```
+
+---doc|label:Multiple---
+
+If any of the class names exist on the selection the response is true.
+
+---code|type:boolean|modifier:split---
+
+```javascript
+$('ref:element').hasClass('class class2');
+```
+
+```javascript
+true
 ```

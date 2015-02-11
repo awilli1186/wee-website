@@ -1,18 +1,22 @@
 ---
 name: $closest
-heading: Get the closest node of element with specified filter
+heading: Get unique closest ancestors of each matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| filter | selection | -- | [Wee selection](/script/core#core) filter | &#10003; |
-| context | selection | -- | [Wee selection](/script/core#core) context ||
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| filter | [selection](/script#selection) | -- | Filter selection | ✓ |
+| context | [selection](/script#selection) | -- | Context selection ||
 
----doc---
+---code---
 
 ```javascript
-var $closest = Wee.$closest('ref:element', '.js-parent');
+Wee.$closest('ref:element', '.js-ancestor');
 ```
+
+---note---
+
+**Note:** This method traverses up the DOM for the closest match so it doesn't match descendents.

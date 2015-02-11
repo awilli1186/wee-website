@@ -8,21 +8,21 @@ This allows the creation of custom filters. Wee's default filters include is, no
 
 | Variable | Type     | Default | Description  | Required |
 | -------- | -------- | ------- | ------------ | -------- |
-| a        | string   | --      | Filter name  | &#10003; |
-| b        | callback | --      | Filter logic | &#10003; |
+| a        | string   | --      | Filter name  | ✓ |
+| b        | callback | --      | Filter logic | ✓ |
 
 ---code---
 
 ```javascript
 Wee.view.addFilter('isNumber', function() {
-	return typeof this.val === 'number';
+	return typeof this.val == 'number';
 });
 ```
 
----code|modifier:split|type:string---
+---code|modifier:stacked|type:string---
 
 ```javascript
-var template = '{{#age|isNumber}}I am {{age}} years old.{{/age}}',
+var template = '{{#!}}{{#age|isNumber}}I am {{age}} years old.{{/age}}{{/!}}',
 	data = {
 		age: 30
 	};

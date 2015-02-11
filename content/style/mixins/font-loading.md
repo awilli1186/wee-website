@@ -6,7 +6,7 @@ name: Font Loading
 
 | Variable | Type             | Default | Description       | Required |
 | -------- | ---------------- | ------- | ----------------- | -------- |
-| @name    | string           | --      | Font family rules | &#10003; |
+| @name    | string           | --      | Font family rules | ✓ |
 | @file    | file             | @name   | Font file         |          |
 | @weight  | integer, keyword | normal  | Font weight       |          |
 | @style   | keyword          | normal  | Font style        |          |

@@ -1,18 +1,24 @@
 ---
 name: $prev
-heading: Get the previous sibling of a specified element
+heading: Get the unique previous sibling of each matching selection
 ---
 
 ---variables---
 
-| Variable | Type               | Default | Description                 | Required |
-| -------- | ------------------ | ------- | --------------------------- | -------- |
-| sel      | selector, element  | --      | Sibling element             | &#10003; |
-| filter   | selector, callback | --      | Filter selector or callback |          |
-| opt      | object             | --      | Callback arguments          |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| filter | [selection](/script#selection) | -- | Filter selection ||
+| options | object | -- | [Callback options](/script/#functions) ||
 
----doc---
+---code|label:Simple---
 
 ```javascript
-var $prev = Wee.$prev('.element');
+Wee.$prev();
+```
+
+---code|label:Filtered---
+
+```javascript
+Wee.$prev('.class');
 ```

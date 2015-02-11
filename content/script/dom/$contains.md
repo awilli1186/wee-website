@@ -1,21 +1,21 @@
 ---
 name: $contains
-heading: Determine if specified parent element contains specified child element
+heading: Determine if any matching parent selection contains descendant selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| sel      | selector, element | --      | Parent element | &#10003; |
-| child    | selector, element | --      | Child element  | &#10003; |
+| -- | -- | -- | -- | -- |
+| parent | [selection](/script#selection) | -- | Parent selection | ✓ |
+| descendant | [selection](/script#selection) | -- | Descendant selection | ✓ |
 
----code|type:boolean---
+---code|type:boolean|modifier:split---
 
 ```javascript
-Wee.$contains('.parent', '.child');
+Wee.$contains('ref:element', '.descendant');
 ```
 
-```html
+```javascript
 true
 ```

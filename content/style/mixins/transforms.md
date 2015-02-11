@@ -6,7 +6,7 @@ name: Transforms
 
 | Variable   | Type     | Default | Description     | Required |
 | ---------- | -------- | ------- | --------------- | -------- |
-| @arguments | keywords | --      | Transform rules | &#10003; |
+| @arguments | keywords | --      | Transform rules | ✓ |
 
 ---code---
 
@@ -80,7 +80,7 @@ transform: skew(30deg, 15deg);
 
 | Variable | Type    | Default | Description   | Required |
 | -------- | ------- | ------- | ------------- | -------- |
-| x, y     | keyword | --      | X or Y preset | &#10003; |
+| x, y     | keyword | --      | X or Y preset | ✓ |
 | @x, @y   | integer | 45      | Vertical skew |          |
 
 ---code---
@@ -99,7 +99,7 @@ transform: skewY(15deg);
 
 | Variable | Type    | Default | Description       | Required |
 | -------- | ------- | ------- | ----------------- | -------- |
-| @x       | integer | --      | Horizontal origin | &#10003; |
+| @x       | integer | --      | Horizontal origin | ✓ |
 | @y       | integer | 0       | Vertical origin   |          |
 
 ---code---

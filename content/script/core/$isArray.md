@@ -1,13 +1,13 @@
 ---
 name: $isArray
-heading: Determine if specified argument is array
+heading: Determine if value is an array
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| obj | any | -- | Value to evaluate | &#10003; |
+| value | any | -- | Value to evaluate | ✓ |
 
 ---code|type:boolean|modifier:split---
 

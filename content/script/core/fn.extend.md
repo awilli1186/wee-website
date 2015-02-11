@@ -7,7 +7,7 @@ heading: Extend existing controller with additional methods and properties
 
 | Variable | Type | Default | Description| Required |
 | -- | -- | -- | -- | -- |
-| a | string, object | -- | Controller namespace or core object | &#10003; |
+| a | string, object | -- | Controller namespace or core object | ✓ |
 | b | object | -- | Public object or private object ||
 | c | object | -- | Private object ||
 

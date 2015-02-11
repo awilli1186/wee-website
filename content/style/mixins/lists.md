@@ -79,7 +79,7 @@ li {
 
 | Variable | Type       | Default | Description      | Required |
 | -------- | ---------- | ------- | ---------------- | -------- |
-| @value   | keyword(s) | --      | List-style rules | &#10003; |
+| @value   | keyword(s) | --      | List-style rules | ✓ |
 
 ---code---
 

@@ -1,15 +1,15 @@
 ---
 name: $eq
-heading: Get indexed node of specified element
+heading: Get indexed node of matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| i | number | -- | Element index | &#10003; |
-| context | selection | document | [Wee selection](/script/core#core) for context ||
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| index | number | -- | Element index | ✓ |
+| context | [selection](/script#selection) | document | Context selection ||
 
 ---code---
 

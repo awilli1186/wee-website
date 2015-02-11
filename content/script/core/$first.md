@@ -1,16 +1,16 @@
 ---
 name: $first
-heading: Get first match to specified element
+heading: Get the first element of a matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| context | selection | document | [Wee selection](/script/core#core) context ||
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| context | [selection](/script#selection) | document | Context selection ||
 
----doc---
+---code---
 
 Works the same as [Wee.$()](#core) but only returns the first result from the result set.
 

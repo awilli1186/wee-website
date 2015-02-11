@@ -1,13 +1,13 @@
 ---
 name: $isFunction
-heading: Determine if specified argument is a function
+heading: Determine if value is a function
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| obj | any  | -- | Value to evaluate | &#10003; |
+| value | any  | -- | Value to evaluate | ✓ |
 
 ---code|type:boolean|modifier:split---
 

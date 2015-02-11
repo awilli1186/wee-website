@@ -1,28 +1,38 @@
 ---
 name: $is
-heading: Determines if a particular element matches a specified criteria
+heading: Determine if the first matching selection matches a specified criteria
 ---
 
 ---variables---
 
-| Variable | Type               | Default | Description                 | Required |
-| -------- | ------------------ | ------- | --------------------------- | -------- |
-| sel      | selector, element  | --      | Selector or element         | &#10003; |
-| filter   | selector, callback | --      | Filter selector or callback | &#10003; |
-| opt      | object             | --      | Callback arguments          |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| filter | [function](/script/#functions), [selection](/script#selection) | -- | Filter selection or callback | ✓ |
+| options | object | -- | [Callback options](/script/#functions) ||
 
----doc---
+---code|label:Selection---
 
 ```html
-<div class="element"></div>
+<div class="js-element"></div>
 ```
 
----code|type:boolean---
+---code|type:boolean|modifier:split---
 
 ```javascript
-Wee.$is('.element', 'div');
+Wee.$is('.js-element', 'div');
 ```
 
 ```javascript
 true
+```
+
+---code|label:Function---
+
+The current element represents the context of the callback.
+
+```javascript
+Wee.$is('ref:element', function() {
+    // Callback logic
+});
 ```

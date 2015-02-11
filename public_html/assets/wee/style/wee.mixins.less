@@ -665,6 +665,7 @@
 		and not (@value = left)
 		and not (@value = vertical)
 		and not (@value = horizontal)
+		and not (iscolor(@value))
 		and not (@value = light)
 		and not (@value = dark) {
 	border: ~'@{value}';

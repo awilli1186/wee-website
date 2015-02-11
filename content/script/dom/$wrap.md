@@ -1,23 +1,27 @@
 ---
 name: $wrap
-heading: Wrap HTML around specified element
+heading: Wrap markup around each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description                                   | Required |
-| -------- | ----------------- | ------- | --------------------------------------------- | -------- |
-| sel      | selector, element | --      | Selector or element                           | &#10003; |
-| html     | string, callback  | --      | HTML or callback taking the element and index | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| html | [function](/script/#functions), string | -- | Wrapper HTML or callback | ✓ |
 
----doc---
+---code|label:Markup---
 
 ```javascript
-Wee.$wrap('.element', '<div></div>');
+Wee.$wrap('ref:element', '<div class="wrapper"></div>');
 ```
 
+---code|label:Function---
+
+The current index is injected into the callback. The scope of ```this``` is the element.
+
 ```javascript
-Wee.$wrap('.element', function(el, i) {
-    // Callback logic
+Wee.$addClass('ref:element', function(i) {
+	// Callback logic
 });
 ```

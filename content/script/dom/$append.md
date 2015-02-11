@@ -1,23 +1,27 @@
 ---
 name: $append
-heading: Append specified child element to parent element
+heading: Append selection or markup after each matching selection
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | [Wee selection](/script/core#core) | &#10003; |
-| child    | selector, element, callback | --      | Child element or callback taking the element, index, and existing HTML | &#10003; |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✓ |
 
----doc|modifier:split---
+---code|label:Selection---
 
 ```javascript
-Wee.$append('.parent', '.child');
+Wee.$append('ref:element', Wee.$('.js-element'));
 ```
 
+---code|label:Function---
+
+The current index and HTML are injected into the callback. The scope of ```this``` is the element.
+
 ```javascript
-Wee.$append('.element', function(el, i, el.innerHTML) {
+Wee.$append('ref:element', function(i, html) {
     // Callback logic
 });
 ```

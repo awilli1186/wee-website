@@ -1,16 +1,23 @@
 ---
 name: $parent
-heading: Get parent of specified element
+heading: Get unique parent from each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description   | Required |
-| -------- | ----------------- | ------- | ------------- | -------- |
-| sel      | selector, element | --      | Child element | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| child | [selection](/script#selection) | -- | Child selection | ✓ |
+| filter | [selection](/script#selection) | -- | Filter selection ||
 
----doc---
+---code|label:All Parents---
 
 ```javascript
-var $parent = Wee.$parent('.element');
+Wee.$parent('ref:element');
+```
+
+---code|label:Filtered---
+
+```javascript
+Wee.$parent('ref:element', 'main');
 ```

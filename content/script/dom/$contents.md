@@ -1,18 +1,20 @@
 ---
 name: $contents
-heading: Get content of specified element
+heading: Get unique content of each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description    | Required |
-| -------- | ----------------- | ------- | -------------- | -------- |
-| sel      | selector, element | --      | Parent element | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| parent | [selection](/script#selection) | -- | Parent selection | ✓ |
 
----doc---
-
-Response including text and comment nodes.
+---code---
 
 ```javascript
-var $content = Wee.$contents('.element');
+Wee.$contents('ref:element');
 ```
+
+---note---
+
+**Note:** The response includes text and comment nodes.

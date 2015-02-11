@@ -1,18 +1,18 @@
 ---
 name: $hide
-heading: Hide specified element
+heading: Hide each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description     | Required |
-| -------- | ----------------- | ------- | --------------- | -------- |
-| sel      | selector, element | --      | Element to hide | &#10003; |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
 
----doc---
+---code---
 
-Hide works by adding the "js-hide" class which forces the element to hide.
+Hide works by adding the ```js-hide``` class which forces the element to hide.
 
 ```javascript
-Wee.$hide('.element');
+Wee.$hide('ref:element');
 ```

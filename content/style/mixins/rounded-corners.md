@@ -23,7 +23,7 @@ border-radius: 3rem;
 
 | Variable                 | Type    | Default | Description  | Required |
 | ------------------------ | ------- | ------- | ------------ | -------- |
-| top, right, bottom, left | keyword | --      | Side presets | &#10003; |
+| top, right, bottom, left | keyword | --      | Side presets | ✓ |
 | @value                   | unit    | 3px     | Radius       |          |
 
 ---code---
@@ -55,8 +55,8 @@ border-bottom-right-radius: 5rem;
 
 | Variable    | Type    | Default | Description           | Required |
 | ----------- | ------- | ------- | --------------------- | -------- |
-| top, bottom | keyword | --      | Top or bottom preset  | &#10003; |
-| left, right | keyword | --      | Left or right  preset | &#10003; |
+| top, bottom | keyword | --      | Top or bottom preset  | ✓ |
+| left, right | keyword | --      | Left or right  preset | ✓ |
 | @value      | unit    | 3px     | Radius                |          |
 
 ---code---
@@ -85,10 +85,10 @@ border-top-right-radius: 4rem;
 
 | Variable | Type | Default | Description   | Required |
 | -------- | ---- | ------- | ------------- | -------- |
-| @top     | unit | --      | Top radius    | &#10003; |
-| @right   | unit | --      | Right radius  | &#10003; |
-| @bottom  | unit | --      | Bottom radius | &#10003; |
-| @left    | unit | --      | Left radius   | &#10003; |
+| @top     | unit | --      | Top radius    | ✓ |
+| @right   | unit | --      | Right radius  | ✓ |
+| @bottom  | unit | --      | Bottom radius | ✓ |
+| @left    | unit | --      | Left radius   | ✓ |
 
 ---code---
 

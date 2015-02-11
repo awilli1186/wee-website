@@ -1,17 +1,17 @@
 ---
 name: $parents
-heading: Get unique ancestors of matched elements with optional filter
+heading: Get unique ancestors of each matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description         | Required |
-| -------- | ----------------- | ------- | ------------------- | -------- |
-| sel      | selector, element | --      | Selector or element | &#10003; |
-| filter   | selector, element | --      | Filter selector     |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| child | [selection](/script#selection) | -- | Child selection | ✓ |
+| filter | [selection](/script#selection) | -- | Filter selection ||
 
----doc---
+---code---
 
 ```javascript
-var $parents = Wee.$parents('.element');
+Wee.$parents('ref:element');
 ```

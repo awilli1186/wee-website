@@ -7,7 +7,7 @@ heading: Get currently bound events to optional specified element, event, and fu
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | selection | -- | Specific [Wee selection](/script/core#core) ||
+| sel | [selection](/script#selection) | -- | Specific [Wee selection](/script/core#core) ||
 | evt | string | -- | Specific event name ||
 | fn | function | -- | Specific callback ||
 

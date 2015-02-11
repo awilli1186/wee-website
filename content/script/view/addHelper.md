@@ -8,13 +8,13 @@ This allows the creation of custom helpers. Properties of the tag that the helpe
 
 | Variable | Type     | Default | Description  | Required |
 | -------- | -------- | ------- | ------------ | -------- |
-| a        | string   | --      | Helper name  | &#10003; |
-| b        | callback | --      | Helper logic | &#10003; |
+| a        | string   | --      | Helper name  | ✓ |
+| b        | callback | --      | Helper logic | ✓ |
 
 ---code---
 
 ```javascript
-Wee.view.addHelper('uppercase', function() {
+Wee.view.addHelper('upper', function() {
 	return this.val.toUpperCase();
 });
 ```
@@ -22,7 +22,7 @@ Wee.view.addHelper('uppercase', function() {
 ---code|modifier:split|type:string---
 
 ```javascript
-var template = 'My name is {{name|uppercase|tag}}.',
+var template = '{{#!}}My name is {{name|upper}}.{{/!}}',
 	data = {
 		name: 'john'
 	};

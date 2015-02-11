@@ -1,14 +1,14 @@
 ---
 name: $push
-heading: Push specified value into public array
+heading: Push value into global array
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | Reference to push the value into | &#10003; |
-| a | string, any | -- | Storage value or key for value | &#10003; |
+| key | string | -- | Reference to push the value into | ✓ |
+| a | string, any | -- | Storage value or key for value | ✓ |
 | b | any | -- | Storage value ||
 
 ---code---

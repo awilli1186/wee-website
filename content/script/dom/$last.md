@@ -1,17 +1,19 @@
 ---
 name: $last
-heading: Get last match of specified element
+heading: Get the last element of a matching selection
 ---
 
 ---variables---
 
-| Variable | Type              | Default | Description      | Required |
-| -------- | ----------------- | ------- | ---------------- | -------- |
-| sel      | selector, element | --      | Last element     | &#10003; |
-| context  | selector, element | --      | Context selector |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| context | [selection](/script#selection) | document | Context selection ||
 
----doc---
+---code---
+
+Works the same as [Wee.$()](#core) but only returns the last result from the result set.
 
 ```javascript
-var $li = Wee.$last('.element li');
+Wee.$last('.js-element li');
 ```

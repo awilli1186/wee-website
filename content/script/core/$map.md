@@ -9,9 +9,9 @@ The callback receives the current element as well as the index.
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sel | array, selection | -- | Array or [Wee selection](/script/core#core) | &#10003; |
-| fn | function | -- | Callback function | &#10003; |
-| opt | object | -- | Callback options below ||
+| target | array, selection | -- | Array or [Wee selection](/script/core#core) | ✓ |
+| fn | function | -- | Callback function | ✓ |
+| options | object | -- | Callback options below ||
 
 ---code|type:array|modifier:split|label:Array---
 

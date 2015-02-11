@@ -6,7 +6,7 @@ name: Opacity
 
 | Variable | Type | Default | Description | Required |
 | -------- | ---- | ------- | ----------- | -------- |
-| @value   | unit | --      | Opacity     | &#10003; |
+| @value   | unit | --      | Opacity     | ✓ |
 
 ---code---
 

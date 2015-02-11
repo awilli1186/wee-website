@@ -1,14 +1,14 @@
 ---
 name: $set
-heading: Set public variable
+heading: Set global variable
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | Storage reference | &#10003; |
-| val | any | -- | Stored value | &#10003; |
+| key | string | -- | Storage reference | ✓ |
+| val | any | -- | Stored value | ✓ |
 | opt | object | -- | [Callback options](/script/#functions) ||
 
 ---code|modifier:split|label:Simple---
