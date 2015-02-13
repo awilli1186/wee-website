@@ -1,5 +1,6 @@
 ---
 name: View
+link: /script/view
 ---
 
 ---methods|modifier:bordered---
@@ -10,17 +11,17 @@ name: View
 
 The view chain method updated the content of a DOM element given a data object.
 
----code|modifier:split---
+---code|modifier:stacked---
 
 ```html
 <div class="element">
-	<span class="{{class}}">{{content}}</span>
+	{{#!}}<span class="{{className}}">{{content}}</span>{{/!}}
 </div>
 ```
 
 ```javascript
 $('.element').render({
-	class: 'dynamic-class',
+	className: 'dynamic-class',
 	content: 'Span contents'
 });
 ```

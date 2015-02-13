@@ -4,8 +4,8 @@
 	W.fn.make('view', {
 		// Render specified data into specified template string
 		// Return string
-		render: function(temp, data) {
-			return this.$private('render', temp, W.$extend({}, data, true));
+		render: function(template, data) {
+			return this.$private('render', template, W.$extend({}, data, true));
 		},
 		// Add template conditional filters
 		addFilter: function(a, b) {
@@ -22,7 +22,7 @@
 	}, {
 		_construct: function() {
 			// Set tag regex
-			this.tags = /{{([#\/])([^{\|\n]+)(\|[^{\n]+)?}}/g;
+			this.tags = /{{([#\/])([^#{\|\n]+)(\|[^{\n]+)?}}/g;
 			this.partial = /{{> (.+?)}}/g;
 			this.pair = /{{#(.+?)(?:|\|([^}]*))}}([\s\S]*?){{\/\1}}/g;
 			this.single = /{{(.+?)}}/g;
@@ -103,6 +103,7 @@
 
 			return temp.replace(this.pair, function(m, tag, filter, inner) {
 				tag = tag.replace(/%\d+/, '');
+
 				// Escape child template tags
 				if (tag == '!') {
 					scope.esc = true;
@@ -173,11 +174,11 @@
 							}
 						}
 					} else if (val !== false) {
-						resp = scope.parse(inner, W.$extend({
+						resp = scope.parse(inner, W.$extend(data, {
 							'.': val,
 							'#': 0,
 							'##': 1
-						}, data), data, init, 0);
+						}), data, init, 0);
 					} else {
 						resp = inner;
 					}

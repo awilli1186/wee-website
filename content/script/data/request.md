@@ -14,11 +14,11 @@ heading: Make Ajax request based on specified options
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | url | string | -- | URL endpoint to request | ✓ |
-| args | array | -- | Callback arguments ||
+| args | array | -- | Callback arguments appended after default parameters ||
 | data | object | -- | Object to serialize and pass along with request ||
 | failure | function | -- | [Callback](/script/#functions) if request fails ||
 | headers | object | -- | {key: val} object of request headers ||
-| json | boolean | false | Evaluate the response as JSON ||
+| json | boolean | false | Evaluate the response as JSON and return object ||
 | jsonp | boolean, string | false | Boolean or override name for callback query string parameter ||
 | method | string | get | Request verb (get, post, put, etc) in lowercase ||
 | scope | object | -- | Callback scope ||
@@ -40,7 +40,7 @@ Wee.data.request({
 
 ---code|label:Get & Render---
 
-Retrieve JSON and immediately [render](/script/view/#render) it into a template. No need to set the json parameter to true, it's assumed. A third callback parameter is injected with the raw JSON response. The [view](/script/view) script is required.
+Retrieve JSON and immediately [render](/script/view/#render) it into a template. No need to set the json parameter to true, it's assumed. The rendered template is returned as the first callback argument and the third argument represents the raw JSON response. The [view](/script/view) script is required.
 
 ```javascript
 {
@@ -56,7 +56,7 @@ Retrieve JSON and immediately [render](/script/view/#render) it into a template.
 ```javascript
 Wee.data.request({
 	url: '/samples/test.json',
-	template: 'Hey {{person.firstName||Guest}}',
+	template: 'Hey {{#!}}{{person.firstName||Guest}}{{/!}}',
 	success: function(data, xhr, json) {
 		console.log(data);
 		console.log(json);

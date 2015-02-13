@@ -10,7 +10,7 @@ heading: Get global variable
 | key | string | -- | Storage reference ||
 | fallback | any | null | Default value if not set ||
 | set | boolean | false | Set default permanently ||
-| options | object | -- | [Callback options](/script/#functions) ||
+| options | object | -- | [Callback options](/script#functions) ||
 
 ---code|modifier:split---
 

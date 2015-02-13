@@ -1,5 +1,6 @@
 ---
 name: Events
+link: /script/events
 ---
 
 ---methods|modifier:bordered---

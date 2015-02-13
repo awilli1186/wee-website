@@ -360,7 +360,7 @@
 		$is: function(target, filter, options) {
 			var el = W.$first(target);
 
-			if (typeof filter == 'string' && filter.indexOf('ref:') === 0) {
+			if (typeof filter == 'string' && filter.slice(0, 4) == 'ref:') {
 				filter = W.$get(filter);
 				return filter ? filter.indexOf(el) !== -1 : false;
 			}
@@ -458,7 +458,7 @@
 
 			return W.$unique(arr);
 		},
-		// Convert HTML to a DOM object
+		// Create a DOM object from an HTML string
 		// Returns element
 		$parseHTML: function(html, convert) {
 			var el = W._doc.createElement('div');

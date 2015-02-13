@@ -3,12 +3,12 @@
 
 	W.fn.make('data', {
 		// Make Ajax request based on specified options
-		request: function(opt) {
+		request: function(options) {
 			var conf = W.$extend({
 					args: [],
 					data: {},
 					headers: {}
-				}, opt);
+				}, options);
 
 			if (conf.cache === false) {
 				conf.data.dt = new Date().getTime();

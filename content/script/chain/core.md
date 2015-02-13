@@ -1,5 +1,6 @@
 ---
 name: Core
+link: /script/core
 ---
 
 ---methods|modifier:bordered---

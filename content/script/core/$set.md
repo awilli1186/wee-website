@@ -9,7 +9,7 @@ heading: Set global variable
 | -- | -- | -- | -- | -- |
 | key | string | -- | Storage reference | ✓ |
 | val | any | -- | Stored value | ✓ |
-| opt | object | -- | [Callback options](/script/#functions) ||
+| opt | object | -- | [Callback options](/script#functions) ||
 
 ---code|modifier:split|label:Simple---
 

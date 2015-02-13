@@ -6,8 +6,8 @@
 			E.on(this, a, b, c);
 			return this;
 		},
-		off: function(evts, opt) {
-			E.off(this, evts, opt);
+		off: function(events, options) {
+			E.off(this, events, options);
 			return this;
 		},
 		// DEPRECATED
@@ -15,8 +15,8 @@
 			E.one(this, a, b, c);
 			return this;
 		},
-		trigger: function(evt) {
-			E.trigger(this, evt);
+		trigger: function(event) {
+			E.trigger(this, event);
 			return this;
 		}
 	});

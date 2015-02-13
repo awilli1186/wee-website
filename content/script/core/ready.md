@@ -21,7 +21,7 @@ Wee.ready(function() {
 
 ```javascript
 Wee.ready([
-	'controllerName:methodName',
-	'controllerName2:methodName2'
+	'routes:run',
+	'controllerName:methodName'
 ]);
 ```

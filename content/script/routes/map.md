@@ -16,7 +16,7 @@ Arguments can be nested as deep as necessary. Pass true as the second argument t
 
 ```javascript
 Wee.routes.map({
-	'$any': 'common:init',
+	'$any': 'common',
 	'script': {
 		'routes': function() {
 			// Current page
@@ -41,7 +41,7 @@ Wee.routes.map();
 
 ```javascript
 {
-	"$any": "common:init",
+	"$any": "common",
 	"script": {
 		"routes": function(){}
 	}

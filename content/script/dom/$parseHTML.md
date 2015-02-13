@@ -1,6 +1,6 @@
 ---
 name: $parseHTML
-heading: Convert HTML to a DOM object
+heading: Create a DOM object from an HTML string
 ---
 
 ---variables---
@@ -13,5 +13,6 @@ heading: Convert HTML to a DOM object
 ---code---
 
 ```javascript
-Wee.$parseHTML('<div>Testing</div>');
+var newElem = Wee.$parseHTML('<span class="testing">Testing</span>');
+Wee.$hasClass(newElem, 'testing');
 ```

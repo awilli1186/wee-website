@@ -1,5 +1,6 @@
 ---
 name: DOM
+link: /script/dom
 ---
 
 ---methods|modifier:bordered---

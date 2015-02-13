@@ -355,7 +355,7 @@
 						context = context !== U ? W.$first(context) : D;
 
 						// Check for pre-cached element
-						if (selector.indexOf('ref:') === 0) {
+						if (selector.slice(0, 4) == 'ref:') {
 							selector = W.$get(selector);
 
 							// Apply context filter if not document
@@ -377,8 +377,6 @@
 						if (N.WeeSelector !== U) { // Use third-party selector engine if defined
 							el = N.WeeSelector(selector, context);
 						} else {
-							context = context !== U ? W.$first(context) : D;
-
 							// Check for advanced query triggers
 							if (selector.indexOf(' ') > 0 || selector.indexOf(':') > -1 || selector.indexOf('[') > -1 || selector.indexOf('#') > -1 || selector.lastIndexOf('.') > 0) {
 								el = context.querySelectorAll(selector);

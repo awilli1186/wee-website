@@ -68,19 +68,25 @@ Wee.fn.make('common', {
 	matchBlocks: function() {
 		var $link = $('.intro__link');
 
-		if ($link) {
+		if ($link.length) {
 			Wee.data.request({
 				url: '/assets/js/map.json',
 				json: true,
-				success: function(data) {
-					var file = $link.attr('href'),
-						segment = Wee.routes.segments(1);
+				success: function(json) {
+					var href = $link.attr('href'),
+						split = href.split('/'),
+						section = split.slice(-2, -1),
+						file = split.slice(-1),
+						data = json[section][file];
 
-					if (segment == 'script') {
-						$('doc__title').each(function () {
-
-						});
-					}
+					$('.doc__anchor').each(function(el) {
+						var $this = $(el),
+							id = $this.attr('id');
+console.log(data);
+						if (data[id]) {
+							$this.parent().append('<a href="' + href + '#L' + data[id] + '" class="doc__link">→</a>');
+						}
+					});
 				}
 			});
 		}

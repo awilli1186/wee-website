@@ -11,7 +11,11 @@ heading: Extend target object with source object
 | source | object | -- | Source object | ✓ |
 | deep | boolean | false | Deep nesting ||
 
----code|modifier:split|label:Clone Object---
+---doc|label:Clone Object---
+
+By extending a source into a blank target you have the ability to clone an object.
+
+---code|modifier:split---
 
 ```javascript
 var obj = {
@@ -19,7 +23,7 @@ var obj = {
 	key2: 'val2'
 };
 
-Wee.$extend({}, obj);
+Wee.$extend({}, obj, true);
 ```
 
 ```javascript
