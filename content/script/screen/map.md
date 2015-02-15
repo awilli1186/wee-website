@@ -27,7 +27,7 @@ heading: Watch single or set of screen events with specified options
 
 You can setup as many breakpoint sets as you need. They are added to a global window resize event that evaluates against all stored rules.
 
----doc|label:Single---
+---code|label:Single---
 
 ```javascript
 Wee.screen.map({
@@ -51,7 +51,7 @@ An object with the direction, size, previous size, and init status is passed as 
 | prev | number | 1-6 representing previous value |
 | init | boolean | true if run initially, else false |
 
----doc|label:Multiple---
+---code|label:Multiple---
 
 ```javascript
 Wee.screen.map([

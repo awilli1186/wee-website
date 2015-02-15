@@ -4,9 +4,9 @@ name: Other
 
 ---variables|label:Resize---
 
-| Variable | Type    | Default | Description  | Required |
-| -------- | ------- | ------- | ------------ | -------- |
-| @value   | keyword | --      | Resize value | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | -- | Resize value | ✓ |
 
 ---code---
 
@@ -20,9 +20,9 @@ resize: horizontal;
 
 ---variables|label:Resizable---
 
-| Variable | Type    | Default | Description  | Required |
-| -------- | ------- | ------- | ------------ | -------- |
-| @value   | keyword | both    | Resize value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | both | Resize value ||
 
 ---code---
 
@@ -61,10 +61,10 @@ white-space: nowrap;
 
 ---variables|label:Selection---
 
-| Variable    | Type                   | Default              | Description          | Required |
-| ----------- | ---------------------- | -------------------- | -------------------- | -------- |
-| @color      | color                  | @selectionColor      | Selection color      |          |
-| @background | color, string, keyword | @selectionBackground | Selection background |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | @selectionColor | Selection color ||
+| @background | color, string, keyword | @selectionBackground | Selection background ||
 
 ---code---
 
@@ -87,9 +87,9 @@ white-space: nowrap;
 
 ---variables|label:Cursor---
 
-| Variable | Type    | Default | Description  | Required |
-| -------- | ------- | ------- | ------------ | -------- |
-| @value   | keyword | pointer | Cursor value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | pointer | Cursor value ||
 
 ---code---
 
@@ -103,10 +103,10 @@ cursor: pointer;
 
 ---variables|label:Overflow---
 
-| Variable | Type    | Default | Description    | Required |
-| -------- | ------- | ------- | -------------- | -------- |
-| x, y     | keyword | --      | Overflow axis  |          |
-| @value   | keyword | --      | Overflow value | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| x, y | keyword | -- | Overflow axis ||
+| @value | keyword | -- | Overflow value | ✓ |
 
 ---code---
 
@@ -130,10 +130,10 @@ overflow-x: scroll;
 
 ---variables---
 
-| Variable | Type    | Default | Description      | Required |
-| -------- | ------- | ------- | ---------------- | -------- |
-| @x       | keyword | --      | Overflow-x value |          |
-| @y       | keyword | --      | Overflow-y value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @x | keyword | -- | Overflow-x value ||
+| @y | keyword | -- | Overflow-y value ||
 
 ---code---
 
@@ -148,10 +148,10 @@ overflow-y: scroll;
 
 ---variables|label:Crop &amp; Scroll---
 
-| Variable             | Type    | Default | Description                   | Required |
-| -------------------- | ------- | ------- | ----------------------------- | -------- |
-| horizontal, vertical | keyword | --      | Horizontal or vertical preset |          |
-| @value               | keyword | true    | Overflow value                |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| horizontal, vertical | keyword | -- | Horizontal or vertical preset ||
+| @value | keyword | true | Overflow value ||
 
 ---code---
 
@@ -195,10 +195,10 @@ overflow-x: scroll;
 
 ---variables|label:Fill---
 
-| Variable                   | Type           | Default | Description                          | Required |
-| -------------------------- | -------------- | ------- | ------------------------------------ | -------- |
-| horizontal, vertical, both | keyword        | --      | Horizontal, vertical, or both preset |          |
-| @value                     | keyword, color | true    | Fill value                           |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| horizontal, vertical, both | keyword | -- | Horizontal, vertical, or both preset ||
+| @value | keyword, color | true | Fill value ||
 
 ---code---
 

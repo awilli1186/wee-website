@@ -29,10 +29,21 @@ true
 
 ---code|label:Function---
 
-The current element represents the context of the callback.
+The current index and element are injected into the callback. The scope of ```this``` is the element.
+
+```html
+<div data-ref="element" data-active="true">
+```
+
+---code|type:boolean|modifier:split---
 
 ```javascript
 Wee.$is('ref:element', function() {
-    // Callback logic
+	// Check to see if data-active is set true
+	return Wee.$data(this, 'active' === 'true';
 });
+```
+
+```javascript
+true
 ```

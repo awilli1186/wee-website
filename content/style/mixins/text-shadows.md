@@ -4,9 +4,9 @@ name: Text Shadows
 
 ---variables---
 
-| Variable | Type            | Default                                      | Description       | Required |
-| -------- | --------------- | -------------------------------------------- | ----------------- | -------- |
-| @value   | string, keyword | '1px 1px 0 rgba(0, 0, 0, @{defaultOpacity})' | Text shadow rules |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | string, keyword | '1px 1px 0 rgba(0, 0, 0, @{defaultOpacity})' | Text shadow rules ||
 
 ---code---
 
@@ -20,13 +20,13 @@ text-shadow: 2px 1px 0 #000;
 
 ---variables---
 
-| Variable | Type    | Default | Description       | Required |
-| -------- | ------- | ------- | ----------------- | -------- |
-| inner    | keyword | --      | Inner preset      |          |
-| @color   | color   | --      | Shadow color      | ✓ |
-| @x       | value   | 1px     | Horizontal offset |          |
-| @y       | value   | 1px     | Vertical offset   |          |
-| @blur    | value   | 0       | Blur distance     |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| inner | keyword | -- | Inner preset ||
+| @color | color | -- | Shadow color | ✓ |
+| @x | value | 1px | Horizontal offset ||
+| @y | value | 1px | Vertical offset ||
+| @blur | value | 0 | Blur distance ||
 
 ---code---
 
@@ -50,14 +50,14 @@ text-shadow: -1px -1px 0 #00f;
 
 ---variables---
 
-| Variable         | Type    | Default         | Description          | Required |
-| ---------------- | ------- | --------------- | -------------------- | -------- |
-| inner            | keyword | --              | Inner preset         |          |
-| light, dark      | keyword | --              | Light or dark preset | ✓ |
-| @value, @opacity | number  | @defaultOpacity | Opacity              |          |
-| @x               | unit    | 1px             | Horizontal offset    |          |
-| @y               | unit    | 1px             | Vertical offset      |          |
-| @blur            | unit    | 0               | Blur                 |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| inner | keyword | -- | Inner preset ||
+| light, dark | keyword | -- | Light or dark preset | ✓ |
+| @value, @opacity | number | @defaultOpacity | Opacity ||
+| @x | unit | 1px | Horizontal offset ||
+| @y | unit | 1px | Vertical offset ||
+| @blur | unit | 0 | Blur ||
 
 ---code---
 

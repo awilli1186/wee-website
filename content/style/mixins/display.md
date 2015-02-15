@@ -25,9 +25,9 @@ visibility: visible;
 ---variables|label:Block---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| @width   | unit | --      | Width       | ✓ |
-| @height  | unit | --      | Height      |          |
+| -- | -- | -- | -- | -- |
+| @width | unit | -- | Width | ✓ |
+| @height | unit | -- | Height ||
 
 ---code---
 
@@ -43,9 +43,9 @@ height: 3rem;
 
 ---variables|label:Spaced---
 
-| Variable | Type | Default            | Description   | Required |
-| -------- | ---- | ------------------ | ------------- | -------- |
-| @margin  | unit | @blockMarginBottom | Bottom margin |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @margin | unit | @blockMarginBottom | Bottom margin ||
 
 ---code---
 
@@ -59,11 +59,11 @@ margin-bottom: 0.5rem;
 
 ---variables|label:Spaced Block---
 
-| Variable | Type | Default            | Description   | Required |
-| -------- | ---- | ------------------ | ------------- | -------- |
-| @margin  | unit | @blockMarginBottom | Bottom margin |          |
-| @width   | unit | --                 | Width         |          |
-| @height  | unit | --                 | Height        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @margin | unit | @blockMarginBottom | Bottom margin ||
+| @width | unit | -- | Width ||
+| @height | unit | -- | Height ||
 
 ---code---
 
@@ -80,9 +80,9 @@ height: 4rem;
 
 ---variables|label:Box-Sizing---
 
-| Variable | Type    | Default    | Description      | Required |
-| -------- | ------- | ---------- | ---------------- | -------- |
-| @val     | keyword | border-box | Box-sizing value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @val | keyword | border-box | Box-sizing value ||
 
 ---code---
 

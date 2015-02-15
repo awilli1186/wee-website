@@ -22,12 +22,21 @@ Wee.$val('ref:element');
 Wee.$val('ref:element', '123');
 ```
 
----code|label:Function---
+---code|modifier:stacked|label:Function---
 
 The current index and value are injected into the callback. The scope of ```this``` is the element.
 
+```html
+<input type="text" value="This is an ordinary sentence in an input field." data-ref="input">
+```
+
 ```javascript
-Wee.$val('ref:element', function(i, value) {
-    // Callback logic
+Wee.$val('ref:input', function(i, value) {
+	// Check the length of the current value but don't change the value
+	if (value.length > 20) {
+		alert('Getting long winded, aren\'t we?');
+	}
+
+	return value;
 });
 ```

@@ -4,10 +4,10 @@ name: Content
 
 ---variables---
 
-| Variable | Type            | Default | Description | Required |
-| -------- | --------------- | ------- | ----------- | -------- |
-| @value   | string, keyword | ' '     | Content     |          |
-| @font    | string, keyword | false   | Font family |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | string, keyword | ' ' | Content ||
+| @font | string, keyword | false | Font family ||
 
 ---code---
 
@@ -32,12 +32,12 @@ font-family: georgia;
 
 ---variables|label:Prefix, Suffix &amp; Bookends---
 
-| Variable | Type            | Default | Description | Required |
-| -------- | --------------- | ------- | ----------- | -------- |
-| @value   | string, keyword | '-'     | Content     |          |
-| @margin  | unit            | 0.5em   | Margin      |          |
-| @font    | string, keyword | false   | Font family |          |
-| @color   | color           | false   | Font color  |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | string, keyword | '-' | Content ||
+| @margin | unit | 0.5em | Margin ||
+| @font | string, keyword | false | Font family ||
+| @color | color | false | Font color ||
 
 ---code---
 

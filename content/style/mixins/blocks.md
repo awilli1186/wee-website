@@ -4,10 +4,10 @@ name: Blocks
 
 ---variables|label:Centered Block---
 
-| Variable  | Type | Default | Description   | Required |
-| --------- | ---- | ------- | ------------- | -------- |
-| @maxWidth | unit | --      | Maximum width |          |
-| @margin   | unit | --      | Bottom margin |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @maxWidth | unit | -- | Maximum width ||
+| @margin | unit | -- | Bottom margin ||
 
 ---code---
 

@@ -1,6 +1,6 @@
 ---
 name: $offset
-heading: Get the offset position of a matching selection
+heading: Get the offset position of a matching selection relative to the document
 ---
 
 ---variables---

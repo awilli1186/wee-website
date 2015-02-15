@@ -11,7 +11,6 @@ heading: Get attribute of first matching selection or set attribute of each matc
 | a | string, object | -- | Attribute to get or set or an object | ✓ |
 | b | [function](/script/#functions), string | -- | Value to assign to attribute ||
 
-
 ---code|type:string|modifier:split|label:Get---
 
 ```javascript

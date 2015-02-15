@@ -10,7 +10,7 @@ heading: Retrieve or add route endpoints to route storage
 | routes | object| -- | Mapping object ||
 | init | boolean | false | Immediately evaluate routes ||
 
----doc|label:Set---
+---code|label:Set---
 
 Arguments can be nested as deep as necessary. Pass true as the second argument to immediately evaluate the specified routes from the first argument.
 
@@ -48,7 +48,7 @@ Wee.routes.map();
 }
 ```
 
----doc|label:Advanced---
+---code|label:Advanced---
 
 ```javascript
 Wee.routes.map({

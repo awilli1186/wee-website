@@ -10,7 +10,6 @@ heading: Add classes to each matching selection
 | target | [selection](/script#selection) | -- | Target selection | ✓ |
 | value | [function](/script/#functions), string | -- | Class name(s) to add or callback | ✓ |
 
-
 ---code|label:Single---
 
 ```javascript

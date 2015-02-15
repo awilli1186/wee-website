@@ -4,9 +4,9 @@ name: Rounded Corners
 
 ---variables---
 
-| Variable | Type | Default | Description    | Required |
-| -------- | ---- | ------- | -------------- | -------- |
-| @value   | unit | 3px     | Size of radius |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | unit | 3px | Size of radius ||
 
 ---code---
 
@@ -21,10 +21,10 @@ border-radius: 3rem;
 
 ---variables---
 
-| Variable                 | Type    | Default | Description  | Required |
-| ------------------------ | ------- | ------- | ------------ | -------- |
-| top, right, bottom, left | keyword | --      | Side presets | ✓ |
-| @value                   | unit    | 3px     | Radius       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| top, right, bottom, left | keyword | -- | Side presets | ✓ |
+| @value | unit | 3px | Radius ||
 
 ---code---
 
@@ -53,11 +53,11 @@ border-bottom-right-radius: 5rem;
 
 ---variables---
 
-| Variable    | Type    | Default | Description           | Required |
-| ----------- | ------- | ------- | --------------------- | -------- |
-| top, bottom | keyword | --      | Top or bottom preset  | ✓ |
-| left, right | keyword | --      | Left or right  preset | ✓ |
-| @value      | unit    | 3px     | Radius                |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| top, bottom | keyword | -- | Top or bottom preset | ✓ |
+| left, right | keyword | -- | Left or right  preset | ✓ |
+| @value | unit | 3px | Radius ||
 
 ---code---
 
@@ -83,12 +83,12 @@ border-top-right-radius: 4rem;
 
 ---variables---
 
-| Variable | Type | Default | Description   | Required |
-| -------- | ---- | ------- | ------------- | -------- |
-| @top     | unit | --      | Top radius    | ✓ |
-| @right   | unit | --      | Right radius  | ✓ |
-| @bottom  | unit | --      | Bottom radius | ✓ |
-| @left    | unit | --      | Left radius   | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @top | unit | -- | Top radius | ✓ |
+| @right | unit | -- | Right radius | ✓ |
+| @bottom | unit | -- | Bottom radius | ✓ |
+| @left | unit | -- | Left radius | ✓ |
 
 ---code---
 

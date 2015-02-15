@@ -13,7 +13,7 @@ heading: Extend target object with source object
 
 ---doc|label:Clone Object---
 
-By extending a source into a blank target you have the ability to clone an object.
+If the first argument is an empty object literal, the second object will be cloned.
 
 ---code|modifier:split---
 

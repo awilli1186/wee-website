@@ -359,11 +359,13 @@
 							selector = W.$get(selector);
 
 							// Apply context filter if not document
-							return context === D || ! selector ?
-								selector :
-								selector.filter(function(el) {
-									return context.contains(el);
-								});
+							return selector ?
+								context === D ?
+									selector :
+									selector.filter(function(el) {
+										return context.contains(el);
+									}) :
+								[];
 						}
 
 						if (selector == 'window') {
@@ -523,21 +525,34 @@
 				},
 				// Add ref elements to datastore
 				// data-bind is DEPRECATED
-				$setRef: function() {
-					W.$each('[data-ref], [data-bind]', function(el) {
-						var ref = el.getAttribute('data-ref');
+				$setRef: function(context) {
+					var els = W.$get('ref');
+					context = context || D;
 
-						if (ref == null) {
-							ref = el.getAttribute('data-bind');
-						}
+					if (els) {
+						els.forEach(function(el) {
+							if (context.contains(el)) {
+								W.$set('ref');
+							}
+						});
+					}
+
+					W.$each('[data-ref], [data-bind]', function(el) {
+						var ref = W._getRef(el);
 
 						ref.split(/\s+/).forEach(function(val) {
 							W.$push('ref', val, [el]);
 						});
+					}, {
+						context: context
 					});
 				},
 				// Fallback for non-existent chaining
 				$chain: function() {},
+				// Get ref falling back to deprecated bind attribute
+				_getRef: function(el) {
+					return el.getAttribute('data-ref') || el.getAttribute('data-bind');
+				},
 				// Determine if value can be executed
 				// Returns boolean
 				_canExec: function(value) {
@@ -567,7 +582,7 @@
 				},
 				// Execute specified function when document is ready
 				ready: function(fn) {
-					document.readyState === 'complete' ?
+					D.readyState === 'complete' ?
 						W.$exec(fn) :
 						W._legacy ?
 							D.attachEvent('onreadystatechange', function() {

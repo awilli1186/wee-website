@@ -4,9 +4,9 @@ name: Colors
 
 ---variables---
 
-| Variable | Type  | Default    | Description | Required |
-| -------- | ----- | ---------- | ----------- | -------- |
-| @color   | color | @baseColor | Color value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | @baseColor | Color value ||
 
 ---code---
 

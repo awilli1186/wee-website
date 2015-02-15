@@ -13,10 +13,27 @@ heading: Get unique closest ancestors of each matching selection
 
 ---code---
 
+```html
+<div class="nav">
+	<a class="link--account">Your Account</a>
+</div>
+<div class="nav">
+	<a class="link--about">About Us</a>
+</div>
+```
+
+---code|modifier:split---
+
 ```javascript
-Wee.$closest('ref:element', '.js-ancestor');
+Wee.$closest('.link--about', '.nav');
+```
+
+```html
+<div class="nav">
+	<a class="link--about">About Us</a>
+</div>
 ```
 
 ---note---
 
-**Note:** This method traverses up the DOM for the closest match so it doesn't match descendents.
+**Note:** This method traverses up the DOM for the closest match. It doesn't match descendants.

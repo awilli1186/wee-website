@@ -4,10 +4,10 @@ name: Sizing
 
 ---variables|label:Width &amp; Height---
 
-| Variable              | Type | Default | Description     | Required |
-| --------------------- | ---- | ------- | --------------- | -------- |
-| @value                | unit | --      | Width or Height | ✓        |
-| @maxWidth, @maxHeight | unit | --      | Maximum         |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | unit | -- | Width or Height | ✓ |
+| @maxWidth, @maxHeight | unit | -- | Maximum ||
 
 ---code---
 
@@ -25,9 +25,9 @@ max-height: 40%;
 
 ---variables---
 
-| Variable | Type | Default | Description        | Required |
-| -------- | ---- | ------- | ------------------ | -------- |
-| @value   | unit | --      | Minimum or maximum | ✓        |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | unit | -- | Minimum or maximum | ✓ |
 
 ---code---
 
@@ -55,10 +55,10 @@ min-height: 3rem;
 
 ---variables|label:Size---
 
-| Variable   | Type | Default | Description | Required |
-| ---------- | ---- | ------- | ----------- | -------- |
-| @width     | unit | --      | Width       | ✓ |
-| @height    | unit | --      | Height      | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @width | unit | -- | Width | ✓ |
+| @height | unit | -- | Height | ✓ |
 
 ---code---
 
@@ -87,9 +87,9 @@ max-width: 4rem;
 
 ---variables|label:Square---
 
-| Variable | Type | Default | Description    | Required |
-| -------- | ---- | ------- | -------------- | -------- |
-| @size    | unit | --      | Width &amp; height | ✓        |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @size | unit | -- | Width &amp; height | ✓ |
 
 ---code---
 
@@ -104,10 +104,10 @@ width: 50px;
 
 ---variables|label:Ratio---
 
-| Variable | Type    | Default  | Description | Required |
-| -------- | ------- | -------- | ----------- | -------- |
-| embed    | keyword | --       | Embed       |          |
-| @ratio   | unit    | (16 / 9) | Ratio       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| embed | keyword | -- | Embed ||
+| @ratio | unit | (16 / 9) | Ratio ||
 
 ---code---
 
@@ -144,10 +144,10 @@ div:before {
 
 ---variables|label:Circle---
 
-| Variable  | Type    | Default | Description | Required |
-| --------- | ------- | ------- | ----------- | -------- |
-| @diameter | unit    | --      | Diameter    | ✓        |
-| @crop     | boolean | false   | Crop        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @diameter | unit | -- | Diameter | ✓ |
+| @crop | boolean | false | Crop ||
 
 ---code---
 

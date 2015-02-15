@@ -1,6 +1,6 @@
 ---
 name: $not
-heading: Filter out elements from a matching selection
+heading: Returns elements not matching the filtered selection
 ---
 
 ---variables---
@@ -21,8 +21,19 @@ Wee.$not('ref:element', 'div');
 
 The current index and element are injected into the callback. The scope of ```this``` is the element.
 
+```html
+<div data-ref="element" data-active="true">
+```
+
+---code|type:boolean|modifier:split---
+
 ```javascript
-Wee.$is('ref:element', function(i, el) {
-    // Callback logic
+Wee.$not('ref:element', function() {
+	// Check to see if data-active is set true
+	return Wee.$data(this, 'active' === 'true';
 });
+```
+
+```javascript
+false
 ```

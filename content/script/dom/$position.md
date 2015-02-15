@@ -1,6 +1,6 @@
 ---
 name: $position
-heading: Get the position of the first matching selection
+heading: Get the position of the first matching selection relative to its offset parent
 ---
 
 ---variables---

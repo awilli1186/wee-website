@@ -5,8 +5,8 @@ name: Opacity
 ---variables---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| @value   | unit | --      | Opacity     | ✓ |
+| -- | -- | -- | -- | -- |
+| @value | unit | -- | Opacity | ✓ |
 
 ---code---
 

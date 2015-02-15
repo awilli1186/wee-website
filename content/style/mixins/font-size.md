@@ -4,9 +4,9 @@ name: Font Size
 
 ---variables---
 
-| Variable | Type | Default       | Description | Required |
-| -------- | ---- | ------------- | ----------- | -------- |
-| @value   | unit | @baseFontSize | Font size   |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | unit | @baseFontSize | Font size ||
 
 ---code---
 
@@ -20,10 +20,10 @@ font-size: 2rem;
 
 ---variables---
 
-| Variable    | Type | Default | Description       | Required |
-| ----------- | ---- | ------- | ----------------- | :------: |
-| @value      | unit | --      | Font size rules   | ✓        |
-| @lineHeight | unit | --      | Line height rules | ✓        |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | :------: |
+| @value | unit | -- | Font size rules | ✓ |
+| @lineHeight | unit | -- | Line height rules | ✓ |
 
 ---code---
 

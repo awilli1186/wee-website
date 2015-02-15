@@ -26,8 +26,24 @@ Wee.$replaceWith('ref:element', '<span>Replacement element</span>');
 
 The current index and HTML are injected into the callback. The scope of ```this``` is the element.
 
+```html
+<ul class="names">
+	<li>John Doe</li>
+	<li>Jane Doe</li>
+</ul>
+```
+
+---code|modifier:split---
+
 ```javascript
-Wee.$replaceWith('ref:element', function(i, html) {
-    // Callback logic
+Wee.$replaceWith('.names li', function(i, html) {
+	return "<li>The " + html + "</li>";
 });
+```
+
+```html
+<ul class="names">
+	<li>The Jane Doe</li>
+	<li>The John Doe</li>
+</ul>
 ```

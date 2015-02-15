@@ -2,84 +2,57 @@
 name: Alignment
 ---
 
----doc|label:Wee Container---
+---variables|modifier:options|label:Float---
 
-Create a centered container based on @minWidth, @minWidth, and @padContainer.
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | left | Left or right ||
+| @width | unit | -- | Width value ||
 
----code---
+---code|modifier:split---
 
 ```less
-.wee-container();
+.float();
 ```
 
-```less
-display: block;
-margin-left: auto;
-margin-right: auto;
--moz-box-sizing: content-box;
--webkit-box-sizing: content-box;
-box-sizing: content-box;
-max-width: 1280px;
-min-width: 260px;
-padding-left: 6%;
-padding-right: 6%;
-```
-
----variables|label:Float---
-
-| Variable    | Type    | Default | Description          | Required |
-| ----------- | ------- | ------- | -------------------- | -------- |
-| left, right | keyword | --      | Left or right preset |          |
-| @value      | keyword | --      | Float value          | ✓ |
-
----code---
-
-```less
-.float(left);
-```
-
-```less
+```css
 float: left;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .float(right; 2);
 ```
 
-```less
+```css
 float: right;
 width: 2rem;
 ```
 
----code|label:Left &amp; Right---
+---code|modifier:split|label:Left & Right---
 
 ```less
 .left();
-```
-
-```less
-float: left;
-```
-
----code---
-
-```less
 .right();
 ```
 
-```less
+```css
+float: left;
 float: right;
 ```
 
----code|label:Clearfix---
+---note---
+
+**Note:** If a value is passed to the left or right mixins they reflect the left and right CSS properties and not float settings.
+
+---code|modifier:split|label:Clearfix---
 
 ```less
 .clearfix();
 ```
 
-```less
+```css
 clear: both;
 content: ' ';
 display: table;
@@ -87,53 +60,45 @@ display: table;
 
 ---variables|label:Clear---
 
-| Variable | Type    | Default | Description | Required |
-| -------- | ------- | ------- | ----------- | -------- |
-| @value   | keyword | both    | Clear value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | both | Both, left, or right ||
 
----code---
+---code|modifier:split---
 
 ```less
 .clear(left);
 ```
 
-```less
+```css
 clear: left;
 ```
 
 ---variables|label:Align---
 
-| Variable                                                    | Type    | Default | Description | Required |
-| ----------------------------------------------------------- | ------- | ------- | ----------- | -------- |
-| center, justify, left, right, baseline, bottom, middle, top | keyword | --      | Orientation | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | -- | Center, justify, left, right, baseline, bottom, middle, or top | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .align(justify);
-```
-
-```less
-text-align: justify;
-```
-
----code---
-
-```less
 .align(middle);
 ```
 
 ```less
+text-align: justify;
 vertical-align: middle;
 ```
 
 ---variables|label:Display---
 
-| Variable | Type    | Default | Description   | Required |
-| -------- | ------- | ------- | ------------- | -------- |
-| @value   | keyword | --      | Display value | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | -- | Display value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .display(block);
@@ -143,7 +108,7 @@ vertical-align: middle;
 display: block;
 ```
 
----code|label:Inline---
+---code|modifier:split|label:Inline---
 
 ```less
 .inline();
@@ -156,11 +121,11 @@ display: inline;
 ---variables|label:Inline-Block---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| @width   | unit | --      | Width       |          |
-| @height  | unit | --      | Height      |          |
+| -- | -- | -- | -- | -- |
+| @width | unit | -- | Width value ||
+| @height | unit | -- | Height value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .inline-block();
@@ -170,7 +135,7 @@ display: inline;
 display: inline-block;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .inline-block(4; 2);

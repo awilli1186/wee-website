@@ -4,9 +4,9 @@ name: Borders
 
 ---variables|label:Border---
 
-| Variable | Type            | Default             | Description  | Required |
-| -------- | --------------- | ------------------- | ------------ | -------- |
-| @value   | string, keyword | '1px solid #404040' | Border rules | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | string, keyword | '1px solid #404040' | Border rules | ✓ |
 
 ---code---
 
@@ -20,11 +20,11 @@ border: 2px dotted #00f;
 
 ---variables---
 
-| Variable | Type    | Default    | Description  | Required |
-| -------- | ------- | ---------- | ------------ | -------- |
-| @color   | color   | @baseColor | Color        |          |
-| @value   | unit    | 1px        | Size         |          |
-| @style   | keyword | solid      | Style        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | @baseColor | Color ||
+| @value | unit | 1px | Size ||
+| @style | keyword | solid | Style ||
 
 ---code---
 
@@ -38,13 +38,13 @@ border: 4px dotted #f00;
 
 ---variables---
 
-| Variable    | Type    | Default         | Description          | Required |
-| ----------- | ------- | --------------- | -------------------- | -------- |
-| light, dark | keyword | --              | Light or dark preset | ✓ |
-| @opacity    | integer | @defaultOpacity | Opacity              |          |
-| @value      | unit    | 1px             | Width                |          |
-| @style      | keyword | solid           | Border style         |          |
-| @fallback   | color   | @black          | Fallback color       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| light, dark | keyword | -- | Light or dark preset | ✓ |
+| @opacity | integer | @defaultOpacity | Opacity ||
+| @value | unit | 1px | Width ||
+| @style | keyword | solid | Border style ||
+| @fallback | color | @black | Fallback color ||
 
 ---code---
 
@@ -59,12 +59,12 @@ border: 2px solid rgba(0, 0, 0, 0.4);
 
 ---variables---
 
-| Variable                 | Type    | Default    | Description | Required |
-| ------------------------ | ------- | ---------- | ----------- | -------- |
-| top, right, bottom, left | keyword | --         | Side preset | ✓ |
-| @color                   | color   | @baseColor | Color       |          |
-| @value                   | unit    | 1px        | Width       |          |
-| @style                   | keyword | solid      | Style       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| top, right, bottom, left | keyword | -- | Side preset | ✓ |
+| @color | color | @baseColor | Color ||
+| @value | unit | 1px | Width ||
+| @style | keyword | solid | Style ||
 
 ---code---
 
@@ -78,14 +78,14 @@ border-top: 1px solid #00f;
 
 ---variables---
 
-| Variable                 | Type    | Default         | Description          | Required |
-| ------------------------ | ------- | --------------- | -------------------- | -------- |
-| top, right, bottom, left | keyword | --              | Side preset          | ✓ |
-| light, dark              | keyword | --              | Light or dark preset | ✓ |
-| @opacity                 | integer | @defaultOpacity | Color                |          |
-| @value                   | unit    | 1px             | Width                |          |
-| @style                   | keyword | solid           | Style                |          |
-| @fallback                | color   | @white, @black  | Fallback color       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| top, right, bottom, left | keyword | -- | Side preset | ✓ |
+| light, dark | keyword | -- | Light or dark preset | ✓ |
+| @opacity | integer | @defaultOpacity | Color ||
+| @value | unit | 1px | Width ||
+| @style | keyword | solid | Style ||
+| @fallback | color | @white, @black | Fallback color ||
 
 ---code---
 
@@ -100,12 +100,12 @@ border: 3px dotted rgba(255, 255, 255, 0.5);
 
 ---variables---
 
-| Variable             | Type    | Default    | Description                   | Required |
-| -------------------- | ------- | ---------- | ----------------------------- | -------- |
-| horizontal, vertical | keyword | --         | Horizontal or vertical preset | ✓ |
-| @color               | color   | @baseColor | Color                         |          |
-| @value               | unit    | 1px        | Width                         |          |
-| @style               | keyword | solid      | Style                         |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✓ |
+| @color | color | @baseColor | Color ||
+| @value | unit | 1px | Width ||
+| @style | keyword | solid | Style ||
 
 
 ---code---
@@ -121,13 +121,13 @@ border-right: 2px dotted #ff0000;
 
 ---variables---
 
-| Variable             | Type    | Default         | Description                   | Required |
-| -------------------- | ------- | --------------- | ----------------------------- | -------- |
-| horizontal, vertical | keyword | --              | Horizontal or vertical preset | ✓ |
-| light, dark          | keyword | --              | Light or dark preset          | ✓ |
-| @opacity             | integer | @defaultOpacity | Opactiy                       |          |
-| @value               | unit    | 1px             | Width                         |          |
-| @style               | keyword | solid           | Style                         |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✓ |
+| light, dark | keyword | -- | Light or dark preset | ✓ |
+| @opacity | integer | @defaultOpacity | Opactiy ||
+| @value | unit | 1px | Width ||
+| @style | keyword | solid | Style ||
 
 ---code---
 
@@ -144,14 +144,14 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 
 ---variables---
 
-| Variable | Type     | Default    | Description | Required |
-| -------- | -------- | ---------- | ----------- | -------- |
-| @top     | unit     | --         | Top size    | ✓        |
-| @right   | unit     | --         | Right size  |          |
-| @bottom  | unit     | --         | Bottom size |          |
-| @left    | unit     | --         | Left size   |          |
-| @color   | color    | @baseColor | Color       |          |
-| @style   | keyword  | solid      | Style       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @top | unit | -- | Top size | ✓ |
+| @right | unit | -- | Right size ||
+| @bottom | unit | -- | Bottom size ||
+| @left | unit | -- | Left size ||
+| @color | color | @baseColor | Color ||
+| @style | keyword | solid | Style ||
 
 ---code---
 
@@ -168,13 +168,13 @@ border-top: 1px dotted #00f;
 
 ---variables|label:Border Image---
 
-| Variable  | Type    | Default | Description              | Required |
-| --------- | --------| ------- | ------------------------ | -------- |
-| @filename | string  | --      | Name of file             | ✓        |
-| @slice    | unit    | 100%    | Slice offset             |          |
-| @width    | unit    | 1       | Border width             |          |
-| @outset   | unit    | 0       | Extend beyond border box |          |
-| @repeat   | keyword | stretch | Match size of border     |          |
+| Variable | Type | Default | Description | Required |
+| -- | --| -- | -- | -- |
+| @filename | string | -- | Name of file | ✓ |
+| @slice | unit | 100% | Slice offset ||
+| @width | unit | 1 | Border width ||
+| @outset | unit | 0 | Extend beyond border box ||
+| @repeat | keyword | stretch | Match size of border ||
 
 ---code---
 
@@ -189,9 +189,9 @@ border-image: url('../img/border.png') 100% 1 0 stretch;
 
 ---variables|label:Border Color, Style &amp; Width---
 
-| Variable               | Type                 | Default | Description            | Required |
-| ---------------------- | -------------------- | ------- | ---------------------- | -------- |
-| @color, @style, @width | color, keyword, unit | --      | Color, style, or width | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color, @style, @width | color, keyword, unit | -- | Color, style, or width | ✓ |
 
 ---code---
 
@@ -205,10 +205,10 @@ border-color: #00f;
 
 ---variables---
 
-| Variable                 | Type                 | Default | Description            | Required |
-| ------------------------ | -------------------- | ------- | ---------------------- | -------- |
-| top, right, bottom, left | keyword              | --      | Side presets           | ✓ |
-| @color, @style, @width   | color, keyword, unit | --      | Color, style, or width | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| top, right, bottom, left | keyword | -- | Side presets | ✓ |
+| @color, @style, @width | color, keyword, unit | -- | Color, style, or width | ✓ |
 
 ---code---
 

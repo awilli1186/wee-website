@@ -30,12 +30,21 @@ Wee.$width('ref:element');
 Wee.$width('ref:element', '10rem');
 ```
 
----code|label:Function---
+---code|modifier:stacked|label:Function---
 
 The current index and width are injected into the callback. The scope of ```this``` is the element.
 
+```html
+<div data-ref="example" style="width: 100px;"></div>
+```
+
 ```javascript
-Wee.$width('ref:element', function(el, i, width) {
-	// Callback logic
+Wee.$width('ref:example', function(i, width) {
+	// Increase the width of the element by 50px
+	return (width += 50) + 'px';
 });
 ```
+
+---note---
+
+**Note:** If no unit is provided pixels will be set.

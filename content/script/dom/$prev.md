@@ -19,6 +19,21 @@ Wee.$prev();
 
 ---code|label:Filtered---
 
+```html
+<ul>
+	<li>John Doe</li>
+	<li>John Smith</li>
+	<li data-ref="name">Jane Doe</li>
+	<li>Jane Smith</li>
+</ul>
+```
+
+---code|modifier:split---
+
 ```javascript
-Wee.$prev('.class');
+Wee.$prev('ref:name');
+```
+
+```html
+<li>John Smith</li>
 ```

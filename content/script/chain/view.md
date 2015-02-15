@@ -7,11 +7,9 @@ link: /script/view
 
 * [$(sel).render(data)](/script/view#render)
 
----doc---
+---code|modifier:stacked---
 
 The view chain method updated the content of a DOM element given a data object.
-
----code|modifier:stacked---
 
 ```html
 <div class="element">

@@ -42,7 +42,9 @@
 			},
 			"template": "index",
 			"target": "public_html/index.html",
-			"content": "content/pages/home.md"
+			"content": [
+				"content/pages/home.md"
+			]
 		},
 		"404": {
 			"name": "Page Not Found",

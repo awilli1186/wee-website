@@ -61,7 +61,17 @@ function parseJSFiles(files) {
 			var parsed = line.split(':');
 
 			if (/^[$a-zA-Z]+$/.test(parsed[0]) && /^ function/.test(parsed[1])) {
-				script[file][slugify(parsed[0])] = i + 1;
+				var fn = slugify(parsed[0]);
+
+				if (file == 'wee.js' && i < 100) {
+					if (fn == 'make') {
+						fn = 'fnmake';
+					} else if (fn == 'extend') {
+						fn = 'fnextend';
+					}
+				}
+
+				script[file][fn] = i + 1;
 			}
 		});
 	});
@@ -70,21 +80,26 @@ function parseJSFiles(files) {
 }
 
 // Find category titles and line numbers in style files
-function parseStyleFiles(file) {
-	var data = file.split('\n'),
-	variables = {};
+function parseStyleFiles(files) {
+	var style = {};
 
-	data.forEach(function(line, i) {
-		line = line.trim();
+	Object.keys(files).forEach(function(file) {
+		style[file] = {};
 
-		if (/# /.test(line)) {
-			var category = line.replace('# ', '');
+		var data = files[file].replace(/\t+/g, '').split('\n');
 
-			variables[category] = i + 1;
-		}
+		data.forEach(function(line, i) {
+			line = line.trim();
+
+			if (/# /.test(line)) {
+				var category = line.replace('# ', '');
+
+				style[file][slugify(category)] = i + 1;
+			}
+		});
 	});
 
-	return variables;
+	return style;
 }
 
 
@@ -146,6 +161,7 @@ function getTree(treePath) {
 // Retrieve all files from GitHub -- individual request per file needed
 function getFiles(filePaths) {
 	var jsFiles = {},
+		cssFiles = {},
 		fileCount = countPaths(filePaths),
 		counter = 1,
 		keys = Object.keys(filePaths);
@@ -162,20 +178,20 @@ function getFiles(filePaths) {
 				}
 			}, function(data) {
 				var segments = path.split('/'),
-					file = segments[(segments.length - 1)];
+					file = segments[segments.length - 1];
 
 				if (/.js$/.test(file)) {
 					jsFiles[file] = data;
-				} else if (file === 'wee.mixins.less') {
-					apiResponses.mixins = data;
-				} else if (file === 'wee.variables.less') {
-					apiResponses.variables = data;
+				} else if (file == 'wee.mixins.less' || file == 'wee.variables.less') {
+					cssFiles[file] = data;
 				}
 
 				if (counter === fileCount) {
 					apiResponses.scripts = jsFiles;
+					apiResponses.styles = cssFiles;
 					createFile(apiResponses);
 				}
+
 				counter++;
 			});
 		});
@@ -183,21 +199,21 @@ function getFiles(filePaths) {
 }
 
 function slugify(val) {
-	return val.toLowerCase()
+	val = val.toLowerCase()
 		.replace(/\s+/g, '-')
 		.replace(/[^\w\-]+/g, '')
 		.replace(/\-\-+/g, '-')
 		.replace(/^-+/, '')
-		.replace(/-+$/, '')
-		.replace('fn.', '');
+		.replace(/-+$/, '');
+
+	return val === '' ? 'sel' : val;
 }
 
 // Create JSON file with results from parsing
 function createFile(responses) {
 	var finalJSON = {
 		script: parseJSFiles(responses.scripts),
-		mixins: parseStyleFiles(responses.mixins),
-		variables: parseStyleFiles(responses.variables)
+		style: parseStyleFiles(responses.styles)
 	};
 
 	fs.writeFile('public_html/assets/js/map.json', JSON.stringify(finalJSON, null, '\t'), function(err) {

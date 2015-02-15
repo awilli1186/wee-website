@@ -46,9 +46,9 @@ text-transform: uppercase;
 
 ---variables|label:Text Transform---
 
-| Variable | Type    | Default | Description          | Required |
-| -------- | ------- | ------- | -------------------- | -------- |
-| @value   | keyword | none    | Text transform rules |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | none | Text transform rules ||
 
 ---code---
 
@@ -94,10 +94,10 @@ text-decoration: underline;
 
 ---variables---
 
-| Variable | Type    | Default | Description           | Required |
-| -------- | ------- | ------- | --------------------- | -------- |
-| @style   | keyword | --      | Text decoration style | ✓        |
-| @color   | color   | inherit | Text decoration color |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @style | keyword | -- | Text decoration style | ✓ |
+| @color | color | inherit | Text decoration color ||
 
 ---code---
 
@@ -125,9 +125,9 @@ text-decoration: line-through;
 
 ---variables|label:Text Decoration---
 
-| Variable | Type    | Default   | Description           | Required |
-| -------- | ------- | --------- | --------------------- | -------- |
-| @value   | keyword | underline | Text decoration rules |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | underline | Text decoration rules ||
 
 ---code---
 
@@ -141,11 +141,11 @@ text-decoration: overline;
 
 ---variables---
 
-| Variable | Type    | Default | Description | Required |
-| -------- | ------- | ------- | ----------- | -------- |
-| @line    | keyword | --      | Line type   | ✓        |
-| @style   | keyword | --      | Line style  | ✓        |
-| @color   | color   | inherit | Line color  |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @line | keyword | -- | Line type | ✓ |
+| @style | keyword | -- | Line style | ✓ |
+| @color | color | inherit | Line color ||
 
 ---code---
 
@@ -163,9 +163,9 @@ text-decoration: #00f dotted underline;
 
 ---variables|label:Outline---
 
-| Variable | Type    | Default       | Description           | Require |
-| -------- | ------- | ------------- | --------------------- | ------- |
-| @value   | keyword | 'thin dotted' | Element outline rules |         |
+| Variable | Type | Default | Description | Require |
+| -- | -- | -- | -- | -- |
+| @value | keyword | 'thin dotted' | Element outline rules ||
 
 ---code---
 
@@ -179,9 +179,9 @@ outline: thin dotted;
 
 ---variables|label:Letter Spacing---
 
-| Variable | Type | Default | Description          | Require |
-| -------- | ---- | ------- | -------------------- | ------- |
-| @value   | unit | --      | Letter kerning rules | ✓       |
+| Variable | Type | Default | Description | Require |
+| -- | -- | -- | -- | -- |
+| @value | unit | -- | Letter kerning rules | ✓ |
 
 ---code---
 
@@ -195,9 +195,9 @@ letter-spacing: 2rem;
 
 ---variables|label:Word Spacing---
 
-| Variable | Type | Default | Description        | Require |
-| -------- | ---- | ------- | ------------------ | ------- |
-| @value   | unit | --      | Word spacing rules | ✓       |
+| Variable | Type | Default | Description | Require |
+| -- | -- | -- | -- | -- |
+| @value | unit | -- | Word spacing rules | ✓ |
 
 ---code---
 
@@ -211,9 +211,9 @@ word-spacing: 3rem;
 
 ---variables|label:Text Indent---
 
-| Variable | Type | Default | Description          | Require |
-| -------- | ---- | ------- | -------------------- | ------- |
-| @value   | unit | --      | Text indention rules | ✓       |
+| Variable | Type | Default | Description | Require |
+| -- | -- | -- | -- | -- |
+| @value | unit | -- | Text indention rules | ✓ |
 
 ---code---
 
@@ -227,9 +227,9 @@ text-indent: 1rem;
 
 ---variables|label:User Select---
 
-| Variable | Type    | Default | Description                  | Require |
-| -------- | ------- | ------- | ---------------------------- | ------- |
-| @value   | keyword | none    | Controls selection operation |         |
+| Variable | Type | Default | Description | Require |
+| -- | -- | -- | -- | -- |
+| @value | keyword | none | Controls selection operation ||
 
 ---code---
 
@@ -246,9 +246,9 @@ user-select: text;
 
 ---variables|label:Tab Size---
 
-| Variable | Type    | Default           | Description | Required |
-| -------- | ------- | ----------------- | ----------- | -------- |
-| @value   | integer | @codeBlockTabSize | Tab length  |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | integer | @codeBlockTabSize | Tab length ||
 
 ---code---
 

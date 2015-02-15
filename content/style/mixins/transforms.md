@@ -4,9 +4,9 @@ name: Transforms
 
 ---variables|label:Transform---
 
-| Variable   | Type     | Default | Description     | Required |
-| ---------- | -------- | ------- | --------------- | -------- |
-| @arguments | keywords | --      | Transform rules | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @arguments | keywords | -- | Transform rules | ✓ |
 
 ---code---
 
@@ -22,9 +22,9 @@ transform: translateX(10px);
 
 ---variables|label:Rotate---
 
-| Variable | Type    | Default | Description | Required |
-| -------- | ------- | ------- | ----------- | -------- |
-| @angle   | integer | 45      | Angle       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @angle | integer | 45 | Angle ||
 
 ---code---
 
@@ -40,9 +40,9 @@ transform: rotate(30deg);
 
 ---variables|label:Scale---
 
-| Variable | Type    | Default | Description | Required |
-| -------- | ------- | ------- | ----------- | -------- |
-| @deg     | integer | 1       | Scale       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @deg | integer | 1 | Scale ||
 
 
 ---code---
@@ -59,10 +59,10 @@ transform: scale(2);
 
 ---variables|label:Skew---
 
-| Variable | Type    | Default | Description     | Required |
-| -------- | ------- | ------- | --------------- | -------- |
-| @x       | integer | 45      | Horizontal skew |          |
-| @y       | integer | 0       | Vertical skew   |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @x | integer | 45 | Horizontal skew ||
+| @y | integer | 0 | Vertical skew ||
 
 ---code---
 
@@ -78,10 +78,10 @@ transform: skew(30deg, 15deg);
 
 ---variables---
 
-| Variable | Type    | Default | Description   | Required |
-| -------- | ------- | ------- | ------------- | -------- |
-| x, y     | keyword | --      | X or Y preset | ✓ |
-| @x, @y   | integer | 45      | Vertical skew |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| x, y | keyword | -- | X or Y preset | ✓ |
+| @x, @y | integer | 45 | Vertical skew ||
 
 ---code---
 
@@ -97,10 +97,10 @@ transform: skewY(15deg);
 
 ---variables|label:Transform Origin---
 
-| Variable | Type    | Default | Description       | Required |
-| -------- | ------- | ------- | ----------------- | -------- |
-| @x       | integer | --      | Horizontal origin | ✓ |
-| @y       | integer | 0       | Vertical origin   |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @x | integer | -- | Horizontal origin | ✓ |
+| @y | integer | 0 | Vertical origin ||
 
 ---code---
 
@@ -116,11 +116,11 @@ transform: transform-origin(15%, 10%);
 
 ---variables|label:Translate---
 
-| Variable | Type    | Default | Description   | Required |
-| -------- | ------- | ------- | ------------- | -------- |
-| @x       | integer | 0       | X translation |          |
-| @y       | integer | 0       | Y translation |          |
-| @z       | integer | --      | Z translation |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @x | integer | 0 | X translation ||
+| @y | integer | 0 | Y translation ||
+| @z | integer | -- | Z translation ||
 
 ---code---
 

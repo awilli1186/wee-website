@@ -68,7 +68,7 @@ Wee.fn.make('common', {
 	matchBlocks: function() {
 		var $link = $('.intro__link');
 
-		if ($link.length) {
+		if ($link.length && $link.attr('href').indexOf('weepower') !== -1) {
 			Wee.data.request({
 				url: '/assets/js/map.json',
 				json: true,
@@ -82,7 +82,7 @@ Wee.fn.make('common', {
 					$('.doc__anchor').each(function(el) {
 						var $this = $(el),
 							id = $this.attr('id');
-console.log(data);
+
 						if (data[id]) {
 							$this.parent().append('<a href="' + href + '#L' + data[id] + '" class="doc__link">→</a>');
 						}

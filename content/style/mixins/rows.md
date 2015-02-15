@@ -4,9 +4,9 @@ name: Rows
 
 ---variables|label:Row &amp; Row-Modify---
 
-| Variable | Type       | Default     | Description  | Required |
-| -------- | ---------- | ----------- | ------------ | -------- |
-| @margin  | percentage | @gridMargin | Left margin  | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @margin | percentage | @gridMargin | Left margin | ✓ |
 
 ---code---
 

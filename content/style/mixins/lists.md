@@ -17,8 +17,8 @@ li {
 ---variables---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| @spacing | unit | --      | Left margin |          |
+| -- | -- | -- | -- | -- |
+| @spacing | unit | -- | Left margin ||
 
 ---code---
 
@@ -38,10 +38,10 @@ li:first-child {
 
 ---variables---
 
-| Variable | Type   | Default | Description  | Required |
-| -------- | ------ | ------- | ------------ | -------- |
-| @content | string | --      | Content      |          |
-| @margin  | unit   | 0       | Right margin |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @content | string | -- | Content ||
+| @margin | unit | 0 | Right margin ||
 
 ---code---
 
@@ -77,9 +77,9 @@ li {
 
 ---variables|label:List Style---
 
-| Variable | Type       | Default | Description      | Required |
-| -------- | ---------- | ------- | ---------------- | -------- |
-| @value   | keyword(s) | --      | List-style rules | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword(s) | -- | List-style rules | ✓ |
 
 ---code---
 
@@ -93,9 +93,9 @@ list-style: circle inside;
 
 ---variables|label:List Position---
 
-| Variable | Type    | Default | Description         | Required |
-| -------- | ------- | ------- | ------------------- | -------- |
-| @value   | keyword | outside | List-style position |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | outside | List-style position ||
 
 ---code---
 

@@ -35,18 +35,17 @@ Wee.controllerName.init();
 "Initialized"
 ```
 
----doc|label:Private/Public---
+---code|label:Private/Public---
 
 Private functions can be accessed from public methods by using ```this.$private('functionName', arguments)``` syntax. To call back into a public method from a private one use ```this.$public.functionName(arguments)```.
 
 Also note that you have access to ```this.$get()```, ```this.$set()```, and ```this.$push()``` across both public and private methods. By default stored values are namespaced to the current controller scope. If you need to control global variables use ```Wee.$get()```, ```Wee.$set()```, and ```Wee.$push()```.
 
----code---
-
 ```javascript
 Wee.fn.make('controllerName', {
 	init: function() {
 		this.anotherPublicFunction('varName'); // Call public method
+
 		return this.$private('privateFunction', 'varName'); // Call private method
 	},
 	anotherPublicFunction: function(key) {
@@ -61,6 +60,7 @@ Wee.fn.make('controllerName', {
 	},
 	anotherPrivateFunction: function(key) {
 		var output = this.$get(key);
+
 		this.$public.finalPublicFunction(output); // Call public method
 	}
 });
@@ -76,26 +76,28 @@ Wee.controllerName.init();
 "Success"
 ```
 
----doc|label:Constructor---
+---code|label:Constructor---
 
-The construct method is immediately executed on controller creation.
+The construct method is immediately executed on controller creation and is useful for setting variables or invoking additional methods.
 
 ```javascript
 Wee.fn.make('controllerName', {
 	_construct: function() {
-		console.log('Created');
+		this.publicVariable = 'Public Variable';
+
+		this.init();
 	}
 });
 ```
 
----doc|label:Destructor---
+---code|label:Destructor---
 
-The destruct method is executed when the controller is destroyed using ```this.$destroy()``` or ```Wee.controllerName.$destroy()``` outside the controller.
+The destruct method is executed to perform additional clean up or other actions when the controller is destroyed using ```this.$destroy()``` or ```Wee.controllerName.$destroy()``` outside the controller.
 
 ```javascript
 Wee.fn.make('controllerName', {
 	_destruct: function() {
-		console.log('Destroyed');
+		this.save();
 	}
 });
 ```

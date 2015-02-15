@@ -3,11 +3,9 @@ name: $setVars
 heading: Add metadata variables to datastore
 ---
 
----doc|label:Single Value---
+---code|modifier:stacked|label:Single Value---
 
 Available data-set values are pushed into the global storage for later retrieval.
-
----code|modifier:stacked---
 
 ```html
 <div data-set="key" data-value="value"></div>
@@ -27,11 +25,9 @@ Wee.$get('key');
 "value"
 ```
 
----doc|label:Value Array---
+---code|label:Value Array---
 
 To push into an array instead of setting a single value append array brackets to the end of the key.
-
----code---
 
 ```html
 <div data-set="key[]" data-value="value1"></div>

@@ -20,8 +20,27 @@ Wee.$wrapInner('ref:element', '<div class="wrapper"></div>');
 
 The current index is injected into the callback. The scope of ```this``` is the element.
 
+```html
+<ul class="names">
+	<li class="boss">Jane Doe</li>
+	<li>John Doe</li>
+</ul>
+````
+
+---code|modifier:split---
+
 ```javascript
-Wee.$wrapInner('ref:element', function(i) {
-	// Callback logic
+Wee.$wrapInner('.names li', function(i) {
+	// Wrap bosses in bold tag
+	if (Wee.$hasClass($(this), 'boss')) {
+		return '<b></b>';
+	}
 });
+```
+
+```html
+<ul class="names">
+	<li class="boss"><b>Jane Doe</b></li>
+	<li>John Doe</li>
+</ul>
 ```

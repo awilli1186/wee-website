@@ -4,9 +4,9 @@ name: Animation
 
 ---variables---
 
-| Variable   | Type    | Default | Description     | Required |
-| ---------- | ------- | ------- | --------------- | -------- |
-| @arguments | keyword | --      | Animation rules | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @arguments | keyword | -- | Animation rules | ✓ |
 
 ---code---
 

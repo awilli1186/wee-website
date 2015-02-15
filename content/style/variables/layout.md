@@ -3,8 +3,8 @@ name: Layout
 ---
 
 ```less
-@minWidth: false; // min container width, false to disable
-@maxWidth: 1280;  // max container width, false to disable
+@minWidth: false;  // min container width, false to disable
+@maxWidth: 1280px; // max container width, false to disable
 
 @bumperPadding: 6%;  // bumper padding on containers, false to disable
 @padContainer: true; // enable bumperPadding on containers

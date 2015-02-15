@@ -11,12 +11,9 @@ heading: Remove specified function to specified element and optional event and f
 | a | string | -- | Event name or object of events ||
 | b | [function](/script/#functions) | -- | Callback to remove ||
 
-
----doc|label:Target---
+---code|label:Target---
 
 If no event or callback is provided all element events will be removed.
-
----code---
 
 ```javascript
 Wee.events.off('ref:element');

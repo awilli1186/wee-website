@@ -45,3 +45,7 @@ Wee.$exec([
 	'controllerName2:methodName2'
 ]);
 ```
+
+---note---
+
+**Note:** This method is mostly intended for external use although it can be used anywhere. Controller methods are best executed in the form of ```Wee.controllerName.methodName()```.

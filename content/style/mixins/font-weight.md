@@ -4,9 +4,9 @@ name: Font Weight
 
 ---variables---
 
-| Variable | Type | Default         | Description | Required |
-| -------- | ---- | --------------- | ----------- | -------- |
-| @value   | unit | @baseFontWeight | Font weight |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | unit | @baseFontWeight | Font weight ||
 
 ---code---
 

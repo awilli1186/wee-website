@@ -4,9 +4,9 @@ name: Line Height
 
 ---variables---
 
-| Variable | Type | Default         | Description | Required |
-| -------- | ---- | --------------- | ----------- | -------- |
-| @value   | unit | @baseLineHeight | Line height |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | unit | @baseLineHeight | Line height ||
 
 ---code---
 

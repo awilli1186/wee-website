@@ -11,7 +11,7 @@ heading: When specified references are ready execute callback
 | options | object | -- | Override any load configuration options ||
 | poll | boolean | false | Poll the queue every 20 milliseconds for completion ||
 
----doc---
+---code---
 
 ```javascript
 Wee.assets.ready('dynamicAssets', {

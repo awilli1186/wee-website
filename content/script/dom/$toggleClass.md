@@ -1,6 +1,6 @@
 ---
 name: $toggleClass
-heading: Toggle the display of a specified element
+heading: Toggle adding and removing class(es) from the specified element
 ---
 
 ---variables---

@@ -23,12 +23,26 @@ Wee.$after('ref:element', Wee.$('.js-element'));
 Wee.$after('ref:element', '<span>Injected notice</span>');
 ```
 
----code|label:Function---
+---code|modifier:stacked|label:Function---
 
 The current index and HTML are injected into the callback. The scope of ```this``` is the element.
 
+```html
+<div data-name="John Smith">
+	<h1 data-ref="bioName">Name</h1>
+</div>
+```
+
 ```javascript
-Wee.$after('ref:element', function(i, html) {
-    // Callback logic
+Wee.$after('ref:bioName', function(i, html) {
+	// Add the parent data-name as a paragraph after the matched element
+	return '<p>' + Wee.$data(Wee.$parent(this), 'name') + '</p>';
 });
+```
+
+```html
+<div data-name="John Smith">
+	<h1 data-ref="bioName">Name</h1>
+	<p>John Smith</p>
+</div>
 ```

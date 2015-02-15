@@ -20,7 +20,7 @@ heading: Load specified assets with specified set of options
 | root | string | -- | Root path or domain override for [root](#root) ||
 | success | function | -- | Success [callback](/script/#functions) ||
 
----doc|label:Single File---
+---code|label:Single File---
 
 ```javascript
 Wee.assets.load({
@@ -28,7 +28,7 @@ Wee.assets.load({
 });
 ```
 
----doc|label:Multiple Files---
+---code|label:Multiple Files---
 
 ```javascript
 Wee.assets.load({
@@ -47,7 +47,7 @@ Wee.assets.load({
 });
 ```
 
----doc|label:Group---
+---code|label:Group---
 
 By providing a group name you can optionally check against the group later for completion.
 

@@ -54,11 +54,9 @@ link: /script/dom
 * [$(sel).wrap(html)](/script/dom#wrap)
 * [$(sel).wrapInner(html)](/script/dom#wraptnner)
 
----doc---
+---code---
 
 DOM traversal is made easy with chaining.
-
----code---
 
 ```html
 <ul>

@@ -31,11 +31,9 @@ Wee.controllerName.extendedPublicFunction();
 "Success"
 ```
 
----doc|label:Extend Core---
+---code|label:Extend Core---
 
 To extend the core simply exclude the first parameter. This can be done to add additional core methods or override default functionality.
-
----code---
 
 ```javascript
 Wee.fn.extend({

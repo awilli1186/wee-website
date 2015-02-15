@@ -10,13 +10,13 @@ heading: Remove one or more files from the DOM
 | files | string, array | -- | Single file path or file array | ✓ |
 | root | string | -- | Root path or domain override for [root](#root) ||
 
----doc|label:Single File---
+---code|label:Single File---
 
 ```javascript
 Wee.assets.remove('/samples/override.css');
 ```
 
----doc|label:Multiple Files---
+---code|label:Multiple Files---
 
 ```javascript
 Wee.assets.remove([

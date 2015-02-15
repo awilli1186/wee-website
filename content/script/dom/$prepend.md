@@ -21,8 +21,25 @@ Wee.$prepend('ref:element', Wee.$('.js-element'));
 
 The current index and HTML are injected into the callback. The scope of ```this``` is the element.
 
+```html
+<h1 data-ref="listHeading">Names</h1>
+<ul>
+	<li>John Doe</li>
+	<li>Jane Doe</li>
+</ul>
+```
+
 ```javascript
-Wee.$prepend('ref:element', function(i, html) {
-    // Callback logic
+Wee.append('ref:listHeading', function(i, html) {
+	// Modify to heading the include the number of listed names
+	return ' (' + Wee.$children(Wee.$next()).length + ')';
 });
+```
+
+```html
+<h1 data-ref="listHeading">2 Names</h1>
+<ul>
+	<li>John Doe</li>
+	<li>Jane Doe</li>
+</ul>
 ```

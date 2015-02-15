@@ -5,8 +5,8 @@ name: Positioning
 ---variables|label:Top, Right, Bottom &amp; Left---
 
 | Variable | Type | Default | Description | Required |
-| -------- | ---- | ------- | ----------- | -------- |
-| @value   | unit | 0       | Amount      |          |
+| -- | -- | -- | -- | -- |
+| @value | unit | 0 | Amount ||
 
 ---code---
 
@@ -30,13 +30,13 @@ right: 2rem;
 
 ---variables|label:Position---
 
-| Variable | Type    | Default | Description | Required |
-| -------- | ------- | ------- | ----------- | -------- |
-| @value   | keyword | --      | Positioning | ✓        |
-| @top     | unit    | --      | Top         |          |
-| @right   | unit    | --      | Right       |          |
-| @bottom  | unit    | --      | Bottom      |          |
-| @left    | unit    | --      | Left        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | -- | Positioning | ✓ |
+| @top | unit | -- | Top ||
+| @right | unit | -- | Right ||
+| @bottom | unit | -- | Bottom ||
+| @left | unit | -- | Left ||
 
 ---code---
 
@@ -54,12 +54,12 @@ left: 1rem;
 
 ---variables|label:Absolute &amp; Fixed---
 
-| Variable | Type | Default | Description     | Required |
-| -------- | ---- | ------- | --------------- | -------- |
-| @top     | unit | --      | Top position    |          |
-| @right   | unit | --      | Right position  |          |
-| @bottom  | unit | --      | Bottom position |          |
-| @left    | unit | --      | Left position   |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @top | unit | -- | Top position ||
+| @right | unit | -- | Right position ||
+| @bottom | unit | -- | Bottom position ||
+| @left | unit | -- | Left position ||
 
 ---code---
 
@@ -116,9 +116,9 @@ position: static;
 
 ---variables|label:Z-Index---
 
-| Variable | Type    | Default | Description | Required |
-| -------- | ------- | ------- | ----------- | -------- |
-| @index   | integer | 1       | Z-index     |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @index | integer | 1 | Z-index ||
 
 ---code---
 

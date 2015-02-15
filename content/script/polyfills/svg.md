@@ -19,13 +19,9 @@ By default the polyfill will replace the source of any linked SVG files with a P
 <img src="/assets/img/wee.png" alt="Wee">
 ```
 
----doc---
-
-### Override
+---code|modifier:stacked|label:Override---
 
 If you need to specify the fallback set the data-fallback attribute. This is useful if the fallback path is different than the originally linked SVG, it is in a different format than PNG, or you are using ```<svg>``` directly in your markup.
-
----code|modifier:stacked---
 
 ```html
 <svg viewBox="0 0 501.3 165.7" role="img" aria-label="Wee" data-fallback="/assets/img/wee.png">

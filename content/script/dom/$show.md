@@ -11,7 +11,7 @@ heading: Show each matching selection
 
 ---code---
 
-Show works by removing the ```js-hide``` class which forces the element to hide.
+Show works by removing the ```js-hide``` class either set manually or through [Wee.$hide()](#hide).
 
 ```javascript
 Wee.$show('ref:element');

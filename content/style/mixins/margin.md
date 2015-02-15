@@ -4,9 +4,9 @@ name: Margin
 
 ---variables---
 
-| Variable | Type | Default | Description  | Required |
-| -------- | ---- | ------- | ------------ | -------- |
-| @value   | unit | --      | Margin value | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | unit | -- | Margin value | ✓ |
 
 ---code---
 
@@ -20,10 +20,10 @@ margin: 5rem;
 
 ---variables---
 
-| Variable                 | Type    | Default | Description  | Required |
-| ------------------------ | ------- | ------- | ------------ | -------- |
-| top, right, bottom, left | keyword | --      | Side presets | ✓ |
-| @value                   | unit    | --      | Margin value |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| top, right, bottom, left | keyword | -- | Side presets | ✓ |
+| @value | unit | -- | Margin value ||
 
 ---code---
 
@@ -37,10 +37,10 @@ margin-left: 2rem;
 
 ---variables---
 
-| Variable             | Type    | Default | Description                   | Required |
-| -------------------- | ------- | ------- | ----------------------------- | -------- |
-| horizontal, vertical | keyword | --      | Horizontal or vertical preset | ✓ |
-| @value               | unit    | --      | Margin value                  |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✓ |
+| @value | unit | -- | Margin value ||
 
 
 ---code---
@@ -56,11 +56,11 @@ margin-bottom: 2rem;
 
 ---variables---
 
-| Variable             | Type    | Default | Description                   | Required |
-| -------------------- | ------- | ------- | ----------------------------- | -------- |
-| horizontal, vertical | keyword | --      | Horizontal or vertical preset | ✓ |
-| @left, @top          | unit    | --      | Margin value                  |          |
-| @right, @bottom      | unit    | --      | Margin value                  |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✓ |
+| @left, @top | unit | -- | Margin value ||
+| @right, @bottom | unit | -- | Margin value ||
 
 ---code---
 
@@ -75,10 +75,10 @@ margin-right: 3rem;
 
 ---variables---
 
-| Variable | Type | Default | Description        | Required |
-| -------- | ---- | ------- | ------------------ | -------- |
-| @y       | unit | --      | Vertical margins   |          |
-| @x       | unit | --      | Horizontal margins |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @y | unit | -- | Vertical margins ||
+| @x | unit | -- | Horizontal margins ||
 
 ---code---
 
@@ -95,12 +95,12 @@ margin-left: 3rem;
 
 ---variables---
 
-| Variable | Type | Default | Description   | Required |
-| -------- | ---- | ------- | ------------- | -------- |
-| @top     | unit | --      | Top margin    |          |
-| @right   | unit | --      | Right margin  |          |
-| @bottom  | unit | --      | Bottom margin |          |
-| @left    | unit | --      | Left margin   |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @top | unit | -- | Top margin ||
+| @right | unit | -- | Right margin ||
+| @bottom | unit | -- | Bottom margin ||
+| @left | unit | -- | Left margin ||
 
 ---code---
 

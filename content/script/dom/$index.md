@@ -1,6 +1,6 @@
 ---
 name: $index
-heading: Get the index of a matching selection relative to it's siblings
+heading: Get the zero-based index of a matching selection relative to it's siblings
 ---
 
 ---variables---

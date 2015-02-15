@@ -4,9 +4,9 @@ name: Forms
 
 ---variables|label:Input Placeholder---
 
-| Variable | Type  | Default                | Description       | Required |
-| -------- | ----- | ---------------------- | ----------------- | -------- |
-| @color   | color | @inputPlaceholderColor | Placeholder color |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | @inputPlaceholderColor | Placeholder color ||
 
 ---code---
 

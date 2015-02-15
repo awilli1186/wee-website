@@ -11,7 +11,7 @@ heading: Hide each matching selection
 
 ---code---
 
-Hide works by adding the ```js-hide``` class which forces the element to hide.
+Hide works by adding the ```js-hide``` class which applies ```display: none !important;```
 
 ```javascript
 Wee.$hide('ref:element');

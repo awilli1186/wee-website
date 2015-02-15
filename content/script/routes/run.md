@@ -16,7 +16,7 @@ heading: Process stored route options with optional config
 | path | string | -- | Relative path from root domain ||
 | routes | object | -- | Mapping object ||
 
----doc---
+---code---
 
 Without arguments, the currently bound path and routes will be evaluated.
 
@@ -24,7 +24,7 @@ Without arguments, the currently bound path and routes will be evaluated.
 Wee.routes.run();
 ```
 
----doc|label:Advanced---
+---code|label:Advanced---
 
 If an object is provided, only the passed routes will be evaluated.
 

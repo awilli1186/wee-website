@@ -16,3 +16,7 @@ heading: Get subset of selection matches from specified range
 ```javascript
 Wee.$slice('li', 0, 3);
 ```
+
+---note---
+
+**Note:** 

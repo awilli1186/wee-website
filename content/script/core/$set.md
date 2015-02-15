@@ -21,6 +21,10 @@ Wee.$set('key', 'Success');
 "Success"
 ```
 
+---note---
+
+**Note:** Set variables are available to all scripts. By setting a key in the form of ```controller:key``` the variable is injected into a controller's scope and made available to ```this.$get('key')``` within it.
+
 ---code|type:response|modifier:stacked|label:Callbacks---
 
 ```javascript

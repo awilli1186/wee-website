@@ -10,7 +10,7 @@ heading: Execute event for each matching selection
 | target | [selection](/script#selection) | -- | Target selection | ✓ |
 | event | string | -- | Event name | ✓ |
 
----doc---
+---code---
 
 ```javascript
 Wee.events.trigger('ref:element', 'click');

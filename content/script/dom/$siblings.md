@@ -10,16 +10,34 @@ heading: Get unique siblings of each matching selection
 | target | [selection](/script#selection) | -- | Target selection | ✓ |
 | filter | [selection](/script#selection) | -- | Filter selection | ✓ |
 
----code|label:All Children---
+---code---
+
+```html
+<p>Sibling paragraph</p>
+<span>Sibling span</span>
+<div data-ref="sibling">Target div.</div>
+```
+
+---doc|label:All Siblings---
 
 Without a filter all siblings will be returned.
 
+---code|modifier:split---
+
 ```javascript
-Wee.$siblings('ref:element');
+Wee.$siblings('ref:sibling');
 ```
 
----code|label:Filtered---
+```javascript
+[<p>Sibling paragraph</p>, <span>Sibling span</span>]
+```
+
+---code|modifier:split|label:Filtered---
 
 ```javascript
-Wee.$siblings('ref:element', 'li');
+Wee.$siblings('ref:sibling', 'p');
+```
+
+```javascript
+[<p>Sibling paragraph</p>]
 ```

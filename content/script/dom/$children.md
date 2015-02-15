@@ -20,6 +20,8 @@ Wee.$children('ref:element');
 
 ---code|label:Filtered---
 
+With a filter, only matching children will be returned.
+
 ```javascript
 Wee.$children('ref:element', 'li');
 ```

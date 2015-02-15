@@ -11,7 +11,7 @@ heading: Get CSS value of first matching selection or set value of each matching
 | a | string, object | -- | Property to get or set or an object | ✓ |
 | b | string | -- | Value to assign to property ||
 
----code|type:string|modifier:split|label:Get---
+---code|type:string|modifier:split|label:Get Value---
 
 ```javascript
 Wee.$css('ref:element', 'marginTop');
@@ -21,13 +21,13 @@ Wee.$css('ref:element', 'marginTop');
 "0px"
 ```
 
----code|label:Set Single---
+---code|label:Set Single Value---
 
 ```javascript
 Wee.$css('ref:element', 'marginTop', '5px');
 ```
 
----code|label:Set Multiple---
+---code|label:Set Multiple Values---
 
 ```javascript
 Wee.$css('ref:element', {

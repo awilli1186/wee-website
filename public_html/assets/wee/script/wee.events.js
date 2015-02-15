@@ -66,12 +66,6 @@
 					c = b;
 				}
 
-				// Reset variables when watching target
-				if (c && c.delegate) {
-					c.targ = target;
-					target = c.delegate;
-				}
-
 				this.$private('bind', target, evts, c);
 			}
 		},
@@ -157,6 +151,12 @@
 	}, {
 		bind: function(els, obj, c) {
 			var scope = this;
+
+			// Redefine variables when delegating
+			if (c && c.delegate) {
+				c.targ = els;
+				els = c.delegate;
+			}
 
 			// For each element attach events
 			W.$each(els, function(el) {

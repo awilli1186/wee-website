@@ -4,9 +4,9 @@ name: Columns
 
 ---variables|label:Column &amp; Column-Modify---
 
-| Variable | Type | Default | Description  | Required |
-| -------- | ---- | ------- | ------------ | -------- |
-| @width   | unit | false   | Column width |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @width | unit | false | Column width ||
 
 ---code---
 
@@ -21,12 +21,12 @@ width: 30%;
 
 ---variables---
 
-| Variable | Type       | Default      | Description                | Required |
-| -------- | ---------- | ------------ | ---------------------------| -------- |
-| spaced   | keyword    | --           | Set margin between columns |          |
-| @share   | integer    | --           | Column span                | ✓ |
-| @columns | integer    | @gridColumns | Number of columns          |          |
-| @margin  | percentage | @gridMargin  | Left margin                |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | --| -- |
+| spaced | keyword | -- | Set margin between columns ||
+| @share | integer | -- | Column span | ✓ |
+| @columns | integer | @gridColumns | Number of columns ||
+| @margin | percentage | @gridMargin | Left margin ||
 
 ---code---
 
@@ -64,9 +64,9 @@ margin-left: 2%;
 
 ---variables|label:Column Reset---
 
-| Variable     | Type    | Default | Description       | Required |
-| ------------ | ------- | ------- | ----------------- | -------- |
-| @resetMargin | boolean | false   | Reset left margin |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @resetMargin | boolean | false | Reset left margin ||
 
 ---code---
 
@@ -82,10 +82,10 @@ margin-left: 0;
 
 ---variables|label:Column Pull &amp; Push---
 
-| Variable | Type    | Default      | Description       | Required |
-| -------- | ------- | ------------ | ----------------- | -------- |
-| @share   | integer | --           | Column span       | ✓ |
-| @columns | integer | @gridColumns | Number of columns |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @share | integer | -- | Column span | ✓ |
+| @columns | integer | @gridColumns | Number of columns ||
 
 ---code---
 
@@ -111,12 +111,12 @@ position: relative;
 
 ---variables|label:Column Offset---
 
-| Variable | Type       | Default           | Description                | Required |
-| -------- | ---------- | ----------------- | -------------------------- | -------- |
-| spaced   | keyword    | --                | Set margin between columns |          |
-| @share   | integer    | --                | Column span                | ✓ |
-| @columns | integer    | @gridColumns      | Number of columns          |          |
-| @margin  | percentage | (@gridMargin / 2) | Left margin                |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| spaced | keyword | -- | Set margin between columns ||
+| @share | integer | -- | Column span | ✓ |
+| @columns | integer | @gridColumns | Number of columns ||
+| @margin | percentage | (@gridMargin / 2) | Left margin ||
 
 ---code---
 

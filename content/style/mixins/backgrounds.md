@@ -4,9 +4,9 @@ name: Backgrounds
 
 ---variables|label:Background---
 
-| Variable | Type            | Default | Description      | Required |
-| -------- | --------------- | ------- | ---------------- | -------- |
-| @value   | string, keyword | --      | Background rules | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | string, keyword | -- | Background rules | ✓ |
 
 ---code---
 
@@ -20,9 +20,9 @@ background: url("bg.png") #00f no-repeat;
 
 ---variables---
 
-| Variable | Type  | Default         | Description      | Required |
-| -------- | ----- | --------------- | ---------------- | -------- |
-| @color   | color | @bodyBackground | Background color |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | @bodyBackground | Background color ||
 
 ---code---
 
@@ -36,11 +36,11 @@ background: #00f;
 
 ---variables---
 
-| Variable  | Type            | Default | Description      | Required |
-| --------- | --------------- | ------- | ---------------- | -------- |
-| @color    | color           | --      | Background color |          |
-| @filename | string          | --      | Image file       |          |
-| @repeat   | string, keyword | --      | Image repeat     |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | -- | Background color ||
+| @filename | string | -- | Image file ||
+| @repeat | string, keyword | -- | Image repeat ||
 
 ---code---
 
@@ -54,11 +54,11 @@ background: #0000ff url('../img/bg.png') no-repeat;
 
 ---variables---
 
-| Variable  | Type  | Default | Description    | Required |
-| --------- | ----- | ------- | -------------- | -------- |
-| @color    | color | --      | Color          | ✓ |
-| @opacity  | unit  | --      | Opacity        | ✓ |
-| @fallback | color | @color  | Fallback color |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | -- | Color | ✓ |
+| @opacity | unit | -- | Opacity | ✓ |
+| @fallback | color | @color | Fallback color ||
 
 ---code---
 
@@ -73,13 +73,13 @@ background-color: rgba(0, 0, 255, 0.2);
 
 ---variables---
 
-| Variable  | Type    | Default   | Description       | Required |
-| --------- | ------- | --------- | ----------------- | -------- |
-| @color    | color   | --        | Color             | ✓ |
-| @filename | string  | --        | Image file        | ✓ |
-| @x        | unit    | --        | Horizontal offset | ✓ |
-| @y        | unit    | 0         | Vertical offset   |          |
-| @repeat   | keyword | no-repeat | Image repeat      |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | -- | Color | ✓ |
+| @filename | string | -- | Image file | ✓ |
+| @x | unit | -- | Horizontal offset | ✓ |
+| @y | unit | 0 | Vertical offset ||
+| @repeat | keyword | no-repeat | Image repeat ||
 
 ---code---
 
@@ -93,11 +93,11 @@ background: #0000ff url('../img/bg.png') 10% 15% no-repeat;
 
 ---variables---
 
-| Variable    | Type    | Default         | Description          | Required |
-| ----------- | ------- | --------------- | -------------------- | -------- |
-| light, dark | keyword | --              | Light or dark preset | ✓ |
-| @opacity    | unit    | @defaultOpacity | Background opacity   |          |
-| @fallback   | color   | white, dark     | Fallback color       |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| light, dark | keyword | -- | Light or dark preset | ✓ |
+| @opacity | unit | @defaultOpacity | Background opacity ||
+| @fallback | color | white, dark | Fallback color ||
 
 ---code---
 
@@ -112,9 +112,9 @@ background-color: rgba(255, 255, 255, 0.5);
 
 ---variables|label:Background Color---
 
-| Variable | Type  | Default         | Description      | Required |
-| -------- | ----- | --------------- | ---------------- | -------- |
-| @color   | color | @bodyBackground | Background color |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | @bodyBackground | Background color ||
 
 ---code---
 
@@ -128,9 +128,9 @@ background-color: #00f;
 
 ---variables|label:Background Image---
 
-| Variable | Type    | Default | Description            | Required |
-| -------- | ------- | ------- | ---------------------- | -------- |
-| @value   | keyword | --      | Background image value | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | -- | Background image value | ✓ |
 
 ---code---
 
@@ -144,10 +144,10 @@ background-image: none;
 
 ---variables---
 
-| Variable  | Type    | Default | Description  | Required |
-| --------- | ------- | ------- | ------------ | -------- |
-| @filename | string  | --      | Image file   | ✓ |
-| @repeat   | keyword | --      | Image repeat |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @filename | string | -- | Image file | ✓ |
+| @repeat | keyword | -- | Image repeat ||
 
 ---code---
 
@@ -162,12 +162,12 @@ background-repeat: no-repeat;
 
 ---variables---
 
-| Variable  | Type    | Default   | Description       | Required |
-| --------- | ------- | --------- | ----------------- | -------- |
-| retina    | keyword | --        | Retina preset     | ✓ |
-| @filename | string  | --        | Image file        | ✓ |
-| @width    | unit    | auto      | Size or width     |          |
-| @height   | unit    | auto      | Height            |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| retina | keyword | -- | Retina preset | ✓ |
+| @filename | string | -- | Image file | ✓ |
+| @width | unit | auto | Size or width ||
+| @height | unit | auto | Height ||
 
 ---code---
 
@@ -191,12 +191,12 @@ div {
 
 ---variables---
 
-| Variable  | Type    | Default   | Description       | Required |
-| --------- | ------- | --------- | ----------------- | -------- |
-| @filename | string  | --        | Image file        | ✓ |
-| @x        | unit    | --        | Horizontal offset | ✓ |
-| @y        | unit    | 0         | Vertical offset   |          |
-| @repeat   | keyword | no-repeat | Repeat            |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @filename | string | -- | Image file | ✓ |
+| @x | unit | -- | Horizontal offset | ✓ |
+| @y | unit | 0 | Vertical offset ||
+| @repeat | keyword | no-repeat | Repeat ||
 
 ---code---
 
@@ -212,15 +212,15 @@ background-repeat: no-repeat;
 
 ---variables---
 
-| Variable  | Type    | Default   | Description       | Required |
-| --------- | ------- | --------- | ----------------- | -------- |
-| retina    | keyword | --        | Retina preset     | ✓ |
-| @filename | string  | --        | Image file        | ✓ |
-| @width    | unit    | --        | Width             | ✓ |
-| @height   | unit    | --        | Height            | ✓ |
-| @x        | unit    | --        | Horizontal offset | ✓ |
-| @y        | unit    | 0         | Vertical offset   |          |
-| @repeat   | keyword | no-repeat | Image repeat      |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| retina | keyword | -- | Retina preset | ✓ |
+| @filename | string | -- | Image file | ✓ |
+| @width | unit | -- | Width | ✓ |
+| @height | unit | -- | Height | ✓ |
+| @x | unit | -- | Horizontal offset | ✓ |
+| @y | unit | 0 | Vertical offset ||
+| @repeat | keyword | no-repeat | Image repeat ||
 
 ---code---
 
@@ -246,13 +246,13 @@ div {
 
 ---variables---
 
-| Variable    | Type    | Default | Description       | Required |
-| ----------- | ------- | ------- | ----------------- | -------- |
-| @filename   | string  | --      | Image file        | ✓ |
-| @x          | unit    | --      | Horizontal offset | ✓ |
-| @y          | unit    | --      | Vertical offset   | ✓ |
-| @repeat     | keyword | --      | Repeat            | ✓ |
-| @attachment | keyword | --      | Repeat            | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @filename | string | -- | Image file | ✓ |
+| @x | unit | -- | Horizontal offset | ✓ |
+| @y | unit | -- | Vertical offset | ✓ |
+| @repeat | keyword | -- | Repeat | ✓ |
+| @attachment | keyword | -- | Repeat | ✓ |
 
 ---code---
 
@@ -269,16 +269,16 @@ background-repeat: no-repeat;
 
 ---variables---
 
-| Variable    | Type    | Default | Description       | Required |
-| ----------- | ------- | ------- | ----------------- | -------- |
-| retina      | keyword | --      | Retina preset     | ✓ |
-| @filename   | string  | --      | Image file        | ✓ |
-| @width      | unit    | --      | Width             | ✓ |
-| @height     | unit    | --      | Height            | ✓ |
-| @x          | unit    | --      | Horizontal offset | ✓ |
-| @y          | unit    | --      | Vertical offset   | ✓ |
-| @repeat     | keyword | --      | Image repeat      | ✓ |
-| @attachment | keyword | --      | Attachment value  | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| retina | keyword | -- | Retina preset | ✓ |
+| @filename | string | -- | Image file | ✓ |
+| @width | unit | -- | Width | ✓ |
+| @height | unit | -- | Height | ✓ |
+| @x | unit | -- | Horizontal offset | ✓ |
+| @y | unit | -- | Vertical offset | ✓ |
+| @repeat | keyword | -- | Image repeat | ✓ |
+| @attachment | keyword | -- | Attachment value | ✓ |
 
 ---code---
 
@@ -305,14 +305,14 @@ div {
 
 ---variables---
 
-| Variable    | Type    | Default | Description       | Required |
-| ----------- | ------- | ------- | ----------------- | -------- |
-| @filename   | string  | --      | Image file        | ✓ |
-| @x          | unit    | --      | Horizontal offset | ✓ |
-| @y          | unit    | --      | Vertical offset   | ✓ |
-| @repeat     | keyword | --      | Repeat            | ✓ |
-| @attachment | keyword | --      | Attachment value  | ✓ |
-| @size       | unit    | --      | Size              | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @filename | string | -- | Image file | ✓ |
+| @x | unit | -- | Horizontal offset | ✓ |
+| @y | unit | -- | Vertical offset | ✓ |
+| @repeat | keyword | -- | Repeat | ✓ |
+| @attachment | keyword | -- | Attachment value | ✓ |
+| @size | unit | -- | Size | ✓ |
 
 ---code---
 
@@ -330,15 +330,15 @@ background-size: 400px;
 
 ---variables---
 
-| Variable    | Type    | Default | Description       | Required |
-| ----------- | ------- | ------- | ----------------- | -------- |
-| @filename   | string  | --      | Image file        | ✓ |
-| @x          | unit    | --      | Horizontal offset | ✓ |
-| @y          | unit    | --      | Vertical offset   | ✓ |
-| @repeat     | keyword | --      | Repeat            | ✓ |
-| @attachment | keyword | --      | Attachment value  | ✓ |
-| @width      | unit    | --      | Width             | ✓ |
-| @height     | unit    | --      | Height            | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @filename | string | -- | Image file | ✓ |
+| @x | unit | -- | Horizontal offset | ✓ |
+| @y | unit | -- | Vertical offset | ✓ |
+| @repeat | keyword | -- | Repeat | ✓ |
+| @attachment | keyword | -- | Attachment value | ✓ |
+| @width | unit | -- | Width | ✓ |
+| @height | unit | -- | Height | ✓ |
 
 ---code---
 
@@ -356,12 +356,12 @@ background-size: 400px 300px;
 
 ---variables|label:Background Gradient---
 
-| Variable | Type    | Default            | Description    | Required |
-| -------- | ------- | ------------------ | -------------- | -------- |
-| @color   | color   | @gray              | Fallback color |          |
-| @start   | color   | rgba(0, 0, 0, 0.8) | Starting color |          |
-| @end     | color   | rgba(0, 0, 0, 0.2) | Ending color   |          |
-| @angle   | integer | 180                | Angle          |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | @gray | Fallback color ||
+| @start | color | rgba(0, 0, 0, 0.8) | Starting color ||
+| @end | color | rgba(0, 0, 0, 0.2) | Ending color ||
+| @angle | integer | 180 | Angle ||
 
 ---code---
 
@@ -377,11 +377,11 @@ background: linear-gradient(90deg, #008000, #ff0);
 
 ---variables---
 
-| Variable | Type       | Default | Description    | Required |
-| -------- | ---------- | ------- | -------------- | -------- |
-| @color   | color      | @gray   | Fallback color |          |
-| @spread  | percentage | --      | Color range    | ✓ |
-| @angle   | integer    | 180     | Angle          |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | @gray | Fallback color ||
+| @spread | percentage | -- | Color range | ✓ |
+| @angle | integer | 180 | Angle ||
 
 ---code---
 
@@ -398,12 +398,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4dff', endC
 
 ---variables---
 
-| Variable    | Type    | Default | Description          | Required |
-| ----------- | ------- | ------- | -------------------- | -------- |
-| light, dark | keyword | --      | Light or dark preset | ✓ |
-| @start      | integer | 0       | Starting opacity     |          |
-| @end        | integer | 1       | Ending opacity       |          |
-| @angle      | integer | 180     | Angle                |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| light, dark | keyword | -- | Light or dark preset | ✓ |
+| @start | integer | 0 | Starting opacity ||
+| @end | integer | 1 | Ending opacity ||
+| @angle | integer | 180 | Angle ||
 
 ---code---
 
@@ -419,9 +419,9 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 
 ---variables|label:Background Attachment---
 
-| Variable   | Type    | Default | Description      | Required |
-| ---------- | ------- | ------- | ---------------- | -------- |
-| @arguments | keyword | --      | Attachment value | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @arguments | keyword | -- | Attachment value | ✓ |
 
 ---code---
 
@@ -435,10 +435,10 @@ background-attachment: scroll;
 
 ---variables|label:Background Position---
 
-| Variable | Type | Default | Description       | Required |
-| -------- | ---- | ------- | ----------------- | -------- |
-| @x       | unit | 0       | Horizontal offset |          |
-| @y       | unit | 0       | Vertical offset   |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @x | unit | 0 | Horizontal offset ||
+| @y | unit | 0 | Vertical offset ||
 
 ---code---
 
@@ -452,9 +452,9 @@ background-position: 10px 5px;
 
 ---variables|label:Background Repeat---
 
-| Variable   | Type    | Default | Description  | Required |
-| ---------- | ------- | ------- | ------------ | -------- |
-| @arguments | keyword | --      | Repeat value | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @arguments | keyword | -- | Repeat value | ✓ |
 
 ---code---
 
@@ -468,9 +468,9 @@ background-repeat: repeat;
 
 ---variables|label:Background Size---
 
-| Variable | Type | Default | Description  | Required |
-| -------- | ---- | ------- | ------------ | -------- |
-| @size    | unit | --      | Size value   | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @size | unit | -- | Size value | ✓ |
 
 ---code---
 
@@ -484,9 +484,9 @@ background-size: 3rem;
 
 ---variables|label:Background Clip---
 
-| Variable | Type    | Default    | Description | Required |
-| -------- | ------- | ---------- | ----------- | -------- |
-| @value   | keyword | border-box | Clip value  |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | border-box | Clip value ||
 
 ---code---
 
@@ -500,13 +500,13 @@ background-clip: border-box;
 
 ---variables|label:Sprite---
 
-| Variable  | Type    | Default         | Description       | Required |
-| --------- | ------- | --------------- | ----------------- | -------- |
-| @color    | color   | --              | Background color  | ✓ |
-| @x        | unit    | 0               | Horizontal offset |          |
-| @y        | unit    | 0               | Vertical offset   |          |
-| @repeat   | keyword | no-repeat       | Repeat            |          |
-| @filename | string  | @spriteFilename | Image file        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @color | color | -- | Background color | ✓ |
+| @x | unit | 0 | Horizontal offset ||
+| @y | unit | 0 | Vertical offset ||
+| @repeat | keyword | no-repeat | Repeat ||
+| @filename | string | @spriteFilename | Image file ||
 
 ---code---
 
@@ -520,16 +520,16 @@ background: #00f url('../img/sprite.png') 0 0 no-repeat;
 
 ---variables---
 
-| Variable  | Type    | Default         | Description       | Required |
-| --------- | ------- | --------------- | ----------------- | -------- |
-| retina    | keyword | --              | Retina preset     | ✓ |
-| @color    | color   | --              | Background color  | ✓ |
-| @width    | unit    | auto            | Width             |          |
-| @height   | unit    | auto            | Height            |          |
-| @x        | unit    | 0               | Horizontal offset |          |
-| @y        | unit    | 0               | Vertical offset   |          |
-| @repeat   | keyword | no-repeat       | Repeat            |          |
-| @filename | string  | @spriteFilename | Image file        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| retina | keyword | -- | Retina preset | ✓ |
+| @color | color | -- | Background color | ✓ |
+| @width | unit | auto | Width ||
+| @height | unit | auto | Height ||
+| @x | unit | 0 | Horizontal offset ||
+| @y | unit | 0 | Vertical offset ||
+| @repeat | keyword | no-repeat | Repeat ||
+| @filename | string | @spriteFilename | Image file ||
 
 ---code---
 
@@ -553,12 +553,12 @@ div {
 
 ---variables---
 
-| Variable  | Type    | Default         | Description       | Required |
-| --------- | ------- | --------------- | ----------------- | -------- |
-| @x        | unit    | 0               | Horizontal offset |          |
-| @y        | unit    | 0               | Vertical offset   |          |
-| @repeat   | keyword | no-repeat       | Repeat            |          |
-| @filename | string  | @spriteFilename | Image file        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @x | unit | 0 | Horizontal offset ||
+| @y | unit | 0 | Vertical offset ||
+| @repeat | keyword | no-repeat | Repeat ||
+| @filename | string | @spriteFilename | Image file ||
 
 ---code---
 
@@ -574,15 +574,15 @@ background-repeat: no-repeat;
 
 ---variables---
 
-| Variable  | Type    | Default             | Description       | Required |
-| --------- | ------- | ------------------- | ----------------- | -------- |
-| retina    | keyword | --                  | Retina preset     | ✓ |
-| @x        | unit    | 0                   | Horizontal offset |          |
-| @y        | unit    | 0                   | Vertical offset   |          |
-| @width    | unit    | @retinaSpriteWidth  | Width             |          |
-| @height   | unit    | @retinaSpriteHeight | Height            |          |
-| @repeat   | keyword | no-repeat           | Repeat            |          |
-| @filename | string  | @spriteFilename     | Image file        |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| retina | keyword | -- | Retina preset | ✓ |
+| @x | unit | 0 | Horizontal offset ||
+| @y | unit | 0 | Vertical offset ||
+| @width | unit | @retinaSpriteWidth | Width ||
+| @height | unit | @retinaSpriteHeight | Height ||
+| @repeat | keyword | no-repeat | Repeat ||
+| @filename | string | @spriteFilename | Image file ||
 
 ---code---
 

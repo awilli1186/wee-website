@@ -4,9 +4,9 @@ name: Font Style
 
 ---variables---
 
-| Variable | Type    | Default | Description | Required |
-| -------- | ------- | ------- | ----------- | -------- |
-| @value   | keyword | normal  | Font style  |          |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | keyword | normal | Font style ||
 
 ---code---
 

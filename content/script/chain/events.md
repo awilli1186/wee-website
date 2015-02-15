@@ -10,7 +10,7 @@ link: /script/events
 * [$(sel).one(a, b, c)](/script/events#one)
 * [$(sel).trigger(event)](/script/events#trigger)
 
----doc---
+---code---
 
 In this example, the selector is the element to which the event is bound.
 
