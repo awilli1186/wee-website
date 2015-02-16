@@ -8,13 +8,13 @@ name: Box Shadows
 | -- | -- | -- | -- | -- |
 | @value | string, keyword | '1px 1px 0 0 rgba(0, 0, 0, @{defaultOpacity})' | Box-shadow rules ||
 
----code---
+---code|modifier:split---
 
 ```less
 .shadow('3px 2px 1px 0 #000');
 ```
 
-```less
+```css
 box-shadow: 3px 2px 1px 0 #000;
 ```
 
@@ -29,33 +29,33 @@ box-shadow: 3px 2px 1px 0 #000;
 | @blur | value | 0 | Blur distance ||
 | @spread | value | 0 | Shadow size ||
 
----code---
+---code|modifier:split---
 
 ```less
 .shadow(blue);
 ```
 
-```less
+```css
 box-shadow: 1px 1px 0 0 #00f;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
-.shadow(rgba(0, 0, 0, 0.6); 4px; 3px; 2px; 2px;);
+.shadow(rgba(0, 0, 0, 0.6); 4px; 3px; 2px; 2px);
 ```
 
-```less
+```css
 box-shadow: 4px 3px 2px 2px rgba(0, 0, 0, 0.6);
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .shadow(inner; blue);
 ```
 
-```less
+```css
 box-shadow: inset 1px 1px 0 0 #00f;
 ```
 
@@ -70,23 +70,23 @@ box-shadow: inset 1px 1px 0 0 #00f;
 | @blur | unit | 0 | Blur ||
 | @spread | unit | 0 | Spread ||
 
----code---
+---code|modifier:split---
 
 ```less
 .shadow(light; 40%);
 ```
 
-```less
+```css
 box-shadow: 1px 1px 0 0 rgba(255, 255, 255, 0.4);
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .shadow(dark; 50%);
 ```
 
-```less
+```css
 box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.5);
 ```
 
@@ -102,22 +102,22 @@ box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.5);
 | @blur | unit | 0 | Blur ||
 | @spread | unit | 0 | Spread ||
 
----code---
+---code|modifier:split---
 
 ```less
 .shadow(inner; light; 40%);
 ```
 
-```less
+```css
 box-shadow: inset 1px 1px 0 0 rgba(255, 255, 255, 0.4);
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .shadow(inner; dark; 50%);
 ```
 
-```less
+```css
 box-shadow: inset 1px 1px 0 0 rgba(0, 0, 0, 0.5);
 ```

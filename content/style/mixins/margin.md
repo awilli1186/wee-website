@@ -8,13 +8,13 @@ name: Margin
 | -- | -- | -- | -- | -- |
 | @value | unit | -- | Margin value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .margin(5);
 ```
 
-```less
+```css
 margin: 5rem;
 ```
 
@@ -25,13 +25,13 @@ margin: 5rem;
 | top, right, bottom, left | keyword | -- | Side presets | ✓ |
 | @value | unit | -- | Margin value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .margin(left; 2);
 ```
 
-```less
+```css
 margin-left: 2rem;
 ```
 
@@ -43,13 +43,13 @@ margin-left: 2rem;
 | @value | unit | -- | Margin value ||
 
 
----code---
+---code|modifier:split---
 
 ```less
 .margin(vertical; 2);
 ```
 
-```less
+```css
 margin-top: 2rem;
 margin-bottom: 2rem;
 ```
@@ -62,13 +62,13 @@ margin-bottom: 2rem;
 | @left, @top | unit | -- | Margin value ||
 | @right, @bottom | unit | -- | Margin value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .margin(horizontal; 2; 3);
 ```
 
-```less
+```css
 margin-left: 2rem;
 margin-right: 3rem;
 ```
@@ -80,13 +80,13 @@ margin-right: 3rem;
 | @y | unit | -- | Vertical margins ||
 | @x | unit | -- | Horizontal margins ||
 
----code---
+---code|modifier:split---
 
 ```less
 .margin(2; 3);
 ```
 
-```less
+```css
 margin-top: 2rem;
 margin-right: 3rem;
 margin-bottom: 2rem;
@@ -102,13 +102,13 @@ margin-left: 3rem;
 | @bottom | unit | -- | Bottom margin ||
 | @left | unit | -- | Left margin ||
 
----code---
+---code|modifier:split---
 
 ```less
 .margin(2; 3; 3; 4);
 ```
 
-```less
+```css
 margin-top: 2rem;
 margin-right: 3rem;
 margin-bottom: 3rem;

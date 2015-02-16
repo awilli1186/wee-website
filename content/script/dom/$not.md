@@ -22,18 +22,23 @@ Wee.$not('ref:element', 'div');
 The current index and element are injected into the callback. The scope of ```this``` is the element.
 
 ```html
-<div data-ref="element" data-active="true">
+<ul class="names">
+	<li>John Doe</li>
+	<li data-hidden="true">Jane Doe</li>
+	<li>John Smith</li>
+	<li>Jane Smith</li>
+</ul>
 ```
 
----code|type:boolean|modifier:split---
+---code|modifier:split---
 
 ```javascript
-Wee.$not('ref:element', function() {
-	// Check to see if data-active is set true
-	return Wee.$data(this, 'active' === 'true';
+Wee.$not('.names li', function(i, el) {
+	// Check if data-hidden is set to true
+	return Wee.$data(el, 'hidden') === 'true';
 });
 ```
 
 ```javascript
-false
+[<li>John Doe</li>, <li>John Smith</li>, <li>Jane Smith</li>]
 ```

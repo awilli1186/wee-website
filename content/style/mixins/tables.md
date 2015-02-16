@@ -2,13 +2,13 @@
 name: Tables
 ---
 
----code|label:Responsive Table---
+---code|modifier:split|label:Responsive Table---
 
 ```less
 .responsive-table();
 ```
 
-```less
+```css
 overflow-x: auto;
 overflow-y: hidden;
 width: 100%;

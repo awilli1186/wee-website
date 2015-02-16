@@ -2,19 +2,21 @@
 name: Backgrounds
 ---
 
----variables|label:Background---
+---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | @value | string, keyword | -- | Background rules | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
+.background(transparent);
 .background('url("bg.png") #00f no-repeat');
 ```
 
-```less
+```css
+background: transparent;
 background: url("bg.png") #00f no-repeat;
 ```
 
@@ -23,51 +25,39 @@ background: url("bg.png") #00f no-repeat;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | @color | color | @bodyBackground | Background color ||
-
----code---
-
-```less
-.background(#00f);
-```
-
-```less
-background: #00f;
-```
-
----variables---
-
-| Variable | Type | Default | Description | Required |
-| -- | -- | -- | -- | -- |
-| @color | color | -- | Background color ||
 | @filename | string | -- | Image file ||
 | @repeat | string, keyword | -- | Image repeat ||
 
----code---
+---code|modifier:split---
 
 ```less
+.background(#00f);
+.background(#00f; 'bg.png');
 .background(#00f; 'bg.png'; no-repeat);
 ```
 
-```less
-background: #0000ff url('../img/bg.png') no-repeat;
+```css
+background: #00f;
+background: #00f url('../img/bg.png');
+background: #00f url('../img/bg.png') no-repeat;
 ```
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | -- | Color | ✓ |
-| @opacity | unit | -- | Opacity | ✓ |
-| @fallback | color | @color | Fallback color ||
+| @color | color | -- | Background color | ✓ |
+| @opacity | unit | -- | Background opacity | ✓ |
+| @fallback | color | @color | Fallback background color ||
 
----code---
+---code|modifier:split---
 
 ```less
-.background(#00f; 0.2; #fff);
+.background(#00f; 0.2);
 ```
 
-```less
-background-color: #fff;
+```css
+background-color: #00f;
 background-color: rgba(0, 0, 255, 0.2);
 ```
 
@@ -75,37 +65,37 @@ background-color: rgba(0, 0, 255, 0.2);
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | -- | Color | ✓ |
+| @color | color | -- | Background color | ✓ |
 | @filename | string | -- | Image file | ✓ |
 | @x | unit | -- | Horizontal offset | ✓ |
 | @y | unit | 0 | Vertical offset ||
 | @repeat | keyword | no-repeat | Image repeat ||
 
----code---
+---code|modifier:split---
 
 ```less
-.background(blue; 'bg.png'; 10%; 15%);
+.background(#00f; 'bg.png'; 10%; 15%);
 ```
 
-```less
-background: #0000ff url('../img/bg.png') 10% 15% no-repeat;
+```css
+background: #00f url('../img/bg.png') 10% 15% no-repeat;
 ```
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| light, dark | keyword | -- | Light or dark preset | ✓ |
+| @value | preset | -- | Light or dark | ✓ |
 | @opacity | unit | @defaultOpacity | Background opacity ||
-| @fallback | color | white, dark | Fallback color ||
+| @fallback | color | #fff, #000 | Fallback background color ||
 
----code---
+---code|modifier:split---
 
 ```less
 .background(light; 0.5);
 ```
 
-```less
+```css
 background-color: #ffffff;
 background-color: rgba(255, 255, 255, 0.5);
 ```
@@ -116,13 +106,13 @@ background-color: rgba(255, 255, 255, 0.5);
 | -- | -- | -- | -- | -- |
 | @color | color | @bodyBackground | Background color ||
 
----code---
+---code|modifier:split---
 
 ```less
 .background-color(blue);
 ```
 
-```less
+```css
 background-color: #00f;
 ```
 
@@ -130,16 +120,16 @@ background-color: #00f;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | keyword | -- | Background image value | ✓ |
+| @value | keyword | -- | Image file | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
-.background-image(none);
+.background-image('bg.png);
 ```
 
-```less
-background-image: none;
+```css
+background-image: '../img/bg.png';
 ```
 
 ---variables---
@@ -149,13 +139,13 @@ background-image: none;
 | @filename | string | -- | Image file | ✓ |
 | @repeat | keyword | -- | Image repeat ||
 
----code---
+---code|modifier:split---
 
 ```less
 .background-image('bg.png'; no-repeat);
 ```
 
-```less
+```css
 background-image: url('../img/bg.png');
 background-repeat: no-repeat;
 ```
@@ -169,7 +159,7 @@ background-repeat: no-repeat;
 | @width | unit | auto | Size or width ||
 | @height | unit | auto | Height ||
 
----code---
+---code|modifier:split---
 
 ```less
 div {
@@ -177,7 +167,7 @@ div {
 }
 ```
 
-```less
+```css
 div {
     background-image: url('../img/bg.png');
 }
@@ -198,13 +188,13 @@ div {
 | @y | unit | 0 | Vertical offset ||
 | @repeat | keyword | no-repeat | Repeat ||
 
----code---
+---code|modifier:split---
 
 ```less
 .background-image('bg.png'; 10px);
 ```
 
-```less
+```css
 background-image: url('../img/bg.png');
 background-position: 10px 0;
 background-repeat: no-repeat;
@@ -222,15 +212,15 @@ background-repeat: no-repeat;
 | @y | unit | 0 | Vertical offset ||
 | @repeat | keyword | no-repeat | Image repeat ||
 
----code---
+---code|modifier:stacked---
 
 ```less
 div {
-    .background-image(retina; 'bg.png'; 4rem; 3rem; 10px);
+	.background-image(retina; 'bg.png'; 4rem; 3rem; 10px);
 }
 ```
 
-```less
+```css
 div {
     background-image: url('../img/bg.png');
     background-position: 10px 0;
@@ -244,23 +234,27 @@ div {
 }
 ```
 
+---note---
+
+**Note:** The value of the retina filename suffix is set by the @retinaSuffix variable.
+
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | @filename | string | -- | Image file | ✓ |
 | @x | unit | -- | Horizontal offset | ✓ |
-| @y | unit | -- | Vertical offset | ✓ |
-| @repeat | keyword | -- | Repeat | ✓ |
-| @attachment | keyword | -- | Repeat | ✓ |
+| @y | unit | 0 | Vertical offset | ✓ |
+| @repeat | keyword | no-repeat | Image repeat | ✓ |
+| @attachment | keyword | -- | Image attachment | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .background-image('bg.png'; 10px; 8px; no-repeat; fixed);
 ```
 
-```less
+```css
 background-attachment: fixed;
 background-image: url('../img/bg.png');
 background-position: 10px 8px;
@@ -271,16 +265,16 @@ background-repeat: no-repeat;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| retina | keyword | -- | Retina preset | ✓ |
+| retina | preset | -- | Retina | ✓ |
 | @filename | string | -- | Image file | ✓ |
-| @width | unit | -- | Width | ✓ |
-| @height | unit | -- | Height | ✓ |
+| @width | unit | -- | Width value | ✓ |
+| @height | unit | -- | Height value | ✓ |
 | @x | unit | -- | Horizontal offset | ✓ |
 | @y | unit | -- | Vertical offset | ✓ |
 | @repeat | keyword | -- | Image repeat | ✓ |
 | @attachment | keyword | -- | Attachment value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 div {
@@ -288,7 +282,7 @@ div {
 }
 ```
 
-```less
+```css
 div {
     background-attachment: fixed;
     background-image: url('../img/bg.png');
@@ -314,13 +308,13 @@ div {
 | @attachment | keyword | -- | Attachment value | ✓ |
 | @size | unit | -- | Size | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .background-image('bg.png'; 10px; 8px; no-repeat; fixed; 400px);
 ```
 
-```less
+```css
 background-attachment: fixed;
 background-image: url('../img/bg.png');
 background-position: 10px 8px;
@@ -340,13 +334,13 @@ background-size: 400px;
 | @width | unit | -- | Width | ✓ |
 | @height | unit | -- | Height | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .background-image('bg.png'; 10px; 8px; no-repeat; fixed; 400px; 300px);
 ```
 
-```less
+```css
 background-attachment: fixed;
 background-image: url('../img/bg.png');
 background-position: 10px 8px;
@@ -363,13 +357,13 @@ background-size: 400px 300px;
 | @end | color | rgba(0, 0, 0, 0.2) | Ending color ||
 | @angle | integer | 180 | Angle ||
 
----code---
+---code|modifier:split---
 
 ```less
 .background-gradient(blue; green; yellow; 90);
 ```
 
-```less
+```css
 background-color: #00f;
 background: -webkit-linear-gradient(0deg, #008000, #ff0);
 background: linear-gradient(90deg, #008000, #ff0);
@@ -383,13 +377,13 @@ background: linear-gradient(90deg, #008000, #ff0);
 | @spread | percentage | -- | Color range | ✓ |
 | @angle | integer | 180 | Angle ||
 
----code---
+---code|modifier:split---
 
 ```less
 .background-gradient(blue; 15%; 90);
 ```
 
-```less
+```css
 background-color: #00f;
 background: -webkit-linear-gradient(0deg, #4d4dff, #0000b3);
 background: linear-gradient(90deg, #4d4dff, #0000b3);
@@ -405,13 +399,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4dff', endC
 | @end | integer | 1 | Ending opacity ||
 | @angle | integer | 180 | Angle ||
 
----code---
+---code|modifier:split---
 
 ```less
 .background-gradient(dark);
 ```
 
-```less
+```css
 background-color: rgba(0, 0, 0, 0);
 background: -webkit-linear-gradient(270deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 2));
 background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
@@ -423,13 +417,13 @@ background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 | -- | -- | -- | -- | -- |
 | @arguments | keyword | -- | Attachment value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .background-attachment(scroll);
 ```
 
-```less
+```css
 background-attachment: scroll;
 ```
 
@@ -440,13 +434,13 @@ background-attachment: scroll;
 | @x | unit | 0 | Horizontal offset ||
 | @y | unit | 0 | Vertical offset ||
 
----code---
+---code|modifier:split---
 
 ```less
 .background-position(10px; 5px);
 ```
 
-```less
+```css
 background-position: 10px 5px;
 ```
 
@@ -456,13 +450,13 @@ background-position: 10px 5px;
 | -- | -- | -- | -- | -- |
 | @arguments | keyword | -- | Repeat value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .background-repeat(repeat);
 ```
 
-```less
+```css
 background-repeat: repeat;
 ```
 
@@ -472,13 +466,13 @@ background-repeat: repeat;
 | -- | -- | -- | -- | -- |
 | @size | unit | -- | Size value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .background-size(3rem);
 ```
 
-```less
+```css
 background-size: 3rem;
 ```
 
@@ -488,13 +482,13 @@ background-size: 3rem;
 | -- | -- | -- | -- | -- |
 | @value | keyword | border-box | Clip value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .background-clip();
 ```
 
-```less
+```css
 background-clip: border-box;
 ```
 
@@ -508,13 +502,13 @@ background-clip: border-box;
 | @repeat | keyword | no-repeat | Repeat ||
 | @filename | string | @spriteFilename | Image file ||
 
----code---
+---code|modifier:split---
 
 ```less
 .sprite(blue);
 ```
 
-```less
+```css
 background: #00f url('../img/sprite.png') 0 0 no-repeat;
 ```
 
@@ -531,7 +525,7 @@ background: #00f url('../img/sprite.png') 0 0 no-repeat;
 | @repeat | keyword | no-repeat | Repeat ||
 | @filename | string | @spriteFilename | Image file ||
 
----code---
+---code|modifier:split---
 
 ```less
 div {
@@ -539,7 +533,7 @@ div {
 }
 ```
 
-```less
+```css
 div {
     background: #0000ff url('../img/sprite.png') 0 0 no-repeat;
 }
@@ -560,13 +554,13 @@ div {
 | @repeat | keyword | no-repeat | Repeat ||
 | @filename | string | @spriteFilename | Image file ||
 
----code---
+---code|modifier:split---
 
 ```less
 .sprite();
 ```
 
-```less
+```css
 background-image: url('../img/sprite.png');
 background-position: 0 0;
 background-repeat: no-repeat;
@@ -584,7 +578,7 @@ background-repeat: no-repeat;
 | @repeat | keyword | no-repeat | Repeat ||
 | @filename | string | @spriteFilename | Image file ||
 
----code---
+---code|modifier:split---
 
 ```less
 div {
@@ -592,7 +586,7 @@ div {
 }
 ```
 
-```less
+```css
 div {
     background-image: url('../img/sprite.png');
     background-position: 0 0;
@@ -605,3 +599,7 @@ div {
     }
 }
 ```
+
+---note---
+
+**Note:** All image paths are relative to the @imagePath variable which defaults to ```../img```. It can be overridden in variables.less.

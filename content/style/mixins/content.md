@@ -9,56 +9,56 @@ name: Content
 | @value | string, keyword | ' ' | Content ||
 | @font | string, keyword | false | Font family ||
 
----code---
+---code|modifier:split---
 
 ```less
 .content(text);
 ```
 
-```less
+```css
 content: 'text';
 ```
 
----code---
+---code|modifier:split---
 
 ```less
-.content(example; georgia);
+.content(example; Georgia);
 ```
 
-```less
+```css
 content: 'example';
-font-family: georgia;
+font-family: Georgia;
 ```
 
----variables|label:Prefix, Suffix &amp; Bookends---
+---variables|label:Prefix, Suffix & Bookends---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | @value | string, keyword | '-' | Content ||
-| @margin | unit | 0.5em | Margin ||
+| @margin | unit | 0.5em | Left or right margin ||
 | @font | string, keyword | false | Font family ||
 | @color | color | false | Font color ||
 
----code---
+---code|modifier:split---
 
 ```less
 .prefix();
 ```
 
-```less
+```css
 :before {
     content: '-';
     margin-right: 0.5em;
 }
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .suffix('text'; 1em; Georgia; blue);
 ```
 
-```less
+```css
 :after {
     content: 'text';
     margin-left: 1em;
@@ -67,13 +67,13 @@ font-family: georgia;
 }
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .bookends();
 ```
 
-```less
+```css
 :before {
     content: '-';
     margin-right: 0.5em;
@@ -82,5 +82,4 @@ font-family: georgia;
     content: '-';
     margin-left: 0.5em;
 }
-
 ```

@@ -30,7 +30,8 @@ Wee.$toggleClass('ref:element', 'modifier modifier2');
 The current index, class value and state are injected into the callback. The scope of ```this``` is the element.
 
 ```javascript
-Wee.$toggleClass('.element', function(el, i, className) {
-    // Callback logic
+Wee.$toggleClass('.element', function(i, className, state) {
+	// Return the class intended for toggle
+    return className + (state === true ? '-on' : '-off');
 });
 ```

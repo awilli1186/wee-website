@@ -284,6 +284,10 @@
 				}
 			}
 
+			if (typeof value == 'number') {
+				value = value + 'px';
+			}
+
 			W.$each(target, function(el, i) {
 				W.$css(el, 'height', func ?
 						W.$exec(value, {
@@ -320,7 +324,7 @@
 				}
 			});
 		},
-		// Get the index of a matching selection relative to it's siblings
+		// Get the zero-based index of a matching selection relative to it's siblings
 		// Returns int
 		$index: function(target) {
 			var el = W.$first(target),
@@ -355,42 +359,43 @@
 				});
 			});
 		},
-		// Determine if the first matching selection matches a specified criteria
+		// Determine if at least one matching selection matches a specified criteria
 		// Returns boolean
 		$is: function(target, filter, options) {
-			var el = W.$first(target);
-
-			if (typeof filter == 'string' && filter.slice(0, 4) == 'ref:') {
-				filter = W.$get(filter);
-				return filter ? filter.indexOf(el) !== -1 : false;
-			}
-
-			if (W.$isObject(filter)) {
-				for (var key in filter) {
-					if (filter[key] === el) {
-						return true;
-					}
+			return W.$map(target, function(el, i) {
+				if (typeof filter == 'string' && filter.slice(0, 4) == 'ref:') {
+					filter = W.$get(filter);
+					return filter ? filter.indexOf(el) !== -1 : false;
 				}
 
-				return false;
-			}
+				if (W.$isObject(filter)) {
+					for (var key in filter) {
+						if (filter[key] === el) {
+							return true;
+						}
+					}
 
-			if (Array.isArray(filter)) {
-				return filter.indexOf(el) !== -1;
-			}
+					return false;
+				}
 
-			if (W._canExec(filter)) {
-				return W.$exec(filter, W.$extend({
-					scope: el
-				}, options));
-			}
+				if (Array.isArray(filter)) {
+					return filter.indexOf(el) !== -1;
+				}
 
-			var matches = el.matches || el.matchesSelector || el.msMatchesSelector ||
-				el.mozMatchesSelector || el.webkitMatchesSelector || el.oMatchesSelector;
+				if (W._canExec(filter)) {
+					return W.$exec(filter, W.$extend({
+						args: [i, el],
+						scope: el
+					}, options));
+				}
 
-			return matches ?
-				matches.call(el, filter) :
-			W._slice.call(el.parentNode.querySelectorAll(filter)).indexOf(el) !== -1;
+				var matches = el.matches || el.matchesSelector || el.msMatchesSelector ||
+					el.mozMatchesSelector || el.webkitMatchesSelector || el.oMatchesSelector;
+
+				return matches ?
+					matches.call(el, filter) :
+					W._slice.call(el.parentNode.querySelectorAll(filter)).indexOf(el) !== -1;
+			}).length > 0;
 		},
 		// Get the last element of a matching selection
 		// Returns element
@@ -404,21 +409,21 @@
 				return W._sibling(el, 1, filter, options);
 			}));
 		},
-		// Filter out elements from a matching selection
+		// Returns elements not matching the filtered selection
 		// Returns element array
 		$not: function(target, filter, options) {
 			var func = W._canExec(filter);
 
 			return W.$map(target, function(el, i) {
-				return func ?
+				return (func ?
 					W.$exec(filter, {
 						args: [i, el],
 						scope: el
 					}) :
-					W.$is(el, filter, options) ? false : el;
+					W.$is(el, filter, options)) ? false : el;
 			});
 		},
-		// Get the offset position of a matching selection
+		// Get the offset position of a matching selection relative to the document
 		// Returns object
 		$offset: function(target) {
 			var rect = W.$first(target).getBoundingClientRect(),
@@ -469,7 +474,7 @@
 
 			return convert ? $(children) : children;
 		},
-		// Get the position of the first matching selection
+		// Get the position of the first matching selection relative to its offset parent
 		// Returns object
 		$position: function(target) {
 			var el = W.$first(target);
@@ -570,7 +575,28 @@
 		$replaceWith: function(target, source) {
 			W.$after(target, source, true);
 		},
-		// Get or set the top scroll position of each matching selection
+		// Get or set the X scroll position of each matching selection
+		// Returns int
+		$scrollLeft: function(target, value) {
+			if (value === U) {
+				var el = target ? W.$first(target) : W._win;
+
+				if (el === W._win) {
+					if (! W._legacy) {
+						return el.pageXOffset;
+					}
+
+					el = W._html;
+				}
+
+				return el.scrollLeft;
+			}
+
+			W.$each(target, function(el) {
+				el.scrollLeft = value;
+			});
+		},
+		// Get or set the Y scroll position of each matching selection
 		// Returns int
 		$scrollTop: function(target, value) {
 			if (value === U) {
@@ -588,7 +614,7 @@
 			}
 
 			W.$each(target, function(el) {
-				el.scrollTo(0, value);
+				el.scrollTop = value;
 			});
 		},
 		// Serialize input values from first matching form selection
@@ -698,21 +724,25 @@
 					W.$show(el);
 			});
 		},
-		// Toggle the display of a specified element
+		// Toggle adding and removing class(es) from the specified element
 		$toggleClass: function(target, className, state) {
 			var func = W._canExec(className);
 
 			W.$each(target, function(el, i) {
-				func ?
-					W.$exec(className, {
+				if (func) {
+					className = W.$exec(className, {
 						args: [i, el.className, state],
 						scope: el
-					}) :
+					});
+				}
+
+				if (className) {
 					className.split(/\s+/).forEach(function(value) {
 						state === false || (state === U && W.$hasClass(el, value)) ?
 							W.$removeClass(el, value) :
 							W.$addClass(el, value);
 					});
+				}
 			});
 		},
 		// Get value of first matching selection or set values of each matching selection
@@ -798,6 +828,10 @@
 				}
 			}
 
+			if (typeof value == 'number') {
+				value = value + 'px';
+			}
+
 			W.$each(target, function(el, i) {
 				W.$css(el, 'width', func ?
 						W.$exec(value, {
@@ -822,10 +856,12 @@
 						html
 				);
 
-				W.$each(wrap, function(cel) {
-					cel.appendChild(el.cloneNode(true));
-					el.parentNode.replaceChild(cel, el);
-				});
+				if (wrap) {
+					W.$each(wrap, function (cel) {
+						cel.appendChild(el.cloneNode(true));
+						el.parentNode.replaceChild(cel, el);
+					});
+				}
 			});
 		},
 		// Wrap markup around the content of each matching selection
@@ -834,27 +870,30 @@
 
 			W.$each(target, function(el, i) {
 				var wrap = W.$parseHTML(
-						func ?
-							W.$exec(html, {
-								args: [i],
-								scope: el
-							}) :
-							html
-					),
-					children = W.$children(el);
+					func ?
+						W.$exec(html, {
+							args: [i],
+							scope: el
+						}) :
+						html
+				);
 
-				if (children.length === 0) {
-					children = W.$html(el);
+				if (wrap) {
+					var children = W.$children(el);
 
-					W.$empty(el);
-					W.$html(wrap, children);
-				} else {
-					W.$each(children, function(cel) {
-						wrap[0].appendChild(cel);
-					});
+					if (children.length === 0) {
+						children = W.$html(el);
+
+						W.$empty(el);
+						W.$html(wrap, children);
+					} else {
+						W.$each(children, function(cel) {
+							wrap[0].appendChild(cel);
+						});
+					}
+
+					W.$append(el, wrap);
 				}
-
-				W.$append(el, wrap);
 			});
 		},
 		// Return either direct previous or next sibling

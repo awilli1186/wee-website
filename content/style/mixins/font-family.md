@@ -8,12 +8,12 @@ name: Font Family
 | -- | -- | -- | -- | -- |
 | @value | string, keyword | @baseFont | Font family rules ||
 
----code---
+---code|modifier:split---
 
 ```less
 .font-family(Georgia);
 ```
 
-```less
+```css
 font-family: Georgia;
 ```

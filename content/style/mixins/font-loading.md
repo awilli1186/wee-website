@@ -11,13 +11,13 @@ name: Font Loading
 | @weight | integer, keyword | normal | Font weight ||
 | @style | keyword | normal | Font style ||
 
----code---
+---code|modifier:split---
 
 ```less
 .load-font(Example);
 ```
 
-```less
+```css
 @font-face {
 	font-family: Example;
 	src: url('../fonts/Example.eot');

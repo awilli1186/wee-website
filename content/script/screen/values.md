@@ -15,6 +15,8 @@ You can easily disable any unneeded breakpoints by setting them to false in your
 
 **Note:** Wee uses the font family of the HTML element to reference the current breakpoint. You can  add additional custom values by setting the value to a numeric string in your CSS. This would typically be done in a custom media query.
 
+---code---
+
 ```css
 @media (max-width: 600px) {
 	html {

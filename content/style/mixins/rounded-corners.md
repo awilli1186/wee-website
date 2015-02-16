@@ -8,13 +8,13 @@ name: Rounded Corners
 | -- | -- | -- | -- | -- |
 | @value | unit | 3px | Size of radius ||
 
----code---
+---code|modifier:split---
 
 ```less
 .rounded(3);
 ```
 
-```less
+```css
 background-clip: border-box;
 border-radius: 3rem;
 ```
@@ -26,25 +26,25 @@ border-radius: 3rem;
 | top, right, bottom, left | keyword | -- | Side presets | ✓ |
 | @value | unit | 3px | Radius ||
 
----code---
+---code|modifier:split---
 
 ```less
 .rounded(top);
 ```
 
-```less
+```css
 background-clip: border-box;
 border-top-left-radius: 3px;
 border-top-right-radius: 3px;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .rounded(right; 5);
 ```
 
-```less
+```css
 background-clip: border-box;
 border-top-right-radius: 5rem;
 border-bottom-right-radius: 5rem;
@@ -59,24 +59,24 @@ border-bottom-right-radius: 5rem;
 | left, right | keyword | -- | Left or right  preset | ✓ |
 | @value | unit | 3px | Radius ||
 
----code---
+---code|modifier:split---
 
 ```less
 .rounded(bottom; left);
 ```
 
-```less
+```css
 background-clip: border-box;
 border-bottom-left-radius: 3px;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .rounded(top; right; 4);
 ```
 
-```less
+```css
 background-clip: border-box;
 border-top-right-radius: 4rem;
 ```
@@ -90,13 +90,13 @@ border-top-right-radius: 4rem;
 | @bottom | unit | -- | Bottom radius | ✓ |
 | @left | unit | -- | Left radius | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .rounded(2px; 3rem; 4px; 5px);
 ```
 
-```less
+```css
 background-clip: border-box;
 border-top-left-radius: 2px;
 border-top-right-radius: 3rem;

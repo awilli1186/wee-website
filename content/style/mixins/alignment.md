@@ -2,11 +2,11 @@
 name: Alignment
 ---
 
----variables|modifier:options|label:Float---
+---variables|label:Float---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | keyword | left | Left or right ||
+| @value | preset | left | Left or right ||
 | @width | unit | -- | Width value ||
 
 ---code|modifier:split---
@@ -62,7 +62,7 @@ display: table;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | keyword | both | Both, left, or right ||
+| @value | preset | both | Both, left, or right ||
 
 ---code|modifier:split---
 
@@ -78,7 +78,7 @@ clear: left;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | keyword | -- | Center, justify, left, right, baseline, bottom, middle, or top | ✓ |
+| @value | preset | -- | Center, justify, left, right, baseline, bottom, middle, or top | ✓ |
 
 ---code|modifier:split---
 
@@ -96,7 +96,7 @@ vertical-align: middle;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | keyword | -- | Display value | ✓ |
+| @value | value | -- | Display value | ✓ |
 
 ---code|modifier:split---
 

@@ -7,7 +7,7 @@ heading: Get current screen value
 
 The value is determined by the value of the HTML element font family which stores the current media query number. The response falls between 1 and 6.
 
----code|modifier:split|type:number---
+---code|type:number|modifier:split---
 
 ```javascript
 Wee.screen.size();

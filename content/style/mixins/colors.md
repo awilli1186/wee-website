@@ -8,29 +8,20 @@ name: Colors
 | -- | -- | -- | -- | -- |
 | @color | color | @baseColor | Color value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .color(#123);
 ```
 
-```less
+```css
 color: #123;
 ```
 
----code---
+---code|label:Shortcuts---
 
 ```less
 .white();
-```
-
-```less
-color: #fff;
-```
-
----doc---
-
-```less
 .lightestGray();
 .lighterGray();
 .lightGray();
@@ -40,3 +31,7 @@ color: #fff;
 .darkestGray();
 .black();
 ```
+
+---note---
+
+**Note:** The values for @baseColor, @white, @black, and the grayscale are configurable with variables.less.

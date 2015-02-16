@@ -11,13 +11,13 @@ name: Shapes
 | @size | unit | 5px | Size ||
 | @horizontalSize, @verticalSize | unit | @size | Horizontal or vertical size ||
 
----code---
+---code|modifier:split---
 
 ```less
 .caret(up; red; 10px);
 ```
 
-```less
+```css
 content: ' ';
 height: 0;
 width: 0;
@@ -26,13 +26,13 @@ border-right: 10px solid transparent;
 border-bottom: 10px solid #ff0000;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .caret(left; blue);
 ```
 
-```less
+```css
 content: ' ';
 height: 0;
 width: 0;

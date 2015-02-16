@@ -1,6 +1,6 @@
 ---
-name: $scrollTop
-heading: Get or set the Y scroll position of each matching selection
+name: $scrollLeft
+heading: Get or set the X scroll position of each matching selection
 ---
 
 ---variables---
@@ -8,16 +8,16 @@ heading: Get or set the Y scroll position of each matching selection
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | target | [selection](/script#selection) | -- | Target selection | ✓ |
-| value | integer | -- | Top position ||
+| value | integer | -- | Left position ||
 
 ---code|type:number|modifier:split|label:Get Value---
 
 ```javascript
-Wee.$scrollTop();
+Wee.$scrollLeft();
 ```
 
 ```javascript
-1560
+0
 ```
 
 ---note---
@@ -27,7 +27,7 @@ Wee.$scrollTop();
 ---code|label:Set Value---
 
 ```javascript
-Wee.$scrollTop(15);
+Wee.$scrollLeft(15);
 ```
 
 ---note---

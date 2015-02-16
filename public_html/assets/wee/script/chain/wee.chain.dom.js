@@ -172,6 +172,10 @@
 			var r = W.$height(this, value);
 			return value === U || value === true ? r : this;
 		},
+		scrollLeft: function(value) {
+			var r = W.$scrollLeft(this, value);
+			return value === U || value === true ? r : this;
+		},
 		scrollTop: function(value) {
 			var r = W.$scrollTop(this, value);
 			return value === U || value === true ? r : this;

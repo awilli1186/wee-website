@@ -8,13 +8,13 @@ name: Font Size
 | -- | -- | -- | -- | -- |
 | @value | unit | @baseFontSize | Font size ||
 
----code---
+---code|modifier:split---
 
 ```less
 .font-size(2);
 ```
 
-```less
+```css
 font-size: 2rem;
 ```
 
@@ -25,13 +25,13 @@ font-size: 2rem;
 | @value | unit | -- | Font size rules | ✓ |
 | @lineHeight | unit | -- | Line height rules | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .font-size(3; 1.6);
 ```
 
-```less
+```css
 font-size: 3rem;
 line-height: 1.6rem;
 ```

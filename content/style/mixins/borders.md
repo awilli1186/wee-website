@@ -8,13 +8,13 @@ name: Borders
 | -- | -- | -- | -- | -- |
 | @value | string, keyword | '1px solid #404040' | Border rules | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .border('2px dotted #00f');
 ```
 
-```less
+```css
 border: 2px dotted #00f;
 ```
 
@@ -26,13 +26,13 @@ border: 2px dotted #00f;
 | @value | unit | 1px | Size ||
 | @style | keyword | solid | Style ||
 
----code---
+---code|modifier:split---
 
 ```less
 .border(red; 4px; dotted);
 ```
 
-```less
+```css
 border: 4px dotted #f00;
 ```
 
@@ -46,13 +46,13 @@ border: 4px dotted #f00;
 | @style | keyword | solid | Border style ||
 | @fallback | color | @black | Fallback color ||
 
----code---
+---code|modifier:split---
 
 ```less
 .border(dark; 40%; 2px);
 ```
 
-```less
+```css
 border: 2px solid #000000;
 border: 2px solid rgba(0, 0, 0, 0.4);
 ```
@@ -66,13 +66,13 @@ border: 2px solid rgba(0, 0, 0, 0.4);
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
 
----code---
+---code|modifier:split---
 
 ```less
 .border(top; blue);
 ```
 
-```less
+```css
 border-top: 1px solid #00f;
 ```
 
@@ -87,13 +87,13 @@ border-top: 1px solid #00f;
 | @style | keyword | solid | Style ||
 | @fallback | color | @white, @black | Fallback color ||
 
----code---
+---code|modifier:split---
 
 ```less
 .border(top; light; 50%; 3px; dotted);
 ```
 
-```less
+```css
 border: 3px dotted #ffffff;
 border: 3px dotted rgba(255, 255, 255, 0.5);
 ```
@@ -108,13 +108,13 @@ border: 3px dotted rgba(255, 255, 255, 0.5);
 | @style | keyword | solid | Style ||
 
 
----code---
+---code|modifier:split---
 
 ```less
 .border(horizontal; red; 2px; dotted);
 ```
 
-```less
+```css
 border-left: 2px dotted #ff0000;
 border-right: 2px dotted #ff0000;
 ```
@@ -129,13 +129,13 @@ border-right: 2px dotted #ff0000;
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
 
----code---
+---code|modifier:split---
 
 ```less
 .border(vertical; dark; 0.4);
 ```
 
-```less
+```css
 border-top: 1px solid #000000;
 border-bottom: 1px solid #000000;
 border-top: 1px solid rgba(0, 0, 0, 0.4);
@@ -153,13 +153,13 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 | @color | color | @baseColor | Color ||
 | @style | keyword | solid | Style ||
 
----code---
+---code|modifier:split---
 
 ```less
 .border(1px; 3px; 4px; 2px; blue; dotted);
 ```
 
-```less
+```css
 border-bottom: 4px dotted #00f;
 border-left: 2px dotted #00f;
 border-right: 3px dotted #00f;
@@ -176,13 +176,13 @@ border-top: 1px dotted #00f;
 | @outset | unit | 0 | Extend beyond border box ||
 | @repeat | keyword | stretch | Match size of border ||
 
----code---
+---code|modifier:stacked---
 
 ```less
 .border-image('border.png');
 ```
 
-```less
+```css
 -webkit-border-image: url('../img/border.png') 100% 1 0 stretch;
 border-image: url('../img/border.png') 100% 1 0 stretch;
 ```
@@ -193,13 +193,13 @@ border-image: url('../img/border.png') 100% 1 0 stretch;
 | -- | -- | -- | -- | -- |
 | @color, @style, @width | color, keyword, unit | -- | Color, style, or width | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .border-color(blue);
 ```
 
-```less
+```css
 border-color: #00f;
 ```
 
@@ -210,52 +210,52 @@ border-color: #00f;
 | top, right, bottom, left | keyword | -- | Side presets | ✓ |
 | @color, @style, @width | color, keyword, unit | -- | Color, style, or width | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .border-color(top; blue);
 ```
 
-```less
+```css
 border-top-color: #00f;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .border-style(dotted);
 ```
 
-```less
+```css
 border-style: dotted;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .border-style(right; dotted);
 ```
 
-```less
+```css
 border-right-style: dotted;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .border-width(4px);
 ```
 
-```less
+```css
 border-width: 4px;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .border-width(bottom; 4px);
 ```
 
-```less
+```css
 border-bottom-width: 4px;
 ```

@@ -8,12 +8,12 @@ name: Font Weight
 | -- | -- | -- | -- | -- |
 | @value | unit | @baseFontWeight | Font weight ||
 
----code---
+---code|modifier:split---
 
 ```less
 .font-weight(300);
 ```
 
-```less
+```css
 font-weight: 300;
 ```

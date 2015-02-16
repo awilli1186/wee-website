@@ -2,13 +2,13 @@
 name: Lists
 ---
 
----code|label:Inline List---
+---code|modifier:split|label:Inline List---
 
 ```less
 .inline-list();
 ```
 
-```less
+```css
 li {
 	display: inline;
 }
@@ -20,13 +20,13 @@ li {
 | -- | -- | -- | -- | -- |
 | @spacing | unit | -- | Left margin ||
 
----code---
+---code|modifier:split---
 
 ```less
 .inline-list(2);
 ```
 
-```less
+```css
 li {
 	display: inline;
 	margin-left: 2;
@@ -43,13 +43,13 @@ li:first-child {
 | @content | string | -- | Content ||
 | @margin | unit | 0 | Right margin ||
 
----code---
+---code|modifier:split---
 
 ```less
 .inline-list('foo'; 2px);
 ```
 
-```less
+```css
 li {
 	display: inline;
 	margin-right: 2px;
@@ -63,13 +63,13 @@ li:first-child:before {
 }
 ```
 
----code|label:Floated List---
+---code|modifier:split|label:Floated List---
 
 ```less
 .floated-list();
 ```
 
-```less
+```css
 li {
 	float: left;
 }
@@ -81,13 +81,13 @@ li {
 | -- | -- | -- | -- | -- |
 | @value | keyword(s) | -- | List-style rules | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .list-style(circle inside);
 ```
 
-```less
+```css
 list-style: circle inside;
 ```
 
@@ -97,22 +97,22 @@ list-style: circle inside;
 | -- | -- | -- | -- | -- |
 | @value | keyword | outside | List-style position ||
 
----code---
+---code|modifier:split---
 
 ```less
 .list-position(inside);
 ```
 
-```less
+```css
 list-style-position: inside;
 ```
 
----code|label:Unstyled---
+---code|modifier:split|label:Unstyled---
 
-```less
+```less|modifier:split
 .unstyled();
 ```
 
-```less
+```css
 list-style: none;
 ```

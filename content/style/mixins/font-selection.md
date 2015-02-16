@@ -12,14 +12,14 @@ name: Font Selection
 | @lineHeight | unit | -- | Line height ||
 | @style | keyword | -- | Font style ||
 
----code---
+---code|modifier:split---
 
 ```less
-.font(helvetica; 2; 100; 2; italic);
+.font(Helvetica; 2; 100; 2; italic);
 ```
 
-```less
-font-family: helvetica;
+```css
+font-family: Helvetica;
 font-size: 2rem;
 font-weight: 100;
 line-height: 2rem;

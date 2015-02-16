@@ -6,44 +6,44 @@ name: Blocks
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @maxWidth | unit | -- | Maximum width ||
+| @maxWidth | unit | -- | Max width ||
 | @margin | unit | -- | Bottom margin ||
 
----code---
+---code|modifier:split---
 
 ```less
 .centered-block();
 ```
 
-```less
+```css
 display: block;
 margin-left: auto;
 margin-right: auto;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .centered-block(5);
 ```
 
-```less
+```css
 display: block;
 margin-left: auto;
 margin-right: auto;
 max-width: 5rem;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
-.centered-block(5; 2);
+.centered-block(50%; 2);
 ```
 
-```less
+```css
 display: block;
 margin-left: auto;
 margin-right: auto;
-max-width: 5rem;
+max-width: 50%;
 margin-bottom: 2rem;
 ```

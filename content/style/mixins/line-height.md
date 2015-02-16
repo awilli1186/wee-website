@@ -8,12 +8,12 @@ name: Line Height
 | -- | -- | -- | -- | -- |
 | @value | unit | @baseLineHeight | Line height ||
 
----code---
+---code|modifier:split---
 
 ```less
 .line-height(1.2);
 ```
 
-```less
+```css
 line-height: 1.2rem;
 ```

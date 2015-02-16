@@ -8,13 +8,13 @@ name: Padding
 | -- | -- | -- | -- | -- |
 | @value | unit | -- | Padding value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .padding(5);
 ```
 
-```less
+```css
 padding: 5rem;
 ```
 
@@ -25,13 +25,13 @@ padding: 5rem;
 | top, right, bottom, left | keyword | -- | Side presets | ✓ |
 | @value | unit | -- | Padding value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .padding(left; 2);
 ```
 
-```less
+```css
 padding-left: 2rem;
 ```
 
@@ -41,13 +41,13 @@ padding-left: 2rem;
 | -- | -- | -- | -- | -- |
 | horizontal | keyword | -- | Sets padding to @bumperPadding | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .padding(horizontal);
 ```
 
-```less
+```css
 padding-left: 6%;
 padding-right: 6%;
 ```
@@ -59,13 +59,13 @@ padding-right: 6%;
 | horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✓ |
 | @value | unit | -- | Padding value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .padding(vertical; 2);
 ```
 
-```less
+```css
 padding-top: 2rem;
 padding-bottom: 2rem;
 ```
@@ -78,13 +78,13 @@ padding-bottom: 2rem;
 | @left, @top | unit | -- | Left or top padding value | ✓ |
 | @right, @bottom | unit |-- | Right or bottom padding value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .padding(horizontal; 2; 3);
 ```
 
-```less
+```css
 padding-left: 2rem;
 padding-right: 3rem;
 ```
@@ -96,13 +96,13 @@ padding-right: 3rem;
 | @vertical | unit | -- | Vertical padding | ✓ |
 | @horizontal | unit | -- | Horizontal padding | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .padding(2; 3);
 ```
 
-```less
+```css
 padding-top: 2rem;
 padding-right: 3rem;
 padding-bottom: 2rem;
@@ -118,13 +118,13 @@ padding-left: 3rem;
 | @bottom | unit | -- | Bottom padding | ✓ |
 | @left | unit | -- | Left padding | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .padding(2; 3; 3; 4);
 ```
 
-```less
+```css
 padding-top: 2rem;
 padding-right: 3rem;
 padding-bottom: 3rem;
@@ -137,13 +137,13 @@ padding-left: 4rem;
 | -- | -- | -- | -- | -- |
 | @padding | unit | @bumperPadding | Padding value ||
 
----code|label:Padded---
+---code|modifier:split|label:Padded---
 
 ```less
 .padded(2%);
 ```
 
-```less
+```css
 padding-left: 2%;
 padding-right: 2%;
 ```

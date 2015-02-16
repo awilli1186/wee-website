@@ -1,6 +1,54 @@
 ---
-name: Columns
+name: Grid
 ---
+
+---variables|label:Row &amp; Row-Modify---
+
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @margin | percentage | @gridMargin | Left margin | ✓ |
+
+---code|modifier:split---
+
+```less
+div {
+	.row(2%);
+}
+```
+
+```css
+div {
+	margin-left: -2%;
+	max-width: 102%;
+}
+div:after {
+	clear: both;
+	content: ' ';
+	display: table;
+}
+```
+
+---code|modifier:split---
+
+```less
+.row-modify(2%);
+```
+
+```css
+margin-left: -2%;
+max-width: 102%;
+```
+
+---code|modifier:split|label:Row Reset---
+
+```less
+.row-reset();
+```
+
+```css
+margin-left: 0;
+max-width: none;
+```
 
 ---variables|label:Column &amp; Column-Modify---
 
@@ -8,13 +56,13 @@ name: Columns
 | -- | -- | -- | -- | -- |
 | @width | unit | false | Column width ||
 
----code---
+---code|modifier:split---
 
 ```less
 .column(30%);
 ```
 
-```less
+```css
 float: left;
 width: 30%;
 ```
@@ -28,36 +76,36 @@ width: 30%;
 | @columns | integer | @gridColumns | Number of columns ||
 | @margin | percentage | @gridMargin | Left margin ||
 
----code---
+---code|modifier:split---
 
 ```less
 .column(2; 3);
 ```
 
-```less
+```css
 float: left;
 width: 66.66666667%;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .column(spaced; 2; 3; 2%);
 ```
 
-```less
+```css
 float: left;
 width: 64.66666667%;
 margin-left: 2%;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .column-modify(spaced; 2; 3; 2%);
 ```
 
-```less
+```css
 width: 64.66666667%;
 margin-left: 2%;
 ```
@@ -68,13 +116,13 @@ margin-left: 2%;
 | -- | -- | -- | -- | -- |
 | @resetMargin | boolean | false | Reset left margin ||
 
----code---
+---code|modifier:split---
 
 ```less
 .column-reset(true);
 ```
 
-```less
+```css
 float: none;
 width: auto;
 margin-left: 0;
@@ -87,24 +135,24 @@ margin-left: 0;
 | @share | integer | -- | Column span | ✓ |
 | @columns | integer | @gridColumns | Number of columns ||
 
----code---
+---code|modifier:split---
 
 ```less
 .column-pull(2);
 ```
 
-```less
+```css
 position: relative;
 right: 25%;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .column-push(3; 4);
 ```
 
-```less
+```css
 left: 75%;
 position: relative;
 ```
@@ -118,22 +166,22 @@ position: relative;
 | @columns | integer | @gridColumns | Number of columns ||
 | @margin | percentage | (@gridMargin / 2) | Left margin ||
 
----code---
+---code|modifier:split---
 
 ```less
 .column-offset(2; 4);
 ```
 
-```less
+```css
 margin-left: 50%;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .column-offset(spaced; 1; 3; 0.02);
 ```
 
-```less
-margin-left: 33.37333333%;
+```css
+margin-left: 33.33%;
 ```

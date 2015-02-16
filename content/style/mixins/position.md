@@ -1,5 +1,5 @@
 ---
-name: Positioning
+name: Position
 ---
 
 ---variables|label:Top, Right, Bottom &amp; Left---
@@ -8,23 +8,23 @@ name: Positioning
 | -- | -- | -- | -- | -- |
 | @value | unit | 0 | Amount ||
 
----code---
+---code|modifier:split---
 
 ```less
 .top(4);
 ```
 
-```less
+```css
 top: 4rem;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .right(2);
 ```
 
-```less
+```css
 right: 2rem;
 ```
 
@@ -38,13 +38,13 @@ right: 2rem;
 | @bottom | unit | -- | Bottom ||
 | @left | unit | -- | Left ||
 
----code---
+---code|modifier:split---
 
 ```less
 .position(fixed; 4px; 3; 2%; 1rem);
 ```
 
-```less
+```css
 position: fixed;
 top: 4px;
 right: 3rem;
@@ -61,56 +61,56 @@ left: 1rem;
 | @bottom | unit | -- | Bottom position ||
 | @left | unit | -- | Left position ||
 
----code---
+---code|modifier:split---
 
 ```less
 .absolute();
 ```
 
-```less
+```css
 position: absolute;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .absolute(3; 2);
 ```
 
-```less
+```css
 position: absolute;
 top: 3rem;
 right: 2rem;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .fixed(2rem);
 ```
 
-```less
+```css
 position: fixed;
 top: 2rem;
 ```
 
----code|label:Relative---
+---code|modifier:split|label:Relative---
 
 ```less
 .relative();
 ```
 
-```less
+```css
 position: relative;
 ```
 
----code|label:Static---
+---code|modifier:split|label:Static---
 
 ```less
 .static();
 ```
 
-```less
+```css
 position: static;
 ```
 
@@ -120,12 +120,12 @@ position: static;
 | -- | -- | -- | -- | -- |
 | @index | integer | 1 | Z-index ||
 
----code---
+---code|modifier:split---
 
 ```less
 .z-index(4);
 ```
 
-```less
+```css
 z-index: 4;
 ```

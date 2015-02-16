@@ -8,13 +8,13 @@ name: Other
 | -- | -- | -- | -- | -- |
 | @value | keyword | -- | Resize value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .resize(horizontal);
 ```
 
-```less
+```css
 resize: horizontal;
 ```
 
@@ -24,36 +24,36 @@ resize: horizontal;
 | -- | -- | -- | -- | -- |
 | @value | keyword | both | Resize value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .resizable(vertical);
 ```
 
-```less
+```css
 overflow: hidden;
 resize: vertical;
 ```
 
----code|label:Hide Text---
+---code|modifier:split|label:Hide Text---
 
 ```less
 .hide-text();
 ```
 
-```less
+```css
 overflow: hidden;
 text-indent: 100%;
 white-space: nowrap;
 ```
 
----code|label:Hide---
+---code|modifier:split|label:Hide---
 
 ```less
 .hide(text);
 ```
 
-```less
+```css
 overflow: hidden;
 text-indent: 100%;
 white-space: nowrap;
@@ -66,13 +66,13 @@ white-space: nowrap;
 | @color | color | @selectionColor | Selection color ||
 | @background | color, string, keyword | @selectionBackground | Selection background ||
 
----code---
+---code|modifier:split---
 
 ```less
 .selection();
 ```
 
-```less
+```css
 ::-moz-selection {
 	text-shadow: none;
 	background: #167da3;
@@ -91,13 +91,13 @@ white-space: nowrap;
 | -- | -- | -- | -- | -- |
 | @value | keyword | pointer | Cursor value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .cursor();
 ```
 
-```less
+```css
 cursor: pointer;
 ```
 
@@ -108,23 +108,23 @@ cursor: pointer;
 | x, y | keyword | -- | Overflow axis ||
 | @value | keyword | -- | Overflow value | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .overflow(hidden);
 ```
 
-```less
+```css
 overflow: hidden;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .overflow(x; scroll);
 ```
 
-```less
+```css
 overflow-x: scroll;
 ```
 
@@ -135,61 +135,61 @@ overflow-x: scroll;
 | @x | keyword | -- | Overflow-x value ||
 | @y | keyword | -- | Overflow-y value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .overflow(hidden; scroll);
 ```
 
-```less
+```css
 overflow-x: hidden;
 overflow-y: scroll;
 ```
 
----variables|label:Crop &amp; Scroll---
+---variables|label:Crop & Scroll---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | horizontal, vertical | keyword | -- | Horizontal or vertical preset ||
 | @value | keyword | true | Overflow value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .crop(both);
 ```
 
-```less
+```css
 overflow: hidden;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .crop(vertical);
 ```
 
-```less
+```css
 overflow-y: hidden;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .scroll();
 ```
 
-```less
+```css
 overflow: scroll;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .scroll(horizontal);
 ```
 
-```less
+```css
 overflow-x: scroll;
 ```
 
@@ -200,44 +200,44 @@ overflow-x: scroll;
 | horizontal, vertical, both | keyword | -- | Horizontal, vertical, or both preset ||
 | @value | keyword, color | true | Fill value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .fill(horizontal);
 ```
 
-```less
+```css
 width: 100%;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .fill(blue);
 ```
 
-```less
+```css
 fill: #00f;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .fill(both);
 ```
 
-```less
+```css
 width: 100%;
 height: 100%;
 ```
 
----code|label:No-Clear---
+---code|modifier:split|label:No-Clear---
 
 ```less
 .no-clear();
 ```
 
-```less
+```css
 ::-ms-clear {
 	display: none;
 }

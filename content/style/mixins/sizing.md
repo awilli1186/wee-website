@@ -9,14 +9,14 @@ name: Sizing
 | @value | unit | -- | Width or Height | ✓ |
 | @maxWidth, @maxHeight | unit | -- | Maximum ||
 
----code---
+---code|modifier:split---
 
 ```less
 .width(4; 5);
 .height(3; 40%);
 ```
 
-```less
+```css
 width: 4rem;
 max-width: 5rem;
 height: 3rem;
@@ -29,26 +29,26 @@ max-height: 40%;
 | -- | -- | -- | -- | -- |
 | @value | unit | -- | Minimum or maximum | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .max-width(4rem);
 .min-width(2rem);
 ```
 
-```less
+```css
 max-width: 4rem;
 min-width: 2rem;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .max-height(5rem);
 .min-height(3rem);
 ```
 
-```less
+```css
 max-height: 5rem;
 min-height: 3rem;
 ```
@@ -60,25 +60,25 @@ min-height: 3rem;
 | @width | unit | -- | Width | ✓ |
 | @height | unit | -- | Height | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .size(100px; 6);
 ```
 
-```less
+```css
 height: 6rem;
 width: 100px;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .min-size(2; 3);
 .max-size(4; 5);
 ```
 
-```less
+```css
 min-height: 3rem;
 min-width: 2rem;
 max-height: 5rem;
@@ -91,13 +91,13 @@ max-width: 4rem;
 | -- | -- | -- | -- | -- |
 | @size | unit | -- | Width &amp; height | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .square(50px);
 ```
 
-```less
+```css
 height: 50px;
 width: 50px;
 ```
@@ -109,19 +109,19 @@ width: 50px;
 | embed | keyword | -- | Embed ||
 | @ratio | unit | (16 / 9) | Ratio ||
 
----code---
+---code|modifier:split---
 
 ```less
 .ratio((4 / 3));
 ```
 
-```less
+```css
 display: block;
 height: 0;
 padding-top: 75%;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 div {
@@ -129,7 +129,7 @@ div {
 }
 ```
 
-```less
+```css
 div {
 	overflow: hidden;
 	position: relative;
@@ -149,13 +149,13 @@ div:before {
 | @diameter | unit | -- | Diameter | ✓ |
 | @crop | boolean | false | Crop ||
 
----code---
+---code|modifier:split---
 
 ```less
 .circle(10px; true);
 ```
 
-```less
+```css
 display: block;
 height: 10px;
 background-clip: border-box;

@@ -8,12 +8,12 @@ name: Font Style
 | -- | -- | -- | -- | -- |
 | @value | keyword | normal | Font style ||
 
----code---
+---code|modifier:split---
 
 ```less
 .font-style(italic);
 ```
 
-```less
+```css
 font-style: italic;
 ```

@@ -2,45 +2,45 @@
 name: Text Styling
 ---
 
----code|label:Text Sharpen---
+---code|modifier:split|label:Text Sharpen---
 
 ```less
 .text-sharpen();
 ```
 
-```less
+```css
 -moz-osx-font-smoothing: grayscale;
 -webkit-font-smoothing: antialiased;
 font-smoothing: antialiased;
 ```
 
----code|label:Capitalize---
+---code|modifier:split|label:Capitalize---
 
 ```less
 .capitalize();
 ```
 
-```less
+```css
 text-transform: capitalize;
 ```
 
----code|label:Lowercase---
+---code|modifier:split|label:Lowercase---
 
 ```less
 .lowercase();
 ```
 
-```less
+```css
 text-transform: lowercase;
 ```
 
----code|label:Uppercase---
+---code|modifier:split|label:Uppercase---
 
 ```less
 .uppercase();
 ```
 
-```less
+```css
 text-transform: uppercase;
 ```
 
@@ -50,45 +50,45 @@ text-transform: uppercase;
 | -- | -- | -- | -- | -- |
 | @value | keyword | none | Text transform rules ||
 
----code---
+---code|modifier:split---
 
 ```less
 .text-transform(uppercase);
 ```
 
-```less
+```css
 text-transform: uppercase;
 ```
 
----code|label:No-Wrap---
+---code|modifier:split|label:No-Wrap---
 
 ```less
 .no-wrap();
 ```
 
-```less
+```css
 white-space: nowrap;
 ```
 
----code|label:Ellipsis---
+---code|modifier:split|label:Ellipsis---
 
 ```less
 .ellipsis();
 ```
 
-```less
+```css
 overflow: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
 ```
 
----code|label:Underline---
+---code|modifier:split|label:Underline---
 
 ```less
 .underline();
 ```
 
-```less
+```css
 text-decoration: underline;
 ```
 
@@ -99,13 +99,13 @@ text-decoration: underline;
 | @style | keyword | -- | Text decoration style | ✓ |
 | @color | color | inherit | Text decoration color ||
 
----code---
+---code|modifier:split---
 
 ```less
 .underline(solid; white);
 ```
 
-```less
+```css
 text-decoration: underline;
 -moz-text-decoration-line: underline;
 -moz-text-decoration-style: solid;
@@ -113,13 +113,13 @@ text-decoration: underline;
 text-decoration: #fff solid underline;
 ```
 
----code|label:Line-Through---
+---code|modifier:split|label:Line-Through---
 
 ```less
 .line-through();
 ```
 
-```less
+```css
 text-decoration: line-through;
 ```
 
@@ -135,7 +135,7 @@ text-decoration: line-through;
 .text-decoration(overline);
 ```
 
-```less
+```css
 text-decoration: overline;
 ```
 
@@ -147,13 +147,13 @@ text-decoration: overline;
 | @style | keyword | -- | Line style | ✓ |
 | @color | color | inherit | Line color ||
 
----code---
+---code|modifier:split---
 
 ```less
 .text-decoration(underline; dotted; blue);
 ```
 
-```less
+```css
 text-decoration: underline;
 -moz-text-decoration-line: underline;
 -moz-text-decoration-style: dotted;
@@ -167,13 +167,13 @@ text-decoration: #00f dotted underline;
 | -- | -- | -- | -- | -- |
 | @value | keyword | 'thin dotted' | Element outline rules ||
 
----code---
+---code|modifier:split---
 
 ```less
 .outline();
 ```
 
-```less
+```css
 outline: thin dotted;
 ```
 
@@ -183,13 +183,13 @@ outline: thin dotted;
 | -- | -- | -- | -- | -- |
 | @value | unit | -- | Letter kerning rules | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .letter-spacing(2);
 ```
 
-```less
+```css
 letter-spacing: 2rem;
 ```
 
@@ -199,13 +199,13 @@ letter-spacing: 2rem;
 | -- | -- | -- | -- | -- |
 | @value | unit | -- | Word spacing rules | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .word-spacing(3);
 ```
 
-```less
+```css
 word-spacing: 3rem;
 ```
 
@@ -215,13 +215,13 @@ word-spacing: 3rem;
 | -- | -- | -- | -- | -- |
 | @value | unit | -- | Text indention rules | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .text-indent(1rem);
 ```
 
-```less
+```css
 text-indent: 1rem;
 ```
 
@@ -231,13 +231,13 @@ text-indent: 1rem;
 | -- | -- | -- | -- | -- |
 | @value | keyword | none | Controls selection operation ||
 
----code---
+---code|modifier:split---
 
 ```less
 .user-select(text);
 ```
 
-```less
+```css
 -moz-user-select: text;
 -ms-user-select: text;
 -webkit-user-select: text;
@@ -250,13 +250,13 @@ user-select: text;
 | -- | -- | -- | -- | -- |
 | @value | integer | @codeBlockTabSize | Tab length ||
 
----code---
+---code|modifier:split---
 
 ```less
 .tab-size(4);
 ```
 
-```less
+```css
 -moz-tab-size: 4;
 tab-size: 4;
 ```

@@ -8,13 +8,13 @@ name: Forms
 | -- | -- | -- | -- | -- |
 | @color | color | @inputPlaceholderColor | Placeholder color ||
 
----code---
+---code|modifier:split---
 
 ```less
 .input-placeholder(gray);
 ```
 
-```less
+```css
 :-moz-placeholder {
 	color: #808080;
 }

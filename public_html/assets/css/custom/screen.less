@@ -173,6 +173,11 @@ body {
 		}
 	}
 }
+.search {
+	.absolute(2; 2);
+	.spaced(0);
+	.z-index(100);
+}
 
 
 
@@ -463,14 +468,15 @@ body {
 		}
 	}
 	&__heading {
-		.h5();
 		.gray();
+		.h5();
 		.spaced(2);
 	}
 }
 .doc {
 	h3 {
-		.font-size(3);
+		.darkGray();
+		.font-size(2.8);
 		.spaced(.6);
 	}
 	&__title {
@@ -665,7 +671,7 @@ code.hljs {
 	# Structure
 \*------------------------------------*/
 
-.collapsible {
+.doc__collapsible {
 	ul {
 		.unstyled();
 	}

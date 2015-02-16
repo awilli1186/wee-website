@@ -8,13 +8,13 @@ name: Text Shadows
 | -- | -- | -- | -- | -- |
 | @value | string, keyword | '1px 1px 0 rgba(0, 0, 0, @{defaultOpacity})' | Text shadow rules ||
 
----code---
+---code|modifier:split---
 
 ```less
 .text-shadow('2px 1px 0 #000');
 ```
 
-```less
+```css
 text-shadow: 2px 1px 0 #000;
 ```
 
@@ -28,23 +28,23 @@ text-shadow: 2px 1px 0 #000;
 | @y | value | 1px | Vertical offset ||
 | @blur | value | 0 | Blur distance ||
 
----code---
+---code|modifier:split---
 
 ```less
 .text-shadow(blue; 4px; 3px; 2px);
 ```
 
-```less
+```css
 text-shadow: 4px 3px 2px #00f;
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .text-shadow(inner; blue);
 ```
 
-```less
+```css
 text-shadow: -1px -1px 0 #00f;
 ```
 
@@ -59,22 +59,22 @@ text-shadow: -1px -1px 0 #00f;
 | @y | unit | 1px | Vertical offset ||
 | @blur | unit | 0 | Blur ||
 
----code---
+---code|modifier:split---
 
 ```less
 .text-shadow(light; 0.4);
 ```
 
-```less
+```css
 text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .text-shadow(inner; dark; 50%);
 ```
 
-```less
+```css
 text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 ```

@@ -8,13 +8,13 @@ name: Filters
 | -- | -- | -- | -- | -- |
 | @value | string, keyword | -- | Filter rules | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .filter('grayscale(50%)');
 ```
 
-```less
+```css
 -webkit-filter: grayscale(50%);
 filter: grayscale(50%);
 ```
@@ -25,13 +25,13 @@ filter: grayscale(50%);
 | -- | -- | -- | -- | -- |
 | @value | unit | 2px | Radius ||
 
----code---
+---code|modifier:split---
 
 ```less
 .blur(4px);
 ```
 
-```less
+```css
 -webkit-filter: blur(4px);
 filter: blur(4px);
 ```
@@ -42,13 +42,13 @@ filter: blur(4px);
 | -- | -- | -- | -- | -- |
 | @value | unit | 0.5 | Multiplier ||
 
----code---
+---code|modifier:split---
 
 ```less
 .brightness(0.8);
 ```
 
-```less
+```css
 -webkit-filter: brightness(0.8);
 filter: brightness(0.8);
 ```
@@ -59,13 +59,13 @@ filter: brightness(0.8);
 | -- | -- | -- | -- | -- |
 | @value | unit | 1.5 | Multiplier ||
 
----code---
+---code|modifier:split---
 
 ```less
 .contrast(1.2);
 ```
 
-```less
+```css
 -webkit-filter: contrast(1.2);
 filter: contrast(1.2);
 ```
@@ -76,13 +76,13 @@ filter: contrast(1.2);
 | -- | -- | -- | -- | -- |
 | @value | unit | 1 | Amount ||
 
----code---
+---code|modifier:split---
 
 ```less
 .grayscale();
 ```
 
-```less
+```css
 -webkit-filter: grayscale(1);
 filter: grayscale(1);
 ```
@@ -93,13 +93,13 @@ filter: grayscale(1);
 | -- | -- | -- | -- | -- |
 | @value | unit | 180deg | Angle ||
 
----code---
+---code|modifier:split---
 
 ```less
 .hue-rotate(60deg);
 ```
 
-```less
+```css
 -webkit-filter: hue-rotate(60deg);
 filter: hue-rotate(60deg);
 ```
@@ -110,13 +110,13 @@ filter: hue-rotate(60deg);
 | -- | -- | -- | -- | -- |
 | @value | unit | 1 | Amount ||
 
----code---
+---code|modifier:split---
 
 ```less
 .invert(20%);
 ```
 
-```less
+```css
 -webkit-filter: invert(20%);
 filter: invert(20%);
 ```
@@ -127,13 +127,13 @@ filter: invert(20%);
 | -- | -- | -- | -- | -- |
 | @value | unit | 0.5 | Amount ||
 
----code---
+---code|modifier:split---
 
 ```less
 .saturate(200%);
 ```
 
-```less
+```css
 -webkit-filter: saturate(200%);
 filter: saturate(200%);
 ```
@@ -144,13 +144,13 @@ filter: saturate(200%);
 | -- | -- | -- | -- | -- |
 | @value | unit | 0.5 | Amount ||
 
----code---
+---code|modifier:split---
 
 ```less
 .sepia(100%);
 ```
 
-```less
+```css
 -webkit-filter: sepia(100%);
 filter: sepia(100%);
 ```
@@ -161,13 +161,13 @@ filter: sepia(100%);
 | -- | -- | -- | -- | -- |
 | @value | string, keyword | '1px 1px 0 rgba(0, 0, 0, @{defaultOpacity})' | Drop-shadow rules ||
 
----code---
+---code|modifier:split---
 
 ```less
 .drop-shadow('2px 2px 1px rgba(120, 80, 40, 0.5)');
 ```
 
-```less
+```css
 filter: drop-shadow('2px 2px 1px rgba(120, 80, 40, 0.5)');
 ```
 
@@ -180,32 +180,32 @@ filter: drop-shadow('2px 2px 1px rgba(120, 80, 40, 0.5)');
 | @y | unit | 1px | Y-offset ||
 | @blur | unit | 0 | Blur radius ||
 
----code---
+---code|modifier:split---
 
 ```less
 .drop-shadow(blue; 2px; 4px; 1px);
 ```
 
-```less
+```css
 filter: drop-shadow('2px 4px 1px #00f');
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .drop-shadow(light; 0.4);
 ```
 
-```less
+```css
 filter: drop-shadow('1px 1px 0 rgba(255, 255, 255, 0.4)');
 ```
 
----code---
+---code|modifier:split---
 
 ```less
 .drop-shadow(dark; 0.8; 2px; 1px; 1px);
 ```
 
-```less
+```css
 filter: drop-shadow('2px 1px 1px rgba(0, 0, 0, 0.8)');
 ```

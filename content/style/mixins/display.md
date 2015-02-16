@@ -2,23 +2,23 @@
 name: Display
 ---
 
----code|label:Hidden---
+---code|modifier:split|label:Hidden---
 
 ```less
 .hidden();
 ```
 
-```less
+```css
 visibility: hidden;
 ```
 
----code|label:Visible---
+---code|modifier:split|label:Visible---
 
 ```less
 .visible();
 ```
 
-```less
+```css
 visibility: visible;
 ```
 
@@ -29,13 +29,13 @@ visibility: visible;
 | @width | unit | -- | Width | ✓ |
 | @height | unit | -- | Height ||
 
----code---
+---code|modifier:split---
 
 ```less
 .block(4; 3);
 ```
 
-```less
+```css
 display: block;
 width: 4rem;
 height: 3rem;
@@ -47,13 +47,13 @@ height: 3rem;
 | -- | -- | -- | -- | -- |
 | @margin | unit | @blockMarginBottom | Bottom margin ||
 
----code---
+---code|modifier:split---
 
 ```less
 .spaced(0.5);
 ```
 
-```less
+```css
 margin-bottom: 0.5rem;
 ```
 
@@ -65,13 +65,13 @@ margin-bottom: 0.5rem;
 | @width | unit | -- | Width ||
 | @height | unit | -- | Height ||
 
----code---
+---code|modifier:split---
 
 ```less
 .spaced-block(0.5; 2; 4);
 ```
 
-```less
+```css
 display: block;
 margin-bottom: 0.5rem;
 width: 2rem;
@@ -84,37 +84,37 @@ height: 4rem;
 | -- | -- | -- | -- | -- |
 | @val | keyword | border-box | Box-sizing value ||
 
----code---
+---code|modifier:split---
 
 ```less
 .box-sizing(content-box);
 ```
 
-```less
+```css
 -moz-box-sizing: content-box;
 -webkit-box-sizing: content-box;
 box-sizing: content-box;
 ```
 
----code|label:Border-Box---
+---code|modifier:split|label:Border-Box---
 
 ```less
 .border-box();
 ```
 
-```less
+```css
 -moz-box-sizing: border-box;
 -webkit-box-sizing: border-box;
 box-sizing: border-box;
 ```
 
----code|label:Content-Box---
+---code|modifier:split|label:Content-Box---
 
 ```less
 .content-box();
 ```
 
-```less
+```css
 -moz-box-sizing: content-box;
 -webkit-box-sizing: content-box;
 box-sizing: content-box;

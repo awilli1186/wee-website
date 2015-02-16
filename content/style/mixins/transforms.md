@@ -8,13 +8,13 @@ name: Transforms
 | -- | -- | -- | -- | -- |
 | @arguments | keywords | -- | Transform rules | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .transform(translateX(10px));
 ```
 
-```less
+```css
 -ms-transform: translateX(10px);
 -webkit-transform: translateX(10px);
 transform: translateX(10px);
@@ -26,13 +26,13 @@ transform: translateX(10px);
 | -- | -- | -- | -- | -- |
 | @angle | integer | 45 | Angle ||
 
----code---
+---code|modifier:split---
 
 ```less
 .rotate(30);
 ```
 
-```less
+```css
 -ms-transform: rotate(30deg);
 -webkit-transform: rotate(30deg);
 transform: rotate(30deg);
@@ -45,13 +45,13 @@ transform: rotate(30deg);
 | @deg | integer | 1 | Scale ||
 
 
----code---
+---code|modifier:split---
 
 ```less
 .scale(2);
 ```
 
-```less
+```css
 -ms-transform: scale(2);
 -webkit-transform: scale(2);
 transform: scale(2);
@@ -64,13 +64,13 @@ transform: scale(2);
 | @x | integer | 45 | Horizontal skew ||
 | @y | integer | 0 | Vertical skew ||
 
----code---
+---code|modifier:split---
 
 ```less
 .skew(30, 15);
 ```
 
-```less
+```css
 -ms-transform: skew(30deg, 15deg);
 -webkit-transform: skew(30deg, 15deg);
 transform: skew(30deg, 15deg);
@@ -83,13 +83,13 @@ transform: skew(30deg, 15deg);
 | x, y | keyword | -- | X or Y preset | ✓ |
 | @x, @y | integer | 45 | Vertical skew ||
 
----code---
+---code|modifier:split---
 
 ```less
 .skew(y; 15);
 ```
 
-```less
+```css
 -ms-transform: skewY(15deg);
 -webkit-transform: skewY(15deg);
 transform: skewY(15deg);
@@ -102,13 +102,13 @@ transform: skewY(15deg);
 | @x | integer | -- | Horizontal origin | ✓ |
 | @y | integer | 0 | Vertical origin ||
 
----code---
+---code|modifier:split---
 
 ```less
 .transform-origin(15%; 10%);
 ```
 
-```less
+```css
 -ms-transform: transform-origin(15%, 10%);
 -webkit-transform: transform-origin(15%, 10%);
 transform: transform-origin(15%, 10%);
@@ -122,13 +122,13 @@ transform: transform-origin(15%, 10%);
 | @y | integer | 0 | Y translation ||
 | @z | integer | -- | Z translation ||
 
----code---
+---code|modifier:split---
 
 ```less
 .translate(10px; 15px; 20%);
 ```
 
-```less
+```css
 -webkit-transform: translate3d(10px, 15px, 20%);
 transform: translate3d(10px, 15px, 20%);
 ```

@@ -8,35 +8,35 @@ name: Opacity
 | -- | -- | -- | -- | -- |
 | @value | unit | -- | Opacity | ✓ |
 
----code---
+---code|modifier:split---
 
 ```less
 .opacity(50%);
 ```
 
-```less
+```css
 filter: alpha(opacity=50);
 opacity: 0.5;
 ```
 
----code|label:Transparent---
+---code|modifier:split|label:Transparent---
 
 ```less
 .transparent();
 ```
 
-```less
+```css
 filter: alpha(opacity=0);
 opacity: 0;
 ```
 
----code|label:Opaque---
+---code|modifier:split|label:Opaque---
 
 ```less
 .opaque();
 ```
 
-```less
+```css
 filter: alpha(opacity=100);
 opacity: 1;
 ```

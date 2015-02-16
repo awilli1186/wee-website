@@ -15,6 +15,14 @@ Wee.fn.make('common', {
 		$('ref:mobileNav').on('click', function() {
 			$('ref:primary').toggleClass('primary--slide');
 		});
+
+		// Initialize search
+		(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+			(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+			e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+		})(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+		_st('install','hj1HofVyCj-c6n4fxX_u');
 	}
 }, {
 	_construct: function() {
@@ -68,7 +76,7 @@ Wee.fn.make('common', {
 	matchBlocks: function() {
 		var $link = $('.intro__link');
 
-		if ($link.length && $link.attr('href').indexOf('weepower') !== -1) {
+		if ($link.length && $link.attr('href').indexOf('assets') !== -1) {
 			Wee.data.request({
 				url: '/assets/js/map.json',
 				json: true,

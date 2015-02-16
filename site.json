@@ -216,7 +216,8 @@
 					"target": "public_html/style/mixins.html",
 					"content": [
 						"content/style/mixins/intro.md",
-						"content/style/mixins/*.md"
+						"content/style/mixins/*.md",
+						"content/style/mixins/other.md"
 					]
 				},
 				"classes": {
