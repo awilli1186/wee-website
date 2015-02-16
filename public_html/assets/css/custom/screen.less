@@ -44,6 +44,9 @@ body {
 	.spaced(2.5);
 	.uppercase();
 }
+.main {
+	.relative();
+}
 
 
 
@@ -174,7 +177,7 @@ body {
 	}
 }
 .search {
-	.absolute(2; 2);
+	.absolute(0; 0);
 	.spaced(0);
 	.z-index(100);
 }
@@ -476,7 +479,7 @@ body {
 .doc {
 	h3 {
 		.darkGray();
-		.font-size(2.8);
+		.font-size(2.4);
 		.spaced(.6);
 	}
 	&__title {
@@ -515,18 +518,12 @@ body {
 			.font-size(2.4);
 		}
 	}
-	&__doc {
-		h3,
-		&__label {
-			.font-size(2.4);
-		}
-	}
 	&__variables {
 		.border(@lighterGray);
 		.responsive-table();
 		+ .doc__variables__label {
-			.darkGray();
-			.font-size(1.6);
+			.gray();
+			.font-size(1.8);
 			.margin(top; -1.6);
 		}
 		+ .doc__note {

@@ -40,7 +40,7 @@
 		</div>
 		<div class="container primary" data-ref="primary">
 			<div class="mobile-nav" data-ref="mobileNav">&#9776;</div>
-			<main role="main">
+			<main class="main" role="main">
 				{{#content}}
 					{{#sourceName|is(intro)}}
 					<div class="intro">
@@ -86,6 +86,9 @@
 					</div>
 					{{/sourceName}}
 				{{/content}}
+				<form class="search" role="search">
+					<input type="text" placeholder="Search" class="search__input">
+				</form>
 			</main>
 			<footer role="contentinfo" class="footer">
 				{{> footer}}
@@ -93,9 +96,6 @@
 		</div>
 	</div>
 </div>
-<form class="search" role="search">
-	<input type="text" placeholder="Search" class="search__input">
-</form>
 <script src="{{site.assetUrl}}/js/script.min.js"></script>
 </body>
 </html>
