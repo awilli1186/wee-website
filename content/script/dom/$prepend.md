@@ -1,6 +1,7 @@
 ---
 name: $prepend
 heading: Prepend selection or markup before each matching selection
+related: $append
 ---
 
 ---variables---
@@ -17,7 +18,7 @@ heading: Prepend selection or markup before each matching selection
 Wee.$prepend('ref:element', Wee.$('.js-element'));
 ```
 
----code|label:Function---
+---code|modifier:stacked|label:Function---
 
 The current index and HTML are injected into the callback. The scope of ```this``` is the element.
 

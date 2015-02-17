@@ -1,6 +1,7 @@
 ---
 name: $removeClass
 heading: Remove classes from each matching selection
+related: $addClass
 ---
 
 ---variables---

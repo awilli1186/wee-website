@@ -1,6 +1,7 @@
 ---
 name: $is
 heading: Determine if at least one matching selection matches a specified criteria
+related: $not
 ---
 
 ---variables---

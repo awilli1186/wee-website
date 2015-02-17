@@ -1,6 +1,7 @@
 ---
 name: $hide
 heading: Hide each matching selection
+related: $show
 ---
 
 ---variables---

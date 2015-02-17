@@ -1,6 +1,7 @@
 ---
 name: $last
 heading: Get the last element of a matching selection
+related: $first
 ---
 
 ---variables---

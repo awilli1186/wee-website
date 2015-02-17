@@ -1,6 +1,7 @@
 ---
 name: $prev
 heading: Get the unique previous sibling of each matching selection
+related: $next
 ---
 
 ---variables---

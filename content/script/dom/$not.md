@@ -1,6 +1,7 @@
 ---
 name: $not
 heading: Returns elements not matching the filtered selection
+related: $is
 ---
 
 ---variables---

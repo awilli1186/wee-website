@@ -105,10 +105,11 @@
 		},
 		"tasks": {
 			"local": {
+				"https": true,
 				"proxy": "https://weepower.dev"
 			},
 			"static": {
-				"https": false
+				"https": true
 			}
 		}
 	}

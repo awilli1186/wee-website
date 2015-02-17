@@ -1,6 +1,7 @@
 ---
 name: $append
 heading: Append selection or markup after each matching selection
+related: $prepend
 ---
 
 ---variables---

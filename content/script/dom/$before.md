@@ -1,6 +1,7 @@
 ---
 name: $before
 heading: Insert selection or markup before each matching selection
+related: $after
 ---
 
 ---variables---

@@ -1,6 +1,7 @@
 ---
 name: $insertBefore
 heading:  Insert each matching source selection element before each matching target selection
+related: $insertAfter
 ---
 
 ---variables---

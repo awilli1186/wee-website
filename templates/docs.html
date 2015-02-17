@@ -81,10 +81,12 @@
 						">
 							{{output|raw}}
 						</div>
-						{{/name}}
 						{{/blocks}}
 					</div>
 					{{/sourceName}}
+					{{#related|notEmpty}}
+					<small class="doc__related">Related: <a href="#{{related|slug}}">{{related}}</a></small>
+					{{/related}}
 				{{/content}}
 				<form class="search" role="search">
 					<input type="text" placeholder="Search" class="search__input">
