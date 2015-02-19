@@ -45,6 +45,30 @@ Wee.$get('key');
 ["value1", "value2", "value3"]
 ```
 
+---code|label:Value Object---
+
+To push into an array instead of setting a single value append object braces to the end of the key and separate the key and index with a semicolon in the value.
+
+```html
+<div data-set="obj{}" data-value="key1:value1"></div>
+<div data-set="obj{}" data-value="key2:value2"></div>
+<div data-set="obj{}" data-value="key3:value3"></div>
+```
+
+---code|type:object|modifier:split---
+
+```javascript
+Wee.$get('obj');
+```
+
+```javascript
+{
+	"key1: "value1",
+	"key2: "value2",
+	"key3: "value3"
+}
+```
+
 ---note---
 
 **Note:** This function is called by default with on page load.
