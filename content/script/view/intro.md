@@ -7,4 +7,4 @@ global:
   seoDesc:
 ---
 
-Views provide a powerful way to inject data into complex strings and markup structures. With a powerful API you can also extend the default functionality for infinite possibilities.
+Views provide a powerful way to inject data into complex strings and markup structures. With a powerful API you can extend the default [filters](#addfilter) and [helpers](#addhelper) for infinite possibilities.

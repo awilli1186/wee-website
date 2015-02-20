@@ -1,15 +1,16 @@
 ---
 name: addFilter
+heading: Add conditional template handler or data modifier
 ---
 
-This allows the creation of custom filters. Wee's default filters include is, not, isEmpty, and notEmpty. Properties of the tag that is being filtered can be accessed via the current scope this. These include val, data, root, tag, inner, and empty.
+Wee's default filters include is, not, isEmpty, and notEmpty. Properties of the tag that is being filtered can be accessed via the current scope this. These include val, data, root, tag, inner, and empty.
 
 ---variables---
 
-| Variable | Type     | Default | Description  | Required |
-| -------- | -------- | ------- | ------------ | -------- |
-| a        | string   | --      | Filter name  | ✓ |
-| b        | callback | --      | Filter logic | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| name | string | -- | Filter name | ✓ |
+| fn | [function](/script/#functions) | -- | Filter callback | ✓ |
 
 ---code---
 
@@ -19,7 +20,7 @@ Wee.view.addFilter('isNumber', function() {
 });
 ```
 
----code|modifier:stacked|type:string---
+---code|type:string|modifier:stacked---
 
 ```javascript
 var template = '{{#!}}{{#age|isNumber}}I am {{age}} years old.{{/age}}{{/!}}',

@@ -1,15 +1,16 @@
 ---
 name: addHelper
+heading: Add helper to run additional processing on tag data
 ---
 
-This allows the creation of custom helpers. Properties of the tag that the helper is being called on can be accessed via the current scope this. These include val, data, root, tag, index, helpers, and fallback.
+Properties of the tag that the helper is being called on can be accessed via the current scope this. These include val, data, root, tag, index, helpers, and fallback.
 
 ---variables---
 
-| Variable | Type     | Default | Description  | Required |
-| -------- | -------- | ------- | ------------ | -------- |
-| a        | string   | --      | Helper name  | ✓ |
-| b        | callback | --      | Helper logic | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| name | string | -- | Helper name | ✓ |
+| fn | [function](/script/#functions) | -- | Helper callback | ✓ |
 
 ---code---
 
@@ -19,7 +20,7 @@ Wee.view.addHelper('upper', function() {
 });
 ```
 
----code|modifier:split|type:string---
+---code|type:string|modifier:split---
 
 ```javascript
 var template = '{{#!}}My name is {{name|upper}}.{{/!}}',

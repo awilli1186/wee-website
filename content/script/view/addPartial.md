@@ -1,15 +1,16 @@
 ---
 name: addPartial
+heading: Make partial available for inject into other templates
 ---
 
 Partials are code snippets that can be reused throughout your project.
 
 ---variables---
 
-| Variable | Type   | Default | Description       | Required |
-| -------- | ------ | ------- | ----------------- | -------- |
-| a        | string | --      | Partial name      | ✓ |
-| b        | string | --      | Partial as string | ✓ |
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| name | string | -- | Partial name | ✓ |
+| value | string | -- | Partial value | ✓ |
 
 ---code---
 
@@ -17,7 +18,7 @@ Partials are code snippets that can be reused throughout your project.
 Wee.view.addPartial('copyright', '{{#!}}<small>&copy; {{year}}</small>{{/!}}');
 ```
 
----code|modifier:split|type:string---
+---code|type:string|modifier:split---
 
 ```javascript
 var template = '{{#!}}{{> copyright}}{{/!}}',

@@ -1,8 +1,7 @@
 ---
 name: Render
+heading: Parse data into template string
 ---
-
-Render parses your template using a data object.
 
 ---variables---
 
@@ -27,7 +26,7 @@ Wee.view.render(template, data);
 "My name is John Smith"
 ```
 
----code|label:Advanced---
+---code|type:string|modifier:stacked|label:Advanced---
 
 The render method does more than simple variable output. It can traverse as deep into the provided object as you need for multi-level output.
 
@@ -55,4 +54,13 @@ var template = '{{#!}}<p>My Name is {{firstName}}{{#lastName|notEmpty}} {{lastNa
 	};
 
 Wee.view.render(template, data);
+```
+
+```html
+<p>My Name is John Smith</p>
+<p>My Children are:</p>
+<ul>
+	<li>Judy - 12</li>
+	<li>James - 9</li>
+</ul>
 ```
