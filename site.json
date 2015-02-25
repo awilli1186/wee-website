@@ -59,7 +59,8 @@
 			"name": "Blog",
 			"data": {
 				"excludeNav": true,
-				"seoTitle": "Development Blog"
+				"seoTitle": "Development Blog",
+				"seoDesc": "Stay up to date with the latest Wee news and developments."
 			},
 			"template": "blog",
 			"target": [
@@ -141,8 +142,11 @@
 					"target": "public_html/build/config.html",
 					"content": [
 						"content/build/config/intro.md",
-						"content/build/config/project.md",
-						"content/build/config/*.md"
+						"content/build/config/general.md",
+						"content/build/config/style.md",
+						"content/build/config/script.md",
+						"content/build/config/generator.md",
+						"content/build/config/server.md"
 					]
 				},
 				"validation": {
@@ -151,6 +155,7 @@
 					"target": "public_html/build/validation.html",
 					"content": [
 						"content/build/validation/intro.md",
+						"content/build/validation/task.md",
 						"content/build/validation/*.md"
 					]
 				}
@@ -248,9 +253,6 @@
 						"content/script/core/intro.md",
 						"content/script/core/fn.make.md",
 						"content/script/core/fn.extend.md",
-						"content/script/core/$.md",
-						"content/script/core/$set.md",
-						"content/script/core/$get.md",
 						"content/script/core/*.md"
 					]
 				},

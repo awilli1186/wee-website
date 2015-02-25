@@ -18,8 +18,13 @@
 				var head = W._doc.getElementsByTagName('head')[0];
 
 				if (conf.success) {
-					var v = this.$get('v', 1),
+					var func = conf.jsonpCallback;
+
+					if (! func) {
+						var v = this.$get('v', 1);
 						func = 'jsonp' + v;
+						this.$set('v', v + 1);
+					}
 
 					W._win[func] = function(data) {
 						conf.args.unshift(data);
@@ -31,8 +36,6 @@
 					};
 
 					conf.data[conf.jsonp === true ? 'callback' : conf.jsonp] = func;
-
-					this.$set('v', v + 1);
 				}
 
 				if (Object.keys(conf.data).length > 0) {

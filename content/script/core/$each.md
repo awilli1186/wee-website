@@ -16,6 +16,7 @@ heading: Execute function for each matching selection
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | args | array | -- | Callback arguments ||
+| context | [selection](/script#selection) | document | Callback context ||
 | scope | object | -- | Callback scope ||
 | reverse | boolean | false | Reverse the order of execution ||
 

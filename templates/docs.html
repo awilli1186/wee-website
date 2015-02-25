@@ -2,28 +2,7 @@
 <body class="subpage section">
 <div class="canvas-outer">
 	<div class="canvas-inner">
-		<header role="banner" class="scrollable sidebar" data-ref="scroll">
-			<div class="viewport">
-				<div class="overview js-overview">
-					<a href="/" rel="home" class="logo">
-						<img src="{{site.assetUrl}}/img/wee.svg" alt="Wee Framework">
-					</a>
-					{{#site.sections}}
-					{{#data.excludeNav|isEmpty}}
-						<h3><a href="/{{$key}}"{{#isCurrent}} class="is-active"{{/isCurrent}}>{{name}}</a></h3>
-						<ul>
-							{{#sections}}
-							<li>
-								<a href="/{{../$key}}/{{$key}}"{{#isCurrent}} class="is-active"{{/isCurrent}}>{{name}}</a>
-							</li>
-							{{/sections}}
-						</ul>
-						{{/sections}}
-					{{/data.excludeNav}}
-					{{/site.sections}}
-				</div>
-			</div>
-		</header>
+		{{> sidebar}}
 		<div class="scrollable subnav" data-ref="scroll subnav">
 			<div class="viewport">
 				<div class="overview js-overview">
@@ -31,7 +10,9 @@
 					<ul>
 						{{#content}}
 						{{#sourceName|not(intro)}}
-						<li{{#deprecated}} class="subnav--deprecated"{{/deprecated}}><a href="#{{name|slug}}">{{name}}</a></li>
+						<li{{#deprecated}} class="subnav--deprecated"{{/deprecated}}>
+							<a href="#{{name|slug}}">{{name}}</a>
+						</li>
 						{{/sourceName}}
 						{{/content}}
 					</ul>
@@ -88,9 +69,6 @@
 					<small class="doc__related">Related: <a href="#{{related|slug}}">{{related}}</a></small>
 					{{/related}}
 				{{/content}}
-				<form class="search" role="search">
-					<input type="text" placeholder="Search" class="search__input">
-				</form>
 			</main>
 			<footer role="contentinfo" class="footer">
 				{{> footer}}

@@ -6,4 +6,4 @@ deprecated: true
 
 ---notice---
 
-<b>Deprecated:</b> Object.keys(obj) should be used instead.
+<b>Deprecated:</b> Object.keys(obj) should be used instead. The argument is the same.

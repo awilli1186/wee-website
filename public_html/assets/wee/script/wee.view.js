@@ -2,22 +2,22 @@
 	'use strict';
 
 	W.fn.make('view', {
-		// Render specified data into specified template string
+		// Parse data into template string
 		// Return string
 		render: function(template, data) {
-			return this.$private('render', template, W.$extend({}, data, true));
+			return this.$private('render', template, W.$extend({}, data));
 		},
-		// Add template conditional filters
-		addFilter: function(a, b) {
-			this.$private('extend', 'filters', a, b);
+		// Add conditional template handler or data modifier
+		addFilter: function(name, fn) {
+			this.$private('extend', 'filters', name, fn);
 		},
-		// Add template helper functions
-		addHelper: function(a, b) {
-			this.$private('extend', 'helpers', a, b);
+		// Add helper to run additional processing on tag data
+		addHelper: function(name, fn) {
+			this.$private('extend', 'helpers', name, fn);
 		},
-		// Add global template partials
-		addPartial: function(a, b) {
-			this.$private('extend', 'partials', a, b);
+		// Make partial available for inject into other templates
+		addPartial: function(name, value) {
+			this.$private('extend', 'partials', name, value);
 		}
 	}, {
 		_construct: function() {
@@ -51,7 +51,7 @@
 		extend: function(type, a, b) {
 			var obj = a;
 
-			if (W.$isString(a)) {
+			if (typeof a == 'string') {
 				obj = [];
 				obj[a] = b;
 			}
@@ -194,7 +194,7 @@
 					helpers = segs.length > 1 ? segs.slice(1) : segs;
 
 				if (val === U || typeof val == 'object') {
-					return '';
+					val = '';
 				}
 
 				// Process helpers
@@ -213,7 +213,6 @@
 								root: init,
 								tag: tag,
 								index: index,
-								helpers: helpers,
 								fallback: fb
 							}, args);
 						}
@@ -222,7 +221,7 @@
 
 				// Encode output by default
 				if (typeof val == 'string') {
-					if (helpers.indexOf('raw') == -1) {
+					if (helpers.indexOf('raw') < 0) {
 						val = val.replace(/&amp;/g, '&')
 							.replace(/&/g, '&amp;')
 							.replace(/</g, '&lt;')
@@ -230,7 +229,7 @@
 							.replace(/"/g, '&quot;');
 					}
 
-					if (val.indexOf('{{') !== -1) {
+					if (val.indexOf('{{') > 0) {
 						val = scope.parse(val, data, prev, init, index);
 					}
 				}
@@ -268,9 +267,11 @@
 							data = data(orig, init, x);
 						}
 
-						if (data !== U) {
+						if (data) {
 							return data;
 						}
+
+						break;
 					}
 				} else {
 					break;

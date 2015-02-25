@@ -1,20 +1,12 @@
 <!doctype html><html lang="en" itemscope itemtype="http://schema.org/WebPage"><head><title>Config | Wee</title><meta name="robots" content="noindex, follow"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400"><link rel="apple-touch-icon" href="/touchicon.png"><link rel="publisher" href="https://plus.google.com/+weecss"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@weecss"><meta property="og:site_name" content="Wee"><meta property="og:title" content="Wee" itemprop="name"><meta property="og:url" content="http:/www.weepower.dev/build/config.html" itemprop="url"><meta property="og:image" content="/share.png" itemprop="image"><!--[if lt IE 9]><link rel="stylesheet" href="/assets/css/ie8.min.css">
 <script src="/assets/js/ie8.min.js"></script><![endif]--><!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.min.css">
-<script src="/assets/js/ie9.min.js"></script><![endif]--></head><body class="subpage section"><div class="canvas-outer"><div class="canvas-inner"><header role="banner" class="scrollable sidebar" data-ref="scroll"><div class="viewport"><div class="overview js-overview"><a href="/" rel="home" class="logo"><img src="/assets/img/wee.svg" alt="Wee Framework"></a><h3><a href="/start">Start</a></h3><ul><li><a href="/start/structure">Structure</a></li><li><a href="/start/markup">Markup</a></li></ul><h3><a href="/build">Build</a></h3><ul><li><a href="/build/config" class="is-active">Config</a></li><li><a href="/build/validation">Validation</a></li></ul><h3><a href="/generator">Generate</a></h3><ul><li><a href="/generator/config">Config</a></li><li><a href="/generator/variables">Variables</a></li></ul><h3><a href="/style">Style</a></h3><ul><li><a href="/style/variables">Variables</a></li><li><a href="/style/mixins">Mixins</a></li><li><a href="/style/classes">Classes</a></li></ul><h3><a href="/script">Script</a></h3><ul><li><a href="/script/core">Core</a></li><li><a href="/script/chain">Chain</a></li><li><a href="/script/assets">Assets</a></li><li><a href="/script/data">Data</a></li><li><a href="/script/dom">DOM</a></li><li><a href="/script/events">Events</a></li><li><a href="/script/routes">Routes</a></li><li><a href="/script/screen">Screen</a></li><li><a href="/script/view">View</a></li><li><a href="/script/polyfills">Polyfills</a></li></ul></div></div></header><div class="scrollable subnav" data-ref="scroll subnav"><div class="viewport"><div class="overview js-overview"><h3>Contents</h3><ul><li><a href="#project">Project</a></li><li><a href="#setup">Setup</a></li></ul></div></div></div><div class="container primary" data-ref="primary"><div class="mobile-nav" data-ref="mobileNav">&#9776;</div><main class="main" role="main"><div class="intro"><h1 class="intro__title">Configuration</h1><p class="intro__heading">Building your project with Wee is easy</p></div><p>There are just a couple of tools you’ll need. We need to make a couple of assumptions about your knowledge of the command line. For instance, we’ll assume you know how to “cd” and run basic commands.</p><div class="doc"><h2 class="doc__title">Project <a href="#project" id="project" class="doc__anchor">#</a></h2><p class="doc__heading">JSON-based configuration for your project</p><div class="doc__content"><p>The project file tells Grunt about your project. What is the URL of your local dev server? What items do you want to compile? What items do you want to build?</p><p>Let’s walk through the available settings.</p><h3>Name &amp; Description</h3><p>These values are for your internal reference only.</p><pre><code class="language-javascript">&quot;name&quot;: &quot;My project&quot;,
-&quot;description&quot;: &quot;My project is really cool&quot;
-</code></pre><h3>Paths</h3><p>In order to accommodate various server and directory configurations, Grunt needs to know your directory structure. So you’ll want to set the paths based on your environment. Both paths here are relative to the Gruntfile.</p><pre><code class="language-javascript">&quot;paths&quot;: {
+<script src="/assets/js/ie9.min.js"></script><![endif]--></head><body class="subpage section"><div class="canvas-outer"><div class="canvas-inner"><header role="banner" class="scrollable sidebar" data-ref="scroll"><div class="viewport"><div class="overview js-overview"><a href="/" rel="home" class="logo"><img src="/assets/img/wee.svg" alt="Wee Framework"></a><h3><a href="/start">Start</a></h3><ul><li><a href="/start/structure">Structure</a></li><li><a href="/start/markup">Markup</a></li></ul><h3><a href="/build">Build</a></h3><ul><li><a href="/build/config" class="is-active">Config</a></li><li><a href="/build/validation">Validation</a></li></ul><h3><a href="/generator">Generate</a></h3><ul><li><a href="/generator/config">Config</a></li><li><a href="/generator/variables">Variables</a></li></ul><h3><a href="/style">Style</a></h3><ul><li><a href="/style/variables">Variables</a></li><li><a href="/style/mixins">Mixins</a></li><li><a href="/style/classes">Classes</a></li></ul><h3><a href="/script">Script</a></h3><ul><li><a href="/script/core">Core</a></li><li><a href="/script/chain">Chain</a></li><li><a href="/script/assets">Assets</a></li><li><a href="/script/data">Data</a></li><li><a href="/script/dom">DOM</a></li><li><a href="/script/events">Events</a></li><li><a href="/script/routes">Routes</a></li><li><a href="/script/screen">Screen</a></li><li><a href="/script/view">View</a></li><li><a href="/script/polyfills">Polyfills</a></li></ul></div></div></header><div class="scrollable subnav" data-ref="scroll subnav"><div class="viewport"><div class="overview js-overview"><h3>Contents</h3><ul><li><a href="#general">General</a></li><li><a href="#style">Style</a></li><li><a href="#script">Script</a></li><li><a href="#generator">Generator</a></li><li><a href="#server">Server</a></li></ul></div></div></div><div class="container primary" data-ref="primary"><div class="mobile-nav" data-ref="mobileNav">&#9776;</div><main class="main" role="main"><div class="intro"><h1 class="intro__title">Configuration <a href="https://github.com/weepower/wee/tree/master/project.json" class="intro__link">→</a></h1><p class="intro__heading">Building your project with Wee is easy</p></div><p>Wee is setup through a simple JSON-based configuration file to define the project structure and output.</p><div class="doc"><h2 class="doc__title">General <a href="#general" id="general" class="doc__anchor">#</a></h2><div class="doc__content"><p>The name and description values are for internal reference only.</p><pre><code class="language-javascript">&quot;name&quot;: &quot;Project Name&quot;,
+&quot;description&quot;: &quot;Project description.&quot;,
+</code></pre></div><h3 class="doc__code__label">Paths</h3><div class="doc__code"><p>To accommodate different server configurations, Wee needs to know your directory structure. The root path is relative to the Gruntfile and the assets directory is relative to the root directory.</p><pre><code class="language-javascript">&quot;paths&quot;: {
     &quot;root&quot;: &quot;public&quot;,
     &quot;assets&quot;: &quot;assets&quot;
 }
-</code></pre><p>The “root” path is your html directory which in your particular environment could be &quot;www&quot;, &quot;public&quot;, &quot;public_html&quot;, or something else.</p><p>The “assets” path is the directory within “root” where Wee assets live.</p><h3>Style</h3><p>This is where you tell grunt about additional files you would like to include. There are two options here, “build” and &quot;compile&quot;.</p><pre><code class="language-javascript">&quot;style&quot;: {
-    &quot;build&quot;: [
-
-    ],
-    &quot;compile&quot;: {
-
-    }
-}
-</code></pre><h3>Core</h3><p>Part of the Style section of your project file as noted directly above, this allows you to enable or disable core features of Wee Style.</p><pre><code class="language-javascript">&quot;core&quot;: {
+</code></pre></div><div class="doc__note"><p><strong>Note:</strong> The “root” path is your HTML directory. Common values include &quot;www&quot;, &quot;public&quot;, and &quot;public_html&quot;.</p></div></div><div class="doc"><h2 class="doc__title">Style <a href="#style" id="style" class="doc__anchor">#</a></h2><div class="doc__content"><p>The core block allows disabling styling features as well as setting breakpoint values. By setting any key to false that feature or breakpoint is suppressed.</p><pre><code class="language-javascript">&quot;core&quot;: {
     &quot;buttons&quot;: true,
     &quot;code&quot;: true,
     &quot;forms&quot;: true,
@@ -24,7 +16,7 @@
         &quot;enable&quot;: true,
         &quot;offset&quot;: 25,
         &quot;breakpoints&quot;: {
-            &quot;mobileLandscape&quot;: false,
+            &quot;mobileLandscape&quot;: 480,
             &quot;tabletPortrait&quot;: 768,
             &quot;desktopSmall&quot;: 1024,
             &quot;desktopMedium&quot;: 1280,
@@ -32,18 +24,19 @@
         }
     }
 }
-</code></pre><h3>Build</h3><p>Part of the “style” configuration as noted above. Wee Grunt outputs one primary CSS file. Build specifies an array of CSS or Less files that you want built into your primary style. The file paths should be considered relative to the Wee CSS directory (in “assets”) unless starting with &quot;./&quot;.</p><pre><code class="language-javascript">&quot;build&quot;: [
+</code></pre></div><div class="doc__note"><p><strong>Note:</strong> The offset value is used to decrement breakpoint values by a set number of pixels which is useful when testing media queries widths in desktop browsers.</p></div><h3 class="doc__code__label">Build</h3><div class="doc__code"><p>Wee outputs one primary CSS file. The build array specifies additional CSS or Less files that you want included.</p><pre><code class="language-javascript">&quot;build&quot;: [
     &quot;directory/third-party-style.css&quot;,
     &quot;directory/other-third-party.less&quot;
 ]
-</code></pre><h3>Compile</h3><p>Part of the “style” configuration as noted above. If you have stylesheets or LESS files that you would like to compile, but not include in your primary stylesheet (say you only need some specific styles on one specific page of your site), this is where you can specify them.</p><pre><code class="language-javascript">&quot;compile&quot;: {
-    &quot;mything.css&quot;: [
-        &quot;mydirectory/myfile.less&quot;,
-        &quot;myfile.css&quot;
+</code></pre></div><div class="doc__note"><p><strong>Note:</strong> Paths are relative to the Wee CSS assets directory unless prefixed with “./” making them relative to the Gruntfile</p></div><h3 class="doc__code__label">Compile</h3><div class="doc__code"><p>If you have CSS or Less files that you would like to compile, but not include in your primary stylesheet (to serve specific styling to certain pages), this is where you can define them.</p><pre><code class="language-javascript">&quot;compile&quot;: {
+    &quot;ie9.min.css&quot;: &quot;custom/ie9.less&quot;,
+    &quot;array.css&quot;: [
+        &quot;path/files/one.less&quot;,
+        &quot;path/files/two.css&quot;
     ],
-    &quot;mything.css&quot;: &quot;path/to/my/files/*.less&quot;
+    &quot;globbing.css&quot;: &quot;path/files/*.less&quot;
 }
-</code></pre><p>As in the example above, in addition to having an array of files that compile into one file, you can also just compile a Less file into a minified CSS file. Also note that you can use any grunt file path conventions (such as wildcards and exclusions).</p><pre><code class="language-javascript">&quot;file.css&quot;: [
+</code></pre></div><div class="doc__code"><p>You can use any grunt file path conventions (such as wildcards and exclusions).</p><pre><code class="language-javascript">&quot;file.css&quot;: [
     &quot;*&quot;,
     &quot;**/*&quot;,
     &quot;*.less&quot;,
@@ -51,7 +44,7 @@
     &quot;**/*.css&quot;,
     &quot;!**/*.less&quot;
 ]
-</code></pre><h3>Legacy</h3><p>Wee has a few built-in legacy handling features for IE8 that you may or may not wish to take advantage of.</p><pre><code class="language-javascript">&quot;legacy&quot;: {
+</code></pre></div><h3 class="doc__code__label">Legacy</h3><div class="doc__code"><p>Wee has a few built-in legacy features for IE8 that can optionally be modified or disabled.</p><pre><code class="language-javascript">&quot;legacy&quot;: {
     &quot;enable&quot;: true,
     &quot;watch&quot;: false,
     &quot;breakpoint&quot;: 4,
@@ -59,40 +52,12 @@
     &quot;dest&quot;: &quot;ie8.min.css&quot;,
     &quot;build&quot;: [
         &quot;custom/ie8.less&quot;
-    ]
-}
-</code></pre><h3>Script</h3><p>Wee comes with several “out-of-the-box” javascript features such as asset loading, chaining, DOM manipulations, event binding and more. Plus you can compile and/or build in your own scripts.</p><pre><code class="language-javascript">&quot;script&quot;: {
-    &quot;core&quot;: {
-        &quot;enable&quot;: true,
-        &quot;features&quot;: {
-            &quot;assets&quot;: true,
-            &quot;chain&quot;: true,
-            &quot;data&quot;: true,
-            &quot;dom&quot;: true,
-            &quot;events&quot;: true,
-            &quot;routes&quot;: true,
-            &quot;screen&quot;: true
-        }
-    },
-    &quot;build&quot;: [
-
     ],
     &quot;compile&quot;: {
-        &quot;ie8.min.js&quot;: [
-            &quot;polyfill/es5-shim.js&quot;,
-            &quot;polyfill/html5shiv.js&quot;,
-            &quot;polyfill/sizzle.js&quot;,
-            &quot;polyfill/wee.svg.js&quot;,
-            &quot;custom/ie8.js&quot;
-        ],
-        &quot;ie9.min.js&quot;: [
-            &quot;polyfill/wee.slice.js&quot;,
-            &quot;polyfill/wee.placeholder.js&quot;
-        ]
-    },
-    &quot;sourceMaps&quot;: true
+        &quot;guide.ie8.min.css&quot;: &quot;guide.min.css&quot;
+    }
 }
-</code></pre><h3>Core</h3><p>Part of the Script section of your project file as noted directly above, this allows you to enable or disable core features of Wee Javascript. Use the master “enable: true or false” setting to disable all Wee core JS features. Otherwise you can control specific aspects below. For instance, if your project requires jQuery, there’s no need to have Wee’s dom and chaining features enabled since that would be duplicating jQuery functionality and therefore just making code bloat.</p><pre><code class="language-javascript">&quot;core&quot;: {
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Script <a href="#script" id="script" class="doc__anchor">#</a></h2><div class="doc__content"><p>Wee comes with several standard JavaScript features such as asset loading, chaining, DOM manipulations, event binding and more. You can also compile and/or build in your own scripts.</p></div><h3 class="doc__code__label">Core</h3><div class="doc__code"><p>The core section allows you to enable or disable core JavaScript features. For instance, if your project requires jQuery, you may choose not to include Wee’s DOM and chaining.</p><pre><code class="language-javascript">&quot;core&quot;: {
     &quot;enable&quot;: true,
     &quot;features&quot;: {
         &quot;assets&quot;: true,
@@ -101,14 +66,15 @@
         &quot;dom&quot;: true,
         &quot;events&quot;: true,
         &quot;routes&quot;: true,
-        &quot;screen&quot;: true
+        &quot;screen&quot;: true,
+        &quot;view&quot;: true
     }
 }
-</code></pre><h3>Build</h3><p>This works the same as the CSS section. You can build in any script right into Wee’s primary JS file. The file paths should be considered relative to the Wee JS directory (in “assets”) unless starting with &quot;./&quot;.</p><pre><code class="language-javascript">&quot;build&quot;: [
-    &quot;lib/vendor/third-party.js&quot;,
-    &quot;lib/vendor/other-third-party.js&quot;
+</code></pre></div><div class="doc__note"><p><strong>Note:</strong> Setting the primary enable value to false disables all script features.</p></div><h3 class="doc__code__label">Build</h3><div class="doc__code"><p>This works the same as the CSS section. You can build in any script right into Wee’s primary script file.</p><pre><code class="language-javascript">&quot;build&quot;: [
+    &quot;path/files/one.js&quot;,
+    &quot;path/files/two.js&quot;
 ]
-</code></pre><h3>Compile</h3><p>This works the same as the CSS section. If you have Javascript files that you would like to compile and minify, but not include in your primary Javascript output, this is where you can specify them.</p><pre><code class="language-javascript">&quot;compile&quot;: {
+</code></pre></div><h3 class="doc__code__label">Compile</h3><div class="doc__code"><p>This works the same as the CSS section. If you have Javascript files that you would like to compile and minify, but not include in your primary Javascript output, this is where you can specify them.</p><pre><code class="language-javascript">&quot;compile&quot;: {
     &quot;ie8.min.js&quot;: [
         &quot;polyfill/es5-shim.js&quot;,
         &quot;polyfill/html5shiv.js&quot;,
@@ -119,36 +85,25 @@
     &quot;ie9.min.js&quot;: [
         &quot;polyfill/wee.slice.js&quot;,
         &quot;polyfill/wee.placeholder.js&quot;
+    ],
+    &quot;guide.min.js&quot;: &quot;custom/guide.js&quot;
+}
+</code></pre></div><h3 class="doc__code__label">Validate</h3><div class="doc__code"><p>The validation section controls which settings are used for <a href="http://jscs.info/">JSCS</a> and <a href="http://jshint.com/">JSHint</a> code style and quality tools. Set either to false to disable the tool otherwise you can update the path to point to any config file or modify the default files provided in the project root. Setting watch to false disables continuous validation and only validates <a href="/build/validation">on demand</a>.</p><pre><code class="language-javascript">&quot;validate&quot;: {
+    &quot;watch&quot;: true,
+    &quot;jscs&quot;: &quot;.jscs.json&quot;,
+    &quot;jshint&quot;: &quot;.jshintrc&quot;
+}
+</code></pre></div><h3 class="doc__code__label">Source Maps</h3><div class="doc__code"><p>Source maps allow supporting browsers to map compiled and minified code to original source scripts. This is useful for debugging and locating errors.</p><pre><code class="language-javascript">&quot;sourceMaps&quot;: true
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Generator <a href="#generator" id="generator" class="doc__anchor">#</a></h2><div class="doc__content"><p>Lorem ipsum dolor.</p><pre><code class="language-javascript">&quot;generator&quot;: {
+    &quot;enable&quot;: true,
+    &quot;build&quot;: [
+        &quot;public/assets/guide/config.json&quot;
     ]
 }
-</code></pre><h3>SourceMaps</h3><p>Source maps allow browsers to show you where a particular part of Javascript is coming from in the source files Wee compiles from even though it is compiled and minified into one file. This is very useful for debugging and locating the source of errors. &quot;sourceMaps&quot;: true</p><h3>Server</h3><p>Grunt tasks related to serving files (&quot;grunt static&quot;, “grunt local”) have some configuration options which you can set here.</p><pre><code class="language-javascript">&quot;server&quot;: {
-    &quot;ghostMode&quot;: true,
-    &quot;host&quot;: &quot;auto&quot;,
-    &quot;port&quot;: 3000,
-    &quot;reload&quot;: {
-        &quot;enable&quot;: true,
-        &quot;watch&quot;: {
-            &quot;root&quot;: true,
-            &quot;paths&quot;: [
-
-            ],
-            &quot;extensions&quot;: [
-                &quot;html&quot;
-            ]
-        }
-        },
-        &quot;tasks&quot;: {
-            &quot;local&quot;: {
-                &quot;proxy&quot;: &quot;wee.dev&quot;
-                },
-                &quot;static&quot;: {
-                    &quot;https&quot;: false
-                }
-            }
-        }
-</code></pre><h3>GhostMode</h3><p>When grunt is running and serving your site through the proxy, you can chose to have it ghost all actions between browsers. That means if you have a browser window open to your proxy URL on perhaps a mobile device on the same network, and your local development device, when you scroll or click or take an action on one browser, it will be ghosted on the other.</p><pre><code class="language-javascript">&quot;ghostMode&quot;: true
-</code></pre><h3>Port</h3><p>If for some reason you are having a port conflict, you can change the port here.</p><pre><code class="language-javascript">&quot;port&quot;: 3000
-</code></pre><h3>Reload</h3><p>This allows you, of course, to enable or disable reloading whenever CSS, JS, or static files change, but it also allows you to specify only certain paths and extensions to watch.</p><pre><code class="language-javascript">&quot;reload&quot;: {
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Server <a href="#server" id="server" class="doc__anchor">#</a></h2><div class="doc__content"><p>When Wee is running and serving your site through the proxy, you can chose to have it mirror actions between connected browsers. That means if you have a browser open to your proxy URL on perhaps a mobile device on the same network, and your local development device, when you scroll or click or take an action on one browser, it will be replicated on the other.</p><pre><code class="language-javascript">&quot;ghostMode&quot;: true
+</code></pre></div><h3 class="doc__code__label">Host</h3><div class="doc__code"><p>Lorem ipsum dolor.</p><pre><code class="language-javascript">&quot;host&quot;: &quot;auto&quot;
+</code></pre></div><h3 class="doc__code__label">Port</h3><div class="doc__code"><p>If for some reason you are having a port conflict, you can change the port here.</p><pre><code class="language-javascript">&quot;port&quot;: 3000
+</code></pre></div><h3 class="doc__code__label">Reload</h3><div class="doc__code"><p>This allows you, of course, to enable or disable reloading whenever CSS, JS, or static files change, but it also allows you to specify only certain paths and extensions to watch.</p><pre><code class="language-javascript">&quot;reload&quot;: {
     &quot;enable&quot;: true,
     &quot;watch&quot;: {
         &quot;root&quot;: true,
@@ -160,12 +115,13 @@
         ]
     }
 }
-</code></pre><h3>Tasks</h3><p>With the “grunt local” task, Wee needs to know what your local server address is for the proxy. It then uses the proxy to sit between your browser and the development server so it can inject CSS changes, or reload the page for static and JavaScript changes.</p><p>With “grunt static” you can set whether to use HTTPS.</p><pre><code class="language-javascript">&quot;tasks&quot;: {
+</code></pre></div><h3 class="doc__code__label">Tasks</h3><div class="doc__code"><p>With the <code>grunt local</code> task, Wee needs to know what your local server address is for the proxy. It then uses the proxy to sit between your browser and the development server so it can inject CSS changes, or reload the page for static and JavaScript changes.</p><p>With <code>grunt static</code> you can set whether to use HTTPS.</p><pre><code class="language-javascript">&quot;tasks&quot;: {
     &quot;local&quot;: {
-        &quot;proxy&quot;: &quot;wee.dev&quot;
+        &quot;https&quot;: true,
+        &quot;proxy&quot;: &quot;https://wee.dev&quot;
     },
     &quot;static&quot;: {
-        &quot;https&quot;: false
+        &quot;https&quot;: true
     }
 }
-</code></pre></div></div><div class="doc"><h2 class="doc__title">Setup <a href="#setup" id="setup" class="doc__anchor">#</a></h2><div class="doc__content"><ol><li>Install the latest <a href="http://nodejs.org/download/">Node.js</a>.</li><li>Install the Grunt CLI (Command Line Interface) using the <a href="http://gruntjs.com/getting-started">NPM (node package manager)</a>.</li><li>Navigate to your project in the command line and execute <code>npm install</code> to install the Wee dependencies.</li></ol></div></div><form class="search" role="search"><input type="text" placeholder="Search" class="search__input"></form></main><footer role="contentinfo" class="footer"><small class="footer__license"><a href="/">Wee Powered</a> &ndash; licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a></small><ul class="footer__links"><li><a href="https://github.com/weepower/wee">GitHub</a></li><li><a href="https://github.com/weepower/wee/issues">Issues</a></li><li><a href="https://github.com/weepower/wee/releases">Releases</a></li><li><a href="https://twitter.com/weecss">Twitter</a></li><li><a href="/blog">Blog</a></li></ul></footer></div></div></div><script src="/assets/js/script.min.js"></script></body></html>
+</code></pre></div></div></main><footer role="contentinfo" class="footer"><small class="footer__license"><a href="/">Wee Powered</a> &ndash; licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a></small><ul class="footer__links"><li><a href="https://github.com/weepower/wee">GitHub</a></li><li><a href="https://github.com/weepower/wee/issues">Issues</a></li><li><a href="https://github.com/weepower/wee/releases">Releases</a></li><li><a href="https://twitter.com/weecss">Twitter</a></li><li><a href="/blog">Blog</a></li></ul></footer></div></div></div><script src="/assets/js/script.min.js"></script></body></html>

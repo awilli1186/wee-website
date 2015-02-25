@@ -59,7 +59,7 @@
 					this.$private('bind', key, evts, a);
 				}
 			} else {
-				if (W.$isString(a)) {
+				if (typeof a == 'string') {
 					evts[a] = b;
 				} else {
 					evts = a;
@@ -72,7 +72,7 @@
 		// Bind specified function to specified element and event for single execution
 		// DEPRECATED
 		one: function(sel, a, b, c) {
-			if (W.$isString(a)) {
+			if (typeof a == 'string') {
 				var obj = [];
 				obj[a] = b;
 				a = obj;
@@ -89,7 +89,7 @@
 			var obj = a;
 
 			if (a) {
-				if (W.$isString(a)) {
+				if (typeof a == 'string') {
 					obj = [];
 					obj[a] = b;
 				}
@@ -204,6 +204,12 @@
 								if (conf.targ) {
 									var t = conf.targ,
 										sel = t._$ ? t.sel : t;
+
+									// Update refs when targeting ref
+									if (sel.indexOf('ref:') > -1) {
+										W.$setRef(el);
+									}
+
 									t = W.$toArray(W.$(sel));
 
 									if (! t.some(function(par) {

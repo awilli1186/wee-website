@@ -45,14 +45,16 @@ Wee.$get('key');
 ["value1", "value2", "value3"]
 ```
 
----code|label:Value Object---
+---doc|label:Simple Object---
 
-To push into an array instead of setting a single value append object braces to the end of the key and separate the key and index with a semicolon in the value.
+To create a keyed object you can pass keys into the array notation.
+
+---code---
 
 ```html
-<div data-set="obj{}" data-value="key1:value1"></div>
-<div data-set="obj{}" data-value="key2:value2"></div>
-<div data-set="obj{}" data-value="key3:value3"></div>
+<div data-set="obj[key1]" data-value="value1"></div>
+<div data-set="obj[key2]" data-value="value2"></div>
+<div data-set="obj[key3]" data-value="value3"></div>
 ```
 
 ---code|type:object|modifier:split---
@@ -63,9 +65,37 @@ Wee.$get('obj');
 
 ```javascript
 {
-	"key1: "value1",
-	"key2: "value2",
-	"key3: "value3"
+	"key1": "value1",
+	"key2": "value2"
+	"key3": "value3"
+}
+```
+
+---doc|label:Complex Object---
+
+You can also nest objects by continuing the array notation.
+
+---code---
+
+```html
+<div data-set="obj[key1]" data-value="value1"></div>
+<div data-set="obj[key2][sub1]" data-value="value2"></div>
+<div data-set="obj[key2][sub2]" data-value="value3"></div>
+```
+
+---code|type:object|modifier:split---
+
+```javascript
+Wee.$get('obj');
+```
+
+```javascript
+{
+	"key1": "value1",
+	"key2": {
+		"sub1": "value2",
+		"sub2": "value2"
+	}
 }
 ```
 

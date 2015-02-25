@@ -1,5 +1,5 @@
 ---
-name: addHelper
+name: Helpers
 heading: Add helper to run additional processing on tag data
 ---
 

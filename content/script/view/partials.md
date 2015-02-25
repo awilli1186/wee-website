@@ -1,5 +1,5 @@
 ---
-name: addPartial
+name: Partials
 heading: Make partial available for inject into other templates
 ---
 

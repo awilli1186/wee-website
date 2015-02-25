@@ -1,5 +1,5 @@
 ---
-name: addFilter
+name: Filters
 heading: Add conditional template handler or data modifier
 ---
 

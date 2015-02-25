@@ -1,7 +1,12 @@
 ---
 name: $inArray
 heading: Determine if value belongs to array
+deprecated: true
 ---
+
+---notice---
+
+<b>Deprecated:</b> array.indexOf(val) should be used instead.
 
 ---variables---
 
