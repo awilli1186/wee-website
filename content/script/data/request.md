@@ -20,6 +20,7 @@ heading: Make Ajax request based on specified options
 | headers | object | -- | {key: val} object of request headers ||
 | json | boolean | false | Evaluate the response as JSON and return object ||
 | jsonp | boolean, string | false | Boolean or override name for callback query string parameter ||
+| jsonpCallback | string | -- | Override the name of the JSONP callback function ||
 | method | string | get | Request verb (get, post, put, etc) in lowercase ||
 | scope | object | -- | Callback scope ||
 | success | callback | -- | [Callback](/script/#functions) if request succeeds ||

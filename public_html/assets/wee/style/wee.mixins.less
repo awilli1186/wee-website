@@ -2388,23 +2388,20 @@
 	# Helper Classes
 \*------------------------------------*/
 
-.wee-helpers () {
-	.container {
-		.wee-container();
-	}
-	.@{imageLeftClass} {
-		float: left;
-		.margin(.32em; @imageMarginSide; @imageMarginBottom; false);
-	}
-	.@{imageRightClass} {
-		float: right;
-		.margin(.32em; false; @imageMarginBottom; @imageMarginSide);
-	}
-	.js-hide {
-		display: none !important;
-	}
+.container {
+	.wee-container();
 }
-.wee-helpers();
+.@{imageLeftClass} {
+	float: left;
+	.margin(.32em; @imageMarginSide; @imageMarginBottom; false);
+}
+.@{imageRightClass} {
+	float: right;
+	.margin(.32em; false; @imageMarginBottom; @imageMarginSide);
+}
+.js-hide {
+	display: none !important;
+}
 
 
 

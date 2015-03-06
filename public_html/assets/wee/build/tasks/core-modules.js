@@ -48,11 +48,11 @@ module.exports = function(grunt) {
 						if (module.style.compile) {
 							for (var target in module.style.compile) {
 								var taskName = target.replace(/\./g, '-') + '-' + name + '-style',
-									sources = Wee.$toArray(project.style.compile[target]),
+									sources = Wee.$toArray(module.style.compile[target]),
 									files = [];
 
-								for (var path in sources) {
-									files.push(Wee.buildPath(style.rootPath, sources[path]));
+								for (var sourcePath in sources) {
+									files.push(Wee.buildPath(modulePath, sources[sourcePath]));
 								}
 
 								// Merge watch config
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 								// Create Less task
 								grunt.config.set('less.' + taskName, {
 									files: [{
-										dest: Wee.buildPath(style.rootPath, target),
+										dest: Wee.buildPath(modulePath, target),
 										src: files
 									}],
 									options: {
@@ -94,15 +94,15 @@ module.exports = function(grunt) {
 						if (module.script.compile) {
 							for (var target in module.script.compile) {
 								var taskName = target.replace(/\./g, '-') + '-' + name + '-script',
-									sources = project.script.compile[target],
+									sources = module.script.compile[target],
 									src = [];
 
 								if (sources instanceof Array) {
 									for (var source in sources) {
-										src.push(Wee.buildPath(script.rootPath, sources[source]));
+										src.push(Wee.buildPath(modulePath, sources[source]));
 									}
 								} else {
-									src = Wee.buildPath(script.rootPath, sources);
+									src = Wee.buildPath(modulePath, sources);
 								}
 
 								// Merge watch config
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
 								// Create uglify task
 								grunt.config.set('uglify.' + taskName, {
 									files: [{
-										dest: Wee.buildPath(script.rootPath, target),
+										dest: Wee.buildPath(modulePath, target),
 										src: src
 									}]
 								});

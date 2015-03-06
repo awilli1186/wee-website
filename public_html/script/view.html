@@ -50,6 +50,46 @@ Wee.view.render(template, data);
 1 | 2 | 42 | Jane&lt;br&gt;
 2 | 3 | 18 | Jimmy&lt;br&gt;
 3 | 4 | 15 | Jenny&lt;br&gt;
+</code></pre></div><h3 class="doc__code__label">Functions</h3><div class="doc__code doc__code--string doc__code--stacked"><p>Functions can also be provided in the data object. See the example below.</p><pre><code class="language-javascript">var data = {
+    firstName: 'John',
+    lastName: 'Doe',
+    pets: true,
+    dogs: [
+        'Molly',
+        'Ginger',
+        'Keith'
+    ],
+    cats: [
+        'Napoleon'
+    ],
+    sister: {
+        firstName: 'Jessica'
+    }
+};
+</code></pre><pre><code class="language-javascript">data.petCount = function(data, obj, index) {
+    return data.dogs.length + data.cats.length;
+};
+</code></pre><pre><code class="language-javascript">data.petName = function(data, obj, index) {
+    var resp = '';
+
+    if ((index + 1) === obj.dogs.length) {
+        resp = ' and ';
+    } else if (index &gt; 0) {
+        resp = ', ';
+    }
+
+    resp += obj.dogs[index];
+
+    return resp;
+};
+</code></pre><pre><code class="language-javascript">var template = 'My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}. ' +
+    '{{#pets|notEmpty}}' +
+    'I have had {{petCount}} pets. My dogs names are {{#dogs}}{{$root.petName}}{{/dogs}}. ' +
+    'I have a sister {{sister.firstName}}.' +
+    '{{/pets}}';
+
+Wee.view.render(template, data);
+</code></pre><pre><code class="language-javascript">&quot;My name is John Doe. I have had 4 pets. My dogs names are Molly, Ginger and Keith. I have a sister Jessica.&quot;
 </code></pre></div><h3 class="doc__code__label">Advanced</h3><div class="doc__code doc__code--string doc__code--stacked"><p>The render method does more than simple variable output. It can traverse as deep into the provided object as you need for multi-level output.</p><pre><code class="language-javascript">var template = '&lt;p&gt;My Name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}&lt;/p&gt;' +
     '{{#children|notEmpty}}' +
         '&lt;p&gt;My Children are:&lt;/p&gt;' +

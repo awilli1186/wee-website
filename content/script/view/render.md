@@ -100,6 +100,65 @@ Wee.view.render(template, data);
 3 | 4 | 15 | Jenny<br>
 ```
 
+---code|type:string|modifier:stacked|label:Functions---
+
+Functions can also be provided in the data object. See the example below.
+
+```javascript
+var data = {
+	firstName: 'John',
+	lastName: 'Doe',
+	pets: true,
+	dogs: [
+		'Molly',
+		'Ginger',
+		'Keith'
+	],
+	cats: [
+		'Napoleon'
+	],
+	sister: {
+		firstName: 'Jessica'
+	}
+};
+```
+
+```javascript
+data.petCount = function(data, obj, index) {
+	return data.dogs.length + data.cats.length;
+};
+```
+
+```javascript
+data.petName = function(data, obj, index) {
+	var resp = '';
+
+	if ((index + 1) === obj.dogs.length) {
+		resp = ' and ';
+	} else if (index > 0) {
+		resp = ', ';
+	}
+
+	resp += obj.dogs[index];
+
+	return resp;
+};
+```
+
+```javascript
+var template = '{{#!}}My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}. ' +
+	'{{#pets|notEmpty}}' +
+	'I have had {{petCount}} pets. My dogs names are {{#dogs}}{{$root.petName}}{{/dogs}}. ' +
+	'I have a sister {{sister.firstName}}.' +
+	'{{/pets}}{{/!}}';
+
+Wee.view.render(template, data);
+```
+
+```javascript
+"My name is John Doe. I have had 4 pets. My dogs names are Molly, Ginger and Keith. I have a sister Jessica."
+```
+
 ---code|type:string|modifier:stacked|label:Advanced---
 
 The render method does more than simple variable output. It can traverse as deep into the provided object as you need for multi-level output.

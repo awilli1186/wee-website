@@ -7,7 +7,8 @@
 			var conf = W.$extend({
 					args: [],
 					data: {},
-					headers: {}
+					headers: {},
+					method: 'get'
 				}, options);
 
 			if (conf.cache === false) {
@@ -117,16 +118,19 @@
 						conf.url += '?' + W.$serialize(conf.data);
 					}
 
-					x.open('GET', conf.url, true);
+					x.open(conf.method.toUpperCase(), conf.url, true);
 				}
 
 				// Add X-Requested-With header for same domain requests
-				var a = W._doc.createElement('a'),
-					xrw = 'X-Requested-With';
-				a.href = conf.url;
+				var xrw = 'X-Requested-With';
 
-				if (a.hostname == W._win.location.hostname && ! conf.headers[xrw]) {
-					conf.headers[xrw] = 'XMLHttpRequest';
+				if (! conf.headers.hasOwnProperty(xrw)) {
+					var a = W._doc.createElement('a');
+					a.href = conf.url;
+
+					if (a.hostname == W._win.location.hostname) {
+						conf.headers[xrw] = 'XMLHttpRequest';
+					}
 				}
 
 				// Set request headers

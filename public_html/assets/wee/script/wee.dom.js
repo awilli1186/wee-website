@@ -1,3 +1,5 @@
+/* global WeeAlias */
+
 (function(W, U) {
 	'use strict';
 
@@ -469,7 +471,7 @@
 
 			var children = W.$children(el);
 
-			return convert ? $(children) : children;
+			return convert ? W._win[WeeAlias](children) : children;
 		},
 		// Get the position of the first matching selection relative to its offset parent
 		// Returns object
@@ -545,7 +547,9 @@
 		// Remove specified attribute of each matching selection
 		$removeAttr: function(target, name) {
 			W.$each(target, function(el) {
-				el.removeAttribute(name);
+				name.split(/\s+/).forEach(function(value) {
+					el.removeAttribute(value);
+				});
 			});
 		},
 		// Remove classes from each matching selection
@@ -849,7 +853,7 @@
 				);
 
 				if (wrap) {
-					W.$each(wrap, function (cel) {
+					W.$each(wrap, function(cel) {
 						cel.appendChild(el.cloneNode(true));
 						el.parentNode.replaceChild(cel, el);
 					});

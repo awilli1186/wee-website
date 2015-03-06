@@ -3,7 +3,7 @@ name: Placeholder
 path: /public/assets/js/polyfill/wee.placeholder.js
 ---
 
-The Wee placeholder polyfill patches support for the placeholder attribute on inputs and textareas, essential for forms in IE9 and below. It sets the value
+The Wee placeholder polyfill patches support for the placeholder attribute on input and textarea fields. It sets the value
  of the input to the placeholder value but clears it on focus and form post to mimic native placeholder functionality.
 
 ```html
