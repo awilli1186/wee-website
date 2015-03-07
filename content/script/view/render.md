@@ -13,7 +13,7 @@ heading: Parse data into template string
 ---code|type:string|modifier:stacked|label:Simple---
 
 ```javascript
-var template = '{{#!}}My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}{{/!}}',
+var template = '{{#!}}My name is {{firstName}} {{lastName}}{{/!}}',
 	data = {
 		firstName: 'John',
 		lastName: 'Smith'
@@ -29,38 +29,37 @@ Wee.view.render(template, data);
 ---code|type:string|modifier:stacked|label:Fallback Values---
 
 ```javascript
-var template = '{{#!}}My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}{{/!}}',
+var template = '{{#!}}My name is {{firstName}} {{lastName||Doe}}{{/!}}',
 	data = {
-		firstName: 'John',
-		lastName: 'Smith'
+		firstName: 'John'
 	};
 
 Wee.view.render(template, data);
 ```
 
 ```javascript
-"My name is John Smith"
+"My name is John Doe"
 ```
 
 ---code|type:string|modifier:stacked|label:Changing Context---
 
 ```javascript
-var template = '{{#!}}{{#names}}{{#}} | {{##}} | {{.}} | {{$key}}<br>{{/names}}{{/!}}',
-	data = {names: {
-		'John': 45,
-		'Jane': 42,
-		'Jimmy': 18,
-		'Jenny': 15
-	}};
+var template = '{{#!}}{{#child}}{{#child}}{{name}}\'s dad is {{../name}} and his grandad is {{$root.name}}.{{/child}}{{/child}}{{/!}}',
+	data = {
+		name: 'John',
+		child: {
+		 	name: 'Jimmy',
+		 	child: {
+		 		name: 'Charlie'
+		 	}
+		 }
+	};
 
 Wee.view.render(template, data);
 ```
 
 ```javascript
-0 | 1 | 45 | John<br>
-1 | 2 | 42 | Jane<br>
-2 | 3 | 18 | Jimmy<br>
-3 | 4 | 15 | Jenny<br>
+Charlie's dad is Jimmy and his grandad is John.
 ```
 
 ---code|type:string|modifier:stacked|label:Functions---
@@ -83,12 +82,14 @@ Wee.view.render(template, data);
 
 ```javascript
 var template = '{{#!}}{{#names}}{{#}} | {{##}} | {{.}} | {{$key}}<br>{{/names}}{{/!}}',
-	data = {names: {
-		'John': 45,
-		'Jane': 42,
-		'Jimmy': 18,
-		'Jenny': 15
-	}};
+	data = {
+		names: {
+			'John': 45,
+			'Jane': 42,
+			'Jimmy': 18,
+			'Jenny': 15
+		}
+	};
 
 Wee.view.render(template, data);
 ```
@@ -102,7 +103,7 @@ Wee.view.render(template, data);
 
 ---code|type:string|modifier:stacked|label:Functions---
 
-Functions can also be provided in the data object. See the example below.
+Functions can also be set in the data object. See the example below.
 
 ```javascript
 var data = {

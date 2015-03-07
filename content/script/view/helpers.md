@@ -3,7 +3,7 @@ name: Helpers
 heading: Add helper to run additional processing on tag data
 ---
 
-Properties of the tag that the helper is being called on can be accessed via the current scope this. These include val, data, root, tag, index, helpers, and fallback.
+Properties of the tag that the helper is being called on can be accessed via the current scope ```this```. These include ```val```, ```data```, ```root```, ```tag```, ```index```, and ```fallback```.
 
 ---variables---
 
@@ -33,4 +33,27 @@ Wee.view.render(template, data);
 
 ```javascript
 "My name is JOHN."
+```
+
+---code|label:Parametric---
+
+```javascript
+Wee.view.addHelper('starts', function(num) {
+	return this.val.substr(0, num || 1);
+});
+```
+
+---code|type:string|modifier:stacked---
+
+```javascript
+var template = '{{#!}}{{name}} starts with {{name|starts(5)}}.{{/!}}',
+	data = {
+		name: 'Rhinoceros'
+	};
+
+Wee.view.render(template, data);
+```
+
+```javascript
+"Rhinoceros starts with Rhino."
 ```

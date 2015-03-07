@@ -31,4 +31,4 @@ The ES5 Shim patches ECMAScript 5 compatibility in legacy JavaScript environment
 
 ---note---
 
-**Note:** ES5 Shim is required for core Wee scripts in IE8 and below.
+**Note:** Wee requires ES5 Shim for compatibility with IE8 and below.

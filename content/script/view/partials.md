@@ -1,9 +1,9 @@
 ---
 name: Partials
-heading: Make partial available for inject into other templates
+heading: Make partial available for injection into other templates
 ---
 
-Partials are code snippets that can be reused throughout your project.
+Partials are code snippets that can be reused throughout the current request lifecycle.
 
 ---variables---
 
