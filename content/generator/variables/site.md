@@ -4,14 +4,14 @@ name: Site
 
 The site tag enables access to any property specified at the root level of the site file.
 
-### Name &amp; Description
+---code|label:Name & Description---
 
 ```html
 {{#!}}<h1>{{site.name}}</h1>
 <span>{{site.description}}</span>{{/!}}
 ```
 
-### Sections
+---code|label:Sections---
 
 ```html
 {{#!}}<ul>
@@ -21,7 +21,7 @@ The site tag enables access to any property specified at the root level of the s
 </ul>{{/!}}
 ```
 
-### Environment
+---code|label:Environment---
 
 This will return the current development environment. Using this with the |is filter, you can conditionally load content.
 
@@ -39,7 +39,7 @@ It also allows quick access to any data associated with an environment.
 {{#!}}<link rel="stylesheet" href="{{site.assetUrl}}/style.css">{{/!}}
 ```
 
-### Time
+---code|label:Time---
 
 This will return the current time.
 

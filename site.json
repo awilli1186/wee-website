@@ -1,6 +1,6 @@
 {
 	"name": "Wee",
-	"description": "Project style guide description.",
+	"description": "Wee documentation and resources.",
 	"config": {
 		"watch": true,
 		"minify": true,
@@ -16,8 +16,8 @@
 	"env": {
 		"prod": {
 			"domain": "https://www.weepower.com",
-			"cdnUrl": "https://www.weepower.com",
-			"assetUrl": "https://www.weepower.com/assets"
+			"cdnUrl": "https://cdn.weepower.com",
+			"assetUrl": "https://cdn.weepower.com/assets"
 		},
 		"default": {
 			"domain": "http://www.weepower.dev",
@@ -102,6 +102,7 @@
 					"target": "public_html/start/structure.html",
 					"content": [
 						"content/start/structure/intro.md",
+						"content/start/structure/files.md",
 						"content/start/structure/*.md"
 					]
 				},
@@ -130,10 +131,11 @@
 			"target": "public_html/build/index.html",
 			"content": [
 				"content/build/intro.md",
+				"content/build/setup.md",
 				"content/build/tasks.md",
-				"content/build/script-build.md",
-				"content/build/style-build.md",
-				"content/build/*.md"
+				"content/build/*.md",
+				"!content/build/faq.md",
+				"content/build/faq.md"
 			],
 			"sections": {
 				"config": {
@@ -222,6 +224,7 @@
 					"content": [
 						"content/style/mixins/intro.md",
 						"content/style/mixins/*.md",
+						"!content/style/mixins/other.md",
 						"content/style/mixins/other.md"
 					]
 				},

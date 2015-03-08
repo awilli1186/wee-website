@@ -24,24 +24,24 @@ A couple basic settings are made... Also, the X-UA-Compatible header and charact
 RewriteEngine On
 Options +FollowSymLinks -Indexes -MultiViews
 
-#Header set X-UA-Compatible "IE=edge"
+Header set X-UA-Compatible "IE=edge"
 
 # Character set
-#AddDefaultCharset utf-8
-#AddCharset utf-8 .css .js .json .map .rss .xml
+AddDefaultCharset utf-8
+AddCharset utf-8 .css .js .json .map .rss .xml
 ```
 
 ---code|label:Remote Assets---
 
 ```htaccess
-#<FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
-#	SetEnvIf Origin ":" IS_CORS
-#	Header set Access-Control-Allow-Origin "*" env=IS_CORS
-#</FilesMatch>
+<FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
+	SetEnvIf Origin ":" IS_CORS
+	Header set Access-Control-Allow-Origin "*" env=IS_CORS
+</FilesMatch>
 
-#<FilesMatch "\.(eot|otf|tt[cf]|woff2?)$">
-#	Header set Access-Control-Allow-Origin "*"
-#</FilesMatch>
+<FilesMatch "\.(eot|otf|tt[cf]|woff2?)$">
+	Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
 ```
 
 ---code|label:Errors---
@@ -60,11 +60,11 @@ ErrorDocument 404 /404.html
 
 ```htaccess
 # Force www
-#RewriteCond %{HTTP_HOST} !^www\.weepower\.com [NC]
+#RewriteCond %{HTTP_HOST} !^www\.weepower\.com$ [NC]
 #RewriteRule ^(.*)$ http://www.weepower.com/$1 [R=301,L]
 
 # Remove www (don't use both force and remove)
-#RewriteCond %{HTTP_HOST} ^www\.weepower\.com [NC]
+#RewriteCond %{HTTP_HOST} ^www\.weepower\.com$ [NC]
 #RewriteRule ^(.*)$ http://www.weepower.com/$1 [R=301,L]
 
 # Force SSL
@@ -84,7 +84,7 @@ RewriteCond %{REQUEST_URI} ^(.*/)index\.html$ [NC]
 RewriteRule . %1 [R=301,L]
 
 # Remove extension
-RewriteCond %{THE_REQUEST} ^GET\ (.*)\.html(.*)\ HTTP
+RewriteCond %{REQUEST_URI} ^GET\ (.*)\.html(.*)\ HTTP
 RewriteRule (.*)\.html$ $1$2 [R=301]
 
 # Rewrite extension

@@ -7,7 +7,7 @@
     {{output|raw}}
 &lt;/div&gt;
 {{/content}}
-</code></pre><h3>Input &amp; Output</h3><p>The input tag returns the raw markdown content before processing. The output tag returns the processed content.</p><pre><code class="language-html">{{#content}}
+</code></pre></div><h3 class="doc__code__label">Input &amp; Output</h3><div class="doc__code"><p>The input tag returns the raw markdown content before processing. The output tag returns the processed content.</p><pre><code class="language-html">{{#content}}
     {{output}}
 {{/content}}
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Data <a href="#data" id="data" class="doc__anchor">#</a></h2><div class="doc__content"><p>The data tag is used to access any custom data inside of the data keys in the site file. This includes the site data, as well as data for individual sections. It can be used as a single tag or as a tag pair.</p><pre><code class="language-html">{{data.version}}
@@ -17,20 +17,20 @@
     &lt;li&gt;{{name}}&lt;/li&gt;
 {{/sections}}
 &lt;/ul&gt;
-</code></pre></div></div><div class="doc"><h2 class="doc__title">Site <a href="#site" id="site" class="doc__anchor">#</a></h2><div class="doc__content"><p>The site tag enables access to any property specified at the root level of the site file.</p><h3>Name &amp; Description</h3><pre><code class="language-html">&lt;h1&gt;{{site.name}}&lt;/h1&gt;
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Site <a href="#site" id="site" class="doc__anchor">#</a></h2><div class="doc__content"><p>The site tag enables access to any property specified at the root level of the site file.</p></div><h3 class="doc__code__label">Name &amp; Description</h3><div class="doc__code"><pre><code class="language-html">&lt;h1&gt;{{site.name}}&lt;/h1&gt;
 &lt;span&gt;{{site.description}}&lt;/span&gt;
-</code></pre><h3>Sections</h3><pre><code class="language-html">&lt;ul&gt;
+</code></pre></div><h3 class="doc__code__label">Sections</h3><div class="doc__code"><pre><code class="language-html">&lt;ul&gt;
 {{#site.sections}}
     &lt;li&gt;{{name}}&lt;/li&gt;
 {{/site.sections}}
 &lt;/ul&gt;
-</code></pre><h3>Environment</h3><p>This will return the current development environment. Using this with the |is filter, you can conditionally load content.</p><pre><code class="language-html">{{#site.env|is(prod)}}
+</code></pre></div><h3 class="doc__code__label">Environment</h3><div class="doc__code"><p>This will return the current development environment. Using this with the |is filter, you can conditionally load content.</p><pre><code class="language-html">{{#site.env|is(prod)}}
 &lt;script&gt;
 // Script loaded only in production environment
 &lt;/script&gt;
 {{/site.env}}
 </code></pre><p>It also allows quick access to any data associated with an environment.</p><pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;{{site.assetUrl}}/style.css&quot;&gt;
-</code></pre><h3>Time</h3><p>This will return the current time.</p><pre><code class="language-html">{{site.time}}
+</code></pre></div><h3 class="doc__code__label">Time</h3><div class="doc__code"><p>This will return the current time.</p><pre><code class="language-html">{{site.time}}
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Target, Path &amp; Url <a href="#target-path-url" id="target-path-url" class="doc__anchor">#</a></h2><div class="doc__content"><p>Target tells you where the file is written in the file system. Path gives you the relative path. Url includes the domain.</p><pre><code class="language-html">{{target}}
 {{path}}
 {{url}}

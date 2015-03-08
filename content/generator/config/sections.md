@@ -44,7 +44,7 @@ can be nested.
 }
 ```
 
-### Name
+---code|label:Name---
 
 The name for the section is set here.
 
@@ -52,7 +52,7 @@ The name for the section is set here.
 "name": "Section Name"
 ```
 
-### Data
+---code|label:Data---
 
 Any custom data that you may need for a section can be stored in the data key.
 
@@ -62,7 +62,7 @@ Any custom data that you may need for a section can be stored in the data key.
 }
 ```
 
-### Template
+---code|label:Template---
 
 This is where you specify a section's template. The html extension isn't needed.
 
@@ -70,7 +70,7 @@ This is where you specify a section's template. The html extension isn't needed.
 "template": "index"
 ```
 
-### Target
+---code|label:Target---
 
 This specifies the file to which the content will be added.
 
@@ -78,7 +78,7 @@ This specifies the file to which the content will be added.
 "target": "public_html/index.html"
 ```
 
-### Content
+---code|label:Content---
 
 The files listed here contain the content that will be added to the target file
 specified above. Files are compiled in the order that they are listed. Wildcards

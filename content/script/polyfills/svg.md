@@ -5,7 +5,7 @@ path: /public/assets/js/polyfill/wee.svg.js
 
 SVG solves a [lot of problems](http://css-tricks.com/using-svg/) but is unsupported in IE8. The SVG polyfill allows for an automatic or specific fallback to a more widely supported image format.
 
-### Default
+---doc|label:Default---
 
 By default the polyfill will replace the source of any linked SVG files with a PNG from the same path.
 

@@ -1,6 +1,6 @@
 <!doctype html><html lang="en" itemscope itemtype="http://schema.org/WebPage"><head><title>Less Mixins | Wee</title><meta name="description" content="Wee includes a collection of Less mixins to save you time and make your code more readable."><meta name="robots" content="noindex, follow"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/assets/css/style.min.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400"><link rel="apple-touch-icon" href="/touchicon.png"><link rel="publisher" href="https://plus.google.com/+weecss"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@weecss"><meta property="og:site_name" content="Wee"><meta property="og:title" content="Less Mixins" itemprop="name"><meta property="og:description" content="Wee includes a collection of Less mixins to save you time and make your code more readable." itemprop="description"><meta property="og:url" content="http:/www.weepower.dev/style/mixins.html" itemprop="url"><meta property="og:image" content="/share.png" itemprop="image"><!--[if lt IE 9]><link rel="stylesheet" href="/assets/css/ie8.min.css">
 <script src="/assets/js/ie8.min.js"></script><![endif]--><!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.min.css">
-<script src="/assets/js/ie9.min.js"></script><![endif]--></head><body class="subpage section"><div class="canvas-outer"><div class="canvas-inner"><header role="banner" class="scrollable sidebar" data-ref="scroll"><div class="viewport"><div class="overview js-overview"><a href="/" rel="home" class="logo"><img src="/assets/img/wee.svg" alt="Wee Framework"></a><h3><a href="/start">Start</a></h3><ul><li><a href="/start/structure">Structure</a></li><li><a href="/start/markup">Markup</a></li></ul><h3><a href="/build">Build</a></h3><ul><li><a href="/build/config">Config</a></li><li><a href="/build/validation">Validation</a></li></ul><h3><a href="/generator">Generate</a></h3><ul><li><a href="/generator/config">Config</a></li><li><a href="/generator/variables">Variables</a></li></ul><h3><a href="/style">Style</a></h3><ul><li><a href="/style/variables">Variables</a></li><li><a href="/style/mixins" class="is-active">Mixins</a></li><li><a href="/style/classes">Classes</a></li></ul><h3><a href="/script">Script</a></h3><ul><li><a href="/script/core">Core</a></li><li><a href="/script/chain">Chain</a></li><li><a href="/script/assets">Assets</a></li><li><a href="/script/data">Data</a></li><li><a href="/script/dom">DOM</a></li><li><a href="/script/events">Events</a></li><li><a href="/script/routes">Routes</a></li><li><a href="/script/screen">Screen</a></li><li><a href="/script/view">View</a></li><li><a href="/script/polyfills">Polyfills</a></li></ul></div></div></header><div class="scrollable subnav" data-ref="scroll subnav"><div class="viewport"><div class="overview js-overview"><h3>Contents</h3><ul><li><a href="#alignment">Alignment</a></li><li><a href="#animation">Animation</a></li><li><a href="#backgrounds">Backgrounds</a></li><li><a href="#blocks">Blocks</a></li><li><a href="#borders">Borders</a></li><li><a href="#box-shadows">Box Shadows</a></li><li><a href="#colors">Colors</a></li><li><a href="#content">Content</a></li><li><a href="#display">Display</a></li><li><a href="#filters">Filters</a></li><li><a href="#font-family">Font Family</a></li><li><a href="#font-loading">Font Loading</a></li><li><a href="#font-selection">Font Selection</a></li><li><a href="#font-size">Font Size</a></li><li><a href="#font-style">Font Style</a></li><li><a href="#font-weight">Font Weight</a></li><li><a href="#forms">Forms</a></li><li><a href="#grid">Grid</a></li><li><a href="#line-height">Line Height</a></li><li><a href="#lists">Lists</a></li><li><a href="#margin">Margin</a></li><li><a href="#opacity">Opacity</a></li><li><a href="#other">Other</a></li><li><a href="#padding">Padding</a></li><li><a href="#position">Position</a></li><li><a href="#responsive">Responsive</a></li><li><a href="#rounded-corners">Rounded Corners</a></li><li><a href="#shapes">Shapes</a></li><li><a href="#sizing">Sizing</a></li><li><a href="#tables">Tables</a></li><li><a href="#text-shadows">Text Shadows</a></li><li><a href="#text-styling">Text Styling</a></li><li><a href="#transforms">Transforms</a></li><li><a href="#transitions">Transitions</a></li></ul></div></div></div><div class="container primary" data-ref="primary"><div class="mobile-nav" data-ref="mobileNav">&#9776;</div><main class="main" role="main"><div class="intro"><h1 class="intro__title">Mixins <a href="https://github.com/weepower/wee/tree/master/public/assets/wee/style/wee.mixins.less" class="intro__link">→</a></h1><p class="intro__heading">Shortcuts to save you time and make your code more readable</p></div><div class="doc"><h2 class="doc__title">Alignment <a href="#alignment" id="alignment" class="doc__anchor">#</a></h2><h3 class="doc__variables__label">Float</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@value</td><td>preset</td><td>left</td><td>Left or right</td><td></td></tr><tr><td>@width</td><td>unit</td><td>–</td><td>Width value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.float();
+<script src="/assets/js/ie9.min.js"></script><![endif]--></head><body class="subpage section"><div class="canvas-outer"><div class="canvas-inner"><header role="banner" class="scrollable sidebar" data-ref="scroll"><div class="viewport"><div class="overview js-overview"><a href="/" rel="home" class="logo"><img src="/assets/img/wee.svg" alt="Wee Framework"></a><h3><a href="/start">Start</a></h3><ul><li><a href="/start/structure">Structure</a></li><li><a href="/start/markup">Markup</a></li></ul><h3><a href="/build">Build</a></h3><ul><li><a href="/build/config">Config</a></li><li><a href="/build/validation">Validation</a></li></ul><h3><a href="/generator">Generate</a></h3><ul><li><a href="/generator/config">Config</a></li><li><a href="/generator/variables">Variables</a></li></ul><h3><a href="/style">Style</a></h3><ul><li><a href="/style/variables">Variables</a></li><li><a href="/style/mixins" class="is-active">Mixins</a></li><li><a href="/style/classes">Classes</a></li></ul><h3><a href="/script">Script</a></h3><ul><li><a href="/script/core">Core</a></li><li><a href="/script/chain">Chain</a></li><li><a href="/script/assets">Assets</a></li><li><a href="/script/data">Data</a></li><li><a href="/script/dom">DOM</a></li><li><a href="/script/events">Events</a></li><li><a href="/script/routes">Routes</a></li><li><a href="/script/screen">Screen</a></li><li><a href="/script/view">View</a></li><li><a href="/script/polyfills">Polyfills</a></li></ul></div></div></header><div class="scrollable subnav" data-ref="scroll subnav"><div class="viewport"><div class="overview js-overview"><h3>Contents</h3><ul><li><a href="#alignment">Alignment</a></li><li><a href="#animation">Animation</a></li><li><a href="#backgrounds">Backgrounds</a></li><li><a href="#blocks">Blocks</a></li><li><a href="#borders">Borders</a></li><li><a href="#box-shadows">Box Shadows</a></li><li><a href="#colors">Colors</a></li><li><a href="#content">Content</a></li><li><a href="#display">Display</a></li><li><a href="#filters">Filters</a></li><li><a href="#font-family">Font Family</a></li><li><a href="#font-loading">Font Loading</a></li><li><a href="#font-selection">Font Selection</a></li><li><a href="#font-size">Font Size</a></li><li><a href="#font-style">Font Style</a></li><li><a href="#font-weight">Font Weight</a></li><li><a href="#forms">Forms</a></li><li><a href="#grid">Grid</a></li><li><a href="#line-height">Line Height</a></li><li><a href="#lists">Lists</a></li><li><a href="#margin">Margin</a></li><li><a href="#opacity">Opacity</a></li><li><a href="#padding">Padding</a></li><li><a href="#position">Position</a></li><li><a href="#responsive">Responsive</a></li><li><a href="#rounded-corners">Rounded Corners</a></li><li><a href="#shapes">Shapes</a></li><li><a href="#sizing">Sizing</a></li><li><a href="#tables">Tables</a></li><li><a href="#text-shadows">Text Shadows</a></li><li><a href="#text-styling">Text Styling</a></li><li><a href="#transforms">Transforms</a></li><li><a href="#transitions">Transitions</a></li><li><a href="#other">Other</a></li></ul></div></div></div><div class="container primary" data-ref="primary"><div class="mobile-nav" data-ref="mobileNav">&#9776;</div><main class="main" role="main"><div class="intro"><h1 class="intro__title">Mixins <a href="https://github.com/weepower/wee/tree/master/public/assets/wee/style/wee.mixins.less" class="intro__link">→</a></h1><p class="intro__heading">Shortcuts to save you time and make your code more readable</p></div><div class="doc"><h2 class="doc__title">Alignment <a href="#alignment" id="alignment" class="doc__anchor">#</a></h2><h3 class="doc__variables__label">Float</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@value</td><td>preset</td><td>left</td><td>Left or right</td><td></td></tr><tr><td>@width</td><td>unit</td><td>–</td><td>Width value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.float();
 </code></pre><pre><code class="language-css">float: left;
 </code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.float(right; 2);
 </code></pre><pre><code class="language-css">float: right;
@@ -516,61 +516,6 @@ opacity: 0;
 </code></pre></div><h3 class="doc__code__label">Opaque</h3><div class="doc__code doc__code--split"><pre><code class="language-less">.opaque();
 </code></pre><pre><code class="language-css">filter: alpha(opacity=100);
 opacity: 1;
-</code></pre></div></div><div class="doc"><h2 class="doc__title">Other <a href="#other" id="other" class="doc__anchor">#</a></h2><h3 class="doc__variables__label">Resize</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@value</td><td>keyword</td><td>–</td><td>Resize value</td><td>✓</td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.resize(horizontal);
-</code></pre><pre><code class="language-css">resize: horizontal;
-</code></pre></div><h3 class="doc__variables__label">Resizable</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@value</td><td>keyword</td><td>both</td><td>Resize value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.resizable(vertical);
-</code></pre><pre><code class="language-css">overflow: hidden;
-resize: vertical;
-</code></pre></div><h3 class="doc__code__label">Hide Text</h3><div class="doc__code doc__code--split"><pre><code class="language-less">.hide-text();
-</code></pre><pre><code class="language-css">overflow: hidden;
-text-indent: 100%;
-white-space: nowrap;
-</code></pre></div><h3 class="doc__code__label">Hide</h3><div class="doc__code doc__code--split"><pre><code class="language-less">.hide(text);
-</code></pre><pre><code class="language-css">overflow: hidden;
-text-indent: 100%;
-white-space: nowrap;
-</code></pre></div><h3 class="doc__variables__label">Selection</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@color</td><td>color</td><td>@selectionColor</td><td>Selection color</td><td></td></tr><tr><td>@background</td><td>color, string, keyword</td><td>@selectionBackground</td><td>Selection background</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.selection();
-</code></pre><pre><code class="language-css">::-moz-selection {
-    text-shadow: none;
-    background: #167da3;
-    color: #ffffff;
-}
-::selection {
-    text-shadow: none;
-    background: #167da3;
-    color: #ffffff;
-}
-</code></pre></div><h3 class="doc__variables__label">Cursor</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@value</td><td>keyword</td><td>pointer</td><td>Cursor value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.cursor();
-</code></pre><pre><code class="language-css">cursor: pointer;
-</code></pre></div><h3 class="doc__variables__label">Overflow</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>x, y</td><td>keyword</td><td>–</td><td>Overflow axis</td><td></td></tr><tr><td>@value</td><td>keyword</td><td>–</td><td>Overflow value</td><td>✓</td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.overflow(hidden);
-</code></pre><pre><code class="language-css">overflow: hidden;
-</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.overflow(x; scroll);
-</code></pre><pre><code class="language-css">overflow-x: scroll;
-</code></pre></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@x</td><td>keyword</td><td>–</td><td>Overflow-x value</td><td></td></tr><tr><td>@y</td><td>keyword</td><td>–</td><td>Overflow-y value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.overflow(hidden; scroll);
-</code></pre><pre><code class="language-css">overflow-x: hidden;
-overflow-y: scroll;
-</code></pre></div><h3 class="doc__variables__label">Crop &amp; Scroll</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>horizontal, vertical</td><td>keyword</td><td>–</td><td>Horizontal or vertical preset</td><td></td></tr><tr><td>@value</td><td>keyword</td><td>true</td><td>Overflow value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.crop(both);
-</code></pre><pre><code class="language-css">overflow: hidden;
-</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.crop(vertical);
-</code></pre><pre><code class="language-css">overflow-y: hidden;
-</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.scroll();
-</code></pre><pre><code class="language-css">overflow: scroll;
-</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.scroll(horizontal);
-</code></pre><pre><code class="language-css">overflow-x: scroll;
-</code></pre></div><h3 class="doc__variables__label">Fill</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>horizontal, vertical, both</td><td>keyword</td><td>–</td><td>Horizontal, vertical, or both preset</td><td></td></tr><tr><td>@value</td><td>keyword, color</td><td>true</td><td>Fill value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.fill(horizontal);
-</code></pre><pre><code class="language-css">width: 100%;
-</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.fill(blue);
-</code></pre><pre><code class="language-css">fill: #00f;
-</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.fill(both);
-</code></pre><pre><code class="language-css">width: 100%;
-height: 100%;
-</code></pre></div><h3 class="doc__code__label">No-Clear</h3><div class="doc__code doc__code--split"><pre><code class="language-less">.no-clear();
-</code></pre><pre><code class="language-css">::-ms-clear {
-    display: none;
-}
-::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-}
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Padding <a href="#padding" id="padding" class="doc__anchor">#</a></h2><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@value</td><td>unit</td><td>–</td><td>Padding value</td><td>✓</td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.padding(5);
 </code></pre><pre><code class="language-css">padding: 5rem;
 </code></pre></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>top, right, bottom, left</td><td>keyword</td><td>–</td><td>Side presets</td><td>✓</td></tr><tr><td>@value</td><td>unit</td><td>–</td><td>Padding value</td><td>✓</td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.padding(left; 2);
@@ -831,4 +776,59 @@ transition-delay: 3s;
 </code></pre></div><h3 class="doc__variables__label">Transition Duration</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@duration</td><td>seconds</td><td>@defaultDuration</td><td>Duration value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.transition-duration(0.5s);
 </code></pre><pre><code class="language-css">-webkit-transition-duration: 0.5s;
 transition-duration: 0.5s;
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Other <a href="#other" id="other" class="doc__anchor">#</a></h2><h3 class="doc__variables__label">Resize</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@value</td><td>keyword</td><td>–</td><td>Resize value</td><td>✓</td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.resize(horizontal);
+</code></pre><pre><code class="language-css">resize: horizontal;
+</code></pre></div><h3 class="doc__variables__label">Resizable</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@value</td><td>keyword</td><td>both</td><td>Resize value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.resizable(vertical);
+</code></pre><pre><code class="language-css">overflow: hidden;
+resize: vertical;
+</code></pre></div><h3 class="doc__code__label">Hide Text</h3><div class="doc__code doc__code--split"><pre><code class="language-less">.hide-text();
+</code></pre><pre><code class="language-css">overflow: hidden;
+text-indent: 100%;
+white-space: nowrap;
+</code></pre></div><h3 class="doc__code__label">Hide</h3><div class="doc__code doc__code--split"><pre><code class="language-less">.hide(text);
+</code></pre><pre><code class="language-css">overflow: hidden;
+text-indent: 100%;
+white-space: nowrap;
+</code></pre></div><h3 class="doc__variables__label">Selection</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@color</td><td>color</td><td>@selectionColor</td><td>Selection color</td><td></td></tr><tr><td>@background</td><td>color, string, keyword</td><td>@selectionBackground</td><td>Selection background</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.selection();
+</code></pre><pre><code class="language-css">::-moz-selection {
+    text-shadow: none;
+    background: #167da3;
+    color: #ffffff;
+}
+::selection {
+    text-shadow: none;
+    background: #167da3;
+    color: #ffffff;
+}
+</code></pre></div><h3 class="doc__variables__label">Cursor</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@value</td><td>keyword</td><td>pointer</td><td>Cursor value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.cursor();
+</code></pre><pre><code class="language-css">cursor: pointer;
+</code></pre></div><h3 class="doc__variables__label">Overflow</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>x, y</td><td>keyword</td><td>–</td><td>Overflow axis</td><td></td></tr><tr><td>@value</td><td>keyword</td><td>–</td><td>Overflow value</td><td>✓</td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.overflow(hidden);
+</code></pre><pre><code class="language-css">overflow: hidden;
+</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.overflow(x; scroll);
+</code></pre><pre><code class="language-css">overflow-x: scroll;
+</code></pre></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>@x</td><td>keyword</td><td>–</td><td>Overflow-x value</td><td></td></tr><tr><td>@y</td><td>keyword</td><td>–</td><td>Overflow-y value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.overflow(hidden; scroll);
+</code></pre><pre><code class="language-css">overflow-x: hidden;
+overflow-y: scroll;
+</code></pre></div><h3 class="doc__variables__label">Crop &amp; Scroll</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>horizontal, vertical</td><td>keyword</td><td>–</td><td>Horizontal or vertical preset</td><td></td></tr><tr><td>@value</td><td>keyword</td><td>true</td><td>Overflow value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.crop(both);
+</code></pre><pre><code class="language-css">overflow: hidden;
+</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.crop(vertical);
+</code></pre><pre><code class="language-css">overflow-y: hidden;
+</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.scroll();
+</code></pre><pre><code class="language-css">overflow: scroll;
+</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.scroll(horizontal);
+</code></pre><pre><code class="language-css">overflow-x: scroll;
+</code></pre></div><h3 class="doc__variables__label">Fill</h3><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>horizontal, vertical, both</td><td>keyword</td><td>–</td><td>Horizontal, vertical, or both preset</td><td></td></tr><tr><td>@value</td><td>keyword, color</td><td>true</td><td>Fill value</td><td></td></tr></tbody></table></div><div class="doc__code doc__code--split"><pre><code class="language-less">.fill(horizontal);
+</code></pre><pre><code class="language-css">width: 100%;
+</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.fill(blue);
+</code></pre><pre><code class="language-css">fill: #00f;
+</code></pre></div><div class="doc__code doc__code--split"><pre><code class="language-less">.fill(both);
+</code></pre><pre><code class="language-css">width: 100%;
+height: 100%;
+</code></pre></div><h3 class="doc__code__label">No-Clear</h3><div class="doc__code doc__code--split"><pre><code class="language-less">.no-clear();
+</code></pre><pre><code class="language-css">::-ms-clear {
+    display: none;
+}
+::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
 </code></pre></div></div></main><footer role="contentinfo" class="footer"><small class="footer__license"><a href="/">Wee Powered</a> &ndash; licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a></small><ul class="footer__links"><li><a href="https://github.com/weepower/wee">GitHub</a></li><li><a href="https://github.com/weepower/wee/issues">Issues</a></li><li><a href="https://github.com/weepower/wee/releases">Releases</a></li><li><a href="https://twitter.com/weecss">Twitter</a></li><li><a href="/blog">Blog</a></li></ul></footer></div></div></div><script src="/assets/js/script.min.js"></script></body></html>

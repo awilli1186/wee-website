@@ -13,7 +13,7 @@ With the content tag pair a section's content can be iterated over.
 {{/content}}{{/!}}
 ```
 
-### Input &amp; Output
+---code|label:Input & Output---
 
 The input tag returns the raw markdown content before processing. The output tag returns the processed content.
 

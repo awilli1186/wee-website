@@ -28,7 +28,7 @@ name: Files
 	* touchicon.png
 	* assets/
 		* css/
-			style.min.css
+			* style.min.css
 			* build/
 				* vendor/
 			* custom/
@@ -48,7 +48,7 @@ name: Files
 		* guide/
 		* img/
 		* js/
-			script.min.js
+			* script.min.js
 			* build/
 				* vendor/
 			* custom/

@@ -19,7 +19,7 @@ This allows you to enable or disable core features of the static site generator.
 }
 ```
 
-### Watch
+---code|label:Watch---
 
 Setting this to true will make grunt watch for changes.
 
@@ -27,7 +27,7 @@ Setting this to true will make grunt watch for changes.
 "watch": true
 ```
 
-### Minify
+---code|label:Minify---
 
 This will minify the rendered output if set to true.
 
@@ -35,7 +35,7 @@ This will minify the rendered output if set to true.
 "minify": true
 ```
 
-### Enhance Typography
+---code|label:Enhance Typography---
 
 Smart quotes and other typographic features can be enabled here.
 
@@ -43,7 +43,7 @@ Smart quotes and other typographic features can be enabled here.
 "enhanceTypography": true
 ```
 
-### Remove Index
+---code|label:Remove Index---
 
 This will remove index.html from any injected links.
 
@@ -51,7 +51,7 @@ This will remove index.html from any injected links.
 "removeIndex": true
 ```
 
-### Remove Trailing Slashes
+---code|label:Remove Trailing Slashes---
 
 Similar to removeIndex, this will remove trailing slashes from any injected links.
 
@@ -59,7 +59,7 @@ Similar to removeIndex, this will remove trailing slashes from any injected link
 "removeTrailingSlashes": true
 ```
 
-### Paths
+---code|label:Paths---
 
 Here you can set the paths for partials, templates, and extensions.
 

@@ -6,4 +6,4 @@ This tiny media query does the bare-minimum to try and automate getting your pag
 
 ---note---
 
-**Note:** If unneeded you can disable print styling in [project.json](/build/config#project).
+**Note:** If unneeded you can disable print styling in [project.json](/build/config#general).
