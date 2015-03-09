@@ -2,7 +2,7 @@
 name: Config
 ---
 
-This allows you to enable or disable core features of the static site generator.
+The config object allows you to enable or disable core features of the generator.
 
 ```javascript
 "config": {
@@ -19,17 +19,17 @@ This allows you to enable or disable core features of the static site generator.
 }
 ```
 
----code|label:Watch---
+---code|label:Watching---
 
-Setting this to true will make grunt watch for changes.
+Setting this to true will make toggle the Wee Grunt process to watch for changes.
 
 ```javascript
 "watch": true
 ```
 
----code|label:Minify---
+---code|label:Minification---
 
-This will minify the rendered output if set to true.
+When true the output HTML with be minified.
 
 ```javascript
 "minify": true
@@ -43,17 +43,17 @@ Smart quotes and other typographic features can be enabled here.
 "enhanceTypography": true
 ```
 
----code|label:Remove Index---
+---code|label:Indexes---
 
-This will remove index.html from any injected links.
+This will remove index.html from any path references. This should be used in conjunction with web server rewrite rules.
 
 ```javascript
 "removeIndex": true
 ```
 
----code|label:Remove Trailing Slashes---
+---code|label:Trailing Slashes---
 
-Similar to removeIndex, this will remove trailing slashes from any injected links.
+Similar to removeIndex, this will remove trailing slashes from any output paths.
 
 ```javascript
 "removeTrailingSlashes": true
@@ -61,7 +61,7 @@ Similar to removeIndex, this will remove trailing slashes from any injected link
 
 ---code|label:Paths---
 
-Here you can set the paths for partials, templates, and extensions.
+Here you can set the paths for partials, templates, and extensions. By default they are at the same level as the site config file.
 
 ```javascript
 "paths": {

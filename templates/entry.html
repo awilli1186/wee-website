@@ -10,11 +10,9 @@
 					<li>
 						<a href="/" rel="home" itemprop="url"><span itemprop="title">Home</span></a>
 					</li>
-					{{#parent|notEmpty}}
 					<li>
-						<a href="{{parent.target}}" rel="prev">{{parent.name}}</a>
+						<a href="/blog">Blog</a>
 					</li>
-					{{/parent}}
 					<li>{{section.name}}</li>
 				</ol>
 				{{#content}}
@@ -26,6 +24,7 @@
 					</div>
 					{{output|raw}}
 				{{/content}}
+				<div class="blog-comments" id="disqus_thread"></div>
 			</main>
 			<footer role="contentinfo" class="footer">
 				{{> footer}}

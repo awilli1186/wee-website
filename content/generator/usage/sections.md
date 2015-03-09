@@ -6,8 +6,8 @@ The sections tag pair iterates over the sections contained in the current sectio
 
 ```html
 {{#!}}<ul>
-{{#sections}}
+	{{#sections}}
 	<li>{{name}}</li>
-{{/sections}}
+	{{/sections}}
 </ul>{{/!}}
 ```

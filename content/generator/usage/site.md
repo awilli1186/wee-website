@@ -15,15 +15,15 @@ The site tag enables access to any property specified at the root level of the s
 
 ```html
 {{#!}}<ul>
-{{#site.sections}}
+	{{#site.sections}}
 	<li>{{name}}</li>
-{{/site.sections}}
+	{{/site.sections}}
 </ul>{{/!}}
 ```
 
 ---code|label:Environment---
 
-This will return the current development environment. Using this with the |is filter, you can conditionally load content.
+This will return the current development environment. Using this with the is filter, you can conditionally output content.
 
 ```html
 {{#!}}{{#site.env|is(prod)}}

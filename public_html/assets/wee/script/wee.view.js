@@ -15,7 +15,7 @@
 		addHelper: function(name, fn) {
 			this.$private('extend', 'helpers', name, fn);
 		},
-		// Make partial available for inject into other templates
+		// Make partial available for injection into other templates
 		addPartial: function(name, value) {
 			this.$private('extend', 'partials', name, value);
 		}
@@ -64,11 +64,15 @@
 			this.esc = false;
 
 			// Make partial replacements
+			while (temp.indexOf('{{> ') > -1) {
+				temp = temp.replace(this.partial, function(match, tag) {
+					var partial = scope.partials[tag];
+					return partial ? (W.$isFunction(partial) ? partial() : partial) : '';
+				});
+			}
+
 			// Preprocess tags to allow for reliable tag matching
-			temp = temp.replace(this.partial, function(match, tag) {
-				var partial = scope.partials[tag];
-				return partial ? (W.$isFunction(partial) ? partial() : partial) : '';
-			}).replace(this.tags, function(m, pre, tag, filter) {
+			temp = temp.replace(this.tags, function(m, pre, tag, filter) {
 				var resp = '{{' + pre;
 
 				if (pre == '#') {

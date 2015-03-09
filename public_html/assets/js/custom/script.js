@@ -16,6 +16,9 @@ Wee.routes.map({
 				}
 			});
 		}
+	},
+	'blog': {
+		'$any': 'blog'
 	}
 });
 

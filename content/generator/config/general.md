@@ -1,10 +1,10 @@
 ---
-name: Name &amp; Description
+name: General
 ---
 
 These values are for your internal reference only.
 
 ```javascript
 "name": "Site Name",
-"description": "Description of site."
+"description": "Site description."
 ```

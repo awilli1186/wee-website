@@ -2,16 +2,14 @@
 name: Sections
 ---
 
-This is where you will specify the different sections of your site, and
-information related to each section. As the example below demonstrates, sections
-can be nested.
+This is where you will specify the different sections of your site, and information related to each section. As the example below demonstrates, sections can be nested.
 
 ```javascript
 "sections": {
 	"home": {
 		"name": "Homepage",
 		"data": {
-
+			"seoTitle": "SEO Friendly Title",
 		},
 		"template": "index",
 		"target": "public_html/index.html",
@@ -19,9 +17,6 @@ can be nested.
 	},
 	"blog": {
 		"name": "Blog",
-		"data": {
-
-		},
 		"template": "blog",
 		"target": [
 			"public_html/blog/index.html"
@@ -30,12 +25,9 @@ can be nested.
 		"sections": {
 			"entries": {
 				"name": "Entries",
-				"data": {
-
-				},
 				"template": "entry",
 				"target": [
-					"public_html/blog/{{name|slug}}.html"
+					"public_html/blog/{{sourceName|slug}}.html"
 				],
 				"content": "content/blog/*.md"
 			}
@@ -46,7 +38,7 @@ can be nested.
 
 ---code|label:Name---
 
-The name for the section is set here.
+The name for the section is set here and available to the template.
 
 ```javascript
 "name": "Section Name"
@@ -54,7 +46,7 @@ The name for the section is set here.
 
 ---code|label:Data---
 
-Any custom data that you may need for a section can be stored in the data key.
+Any custom data that you may need for a section can be stored in the data object.
 
 ```javascript
 "data": {
@@ -64,7 +56,7 @@ Any custom data that you may need for a section can be stored in the data key.
 
 ---code|label:Template---
 
-This is where you specify a section's template. The html extension isn't needed.
+This is where you specify a section's template. The html extension is assumed by default.
 
 ```javascript
 "template": "index"
@@ -72,7 +64,7 @@ This is where you specify a section's template. The html extension isn't needed.
 
 ---code|label:Target---
 
-This specifies the file to which the content will be added.
+This specifies the file to which the content will be written to.
 
 ```javascript
 "target": "public_html/index.html"
@@ -80,10 +72,11 @@ This specifies the file to which the content will be added.
 
 ---code|label:Content---
 
-The files listed here contain the content that will be added to the target file
-specified above. Files are compiled in the order that they are listed. Wildcards
-can be used as necessary.
+The files listed here contain the content that will be made available to the defined template. Files are compiled in the order that they are listed. A string or an array can be provided and all standard globbing patterns are supported.
 
 ```javascript
-"content": "content/*.md"
+"content": [
+	"content/intro.md",
+	"content/*.md"
+]
 ```

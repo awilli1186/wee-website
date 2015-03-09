@@ -1,9 +1,8 @@
 ---
 name: Configuration
-heading: Site generator configuration
+heading: Site generator settings and preferences
+global:
+  seoTitle: Static Generator Configuration
 ---
 
-The site file tells Grunt about your site. What is the path for the templates?
-Should the rendered output be minified? What sections are included?
-
-Let’s walk through the available settings.
+The site generator is setup through a simple JSON-based configuration file to define the project structure and output.

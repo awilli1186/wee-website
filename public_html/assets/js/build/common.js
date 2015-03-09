@@ -2,19 +2,33 @@
 
 Wee.fn.make('common', {
 	init: function() {
-		// Sidebar scrolling
-		this.$private('initScrolling');
-
-		// Active subnav highlighting
-		this.$private('initHighlight');
-
 		// Insert GitHub links to blocks
 		this.$private('matchBlocks');
 
-		// Mobile navigation
-		$('ref:mobileNav').on('click', function() {
-			$('ref:primary').toggleClass('primary--slide');
-		});
+		Wee.screen.map([
+			{
+				max: 2,
+				once: true,
+				callback: function() {
+					// Mobile navigation
+					$('ref:mobileNav').on('click', function() {
+						$('ref:inner').toggleClass('is-active');
+					});
+				}
+			},
+			{
+				min: 3,
+				once: true,
+				scope: this,
+				callback: function() {
+					// Sidebar scrolling
+					this.$private('initScrolling');
+
+					// Activate subnav highlighting
+					this.$private('initHighlight');
+				}
+			}
+		]);
 	}
 }, {
 	_construct: function() {

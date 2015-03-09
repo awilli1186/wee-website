@@ -75,7 +75,7 @@
 					},
 					"template": "entry",
 					"target": [
-						"public_html/blog/{{name|slug}}.html"
+						"public_html/blog/{{sourceName|slug}}.html"
 					],
 					"content": "content/blog/*.md"
 				}
@@ -178,20 +178,20 @@
 					"target": "public_html/generator/config.html",
 					"content": [
 						"content/generator/config/intro.md",
-						"content/generator/config/name-description.md",
+						"content/generator/config/general.md",
 						"content/generator/config/config.md",
 						"content/generator/config/env.md",
 						"content/generator/config/data.md",
 						"content/generator/config/*.md"
 					]
 				},
-				"variables": {
-					"name": "Variables",
+				"usage": {
+					"name": "Usage",
 					"template": "docs",
-					"target": "public_html/generator/variables.html",
+					"target": "public_html/generator/usage.html",
 					"content": [
-						"content/generator/variables/intro.md",
-						"content/generator/variables/*.md"
+						"content/generator/usage/intro.md",
+						"content/generator/usage/*.md"
 					]
 				}
 			}
