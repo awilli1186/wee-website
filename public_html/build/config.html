@@ -98,14 +98,14 @@ ga('send', 'pageview');</script></head><body class="subpage section"><div class=
     &quot;jshint&quot;: &quot;.jshintrc&quot;
 }
 </code></pre></div><h3 class="doc__code__label">Source Maps</h3><div class="doc__code"><p>Source maps allow supporting browsers to map compiled and minified code to original source scripts. This is useful for debugging and locating errors.</p><pre><code class="language-javascript">&quot;sourceMaps&quot;: true
-</code></pre></div></div><div class="doc"><h2 class="doc__title">Generator <a href="#generator" id="generator" class="doc__anchor">#</a></h2><div class="doc__content"><p>Lorem ipsum dolor.</p><pre><code class="language-javascript">&quot;generator&quot;: {
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Generator <a href="#generator" id="generator" class="doc__anchor">#</a></h2><div class="doc__content"><p>You can disable all generator integration by setting enable to false. Add as many static generator config paths to the build array as needed.</p><pre><code class="language-javascript">&quot;generator&quot;: {
     &quot;enable&quot;: true,
     &quot;build&quot;: [
         &quot;public/assets/guide/config.json&quot;
     ]
 }
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Server <a href="#server" id="server" class="doc__anchor">#</a></h2><div class="doc__content"><p>When Wee is running and serving your site through the proxy, you can chose to have it mirror actions between connected browsers. That means if you have a browser open to your proxy URL on perhaps a mobile device on the same network, and your local development device, when you scroll or click or take an action on one browser, it will be replicated on the other.</p><pre><code class="language-javascript">&quot;ghostMode&quot;: true
-</code></pre></div><h3 class="doc__code__label">Host</h3><div class="doc__code"><p>Lorem ipsum dolor.</p><pre><code class="language-javascript">&quot;host&quot;: &quot;auto&quot;
+</code></pre></div><h3 class="doc__code__label">Host</h3><div class="doc__code"><p>If you need to override the host do it here. By default your current public IP will be used.</p><pre><code class="language-javascript">&quot;host&quot;: &quot;auto&quot;
 </code></pre></div><h3 class="doc__code__label">Port</h3><div class="doc__code"><p>If for some reason you are having a port conflict, you can change the port here.</p><pre><code class="language-javascript">&quot;port&quot;: 3000
 </code></pre></div><h3 class="doc__code__label">Reload</h3><div class="doc__code"><p>This allows you, of course, to enable or disable reloading whenever CSS, JS, or static files change, but it also allows you to specify only certain paths and extensions to watch.</p><pre><code class="language-javascript">&quot;reload&quot;: {
     &quot;enable&quot;: true,

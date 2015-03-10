@@ -10,7 +10,7 @@ When Wee is running and serving your site through the proxy, you can chose to ha
 
 ---code|label:Host---
 
-Lorem ipsum dolor.
+If you need to override the host do it here. By default your current public IP will be used.
 
 ```javascript
 "host": "auto"
