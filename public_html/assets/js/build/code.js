@@ -1,5 +1,3 @@
-/* global Prism */
-
 Wee.fn.make('code', {
 	init: function() {
 		// Bind code toggle and selection

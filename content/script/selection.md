@@ -30,17 +30,21 @@ $('ref:element');
 
 ---doc---
 
-If multiple refs are set with the same name they are pushed into an array an can be targeted with a single ref selection.
+If multiple refs are set with the same name they are pushed into an array an can be targeted with a single ref selection. You can also set multiple ref values separated with spaces.
 
 ---code|modifier:split---
 
 ```javascript
 <div data-ref="element"></div>
-<div data-ref="element"></div>
+<div data-ref="element element2"></div>
 ```
 
 ```javascript
 $('ref:element').on('click', function() {
+	// Method logic
+});
+
+$('ref:element2').on('click', function() {
 	// Method logic
 });
 ```

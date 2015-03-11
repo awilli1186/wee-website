@@ -30,9 +30,13 @@ $('.class1, .class2');
 $('.parent &gt; .child');
 </code></pre></div><h3 class="doc__doc__label">References</h3><div class="doc__doc"><p>References are a distinctive approach to referencing DOM elements from your script. They bring added benefit of being cached when the page loads so they offer superior performance to standard selectors. Refs are more distinct than <code>js-</code> classes. Anywhere in Wee where you can pass a standard selector you can also pass a <code>'ref:name'</code> string.</p></div><div class="doc__code doc__code--split"><pre><code class="language-javascript">&lt;div data-ref=&quot;element&quot;&gt;&lt;/div&gt;
 </code></pre><pre><code class="language-javascript">$('ref:element');
-</code></pre></div><div class="doc__doc"><p>If multiple refs are set with the same name they are pushed into an array an can be targeted with a single ref selection.</p></div><div class="doc__code doc__code--split"><pre><code class="language-javascript">&lt;div data-ref=&quot;element&quot;&gt;&lt;/div&gt;
-&lt;div data-ref=&quot;element&quot;&gt;&lt;/div&gt;
+</code></pre></div><div class="doc__doc"><p>If multiple refs are set with the same name they are pushed into an array an can be targeted with a single ref selection. You can also set multiple ref values separated with spaces.</p></div><div class="doc__code doc__code--split"><pre><code class="language-javascript">&lt;div data-ref=&quot;element&quot;&gt;&lt;/div&gt;
+&lt;div data-ref=&quot;element element2&quot;&gt;&lt;/div&gt;
 </code></pre><pre><code class="language-javascript">$('ref:element').on('click', function() {
+    // Method logic
+});
+
+$('ref:element2').on('click', function() {
     // Method logic
 });
 </code></pre></div><div class="doc__note"><p><strong>Note:</strong> If you add elements to the page dynamically you can call the Wee.$setRef() method.</p></div></div></main><footer role="contentinfo" class="footer"><small class="footer__license"><a href="/">Wee Powered</a> &ndash; licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a></small><ul class="footer__links"><li><a href="https://github.com/weepower/wee">GitHub</a></li><li><a href="https://github.com/weepower/wee/issues">Issues</a></li><li><a href="https://github.com/weepower/wee/releases">Releases</a></li><li><a href="https://twitter.com/weecss">Twitter</a></li><li><a href="/blog">Blog</a></li></ul></footer></div></div></div><script src="https://cdn.weepower.com/assets/js/script.min.js"></script></body></html>

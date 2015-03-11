@@ -3,13 +3,13 @@ name: $setRef
 heading: Add ref elements to datastore
 ---
 
+Available data-ref values are pushed into the global storage for later retrieval. This method can be called after dynamic content is injected to ensure new refs are available for selection.
+
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | context | [selection](/script#selection) | document | Context selection ||
-
-Available data-ref values are pushed into the global storage for later retrieval. This method can be called after dynamic content is injected to ensure new refs are available for selection.
 
 ---code|modifier:stacked---
 
