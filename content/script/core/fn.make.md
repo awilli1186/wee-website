@@ -3,8 +3,6 @@ name: fn.make
 heading: Create namespaced controller
 ---
 
----description---
-
 Controllers serve as the wrapper for all custom script. They can be created per page, section, or for specific reusable components. If placed in your build directory you easily create a well-organized, extensible structure.
 
 ---variables---
