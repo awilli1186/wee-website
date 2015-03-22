@@ -148,6 +148,7 @@ div:before {
 | -- | -- | -- | -- | -- |
 | @diameter | unit | -- | Diameter | ✓ |
 | @crop | boolean | false | Crop ||
+| @display | block, inline | block | Display value ||
 
 ---code|modifier:split---
 
