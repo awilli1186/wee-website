@@ -1,7 +1,7 @@
-/* global config, global, path, project */
+/* global config, global, path, module, project, require */
 
 // -------------------------------------
-// Load Dependencies
+	// Load Dependencies
 // -------------------------------------
 
 var LessCssClean = require('less-plugin-clean-css');
@@ -16,7 +16,9 @@ global.JSCS = require('jscs');
 Wee.fn.extend({
 	// Build root or relative path
 	buildPath: function(path, file) {
-		return file.substring(0, 2) == './' ? file : global.path.join(path, file);
+		return file.substring(0, 2) == './' ?
+			file :
+			global.path.join(path, file);
 	},
 	// Append minified extension
 	getMinifiedExtension: function(dest, src, ext) {
@@ -40,7 +42,7 @@ Wee.fn.extend({
 					// JSHint
 					var jshintConfig = grunt.file.readJSON(
 						project.script.validate.jshint === true ?
-							config.assetPath + '/wee/script/.jshintrc' :
+							config.paths.assets + '/wee/script/.jshintrc' :
 							project.script.validate.jshint
 					);
 
@@ -72,7 +74,7 @@ Wee.fn.extend({
 					// JSCS
 					var jscsConfig = grunt.file.readJSON(
 							project.script.validate.jscs === true ?
-							config.assetPath + '/wee/script/.jscs.json' :
+							config.paths.assets + '/wee/script/.jscs.json' :
 							project.script.validate.jscs
 						),
 						checker = new JSCS();
@@ -107,7 +109,7 @@ Wee.fn.extend({
 	},
 	notify: function(data, type) {
 		var notifier = require('node-notifier'),
-			iconPath = config.assetPath + '/wee/build/img/';
+			iconPath = config.paths.assets + '/wee/build/img/';
 		type = type || 'notice';
 
 		if (type == 'error') {
@@ -123,20 +125,18 @@ Wee.fn.extend({
 });
 
 // -------------------------------------
-// Configure Grunt
+	// Configure Grunt
 // -------------------------------------
 
 module.exports = function(grunt) {
 	global.config = {};
-	global.style = {};
-	global.script = {};
 	global.server = {};
-	global.modules = {};
+	global.moduleResponsive = [];
 	global.legacy = {};
 	global.reloadPaths = [];
 	global.legacyBuild = [];
 	global.legacyConvert = [];
-	global.version = '2.1.0';
+	global.version = '2.2.0';
 
 	grunt.initConfig({
 		less: {
@@ -144,7 +144,7 @@ module.exports = function(grunt) {
 				modifyVars: '<%= config.style.vars %>',
 				strictMath: true,
 				paths: [
-					'<%= config.style.rootPath %>'
+					'<%= config.paths.root %>'
 				],
 				plugins: [
 					new LessCssClean()
@@ -153,16 +153,16 @@ module.exports = function(grunt) {
 			core: {
 				files: [
 					{
-						dest: '<%= config.tempPath %>/wee.css',
-						src: '<%= config.tempPath %>/wee.less'
+						dest: '<%= config.paths.temp %>/wee.css',
+						src: '<%= config.paths.temp %>/wee.less'
 					}
 				]
 			},
 			lib: {
 				files: [{
 					expand: true,
-					cwd: '<%= config.style.rootPath %>/lib',
-					dest: '<%= config.style.rootPath %>/lib',
+					cwd: '<%= config.paths.css %>/lib',
+					dest: '<%= config.paths.css %>/lib',
 					src: [
 						'**/*.{css,less}',
 						'!**/*.min.css'
@@ -176,15 +176,15 @@ module.exports = function(grunt) {
 		uglify: {
 			core: {
 				files: [{
-					dest: '<%= config.script.rootPath %>/script.min.js',
+					dest: '<%= config.paths.js %>/script.min.js',
 					src: '<%= config.script.files %>'
 				}]
 			},
 			lib: {
 				files: [{
 					expand: true,
-					cwd: '<%= config.script.rootPath %>/lib',
-					dest: '<%= config.script.rootPath %>/lib',
+					cwd: '<%= config.paths.js %>/lib',
+					dest: '<%= config.paths.js %>/lib',
 					src: [
 						'**/*.js',
 						'!**/*.min.js'
@@ -197,7 +197,7 @@ module.exports = function(grunt) {
 		},
 		concat: {
 			style: {
-				dest: '<%= config.style.rootPath %>/style.min.css',
+				dest: '<%= config.paths.css %>/style.min.css',
 				src: '<%= config.style.concat %>'
 			}
 		},
@@ -221,8 +221,8 @@ module.exports = function(grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: '<%= config.assetPath %>',
-						dest: '<%= config.assetPath %>',
+						cwd: '<%= config.paths.assets %>',
+						dest: '<%= config.paths.assets %>',
 						src: [
 							'**/*.{gif,jpg,png,svg}'
 						]
@@ -236,7 +236,7 @@ module.exports = function(grunt) {
 			},
 			images: {
 				files: [
-					'<%= config.assetPath %>/**/*.{gif,jpg,png,svg}'
+					'<%= config.paths.assets %>/**/*.{gif,jpg,png,svg}'
 				],
 				tasks: [
 					'newer:imagemin',
@@ -252,8 +252,8 @@ module.exports = function(grunt) {
 			},
 			scriptLib: {
 				files: [
-					'<%= config.script.rootPath %>/lib/**/*.js',
-					'!<%= config.script.rootPath %>/lib/**/*.min.js'
+					'<%= config.paths.js %>/lib/**/*.js',
+					'!<%= config.paths.js %>/lib/**/*.min.js'
 				],
 				tasks: [
 					'uglify:lib',
@@ -262,8 +262,9 @@ module.exports = function(grunt) {
 			},
 			styleCore: {
 				files: [
-					'<%= config.assetPath %>/wee/style/**/*.less',
-					'<%= config.style.rootPath %>/custom/**/*.less'
+					'<%= config.paths.assets %>/wee/style/**/*.less',
+					'<%= config.paths.css %>/custom/**/*.less',
+					'!<%= config.paths.temp %>wee.legacy.less'
 				],
 				tasks: [
 					'less:core',
@@ -272,8 +273,8 @@ module.exports = function(grunt) {
 			},
 			styleLib: {
 				files: [
-					'<%= config.style.rootPath %>/lib/**/*.{css,less}',
-					'!<%= config.style.rootPath %>/lib/**/*.min.css'
+					'<%= config.paths.css %>/lib/**/*.{css,less}',
+					'!<%= config.paths.css %>/lib/**/*.min.css'
 				],
 				tasks: [
 					'less:lib',
@@ -282,7 +283,7 @@ module.exports = function(grunt) {
 			},
 			styleBuild: {
 				files: [
-					'<%= config.style.rootPath %>/build/**/*.{css,less}'
+					'<%= config.paths.css %>/build/**/*.{css,less}'
 				],
 				tasks: [
 					'buildStyle',
@@ -297,7 +298,7 @@ module.exports = function(grunt) {
 			},
 			styleBuildUpdate: {
 				files: [
-					'<%= config.style.rootPath %>/build/**/*.{css,less}'
+					'<%= config.paths.css %>/build/**/*.{css,less}'
 				],
 				tasks: [
 					'less:core',
@@ -312,7 +313,7 @@ module.exports = function(grunt) {
 			},
 			styleConcat: {
 				files: [
-					'<%= config.tempPath %>/**/*.css'
+					'<%= config.paths.temp %>/**/*.css'
 				],
 				tasks: [
 					'concat:style',
@@ -321,8 +322,8 @@ module.exports = function(grunt) {
 			},
 			project: {
 				files: [
-					'<%= config.configPath %>',
-					'<%= config.modules.rootPath %>/*/module.json'
+					'<%= config.path %>',
+					'<%= config.paths.modules %>/*/module.json'
 				],
 				tasks: [
 					'default',
@@ -334,15 +335,15 @@ module.exports = function(grunt) {
 
 	// Watch for changes to validate
 	if (project.script.validate.watch) {
-		grunt.event.on('watch', function(action, filepath) {
+		grunt.event.on('watch', function(action, file) {
 			if (action !== 'deleted') {
-				Wee.validate(config, grunt, filepath);
+				Wee.validate(config, grunt, file);
 			}
 		});
 	}
 
 	// -------------------------------------
-	// Load Plugins
+		// Load Plugins
 	// -------------------------------------
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
@@ -353,7 +354,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-newer');
 
 	// -----------------------------------
-	// Grunt Tasks
+		// Grunt Tasks
 	// -----------------------------------
 
 	grunt.registerTask('default', [
@@ -361,10 +362,9 @@ module.exports = function(grunt) {
 		'cleanup',
 		'configStyle',
 		'configScript',
-		'configModules',
 		'configGenerator',
-		'bindConfig',
 		'buildStyle',
+		'configModules',
 		'buildLegacy',
 		'uglify:core',
 		'uglify:lib',
@@ -375,6 +375,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('local', [
 		'default',
 		'proxy',
+		'checkUpdates',
 		'sync',
 		'watch'
 	]);
@@ -383,6 +384,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('static', [
 		'default',
 		'server',
+		'checkUpdates',
 		'sync',
 		'watch'
 	]);

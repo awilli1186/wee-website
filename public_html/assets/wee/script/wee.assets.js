@@ -4,11 +4,12 @@
 	W.fn.make('assets', {
 		// Cache pre-existing CSS and JavaScript asset references
 		_construct: function() {
-			var scope = this;
 			this.loaded = {};
 
 			W.$each('link[rel="stylesheet"], script[src]', function(el) {
-				scope.loaded[el.href || el.src] = el;
+				this.loaded[el.src || el.href] = el;
+			}, {
+				scope: this
 			});
 		},
 		// Get currently bound resource root or set root with specified value
@@ -30,6 +31,7 @@
 				img = W.$toArray(conf.img),
 				root = conf.root !== U ? conf.root : this.root(),
 				now = new Date().getTime(),
+				absolute = /^(https?:)?\/\//i,
 				i = 0,
 				assets = [],
 				type;
@@ -70,6 +72,11 @@
 
 			// Request each specified file
 			for (var file in assets) {
+				// Reset root if the URL is absolute
+				if (root && absolute.test(file)) {
+					root = '';
+				}
+
 				type = assets[file];
 				file = root + file;
 
@@ -108,7 +115,13 @@
 		},
 		// When specified references are ready execute callback
 		ready: function(group, options, poll) {
-			if (this.$get(group) === 0) {
+			var complete = this.$get(group) === 0;
+
+			if (options === U) {
+				return complete;
+			}
+
+			if (complete) {
 				var conf = W.$extend(this.$get(group + 'conf'), options);
 				options = {
 					args: conf.args,
@@ -136,11 +149,13 @@
 
 			// Load file based on extension
 			if (type == 'js') {
-				var js = W._doc.createElement('script');
+				var js = W._doc.createElement('script'),
+					fn = function() {
+						pub.loaded[js.src] = js;
+						scope.done(group);
+					};
 
-				head.appendChild(js);
-
-				if (Wee._legacy) {
+				if (W._legacy) {
 					js.onreadystatechange = function() {
 						var rs = js.readyState;
 
@@ -148,16 +163,12 @@
 							return;
 						}
 
-						pub.loaded[js.src] = js;
-						scope.done(group);
+						fn();
 					};
 				} else {
 					js.async = conf.async === true;
 
-					js.onload = function() {
-						pub.loaded[js.src] = js;
-						scope.done(group);
-					};
+					js.onload = fn;
 
 					js.onerror = function() {
 						scope.fail(group);
@@ -165,6 +176,7 @@
 				}
 
 				js.src = path;
+				head.appendChild(js);
 			} else if (type == 'css') {
 				var link = W._doc.createElement('link');
 

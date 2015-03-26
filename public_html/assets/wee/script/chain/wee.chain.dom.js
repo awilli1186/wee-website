@@ -1,9 +1,21 @@
+/* global WeeAlias */
+
 (function(W, U) {
 	'use strict';
 
 	var $ = W._win[WeeAlias];
 
 	W.$chain({
+		add: function(source) {
+			var orig = [],
+				i = 0;
+
+			for (; i < this.length; i++) {
+				orig.push(this[i]);
+			}
+
+			return $(W.$merge(orig, W.$(source), true));
+		},
 		addClass: function(value) {
 			W.$addClass(this, value);
 			return this;
@@ -19,6 +31,10 @@
 		appendTo: function(target) {
 			W.$append(target, this);
 			return this;
+		},
+		attr: function(key, value) {
+			var resp = W.$attr(this, key, value);
+			return value !== U ? this : resp;
 		},
 		before: function(source, remove) {
 			W.$before(this, source, remove);
@@ -43,15 +59,25 @@
 			var r = W.$css(this, a, b);
 			return b || W.$isObject(a) ? this : r;
 		},
+		data: function(key, value) {
+			var resp = W.$data(this, key, value);
+			return value !== U ? this : resp;
+		},
 		empty: function() {
 			W.$empty(this);
 			return this;
+		},
+		eq: function(index) {
+			return $(W.$eq(this, index));
 		},
 		filter: function(filter) {
 			return $(W.$filter(this, filter));
 		},
 		find: function(filter) {
 			return $(W.$find(this, filter));
+		},
+		first: function() {
+			return this.eq(0);
 		},
 		hasClass: function(value) {
 			return W.$hasClass(this, value);
@@ -91,8 +117,8 @@
 		not: function(filter) {
 			return $(W.$not(this, filter));
 		},
-		offset: function() {
-			return W.$offset(this);
+		offset: function(value) {
+			return W.$offset(this, value);
 		},
 		parent: function() {
 			return $(W.$parent(this));

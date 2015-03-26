@@ -14,8 +14,8 @@ heading: Watch single or set of screen events with specified options
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | callback | function | -- | [Matching callback](/script/#functions) | ✓ |
-| init | boolean | true | Immediately evaluate breakpoint logic | ✓ |
-| watch | boolean | true | Evaluate on screen resize | ✓ |
+| init | boolean | true | Immediately evaluate breakpoint logic ||
+| watch | boolean | true | Evaluate on screen resize ||
 | args | array | -- | Callback arguments ||
 | max | number | -- | Maximum breakpoint value ||
 | min | number | -- | Minimum breakpoint value ||

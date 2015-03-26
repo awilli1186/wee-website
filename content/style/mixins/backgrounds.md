@@ -311,7 +311,7 @@ div {
 ---code|modifier:split---
 
 ```less
-.background-image('bg.png'; 10px; 8px; no-repeat; fixed; 400px);
+.background-image('bg.png'; 10px; 8px; no-repeat; fixed; 40);
 ```
 
 ```css
@@ -319,7 +319,7 @@ background-attachment: fixed;
 background-image: url('../img/bg.png');
 background-position: 10px 8px;
 background-repeat: no-repeat;
-background-size: 400px;
+background-size: 40rem;
 ```
 
 ---variables---

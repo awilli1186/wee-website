@@ -7,8 +7,10 @@ name: Tables
 @tableBordered: true; // apply outer border by default
 @tableStriped: true;  // apply striping by default
 
-@tableBorderedClassModifier: -bordered;
-@tableStripedClassModifier: -striped;
+@tableFontSize: @baseFontSize;
+
+@tableBorderedClassModifier: table-bordered;
+@tableStripedClassModifier: table-striped;
 
 // Table Cells
 

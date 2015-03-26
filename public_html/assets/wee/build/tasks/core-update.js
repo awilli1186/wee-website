@@ -1,4 +1,4 @@
-/* global version */
+/* global module, require, version */
 
 module.exports = function(grunt) {
 	var https = require('https');
@@ -29,6 +29,11 @@ module.exports = function(grunt) {
 						type = 'major update';
 					}
 
+					Wee.notify({
+						title: 'Update Available',
+						message: 'Check the console for details'
+					});
+
 					grunt.log.ok('A new ' + type + ' is available to ' + data.version + ' from ' + version + '.');
 					grunt.log.ok('Read the release notes at https://github.com/weepower/wee/releases before updating.');
 				} else {
@@ -38,7 +43,7 @@ module.exports = function(grunt) {
 				done();
 			});
 		}).on('error', function() {
-			grunt.log.error('Error trying to access repository at https://github.com/weepower/wee.');
+			grunt.log.error('Error trying to access the repository at https://github.com/weepower/wee.');
 			done();
 		});
 	});

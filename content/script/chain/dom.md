@@ -9,6 +9,7 @@ link: /script/dom
 * [$(sel).after(source, remove)](/script/dom#after)
 * [$(sel).append(source)](/script/dom#append)
 * [$(sel).appendTo(target)](/script/dom#appendto)
+* [$(sel).attr(key, value)](/script/core#attr)
 * [$(sel).before(source, remove)](/script/dom#before)
 * [$(sel).children(filter)](/script/dom#children)
 * [$(sel).clone()](/script/dom#clone)
@@ -16,9 +17,12 @@ link: /script/dom
 * [$(sel).contains(descendant)](/script/dom#contains)
 * [$(sel).contents()](/script/dom#contents)
 * [$(sel).css(a, b)](/script/dom#css)
+* [$(sel).data(key, value)](/script/core#data)
 * [$(sel).empty()](/script/dom#empty)
+* [$(sel).eq(index)](/script/core#eq)
 * [$(sel).filter(filter)](/script/dom#filter)
 * [$(sel).find(filter)](/script/dom#find)
+* [$(sel).first()](/script/core#first)
 * [$(sel).hasClass(value)](/script/dom#hasclass)
 * [$(sel).height(value)](/script/dom#height)
 * [$(sel).hide()](/script/dom#hide)
@@ -52,9 +56,17 @@ link: /script/dom
 * [$(sel).val(value)](/script/dom#val)
 * [$(sel).width(value)](/script/dom#width)
 * [$(sel).wrap(html)](/script/dom#wrap)
-* [$(sel).wrapInner(html)](/script/dom#wraptnner)
+* [$(sel).wrapInner(html)](/script/dom#wrapinner)
 
----code---
+---code|label:Add---
+
+You can join selections using the add method.
+
+```javascript
+$('.element').add('ref:selection').hide();
+```
+
+---code|label:Example---
 
 DOM traversal is made easy with chaining.
 

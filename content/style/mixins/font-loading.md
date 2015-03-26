@@ -20,12 +20,19 @@ name: Font Loading
 ```css
 @font-face {
 	font-family: Example;
-	src: url('../fonts/Example.eot');
-	src: url('../fonts/Example.eot?#iefix') format('embedded-opentype'),
-	     url('../fonts/Example.woff') format('woff'),
-		 url('../fonts/Example.ttf') format('truetype'),
-		 url('../fonts/Example.svg#Example') format('svg');
-	font-style: normal;
-	font-weight: normal;
+		src: url('../fonts/Example.eot');
+		src: url('../fonts/Example.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/Example.woff') format('woff'),
+			 url('../fonts/Example.ttf') format('truetype');
+		font-style: normal;
+		font-weight: normal;
+
+	// Window Chrome fix
+	@media screen and (-webkit-min-device-pixel-ratio: 0) {
+		@font-face {
+			font-family: ~'@{name}';
+			src: url('../fonts/Example.svg#Example') format('svg');
+		}
+	}
 }
 ```

@@ -22,6 +22,7 @@ name: Code
 @codeBlockLineHeight: @paragraphLineHeight;
 @codeBlockTabSize: 4;
 @codeBlockWrap: false;
+@codeBlockMarginBottom: @blockMarginBottom;
 
 @codeBlockBackground: @darkestGray;
 

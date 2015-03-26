@@ -47,6 +47,10 @@ Wee.assets.load({
 });
 ```
 
+---note---
+
+**Note:** If an absolute url beginning with //, http://, or https:// is requested it will bypass the root if set.
+
 ---code|label:Group---
 
 By providing a group name you can optionally check against the group later for completion.

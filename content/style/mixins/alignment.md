@@ -92,6 +92,22 @@ text-align: justify;
 vertical-align: middle;
 ```
 
+---variables|label:Vertical Align---
+
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @value | value | -- | Alignment value | ✓ |
+
+---code|modifier:split---
+
+```less
+.vertical-align(text-top);
+```
+
+```less
+vertical-align: text-top;
+```
+
 ---variables|label:Display---
 
 | Variable | Type | Default | Description | Required |

@@ -76,6 +76,31 @@
 				}
 			});
 		},
+		// Get attribute of first matching selection or set attribute of each matching selection
+		// Returns string|undefined
+		$attr: function(target, a, b) {
+			var obj = W.$isObject(a);
+
+			if (b !== U || obj) {
+				var func = ! obj && W._canExec(b);
+
+				W.$each(target, function(el, i) {
+					obj ?
+						Object.keys(a).forEach(function(key) {
+							el.setAttribute(key, a[key]);
+						}) :
+						el.setAttribute(a, func ?
+								W.$exec(b, {
+									args: [i, el[a]],
+									scope: el
+								}) :
+								b
+						);
+				});
+			} else {
+				return W.$first(target).getAttribute(a);
+			}
+		},
 		// Insert selection or markup before each matching selection
 		$before: function(target, source, remove) {
 			var func = W._canExec(source);
@@ -208,6 +233,36 @@
 					getComputedStyle(el, null)[a];
 			}
 		},
+		// Get data of first matching selection or set data of each matching selection
+		// Returns string|undefined
+		$data: function(target, a, b) {
+			if (a === U) {
+				var el = W.$first(target),
+					arr = {};
+
+				W._slice.call(el.attributes).forEach(function(attr) {
+					if (attr.name.substr(0, 5) == 'data-') {
+						arr[attr.name.substring(5)] = attr.value;
+					}
+				});
+
+				return arr;
+			}
+
+			if (W.$isObject(a)) {
+				var obj = {};
+
+				Object.keys(a).forEach(function(key) {
+					obj['data-' + key] = a[key];
+				});
+
+				a = obj;
+			} else {
+				a = 'data-' + a;
+			}
+
+			return W.$attr(target, a, b);
+		},
 		// Remove child nodes from each matching selection
 		$empty: function(target) {
 			W.$each(target, function(el) {
@@ -215,6 +270,12 @@
 					el.removeChild(el.firstChild);
 				}
 			});
+		},
+		// Get indexed node of matching selection
+		// Returns element
+		$eq: function(target, index, context) {
+			var el = W.$(target, context);
+			return el[index < 0 ? el.length + index : index];
 		},
 		// Return a filtered subset of elements from a matching selection
 		// Returns element array
@@ -242,6 +303,11 @@
 			});
 
 			return W.$unique(arr);
+		},
+		// Get the first element of a matching selection
+		// Returns element
+		$first: function(target, context) {
+			return W.$eq(target, 0, context);
 		},
 		// Determine if the matching selection has a class
 		// Returns boolean
@@ -424,14 +490,38 @@
 		},
 		// Get the offset position of a matching selection relative to the document
 		// Returns object
-		$offset: function(target) {
-			var rect = W.$first(target).getBoundingClientRect(),
-				el = W._legacy ? W._html : W._win;
+		$offset: function(target, value) {
+			var top = W._legacy ? W._html : W._win,
+				rect = W.$first(target).getBoundingClientRect(),
+				offset = {
+					top: rect.top + (W._legacy ? top.scrollTop : top.pageYOffset),
+					left: rect.left + (W._legacy ? top.scrollLeft : top.pageXOffset)
+				};
 
-			return {
-				top: rect.top + (W._legacy ? el.scrollTop : el.pageYOffset),
-				left: rect.left + (W._legacy ? el.scrollLeft : el.pageXOffset)
-			};
+			if (value) {
+				var func = W._canExec(value);
+
+				W.$each(target, function(el, i) {
+					var set = func ?
+						W.$exec(value, {
+							args: [i, offset],
+							scope: el
+						}) :
+						value;
+
+					if (typeof set.top == 'number') {
+						set.top = set.top + 'px';
+					}
+
+					if (typeof set.left == 'number') {
+						set.left = set.left + 'px';
+					}
+
+					W.$css(el, set);
+				});
+			} else {
+				return offset;
+			}
 		},
 		// Get unique parent from each matching selection
 		// Returns element array

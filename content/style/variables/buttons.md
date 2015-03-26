@@ -31,7 +31,7 @@ name: Buttons
 
 // Colored Buttons
 
-@coloredButtonClassModifier: -colored;
+@coloredButtonClassModifier: button-colored;
 
 @coloredButtonColor: @white; // font color
 
@@ -39,17 +39,17 @@ name: Buttons
 @coloredButtonBackgroundHover: darken(@coloredButtonBackground, 5%);
 @coloredButtonBackgroundActive: darken(@coloredButtonBackground, 10%);
 
-@coloredButtonBorderColor: darken(@coloredButtonBackground, 5%);
+@coloredButtonBorderColor: false;
 
 // Disabled Buttons
 
-@disabledButtonClassModifier: -disabled;
+@disabledButtonClassModifier: button-disabled;
 
 @disabledButtonColor: @darkGray;
 
 @disabledButtonBackground: @lightGray;
 
-@disabledButtonBorderColor: darken(@disabledButtonBackground, 5%);
+@disabledButtonBorderColor: false;
 
 @disabledButtonCursor: not-allowed;
 ```
