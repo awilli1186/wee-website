@@ -57,7 +57,6 @@ An object with the direction, size, previous size, and init status is passed as 
 Wee.screen.map([
 	{
 		size: 1,
-		init: true,
 		callback: [
 			'common:mobile',
 			'common:smallScreen'
@@ -66,13 +65,11 @@ Wee.screen.map([
 	{
 		min: 3,
 		max: 4,
-		init: true,
 		watch: false,
 		callback: 'common:mediumScreen'
 	},
 	{
 		min: 5,
-		init: true,
 		args: ['passThrough'],
 		callback: function(obj, val) {
 			console.log(val); // passThrough
