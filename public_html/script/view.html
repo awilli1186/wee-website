@@ -1,10 +1,10 @@
-<!doctype html><html lang="en" id="global" itemscope itemtype="http://schema.org/WebPage"><head><title>View | Wee</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://cdn.weepower.com/assets/css/style.min.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400"><link rel="apple-touch-icon" href="/touchicon.png"><link rel="publisher" href="https://plus.google.com/+weecss"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@weecss"><meta property="og:site_name" content="Wee"><meta property="og:title" content="View" itemprop="name"><meta property="og:url" content="https:/www.weepower.com/script/view.html" itemprop="url"><meta property="og:image" content="https://cdn.weepower.com/share.png" itemprop="image"><!--[if lt IE 9]><link rel="stylesheet" href="https://cdn.weepower.com/assets/css/ie8.min.css">
-<script src="https://cdn.weepower.com/assets/js/ie8.min.js"></script><![endif]--><!--[if lte IE 9]><link rel="stylesheet" href="https://cdn.weepower.com/assets/css/ie9.min.css">
+<!doctype html><html lang="en" id="global" itemscope itemtype="http://schema.org/WebPage"><head><title>View | Wee</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://cdn.weepower.com/assets/css/style.min.css?v2"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400"><link rel="apple-touch-icon" href="/touchicon.png"><link rel="publisher" href="https://plus.google.com/+weecss"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@weecss"><meta property="og:site_name" content="Wee"><meta property="og:title" content="View" itemprop="name"><meta property="og:url" content="https:/www.weepower.com/script/view.html" itemprop="url"><meta property="og:image" content="https://cdn.weepower.com/share.png" itemprop="image"><!--[if lt IE 9]><link rel="stylesheet" href="https://cdn.weepower.com/assets/css/ie8.min.css?v2">
+<script src="https://cdn.weepower.com/assets/js/ie8.min.js"></script><![endif]--><!--[if lte IE 9]><link rel="stylesheet" href="https://cdn.weepower.com/assets/css/ie9.min.css?v2">
 <script src="https://cdn.weepower.com/assets/js/ie9.min.js"></script><![endif]--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-40595891-1', 'auto');
-ga('send', 'pageview');</script></head><body class="subpage section"><div class="canvas-outer"><div class="canvas-inner" data-ref="inner"><header role="banner" class="scrollable sidebar" data-ref="scroll"><div class="viewport"><div class="overview js-overview"><a href="/" rel="home" class="logo"><img src="https://cdn.weepower.com/assets/img/wee.svg" alt="Wee Framework"></a><h3><a href="/start">Start</a></h3><ul><li><a href="/start/structure">Structure</a></li><li><a href="/start/markup">Markup</a></li></ul><h3><a href="/build">Build</a></h3><ul><li><a href="/build/config">Config</a></li><li><a href="/build/validation">Validation</a></li></ul><h3><a href="/generator">Generate</a></h3><ul><li><a href="/generator/config">Config</a></li><li><a href="/generator/usage">Usage</a></li></ul><h3><a href="/style">Style</a></h3><ul><li><a href="/style/variables">Variables</a></li><li><a href="/style/mixins">Mixins</a></li><li><a href="/style/classes">Classes</a></li></ul><h3><a href="/script">Script</a></h3><ul><li><a href="/script/core">Core</a></li><li><a href="/script/chain">Chain</a></li><li><a href="/script/assets">Assets</a></li><li><a href="/script/data">Data</a></li><li><a href="/script/dom">DOM</a></li><li><a href="/script/events">Events</a></li><li><a href="/script/routes">Routes</a></li><li><a href="/script/screen">Screen</a></li><li><a href="/script/view" class="is-active">View</a></li><li><a href="/script/polyfills">Polyfills</a></li></ul></div></div></header><div class="scrollable subnav" data-ref="scroll subnav"><div class="viewport"><div class="overview js-overview"><h3>Contents</h3><ul><li><a href="#render">Render</a></li><li><a href="#filters">Filters</a></li><li><a href="#helpers">Helpers</a></li><li><a href="#partials">Partials</a></li></ul></div></div></div><div class="container primary" data-ref="primary"><div class="mobile-nav" data-ref="mobileNav">&#9776;</div><main class="main" role="main"><div class="intro"><h1 class="intro__title">View <a href="https://github.com/weepower/wee/tree/master/public/assets/wee/script/wee.view.js" class="intro__link">→</a></h1><p class="intro__heading">Powerful template rendering engine for dynamic data</p></div><p>Views provide a powerful way to inject data into complex strings and markup structures. With a powerful API you can extend the default <a href="#filters">filters</a> and <a href="#helpers">helpers</a> for infinite possibilities.</p><div class="doc"><h2 class="doc__title">Render <a href="#render" id="render" class="doc__anchor">#</a></h2><p class="doc__heading">Parse data into template string</p><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>template</td><td>string</td><td>–</td><td>Template string</td><td>✓</td></tr><tr><td>data</td><td>object</td><td>–</td><td>Data object</td><td>✓</td></tr></tbody></table></div><h3 class="doc__code__label">Simple</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is {{firstName}} {{lastName}}',
+ga('send', 'pageview');</script></head><body class="subpage section"><div class="canvas-outer"><div class="canvas-inner" data-ref="inner"><header role="banner" class="scrollable sidebar" data-ref="scroll"><div class="viewport"><div class="overview js-overview"><a href="/" rel="home" class="logo"><img src="https://cdn.weepower.com/assets/img/wee.svg" alt="Wee Framework"></a><h3><a href="/start">Start</a></h3><ul><li><a href="/start/structure">Structure</a></li><li><a href="/start/markup">Markup</a></li></ul><h3><a href="/build">Build</a></h3><ul><li><a href="/build/config">Config</a></li><li><a href="/build/validation">Validation</a></li></ul><h3><a href="/generator">Generate</a></h3><ul><li><a href="/generator/config">Config</a></li><li><a href="/generator/usage">Usage</a></li></ul><h3><a href="/style">Style</a></h3><ul><li><a href="/style/variables">Variables</a></li><li><a href="/style/mixins">Mixins</a></li><li><a href="/style/classes">Classes</a></li><li><a href="/style/styling">Styling</a></li></ul><h3><a href="/script">Script</a></h3><ul><li><a href="/script/core">Core</a></li><li><a href="/script/chain">Chain</a></li><li><a href="/script/assets">Assets</a></li><li><a href="/script/data">Data</a></li><li><a href="/script/dom">DOM</a></li><li><a href="/script/events">Events</a></li><li><a href="/script/routes">Routes</a></li><li><a href="/script/screen">Screen</a></li><li><a href="/script/view" class="is-active">View</a></li><li><a href="/script/polyfills">Polyfills</a></li></ul></div></div></header><div class="scrollable subnav" data-ref="scroll subnav"><div class="viewport"><div class="overview js-overview"><h3>Contents</h3><ul><li><a href="#render">Render</a></li><li><a href="#filters">Filters</a></li><li><a href="#helpers">Helpers</a></li><li><a href="#partials">Partials</a></li></ul></div></div></div><div class="container primary" data-ref="primary"><div class="mobile-nav" data-ref="mobileNav">&#9776;</div><main class="main" role="main"><div class="intro"><h1 class="intro__title">View <a href="https://github.com/weepower/wee/tree/master/public/assets/wee/script/wee.view.js" class="intro__link">→</a></h1><p class="intro__heading">Powerful template rendering engine for dynamic data</p></div><p>Views provide a powerful way to inject data into complex strings and markup structures. With a powerful API you can extend the default <a href="#filters">filters</a> and <a href="#helpers">helpers</a> for infinite possibilities.</p><div class="doc"><h2 class="doc__title">Render <a href="#render" id="render" class="doc__anchor">#</a></h2><p class="doc__heading">Parse data into template string</p><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>template</td><td>string</td><td>–</td><td>Template string</td><td>✓</td></tr><tr><td>data</td><td>object</td><td>–</td><td>Data object</td><td>✓</td></tr></tbody></table></div><h3 class="doc__label doc__code__label">Simple</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is {{firstName}} {{lastName}}',
     data = {
         firstName: 'John',
         lastName: 'Smith'
@@ -12,14 +12,14 @@ ga('send', 'pageview');</script></head><body class="subpage section"><div class=
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;My name is John Smith&quot;
-</code></pre></div><h3 class="doc__code__label">Fallback Values</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is {{firstName}} {{lastName||Doe}}',
+</code></pre></div><h3 class="doc__label doc__code__label">Fallback Values</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is {{firstName}} {{lastName||Doe}}',
     data = {
         firstName: 'John'
     };
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;My name is John Doe&quot;
-</code></pre></div><h3 class="doc__code__label">Changing Context</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{#child}}{{#child}}{{name}}\'s dad is {{../name}} and his grandad is {{$root.name}}.{{/child}}{{/child}}',
+</code></pre></div><h3 class="doc__label doc__code__label">Changing Context</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{#child}}{{#child}}{{name}}\'s dad is {{../name}} and his grandad is {{$root.name}}.{{/child}}{{/child}}',
     data = {
         name: 'John',
         child: {
@@ -32,7 +32,7 @@ Wee.view.render(template, data);
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">Charlie's dad is Jimmy and his grandad is John.
-</code></pre></div><h3 class="doc__code__label">Functions</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}',
+</code></pre></div><h3 class="doc__label doc__code__label">Functions</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}',
     data = {
         firstName: 'John',
         lastName: 'Smith'
@@ -40,7 +40,7 @@ Wee.view.render(template, data);
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;My name is John Smith&quot;
-</code></pre></div><h3 class="doc__code__label">Loop Variables</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{#names}}{{#}} | {{##}} | {{.}} | {{$key}}&lt;br&gt;{{/names}}',
+</code></pre></div><h3 class="doc__label doc__code__label">Loop Variables</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{#names}}{{#}} | {{##}} | {{.}} | {{$key}}&lt;br&gt;{{/names}}',
     data = {
         names: {
             'John': 45,
@@ -55,7 +55,7 @@ Wee.view.render(template, data);
 1 | 2 | 42 | Jane&lt;br&gt;
 2 | 3 | 18 | Jimmy&lt;br&gt;
 3 | 4 | 15 | Jenny&lt;br&gt;
-</code></pre></div><h3 class="doc__code__label">Functions</h3><div class="doc__code doc__code--string doc__code--stacked"><p>Functions can also be set in the data object. See the example below.</p><pre><code class="language-javascript">var data = {
+</code></pre></div><h3 class="doc__label doc__code__label">Functions</h3><div class="doc__code doc__code--string doc__code--stacked"><p>Functions can also be set in the data object. See the example below.</p><pre><code class="language-javascript">var data = {
     firstName: 'John',
     lastName: 'Doe',
     pets: true,
@@ -95,7 +95,7 @@ Wee.view.render(template, data);
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;My name is John Doe. I have had 4 pets. My dogs names are Molly, Ginger and Keith. I have a sister Jessica.&quot;
-</code></pre></div><h3 class="doc__code__label">Advanced</h3><div class="doc__code doc__code--string doc__code--stacked"><p>The render method does more than simple variable output. It can traverse as deep into the provided object as you need for multi-level output.</p><pre><code class="language-javascript">var template = '&lt;p&gt;My Name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}&lt;/p&gt;' +
+</code></pre></div><h3 class="doc__label doc__code__label">Advanced</h3><div class="doc__code doc__code--string doc__code--stacked"><p>The render method does more than simple variable output. It can traverse as deep into the provided object as you need for multi-level output.</p><pre><code class="language-javascript">var template = '&lt;p&gt;My Name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}&lt;/p&gt;' +
     '{{#children|notEmpty}}' +
         '&lt;p&gt;My Children are:&lt;/p&gt;' +
         '&lt;ul&gt;{{#children}}' +
@@ -124,7 +124,7 @@ Wee.view.render(template, data);
     &lt;li&gt;Judy - 12&lt;/li&gt;
     &lt;li&gt;James - 9&lt;/li&gt;
 &lt;/ul&gt;
-</code></pre></div></div><div class="doc"><h2 class="doc__title">Filters <a href="#filters" id="filters" class="doc__anchor">#</a></h2><p class="doc__heading">Add conditional template handler or data modifier</p><div class="doc__content"><p>Wee’s default filters include <code>is</code>, <code>not</code>, <code>isEmpty</code>, and <code>notEmpty</code>. Properties of the tag that is being filtered can be accessed via the current scope <code>this</code>. These include <code>val</code>, <code>data</code>, <code>root</code>, <code>tag</code>, <code>inner</code>, and <code>empty</code>.</p></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>name</td><td>string</td><td>–</td><td>Filter name</td><td>✓</td></tr><tr><td>fn</td><td><a href="/script/#functions">function</a></td><td>–</td><td>Filter callback</td><td>✓</td></tr></tbody></table></div><h3 class="doc__code__label">Boolean Response</h3><div class="doc__code"><p>Returning true or false determines if the current tag pair should be parsed or skip to the next evaluation.</p><pre><code class="language-javascript">Wee.view.addFilter('isNumber', function() {
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Filters <a href="#filters" id="filters" class="doc__anchor">#</a></h2><p class="doc__heading">Add conditional template handler or data modifier</p><div class="doc__content"><p>Wee’s default filters include <code>is</code>, <code>not</code>, <code>isEmpty</code>, and <code>notEmpty</code>. Properties of the tag that is being filtered can be accessed via the current scope <code>this</code>. These include <code>val</code>, <code>data</code>, <code>root</code>, <code>tag</code>, <code>inner</code>, and <code>empty</code>.</p></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>name</td><td>string</td><td>–</td><td>Filter name</td><td>✓</td></tr><tr><td>fn</td><td><a href="/script/#functions">function</a></td><td>–</td><td>Filter callback</td><td>✓</td></tr></tbody></table></div><h3 class="doc__label doc__code__label">Boolean Response</h3><div class="doc__code"><p>Returning true or false determines if the current tag pair should be parsed or skip to the next evaluation.</p><pre><code class="language-javascript">Wee.view.addFilter('isNumber', function() {
     return typeof this.val == 'number';
 });
 </code></pre></div><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{#age|isNumber}}I am {{age}} years old.{{/age}}',
@@ -134,7 +134,7 @@ Wee.view.render(template, data);
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;I am 30 years old.&quot;
-</code></pre></div><h3 class="doc__code__label">Data Modification</h3><div class="doc__code"><p>By modifying the value of <code>this.data</code> the remaining template parsing can be manipulated. The following extracts a range of data from a larger set of data.</p><pre><code class="language-javascript">Wee.view.addFilter('range', function(offset, limit) {
+</code></pre></div><h3 class="doc__label doc__code__label">Data Modification</h3><div class="doc__code"><p>By modifying the value of <code>this.data</code> the remaining template parsing can be manipulated. The following extracts a range of data from a larger set of data.</p><pre><code class="language-javascript">Wee.view.addFilter('range', function(offset, limit) {
     this.data[this.tag] = this.val.filter(function(el, i) {
         return i &gt;= offset &amp;&amp; i &lt; limit;
     });
@@ -163,7 +163,7 @@ Wee.view.render(template, data);
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;My name is JOHN.&quot;
-</code></pre></div><h3 class="doc__code__label">Parametric</h3><div class="doc__code"><pre><code class="language-javascript">Wee.view.addHelper('starts', function(num) {
+</code></pre></div><h3 class="doc__label doc__code__label">Parametric</h3><div class="doc__code"><pre><code class="language-javascript">Wee.view.addHelper('starts', function(num) {
     return this.val.substr(0, num || 1);
 });
 </code></pre></div><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{name}} starts with {{name|starts(5)}}.',

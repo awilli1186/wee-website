@@ -2,7 +2,7 @@
 name: Classes
 heading: A handful of time-saving helper classes
 path: /public/assets/wee/style/wee.mixins.less
-data:
+global:
   seoTitle: Classes
 ---
 
