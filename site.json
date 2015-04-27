@@ -236,6 +236,15 @@
 						"content/style/classes/intro.md",
 						"content/style/classes/*.md"
 					]
+				},
+				"styling": {
+					"name": "Styling",
+					"template": "docs",
+					"target": "public_html/style/styling.html",
+					"content": [
+						"content/style/styling/intro.md",
+						"content/style/styling/*.md"
+					]
 				}
 			}
 		},
