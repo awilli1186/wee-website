@@ -27,7 +27,7 @@ Wee.$scrollTop();
 ---code|label:Set Value---
 
 ```javascript
-Wee.$scrollTop(15);
+Wee.$scrollTop('body', 15);
 ```
 
 ---note---
