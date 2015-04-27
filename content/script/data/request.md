@@ -39,6 +39,10 @@ Wee.data.request({
 });
 ```
 
+---note---
+
+**Note:** By default the X-Requested-With header is set to XMLHttpRequest. It can be overridden or removed if set to false.
+
 ---code|label:Get & Render---
 
 Retrieve JSON and immediately [render](/script/view/#render) it into a template. No need to set the json parameter to true, it's assumed. The rendered template is returned as the first callback argument and the third argument represents the raw JSON response. The [view](/script/view) script is required.
@@ -95,6 +99,30 @@ Wee.data.request({
 });
 ```
 
+---code|label:JSONP---
+
+JSONP is a technique for cross-domain requests that would otherwise be blocked because of the same-origin policy. Unless overridden Wee will send `callback` as the query string parameter to communicate to the server how to format the response.
+
+```javascript
+Wee.data.request({
+	url: 'https://example.com/entry/465',
+	jsonp: true,
+	success: function(data) {
+		console.log('Login succeeded');
+	}
+});
+```
+
+The request above will create a script reference in the head with the source set to `https://example.com/entry/465?callback=callback1`. If configured correctly the server will return a JSON object executed like the following.
+
+```javascript
+callback1({
+	id: 465,
+	name: "Lorem Ipsum",
+	active: true
+});
+```
+
 ---note---
 
-**Note:** By default the X-Requested-With header is set to XMLHttpRequest. It can be overriden or removed if set to false.
+**Note:** The `jsonpCallback` parameter can be set to direct the callback to a pre-existing method instead of the generically registered success callback.
