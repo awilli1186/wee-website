@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex, follow">
 {{/seoNoIndex}}
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{site.assetUrl}}/css/style.min.css?v2">
+<link rel="stylesheet" href="{{site.assetUrl}}/css/style.min.css?v{{site.cssVersion}}">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400">
 <link rel="apple-touch-icon" href="/touchicon.png">
 <link rel="publisher" href="https://plus.google.com/{{site.social.googlePageID}}">
@@ -22,12 +22,12 @@
 <meta property="og:url" content="{{url}}" itemprop="url">
 <meta property="og:image" content="{{site.cdnUrl}}{{#shareImage|notEmpty}}{{shareImage}}{{/shareImage}}{{#shareImage|isEmpty}}/share.png{{/shareImage}}" itemprop="image">
 <!--[if lt IE 9]>
-<link rel="stylesheet" href="{{site.assetUrl}}/css/ie8.min.css?v2">
-<script src="{{site.assetUrl}}/js/ie8.min.js"></script>
+<link rel="stylesheet" href="{{site.assetUrl}}/css/ie8.min.css?v{{site.cssLegacyVersion}}">
+<script src="{{site.assetUrl}}/js/ie8.min.js?v{{site.jsLegacyVersion}}"></script>
 <![endif]-->
 <!--[if lte IE 9]>
-<link rel="stylesheet" href="{{site.assetUrl}}/css/ie9.min.css?v2">
-<script src="{{site.assetUrl}}/js/ie9.min.js"></script>
+<link rel="stylesheet" href="{{site.assetUrl}}/css/ie9.min.css?v{{site.cssLegacyVersion}}">
+<script src="{{site.assetUrl}}/js/ie9.min.js?v{{site.jsLegacyVersion}}"></script>
 <![endif]-->
 {{#site.env|is(prod)}}
 {{> tracking}}

@@ -32,7 +32,11 @@
 		"social": {
 			"twitter": "weecss",
 			"googlePageID": "+weecss"
-		}
+		},
+		"cssVersion": 1,
+		"cssLegacyVersion": 1,
+		"jsVersion": 2,
+		"jsLegacyVersion": 1
 	},
 	"sections": {
 		"home": {
@@ -274,6 +278,7 @@
 					"target": "public_html/script/chain.html",
 					"content": [
 						"content/script/chain/intro.md",
+						"content/script/chain/register.md",
 						"content/script/chain/core.md",
 						"content/script/chain/*.md"
 					]

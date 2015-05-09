@@ -69,10 +69,18 @@ Wee.fn.make('common', {
 			i = 0;
 
 		for (; i < this.offsets.length; i++) {
+			var val = false;
+
 			if (this.offsets[i + 1] > min) {
-				if (this.active !== i) {
-					this.$subnavLinks.removeClass('is-active').eq(i).addClass('is-active');
-					this.active = i;
+				val = i;
+			} else if (min > this.offsets[this.offsets.length - 1]) {
+				val = this.offsets.length - 1;
+			}
+
+			if (val !== false) {
+				if (this.active !== val) {
+					this.$subnavLinks.removeClass('is-active').eq(val).addClass('is-active');
+					this.active = val;
 				}
 
 				return;
