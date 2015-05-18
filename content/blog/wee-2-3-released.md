@@ -11,7 +11,7 @@ We've been hard at work to get this final Wee 2.x release published. There are a
 ###### Here are some of the highlights:
 
 * Added the ability to set [global variables](/build/config#general) in project.json to be made available to the Less and JavaScript
-* Added sorting options to the static site generator, can order by modified, created, or a custom YAM* property. The default order is alphabetical and sort is asc.
+* Added sorting options to the static site generator, can order by modified, created, or a custom YAML property. The default order is alphabetical and sort is asc.
 * Added the ability to [inject assets](/build/config#server) through the built-in server in project.json
 * Added the ability to inject remote generator content
 * Added new columns, columns-count, columns-gap, columns-style, and columns-width [mixins](/style/mixins#multiple-columns)
