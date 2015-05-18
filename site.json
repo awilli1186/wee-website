@@ -26,7 +26,7 @@
 		}
 	},
 	"data": {
-		"version": "2.2.2",
+		"version": "2.3.0",
 		"analyticsID": "UA-40595891-1",
 		"gitHubRoot": "https://github.com/weepower/wee/tree/master",
 		"social": {
@@ -70,6 +70,8 @@
 			"target": [
 				"public_html/blog/index.html"
 			],
+			"order": "created",
+			"sort": "desc",
 			"content": "content/blog/*.md",
 			"sections": {
 				"entries": {

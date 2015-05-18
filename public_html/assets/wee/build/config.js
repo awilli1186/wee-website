@@ -1,7 +1,7 @@
-/* global config, global, path, module, project, require */
+/* global config, JSCS, jshint, global, path, module, project, reloadPaths, require */
 
 // -------------------------------------
-	// Load Dependencies
+// Load Dependencies
 // -------------------------------------
 
 var LessCssClean = require('less-plugin-clean-css');
@@ -15,10 +15,10 @@ global.JSCS = require('jscs');
 
 Wee.fn.extend({
 	// Build root or relative path
-	buildPath: function(path, file) {
+	buildPath: function(loc, file) {
 		return file.substring(0, 2) == './' ?
 			file :
-			global.path.join(path, file);
+			path.join(loc, file);
 	},
 	// Append minified extension
 	getMinifiedExtension: function(dest, src, ext) {
@@ -57,7 +57,7 @@ Wee.fn.extend({
 							((total > 1) ? 's' : '') + ' in ' + filepath + '.');
 
 						errors.forEach(function(message) {
-							Wee.logError(grunt, message.line  + ':' + message.character, message.reason, message.evidence);
+							Wee.logError(grunt, message.line + ':' + message.character, message.reason, message.evidence);
 						});
 
 						grunt.log.writeln();
@@ -92,7 +92,7 @@ Wee.fn.extend({
 							((total > 1) ? 's' : '') + ' in ' + filepath + '.');
 
 						errorList.forEach(function(message) {
-							Wee.logError(grunt, message.line  + ':' + message.column, message.rule, message.message);
+							Wee.logError(grunt, message.line + ':' + message.column, message.rule, message.message);
 						});
 
 						this.notify({
@@ -121,11 +121,16 @@ Wee.fn.extend({
 		}
 
 		notifier.notify(data);
+	},
+	serverWatch: function(url) {
+		if (url.substring(0, 4) !== 'http') {
+			reloadPaths.push(path.join(config.paths.root, url));
+		}
 	}
 });
 
 // -------------------------------------
-	// Configure Grunt
+// Configure Grunt
 // -------------------------------------
 
 module.exports = function(grunt) {
@@ -136,7 +141,7 @@ module.exports = function(grunt) {
 	global.reloadPaths = [];
 	global.legacyBuild = [];
 	global.legacyConvert = [];
-	global.version = '2.2.0';
+	global.version = '2.3.0';
 
 	grunt.initConfig({
 		less: {
@@ -174,6 +179,11 @@ module.exports = function(grunt) {
 			}
 		},
 		uglify: {
+			options: {
+				compress: {
+					drop_debugger: false
+				}
+			},
 			core: {
 				files: [{
 					dest: '<%= config.paths.js %>/script.min.js',
@@ -203,17 +213,12 @@ module.exports = function(grunt) {
 		},
 		imagemin: {
 			options: {
-				plugins: [
+				svgoPlugins: [
 					{
 						removeViewBox: false
 					},
 					{
 						convertPathData: false
-					}
-				],
-				svgoPlugins: [
-					{
-						removeViewBox: false
 					}
 				]
 			},
@@ -343,7 +348,7 @@ module.exports = function(grunt) {
 	}
 
 	// -------------------------------------
-		// Load Plugins
+	// Load Plugins
 	// -------------------------------------
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
@@ -354,7 +359,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-newer');
 
 	// -----------------------------------
-		// Grunt Tasks
+	// Grunt Tasks
 	// -----------------------------------
 
 	grunt.registerTask('default', [

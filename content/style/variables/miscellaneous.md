@@ -16,6 +16,7 @@ name: Miscellaneous
 
 @defaultOpacity: .2;
 @defaultDuration: .2s;
+@defaultTiming: ease-in-out;
 
 @abbrUnderline: dotted; // dotted, solid, none
 ```

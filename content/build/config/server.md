@@ -24,6 +24,16 @@ If for some reason you are having a port conflict, you can change the port here.
 "port": 3000
 ```
 
+---code|label:Inject---
+
+Add paths to the injection array to dynamically add them to your pages requested through the proxy server.
+
+```javascript
+"inject": [
+	"/assets/js/testing.js"
+]
+```
+
 ---code|label:Reload---
 
 This allows you, of course, to enable or disable reloading whenever CSS, JS, or static files change, but it also allows you to specify only certain paths and extensions to watch.

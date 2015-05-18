@@ -10,7 +10,14 @@ ga('send', 'pageview');</script></head><body class="subpage section"><div class=
     &quot;root&quot;: &quot;public&quot;,
     &quot;assets&quot;: &quot;assets&quot;
 }
-</code></pre></div><div class="doc__note"><p><strong>Note:</strong> The “root” path is your HTML directory. Common values include &quot;www&quot;, &quot;public&quot;, and &quot;public_html&quot;.</p></div></div><div class="doc"><h2 class="doc__title">Style <a href="#style" id="style" class="doc__anchor">#</a></h2><div class="doc__content"><p>The core block allows disabling styling features as well as setting breakpoint values. By setting any key to false that feature or breakpoint is suppressed.</p><pre><code class="language-javascript">&quot;core&quot;: {
+</code></pre></div><div class="doc__note"><p><strong>Note:</strong> The “root” path is your HTML directory. Common values include &quot;www&quot;, &quot;public&quot;, and &quot;public_html&quot;.</p></div><h3 class="doc__label doc__code__label">Global Data</h3><div class="doc__code"><p>Sharing global data across your style and script is simple. Set key value pairs to be injected and made available to both. You can also set data specifically in either the script or style configuration block to limit the data scope.</p><pre><code class="language-javascript">&quot;data&quot;: {
+    &quot;brandColor&quot;: &quot;#00ff00&quot;
+}
+</code></pre><p>To access global script data use the following syntax:</p><pre><code class="language-javascript">Wee.$get('global:brandColor');
+</code></pre><p>Less data can simply by access by the key name as follows:</p><pre><code class="language-less">body {
+    color: @brandColor;
+}
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Style <a href="#style" id="style" class="doc__anchor">#</a></h2><div class="doc__content"><p>The core block allows disabling styling features as well as setting breakpoint values. By setting any key to false that feature or breakpoint is suppressed.</p><pre><code class="language-javascript">&quot;core&quot;: {
     &quot;buttons&quot;: true,
     &quot;code&quot;: true,
     &quot;forms&quot;: true,
@@ -107,6 +114,9 @@ ga('send', 'pageview');</script></head><body class="subpage section"><div class=
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Server <a href="#server" id="server" class="doc__anchor">#</a></h2><div class="doc__content"><p>When Wee is running and serving your site through the proxy, you can chose to have it mirror actions between connected browsers. That means if you have a browser open to your proxy URL on perhaps a mobile device on the same network, and your local development device, when you scroll or click or take an action on one browser, it will be replicated on the other.</p><pre><code class="language-javascript">&quot;ghostMode&quot;: true
 </code></pre></div><h3 class="doc__label doc__code__label">Host</h3><div class="doc__code"><p>If you need to override the host do it here. By default your current public IP will be used.</p><pre><code class="language-javascript">&quot;host&quot;: &quot;auto&quot;
 </code></pre></div><h3 class="doc__label doc__code__label">Port</h3><div class="doc__code"><p>If for some reason you are having a port conflict, you can change the port here.</p><pre><code class="language-javascript">&quot;port&quot;: 3000
+</code></pre></div><h3 class="doc__label doc__code__label">Inject</h3><div class="doc__code"><p>Add paths to the injection array to dynamically add them to your pages requested through the proxy server.</p><pre><code class="language-javascript">&quot;inject&quot;: [
+    &quot;/assets/js/testing.js&quot;
+]
 </code></pre></div><h3 class="doc__label doc__code__label">Reload</h3><div class="doc__code"><p>This allows you, of course, to enable or disable reloading whenever CSS, JS, or static files change, but it also allows you to specify only certain paths and extensions to watch.</p><pre><code class="language-javascript">&quot;reload&quot;: {
     &quot;enable&quot;: true,
     &quot;watch&quot;: {
