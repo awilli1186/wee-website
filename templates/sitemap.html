@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>{{$root.site.domain}}</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	{{#site.sections}}
+	{{#data.excludeSitemap|isEmpty}}
+	<url>
+		<loc>{{$root.site.domain}}/{{$key}}</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	{{#sections}}
+	{{#data.excludeSitemap|isEmpty}}
+	<url>
+		<loc>{{$root.site.domain}}/{{../$key}}/{{$key}}</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	{{/data.excludeSitemap}}
+	{{/sections}}
+	{{/data.excludeSitemap}}
+	{{/site.sections}}
+	{{#content}}
+	<url>
+		<loc>{{$root.site.domain}}/blog/{{sourceName|slug}}</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	{{/content}}
+</urlset>

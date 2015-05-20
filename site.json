@@ -14,15 +14,15 @@
 		}
 	},
 	"env": {
-		"prod": {
-			"domain": "https://www.weepower.com",
-			"cdnUrl": "https://cdn.weepower.com",
-			"assetUrl": "https://cdn.weepower.com/assets"
-		},
 		"default": {
 			"domain": "http://www.weepower.dev",
 			"cdnUrl": "",
 			"assetUrl": "/assets"
+		},
+		"prod": {
+			"domain": "https://www.weepower.com",
+			"cdnUrl": "https://cdn.weepower.com",
+			"assetUrl": "https://cdn.weepower.com/assets"
 		}
 	},
 	"data": {
@@ -39,10 +39,21 @@
 		"jsLegacyVersion": 1
 	},
 	"sections": {
+		"sitemap": {
+			"name": "Homepage",
+			"data": {
+				"excludeNav": true,
+				"excludeSitemap": true
+			},
+			"template": "sitemap",
+			"target": "public_html/sitemap.xml",
+			"content": "content/blog/*.md"
+		},
 		"home": {
 			"name": "Homepage",
 			"data": {
-				"excludeNav": true
+				"excludeNav": true,
+				"excludeSitemap": true
 			},
 			"template": "index",
 			"target": "public_html/index.html",
@@ -53,7 +64,8 @@
 		"404": {
 			"name": "Page Not Found",
 			"data": {
-				"excludeNav": true
+				"excludeNav": true,
+				"excludeSitemap": true
 			},
 			"template": "404",
 			"target": "public_html/404.html",
@@ -72,12 +84,14 @@
 			],
 			"order": "created",
 			"sort": "desc",
+
 			"content": "content/blog/*.md",
 			"sections": {
 				"entries": {
 					"name": "Entries",
 					"data": {
-						"excludeNav": true
+						"excludeNav": true,
+						"excludeSitemap": true
 					},
 					"template": "entry",
 					"target": [

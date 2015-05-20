@@ -16,6 +16,7 @@ module.exports = function(grunt) {
 				config: config,
 				name: json.name,
 				description: json.description,
+				env: 'default',
 				time: new Date(),
 				sections: json.sections
 			}),
@@ -27,10 +28,14 @@ module.exports = function(grunt) {
 			typographer: siteConfig.enhanceTypography || false
 		});
 
-		// Merge in environment data
-		var env = grunt.option('env') || 'default';
+		// Merge default environment data
+		if (json.env.default) {
+			site = Wee.$extend(site, json.env.default);
+		}
 
-		if (json.env[env]) {
+		if (grunt.option('env')) {
+			var env = grunt.option('env');
+
 			site = Wee.$extend(site, json.env[env]);
 			site.env = env;
 		}
@@ -40,7 +45,7 @@ module.exports = function(grunt) {
 			var keys = Object.keys(context);
 
 			// Loop though sections in current context
-			keys.forEach(function(key, keyIndex) {
+			keys.forEach(function(key) {
 				var block = context[key],
 					root = block.contentRoot || '',
 					template = grunt.file.read(Wee.buildPath(staticRoot, siteConfig.paths.templates + '/' + block.template + '.html')),
@@ -143,6 +148,9 @@ module.exports = function(grunt) {
 					block.isActive = true;
 					block.isCurrent = true;
 
+					// Inject current context
+					data.section = block;
+					data.sections = block.sections;
 					data.content = [];
 
 					content.forEach(function(name, i) {
@@ -154,20 +162,28 @@ module.exports = function(grunt) {
 
 						fileSegments.splice(-1, 1);
 
-						// Inject current context
-						data.section = block;
+						// Reset single data
+						if (single === true) {
+							data = {
+								content: [],
+								site: site,
+								section: block,
+								sections: block.sections
+							};
+						}
 
-						var obj = {
-							sourcePath: name,
-							sourceFile: name.replace(/^.*[\\\/]/, ''),
-							sourceName: fileSegments.join('.'),
-							name: fileSegments.join('.'),
-							created: fs.statSync(src).ctime.getTime(),
-							modified: fs.statSync(src).mtime.getTime(),
-							original: template,
-							input: '',
-							blocks: []
-						};
+						var fileStats = fs.statSync(src),
+							obj = {
+								sourcePath: name,
+								sourceFile: name.replace(/^.*[\\\/]/, ''),
+								sourceName: fileSegments.join('.'),
+								name: fileSegments.join('.'),
+								created: fileStats.birthtime.getTime(),
+								modified: fileStats.mtime.getTime(),
+								original: template,
+								input: '',
+								blocks: []
+							};
 
 						// Check for front matter
 						if (template.substring(0, 3) == '---') {
@@ -180,6 +196,9 @@ module.exports = function(grunt) {
 
 									// Check for global data
 									if (front.global) {
+										if (name == 'content/blog/wee-2-2-released.md') {
+											console.log(data);
+										}
 										data = Wee.$extend(front.global, data);
 										delete front.global;
 									}
@@ -380,29 +399,31 @@ module.exports = function(grunt) {
 			keys.forEach(function(key) {
 				var block = context[key];
 
-				Wee.$toArray(block.content).forEach(function(value, i) {
-					if (value.substring(0, 4) == 'http') {
-						var filename = '/remote-' + remoteIndex + '.html',
-							absolutePath = tempPath + filename,
-							relativePath = './' + path.relative(
-								configPath,
-								tempPath
-							) + filename;
+				if (block.content) {
+					Wee.$toArray(block.content).forEach(function(value, i) {
+						if (value.substring(0, 4) == 'http') {
+							var filename = '/remote-' + remoteIndex + '.html',
+								absolutePath = tempPath + filename,
+								relativePath = './' + path.relative(
+									configPath,
+									tempPath
+								) + filename;
 
-						remoteUrls.push([
-							value,
-							absolutePath
-						]);
-						remoteIndex++;
+							remoteUrls.push([
+								value,
+								absolutePath
+							]);
+							remoteIndex++;
 
-						// Inject temp path into content value
-						if (typeof block.content == 'string') {
-							block.content = relativePath;
-						} else {
-							block.content[i] = path.resolve(configPath, relativePath);
+							// Inject temp path into content value
+							if (typeof block.content == 'string') {
+								block.content = relativePath;
+							} else {
+								block.content[i] = path.resolve(configPath, relativePath);
+							}
 						}
-					}
-				});
+					});
+				}
 
 				if (block.sections) {
 					getRemotePaths(block.sections);
