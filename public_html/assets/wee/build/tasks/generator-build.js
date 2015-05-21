@@ -196,9 +196,6 @@ module.exports = function(grunt) {
 
 									// Check for global data
 									if (front.global) {
-										if (name == 'content/blog/wee-2-2-released.md') {
-											console.log(data);
-										}
 										data = Wee.$extend(front.global, data);
 										delete front.global;
 									}

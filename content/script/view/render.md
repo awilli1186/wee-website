@@ -59,7 +59,7 @@ Wee.view.render(template, data);
 ```
 
 ```javascript
-Charlie's dad is Jimmy and his grandad is John.
+"Charlie's dad is Jimmy and his grandad is John."
 ```
 
 ---code|type:string|modifier:stacked|label:Functions---
