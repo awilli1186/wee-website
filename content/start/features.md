@@ -15,7 +15,7 @@ JavaScript toolset to build scalable, organized client-side codebase < *10KB gzi
 * **Foundation** of utilities, helpers, and module structure
 * **Chainable DOM** traversal and manipulation with familiar API
 * **Routing library** to flexibly associate endpoints to actions
-* **Event handing** to bind actions to elements
+* **Event handling** to bind actions to elements
 * **Data loading** for Ajax and JSON interaction
 * **Template rendering** to parse complex data structures
 * **Resource loading** for JavaScript, CSS, and images
