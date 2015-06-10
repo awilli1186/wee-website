@@ -35,7 +35,7 @@ Wee.controllerName.init();
 
 ---code|label:Private/Public---
 
-Private functions can be accessed from public methods by using ```this.$private('functionName', arguments)``` syntax. To call back into a public method from a private one use ```this.$public.functionName(arguments)```.
+Private functions can be accessed from public methods by using ```this.$private.functionName(arguments)``` syntax. To call back into a public method from a private one use ```this.$public.functionName(arguments)```.
 
 Also note that you have access to ```this.$get()```, ```this.$set()```, and ```this.$push()``` across both public and private methods. By default stored values are namespaced to the current controller scope. If you need to control global variables use ```Wee.$get()```, ```Wee.$set()```, and ```Wee.$push()```.
 
@@ -44,7 +44,7 @@ Wee.fn.make('controllerName', {
 	init: function() {
 		this.anotherPublicFunction('varName'); // Call public method
 
-		return this.$private('privateFunction', 'varName'); // Call private method
+		return this.$private.privateFunction('varName'); // Call private method
 	},
 	anotherPublicFunction: function(key) {
 		this.$set(key, 'Success');

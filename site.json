@@ -26,15 +26,15 @@
 		}
 	},
 	"data": {
-		"version": "2.3.2",
+		"version": "2.4.0",
 		"analyticsID": "UA-40595891-1",
 		"gitHubRoot": "https://github.com/weepower/wee/tree/master",
 		"social": {
 			"twitter": "weecss",
 			"googlePageID": "+weecss"
 		},
-		"cssVersion": 2,
-		"cssLegacyVersion": 1,
+		"cssVersion": 3,
+		"cssLegacyVersion": 2,
 		"jsVersion": 2,
 		"jsLegacyVersion": 1
 	},

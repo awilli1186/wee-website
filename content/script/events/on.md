@@ -84,3 +84,7 @@ Wee.events.on({
 	}
 });
 ```
+
+---note---
+
+**Note:** Events can be namespaced by appending '.namespace' to the end of the event name where namespace is an identifier applicable to the scope of the event.

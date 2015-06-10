@@ -2,7 +2,11 @@
 	'use strict';
 
 	W.fn.make('assets', {
-		// Cache pre-existing CSS and JavaScript asset references
+		/**
+		 * Cache pre-existing CSS and JavaScript asset references
+		 *
+		 * @constructor
+		 */
 		_construct: function() {
 			this.loaded = {};
 
@@ -12,12 +16,32 @@
 				scope: this
 			});
 		},
-		// Get currently bound resource root or set root with specified value
-		// Returns string
+
+		/**
+		 * Get currently bound resource root or set root with specified value
+		 *
+		 * @param {string} [value]
+		 * @returns {string} root
+		 */
 		root: function(value) {
-			return value ? this.$set('.', value) : this.$get('.', '');
+			return value ?
+				this.$set('.', value) :
+				this.$get('.', '');
 		},
-		// Load specified assets with specified set of options
+
+		/**
+		 * Load specified assets with specified set of options
+		 *
+		 * @param {object} options
+		 * @param {(Array|string)} [options.files]
+		 * @param {(Array|string)} [options.js]
+		 * @param {(Array|string)} [options.css]
+		 * @param {(Array|string)} [options.img]
+		 * @param {(Array|function|string)} [options.success]
+		 * @param {(Array|function|string)} [options.failure]
+		 * @param {string} [options.group]
+		 * @param {boolean} [options.cache=false]
+		 */
 		load: function(options) {
 			var conf = W.$extend({
 					files: [],
@@ -43,7 +67,7 @@
 
 			// Determine file type
 			for (; i < files.length; i++) {
-				var ext = files[i].split('.').pop().split(/\#|\?/)[0];
+				var ext = files[i].split('.').pop().split(/#|\?/)[0];
 				type = (ext == 'js' || ext == 'css') ?
 					ext : (/(gif|jpe?g|png|svg)$/i).test(ext) ?
 						'img' : '';
@@ -85,11 +109,17 @@
 						file += (file.indexOf('?') < 0 ? '?' : '&') + now;
 					}
 
-					this.$private('load', file, type, conf);
+					this.$private.load(file, type, conf);
 				}
 			}
 		},
-		// Remove one or more files from the DOM
+
+		/**
+		 * Remove one or more files from the DOM
+		 *
+		 * @param {(Array|string)} files
+		 * @param {string} [root]
+		 */
 		remove: function(files, root) {
 			files = W.$toArray(files);
 			root = root || '';
@@ -113,7 +143,19 @@
 				}
 			}
 		},
-		// When specified references are ready execute callback
+
+		/**
+		 * When specified references are ready execute callback
+		 *
+		 * @param {string} group
+		 * @param {object} [options]
+		 * @param {Array} [options.args]
+		 * @param {object} [options.scope]
+		 * @param {(Array|function|string)} [options.success]
+		 * @param {(Array|function|string)} [options.failure]
+		 * @param {boolean} [poll=false]
+		 * @returns {boolean} ready
+		 */
 		ready: function(group, options, poll) {
 			var complete = this.$get(group) === 0;
 
@@ -140,7 +182,16 @@
 			}
 		}
 	}, {
-		// Request specific file
+		/**
+		 * Request specific file
+		 *
+		 * @private
+		 * @param {string} path
+		 * @param {string} type
+		 * @param {object} [conf]
+		 * @param {string} [conf.group]
+		 * @param {boolean} [conf.async=false]
+		 */
 		load: function(path, type, conf) {
 			var scope = this,
 				pub = scope.$public,
@@ -234,12 +285,24 @@
 				img.src = path;
 			}
 		},
-		// Decrement remaining count of assets to be loaded
+
+		/**
+		 * Decrement remaining count of assets to be loaded
+		 *
+		 * @private
+		 * @param {string} group
+		 */
 		done: function(group) {
 			this.$set(group, this.$get(group) - 1);
 			this.$public.ready(group, {}, false);
 		},
-		// Track failed resources
+
+		/**
+		 * Track failed resources
+		 *
+		 * @private
+		 * @param {string} group
+		 */
 		fail: function(group) {
 			var key = group + 'fail';
 

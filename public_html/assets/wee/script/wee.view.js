@@ -1,25 +1,56 @@
+/* jshint maxdepth: 4, maxparams: 6 */
+
 (function(W, U) {
 	'use strict';
 
 	W.fn.make('view', {
-		// Parse data into template string
-		// Return string
+		/**
+		 * Parse data into template string
+		 *
+		 * @param {string} template
+		 * @param {object} data
+		 * @returns {string}
+		 */
 		render: function(template, data) {
-			return this.$private('render', template, W.$extend({}, data));
+			return this.$private.render(template, W.$extend({}, data));
 		},
-		// Add conditional template handler or data modifier
+
+		/**
+		 * Add conditional template handler or data modifier
+		 *
+		 * @param {string} name
+		 * @param {function} fn
+		 */
 		addFilter: function(name, fn) {
-			this.$private('extend', 'filters', name, fn);
+			this.$private.extend('filters', name, fn);
 		},
-		// Add helper to run additional processing on tag data
+
+		/**
+		 * Add helper to run additional processing on tag data
+		 *
+		 * @param {string} name
+		 * @param {function} fn
+		 */
 		addHelper: function(name, fn) {
-			this.$private('extend', 'helpers', name, fn);
+			this.$private.extend('helpers', name, fn);
 		},
-		// Make partial available for injection into other templates
+
+		/**
+		 * Make partial available for injection into other templates
+		 *
+		 * @param {string} name
+		 * @param {string} value
+		 */
 		addPartial: function(name, value) {
-			this.$private('extend', 'partials', name, value);
+			this.$private.extend('partials', name, value);
 		}
 	}, {
+		/**
+		 * Set default regex and filters
+		 *
+		 * @constructor
+		 * @private
+		 */
 		_construct: function() {
 			// Set tag regex
 			this.tags = /{{([#\/])([^#{\|\n]+)(\|[^{\n]+)?}}/g;
@@ -48,6 +79,14 @@
 				}
 			};
 		},
+
+		/**
+		 * Extend view engine
+		 *
+		 * @param {string} type
+		 * @param {(object|string)} a
+		 * @param {function} b
+		 */
 		extend: function(type, a, b) {
 			var obj = a;
 
@@ -58,6 +97,14 @@
 
 			W.$extend(this[type], obj);
 		},
+
+		/**
+		 * Render template string
+		 *
+		 * @param {string} temp
+		 * @param {object} data
+		 * @returns {string}
+		 */
 		render: function(temp, data) {
 			var scope = this,
 				tags = [];
@@ -71,7 +118,7 @@
 				});
 			}
 
-			// Preprocess tags to allow for reliable tag matching
+			// Pre-process tags to allow for reliable tag matching
 			temp = temp.replace(this.tags, function(m, pre, tag, filter) {
 				var resp = '{{' + pre;
 
@@ -102,6 +149,17 @@
 				temp.replace(/{~/g, '{{').replace(/~}/g, '}}').replace(/%\d+/g, '') :
 				temp;
 		},
+
+		/**
+		 * Parse template string
+		 *
+		 * @param {string} temp
+		 * @param {object} data
+		 * @param {object} prev
+		 * @param {object} init
+		 * @param {int} index
+		 * @returns {string}
+		 */
 		parse: function(temp, data, prev, init, index) {
 			var scope = this;
 
@@ -241,6 +299,18 @@
 				return val;
 			});
 		},
+
+		/**
+		 * Get specific object value
+		 *
+		 * @param {object} data
+		 * @param {object} prev
+		 * @param {string} key
+		 * @param {string} fb
+		 * @param {object} init
+		 * @param {int} x
+		 * @returns {*}
+		 */
 		get: function(data, prev, key, fb, init, x) {
 			var trim = key.trim(),
 				resp = trim == '.' ? key : key.split('.'),
