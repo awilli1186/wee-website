@@ -1,3 +1,5 @@
+// USER=githubusername PASS=githubpassword BRANCH=master node map.js
+
 var server = require('https'),
 	fs = require('fs'),
 	auth = 'Basic ' + new Buffer(process.env.USER + ':' + process.env.PASS).toString('base64'),
