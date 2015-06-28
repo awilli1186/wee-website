@@ -19,8 +19,18 @@ module.exports = function(grunt) {
 					keys.forEach(function(key) {
 						var block = context[key],
 							root = block.contentRoot || '',
-							content = block.content ? Wee.$toArray(block.content) : [],
-							template = path.join(staticRoot, config.paths.templates + '/' + block.template + '.html');
+							content = block.content ?
+								Wee.$toArray(block.content) :
+								[];
+
+						if (block.template.indexOf('.') === -1) {
+							block.template += '.html';
+						}
+
+						var template = path.join(
+							staticRoot,
+							config.paths.templates + '/' + block.template
+						);
 
 						// Push targets to exclude from watch
 						Wee.$toArray(block.target).forEach(function(target) {
@@ -77,7 +87,7 @@ module.exports = function(grunt) {
 
 				// Watch for partial updates
 				grunt.config.set('watch.cachePartials-' + task, {
-					files: path.join(staticRoot, partialPath, '**/*.html'),
+					files: path.join(staticRoot, partialPath, '**/*'),
 					tasks: [
 						'cachePartials:' + task,
 						'buildGenerator:' + task

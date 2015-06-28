@@ -33,21 +33,35 @@
 			"twitter": "weecss",
 			"googlePageID": "+weecss"
 		},
-		"cssVersion": 3,
+		"cssVersion": 4,
 		"cssLegacyVersion": 2,
-		"jsVersion": 2,
+		"jsVersion": 3,
 		"jsLegacyVersion": 1
 	},
 	"sections": {
 		"sitemap": {
-			"name": "Homepage",
+			"name": "Sitemap",
 			"data": {
 				"excludeNav": true,
 				"excludeSitemap": true
 			},
-			"template": "sitemap",
+			"template": "sitemap.xml",
 			"target": "public_html/sitemap.xml",
 			"content": "content/blog/*.md"
+		},
+		"search": {
+			"name": "Search",
+			"data": {
+				"excludeNav": true,
+				"excludeSitemap": true
+			},
+			"template": "search.json",
+			"target": "search.json",
+			"content": [
+				"content/**/*.md",
+				"!content/blog/*.md",
+				"!content/pages/*.md"
+			]
 		},
 		"home": {
 			"name": "Homepage",
@@ -84,7 +98,6 @@
 			],
 			"order": "created",
 			"sort": "desc",
-
 			"content": "content/blog/*.md",
 			"sections": {
 				"entries": {

@@ -4,7 +4,8 @@ Wee.routes.map({
 	'$seg': {
 		'$any': [
 			'common',
-			'code'
+			'code',
+			'search'
 		]
 	},
 	'start': {

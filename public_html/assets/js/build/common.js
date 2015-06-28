@@ -79,7 +79,8 @@ Wee.fn.make('common', {
 
 			if (val !== false) {
 				if (this.active !== val) {
-					this.$subnavLinks.removeClass('is-active').eq(val).addClass('is-active');
+					this.$subnavLinks.removeClass('is-active')
+						.eq(val).addClass('is-active');
 					this.active = val;
 				}
 
@@ -106,7 +107,8 @@ Wee.fn.make('common', {
 							id = $this.attr('id');
 
 						if (data[id]) {
-							$this.parent().append('<a href="' + href + '#L' + data[id] + '" class="doc__link">→</a>');
+							$this.parent()
+								.append('<a href="' + href + '#L' + data[id] + '" class="doc__link">→</a>');
 						}
 					});
 				}

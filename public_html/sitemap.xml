@@ -1,1 +1,227 @@
-<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://www.weepower.com</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/blog</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/start</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/start/structure</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/start/markup</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/build</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/build/config</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/build/validation</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/generator</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/generator/config</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/generator/usage</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/style</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/style/variables</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/style/mixins</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/style/classes</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/style/styling</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/core</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/chain</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/assets</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/data</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/dom</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/events</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/routes</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/screen</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/view</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/script/polyfills</loc><changefreq>daily</changefreq></url><url><loc>https://www.weepower.com/blog/wee-2-1-released</loc><changefreq>weekly</changefreq></url><url><loc>https://www.weepower.com/blog/wee-2-2-released</loc><changefreq>weekly</changefreq></url><url><loc>https://www.weepower.com/blog/wee-2-3-released</loc><changefreq>weekly</changefreq></url><url><loc>https://www.weepower.com/blog/wee-2-4-released</loc><changefreq>weekly</changefreq></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://www.weepower.com</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/blog</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/start</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	<url>
+		<loc>https://www.weepower.com/start/structure</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/start/markup</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/build</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	<url>
+		<loc>https://www.weepower.com/build/config</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/build/validation</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/generator</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	<url>
+		<loc>https://www.weepower.com/generator/config</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/generator/usage</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/style</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	<url>
+		<loc>https://www.weepower.com/style/variables</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/style/mixins</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/style/classes</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/style/styling</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/core</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/chain</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/assets</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/data</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/dom</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/events</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/routes</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/screen</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/view</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/script/polyfills</loc>
+		<changefreq>daily</changefreq>
+	</url>
+	
+	
+	
+	
+	
+	<url>
+		<loc>https://www.weepower.com/blog/wee-2-1-released</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	
+	<url>
+		<loc>https://www.weepower.com/blog/wee-2-2-released</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	
+	<url>
+		<loc>https://www.weepower.com/blog/wee-2-3-released</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	
+	<url>
+		<loc>https://www.weepower.com/blog/wee-2-4-released</loc>
+		<changefreq>weekly</changefreq>
+	</url>
+	
+</urlset>

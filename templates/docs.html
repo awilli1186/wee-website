@@ -21,7 +21,13 @@
 		</div>
 		<div class="container primary" data-ref="primary">
 			<div class="mobile-nav" data-ref="mobileNav">&#9776;</div>
-			<main class="main" role="main">
+			<div class="search">
+				<input type="search" placeholder="Search" class="search__input" data-ref="searchInput">
+				<div class="search__results js-hide" data-ref="searchOutput">
+					<ol class="search__results__list" data-ref="searchResults"></ol>
+				</div>
+			</div>
+			<main class="main" role="main" data-swiftype-index="true">
 				{{#content}}
 					{{#sourceName|is(intro)}}
 					<div class="intro">
