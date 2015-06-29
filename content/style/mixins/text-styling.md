@@ -77,7 +77,7 @@ white-space: nowrap;
 ```
 
 ```css
-overflow: hidden;
+overflow-x: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
 ```

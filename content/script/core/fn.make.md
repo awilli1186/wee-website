@@ -33,6 +33,10 @@ Wee.controllerName.init();
 "Initialized"
 ```
 
+---note---
+
+**Note:** To create a new instance of a controller use the following syntax: `var instance = Wee.fn.controllerName();`
+
 ---code|label:Private/Public---
 
 Private functions can be accessed from public methods by using ```this.$private.functionName(arguments)``` syntax. To call back into a public method from a private one use ```this.$public.functionName(arguments)```.

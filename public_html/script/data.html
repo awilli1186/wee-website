@@ -10,7 +10,7 @@ ga('send', 'pageview');</script></head><body class="subpage section"><div class=
         console.log(data);
     }
 });
-</code></pre></div><div class="doc__note"><p><strong>Note:</strong> By default the X-Requested-With header is set to XMLHttpRequest. It can be overridden or removed if set to false.</p></div><h3 class="doc__label doc__code__label">Get &amp; Render</h3><div class="doc__code"><p>Retrieve JSON and immediately <a href="/script/view/#render">render</a> it into a template. No need to set the json parameter to true, it’s assumed. The rendered template is returned as the first callback argument and the third argument represents the raw JSON response. The <a href="/script/view">view</a> script is required.</p><pre><code class="language-javascript">{
+</code></pre></div><div class="doc__note"><p><strong>Note:</strong> By default the X-Requested-With header is set to XMLHttpRequest. Also, when <code>json</code> is set to true the Content-Type header is set to 'application/json’. Either can be overridden or removed if set to false.</p></div><h3 class="doc__label doc__code__label">Get &amp; Render</h3><div class="doc__code"><p>Retrieve JSON and immediately <a href="/script/view/#render">render</a> it into a template. No need to set the json parameter to true, it’s assumed. The rendered template is returned as the first callback argument and the third argument represents the raw JSON response. The <a href="/script/view">view</a> script is required.</p><pre><code class="language-javascript">{
     &quot;person&quot;: {
         &quot;firstName&quot;: &quot;Don&quot;,
         &quot;lastName&quot;: &quot;Draper&quot;

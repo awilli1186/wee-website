@@ -14,6 +14,16 @@ Wee.$chain('setId', function(id) {
 });
 ```
 
+Alternatively you can register methods in a jQuery compatible syntax.
+
+```javascript
+$.fn.setId = function(id) {
+	this.data('id', id);
+
+	return this;
+}
+```
+
 To execute the method use the following.
 
 ```javascript

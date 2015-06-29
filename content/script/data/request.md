@@ -41,7 +41,7 @@ Wee.data.request({
 
 ---note---
 
-**Note:** By default the X-Requested-With header is set to XMLHttpRequest. It can be overridden or removed if set to false.
+**Note:** By default the X-Requested-With header is set to XMLHttpRequest. Also, when `json` is set to true the Content-Type header is set to 'application/json'. Either can be overridden or removed if set to false.
 
 ---code|label:Get & Render---
 

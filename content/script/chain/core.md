@@ -5,8 +5,9 @@ link: /script/core
 
 ---methods|modifier:bordered---
 
+* [$(sel, context)](/script/core#sel)
 * [$(sel).each(fn, options)](/script/core#each)
-* [$(sel).map(fn)](/script/core#map)
+* [$(sel).map(fn, options)](/script/core#map)
 
 ---code|label:Reverse---
 
