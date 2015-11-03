@@ -1,4 +1,4 @@
-[![Wee](https://www.weepower.com/share.png?v1)](https://www.weepower.com)
+[![Wee](https://www.weepower.com/repo/logo.svg)](https://www.weepower.com)
 
 Wee is a lightweight front-end framework for logically building complex, responsive web projects.
 
@@ -8,4 +8,4 @@ Keep track of development and news by following [@weecss](https://twitter.com/we
 
 ## License
 
-Copyright 2015 [Caddis Interactive, LLC](https://www.caddis.co). Licensed under the [Apache License, Version 2.0](https://github.com/weepower/wee-website/blob/develop/LICENSE).
+Copyright 2015 [Caddis Interactive, LLC](https://www.caddis.co). Licensed under the [Apache License, Version 2.0](https://github.com/weepower/wee-website/blob/master/LICENSE).

@@ -2,8 +2,8 @@
 	# Maintenance
 #------------------------------------
 
-#RewriteCond %{REMOTE_ADDR} !^123\.456\.789\.
 #RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+#RewriteCond %{REMOTE_ADDR} !^123\.456\.789\.
 #RewriteCond $1 !^(assets) [NC]
 #RewriteRule ^(.*)$ /maintenance.html [R=307,L]
 
@@ -18,9 +18,12 @@ Options +FollowSymLinks -Indexes -MultiViews
 # Internet Explorer document mode
 Header set X-UA-Compatible "IE=edge"
 
+# Disable iframe embedding
+Header always append X-Frame-Options SAMEORIGIN
+
 # Character set
 AddDefaultCharset utf-8
-AddCharset utf-8 .css .js .json .map .rss .xml
+AddCharset utf-8 .atom .css .geojson .js .json .manifest .map .rss .xml
 
 
 #------------------------------------
@@ -33,7 +36,7 @@ AddCharset utf-8 .css .js .json .map .rss .xml
 	Header set Access-Control-Allow-Origin "*" env=IS_CORS
 </FilesMatch>
 
-# Cross-origin web fonts
+ # Cross-origin web fonts
 <FilesMatch "\.(eot|otf|tt[cf]|woff2?)$">
 	Header set Access-Control-Allow-Origin "*"
 </FilesMatch>
@@ -59,12 +62,16 @@ Redirect 301 /style/mixins-2 /style/mixins
 #------------------------------------
 
 # Force www
-#RewriteCond %{HTTP_HOST} !^www\.weepower\.com$ [NC]
-#RewriteRule ^(.*)$ https://www.weepower.com/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} ^weepower\.com$ [NC]
+#RewriteRule ^(.*)$ http://www.weepower.com/$1 [R=301,L]
+
+# Remove www (don't use both force and remove)
+#RewriteCond %{HTTP_HOST} !^.weepower\.com$ [NC]
+#RewriteRule ^(.*)$ http://weepower.com/$1 [R=301,L]
 
 # Force SSL
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+#RewriteCond %{HTTPS} !on
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 # Remove trailing slash
 RewriteCond %{REQUEST_FILENAME} !-d
@@ -85,4 +92,4 @@ RewriteRule (.*)\.html$ $1$2 [R=301]
 # Rewrite extension
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule (.*) $1\.html [L]
+RewriteRule (.*) $1.html [L]

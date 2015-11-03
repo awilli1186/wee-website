@@ -1,0 +1,74 @@
+---
+name: Files
+---
+
+---collapsible---
+
+* .editorconfig
+* .gitattributes
+* .gitignore
+* package.json
+* wee.js
+* wee.json
+* public/
+	* [.htaccess](#htaccess)
+	* 404.html
+	* browserconfig.xml
+	* favicon.ico
+	* [humans.txt](#humans)
+	* index.html
+	* [robots.txt](#robots)
+	* assets/
+* source/
+	* .jscs.json
+	* .jshintrc
+	* commands/
+		* example.js
+	* css/
+		* build/
+			* vendor/
+		* custom/
+			* ie8.less
+			* ie9.less
+			* mixins.less
+			* print.less
+			* screen.less
+			* variables.less
+			* breakpoints/
+				* desktop-large.less
+				* desktop-medium.less
+				* desktop-small.less
+				* mobile-landscape.less
+				* tablet-portrait.less
+		* lib/
+			* vendor/
+	* fonts/
+	* img/
+		* logo.png
+		* logo.svg
+		* share.png
+		* icons/
+			* tileicon.png
+			* tileicon-wide.png
+			* touchicon.png
+	* js/
+		* build/
+			* vendor/
+		* custom/
+			* ie8.js
+			* script.js
+		* lib/
+			* vendor/
+		* polyfill/
+			* es5-shim.js
+			* html5shiv.js
+			* sizzle.js
+			* wee.placeholder.js
+			* wee.slice.js
+			* wee.svg.js
+		* tests/
+			* config.js
+			* functional/
+			* unit/
+				* example.js
+	* modules/

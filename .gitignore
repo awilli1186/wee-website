@@ -9,46 +9,49 @@
 	# Wee
 #------------------------------------
 
-node_modules
-bower_components
-**/wee/temp/*
+bower_components/
+node_modules/
+out/
 
 
 #------------------------------------
 	# Tools
 #------------------------------------
 
-.idea
-.settings
 .bundle
+.idea/
+.komodotools
+.project
+.settings/
+.tern-project
+.tmproj
+*.esproj
+*.komodoproject
+*.sublime-*
+browserstack.js
+codekit-config.json
 mixture.json
 prepros.json
-codekit-config.json
-browserstack.json
-BrowserStackLocal
-*.sublime-*
 
 
 #------------------------------------
 	# System
 #------------------------------------
 
-Thumbs.db
+.cache
 .DS_Store
 .tmp
-.cache
 *.diff
-*.tmproj
 *.err
-*.orig
-*.swp
-*.out
-*.gem
-*.log
 *.lock
+*.log
+*.orig
+*.rej
+*.swo
+*.swp
 *.vi
-*.pid
 error_log
+Thumbs.db
 
 
 #------------------------------------

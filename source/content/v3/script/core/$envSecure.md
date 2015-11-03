@@ -1,0 +1,14 @@
+---
+name: $envSecure
+heading: Determine if the current environment is secured over HTTPS
+---
+
+---code|type:boolean|modifier:split---
+
+```javascript
+Wee.$envSecure();
+```
+
+```javascript
+true
+```

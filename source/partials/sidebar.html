@@ -1,0 +1,16 @@
+<header class="sidebar scrollable" role="banner" data-ref="scroll topnav">
+	<div class="viewport">
+		<div class="overview js-overview">
+			{{ #site.sections|each }}
+				{{ #data.excludeNav|isEmpty }}
+					<h3><a href="/{{ $key }}"{{ #isCurrent }} class="--is-active"{{ /isCurrent }}>{{ name }}</a></h3>
+					<ul>
+						{{ #sections|each }}
+							<li><a href="/{{ ../$key }}/{{ $key }}"{{ #isCurrent }} class="--is-active"{{ /isCurrent }}>{{ name }}</a></li>
+						{{ /sections }}
+					</ul>
+				{{ /data.excludeNav }}
+			{{ /site.sections }}
+		</div>
+	</div>
+</header>

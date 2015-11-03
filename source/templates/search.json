@@ -1,0 +1,9 @@
+[
+	{{ #content|each|delimit }}
+	{
+		"title": "{{ name }}",
+		"description": "{{ heading }}",
+		"url": "{{ $root.site.domain }}/{{ sourcePath|pathUrl }}"
+	}{{ delimiter }}
+	{{ /content }}
+]

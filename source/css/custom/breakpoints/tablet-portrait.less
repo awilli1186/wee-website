@@ -1,0 +1,154 @@
+/*------------------------------------*\
+	# Footer
+\*------------------------------------*/
+
+.footer {
+	&__license {
+		.left();
+		.spaced(0);
+	}
+	&__links {
+		.right();
+	}
+}
+
+
+
+
+
+
+/*------------------------------------*\
+	# Sidebar
+\*------------------------------------*/
+
+.sidebar {
+	.block();
+	.fixed(0; false; false; 0);
+}
+.scrollable {
+	.padding(top; 7);
+}
+.viewport {
+	.crop();
+	.inline-block(18; 100%);
+	.relative();
+}
+.overview {
+	.absolute(0; false; false; 0);
+	.fill();
+	.padding(vertical; 3);
+}
+.scrollbar {
+	.inline-block(1.2; 100%);
+	.relative();
+}
+.track {
+	.fill(vertical);
+}
+.thumb {
+	.absolute(0; false; false; 0);
+	.background(@black);
+	.cursor(pointer);
+	.transition(opacity);
+	.transparent();
+	.width(1.2);
+	&:hover {
+		.opacity(25%);
+	}
+	&:active {
+		.opacity(35%);
+	}
+}
+.disable {
+	.hide();
+}
+.noSelect {
+	.user-select();
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Homepage
+\*------------------------------------*/
+
+.hero {
+	.padding(vertical; 14; 10);
+	.font-size(4.2);
+}
+.header {
+	.spaced(12);
+}
+.welcome {
+	.font-size(4.2);
+}
+.nav {
+	.row(2%);
+	&__button {
+		.column(spaced; 1; 3; 2%);
+	}
+}
+.blog-preview {
+	&__columns {
+		.row();
+	}
+	&__left {
+		.column(spaced; 3; 5);
+	}
+	&__right {
+		.align(right);
+		.column(spaced; 2; 5);
+		.padding(top; 3);
+	}
+}
+.features {
+	&__header {
+		.font-size(3.2);
+	}
+	&__text {
+		.font-size(1.8);
+	}
+}
+.components {
+	&__list {
+		.row(8%);
+	}
+	&__item {
+		.column(spaced; 1; 3; 8%);
+		.spaced(0);
+	}
+}
+.highlights {
+	&__list {
+		.row();
+	}
+	&__item {
+		.column(spaced; 1; 2);
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Docs
+\*------------------------------------*/
+
+.docs {
+	.padding(left; 18);
+}
+
+
+
+
+
+/*------------------------------------*\
+	# Blog
+\*------------------------------------*/
+
+.blog {
+	.padding(left; 18);
+}

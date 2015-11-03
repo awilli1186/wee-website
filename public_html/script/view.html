@@ -1,10 +1,26 @@
-<!doctype html><html lang="en" id="global" itemscope itemtype="http://schema.org/WebPage"><head><title>View | Wee</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://cdn.weepower.com/assets/css/style.min.css?v5"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400"><link rel="apple-touch-icon" href="/touchicon.png"><link rel="publisher" href="https://plus.google.com/+weecss"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@weecss"><meta property="og:site_name" content="Wee"><meta property="og:title" content="View" itemprop="name"><meta property="og:url" content="https:/www.weepower.com/script/view.html" itemprop="url"><meta property="og:image" content="https://cdn.weepower.com/share.png" itemprop="image"><!--[if lt IE 9]><link rel="stylesheet" href="https://cdn.weepower.com/assets/css/ie8.min.css?v2">
-<script src="https://cdn.weepower.com/assets/js/ie8.min.js?v1"></script><![endif]--><!--[if lte IE 9]><link rel="stylesheet" href="https://cdn.weepower.com/assets/css/ie9.min.css?v2">
-<script src="https://cdn.weepower.com/assets/js/ie9.min.js?v1"></script><![endif]--><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-40595891-1', 'auto');
-ga('send', 'pageview');</script></head><body class="subpage section"><div class="canvas-outer"><div class="canvas-inner" data-ref="inner"><header role="banner" class="scrollable sidebar" data-ref="scroll"><div class="viewport"><div class="overview js-overview"><a href="/" rel="home" class="logo"><img src="https://cdn.weepower.com/assets/img/wee.svg" alt="Wee Framework"></a><h3><a href="/start">Start</a></h3><ul><li><a href="/start/structure">Structure</a></li><li><a href="/start/markup">Markup</a></li></ul><h3><a href="/build">Build</a></h3><ul><li><a href="/build/config">Config</a></li><li><a href="/build/validation">Validation</a></li></ul><h3><a href="/generator">Generate</a></h3><ul><li><a href="/generator/config">Config</a></li><li><a href="/generator/usage">Usage</a></li></ul><h3><a href="/style">Style</a></h3><ul><li><a href="/style/variables">Variables</a></li><li><a href="/style/mixins">Mixins</a></li><li><a href="/style/classes">Classes</a></li><li><a href="/style/styling">Styling</a></li></ul><h3><a href="/script">Script</a></h3><ul><li><a href="/script/core">Core</a></li><li><a href="/script/chain">Chain</a></li><li><a href="/script/assets">Assets</a></li><li><a href="/script/data">Data</a></li><li><a href="/script/dom">DOM</a></li><li><a href="/script/events">Events</a></li><li><a href="/script/routes">Routes</a></li><li><a href="/script/screen">Screen</a></li><li><a href="/script/view" class="is-active">View</a></li><li><a href="/script/polyfills">Polyfills</a></li></ul></div></div></header><div class="scrollable subnav" data-ref="scroll subnav"><div class="viewport"><div class="overview js-overview"><h3>Contents</h3><ul><li><a href="#render">Render</a></li><li><a href="#filters">Filters</a></li><li><a href="#helpers">Helpers</a></li><li><a href="#partials">Partials</a></li></ul></div></div></div><div class="container primary" data-ref="primary"><div class="mobile-nav" data-ref="mobileNav">&#9776;</div><div class="search"><input type="search" placeholder="Search" class="search__input" data-ref="searchInput"><div class="search__results js-hide" data-ref="searchOutput"><ol class="search__results__list" data-ref="searchResults"></ol></div></div><main class="main" role="main" data-swiftype-index="true"><div class="intro"><h1 class="intro__title">View <a href="https://github.com/weepower/wee/tree/master/public/assets/wee/script/wee.view.js" class="intro__link">→</a></h1><p class="intro__heading">Powerful template rendering engine for dynamic data</p></div><p>Views provide a powerful way to inject data into complex strings and markup structures. With a powerful API you can extend the default <a href="#filters">filters</a> and <a href="#helpers">helpers</a> for infinite possibilities.</p><div class="doc"><h2 class="doc__title">Render <a href="#render" id="render" class="doc__anchor">#</a></h2><p class="doc__heading">Parse data into template string</p><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>template</td><td>string</td><td>–</td><td>Template string</td><td>✓</td></tr><tr><td>data</td><td>object</td><td>–</td><td>Data object</td><td>✓</td></tr></tbody></table></div><h3 class="doc__label doc__code__label">Simple</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is {{firstName}} {{lastName}}',
+<!doctype html><html lang="en" id="global" itemscope itemtype="http://schema.org/WebPage"><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>View | Documentation</title><link rel="apple-touch-icon" href="/assets/img/icons/touchicon.png"><link rel="publisher" href="https://plus.google.com/+weecss"><meta name="twitter:card" content=""><meta name="twitter:site" content="@weecss"><meta property="og:type" content="website"><meta property="og:site_name" content="Documentation"><meta property="og:title" content="View" itemprop="name"><meta property="og:url" content="http:/www.weepower.dev/script/view.html" itemprop="url"><meta property="og:image" content="/assets/img/share.png" itemprop="image"><link rel="stylesheet" href="/assets/css/style.min.css?v5"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700"><!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.min.css?v2">
+	<script src="/assets/js/ie9.min.js?v1"></script><![endif]--></head><body class="docs --dark"><header role="banner" class="header"><a href="/" rel="home" class="header__root"><svg viewBox="0 0 233.9 84.5" class="header__logo"><g><path d="M129.3,16.5c1.7-1.6,6.9-6.4,3.9-12.1c-1-2-2.8-3.5-4.7-4.1c-1.7-0.5-3.5-0.4-5.1,0.5
+						c-6,3.2-11.1,9.6-15.6,15.2l-1.4,1.7c-6.3,7.8-11.8,15.1-16.9,22.2C88.8,40.9,88,42,87.3,43C82,50.5,76.5,58.2,70.1,64.8
+						c-1.6,1.7-3.2,2.5-3.6,2.4c-0.1-0.1-0.1-0.3,0-0.9c0.4-2.3,1.6-4.4,2.8-6.5c0.3-0.5,0.6-1,0.8-1.5c1-1.8,2.1-3.7,3.1-5.5
+						c1.6-2.8,3.3-5.7,4.8-8.7c0.8-1.6,1.6-3.2,2.5-4.8c3-5.7,6.2-11.7,7.3-18.5c0.6-3.4-0.3-6.7-2.2-8.9c-2.6-2.9-6.3-3.3-11-1.1
+						c-2.4,1.1-4.7,2.6-7,4.5c-6.3,5.2-11.9,11.3-17.3,17.3c-1.9,2.1-3.9,4.3-5.9,6.4c-8.5,9-16.9,17.5-26.3,26.9
+						c-1.1,1.1-2.3,1.4-2.8,1c-0.4-0.3-0.6-1.3,0.1-2.8c4-8.9,9.6-17.7,17-26.9c2.4-3,4.9-5.6,7.6-8.4c0.7-0.8,1.5-1.5,2.2-2.3
+						c0.4-0.4,0.8-0.8,1.2-1.3c3-3,6-6.1,6.9-10.5c0.8-4-1.7-8.2-5.6-9.5c-5-1.6-8.8,3.2-10.4,5.2c-9.7,12.1-22,28.3-30.8,46.7
+						c-1.4,2.9-2.7,6.1-3.3,9.5C-0.7,72,0.7,78.9,5.9,82.4c0.2,0.2,0.5,0.3,0.7,0.4c1.9,1.1,3.9,1.7,5.9,1.7c2.3,0,4.7-0.7,7-2.2
+						c7.1-4.4,11.4-9.2,16.3-14.8c1.3-1.4,2.6-2.9,4-4.5c3.2-3.4,5.9-6.6,8.6-9.6c5.4-6.1,10.4-11.8,17.3-18.4c0,0,0.1,0,0.1-0.1
+						c-0.1,0.7-0.6,2.2-1.9,5l-0.1,0.2c-1.3,2.8-2.8,5.6-4.3,8.3c-3.8,7.1-7.8,14.4-8.5,23.1c-0.3,4.6,1.3,8.5,4.5,10.8
+						c3.2,2.3,7.4,2.7,11.7,0.9c10.9-4.4,18-14.1,24.9-23.5c1.2-1.6,2.4-3.2,3.6-4.8C105.3,42.7,116.5,28.5,129.3,16.5z"/><path d="M217.6,53.6c-2.6-0.5-5.4,0.7-7.5,3.1c-4.2,4.9-12.8,13.2-22.4,13.4c-3.9,0.1-7.4-1.8-9.1-4.7
+						c-1.2-2.2-1.4-5.1-0.3-7c1.1-2,3.2-2.1,5.4-2.1c0.5,0,0.9,0,1.4,0c13.8-0.9,27.7-7.6,37.1-18.2c4.4-4.8,15.9-17.7,9.8-28
+						c-3.1-5.1-9.1-7.2-16.6-5.7C198,8,185.7,22.5,175.5,35.8l-1.3,1.7c-10.7,14.1-22.8,30.1-40.9,32.6c-0.5,0.1-1.1,0.1-1.7,0.2
+						c-3.3,0.3-6.7-0.9-8.8-3c-1.6-1.6-2.3-3.5-2.1-5.7c0.3-3.6,3.3-5.4,9.2-5.6c4.7-0.1,8.6-0.8,12.6-2.3c6-2.2,12-5.8,17.7-10.7
+						c6.5-5.5,13.4-12.6,15.8-22.5c1.2-4.8,0.4-9-2.2-12.1c-2.6-3.1-6.7-4.6-11.7-4.3c-2,0.1-4.3,0.6-7,1.5c-4.7,1.5-9.1,4.1-13.2,6.6
+						c-8.9,5.5-16.7,12.8-22.7,21.1c-5.6,7.8-14.3,22.9-10.1,36.5c1.9,6.1,6.5,10.9,12.5,13c2.7,0.9,5.6,1.4,8.6,1.4
+						c6.6,0,13.7-2.3,20.3-6.7c2.6-1.7,5.2-3.7,7.6-5.7c0.9-0.7,1.9-1.5,2.8-2.2c0.1,0,0.1-0.1,0.2-0.2c0.1-0.1,0.2-0.1,0.3-0.2
+						c0.2-0.2,0.5-0.4,0.6-0.6c0.9-0.7,1.8-1.4,2.7-2.1c2.2,7.9,6.1,12.9,12.1,15.5c13,5.5,28-1.3,37.7-9.6c3.5-3,5.8-5.8,7.2-8.7
+						c0.9-2,1.1-3.8,0.4-5.7C221.6,55.6,219.8,54,217.6,53.6z M199.7,28.1L199.7,28.1c4.9-4,10.4-6.8,17.3-9.7l0.3-0.1
+						c1-0.4,1.3-0.5,1.7-0.1c0.1,0.2,0,0.9-0.2,1.4c-6.5,12.5-21.5,21.8-30.3,21.8c-0.1,0-0.1,0-0.2,0C191.1,35.6,195.4,31.6,199.7,28.1
+						z M141.2,29.7c5.7-5.1,12.7-8.3,18.8-11l0.3-0.1c0.8-0.4,1.4-0.6,1.9-0.2c0.2,0.2,0.1,0.6-0.3,1.3c-5.3,10.3-19.6,21.9-30.5,22
+						C133.7,37,137,33.4,141.2,29.7z"/></g></svg></a><div class="header__content"><h1 class="header__title">3.0</h1><div class="header__switch" data-ref="switch"><input type="checkbox" class="header__checkbox"></div><nav class="header__nav"><div class="search" data-ref="search"><input type="search" placeholder="Search" class="search__input" data-ref="searchInput"><div class="search__results js-hide" data-ref="searchOutput"><ol class="search__results__list" data-ref="searchResults"></ol></div></div><a href="https://github.com/weepower/wee/archive/master.zip" class="header__download">Download 2.4.1</a></nav></div></header><header class="sidebar scrollable" role="banner" data-ref="scroll topnav"><div class="viewport"><div class="overview js-overview"><h3><a href="/start">Start</a></h3><ul><li><a href="/start/installation">Installation</a></li><li><a href="/start/structure">Structure</a></li><li><a href="/start/markup">Markup</a></li></ul><h3><a href="/build">Build</a></h3><ul><li><a href="/build/config">Config</a></li><li><a href="/build/validation">Validation</a></li><li><a href="/build/modules">Modules</a></li></ul><h3><a href="/generator">Generate</a></h3><ul><li><a href="/generator/config">Config</a></li><li><a href="/generator/usage">Usage</a></li></ul><h3><a href="/style">Style</a></h3><ul><li><a href="/style/variables">Variables</a></li><li><a href="/style/customize">Customize</a></li><li><a href="/style/mixins">Mixins</a></li><li><a href="/style/classes">Classes</a></li><li><a href="/style/styling">Styling</a></li></ul><h3><a href="/script">Script</a></h3><ul><li><a href="/script/core">Core</a></li><li><a href="/script/chain">Chain</a></li><li><a href="/script/animate">Animate</a></li><li><a href="/script/assets">Assets</a></li><li><a href="/script/data">Data</a></li><li><a href="/script/dom">DOM</a></li><li><a href="/script/events">Events</a></li><li><a href="/script/history">History</a></li><li><a href="/script/routes">Routes</a></li><li><a href="/script/screen">Screen</a></li><li><a href="/script/view" class="--is-active">View</a></li><li><a href="/script/polyfills">Polyfills</a></li></ul></div></div></header><div class="scrollable subnav" data-ref="scroll subnav"><div class="viewport"><div class="overview js-overview"><h3>Contents</h3><ul class="sublinks"><li><a href="#render">Render</a></li><li><a href="#apps">Apps</a></li><li><a href="#filters">Filters</a></li><li><a href="#helpers">Helpers</a></li><li><a href="#partials">Partials</a></li></ul></div></div></div><div class="container output" data-ref="primary"><main class="main" role="main"><div class="intro"><h1 class="intro__title">View <a href="https://github.com/weepower/wee/tree/master/public/assets/wee/script/wee.view.js" class="intro__link">→</a></h1><p class="intro__heading">Powerful template rendering engine for dynamic data</p></div><p>Views provide a powerful way to inject data into complex strings and markup structures. With a powerful API you can extend the default <a href="#filters">filters</a> and <a href="#helpers">helpers</a> for infinite possibilities.</p><div class="doc"><h2 class="doc__title">Render <a href="#render" id="render" class="doc__anchor">#</a></h2><p class="doc__heading">Parse data into template string</p><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>template</td><td>string</td><td>–</td><td>Template string</td><td>✓</td></tr><tr><td>data</td><td>object</td><td>–</td><td>Data object</td><td>✓</td></tr></tbody></table></div><h3 class="doc__label doc__code__label">Simple</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is  ',
     data = {
         firstName: 'John',
         lastName: 'Smith'
@@ -12,14 +28,14 @@ ga('send', 'pageview');</script></head><body class="subpage section"><div class=
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;My name is John Smith&quot;
-</code></pre></div><h3 class="doc__label doc__code__label">Fallback Values</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is {{firstName}} {{lastName||Doe}}',
+</code></pre></div><h3 class="doc__label doc__code__label">Fallback Values</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is  ',
     data = {
         firstName: 'John'
     };
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;My name is John Doe&quot;
-</code></pre></div><h3 class="doc__label doc__code__label">Changing Context</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{#child}}{{#child}}{{name}}\'s dad is {{../name}} and his grandad is {{$root.name}}.{{/child}}{{/child}}',
+</code></pre></div><h3 class="doc__label doc__code__label">Changing Context</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'Render\'s dad is Render and his grandad is .',
     data = {
         name: 'John',
         child: {
@@ -32,7 +48,7 @@ Wee.view.render(template, data);
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;Charlie's dad is Jimmy and his grandad is John.&quot;
-</code></pre></div><h3 class="doc__label doc__code__label">Functions</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}',
+</code></pre></div><h3 class="doc__label doc__code__label">Functions</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'My name is true ',
     data = {
         firstName: 'John',
         lastName: 'Smith'
@@ -40,7 +56,7 @@ Wee.view.render(template, data);
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;My name is John Smith&quot;
-</code></pre></div><h3 class="doc__label doc__code__label">Loop Variables</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{#names}}{{#}} | {{##}} | {{.}} | {{$key}}&lt;br&gt;{{/names}}',
+</code></pre></div><h3 class="doc__label doc__code__label">Loop Variables</h3><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '0 | 1 | render | 1&lt;br&gt;',
     data = {
         names: {
             'John': 45,
@@ -87,21 +103,21 @@ Wee.view.render(template, data);
 
     return resp;
 };
-</code></pre><pre><code class="language-javascript">var template = 'My name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}. ' +
-    '{{#pets|notEmpty}}' +
-    'I have had {{petCount}} pets. My dogs names are {{#dogs}}{{$root.petName}}{{/dogs}}. ' +
-    'I have a sister {{sister.firstName}}.' +
-    '{{/pets}}';
+</code></pre><pre><code class="language-javascript">var template = 'My name is true . ' +
+    'true' +
+    'I have had  pets. My dogs names are . ' +
+    'I have a sister .' +
+    '';
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;My name is John Doe. I have had 4 pets. My dogs names are Molly, Ginger and Keith. I have a sister Jessica.&quot;
-</code></pre></div><h3 class="doc__label doc__code__label">Advanced</h3><div class="doc__code doc__code--string doc__code--stacked"><p>The render method does more than simple variable output. It can traverse as deep into the provided object as you need for multi-level output.</p><pre><code class="language-javascript">var template = '&lt;p&gt;My Name is {{firstName}}{{#lastName|notEmpty}} {{lastName}}{{/lastName}}&lt;/p&gt;' +
-    '{{#children|notEmpty}}' +
+</code></pre></div><h3 class="doc__label doc__code__label">Advanced</h3><div class="doc__code doc__code--string doc__code--stacked"><p>The render method does more than simple variable output. It can traverse as deep into the provided object as you need for multi-level output.</p><pre><code class="language-javascript">var template = '&lt;p&gt;My Name is true &lt;/p&gt;' +
+    'true' +
         '&lt;p&gt;My Children are:&lt;/p&gt;' +
-        '&lt;ul&gt;{{#children}}' +
-            '&lt;li&gt;{{name}} - {{age}}&lt;/li&gt;' +
-        '{{/children}}&lt;/ul&gt;' +
-    '{{/children}}',
+        '&lt;ul&gt;' +
+            '&lt;li&gt;Render - &lt;/li&gt;' +
+        '&lt;/ul&gt;' +
+    '',
     data = {
         firstName: 'John',
         lastName: 'Smith',
@@ -118,16 +134,18 @@ Wee.view.render(template, data);
     };
 
 Wee.view.render(template, data);
-</code></pre><pre><code class="language-html">&lt;p&gt;My Name is John Smith&lt;/p&gt;
+</code></pre><pre><code class="language-markup">&lt;p&gt;My Name is John Smith&lt;/p&gt;
 &lt;p&gt;My Children are:&lt;/p&gt;
 &lt;ul&gt;
     &lt;li&gt;Judy - 12&lt;/li&gt;
     &lt;li&gt;James - 9&lt;/li&gt;
 &lt;/ul&gt;
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Apps <a href="#apps" id="apps" class="doc__anchor">#</a></h2><p class="doc__heading">TODO</p><div class="doc__content"><p>TODO</p></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>TODO</td><td>TODO</td><td>–</td><td>TODO</td><td></td></tr></tbody></table></div><h3 class="doc__label doc__doc__label">Set</h3><div class="doc__doc"><p>TODO</p></div><div class="doc__code doc__code--string doc__code--split"><pre><code class="language-javascript">TODO
+</code></pre><pre><code class="language-javascript">TODO
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Filters <a href="#filters" id="filters" class="doc__anchor">#</a></h2><p class="doc__heading">Add conditional template handler or data modifier</p><div class="doc__content"><p>Wee’s default filters include <code>is</code>, <code>not</code>, <code>isEmpty</code>, and <code>notEmpty</code>. Properties of the tag that is being filtered can be accessed via the current scope <code>this</code>. These include <code>val</code>, <code>data</code>, <code>root</code>, <code>tag</code>, <code>inner</code>, and <code>empty</code>.</p></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>name</td><td>string</td><td>–</td><td>Filter name</td><td>✓</td></tr><tr><td>fn</td><td><a href="/script/#functions">function</a></td><td>–</td><td>Filter callback</td><td>✓</td></tr></tbody></table></div><h3 class="doc__label doc__code__label">Boolean Response</h3><div class="doc__code"><p>Returning true or false determines if the current tag pair should be parsed or skip to the next evaluation.</p><pre><code class="language-javascript">Wee.view.addFilter('isNumber', function() {
     return typeof this.val == 'number';
 });
-</code></pre></div><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{#age|isNumber}}I am {{age}} years old.{{/age}}',
+</code></pre></div><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'I am  years old.',
     data = {
         age: 30
     };
@@ -139,7 +157,7 @@ Wee.view.render(template, data);
         return i &gt;= offset &amp;&amp; i &lt; limit;
     });
 });
-</code></pre></div><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{#names|range(2, 5)}}{{.}} {{/names}}',
+</code></pre></div><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'filters ',
     data = {
         names: [
             'John',
@@ -156,7 +174,7 @@ Wee.view.render(template, data);
 </code></pre></div><div class="doc__note"><p><strong>Note:</strong> Both filters and helpers can take any number of parameters.</p></div></div><div class="doc"><h2 class="doc__title">Helpers <a href="#helpers" id="helpers" class="doc__anchor">#</a></h2><p class="doc__heading">Add helper to run additional processing on tag data</p><div class="doc__content"><p>Properties of the tag that the helper is being called on can be accessed via the current scope <code>this</code>. These include <code>val</code>, <code>data</code>, <code>root</code>, <code>tag</code>, <code>index</code>, and <code>fallback</code>.</p></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>name</td><td>string</td><td>–</td><td>Helper name</td><td>✓</td></tr><tr><td>fn</td><td><a href="/script/#functions">function</a></td><td>–</td><td>Helper callback</td><td>✓</td></tr></tbody></table></div><div class="doc__code"><pre><code class="language-javascript">Wee.view.addHelper('upper', function() {
     return this.val.toUpperCase();
 });
-</code></pre></div><div class="doc__code doc__code--string doc__code--split"><pre><code class="language-javascript">var template = 'My name is {{name|upper}}.',
+</code></pre></div><div class="doc__code doc__code--string doc__code--split"><pre><code class="language-javascript">var template = 'My name is Helpers.',
     data = {
         name: 'john'
     };
@@ -166,19 +184,19 @@ Wee.view.render(template, data);
 </code></pre></div><h3 class="doc__label doc__code__label">Parametric</h3><div class="doc__code"><pre><code class="language-javascript">Wee.view.addHelper('starts', function(num) {
     return this.val.substr(0, num || 1);
 });
-</code></pre></div><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = '{{name}} starts with {{name|starts(5)}}.',
+</code></pre></div><div class="doc__code doc__code--string doc__code--stacked"><pre><code class="language-javascript">var template = 'Helpers starts with Helpers.',
     data = {
         name: 'Rhinoceros'
     };
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;Rhinoceros starts with Rhino.&quot;
-</code></pre></div></div><div class="doc"><h2 class="doc__title">Partials <a href="#partials" id="partials" class="doc__anchor">#</a></h2><p class="doc__heading">Make partial available for injection into other templates</p><div class="doc__content"><p>Partials are code snippets that can be reused throughout the current request lifecycle.</p></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>name</td><td>string</td><td>–</td><td>Partial name</td><td>✓</td></tr><tr><td>value</td><td>string</td><td>–</td><td>Partial value</td><td>✓</td></tr></tbody></table></div><div class="doc__code"><pre><code class="language-javascript">Wee.view.addPartial('copyright', '&lt;small&gt;&amp;copy; {{year}}&lt;/small&gt;');
-</code></pre></div><div class="doc__code doc__code--string doc__code--split"><pre><code class="language-javascript">var template = '{{&gt; copyright}}',
+</code></pre></div></div><div class="doc"><h2 class="doc__title">Partials <a href="#partials" id="partials" class="doc__anchor">#</a></h2><p class="doc__heading">Make partial available for injection into other templates</p><div class="doc__content"><p>Partials are code snippets that can be reused throughout the current request lifecycle.</p></div><div class="doc__variables"><table><thead><tr><th>Variable</th><th>Type</th><th>Default</th><th>Description</th><th>Required</th></tr></thead><tbody><tr><td>name</td><td>string</td><td>–</td><td>Partial name</td><td>✓</td></tr><tr><td>value</td><td>string</td><td>–</td><td>Partial value</td><td>✓</td></tr></tbody></table></div><div class="doc__code"><pre><code class="language-javascript">Wee.view.addPartial('copyright', '&lt;small&gt;&amp;copy; &lt;/small&gt;');
+</code></pre></div><div class="doc__code doc__code--string doc__code--split"><pre><code class="language-javascript">var template = '',
     data = {
         year: 2015
     };
 
 Wee.view.render(template, data);
 </code></pre><pre><code class="language-javascript">&quot;&lt;small&gt;&amp;copy; 2015&lt;/small&gt;&quot;
-</code></pre></div></div></main><footer role="contentinfo" class="footer"><div class="footer__widgets"><iframe src="https://ghbtns.com/github-btn.html?user=weepower&repo=wee&type=star&count=true" class="footer__widget"></iframe><iframe src="https://ghbtns.com/github-btn.html?user=weepower&repo=wee&type=fork&count=true" class="footer__widget"></iframe></div><small class="footer__license"><a href="/">Wee Powered</a> &ndash; licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a></small><ul class="footer__links"><li><a href="https://github.com/weepower/wee">GitHub</a></li><li><a href="https://github.com/weepower/wee/issues">Issues</a></li><li><a href="https://github.com/weepower/wee/releases">Releases</a></li><li><a href="https://twitter.com/weecss">Twitter</a></li><li><a href="/blog">Blog</a></li></ul></footer></div></div></div><script src="https://cdn.weepower.com/assets/js/script.min.js?v3"></script></body></html>
+</code></pre></div></div></main></div><footer class="footer" role="contentinfo"><small class="footer__license"><a href="/">Wee Powered</a> &ndash; licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a></small><ul class="footer__links"><li><a href="https://github.com/weepower/wee">GitHub</a></li><li><a href="https://github.com/weepower/wee/issues">Issues</a></li><li><a href="https://github.com/weepower/wee/releases">Releases</a></li><li><a href="/blog">Blog</a></li><li><a href="https://twitter.com/weecss">Twitter</a></li></ul></footer><script src="/assets/js/script.min.js?v3"></script></body></html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Customize Preview | Wee</title>
+
+	<link rel="stylesheet/less" href="/assets/modules/customize/wee.less">
+	<style>
+		body {
+			padding: 30px 0;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h2>Colors</h2>
+
+	<ol class="colors">
+		<li class="color --white">@white</li>
+		<li class="color --lightest-gray">@lightestGray</li>
+		<li class="color --lighter-gray">@lighterGray</li>
+		<li class="color --light-gray">@lightGray</li>
+		<li class="color --gray">@gray</li>
+		<li class="color --dark-gray">@darkGray</li>
+		<li class="color --darker-gray">@darkerGray</li>
+		<li class="color --darkest-gray">@darkestGray</li>
+		<li class="color --black">@black</li>
+	</ol>
+
+	<h2>Text Styling</h2>
+
+	<h1>H1 Heading</h1>
+	<h2>H2 Heading</h2>
+	<h3>H3 Heading</h3>
+	<h4>H4 Heading</h4>
+	<h5>H5 Heading</h5>
+	<h6>H6 Heading</h6>
+
+	<p>
+		Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing
+		elit. Mauris id	ultrices tellus, sit amet finibus nulla. Proin
+		dapibus augue nec magna iaculis ultrices. Integer vestibulum at
+		neque eget faucibus. Aenean eget leo ac odio aliquet egestas. Mauris
+		sed justo sed justo mattis feugiat.
+	</p>
+	<p>
+		Pellentesque dapibus et mauris ut commodo. Curabitur commodo
+		volutpat libero sed sagittis. Aliquam placerat rhoncus tempor. Nunc
+		lobortis lacinia volutpat. Vivamus et ex vel augue sagittis euismod.
+	</p>
+
+	<blockquote>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		<cite>John Doe</cite>
+	</blockquote>
+
+	<address>
+		<strong>Address</strong><br>
+		123 Main Street<br>
+		City, ST 12345
+
+	</address>
+
+	<a href="#">Link style</a>
+
+	<ul>
+		<li>Unordered list
+			<ul>
+				<li>Unordered list</li>
+				<li>Unordered list
+					<ul>
+						<li>Unordered list</li>
+						<li>Unordered list</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>Unordered list</li>
+		<li>Unordered list</li>
+	</ul>
+	<ol>
+		<li>Ordered list
+			<ol>
+				<li>Ordered list</li>
+				<li>Ordered list
+					<ol>
+						<li>Ordered list</li>
+						<li>Ordered list</li>
+					</ol>
+				</li>
+			</ol>
+		</li>
+		<li>Ordered list</li>
+		<li>Ordered list</li>
+	</ol>
+	<dl>
+		<dt>Definition list title</dt>
+		<dd>Definition list item</dd>
+	</dl>
+	<pre><code>&lt;pre&gt;
+	&lt;code&gt;test code&lt;/code&gt;
+	&lt;/pre&gt;</code></pre>
+	<h2 class="heading">Image Styling</h2>
+	<hr class="hr">
+	<figure>
+		<figcaption><b>Fig. 3.2 |</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit by <a href="#">eiusmod tempor</a></figcaption>
+	</figure>
+	<h2 class="heading">Form Styling</h2>
+	<hr class="hr">
+	<form action="#" class="index-form">
+		<div class="index-form-split">
+			<div class="index-form-column">
+				<fieldset>
+					<legend>Text Input</legend>
+					<input type="email" name="name" placeholder="Email Address" required>
+					<div class="inline-field">
+						<label for="name2">Full Name</label>
+						<input type="text" name="name2" value="" placeholder="Your Name" id="name2" disabled>
+					</div>
+					<label for="textarea">Message</label>
+					<textarea name="textarea" id="textarea" rows="3" required></textarea>
+					<div class="inline-field">
+						<label for="textarea2">Inline Message</label>
+						<textarea name="textarea2" id="textarea2" rows="4" placeholder="Short message here..."></textarea>
+					</div>
+				</fieldset>
+			</div>
+			<div class="index-form-column">
+				<fieldset>
+					<legend>Selection</legend>
+					<select name="selection">
+						<option value="1">Lorem</option>
+						<option value="2">Ipsum</option>
+						<option value="3">Dolor</option>
+					</select>
+					<label for="multi-selection">Multiple Selection</label>
+					<select name="multi-selection" id="multi-selection" multiple>
+						<optgroup label="Grouping">
+							<option value="1">Lorem</option>
+							<option value="2">Ipsum</option>
+							<option value="3">Dolor</option>
+						</optgroup>
+					</select>
+					<div class="inline-field">
+						<label for="inline-selection">Inline Selection</label>
+						<select name="inline-selection" id="inline-selection" multiple>
+							<option value="1">Lorem</option>
+							<option value="2">Ipsum</option>
+							<option value="3">Dolor</option>
+						</select>
+					</div>
+					<div class="inline-field">
+						<input type="checkbox" name="checkbox" id="checkbox">
+						<label for="checkbox">Lorem ipsum dolor sit amet</label>
+					</div>
+					<div class="inline-field">
+						<input type="radio" name="radio" id="radio">
+						<label for="radio">Lorem ipsum dolor sit amet</label>
+					</div>
+					<div class="inline-field">
+						<input type="radio" name="radio" id="radio2">
+						<label for="radio2">Lorem ipsum dolor sit amet</label>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+		<input type="submit" value="Submit" class="button-colored">
+		<input type="reset" value="Clear">
+		<input type="submit" value="Disabled" disabled>
+	</form>
+	<h2 class="heading">Table Styling</h2>
+	<hr class="hr">
+	<table itemscope itemtype="http://schema.org/Table">
+		<caption itemprop="about">Caption</caption>
+		<thead>
+			<tr>
+				<th>Heading</th>
+				<th>Heading</th>
+				<th>Heading</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+			</tr>
+			<tr>
+				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Footer</td>
+				<td>Footer</td>
+				<td>Footer</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+
+<script src="/assets/modules/customize/refresh.js"></script>
+<script>
+less = {
+	env: 'development',
+	logLevel: 1
+};
+</script>
+<script src="/assets/js/lib/vendor/less.min.js"></script>
+</body>
+</html>

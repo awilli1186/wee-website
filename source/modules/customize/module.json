@@ -1,0 +1,20 @@
+{
+	"name": "Wee Customizer",
+	"version": "1.0.0",
+	"description": "Customize Wee variables through a live-editor.",
+	"homepage": "https://www.weepower.com",
+	"author": "Wee",
+	"autoload": false,
+	"data": {
+
+	},
+	"style": {
+
+	},
+	"script": {
+
+	},
+	"dependencies": {
+		"wee": "^2.3.0"
+	}
+}
