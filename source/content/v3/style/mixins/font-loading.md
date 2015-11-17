@@ -14,16 +14,17 @@ name: Font Loading
 ---code|modifier:split---
 
 ```less
-.load-font(Example);
+.load-font(icons);
 ```
 
 ```css
 @font-face {
 	font-family: Example;
-		src: url('../fonts/Example.eot');
-		src: url('../fonts/Example.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/Example.woff') format('woff'),
-			 url('../fonts/Example.ttf') format('truetype');
+		src: url('../fonts/icons.eot');
+		src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/icons.woff2') format('woff2'),
+			 url('../fonts/icons.woff') format('woff'),
+			 url('../fonts/icons.ttf') format('truetype');
 		font-style: normal;
 		font-weight: normal;
 
@@ -31,7 +32,7 @@ name: Font Loading
 	@media screen and (-webkit-min-device-pixel-ratio: 0) {
 		@font-face {
 			font-family: ~'@{name}';
-			src: url('../fonts/Example.svg#Example') format('svg');
+			src: url('../fonts/icons.svg#icons') format('svg');
 		}
 	}
 }

@@ -24,7 +24,7 @@ background: url("bg.png") #00f no-repeat;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | @bodyBackground | Background color ||
+| @color | color | [@bodyBackground](/style/variables#base) = @white | Background color ||
 | @filename | string | -- | Image file ||
 | @repeat | string, keyword | -- | Image repeat ||
 
@@ -48,7 +48,7 @@ background: #00f url('../img/bg.png') no-repeat;
 | -- | -- | -- | -- | -- |
 | @color | color | -- | Background color | ✓ |
 | @opacity | unit | -- | Background opacity | ✓ |
-| @fallback | color | @color | Fallback background color ||
+| @fallback | color | [@color](/style/variables#colors) | Fallback background color ||
 
 ---code|modifier:split---
 
@@ -86,17 +86,17 @@ background: #00f url('../img/bg.png') 10% 15% no-repeat;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | @value | preset | -- | Light or dark | ✓ |
-| @opacity | unit | @defaultOpacity | Background opacity ||
+| @opacity | unit | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Background opacity ||
 | @fallback | color | #fff, #000 | Fallback background color ||
 
 ---code|modifier:split---
 
 ```less
-.background(light; 0.5);
+.background(light; 50%);
 ```
 
 ```css
-background-color: #ffffff;
+background-color: #fff;
 background-color: rgba(255, 255, 255, 0.5);
 ```
 
@@ -104,7 +104,7 @@ background-color: rgba(255, 255, 255, 0.5);
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | @bodyBackground | Background color ||
+| @color | color | [@bodyBackground](/style/variables#base) = @white | Background color ||
 
 ---code|modifier:split---
 
@@ -125,7 +125,7 @@ background-color: #00f;
 ---code|modifier:split---
 
 ```less
-.background-image('bg.png);
+.background-image(bg.png);
 ```
 
 ```css
@@ -162,17 +162,17 @@ background-repeat: no-repeat;
 ---code|modifier:split---
 
 ```less
-div {
+.selector {
     .background-image(retina; 'bg.png'; 10px);
 }
 ```
 
 ```css
-div {
+.selector {
     background-image: url('../img/bg.png');
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-    div {
+    .selector {
         background-image: url('../img/bg-2x.png');
         background-size: 10px auto;
     }
@@ -215,19 +215,19 @@ background-repeat: no-repeat;
 ---code|modifier:stacked---
 
 ```less
-div {
+.selector {
 	.background-image(retina; 'bg.png'; 4rem; 3rem; 10px);
 }
 ```
 
 ```css
-div {
+.selector {
     background-image: url('../img/bg.png');
     background-position: 10px 0;
     background-repeat: no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-    div {
+    .selector {
         background-image: url('../img/bg-2x.png');
         background-size: 4rem 3rem;
     }
@@ -236,7 +236,7 @@ div {
 
 ---note---
 
-**Note:** The value of the retina filename suffix is set by the @retinaSuffix variable.
+**Note:** The value of the retina filename suffix is set by the `@retinaSuffix` [variable](/style/variables#images).
 
 ---variables---
 
@@ -277,20 +277,20 @@ background-repeat: no-repeat;
 ---code|modifier:split---
 
 ```less
-div {
+.selector {
     .background-image(retina; 'bg.png'; 4rem; 3rem; 10px; 8px; no-repeat; fixed);
 }
 ```
 
 ```css
-div {
+.selector {
     background-attachment: fixed;
     background-image: url('../img/bg.png');
     background-position: 10px 8px;
     background-repeat: no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-    div {
+    .selector {
         background-image: url('../img/bg-2x.png');
         background-size: 4rem 3rem;
     }
@@ -352,7 +352,7 @@ background-size: 400px 300px;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | @gray | Fallback color ||
+| @color | color | [@gray](/style/variables#grayscale) = lighten(#000, 65%) | Fallback color ||
 | @start | color | rgba(0, 0, 0, 0.8) | Starting color ||
 | @end | color | rgba(0, 0, 0, 0.2) | Ending color ||
 | @angle | integer | 180 | Angle ||
@@ -528,17 +528,17 @@ background: #00f url('../img/sprite.png') 0 0 no-repeat;
 ---code|modifier:split---
 
 ```less
-div {
+.selector {
     .sprite(retina; blue);
 }
 ```
 
 ```css
-div {
+.selector {
     background: #0000ff url('../img/sprite.png') 0 0 no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-    div {
+    .selector {
         background-image: url('../img/sprite-2x.png');
         background-size: auto auto;
     }
@@ -581,19 +581,19 @@ background-repeat: no-repeat;
 ---code|modifier:split---
 
 ```less
-div {
+.selector {
     .sprite(retina);
 }
 ```
 
 ```css
-div {
+.selector {
     background-image: url('../img/sprite.png');
     background-position: 0 0;
     background-repeat: no-repeat;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-    div {
+    .selector {
         background-image: url('../img/sprite-2x.png');
         background-size: auto auto;
     }

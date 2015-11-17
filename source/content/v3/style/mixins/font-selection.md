@@ -6,7 +6,7 @@ name: Font Selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @family | font | @baseFont | Font family rules ||
+| @family | font | [@baseFont](/style/variables#base) = Arial, Helvetica, sans-serif | Font family rules ||
 | @size | unit | -- | Font size ||
 | @weight | unit | -- | Font weight ||
 | @lineHeight | unit | -- | Line height ||

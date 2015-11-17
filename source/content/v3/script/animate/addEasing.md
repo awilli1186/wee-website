@@ -1,24 +1,32 @@
 ---
 name: addEasing
-heading: TODO
+heading: Transition an attribute or property value
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| a | object, string | -- | Multiple ease object or easing key | ✓ |
+| b | function | -- | Easing function ||
 
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code|label:Single---
 
 ```javascript
-TODO
+Wee.animate.addEasing('split', function(t) {
+	return t / 2;
+});
 ```
 
+---code|label:Multiple---
+
 ```javascript
-TODO
+Wee.animate.addEasing({
+	split: function(t) {
+		return t / 2;
+	},
+	slow: function() {
+		return t < 1 ? 1 : (t / 3);
+	}
+});
 ```

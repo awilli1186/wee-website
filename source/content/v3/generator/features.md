@@ -10,5 +10,5 @@ The site generator is feature rich and includes the following components:
 * Partial snippet injection
 * Dynamic template extension loading
 * Custom global, environment, and content variables
-* Environment build support
 * Configurable minification, typography, paths, and URL settings
+* Environment build support

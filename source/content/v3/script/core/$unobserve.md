@@ -1,24 +1,22 @@
 ---
 name: $unobserve
-heading: TODO
+heading: Remove callback from data storage change
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| key | string | -- | Storage reference ||
 
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code|label:Remove All---
 
 ```javascript
-TODO
+Wee.$unobserve();
 ```
 
+---code|label:Remove Single---
+
 ```javascript
-TODO
+Wee.$unobserve('key.nested');
 ```

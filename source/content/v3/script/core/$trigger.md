@@ -1,24 +1,23 @@
 ---
 name: $trigger
-heading: TODO
+heading: Execute matching observed callbacks
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
-
----doc|label:Set---
-
-TODO
+| key | string | -- | Storage reference | ✓ |
 
 ---code|type:string|modifier:split---
 
 ```javascript
-TODO
+Wee.$observe('key', function() {
+	console.log('Success');
+});
+Wee.$trigger('key');
 ```
 
 ```javascript
-TODO
+Success
 ```

@@ -1,7 +1,7 @@
 ---
 name: Data
 heading: Data request and binding functions
-path: /public/assets/wee/script/wee.data.js
+path: /js/wee.data.js
 global:
   seoTitle: Ajax & Templating
 ---

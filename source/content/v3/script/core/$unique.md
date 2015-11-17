@@ -12,9 +12,9 @@ heading: Create new array with only unique values from source array
 ---code|type:string|modifier:split---
 
 ```javascript
-Wee.$unique([1, 1, 2, 3, 4, 4, 5, 6]);
+Wee.$unique([1, 1, 2, 3, 3, 3, 4]);
 ```
 
 ```javascript
-[1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4]
 ```

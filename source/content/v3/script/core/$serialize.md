@@ -7,20 +7,19 @@ heading: Serialize object
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| value | object | -- | Object to serialize | ✓ |
+| obj | object | -- | Object to serialize | ✓ |
 
 ---code|type:string|modifier:split---
 
 ```javascript
 Wee.$serialize({
 	key1: 'value 1',
-	key2: 'value 2',
-	key3: 'value 3'
+	key2: 'value 2'
 });
 ```
 
 ```javascript
-key1=value+1&key2=value+2&key3=value+3
+key1=value+1&key2=value+2
 ```
 
 ---note---

@@ -65,7 +65,7 @@ height: 3rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @margin | unit | @blockMarginBottom | Bottom margin ||
+| @margin | unit | [@blockMarginBottom](/style/variables#layout) = 4 | Bottom margin ||
 
 ---code|modifier:split---
 
@@ -81,7 +81,7 @@ margin-bottom: 0.5rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @margin | unit | @blockMarginBottom | Bottom margin ||
+| @margin | unit | [@blockMarginBottom](/style/variables#layout) = 4 | Bottom margin ||
 | @width | unit | -- | Width ||
 | @height | unit | -- | Height ||
 
@@ -98,7 +98,7 @@ width: 2rem;
 height: 4rem;
 ```
 
----variables|label:Box-Sizing---
+---variables|label:Box Sizing---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
@@ -116,7 +116,7 @@ height: 4rem;
 box-sizing: content-box;
 ```
 
----code|modifier:split|label:Border-Box---
+---code|modifier:split|label:Border Box---
 
 ```less
 .border-box();
@@ -128,7 +128,7 @@ box-sizing: content-box;
 box-sizing: border-box;
 ```
 
----code|modifier:split|label:Content-Box---
+---code|modifier:split|label:Content Box---
 
 ```less
 .content-box();

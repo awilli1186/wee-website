@@ -227,13 +227,13 @@ Wee.fn.make('customize', {
 		});
 	},
 	showModal: function(file) {
-		$('ref:overlay').addClass('--is-active');
+		$('ref:overlay').addClass('-is-active');
 		$('ref:modal').html('<pre><code>' +
-			file + '</code></pre>').addClass('--is-active');
+			file + '</code></pre>').addClass('-is-active');
 	},
 	hideModal: function() {
-		$('ref:modal').removeClass('--is-active');
-		$('ref:overlay').removeClass('--is-active');
+		$('ref:modal').removeClass('-is-active');
+		$('ref:overlay').removeClass('-is-active');
 	},
 	initPreview: function() {
 		var scope = this;
@@ -300,10 +300,10 @@ Wee.fn.make('customize', {
 	showMessage: function(message) {
 		var $messageBar = $('ref:message-bar'),
 			hideMessage = function() {
-				$messageBar.removeClass('--is-active');
+				$messageBar.removeClass('-is-active');
 			};
 
-		$messageBar.html('<span>' + message + '</span>').addClass('--is-active');
+		$messageBar.html('<span>' + message + '</span>').addClass('-is-active');
 		setTimeout(hideMessage, 4000);
 	},
 	parseValue: function(value) {

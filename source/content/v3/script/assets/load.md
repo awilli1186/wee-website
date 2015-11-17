@@ -16,13 +16,13 @@ heading: Load specified assets with specified set of options
 | async | boolean | true | Load assets asynchronously, only applicable to scripts ||
 | cache | boolean | true | Cache-bust requests with random querystring ||
 | css | string, array | -- | Single CSS path or array of CSS paths | ✓ |
-| error | function | -- | Failure [callback](/script/#functions) ||
+| error | [function](/script/#functions) | -- | Failure callback ||
 | files | string, array | -- | Single file path or array of file paths | ✓ |
 | group | string | -- | Optional reference for use with [ready](#ready) ||
 | img | string, array | -- | Single image path or array of image paths | ✓ |
 | js | string, array | -- | Single JavaScript path or array of JavaScript paths | ✓ |
 | root | string | -- | Root path or domain override for [root](#root) ||
-| success | function | -- | Success [callback](/script/#functions) ||
+| success | [function](/script/#functions) | -- | Success callback ||
 
 ---code|label:Single File---
 

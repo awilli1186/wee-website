@@ -1,13 +1,13 @@
 ---
 name: $toArray
-heading: Cast object to array if it isn't one
+heading: Cast value to array if it isn't one
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| value | string, array | -- | Value to convert to array | ✓ |
+| val | any | -- | Value to convert to array | ✓ |
 
 ---code|modifier:split---
 
@@ -17,6 +17,6 @@ Wee.$toArray('test');
 ```
 
 ```javascript
-['test']
-['test']
+["test"]
+["test"]
 ```

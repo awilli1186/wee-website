@@ -1,24 +1,23 @@
 ---
-name: $trigger
-heading: TODO
+name: $concat
+heading: Concatenate values into global storage
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| key | string | -- | Storage reference | ✓ |
+| value | any | -- | Storage value | ✓ |
+| prepend | boolean | false | Prepend value to storage ||
 
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code|type:array|modifier:split---
 
 ```javascript
-TODO
+Wee.$concat('key', 1);
+Wee.$concat('key', [2, 3], true);
 ```
 
 ```javascript
-TODO
+[2, 3, 1]
 ```

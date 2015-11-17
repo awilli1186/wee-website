@@ -38,14 +38,14 @@ Wee outputs one primary CSS file. The build array specifies additional CSS or Le
 
 ```javascript
 "build": [
-	"directory/third-party-style.css",
-	"directory/other-third-party.less"
+	"path/files/one.css",
+	"path/files/two.less"
 ]
 ```
 
 ---note---
 
-**Note:**  Paths are relative to the Wee CSS assets directory unless prefixed with "./" making them relative to `wee.js`.
+**Note:**  Paths are relative to the Wee CSS assets directory unless prefixed with `./` making them relative to `wee.js`.
 
 ---code|label:Compile---
 
@@ -54,10 +54,10 @@ If you have CSS or Less files that you would like to compile, but not include in
 ```javascript
 "compile": {
 	"array.css": [
-		"path/files/one.less",
-		"path/files/two.css"
+		"path/files/one.css",
+		"path/files/two.less"
 	],
-	"ie9.min.css": "custom/ie9.less",
+	"ie9.min.css": "/source/css/custom/ie9.less",
 	"globbing.css": "path/files/*.less"
 }
 ```
@@ -71,7 +71,7 @@ You can use any globbing conventions (such as wildcards and exclusions).
 	"*",
 	"**/*",
 	"*.less",
-	"*.{less,css}",
+	"*.{css,less}",
 	"**/*.css",
 	"!**/*.less"
 ]

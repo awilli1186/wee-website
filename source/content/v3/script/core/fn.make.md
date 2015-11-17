@@ -3,15 +3,15 @@ name: fn.make
 heading: Create namespaced controller
 ---
 
-Controllers serve as the wrapper for all custom script. They can be created per page, section, or for specific reusable components. If placed in your build directory you easily create a well-organized, extensible structure.
+Controllers serve as the wrapper for custom script. They can be created per page, section, or for specific reusable components. If placed in your build directory you easily create a well-organized, extensible structure.
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| name | string | -- | Namespace of the controller | ✓ |
-| pub | object | -- | Public methods and variables | ✓ |
-| priv | object | -- | Private methods and variables ||
+| name | string | -- | Controller name | ✓ |
+| pub | object | -- | Public methods and properties | ✓ |
+| priv | object | -- | Private methods and properties ||
 
 ---code|label:Public---
 

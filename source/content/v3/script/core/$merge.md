@@ -1,24 +1,30 @@
 ---
 name: $merge
-heading: TODO
+heading: Extend object into global storage
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| key | string | -- | Storage reference | ✓ |
+| obj | any | -- | Storage value | ✓ |
+| prepend | boolean | false | Prepend value to storage ||
 
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code|type:array|modifier:split---
 
 ```javascript
-TODO
+Wee.$merge('key', {
+	key1: 'value'
+});
+Wee.$merge('key', {
+	key2: 'value2'
+});
 ```
 
 ```javascript
-TODO
+{
+	key1: "value",
+	key2: "value"
+}
 ```

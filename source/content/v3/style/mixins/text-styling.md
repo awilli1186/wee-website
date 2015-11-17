@@ -248,7 +248,7 @@ user-select: text;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | integer | @codeBlockTabSize | Tab length ||
+| @value | integer | [@codeBlockTabSize](/style/variables#code) = 4 | Tab length ||
 
 ---code|modifier:split---
 

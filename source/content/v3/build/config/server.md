@@ -21,7 +21,7 @@ If you need to override the host do it here. By default your current public IP w
 If for some reason you are having a port conflict, you can change the port here.
 
 ```javascript
-"port": 3000
+"port": 9000
 ```
 
 ---code|label:Inject---
@@ -30,13 +30,13 @@ Add paths to the injection array to dynamically add them to your pages requested
 
 ```javascript
 "inject": [
-	"/assets/js/testing.js"
+	"/source/js/custom/testing.js"
 ]
 ```
 
 ---code|label:Reload---
 
-This allows you, of course, to enable or disable reloading whenever CSS, JS, or static files change, but it also allows you to specify only certain paths and extensions to watch.
+This allows you to enable or disable reloading whenever CSS, JS, or static files change, but it also allows you to specify only certain paths and extensions to watch for efficiency.
 
 ```javascript
 "reload": {
@@ -55,9 +55,9 @@ This allows you, of course, to enable or disable reloading whenever CSS, JS, or 
 
 ---code|label:Tasks---
 
-With the ```node wee run:local``` task, Wee needs to know what your local server address is for the proxy. It then uses the proxy to sit between your browser and the development server so it can inject CSS changes, or reload the page for static and JavaScript changes.
+With the `node wee run:local` task, Wee needs to know what your local server address is for the proxy. It then uses the proxy to sit between your browser and the development server so it can inject CSS changes, or reload the page for static and JavaScript changes.
 
-With ```node wee run:static``` you can set whether to use HTTPS.
+With `node wee run:static` you can set whether to use HTTPS.
 
 ```javascript
 "tasks": {

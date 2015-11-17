@@ -25,7 +25,7 @@ transition: all 4s ease-in 1s;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | @property | keyword | all | Animatable Property ||
-| @duration | seconds | @defaultDuration | Duration ||
+| @duration | seconds | [@defaultDuration](/style/variables#miscellaneous) = .2s | Duration ||
 | @ease | keyword | ease-in-out | Timing function ||
 | @delay | seconds | 0s | Delay ||
 
@@ -62,7 +62,7 @@ transition-delay: 3s;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @duration | seconds | @defaultDuration | Duration value ||
+| @duration | seconds | [@defaultDuration](/style/variables#miscellaneous) = .2s | Duration value ||
 
 ---code|modifier:split---
 

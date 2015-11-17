@@ -64,7 +64,7 @@ box-shadow: inset 1px 1px 0 0 #00f;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | light, dark | keyword | -- | Light or dark preset | ✓ |
-| @value | percentage | @defaultOpacity | Opacity ||
+| @value | percentage | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Opacity ||
 | @x | unit | 1px | Horizontal offset ||
 | @y | unit | 1px | Vertical offset ||
 | @blur | unit | 0 | Blur ||
@@ -96,7 +96,7 @@ box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.5);
 | -- | -- | -- | -- | -- |
 | inner | keyword | -- | Inner preset | ✓ |
 | light, dark | keyword | -- | Light or dark preset | ✓ |
-| @opacity | percentage | @defaultOpacity | Opacity ||
+| @opacity | percentage | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Opacity ||
 | @x | unit | 1px | Horizontal offset ||
 | @y | unit | 1px | Vertical offset ||
 | @blur | unit | 0 | Blur ||

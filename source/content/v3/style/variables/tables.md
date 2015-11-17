@@ -3,9 +3,9 @@ name: Tables
 ---
 
 ```less
-@tableStyled: true;   // apply base styling by default
-@tableBordered: true; // apply outer border by default
-@tableStriped: true;  // apply striping by default
+@tableStyled: true;    // apply base styling by default
+@tableBordered: false; // apply outer border by default
+@tableStriped: true;   // apply striping by default
 
 @tableFontSize: @baseFontSize;
 

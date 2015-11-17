@@ -1,24 +1,39 @@
 ---
 name: $drop
-heading: TODO
+heading: Remove key or value from global array
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| key | string | -- | Storage reference | ✓ |
+| value | any | -- | Storage key or value | ✓ |
+| prepend | boolean | false | Prepend value to storage ||
 
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code|type:array|modifier:split|label:Key---
 
 ```javascript
-TODO
+Wee.$set('key', {
+	key1: 'Don',
+	key2: 'Draper'
+});
+Wee.$drop('key.key2');
 ```
 
 ```javascript
-TODO
+{
+	key1: 'Don'
+}
+```
+
+---code|type:array|modifier:split|label:Value---
+
+```javascript
+Wee.$set('key', [1, 2, 3]);
+Wee.$drop('key', 2);
+```
+
+```javascript
+[1, 3]
 ```

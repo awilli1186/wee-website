@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://www.weepower.dev</loc>
+		<loc>https://www.weepower.com</loc>
 		<changefreq>daily</changefreq>
 	</url>
 	
@@ -15,13 +15,13 @@
 	
 		
 			<url>
-				<loc>http://www.weepower.dev/blog</loc>
+				<loc>https://www.weepower.com/blog</loc>
 				<changefreq>daily</changefreq>
 			</url>
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>https://www.weepower.com//</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -30,13 +30,13 @@
 	
 		
 			<url>
-				<loc>http://www.weepower.dev/start</loc>
+				<loc>https://www.weepower.com/start</loc>
 				<changefreq>daily</changefreq>
 			</url>
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>https://www.weepower.com//</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -45,13 +45,13 @@
 	
 		
 			<url>
-				<loc>http://www.weepower.dev/build</loc>
+				<loc>https://www.weepower.com/build</loc>
 				<changefreq>daily</changefreq>
 			</url>
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>https://www.weepower.com//</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -60,13 +60,13 @@
 	
 		
 			<url>
-				<loc>http://www.weepower.dev/generator</loc>
+				<loc>https://www.weepower.com/generator</loc>
 				<changefreq>daily</changefreq>
 			</url>
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>https://www.weepower.com//</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -75,13 +75,13 @@
 	
 		
 			<url>
-				<loc>http://www.weepower.dev/style</loc>
+				<loc>https://www.weepower.com/style</loc>
 				<changefreq>daily</changefreq>
 			</url>
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>https://www.weepower.com//</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -90,13 +90,13 @@
 	
 		
 			<url>
-				<loc>http://www.weepower.dev/script</loc>
+				<loc>https://www.weepower.com/script</loc>
 				<changefreq>daily</changefreq>
 			</url>
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>https://www.weepower.com//</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -105,7 +105,7 @@
 	
 	
 		<url>
-			<loc>http://www.weepower.dev/blog/sel</loc>
+			<loc>https://www.weepower.com/blog/sel</loc>
 			<changefreq>weekly</changefreq>
 		</url>
 	

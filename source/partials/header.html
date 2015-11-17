@@ -45,7 +45,7 @@
 	</script>
 	{{ /site.env }}
 </head>
-<body class="{{ #path|not('/') }}docs {{ /path }}--dark">
+<body class="{{ #path|not('/') }}docs {{ /path }}-dark">
 	<header role="banner" class="header">
 		<a href="/" rel="home" class="header__root">
 			<svg viewBox="0 0 233.9 84.5" class="header__logo">
@@ -82,12 +82,15 @@
 			{{ else }}
 			<h1 class="header__title">Blueprint for modern web development</h1>
 			{{ /path }}
-			<div class="header__switch" data-ref="switch">
-				<input type="checkbox" class="header__checkbox">
+			<div class="switch" data-ref="switch">
+				<div class="switch__toggle">
+					<input type="checkbox" class="header__checkbox">
+				</div>
 			</div>
 			<nav class="header__nav">
 				{{ #path|not('/') }}
 					<div class="search" data-ref="search">
+						<div class="search__button" role="button" data-ref="searchButton"></div>
 						<input type="search" placeholder="Search" class="search__input" data-ref="searchInput">
 						<div class="search__results js-hide" data-ref="searchOutput">
 							<ol class="search__results__list" data-ref="searchResults"></ol>

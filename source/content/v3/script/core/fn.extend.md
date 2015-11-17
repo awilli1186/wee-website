@@ -7,9 +7,9 @@ heading: Extend existing controller with additional methods and properties
 
 | Variable | Type | Default | Description| Required |
 | -- | -- | -- | -- | -- |
-| a | string, object | -- | Controller namespace or core object | ✓ |
-| b | object | -- | Public object or private object ||
-| c | object | -- | Private object ||
+| a | string, object | -- | Controller name or core methods | ✓ |
+| b | object | -- | Public methods and properties ||
+| c | object | -- | Private methods and properties ||
 
 ---code|label:Extend Controller---
 
@@ -33,7 +33,7 @@ Wee.controllerName.extendedPublicFunction();
 
 ---code|label:Extend Core---
 
-To extend the core simply exclude the first parameter. This can be done to add additional core methods or override default functionality.
+To extend the core pass a method object as the first argument. This can be done to add additional core methods or override default functionality.
 
 ```javascript
 Wee.fn.extend({
@@ -42,7 +42,14 @@ Wee.fn.extend({
 	}
 });
 
+---code|modifier:split---
+
+```javascript
 Wee.addNumbers(2, 4);
+```
+
+```javascript
+6
 ```
 
 ---note---

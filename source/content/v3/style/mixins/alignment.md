@@ -53,9 +53,11 @@ float: right;
 ```
 
 ```css
-clear: both;
-content: ' ';
-display: table;
+&:after {
+	clear: both;
+	content: ' ';
+	display: table;
+}
 ```
 
 ---variables|label:Clear---

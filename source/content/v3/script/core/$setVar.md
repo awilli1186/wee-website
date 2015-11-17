@@ -52,9 +52,9 @@ To create a keyed object you can pass keys into the array notation.
 ---code---
 
 ```markup
-<div data-set="obj[key1]" data-value="value1"></div>
-<div data-set="obj[key2]" data-value="value2"></div>
-<div data-set="obj[key3]" data-value="value3"></div>
+<div data-set="obj.key1" data-value="value1"></div>
+<div data-set="obj.key2" data-value="value2"></div>
+<div data-set="obj.key3" data-value="value3"></div>
 ```
 
 ---code|type:object|modifier:split---
@@ -78,9 +78,9 @@ You can also nest objects by continuing the array notation.
 ---code---
 
 ```markup
-<div data-set="obj[key1]" data-value="value1"></div>
-<div data-set="obj[key2][sub1]" data-value="value2"></div>
-<div data-set="obj[key2][sub2]" data-value="value3"></div>
+<div data-set="obj.key1" data-value="value1"></div>
+<div data-set="obj.key2.sub1" data-value="value2"></div>
+<div data-set="obj.key2.sub2" data-value="value3"></div>
 ```
 
 ---code|type:object|modifier:split---
@@ -97,6 +97,22 @@ Wee.$get('obj');
 		"sub2": "value2"
 	}
 }
+```
+
+---code|label:JSON---
+
+```markup
+<div data-set="obj" data-value='{"key": true}'></div>
+```
+
+---code|type:boolean|modifier:split---
+
+```javascript
+Wee.$get('obj.key');
+```
+
+```javascript
+true
 ```
 
 ---note---

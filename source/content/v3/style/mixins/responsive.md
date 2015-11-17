@@ -12,7 +12,7 @@ name: Responsive
 ---code|modifier:split---
 
 ```less
-.test-class {
+.selector {
 	.media-query(500px; {
 		.color(red);
 	});
@@ -21,8 +21,8 @@ name: Responsive
 
 ```css
 @media (max-width: 500px) {
-	.test-class {
-		color: red;
+	.selector {
+		color: #f00;
 	}
 }
 ```

@@ -18,7 +18,7 @@ name: Images
 
 // Figures
 
-@figureBorderColor: @lighterGray; // false to disable
+@figureBorderColor: false; // false to disable
 @figureRounded: false;
 
 @figurePadding: @blockMarginBottom;

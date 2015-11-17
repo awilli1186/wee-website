@@ -6,7 +6,7 @@ name: Font Weight
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | unit | @baseFontWeight | Font weight ||
+| @value | unit | [@baseFontWeight](/style/variables#base) = normal | Font weight ||
 
 ---code|modifier:split---
 

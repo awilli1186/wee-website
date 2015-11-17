@@ -13,17 +13,17 @@ heading: Make Ajax request based on specified options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| url | string | -- | URL endpoint to request | ✓ |
 | args | array | -- | Callback arguments appended after default parameters ||
 | data | object | -- | Object to serialize and pass along with request ||
-| error | function | -- | Failure [callback](/script/#functions) ||
+| error | [function](/script/#functions) | -- | Failure callback ||
 | headers | object | -- | {key: val} object of request headers ||
 | json | boolean | false | Evaluate the response as JSON and return object ||
 | jsonp | boolean, string | false | Boolean or override name for callback query string parameter ||
 | jsonpCallback | string | -- | Override the name of the JSONP callback function ||
 | method | string | get | Request verb (get, post, put, etc) in lowercase ||
 | scope | object | -- | Callback scope ||
-| success | function | -- | Success [callback](/script/#functions) ||
+| success | [function](/script/#functions) | -- | Success callback ||
+| url | string | -- | URL endpoint to request | ✓ |
 
 ---code|label:Get---
 

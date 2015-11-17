@@ -31,7 +31,7 @@ Wee.$exec('controllerName:methodName');
 
 ---code---
 
-When needing to execute multiple methods you can use an array format. You can also mix method options in the array.
+When executing multiple methods you can use an array format. You can also mix method options in the array.
 
 ```javascript
 Wee.routes.map({

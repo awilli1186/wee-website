@@ -19,6 +19,10 @@ Wee.fn.make('sidebar', {
 			scope: this
 		});
 	},
+
+	/**
+	 * Initialize scollbar markup and instance
+	 */
 	initScrolling: function() {
 		var wrapper = '<div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>',
 			$topnav = $('ref:topnav'),
@@ -30,16 +34,31 @@ Wee.fn.make('sidebar', {
 		$subnav.append(wrapper);
 		this.scroller = tinyscrollbar($subnav[0]);
 	},
+
+	/**
+	 * Set proper offset on page load and anchor click
+	 */
 	setOffsets: function() {
+		var $body = $(Wee._body),
+			offset = 98;
+
+		// Position initial anchor
+		if (location.hash) {
+			$body.scrollTop($body.scrollTop() - offset);
+		}
+
+		// Bind subnav anchor position
 		this.offsets = [];
 
 		this.$subnavLinks.each(function(el) {
 			var $el = $(el),
-				ref = $el.attr('href'),
-				top = $(ref).offset().top;
+				$targ = $($el.attr('href')),
+				top = $targ.offset().top;
 
-			$el.on('click', function(e) {
-				$(Wee._body).scrollTop(top - 98);
+			$el.add($targ).on('click', function(e, el) {
+				location.hash = el.hash;
+
+				$body.scrollTop(top - offset);
 
 				e.preventDefault();
 			});
@@ -49,9 +68,13 @@ Wee.fn.make('sidebar', {
 			scope: this
 		});
 	},
+
+	/**
+	 * Handle active navigation selection
+	 */
 	setActive: function() {
-		var min = $(Wee._win).scrollTop() + 100,
-			activeClass = '--is-active',
+		var min = $(Wee._win).scrollTop() + 98,
+			activeClass = '-is-active',
 			i = 0;
 
 		for (; i < this.offsets.length; i++) {

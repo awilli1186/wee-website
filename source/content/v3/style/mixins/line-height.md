@@ -6,7 +6,7 @@ name: Line Height
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | unit | @baseLineHeight | Line height ||
+| @value | unit | [@baseLineHeight](/style/variables#base) = 1em | Line height ||
 
 ---code|modifier:split---
 

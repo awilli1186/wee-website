@@ -22,7 +22,7 @@ border: 2px dotted #00f;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | @baseColor | Color ||
+| @color | color | [@lighterGray](/style/variables#grayscale) | Color ||
 | @value | unit | 1px | Size ||
 | @style | keyword | solid | Style ||
 
@@ -41,10 +41,10 @@ border: 4px dotted #f00;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | light, dark | keyword | -- | Light or dark preset | ✓ |
-| @opacity | integer | @defaultOpacity | Opacity ||
+| @opacity | integer | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Opacity ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Border style ||
-| @fallback | color | @black | Fallback color ||
+| @fallback | color | [@black](/style/variables#color) = #000 | Fallback color ||
 
 ---code|modifier:split---
 
@@ -62,7 +62,7 @@ border: 2px solid rgba(0, 0, 0, 0.4);
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | top, right, bottom, left | keyword | -- | Side preset | ✓ |
-| @color | color | @baseColor | Color ||
+| @color | color | [@lighterGray](/style/variables#grayscale) = @darkestGray | Color ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
 
@@ -82,10 +82,10 @@ border-top: 1px solid #00f;
 | -- | -- | -- | -- | -- |
 | top, right, bottom, left | keyword | -- | Side preset | ✓ |
 | light, dark | keyword | -- | Light or dark preset | ✓ |
-| @opacity | integer | @defaultOpacity | Color ||
+| @opacity | integer | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Color ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
-| @fallback | color | @white, @black | Fallback color ||
+| @fallback | color | [@white](/style/variables#colors) = #fff, [@black](/style/variables#colors) = #000 | Fallback color ||
 
 ---code|modifier:split---
 
@@ -103,7 +103,7 @@ border: 3px dotted rgba(255, 255, 255, 0.5);
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✓ |
-| @color | color | @baseColor | Color ||
+| @color | color | [@lighterGray](/style/variables#grayscale) = @darkestGray | Color ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
 
@@ -125,7 +125,7 @@ border-right: 2px dotted #ff0000;
 | -- | -- | -- | -- | -- |
 | horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✓ |
 | light, dark | keyword | -- | Light or dark preset | ✓ |
-| @opacity | integer | @defaultOpacity | Opactiy ||
+| @opacity | integer | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Opactiy ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
 
@@ -150,7 +150,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 | @right | unit | -- | Right size ||
 | @bottom | unit | -- | Bottom size ||
 | @left | unit | -- | Left size ||
-| @color | color | @baseColor | Color ||
+| @color | color | [@lighterGray](/style/variables#grayscale) = @darkestGray | Color ||
 | @style | keyword | solid | Style ||
 
 ---code|modifier:split---

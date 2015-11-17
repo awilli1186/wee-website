@@ -138,17 +138,17 @@ padding-top: 75%;
 ---code|modifier:split---
 
 ```less
-div {
+.selector {
 	.ratio(embed; (16 / 9));
 }
 ```
 
 ```css
-div {
+.selector {
 	overflow: hidden;
 	position: relative;
 }
-div:before {
+.selector:before {
 	content: ' ';
 	display: block;
 	height: 0;

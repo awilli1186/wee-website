@@ -8,8 +8,8 @@ name: Multiple Columns
 | -- | -- | -- | --| -- |
 | @count | integer | 2 | Column width ||
 | @gap | unit | -- | Column gap ||
-| @style | keyword | @gridColumns | Column rule style ||
-| @width | unit | @gridMargin | Column width ||
+| @style | keyword | [@gridColumns](/style/variables#layout) = 8 | Column rule style ||
+| @width | unit | [@gridMargin](/style/variables#layout) = 5% | Column width ||
 
 ---code|modifier:split---
 

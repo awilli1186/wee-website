@@ -1,6 +1,6 @@
 ---
 name: $env
-heading: Get current environment or detect current environment against specified object
+heading: Get current environment or set current environment against specified object
 ---
 
 ---variables---

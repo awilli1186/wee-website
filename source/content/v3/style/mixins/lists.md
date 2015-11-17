@@ -63,18 +63,6 @@ li:first-child:before {
 }
 ```
 
----code|modifier:split|label:Floated List---
-
-```less
-.floated-list();
-```
-
-```css
-li {
-	float: left;
-}
-```
-
 ---variables|label:List Style---
 
 | Variable | Type | Default | Description | Required |

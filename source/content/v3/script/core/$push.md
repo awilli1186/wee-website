@@ -7,9 +7,9 @@ heading: Push value into global array
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | Reference to push the value into | ✓ |
-| a | string, any | -- | Storage value or key for value | ✓ |
-| b | any | -- | Storage value ||
+| key | string | -- | Storage reference | ✓ |
+| value | any | -- | Storage value | ✓ |
+| prepend | false | -- | Prepend value to storage ||
 
 ---code---
 
@@ -18,7 +18,7 @@ Wee.$push('key', 'Success');
 Wee.$push('key', 'Success 2');
 
 Wee.$get('key');
-Wee.$get('key', 0);
+Wee.$get('key.0');
 ```
 
 ```javascript

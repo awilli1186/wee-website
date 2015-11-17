@@ -1,7 +1,7 @@
 ---
 name: View
 heading: Powerful template rendering engine for dynamic data
-path: /public/assets/wee/script/wee.view.js
+path: /js/wee.view.js
 global:
   seoTitle: View
   seoDesc:

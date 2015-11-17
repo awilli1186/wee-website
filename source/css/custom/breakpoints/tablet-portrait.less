@@ -21,49 +21,11 @@
 	# Sidebar
 \*------------------------------------*/
 
-.sidebar {
-	.block();
-	.fixed(0; false; false; 0);
-}
-.scrollable {
-	.padding(top; 7);
-}
-.viewport {
-	.crop();
-	.inline-block(18; 100%);
-	.relative();
+.topnav {
+	.fixed(false; false; false; 0);
 }
 .overview {
 	.absolute(0; false; false; 0);
-	.fill();
-	.padding(vertical; 3);
-}
-.scrollbar {
-	.inline-block(1.2; 100%);
-	.relative();
-}
-.track {
-	.fill(vertical);
-}
-.thumb {
-	.absolute(0; false; false; 0);
-	.background(@black);
-	.cursor(pointer);
-	.transition(opacity);
-	.transparent();
-	.width(1.2);
-	&:hover {
-		.opacity(25%);
-	}
-	&:active {
-		.opacity(35%);
-	}
-}
-.disable {
-	.hide();
-}
-.noSelect {
-	.user-select();
 }
 
 
@@ -75,7 +37,7 @@
 \*------------------------------------*/
 
 .hero {
-	.padding(vertical; 14; 10);
+	.padding(vertical; 21; 10);
 	.font-size(4.2);
 }
 .header {

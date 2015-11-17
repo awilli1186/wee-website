@@ -45,8 +45,8 @@ Wee.fn.make('docs', {
 			}
 		});
 
-		var $navLinks = $('a', 'ref:scroll'),
-			activeClass = '--is-active';
+		var $navLinks = $('a', 'ref:sidebar'),
+			activeClass = '-is-active';
 
 		$navLinks.on('click', function() {
 			$navLinks.removeClass(activeClass);

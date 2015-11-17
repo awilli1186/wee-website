@@ -180,9 +180,7 @@
 				"build/intro.md",
 				"build/setup.md",
 				"build/tasks.md",
-				"build/*.md",
-				"!build/faq.md",
-				"build/faq.md"
+				"build/*.md"
 			],
 			"sections": {
 				"config": {

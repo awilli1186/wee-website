@@ -135,7 +135,7 @@ padding-left: 4rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @padding | unit | @bumperPadding | Padding value ||
+| @padding | unit | [@bumperPadding](/style/variables#layout) = 6% | Padding value ||
 
 ---code|modifier:split|label:Padded---
 

@@ -1,11 +1,11 @@
 ---
 name: Tasks
-description: Command line tasks for compiling your project
+description: Command line tasks for building your project
 ---
 
 ---code|label:Default---
 
-Simply run ```node wee run``` from the command line to build your project once. This compiles and minifies all assets.
+Run `node wee run` from the command line to build your project once. This compiles and minifies all assets.
 
 ```bash
 node wee run
@@ -13,7 +13,7 @@ node wee run
 
 ---code|label:Static Server---
 
-Running ```node wee run:static``` will continuously compile your CSS and JavaScript changes on the fly, launch a local web server, serve the static HTML files in the specified project root, and reload as necessary.
+Running `node wee run:static` will continuously compile your CSS and JavaScript changes on the fly, launch a local web server, serve the static HTML files in the specified project root, and reload as necessary.
 
 ```bash
 node wee run:static
@@ -26,6 +26,23 @@ For more advanced needs, you will probably need to run your own local server to 
 ```bash
 node wee run:local
 ```
+
+---code|label:Generate---
+
+This task will generate `wee.json` configured static sites on demand. [Read more](/generator) about static generation.
+
+```bash
+node wee run:generate
+```
+
+---code|label:Reset---
+
+To remove unnecessary repo files and sample assets from a default Wee install run the reset task.
+
+```bash
+node wee reset
+```
+
 ---code|label:Validate---
  
 Validate the current projects JavaScript source against defined standards. [Read more](/build/validation) about validation.
@@ -34,12 +51,12 @@ Validate the current projects JavaScript source against defined standards. [Read
 node wee validate
 ```
 
----code|label:Generate---
+---code|label:Test---
 
-This task will generate the static site on demand. [Read more](/generator) about static generation.
+Kick off JavaScript unit tests using [Intern](https://theintern.github.io). Read more about [testing in Wee](#testing).
 
 ```bash
-node wee run:generate
+node wee test
 ```
 
 ---code|label:Update---

@@ -24,8 +24,8 @@ animation: name 4s linear 0s 1;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | @name | value | -- | Animation name | ✓ |
-| @from | value | -- | From value | ✓ |
-| @to | value | -- | To value | ✓ |
+| @start | value | -- | Starting value | ✓ |
+| @end | value | -- | Ending value | ✓ |
 
 ---code---
 

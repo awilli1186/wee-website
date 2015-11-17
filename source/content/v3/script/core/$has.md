@@ -1,24 +1,35 @@
 ---
 name: $has
-heading: TODO
+heading: Check if storage criteria is set
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| key | string | -- | Storage reference | ✓ |
+| value | any | -- | Storage key or value ||
 
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code|type:boolean|modifier:split|label:Key---
 
 ```javascript
-TODO
+Wee.$set('key', {
+	key1: 'Don'
+});
+Wee.$has('key.key1');
 ```
 
 ```javascript
-TODO
+true
+```
+
+---code|type:boolean|modifier:split|label:Value---
+
+```javascript
+Wee.$set('key', [1, 2, 3]);
+Wee.$has('key', 4);
+```
+
+```javascript
+false
 ```

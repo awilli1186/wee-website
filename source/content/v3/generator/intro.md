@@ -1,6 +1,6 @@
 ---
 name: Generator
-heading: Static builder for documentation, style guides, or entire sites
+heading: Static builder for style guides, documentation, or entire sites
 global:
   seoTitle: Static Site Generator
   seoDesc: The Node-based Wee static site generator is perfect for for documentation, style guides, or entire websites.

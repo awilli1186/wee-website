@@ -1,6 +1,6 @@
 ---
 name: Root
-heading: Get currently bound asset root or set root with specified value
+heading: Get current asset root or set with specified value
 ---
 
 ---variables---
@@ -8,10 +8,6 @@ heading: Get currently bound asset root or set root with specified value
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | value | string | -- | Root request path ||
-
----note---
-
-**Note:** You can override the root on individual requests. For instance, you may want to load all your static assets from a CDN but pull JSON or other files from a local server.
 
 ---code|label:Set---
 
@@ -44,3 +40,7 @@ if (Wee.$env() == 'prod') {
 	Wee.assets.root('https://cdn.weepower.com');
 }
 ```
+
+---note---
+
+**Note:** You can override the root on individual requests. For instance, you may want to load all your static assets from a CDN but pull JSON or other files from a local server.

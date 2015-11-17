@@ -33,4 +33,4 @@ $('ref:element');
 
 ---note---
 
-**Note:** This function is called by default with on page load. Subsequent calls clear the cache for the provided context and reset the references.
+**Note:** This function is called by default on page load and after relevant DOM manipulation. Subsequent calls clear the cache for the provided context and reset the references.

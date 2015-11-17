@@ -47,24 +47,12 @@ text-indent: 100%;
 white-space: nowrap;
 ```
 
----code|modifier:split|label:Hide---
-
-```less
-.hide(text);
-```
-
-```css
-overflow: hidden;
-text-indent: 100%;
-white-space: nowrap;
-```
-
 ---variables|label:Selection---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | @selectionColor | Selection color ||
-| @background | color, string, keyword | @selectionBackground | Selection background ||
+| @color | color | [@selectionColor](/style/variables#miscellaneous) = @white | Selection color ||
+| @background | color, string, keyword | [@selectionBackground](/style/variables#miscellaneous) = @linkColor | Selection background ||
 
 ---code|modifier:split---
 
@@ -231,7 +219,7 @@ width: 100%;
 height: 100%;
 ```
 
----code|modifier:split|label:No-Clear---
+---code|modifier:split|label:No Clear---
 
 ```less
 .no-clear();

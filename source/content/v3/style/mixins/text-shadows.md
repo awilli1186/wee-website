@@ -54,7 +54,7 @@ text-shadow: -1px -1px 0 #00f;
 | -- | -- | -- | -- | -- |
 | inner | keyword | -- | Inner preset ||
 | light, dark | keyword | -- | Light or dark preset | ✓ |
-| @value, @opacity | number | @defaultOpacity | Opacity ||
+| @value, @opacity | number | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Opacity ||
 | @x | unit | 1px | Horizontal offset ||
 | @y | unit | 1px | Vertical offset ||
 | @blur | unit | 0 | Blur ||

@@ -10,10 +10,11 @@ name: Files
 * package.json
 * wee.js
 * wee.json
+* node_modules/
 * public/
 	* [.htaccess](#htaccess)
 	* 404.html
-	* browserconfig.xml
+	* [browserconfig.xml](#browserconfig)
 	* favicon.ico
 	* [humans.txt](#humans)
 	* index.html

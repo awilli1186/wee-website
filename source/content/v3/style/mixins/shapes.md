@@ -7,7 +7,7 @@ name: Shapes
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | up, down, right, left | keyword | -- | Direction | ✓ |
-| @color | color | @darkGray | Color ||
+| @color | color | [@darkGray](/style/variables#grayscale) = lighten(#000, 45%) | Color ||
 | @size | unit | 5px | Size ||
 | @horizontalSize, @verticalSize | unit | @size | Horizontal or vertical size ||
 

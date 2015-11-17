@@ -23,7 +23,7 @@ heading: Create a centered container based on @minWidth, @maxWidth, and @padCont
 .container();
 ```
 
-```less
+```css
 display: block;
 margin-left: auto;
 margin-right: auto;

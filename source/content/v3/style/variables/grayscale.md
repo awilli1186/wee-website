@@ -4,12 +4,12 @@ name: Grayscale
 
 ```less
 @white: #fff;
-@lightestGray: lighten(#000, 96%);
-@lighterGray: lighten(#000, 90%);
-@lightGray: lighten(#000, 75%);
-@gray: lighten(#000, 65%);
-@darkGray: lighten(#000, 45%);
-@darkerGray: lighten(#000, 35%);
-@darkestGray: lighten(#000, 25%);
+@lightestGray: darken(#fff, 4%);
+@lighterGray: darken(#fff, 10%);
+@lightGray: darken(#fff, 25%);
+@gray: darken(#fff, 35%);
+@darkGray: darken(#fff, 55%);
+@darkerGray: darken(#fff, 65%);
+@darkestGray: darken(#fff, 75%);
 @black: #000;
 ```

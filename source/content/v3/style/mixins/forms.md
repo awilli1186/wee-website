@@ -6,7 +6,7 @@ name: Forms
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | @inputPlaceholderColor | Placeholder color ||
+| @color | color | [@inputPlaceholderColor](/style/variables#forms) = lighten(@inputColor, 40%) | Placeholder color ||
 
 ---code|modifier:split---
 

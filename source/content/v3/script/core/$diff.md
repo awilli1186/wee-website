@@ -1,24 +1,56 @@
 ---
 name: $diff
-heading: TODO
+heading: Generate a delta from two objects
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| a | object | -- | Original object | ✓ |
+| b | object | -- | Compared object | ✓ |
 
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code|type:object|modifier:split---
 
 ```javascript
-TODO
+Wee.$diff({
+	key1: 'Don',
+	key2: true,
+	key3: {
+		nested: true
+	}
+}, {
+	key1: 'Don',
+	key3: {
+		nested: false
+	},
+	key4: 'new'
+});
 ```
 
 ```javascript
-TODO
+{
+	key1: {
+		after: "Don",
+		before: "Don",
+		type: "-"
+	},
+	key2: {
+		after: undefined,
+		before: true,
+		type: "d"
+	},
+	key3: {
+		nested: {
+			after: false,
+			before: true,
+			type: "u"
+		}
+	},
+	key4: {
+		after: "new",
+		before: undefined,
+		type: "c"
+	}
+}
 ```

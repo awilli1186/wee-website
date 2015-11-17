@@ -12,7 +12,7 @@ link: /script/animate
 In this example, the selector is faded out to full transparency.
 
 ```javascript
-$('.element').tween({
+$('ref:element').tween({
 	opacity: 0
 });
 ```

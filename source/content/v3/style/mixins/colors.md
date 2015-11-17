@@ -6,21 +6,24 @@ name: Colors
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | @baseColor | Color value ||
+| @color | color | [@baseColor](/style/variables#base) = @darkestGray | Color value ||
 
 ---code|modifier:split---
 
 ```less
-.color(#123);
+.color(blue);
 ```
 
 ```css
-color: #123;
+color: #00f;
 ```
 
 ---code|label:Shortcuts---
 
 ```less
+.primary();
+.secondary();
+.tertiary();
 .white();
 .lightestGray();
 .lighterGray();
@@ -34,4 +37,4 @@ color: #123;
 
 ---note---
 
-**Note:** The values for @baseColor, @white, @black, and the grayscale are configurable with variables.less.
+**Note:** The values for all the above colors are configurable with [variables.less](/style/variables).

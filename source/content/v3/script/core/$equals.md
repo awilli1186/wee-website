@@ -1,24 +1,29 @@
 ---
 name: $equals
-heading: TODO
+heading: Compare two values for strict equality
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| a | object | -- | Original value | ✓ |
+| b | object | -- | Compared value | ✓ |
 
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code|type:boolean|modifier:split---
 
 ```javascript
-TODO
+Wee.$equals(1, 2);
+Wee.$equals({
+	key: true
+}, {
+	key: false
+});
+Wee.$equals([1, 2, 3], [1, 2, 3]);
 ```
 
 ```javascript
-TODO
+false
+false
+true
 ```

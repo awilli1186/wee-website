@@ -69,8 +69,8 @@
 				"history": true,
 				"routes": true,
 				"screen": true,
-				"touch": true,
-				"view": true
+				"touch": false,
+				"view": false
 			}
 		},
 		"build": [

@@ -105,7 +105,7 @@ body,
 	.size(100%; 6);
 	.transition('all 0.5s cubic-bezier(.75,.1,.25,.9)');
 	.transparent();
-	&.\--is-active {
+	&.-is-active {
 		.opaque();
 		.translate(y,-12);
 	}
@@ -131,7 +131,7 @@ body,
 	.scroll();
 	.size(60rem; 40rem);
 	.top(50%);
-	&.\--is-active {
+	&.-is-active {
 		.show();
 	}
 }
@@ -144,7 +144,7 @@ body,
 	.left();
 	.right();
 	.top();
-	&.\--is-active {
+	&.-is-active {
 		.show();
 	}
 }

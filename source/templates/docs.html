@@ -1,14 +1,14 @@
 {{> header }}
 {{> sidebar }}
 
-<div class="scrollable subnav" data-ref="scroll subnav">
+<div class="sidebar subnav" data-ref="sidebar subnav">
 	<div class="viewport">
-		<div class="overview js-overview">
+		<div class="overview">
 			<h3>Contents</h3>
 			<ul class="sublinks">
 				{{ #content|each }}
 					{{ #sourceName|not('intro') }}
-						<li{{ #deprecated }} class="subnav--deprecated"{{ /deprecated }}>
+						<li{{ #deprecated }} class="subnav -deprecated"{{ /deprecated }}>
 							<a href="#{{ name|slug }}">{{ name }}</a>
 						</li>
 					{{ /sourceName }}
@@ -24,8 +24,12 @@
 			{{ #sourceName|is('intro') }}
 			<div class="intro">
 				<h1 class="intro__title">
-					{{ name }}{{ #path|notEmpty }}
-					<a href="{{ $root.site.gitHubRoot }}{{ path }}" class="intro__link">→</a>{{ /path }}
+					{{ name }}
+					{{ #path|notEmpty }}
+						<a href="{{ $root.site.gitHubRoot }}{{ path }}" class="intro__link">
+							<span class="souce-link">View on GitHub</span>
+						</a>
+					{{ /path }}
 				</h1>
 				{{ #heading }}
 					<p class="intro__heading">{{ heading }}</p>
@@ -40,10 +44,14 @@
 						{{ name }}
 						<a href="#{{ name|slug }}" id="{{ name|slug }}" class="doc__anchor">#</a>
 						{{ #path|notEmpty }}
-							<a href="{{ $root.site.gitHubRoot }}{{ path }}" class="doc__link">→</a>
+							<a href="{{ $root.site.gitHubRoot }}{{ path }}" class="doc__link">
+								<span class="souce-link">View on GitHub</span>
+							</a>
 						{{ /path }}
 						{{ #link|notEmpty }}
-							<a href="{{ link }}" class="doc__link">→</a>
+							<a href="{{ link }}" class="doc__link">
+								<span class="souce-link">View on GitHub</span>
+							</a>
 						{{ /link }}
 					</h2>
 					{{ #heading|notEmpty }}
@@ -55,8 +63,8 @@
 							<h3 class="doc__label doc__{{ name }}__label">{{ label }}</h3>
 						{{ /label }}
 						<div class="doc__{{ name }}
-							{{ #type|notEmpty }} doc__{{ name }}--{{ type }}{{ /type }}
-							{{ #modifier|notEmpty }} doc__{{ name }}--{{ modifier }}{{ /modifier }}
+							{{ #type|notEmpty }} doc__{{ name }} -{{ type }}{{ /type }}
+							{{ #modifier|notEmpty }} doc__{{ name }} -{{ modifier }}{{ /modifier }}
 						">
 							{{ output|raw }}
 						</div>

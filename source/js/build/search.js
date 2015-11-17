@@ -1,13 +1,19 @@
 Wee.fn.make('search', {
 	init: function() {
-		var scope = this;
+		var scope = this,
+			$search = $('ref:search'),
+			searchExpanded = false;
 
-		$('ref:search').on('click', function() {
-			$(this).addClass('--is-expanded');
+		$('ref:searchButton').on('click', function() {
+			$search.toggleClass('-is-expanded', ! searchExpanded);
 
-			setTimeout(function() {
-				$('ref:searchInput')[0].focus();
-			}, 10);
+			if (! searchExpanded) {
+				setTimeout(function() {
+					$('ref:searchInput')[0].focus();
+				}, 10);
+			}
+
+			searchExpanded = ! searchExpanded;
 		});
 
 		$('ref:searchInput').on({
@@ -46,7 +52,7 @@ Wee.fn.make('search', {
 }, {
 	process: function(key, value) {
 		var scope = this,
-			activeClass = '--is-active';
+			activeClass = '-is-active';
 
 		if (scope.$active) {
 			scope.$active.removeClass(activeClass);

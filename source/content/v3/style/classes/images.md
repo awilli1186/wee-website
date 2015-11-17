@@ -18,7 +18,7 @@ heading: Perfect for alignment of images in content blocks
 .img-left();
 ```
 
-```less
+```css
 float: left;
 margin-top: 0.32em;
 margin-right: 2rem;
@@ -40,7 +40,7 @@ margin-bottom: 2rem;
 .img-right();
 ```
 
-```less
+```css
 float: right;
 margin-top: 0.32em;
 margin-bottom: 2rem;

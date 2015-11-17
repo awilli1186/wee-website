@@ -16,7 +16,7 @@ $('.parent > .child');
 
 ---doc|label:References---
 
-References are a distinctive approach to referencing DOM elements from your script. They bring added benefit of being cached when the page loads so they offer superior performance to standard selectors. Refs are more distinct than ```js-``` classes. Anywhere in Wee where you can pass a standard selector you can also pass a ```'ref:name'``` string.
+References are a distinctive approach to selecting elements. They are cached when the page loads making them extremely quick to reference and are more visually distinct in markup than `js-` classes. Anywhere you can pass a standard selector you can also pass a 'ref:name' string.
 
 ---code|modifier:split---
 
@@ -28,9 +28,13 @@ References are a distinctive approach to referencing DOM elements from your scri
 $('ref:element');
 ```
 
+---note---
+
+**Note:** References can't be chained like `$('ref:element .child')`. To scope a selection within a reference pass the ref selector as the context argument like `$('.child', 'ref:element')`.
+
 ---doc---
 
-If multiple refs are set with the same name they are pushed into an array an can be targeted with a single ref selection. You can also set multiple ref values separated with spaces.
+If multiple references are set with the same name they are pushed into an array an can be targeted with a single ref selection. You can also provide a comma-delimited list of multiple refs.
 
 ---code|modifier:split---
 
@@ -51,4 +55,4 @@ $('ref:element2').on('click', function() {
 
 ---note---
 
-**Note:** If you add elements to the page dynamically you can call the `Wee.$setRef()` method.
+**Note:** `Wee.$setRef()` can be called to update the ref cache.

@@ -1,6 +1,6 @@
 ---
 name: Tween
-heading: Load specified assets with specified set of options
+heading: Transition an attribute or property value
 ---
 
 ---variables---
@@ -17,7 +17,7 @@ heading: Load specified assets with specified set of options
 | -- | -- | -- | -- | -- |
 | complete | [function](/script/#functions) | -- | Callback function ||
 | duration | number | 400 | Transition duration in milliseconds ||
-| ease | string | 'ease' | Name of easing function ||
+| ease | string | 'ease' | Name of registered easing function ||
 
 ---code|label:Simple---
 

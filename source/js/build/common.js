@@ -1,11 +1,27 @@
 Wee.fn.make('common', {
 	init: function() {
+		var scope = this,
+			$body = $(Wee._body);
+
+		// Setup color scheme picker
+		this.$private.setScheme();
+
+		$('ref:switch').on('click', function() {
+			$body.addClass('-is-changing');
+
+			scope.$private.setScheme(true);
+
+			setTimeout(function() {
+				$body.removeClass('-is-changing');
+			}, 500);
+		});
+
 		// Disable mouse event outlines
-		$('a').on('mousedown', function(e) {
-			var $el = $(e.target);
+		$('a').on('mousedown', function() {
+			var $el = $(this);
 
 			if ($el.css('outline-style') == 'none') {
-				var outlineClass = '--no-outline';
+				var outlineClass = '-no-outline';
 
 				$el.addClass(outlineClass).on('blur', function() {
 					$el.removeClass(outlineClass);
@@ -16,22 +32,41 @@ Wee.fn.make('common', {
 		}, {
 			delegate: Wee._body
 		});
-
-		// Setup color scheme picker
-		$('ref:switch').on('click', function() {
-			this.dark = this.dark === undefined ?
-				(this.$private.getCookie('dark') != 'false') :
-				! this.dark;
-
-			document.cookie = 'dark:' + this.dark;
-
-			$(Wee._body).toggleClass('--dark', this.dark);
-		}, {
-			init: true,
-			scope: this
-		});
 	}
 }, {
+	/**
+	 * Default the color scheme to dark
+	 */
+	_construct: function() {
+		this.dark = true;
+	},
+
+	/**
+	 * Toggle the color scheme between dark/light
+	 *
+	 * @private
+	 * @param toggle
+	 */
+	setScheme: function(toggle) {
+		this.dark = toggle ?
+			! this.dark :
+			this.getCookie('dark') != 'false';
+
+		var d = new Date();
+		d.setTime(d.getTime() + 31536000);
+
+		document.cookie = 'dark:' + this.dark + ';expires=' + d.toUTCString();
+
+		$(Wee._body).toggleClass('-dark', this.dark);
+	},
+
+	/**
+	 * Get a cookie from the user
+	 *
+	 * @private
+	 * @param name
+	 * @returns {*|string}
+	 */
 	getCookie: function(name) {
 		var values = document.cookie.split(';'),
 			i = 0;

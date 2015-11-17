@@ -6,7 +6,7 @@ Wee comes with several standard JavaScript features such as asset loading, chain
 
 ---code|label:Core---
 
-The core section allows you to enable or disable core JavaScript features. For instance, if your project requires jQuery, you may choose not to include Wee's DOM and chaining.
+The core section allows you to enable or disable core features. For instance, if your project requires jQuery, you may choose not to include Wee's DOM and chaining.
 
 ```javascript
 "core": {
@@ -76,7 +76,7 @@ The validation section controls which settings are used for [JSCS](http://jscs.i
 
 ---code|label:Source Maps---
 
-Source maps allow supporting browsers to map compiled and minified code to original source scripts. This is useful for debugging and locating errors.
+Source maps allow supporting browsers to map compiled and minified code to original source scripts. This is useful for debugging errors.
 
 ```javascript
 "sourceMaps": true

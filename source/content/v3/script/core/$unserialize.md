@@ -7,18 +7,17 @@ heading: TODO
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
-
----doc|label:Set---
-
-TODO
+| str | string | -- | Serialized string | ✓ |
 
 ---code|type:string|modifier:split---
 
 ```javascript
-TODO
+Wee.$unserialize('key1=value+1&key2=value+2');
 ```
 
 ```javascript
-TODO
+{
+	key1: "value 1",
+	key2: "value 2"
+}
 ```

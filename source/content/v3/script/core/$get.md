@@ -15,11 +15,11 @@ heading: Get global variable
 ---code|modifier:split---
 
 ```javascript
-Wee.$get('anotherKey');
-Wee.$get('anotherKey', 'Fallback');
-Wee.$get('anotherKey');
-Wee.$get('anotherKey', 'Fallback', true);
-Wee.$get('anotherKey');
+Wee.$get('key');
+Wee.$get('key', 'Fallback');
+Wee.$get('key');
+Wee.$get('key', 'Fallback', true);
+Wee.$get('key');
 ```
 
 ```javascript

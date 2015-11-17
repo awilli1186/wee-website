@@ -1,6 +1,6 @@
 ---
 name: $parseHTML
-heading: Create a DOM object from an HTML string
+heading: Create document fragment from an HTML string
 ---
 
 ---variables---
@@ -12,6 +12,6 @@ heading: Create a DOM object from an HTML string
 ---code---
 
 ```javascript
-var newElem = Wee.$parseHTML('<span class="testing">Testing</span>');
-Wee.$hasClass(newElem, 'testing');
+var el = Wee.$parseHTML('<span class="testing">Testing</span>');
+Wee.$hasClass(el.childNodes, 'testing');
 ```

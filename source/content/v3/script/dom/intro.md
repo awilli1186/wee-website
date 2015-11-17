@@ -1,7 +1,7 @@
 ---
 name: DOM
 heading: Easily interface with the DOM for updates and retrieval
-path: /public/assets/wee/script/wee.dom.js
+path: /js/wee.dom.js
 global:
   seoTitle: DOM Interaction
   seoDesc: Easily interface with the DOM for updates and retrieval with an API similar to jQuery.

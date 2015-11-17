@@ -6,7 +6,7 @@ name: Font Size
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | unit | @baseFontSize | Font size ||
+| @value | unit | [@baseFontSize](/style/variables#base) = 1.6 | Font size ||
 
 ---code|modifier:split---
 

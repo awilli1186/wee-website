@@ -6,7 +6,7 @@ name: Rounded Corners
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | unit | 3px | Size of radius ||
+| @value | unit | [@defaultRadius](/style/variables#miscellaneous) = 3px | Size of radius ||
 
 ---code|modifier:split---
 
@@ -24,7 +24,7 @@ border-radius: 3rem;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | top, right, bottom, left | keyword | -- | Side presets | ✓ |
-| @value | unit | 3px | Radius ||
+| @value | unit | [@defaultRadius](/style/variables#miscellaneous) = 3px | Radius ||
 
 ---code|modifier:split---
 
@@ -57,7 +57,7 @@ border-bottom-right-radius: 5rem;
 | -- | -- | -- | -- | -- |
 | top, bottom | keyword | -- | Top or bottom preset | ✓ |
 | left, right | keyword | -- | Left or right  preset | ✓ |
-| @value | unit | 3px | Radius ||
+| @value | unit | [@defaultRadius](/style/variables#miscellaneous) = 3px | Radius ||
 
 ---code|modifier:split---
 
