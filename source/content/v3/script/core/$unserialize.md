@@ -1,6 +1,6 @@
 ---
 name: $unserialize
-heading: TODO
+heading: Unserialize string into object
 ---
 
 ---variables---

@@ -1,9 +1,7 @@
 ---
-name: Apps
-heading: Create dynamic data-driven interfaces
+name: Bind
+heading: Bind element events and form submit events to PJAX
 ---
-
-TODO
 
 ---variables---
 
@@ -11,7 +9,7 @@ TODO
 | -- | -- | -- | -- | -- |
 | TODO | TODO | -- | TODO ||
 
----doc|label:Make---
+---doc|label:Set---
 
 TODO
 

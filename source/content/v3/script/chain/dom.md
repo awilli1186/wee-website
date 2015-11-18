@@ -22,7 +22,7 @@ link: /script/dom
 * [$(sel).eq(index, context)](/script/core#eq)
 * [$(sel).filter(filter, options)](/script/dom#filter)
 * [$(sel).find(filter)](/script/dom#find)
-* [$(sel).first(context)](/script/core#first)
+* [$(sel).first()](/script/core#first)
 * [$(sel).get(index)](/script/core#eq)
 * [$(sel).hasClass(className)](/script/dom#hasclass)
 * [$(sel).height(value)](/script/dom#height)

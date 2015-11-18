@@ -1,9 +1,7 @@
 ---
-name: Apps
-heading: Create dynamic data-driven interfaces
+name: Go
+heading: Navigate to a new path or within the browser history
 ---
-
-TODO
 
 ---variables---
 
@@ -11,7 +9,7 @@ TODO
 | -- | -- | -- | -- | -- |
 | TODO | TODO | -- | TODO ||
 
----doc|label:Make---
+---doc|label:Set---
 
 TODO
 

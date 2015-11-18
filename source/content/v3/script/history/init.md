@@ -1,17 +1,22 @@
 ---
 name: Init
-heading: TODO
+heading: Set the initial state and popstate event, and bind global actions
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| options | object | -- | Object properties below ||
 
----doc|label:Set---
+---variables|label:Options Object---
 
-TODO
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| args | array | -- | Callback arguments ||
+| context | [selection](/script#selection) | document | Callback context ||
+| scope | object | -- | Callback scope ||
+| reverse | boolean | false | Reverse the order of execution ||
 
 ---code|type:string|modifier:split---
 

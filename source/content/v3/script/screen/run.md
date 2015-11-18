@@ -1,24 +1,10 @@
 ---
 name: Run
-heading: TODO
+heading: Evaluate the current breakpoint
 ---
 
----variables---
-
-| Variable | Type | Default | Description | Required |
-| -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
-
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code---
 
 ```javascript
-TODO
-```
-
-```javascript
-TODO
+Wee.screen.run();
 ```

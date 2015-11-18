@@ -27,7 +27,7 @@
 		}
 	},
 	"data": {
-		"version": "2.4.1",
+		"version": "3.0.0",
 		"analyticsID": "UA-40595891-1",
 		"gitHubRoot": "https://github.com/weepower/wee/tree/master",
 		"social": {
@@ -410,6 +410,7 @@
 					"contentRoot": "v3",
 					"content": [
 						"script/history/intro.md",
+						"script/history/init.md",
 						"script/history/*.md"
 					]
 				},

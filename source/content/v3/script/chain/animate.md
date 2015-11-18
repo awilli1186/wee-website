@@ -9,10 +9,12 @@ link: /script/animate
 
 ---code---
 
-In this example, the selector is faded out to full transparency.
+In this example, the target is faded out to full transparency.
 
 ```javascript
 $('ref:element').tween({
 	opacity: 0
+}, {
+	duration: 600
 });
 ```

@@ -7,9 +7,9 @@ heading: Attach callback to data storage change
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | TODO | ✓ |
-| fn | [function](/script/#functions) | -- | TODO | ✓ |
-| options | object | -- | TODO ||
+| key | string | -- | Storage reference | ✓ |
+| fn | [function](/script/#functions) | -- | Trigger method | ✓ |
+| options | object | -- | Observation options below ||
 
 ---variables|label:Options Object---
 

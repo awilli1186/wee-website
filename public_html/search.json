@@ -2060,7 +2060,7 @@
 	
 	{
 		"title": "$unserialize",
-		"description": "TODO",
+		"description": "Unserialize string into object",
 		"url": "http://www.weepower.dev/v3/script/core#unserialize"
 	},
 	
@@ -2420,7 +2420,7 @@
 	
 	{
 		"title": "addEvent",
-		"description": "TODO",
+		"description": "Add a custom event",
 		"url": "http://www.weepower.dev/v3/script/events#addevent"
 	},
 	
@@ -2450,7 +2450,7 @@
 	
 	{
 		"title": "Touch",
-		"description": "TODO",
+		"description": "Standard swipe events are available out of the box",
 		"url": "http://www.weepower.dev/v3/script/events#touch"
 	},
 	
@@ -2473,8 +2473,20 @@
 	},
 	
 	{
+		"title": "Bind",
+		"description": "Bind element events and form submit events to PJAX",
+		"url": "http://www.weepower.dev/v3/script/history#bind"
+	},
+	
+	{
+		"title": "Go",
+		"description": "Navigate to a new path or within the browser history",
+		"url": "http://www.weepower.dev/v3/script/history#go"
+	},
+	
+	{
 		"title": "Init",
-		"description": "TODO",
+		"description": "Set the initial state and popstate event, and bind global actions",
 		"url": "http://www.weepower.dev/v3/script/history#init"
 	},
 	
@@ -2534,7 +2546,7 @@
 	
 	{
 		"title": "addFilter",
-		"description": "TODO",
+		"description": "Add conditional route filter",
 		"url": "http://www.weepower.dev/v3/script/routes#addfilter"
 	},
 	
@@ -2582,13 +2594,13 @@
 	
 	{
 		"title": "Reset",
-		"description": "TODO",
+		"description": "Reset all bound events",
 		"url": "http://www.weepower.dev/v3/script/screen#reset"
 	},
 	
 	{
 		"title": "Run",
-		"description": "TODO",
+		"description": "Evaluate the current breakpoint",
 		"url": "http://www.weepower.dev/v3/script/screen#run"
 	},
 	
@@ -2612,7 +2624,7 @@
 	
 	{
 		"title": "Apps",
-		"description": "TODO",
+		"description": "Create dynamic data-driven interfaces",
 		"url": "http://www.weepower.dev/v3/script/view#app"
 	},
 	

@@ -5,13 +5,16 @@
 
 	<title>{{ #seoTitle|notEmpty }}{{ seoTitle }}{{ else }}{{ section.name }}{{ /seoTitle }} | {{ site.name }}</title>
 
-	{{ #seoDesc|notEmpty }}<meta name="description" content="{{ seoDesc }}">{{ /seoDesc }}
+	{{ #seoDesc|notEmpty }}
+	<meta name="description" content="{{ seoDesc }}">
+	{{ /seoDesc }}
 
 	{{ #seoNoIndex|notEmpty }}
 	<meta name="robots" content="noindex, follow">
 	{{ /seoNoIndex }}
 
-	<link rel="apple-touch-icon" href="{{ site.assetUrl }}/img/icons/touchicon.png">
+	<link rel="apple-touch-icon" href="{{ site.assetUrl }}/img/icons/touch.png">
+	<link rel="mask-icon" href="{{ site.assetUrl }}/img/icons/pin.svg" color="#349bb9">
 	<link rel="publisher" href="https://plus.google.com/{{ site.social.googlePageID }}">
 	{{ #author|notEmpty }}
 	<link rel="author" href="{{ author }}">
@@ -23,7 +26,9 @@
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="{{ site.name }}">
 	<meta property="og:title" content="{{ #seoTitle|notEmpty }}{{ seoTitle }}{{ else }}{{ site.name }}{{ /seoTitle }}" itemprop="name">
-	{{ #seoDesc|notEmpty }}<meta property="og:description" content="{{ seoDesc }}" itemprop="description">{{ /seoDesc }}
+	{{ #seoDesc|notEmpty }}
+	<meta property="og:description" content="{{ seoDesc }}" itemprop="description">
+	{{ /seoDesc }}
 	<meta property="og:url" content="{{ url }}" itemprop="url">
 	<meta property="og:image" content="{{ site.cdnUrl }}{{ #shareImage|notEmpty }}{{ shareImage }}{{ else }}{{ site.assetUrl }}/img/share.png{{ /shareImage }}" itemprop="image">
 
@@ -31,7 +36,6 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
 
 	<!--[if lte IE 9]>
-	<link rel="stylesheet" href="{{ site.assetUrl }}/css/ie9.min.css?v{{ site.cssLegacyVersion }}">
 	<script src="{{ site.assetUrl }}/js/ie9.min.js?v{{ site.jsLegacyVersion }}"></script>
 	<![endif]-->
 

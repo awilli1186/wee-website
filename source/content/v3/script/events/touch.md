@@ -1,24 +1,14 @@
 ---
 name: Touch
-heading: TODO
+heading: Standard swipe events are available out of the box
 ---
 
----variables---
+The `swipeLeft`, `swipeRight`, `swipeUp`, and `swipeDown` events are available and work just like standard events.
 
-| Variable | Type | Default | Description | Required |
-| -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
-
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code---
 
 ```javascript
-TODO
-```
-
-```javascript
-TODO
+Wee.on('ref:element', 'swipeRight', function() {
+	// Swipe logic
+});
 ```

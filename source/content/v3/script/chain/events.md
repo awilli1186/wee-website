@@ -16,7 +16,7 @@ In this example, the selector is the element to which the event is bound.
 
 ```javascript
 $('.element').on('click', function() {
-	// Callback logic
+	// Click logic
 });
 ```
 
