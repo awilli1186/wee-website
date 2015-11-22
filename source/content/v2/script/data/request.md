@@ -7,13 +7,13 @@ heading: Make Ajax request based on specified options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| options | object | -- | Request options below | ✓ |
+| options | object | -- | Request options below | ✔ |
 
 ---variables|label:Options Object---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| url | string | -- | URL endpoint to request | ✓ |
+| url | string | -- | URL endpoint to request | ✔ |
 | args | array | -- | Callback arguments appended after default parameters ||
 | data | object | -- | Object to serialize and pass along with request ||
 | failure | function | -- | [Callback](/script/#functions) if request fails ||

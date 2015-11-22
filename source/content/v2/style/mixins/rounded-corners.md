@@ -23,7 +23,7 @@ border-radius: 3rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| top, right, bottom, left | keyword | -- | Side presets | ✓ |
+| top, right, bottom, left | keyword | -- | Side presets | ✔ |
 | @value | unit | 3px | Radius ||
 
 ---code|modifier:split---
@@ -55,8 +55,8 @@ border-bottom-right-radius: 5rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| top, bottom | keyword | -- | Top or bottom preset | ✓ |
-| left, right | keyword | -- | Left or right  preset | ✓ |
+| top, bottom | keyword | -- | Top or bottom preset | ✔ |
+| left, right | keyword | -- | Left or right  preset | ✔ |
 | @value | unit | 3px | Radius ||
 
 ---code|modifier:split---
@@ -85,10 +85,10 @@ border-top-right-radius: 4rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @top | unit | -- | Top radius | ✓ |
-| @right | unit | -- | Right radius | ✓ |
-| @bottom | unit | -- | Bottom radius | ✓ |
-| @left | unit | -- | Left radius | ✓ |
+| @top | unit | -- | Top radius | ✔ |
+| @right | unit | -- | Right radius | ✔ |
+| @bottom | unit | -- | Bottom radius | ✔ |
+| @left | unit | -- | Left radius | ✔ |
 
 ---code|modifier:split---
 

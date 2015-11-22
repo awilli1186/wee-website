@@ -73,7 +73,7 @@ $('.element').add('ref:selection').hide();
 
 DOM traversal is made easy with chaining.
 
-```markup
+```html
 <ul>
 	<li>One</li>
 	<li>Two</li>

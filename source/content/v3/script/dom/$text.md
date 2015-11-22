@@ -7,12 +7,12 @@ heading: Get inner text of first selection or set each matching selection's text
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| value | [function](/script/#functions), string | -- | Text to set or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| value | [function](/script/#functions), string | -- | Text to set or callback | ✔ |
 
 ---code---
 
-```markup
+```html
 <div class="js-element">Inner text</div>
 ```
 
@@ -34,7 +34,7 @@ Wee.$text('.js-element', 'New text');
 
 ---code|label:Function---
 
-The current index and text are injected into the callback. The scope of ```this``` is the element.
+The current index and text are injected into the callback. The scope of `this` is the element.
 
 ```javascript
 Wee.$text('.js-element', function(el, i, text) {

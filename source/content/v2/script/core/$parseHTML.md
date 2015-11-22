@@ -7,7 +7,7 @@ heading: Create a DOM object from an HTML string
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| html | string | -- | HTML to convert | ✓ |
+| html | string | -- | HTML to convert | ✔ |
 | convert | boolean | -- | Convert to Wee DOM object (deprecated) ||
 
 ---code---

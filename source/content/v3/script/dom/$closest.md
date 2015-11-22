@@ -7,13 +7,13 @@ heading: Get unique closest ancestors of each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| filter | [selection](/script#selection) | -- | Filter selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| filter | [selection](/script#selection) | -- | Filter selection | ✔ |
 | context | [selection](/script#selection) | -- | Context selection ||
 
 ---code---
 
-```markup
+```html
 <div class="nav">
 	<a class="link--account">Your Account</a>
 </div>
@@ -28,7 +28,7 @@ heading: Get unique closest ancestors of each matching selection
 Wee.$closest('.link--about', '.nav');
 ```
 
-```markup
+```html
 <div class="nav">
 	<a class="link--about">About Us</a>
 </div>

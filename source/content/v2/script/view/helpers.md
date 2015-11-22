@@ -9,8 +9,8 @@ Properties of the tag that the helper is being called on can be accessed via the
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| name | string | -- | Helper name | ✓ |
-| fn | [function](/script/#functions) | -- | Helper callback | ✓ |
+| name | string | -- | Helper name | ✔ |
+| fn | [function](/script/#functions) | -- | Helper callback | ✔ |
 
 ---code---
 

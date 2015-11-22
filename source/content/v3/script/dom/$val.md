@@ -7,8 +7,8 @@ heading: Get value of first matching selection or set values of each matching se
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| value | [function](/script/#functions), string | -- | Class name(s) to add or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| value | [function](/script/#functions), string | -- | Class name(s) to add or callback | ✔ |
 
 ---code|label:Get---
 
@@ -24,9 +24,9 @@ Wee.$val('ref:element', '123');
 
 ---code|modifier:stacked|label:Function---
 
-The current index and value are injected into the callback. The scope of ```this``` is the element.
+The current index and value are injected into the callback. The scope of `this` is the element.
 
-```markup
+```html
 <input type="text" value="This is an ordinary sentence in an input field." data-ref="input">
 ```
 

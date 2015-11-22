@@ -8,8 +8,8 @@ related: $after
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✔ |
 | remove | boolean | false | Remove target after insertion ||
 
 ---code|label:Selection---
@@ -26,7 +26,7 @@ Wee.$before('ref:element', '<span>Injected notice</span>');
 
 ---code|label:Function---
 
-The current index and HTML are injected into the callback. The scope of ```this``` is the element.
+The current index and HTML are injected into the callback. The scope of `this` is the element.
 
 ```javascript
 Wee.$before('ref:element', function(i, html) {

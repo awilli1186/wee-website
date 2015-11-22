@@ -1,13 +1,15 @@
 ---
 name: addEasing
-heading: Transition an attribute or property value
+heading: Add additional easing function(s)
 ---
+
+Register custom easing functions for fine-tuned control of the animation. The function accepts a single dynamic coefficient variable to mathematically manipulate when responding.
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| a | object, string | -- | Multiple ease object or easing key | ✓ |
+| a | object, string | -- | Multiple ease object or easing key | ✔ |
 | b | function | -- | Easing function ||
 
 ---code|label:Single---
@@ -25,7 +27,7 @@ Wee.animate.addEasing({
 	split: function(t) {
 		return t / 2;
 	},
-	slow: function() {
+	slow: function(t) {
 		return t < 1 ? 1 : (t / 3);
 	}
 });

@@ -9,8 +9,8 @@ Controllers serve as the wrapper for custom script. They can be created per page
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| name | string | -- | Controller name | ✓ |
-| pub | object | -- | Public methods and properties | ✓ |
+| name | string | -- | Controller name | ✔ |
+| pub | object | -- | Public methods and properties | ✔ |
 | priv | object | -- | Private methods and properties ||
 
 ---code|label:Public---
@@ -39,9 +39,9 @@ Wee.controllerName.init();
 
 ---code|label:Private/Public---
 
-Private functions can be accessed from public methods by using ```this.$private.functionName(arguments)``` syntax. To call back into a public method from a private one use ```this.$public.functionName(arguments)```.
+Private functions can be accessed from public methods by using `this.$private.functionName(arguments)` syntax. To call back into a public method from a private one use `this.$public.functionName(arguments)`.
 
-Also note that you have access to ```this.$get()```, ```this.$set()```, and ```this.$push()``` across both public and private methods. By default stored values are namespaced to the current controller scope. If you need to control global variables use ```Wee.$get()```, ```Wee.$set()```, and ```Wee.$push()```.
+Also note that you have access to `this.$get()`, `this.$set()`, and `this.$push()` across both public and private methods. By default stored values are namespaced to the current controller scope. If you need to control global variables use `Wee.$get()`, `Wee.$set()`, and `Wee.$push()`.
 
 ```javascript
 Wee.fn.make('controllerName', {
@@ -94,7 +94,7 @@ Wee.fn.make('controllerName', {
 
 ---code|label:Destructor---
 
-The destruct method is executed to perform additional clean up or other actions when the controller is destroyed using ```this.$destroy()``` or ```Wee.controllerName.$destroy()``` outside the controller.
+The destruct method is executed to perform additional clean up or other actions when the controller is destroyed using `this.$destroy()` or `Wee.controllerName.$destroy()` outside the controller.
 
 ```javascript
 Wee.fn.make('controllerName', {

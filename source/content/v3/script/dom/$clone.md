@@ -7,7 +7,7 @@ heading: Clone each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 
 ---code---
 

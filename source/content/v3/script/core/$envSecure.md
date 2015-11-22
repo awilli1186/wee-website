@@ -1,6 +1,6 @@
 ---
 name: $envSecure
-heading: Determine if the current environment is secured
+heading: Determine if the current environment is SSL encrypted
 ---
 
 ---code|type:boolean|modifier:split---

@@ -7,7 +7,7 @@ heading: Remove specified function to specified element and optional event and f
 
 | Variable | Type| Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 | a | string | -- | Event name or object of events ||
 | b | [function](/script/#functions) | -- | Callback to remove ||
 

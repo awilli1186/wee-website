@@ -7,7 +7,7 @@ heading: Cast object to array if it isn't one
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| value | string, array | -- | Value to convert to array | ✓ |
+| value | string, array | -- | Value to convert to array | ✔ |
 
 ---code|modifier:split---
 

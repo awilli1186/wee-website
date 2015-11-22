@@ -9,8 +9,8 @@ Wee's default filters include ```is```, ```not```, ```isEmpty```, and ```notEmpt
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| name | string | -- | Filter name | ✓ |
-| fn | [function](/script/#functions) | -- | Filter callback | ✓ |
+| name | string | -- | Filter name | ✔ |
+| fn | [function](/script/#functions) | -- | Filter callback | ✔ |
 
 ---code|label:Boolean Response---
 

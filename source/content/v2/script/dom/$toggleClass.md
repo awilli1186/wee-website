@@ -7,8 +7,8 @@ heading: Toggle adding and removing class(es) from the specified element
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| className | [function](/script/#functions), string  | -- | Class name(s) or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| className | [function](/script/#functions), string  | -- | Class name(s) or callback | ✔ |
 | state | boolean | -- | Force add or remove ||
 
 ---code|label:Single---

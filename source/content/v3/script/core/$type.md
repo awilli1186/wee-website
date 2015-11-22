@@ -7,7 +7,7 @@ heading: Determine the JavaScript type of an object
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| obj | any | -- | Object to evaluate | ✓ |
+| obj | any | -- | Object to evaluate | ✔ |
 
 ---code|type:boolean|modifier:split---
 

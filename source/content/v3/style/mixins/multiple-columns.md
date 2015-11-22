@@ -30,7 +30,7 @@ column-gap: 2rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | --| -- |
-| @value | integer | -- | Column count | ✓ |
+| @value | integer | -- | Column count | ✔ |
 
 ---code|modifier:split---
 
@@ -48,7 +48,7 @@ column-count: 2;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | --| -- |
-| @value | unit | -- | Column gap width | ✓ |
+| @value | unit | -- | Column gap width | ✔ |
 
 ---code|modifier:split---
 
@@ -66,7 +66,7 @@ column-gap: 1rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | --| -- |
-| @value | keyword | -- | Column rule style | ✓ |
+| @value | keyword | -- | Column rule style | ✔ |
 
 ---code|modifier:split---
 
@@ -84,7 +84,7 @@ column-rule-style: dotted;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | --| -- |
-| @value | integer | -- | Column width | ✓ |
+| @value | integer | -- | Column width | ✔ |
 
 ---code|modifier:split---
 

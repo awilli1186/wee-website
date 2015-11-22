@@ -11,7 +11,7 @@ link: /script/view
 
 The view chain method updated the content of a DOM element given a data object.
 
-```markup
+```html
 <div class="element">
 	{{ #! }}<span class="{{ className }}">{{ content }}</span>{{ /! }}
 </div>

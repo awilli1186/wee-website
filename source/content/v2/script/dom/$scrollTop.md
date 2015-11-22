@@ -7,7 +7,7 @@ heading: Get or set the Y scroll position of each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 | value | integer | -- | Top position ||
 
 ---code|type:number|modifier:split|label:Get Value---

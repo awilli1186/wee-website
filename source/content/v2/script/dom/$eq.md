@@ -7,13 +7,13 @@ heading: Get indexed node of matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| index | number | -- | Element index | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| index | number | -- | Element index | ✔ |
 | context | [selection](/script#selection) | document | Context selection ||
 
 ---code---
 
-```markup
+```html
 <ul class="js-element">
 	<li>List item 1</li>
 	<li>List item 2</li>
@@ -27,7 +27,7 @@ heading: Get indexed node of matching selection
 Wee.$eq('.js-element li', 1);
 ```
 
-```markup
+```html
 <li>List item 2</li>
 ```
 
@@ -37,6 +37,6 @@ Wee.$eq('.js-element li', 1);
 Wee.$eq('.js-element li', -1);
 ```
 
-```markup
+```html
 <li>List item 3</li>
 ```

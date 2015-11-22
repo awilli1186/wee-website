@@ -7,14 +7,14 @@ heading: Extend target object with source object(s)
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| deep | boolean, object | false | Extend nested properties else target object | ✓ |
-| target | object | -- | Target/source object | ✓ |
+| deep | boolean, object | false | Extend nested properties else target object | ✔ |
+| target | object | -- | Target/source object | ✔ |
 | source | object | -- | Source object ||
 | source | object | -- | Additional objects... ||
 
 ---doc|label:Clone Object---
 
-In this deep instance the first parameter is true. If the second argument is an empty object literal, the third object will be cloned.
+If the second argument is an empty object literal, the third object will be cloned.
 
 ---code|modifier:split---
 

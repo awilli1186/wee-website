@@ -7,8 +7,8 @@ heading: Extend object into global storage
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | Storage reference | ✓ |
-| obj | any | -- | Storage value | ✓ |
+| key | string | -- | Storage reference | ✔ |
+| obj | any | -- | Storage value | ✔ |
 | prepend | boolean | false | Prepend value to storage ||
 
 ---code|type:array|modifier:split---

@@ -6,7 +6,7 @@ name: Filters
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | string, keyword | -- | Filter rules | ✓ |
+| @value | string, keyword | -- | Filter rules | ✔ |
 
 ---code|modifier:split---
 
@@ -175,7 +175,7 @@ filter: drop-shadow('2px 2px 1px rgba(120, 80, 40, 0.5)');
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color | color | -- | Color | ✓ |
+| @color | color | -- | Color | ✔ |
 | @x | unit | 1px | X-offset ||
 | @y | unit | 1px | Y-offset ||
 | @blur | unit | 0 | Blur radius ||

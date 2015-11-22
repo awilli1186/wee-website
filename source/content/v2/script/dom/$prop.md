@@ -7,8 +7,8 @@ heading: Get property of first matching selection or set property of each matchi
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| a | string, object | -- | Property to get or set or an object | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| a | string, object | -- | Property to get or set or an object | ✔ |
 | b | [function](/script/#functions), string | -- | Value to assign to property ||
 
 ---code|type:string|modifier:split|label:Get---

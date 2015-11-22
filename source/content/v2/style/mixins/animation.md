@@ -6,7 +6,7 @@ name: Animation
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @arguments | value | -- | Animation rules | ✓ |
+| @arguments | value | -- | Animation rules | ✔ |
 
 ---code---
 
@@ -23,9 +23,9 @@ animation: name 4s linear 0s 1;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @name | value | -- | Animation name | ✓ |
-| @from | value | -- | From value | ✓ |
-| @to | value | -- | To value | ✓ |
+| @name | value | -- | Animation name | ✔ |
+| @from | value | -- | From value | ✔ |
+| @to | value | -- | To value | ✔ |
 
 ---code---
 

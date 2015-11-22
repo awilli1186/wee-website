@@ -7,7 +7,7 @@ heading: Execute specified function or controller method
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| fn | [function](/script/#functions), array | -- | Functions to execute | ✓ |
+| fn | [function](/script/#functions), array | -- | Functions to execute | ✔ |
 | options | object | -- | Function options below ||
 
 ---variables---

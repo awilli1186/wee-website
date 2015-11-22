@@ -7,7 +7,7 @@ heading: Serialize input values from first matching form selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 
 ---code|modifier:split---
 

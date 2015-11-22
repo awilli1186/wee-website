@@ -1639,21 +1639,27 @@
 	},
 	
 	{
+		"title": "Config",
+		"description": "",
+		"url": "http://www.weepower.dev/v3/build/modules#config"
+	},
+	
+	{
 		"title": "Modules",
 		"description": "Modules logically group functionality for internal use or distribution",
 		"url": "http://www.weepower.dev/v3/build/modules"
 	},
 	
 	{
-		"title": "Script Build",
+		"title": "Structure",
 		"description": "",
-		"url": "http://www.weepower.dev/v3/build#script-build"
+		"url": "http://www.weepower.dev/v3/build/modules#structure"
 	},
 	
 	{
-		"title": "Setup",
+		"title": "Script Build",
 		"description": "",
-		"url": "http://www.weepower.dev/v3/build#setup"
+		"url": "http://www.weepower.dev/v3/build#script-build"
 	},
 	
 	{
@@ -1784,7 +1790,7 @@
 	
 	{
 		"title": "addEasing",
-		"description": "Transition an attribute or property value",
+		"description": "Add additional easing function(s)",
 		"url": "http://www.weepower.dev/v3/script/animate#addeasing"
 	},
 	
@@ -1916,7 +1922,7 @@
 	
 	{
 		"title": "$envSecure",
-		"description": "Determine if the current environment is secured",
+		"description": "Determine if the current environment is SSL encrypted",
 		"url": "http://www.weepower.dev/v3/script/core#envsecure"
 	},
 	
@@ -2060,7 +2066,7 @@
 	
 	{
 		"title": "$unserialize",
-		"description": "Unserialize string into object",
+		"description": "Convert serialized string back into an object",
 		"url": "http://www.weepower.dev/v3/script/core#unserialize"
 	},
 	
@@ -2492,7 +2498,7 @@
 	
 	{
 		"title": "History",
-		"description": "TODO",
+		"description": "HTML5 history and PJAX helper to create dynamic experiences",
 		"url": "http://www.weepower.dev/v3/script/history"
 	},
 	
@@ -2516,7 +2522,7 @@
 	
 	{
 		"title": "Polyfills",
-		"description": "Patching legacy browsers for a JavaScript consistenty",
+		"description": "Patching legacy browsers for a JavaScript consistency",
 		"url": "http://www.weepower.dev/v3/script/polyfills"
 	},
 	
@@ -2623,7 +2629,7 @@
 	},
 	
 	{
-		"title": "Apps",
+		"title": "App",
 		"description": "Create dynamic data-driven interfaces",
 		"url": "http://www.weepower.dev/v3/script/view#app"
 	},

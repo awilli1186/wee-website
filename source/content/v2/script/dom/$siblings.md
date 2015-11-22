@@ -7,12 +7,12 @@ heading: Get unique siblings of each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| filter | [selection](/script#selection) | -- | Filter selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| filter | [selection](/script#selection) | -- | Filter selection | ✔ |
 
 ---code---
 
-```markup
+```html
 <p>Sibling paragraph</p>
 <span>Sibling span</span>
 <div data-ref="sibling">Target div.</div>

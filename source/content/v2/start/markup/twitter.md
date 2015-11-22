@@ -6,7 +6,7 @@ With [Twitter Cards](https://dev.twitter.com/docs/cards), you can attach rich ph
 cards can work in conjunction with Open Graph to eliminate duplicate tag 
 content.
 
-```markup
+```html
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@weecss">
 ```

@@ -7,7 +7,7 @@ heading: Get unique parent from each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| child | [selection](/script#selection) | -- | Child selection | ✓ |
+| child | [selection](/script#selection) | -- | Child selection | ✔ |
 | filter | [selection](/script#selection) | -- | Filter selection ||
 
 ---code|label:Selection Parent---

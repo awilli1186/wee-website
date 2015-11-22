@@ -6,7 +6,7 @@ name: Borders
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | string, keyword | '1px solid #404040' | Border rules | ✓ |
+| @value | string, keyword | '1px solid #404040' | Border rules | ✔ |
 
 ---code|modifier:split---
 
@@ -40,7 +40,7 @@ border: 4px dotted #f00;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| light, dark | keyword | -- | Light or dark preset | ✓ |
+| light, dark | keyword | -- | Light or dark preset | ✔ |
 | @opacity | integer | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Opacity ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Border style ||
@@ -61,7 +61,7 @@ border: 2px solid rgba(0, 0, 0, 0.4);
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| top, right, bottom, left | keyword | -- | Side preset | ✓ |
+| top, right, bottom, left | keyword | -- | Side preset | ✔ |
 | @color | color | [@lighterGray](/style/variables#grayscale) = @darkestGray | Color ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
@@ -80,8 +80,8 @@ border-top: 1px solid #00f;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| top, right, bottom, left | keyword | -- | Side preset | ✓ |
-| light, dark | keyword | -- | Light or dark preset | ✓ |
+| top, right, bottom, left | keyword | -- | Side preset | ✔ |
+| light, dark | keyword | -- | Light or dark preset | ✔ |
 | @opacity | integer | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Color ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
@@ -102,7 +102,7 @@ border: 3px dotted rgba(255, 255, 255, 0.5);
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✓ |
+| horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✔ |
 | @color | color | [@lighterGray](/style/variables#grayscale) = @darkestGray | Color ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
@@ -123,8 +123,8 @@ border-right: 2px dotted #ff0000;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✓ |
-| light, dark | keyword | -- | Light or dark preset | ✓ |
+| horizontal, vertical | keyword | -- | Horizontal or vertical preset | ✔ |
+| light, dark | keyword | -- | Light or dark preset | ✔ |
 | @opacity | integer | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Opactiy ||
 | @value | unit | 1px | Width ||
 | @style | keyword | solid | Style ||
@@ -146,7 +146,7 @@ border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @top | unit | -- | Top size | ✓ |
+| @top | unit | -- | Top size | ✔ |
 | @right | unit | -- | Right size ||
 | @bottom | unit | -- | Bottom size ||
 | @left | unit | -- | Left size ||
@@ -170,7 +170,7 @@ border-top: 1px dotted #00f;
 
 | Variable | Type | Default | Description | Required |
 | -- | --| -- | -- | -- |
-| @filename | string | -- | Name of file | ✓ |
+| @filename | string | -- | Name of file | ✔ |
 | @slice | unit | 100% | Slice offset ||
 | @width | unit | 1 | Border width ||
 | @outset | unit | 0 | Extend beyond border box ||
@@ -191,7 +191,7 @@ border-image: url('../img/border.png') 100% 1 0 stretch;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @color, @style, @width | color, keyword, unit | -- | Color, style, or width | ✓ |
+| @color, @style, @width | color, keyword, unit | -- | Color, style, or width | ✔ |
 
 ---code|modifier:split---
 
@@ -207,8 +207,8 @@ border-color: #00f;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| top, right, bottom, left | keyword | -- | Side presets | ✓ |
-| @color, @style, @width | color, keyword, unit | -- | Color, style, or width | ✓ |
+| top, right, bottom, left | keyword | -- | Side presets | ✔ |
+| @color, @style, @width | color, keyword, unit | -- | Color, style, or width | ✔ |
 
 ---code|modifier:split---
 

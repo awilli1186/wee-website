@@ -7,7 +7,7 @@ heading: Create new array with only unique values from source array
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| array | array | -- | Value array | ✓ |
+| array | array | -- | Value array | ✔ |
 
 ---code|type:string|modifier:split---
 

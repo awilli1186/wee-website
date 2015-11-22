@@ -23,7 +23,7 @@ text-shadow: 2px 1px 0 #000;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | inner | keyword | -- | Inner preset ||
-| @color | color | -- | Shadow color | ✓ |
+| @color | color | -- | Shadow color | ✔ |
 | @x | value | 1px | Horizontal offset ||
 | @y | value | 1px | Vertical offset ||
 | @blur | value | 0 | Blur distance ||
@@ -53,7 +53,7 @@ text-shadow: -1px -1px 0 #00f;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | inner | keyword | -- | Inner preset ||
-| light, dark | keyword | -- | Light or dark preset | ✓ |
+| light, dark | keyword | -- | Light or dark preset | ✔ |
 | @value, @opacity | number | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Opacity ||
 | @x | unit | 1px | Horizontal offset ||
 | @y | unit | 1px | Vertical offset ||

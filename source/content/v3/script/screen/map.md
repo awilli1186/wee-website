@@ -7,14 +7,14 @@ heading: Watch single or set of screen events with specified options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| sets | object, array | -- | Object parameters below | ✓ |
+| sets | object, array | -- | Object parameters below | ✔ |
 
 ---variables|class:table--variables|label:Set Object---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | args | array | -- | Callback arguments ||
-| callback | [function](/script/#functions) | -- | Matching callback | ✓ |
+| callback | [function](/script/#functions) | -- | Matching callback | ✔ |
 | init | boolean | true | Immediately evaluate breakpoint logic ||
 | max | number | -- | Maximum breakpoint value ||
 | min | number | -- | Minimum breakpoint value ||

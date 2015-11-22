@@ -3,14 +3,14 @@ name: Filters
 heading: Add conditional template handler or data modifier
 ---
 
-Wee's default filters include ```is```, ```not```, ```isEmpty```, and ```notEmpty```. Properties of the tag that is being filtered can be accessed via the current scope ```this```. These include ```val```, ```data```, ```root```, ```tag```, ```inner```, and ```empty```.
+Wee's default filters include `is`, `not`, `isEmpty`, and `notEmpty`. Properties of the tag that is being filtered can be accessed via the current scope `this`. These include `val`, `data`, `root`, `tag`, `inner`, and `empty`.
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| name | string | -- | Filter name | ✓ |
-| fn | [function](/script/#functions) | -- | Filter callback | ✓ |
+| name | string | -- | Filter name | ✔ |
+| fn | [function](/script/#functions) | -- | Filter callback | ✔ |
 
 ---code|label:Boolean Response---
 
@@ -39,7 +39,7 @@ Wee.view.render(template, data);
 
 ---code|label:Data Modification---
 
-By modifying the value of ```this.data``` the remaining template parsing can be manipulated. The following extracts a range of data from a larger set of data.
+By modifying the value of `this.data` the remaining template parsing can be manipulated. The following extracts a range of data from a larger set of data.
 
 ```javascript
 Wee.view.addFilter('range', function(offset, limit) {

@@ -7,7 +7,7 @@ heading: Serialize object
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| obj | object | -- | Object to serialize | ✓ |
+| obj | object | -- | Object to serialize | ✔ |
 
 ---code|type:string|modifier:split---
 

@@ -7,8 +7,8 @@ heading: Compare two values for strict equality
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| a | object | -- | Original value | ✓ |
-| b | object | -- | Compared value | ✓ |
+| a | object | -- | Original value | ✔ |
+| b | object | -- | Compared value | ✔ |
 
 ---code|type:boolean|modifier:split---
 

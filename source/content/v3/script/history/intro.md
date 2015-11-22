@@ -1,11 +1,10 @@
 ---
 name: History
-heading: TODO
+heading: HTML5 history and PJAX helper to create dynamic experiences
 intro: true
 path: /js/wee.history.js
 global:
   seoTitle: HTML History Navigation
-  seoDesc: TODO
 ---
 
-TODO
+Using the Wee History feature you can make partial DOM replacements while manipulating the URL to create smooth, efficient navigation.

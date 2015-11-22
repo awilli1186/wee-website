@@ -7,12 +7,12 @@ heading: Get inner HTML of first selection or set each matching selection's HTML
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| value | [function](/script/#functions), string | -- | HTML to set or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| value | [function](/script/#functions), string | -- | HTML to set or callback | ✔ |
 
 ---code---
 
-```markup
+```html
 <div class="ref:element"><h1>Heading</h1></div>
 ```
 

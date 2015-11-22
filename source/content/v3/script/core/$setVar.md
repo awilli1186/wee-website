@@ -7,7 +7,7 @@ heading: Add metadata variables to datastore
 
 Available data-set values are pushed into the global storage for later retrieval.
 
-```markup
+```html
 <div data-set="key" data-value="value"></div>
 ```
 
@@ -29,7 +29,7 @@ Wee.$get('key');
 
 To push into an array instead of setting a single value append array brackets to the end of the key.
 
-```markup
+```html
 <div data-set="key[]" data-value="value1"></div>
 <div data-set="key[]" data-value="value2"></div>
 <div data-set="key[]" data-value="value3"></div>
@@ -51,7 +51,7 @@ To create a keyed object you can pass keys into the array notation.
 
 ---code---
 
-```markup
+```html
 <div data-set="obj.key1" data-value="value1"></div>
 <div data-set="obj.key2" data-value="value2"></div>
 <div data-set="obj.key3" data-value="value3"></div>
@@ -77,7 +77,7 @@ You can also nest objects by continuing the array notation.
 
 ---code---
 
-```markup
+```html
 <div data-set="obj.key1" data-value="value1"></div>
 <div data-set="obj.key2.sub1" data-value="value2"></div>
 <div data-set="obj.key2.sub2" data-value="value3"></div>
@@ -101,7 +101,7 @@ Wee.$get('obj');
 
 ---code|label:JSON---
 
-```markup
+```html
 <div data-set="obj" data-value='{"key": true}'></div>
 ```
 
@@ -117,4 +117,4 @@ true
 
 ---note---
 
-**Note:** This function is called by default with on page load.
+**Note:** This function is called by default on page load.

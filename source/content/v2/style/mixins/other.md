@@ -6,7 +6,7 @@ name: Other
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | keyword | -- | Resize value | ✓ |
+| @value | keyword | -- | Resize value | ✔ |
 
 ---code|modifier:split---
 
@@ -106,7 +106,7 @@ cursor: pointer;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | x, y | keyword | -- | Overflow axis ||
-| @value | keyword | -- | Overflow value | ✓ |
+| @value | keyword | -- | Overflow value | ✔ |
 
 ---code|modifier:split---
 

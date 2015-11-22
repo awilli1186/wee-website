@@ -8,8 +8,8 @@ related: $before
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✔ |
 | remove | boolean | false | Remove target after insertion ||
 
 ---code|label:Selection---
@@ -28,7 +28,7 @@ Wee.$after('ref:element', '<span>Injected notice</span>');
 
 The current index and HTML are injected into the callback. The scope of ```this``` is the element.
 
-```markup
+```html
 <div data-name="John Smith">
 	<h1 data-ref="bioName">Name</h1>
 </div>
@@ -41,7 +41,7 @@ Wee.$after('ref:bioName', function(i, html) {
 });
 ```
 
-```markup
+```html
 <div data-name="John Smith">
 	<h1 data-ref="bioName">Name</h1>
 	<p>John Smith</p>

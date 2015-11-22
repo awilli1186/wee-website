@@ -7,7 +7,7 @@ heading: Get the first element of a matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 | context | [selection](/script#selection) | document | Context selection ||
 
 ---code---

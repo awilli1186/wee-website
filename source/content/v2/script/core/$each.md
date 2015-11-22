@@ -7,8 +7,8 @@ heading: Execute function for each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| fn | [function](/script/#functions) | -- | Callback function | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| fn | [function](/script/#functions) | -- | Callback function | ✔ |
 | options | object | -- | Object properties below ||
 
 ---variables|label:Options Object---

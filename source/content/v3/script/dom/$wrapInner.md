@@ -7,8 +7,8 @@ heading: Wrap markup around the content of each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| html | [function](/script/#functions), string | -- | Wrapper HTML or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| html | [function](/script/#functions), string | -- | Wrapper HTML or callback | ✔ |
 
 ---code|label:Markup---
 
@@ -18,9 +18,9 @@ Wee.$wrapInner('ref:element', '<div class="wrapper"></div>');
 
 ---code|label:Function---
 
-The current index is injected into the callback. The scope of ```this``` is the element.
+The current index is injected into the callback. The scope of `this` is the element.
 
-```markup
+```html
 <ul class="names">
 	<li class="boss">Jane Doe</li>
 	<li>John Doe</li>
@@ -38,7 +38,7 @@ Wee.$wrapInner('.names li', function(i) {
 });
 ```
 
-```markup
+```html
 <ul class="names">
 	<li class="boss"><b>Jane Doe</b></li>
 	<li>John Doe</li>

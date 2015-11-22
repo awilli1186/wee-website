@@ -19,11 +19,11 @@ Lorem ipsum dolor
 * Dolor
 ```
 
-```markup
-{{#!}}{{#blocks}}
-	{{name}}
-	{{output|raw}}
-{{/blocks}}{{/!}}
+```html
+{{ #! }}{{ #blocks }}
+	{{ name }}
+	{{ output|raw }}
+{{ /blocks }}{{ /! }}
 ```
 
 ---code|label:Appending & Rendering---
@@ -44,4 +44,4 @@ You can create custom tags accessible in the blocks loop with the following form
 
 ---note---
 
-**Note:** Due to the parse order of the generator the examples above use leading ```-~-``` instead of the proper ```---```.
+**Note:** Due to the parse order of the generator the examples above use leading `-~-` instead of the proper `---`.

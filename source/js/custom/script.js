@@ -1,5 +1,3 @@
-/* global CollapsibleLists */
-
 Wee.routes.map({
 	'$any:once': 'common',
 	'$seg': {
@@ -13,14 +11,7 @@ Wee.routes.map({
 		]
 	},
 	'start': {
-		'structure': function() {
-			Wee.assets.load({
-				files: '/assets/js/lib/vendor/CollapsibleLists.min.js',
-				success: function() {
-					CollapsibleLists.applyTo($.first('.doc__collapsible ul'));
-				}
-			});
-		}
+		'structure': 'structure'
 	},
 	'blog': {
 		'$slug': 'blog'

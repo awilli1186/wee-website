@@ -7,8 +7,8 @@ heading: Return a filtered subset of elements from a matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| filter | [function](/script/#functions), [selection](/script#selection) | -- | Filter selection or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| filter | [function](/script/#functions), [selection](/script#selection) | -- | Filter selection or callback | ✔ |
 | options | object | -- | [Callback options](/script/#functions) ||
 
 ---code|label:Selection---
@@ -19,9 +19,9 @@ Wee.$filter('ref:element', '.filter');
 
 ---code|label:Function---
 
-The current index and element are injected into the callback. The scope of ```this``` is the element.
+The current index and element are injected into the callback. The scope of `this` is the element.
 
-```markup
+```html
 <ul class="people">
 	<li>John Doe</li>
 	<li>John Smith</li>

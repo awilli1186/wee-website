@@ -45,7 +45,7 @@ Wee outputs one primary CSS file. The build array specifies additional CSS or Le
 
 ---note---
 
-**Note:**  Paths are relative to the Wee CSS assets directory unless prefixed with `./` making them relative to `wee.js`.
+**Note:**  Paths are relative to the Wee CSS source directory unless prefixed with `./` making them relative to `wee.js`.
 
 ---code|label:Compile---
 

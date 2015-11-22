@@ -8,8 +8,8 @@ related: $insertBefore
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| source | [selection](/script#selection) | -- | Source selection | ✓ |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| source | [selection](/script#selection) | -- | Source selection | ✔ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 
 ---code---
 

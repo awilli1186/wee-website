@@ -8,14 +8,14 @@ related: $first
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 | context | [selection](/script#selection) | document | Context selection ||
 
 ---code---
 
 Works the same as [Wee.$()](#core) but only returns the last result from the result set.
 
-```markup
+```html
 <ul class="names">
 	<li>John Doe</li>
 	<li>John Smith</li>
@@ -30,6 +30,6 @@ Works the same as [Wee.$()](#core) but only returns the last result from the res
 Wee.$last('.names li');
 ```
 
-```markup
+```html
 <li>Jane Smith</li>
 ```

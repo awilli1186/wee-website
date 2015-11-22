@@ -55,9 +55,9 @@ This allows you to enable or disable reloading whenever CSS, JS, or static files
 
 ---code|label:Tasks---
 
-With the `node wee run:local` task, Wee needs to know what your local server address is for the proxy. It then uses the proxy to sit between your browser and the development server so it can inject CSS changes, or reload the page for static and JavaScript changes.
+With the `wee run:local` task, Wee needs to know what your local server address is for the proxy. It then uses the proxy to sit between your browser and the development server so it can inject CSS changes, or reload the page for static and JavaScript changes.
 
-With `node wee run:static` you can set whether to use HTTPS.
+With `wee run:static` you can set whether to use HTTPS.
 
 ```javascript
 "tasks": {

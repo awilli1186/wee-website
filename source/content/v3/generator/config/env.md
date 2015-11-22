@@ -22,5 +22,5 @@ This is where you will specify environment-specific configuration values for use
 To compile your project for an environment other than the default pass the env argument to the generate command.
 
 ```bash
-node wee run:generate --env=prod
+wee run:generate --env=prod
 ```

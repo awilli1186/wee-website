@@ -7,7 +7,7 @@ heading: Get the offset position of a matching selection relative to the documen
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 | value | object | -- | Offset values ||
 
 ---code|label:Set---

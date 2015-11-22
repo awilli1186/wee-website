@@ -4,7 +4,7 @@ name: Twitter Cards
 
 With [Twitter Cards](https://dev.twitter.com/docs/cards), you can attach photos and other media to Tweets that drive traffic to your website.
 
-```markup
+```html
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@weecss">
 ```

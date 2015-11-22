@@ -8,8 +8,8 @@ related: $after
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✔ |
 | remove | boolean | false | Remove target after insertion ||
 
 ---code|label:Selection---

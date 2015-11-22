@@ -7,8 +7,8 @@ heading: Parse data into template string
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| template | string | -- | Template string | ✓ |
-| data | object | -- | Data object | ✓ |
+| template | string | -- | Template string | ✔ |
+| data | object | -- | Data object | ✔ |
 
 ---code|type:string|modifier:stacked|label:Simple---
 
@@ -190,7 +190,7 @@ var template = '{{#!}}<p>My Name is {{firstName}}{{#lastName|notEmpty}} {{lastNa
 Wee.view.render(template, data);
 ```
 
-```markup
+```html
 <p>My Name is John Smith</p>
 <p>My Children are:</p>
 <ul>

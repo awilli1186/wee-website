@@ -30,7 +30,7 @@ name: Inline Grid
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | --| -- |
 | spaced | keyword | -- | Set margin between columns ||
-| @share | integer | -- | Column span | ✓ |
+| @share | integer | -- | Column span | ✔ |
 | @columns | integer | [@gridColumns](/style/variables#layout) = 8 | Number of columns ||
 | @gridSpaceless | boolean | [@gridMargin](/style/variables#layout) = 5% | Add whitespace hack ||
 

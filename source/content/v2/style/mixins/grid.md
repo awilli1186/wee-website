@@ -6,7 +6,7 @@ name: Grid
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @margin | percentage | @gridMargin | Left margin | ✓ |
+| @margin | percentage | @gridMargin | Left margin | ✔ |
 
 ---code|modifier:split---
 
@@ -72,7 +72,7 @@ width: 30%;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | --| -- |
 | spaced | keyword | -- | Set margin between columns ||
-| @share | integer | -- | Column span | ✓ |
+| @share | integer | -- | Column span | ✔ |
 | @columns | integer | @gridColumns | Number of columns ||
 | @margin | percentage | @gridMargin | Left margin ||
 
@@ -132,7 +132,7 @@ margin-left: 0;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @share | integer | -- | Column span | ✓ |
+| @share | integer | -- | Column span | ✔ |
 | @columns | integer | @gridColumns | Number of columns ||
 
 ---code|modifier:split---
@@ -162,7 +162,7 @@ position: relative;
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | spaced | keyword | -- | Set margin between columns ||
-| @share | integer | -- | Column span | ✓ |
+| @share | integer | -- | Column span | ✔ |
 | @columns | integer | @gridColumns | Number of columns ||
 | @margin | percentage | (@gridMargin / 2) | Left margin ||
 

@@ -7,7 +7,7 @@ heading: Get unique content of each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| parent | [selection](/script#selection) | -- | Parent selection | ✓ |
+| parent | [selection](/script#selection) | -- | Parent selection | ✔ |
 
 ---code---
 

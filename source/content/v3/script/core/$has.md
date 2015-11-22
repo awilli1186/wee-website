@@ -7,7 +7,7 @@ heading: Check if storage criteria is set
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | Storage reference | ✓ |
+| key | string | -- | Storage reference | ✔ |
 | value | any | -- | Storage key or value ||
 
 ---code|type:boolean|modifier:split|label:Key---

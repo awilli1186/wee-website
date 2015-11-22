@@ -4,7 +4,7 @@ name: Legacy
 
 Wee works hard to maintain compatibility with IE8 and IE9 which requires [conditionally serving](http://www.quirksmode.org/css/condcom.html) specific rules and polyfills. If you aren't supporting legacy browsers feel free to remove them. 
 
-```markup
+```html
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="/assets/css/ie8.min.css">
 <script src="/assets/js/ie8.min.js"></script>

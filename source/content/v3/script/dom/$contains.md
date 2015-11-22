@@ -7,8 +7,8 @@ heading: Determine if any matching parent selection contains descendant selectio
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| parent | [selection](/script#selection) | -- | Parent selection | ✓ |
-| descendant | [selection](/script#selection) | -- | Descendant selection | ✓ |
+| parent | [selection](/script#selection) | -- | Parent selection | ✔ |
+| descendant | [selection](/script#selection) | -- | Descendant selection | ✔ |
 
 ---code|type:boolean|modifier:split---
 

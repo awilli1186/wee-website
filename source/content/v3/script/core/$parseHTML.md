@@ -7,7 +7,7 @@ heading: Create document fragment from an HTML string
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| html | string | -- | HTML to convert | ✓ |
+| html | string | -- | HTML to convert | ✔ |
 
 ---code---
 

@@ -7,8 +7,8 @@ heading: Bind specified function to specified element and event
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| a | string, object | -- | Event name or object of events | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| a | string, object | -- | Event name or object of events | ✔ |
 | b | [function](/script/#functions), object | -- | Event callback or options object ||
 | c | object | -- | Option parameters below ||
 

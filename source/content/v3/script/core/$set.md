@@ -7,8 +7,8 @@ heading: Set global variable
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | Storage reference | ✓ |
-| val | any | -- | Storage value | ✓ |
+| key | string | -- | Storage reference | ✔ |
+| val | any | -- | Storage value | ✔ |
 | options | object | -- | [Callback options](/script#functions) ||
 
 ---code|modifier:split|label:Simple---

@@ -19,7 +19,7 @@ Lorem ipsum dolor
 * Dolor
 ```
 
-```markup
+```html
 {{#!}}{{#blocks}}
 	{{name}}
 	{{output|raw}}

@@ -7,8 +7,8 @@ heading: Replace each matching selection with selection or markup
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| source | [function](/script/#functions), [selection](/script#selection), string | -- | Source selection, callback, or HTML string | ✔ |
 
 ---code|label:Selection---
 
@@ -26,7 +26,7 @@ Wee.$replaceWith('ref:element', '<span>Replacement element</span>');
 
 The current index and HTML are injected into the callback. The scope of ```this``` is the element.
 
-```markup
+```html
 <ul class="names">
 	<li>John Doe</li>
 	<li>Jane Doe</li>
@@ -41,7 +41,7 @@ Wee.$replaceWith('.names li', function(i, html) {
 });
 ```
 
-```markup
+```html
 <ul class="names">
 	<li>The Jane Doe</li>
 	<li>The John Doe</li>

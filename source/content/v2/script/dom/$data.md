@@ -7,13 +7,13 @@ heading: Get data of first matching selection or set data of each matching selec
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| a | string, object | -- | Data attribute to get or set or an object | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| a | string, object | -- | Data attribute to get or set or an object | ✔ |
 | b | string | -- | Value to assign to data attribute ||
 
 ---code|label:Get All---
 
-```markup
+```html
 <div data-ref="element" data-id="150"></div>
 ```
 
@@ -32,7 +32,7 @@ Wee.$data('ref:element');
 
 ---code|label:Get Single---
 
-```markup
+```html
 <div data-ref="element" data-id="150"></div>
 ```
 

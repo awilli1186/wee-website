@@ -7,11 +7,11 @@ heading: Get the zero-based index of a matching selection relative to it's sibli
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 
 ---code---
 
-```markup
+```html
 <ul>
     <li></li>
     <li></li>

@@ -70,7 +70,7 @@
 				"routes": true,
 				"screen": true,
 				"touch": false,
-				"view": false
+				"view": true
 			}
 		},
 		"build": [

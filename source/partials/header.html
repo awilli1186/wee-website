@@ -47,6 +47,10 @@
 	ga('create', '{{ site.analyticsID }}', 'auto');
 	ga('send', 'pageview');
 	</script>
+	{{ else }}
+	<script>
+	var ga = function(){};
+	</script>
 	{{ /site.env }}
 </head>
 <body class="{{ #path|not('/') }}docs {{ /path }}-dark">

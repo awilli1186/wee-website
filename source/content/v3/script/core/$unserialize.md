@@ -1,13 +1,13 @@
 ---
 name: $unserialize
-heading: Unserialize string into object
+heading: Convert serialized string back into an object
 ---
 
 ---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| str | string | -- | Serialized string | ✓ |
+| str | string | -- | Serialized string | ✔ |
 
 ---code|type:string|modifier:split---
 

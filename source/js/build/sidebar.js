@@ -10,9 +10,7 @@ Wee.fn.make('sidebar', {
 		}
 
 		$(Wee._win).on({
-			resize: function() {
-				this.setOffsets();
-			},
+			resize: this.setOffsets,
 			scroll: this.setActive
 		}, {
 			init: true,
@@ -21,7 +19,7 @@ Wee.fn.make('sidebar', {
 	},
 
 	/**
-	 * Initialize scollbar markup and instance
+	 * Initialize scrollbar markup and instance
 	 */
 	initScrolling: function() {
 		var wrapper = '<div class="scrollbar"><div class="track"><div class="thumb"></div></div></div>',
@@ -58,6 +56,7 @@ Wee.fn.make('sidebar', {
 			$el.add($targ).on('click', function(e, el) {
 				location.hash = el.hash;
 
+				$targ[0].blur();
 				$body.scrollTop(top - offset);
 
 				e.preventDefault();

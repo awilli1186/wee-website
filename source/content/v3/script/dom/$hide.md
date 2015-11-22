@@ -8,11 +8,11 @@ related: $show
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 
 ---code---
 
-Hide works by adding the ```js-hide``` class which applies ```display: none !important;```
+Hide works by adding the `js-hide` class which applies `display: none !important;`
 
 ```javascript
 Wee.$hide('ref:element');

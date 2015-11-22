@@ -7,7 +7,7 @@ heading: Add conditional route filter
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| a | object, string | -- | Multiple filter object or filter key | ✓ |
+| a | object, string | -- | Multiple filter object or filter key | ✔ |
 | b | function | -- | Filter function ||
 
 ---code|label:Single---
@@ -21,7 +21,7 @@ Wee.animate.addFilter('isInternal', function(t) {
 ---code|label:Multiple---
 
 ```javascript
-Wee.animate.addEasing({
+Wee.routes.addRoute({
 	isInternal: function(seg) {
 		return ['admin', 'protected'].indexOf(seg) > -1;
 	},

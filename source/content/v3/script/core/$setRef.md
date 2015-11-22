@@ -13,7 +13,7 @@ Available data-ref values are pushed into the global storage for later retrieval
 
 ---code|modifier:stacked---
 
-```markup
+```html
 <div data-ref="element"></div>
 ```
 
@@ -27,7 +27,7 @@ Wee.$setRef();
 $('ref:element');
 ```
 
-```markup
+```html
 <div data-ref="element"></div>
 ```
 

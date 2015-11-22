@@ -7,12 +7,12 @@ heading: Determine if the matching selection has a class
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| className | string | -- | Specific class name | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| className | string | -- | Specific class name | ✔ |
 
 ---code|label:Single---
 
-```markup
+```html
 <div class="hello" data-ref="element"></div>
 ```
 

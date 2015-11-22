@@ -8,8 +8,8 @@ related: $addClass
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| value | [function](/script/#functions), string | -- | Class name(s) to remove or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| value | [function](/script/#functions), string | -- | Class name(s) to remove or callback | ✔ |
 
 ---code|label:Single---
 

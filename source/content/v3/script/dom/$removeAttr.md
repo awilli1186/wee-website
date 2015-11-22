@@ -7,8 +7,8 @@ heading: Remove specified attribute of each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| name | string | -- | Attribute name | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| name | string | -- | Attribute name | ✔ |
 
 ---code---
 

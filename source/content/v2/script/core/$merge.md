@@ -7,8 +7,8 @@ heading: Merge source array into target array
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | array | -- | Target array | ✓ |
-| source | array | -- | Source array | ✓ |
+| target | array | -- | Target array | ✔ |
+| source | array | -- | Source array | ✔ |
 | unique | boolean | false | Remove duplicates ||
 
 ---code|type:array|modifier:split---

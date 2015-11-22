@@ -12,8 +12,8 @@ deprecated: true
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| array | array | -- | Source array | ✓ |
-| value | any | -- | Value to check | ✓ |
+| array | array | -- | Source array | ✔ |
+| value | any | -- | Value to check | ✔ |
 
 ---code|modifier:split---
 

@@ -7,9 +7,9 @@ heading: Get subset of selection matches from specified range
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| start | integer | -- | Starting index | ✓ |
-| end | integer | -- | Ending index | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| start | integer | -- | Starting index | ✔ |
+| end | integer | -- | Ending index | ✔ |
 
 ---code---
 

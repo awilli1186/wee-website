@@ -6,14 +6,14 @@ The site tag enables access to any property specified at the root level of the s
 
 ---code|label:Name & Description---
 
-```markup
+```html
 {{#!}}<h1>{{site.name}}</h1>
 <span>{{site.description}}</span>{{/!}}
 ```
 
 ---code|label:Sections---
 
-```markup
+```html
 {{#!}}<ul>
 	{{#site.sections}}
 	<li>{{name}}</li>
@@ -25,7 +25,7 @@ The site tag enables access to any property specified at the root level of the s
 
 This will return the current development environment. Using this with the is filter, you can conditionally output content.
 
-```markup
+```html
 {{#!}}{{#site.env|is(prod)}}
 <script>
 // Script loaded only in production environment
@@ -35,7 +35,7 @@ This will return the current development environment. Using this with the is fil
 
 It also allows quick access to any data associated with an environment.
 
-```markup
+```html
 {{#!}}<link rel="stylesheet" href="{{site.assetUrl}}/style.css">{{/!}}
 ```
 
@@ -43,6 +43,6 @@ It also allows quick access to any data associated with an environment.
 
 This will return the current time.
 
-```markup
+```html
 {{#!}}{{site.time}}{{/!}}
 ```

@@ -6,6 +6,7 @@
 		"enhanceTypography": true,
 		"removeIndex": true,
 		"removeTrailingSlashes": false,
+		"defaultTemplate": "docs",
 		"paths": {
 			"content": "content",
 			"target": "../public_html",
@@ -91,7 +92,7 @@
 			"data": {
 				"excludeNav": true,
 				"seoTitle": "Development Blog",
-				"seoDesc": "Stay up to date with the latest Wee news and developments."
+				"seoDesc": "Stay up to date with the latest Wee news and development."
 			},
 			"template": "blog",
 			"target": [
@@ -109,7 +110,7 @@
 					},
 					"template": "entry",
 					"target": [
-						"blog/{{sourceName|slug}}.html"
+						"blog/{{ sourceName|slug }}.html"
 					],
 					"content": "blog/*.md"
 				}
@@ -117,343 +118,308 @@
 		},
 		"start": {
 			"name": "Start",
-			"template": "docs",
 			"target": "start/index.html",
-			"contentRoot": "v3",
+			"contentRoot": "v3/start",
 			"content": [
-				"start/intro.md",
-				"start/features.md",
-				"start/compatibility.md",
-				"start/bugs.md",
-				"start/versioning.md",
-				"start/community.md",
-				"start/license.md"
+				"intro.md",
+				"features.md",
+				"compatibility.md",
+				"bugs.md",
+				"versioning.md",
+				"community.md",
+				"license.md"
 			],
 			"sections": {
 				"installation": {
 					"name": "Installation",
-					"template": "docs",
 					"target": "start/installation.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/start/installation",
 					"content": [
-						"start/installation/intro.md",
-						"start/installation/*.md"
+						"intro.md",
+						"*.md"
 					]
 				},
 				"structure": {
 					"name": "Structure",
-					"template": "docs",
 					"target": "start/structure.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/start/structure",
 					"content": [
-						"start/structure/intro.md",
-						"start/structure/files.md",
-						"start/structure/*.md"
+						"intro.md",
+						"files.md",
+						"*.md"
 					]
 				},
 				"markup": {
 					"name": "Markup",
-					"template": "docs",
 					"target": "start/markup.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/start/markup",
 					"content": [
-						"start/markup/intro.md",
-						"start/markup/html5.md",
-						"start/markup/doctype.md",
-						"start/markup/meta.md",
-						"start/markup/icons.md",
-						"start/markup/publisher.md",
-						"start/markup/twitter.md",
-						"start/markup/opengraph.md",
-						"start/markup/legacy.md",
-						"start/markup/*.md"
+						"intro.md",
+						"html5.md",
+						"doctype.md",
+						"meta.md",
+						"icons.md",
+						"publisher.md",
+						"twitter.md",
+						"opengraph.md",
+						"legacy.md",
+						"*.md"
 					]
 				}
 			}
 		},
 		"build": {
 			"name": "Build",
-			"template": "docs",
 			"target": "build/index.html",
-			"contentRoot": "v3",
+			"contentRoot": "v3/build",
 			"content": [
-				"build/intro.md",
-				"build/setup.md",
-				"build/tasks.md",
-				"build/*.md"
+				"intro.md",
+				"tasks.md",
+				"*.md"
 			],
 			"sections": {
 				"config": {
 					"name": "Config",
-					"template": "docs",
 					"target": "build/config.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/build/config",
 					"content": [
-						"build/config/intro.md",
-						"build/config/general.md",
-						"build/config/style.md",
-						"build/config/script.md",
-						"build/config/generator.md",
-						"build/config/server.md"
+						"intro.md",
+						"general.md",
+						"style.md",
+						"script.md",
+						"generator.md",
+						"server.md"
 					]
 				},
 				"validation": {
 					"name": "Validation",
-					"template": "docs",
 					"target": "build/validation.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/build/validation",
 					"content": [
-						"build/validation/intro.md",
-						"build/validation/task.md",
-						"build/validation/*.md"
+						"intro.md",
+						"task.md",
+						"*.md"
 					]
 				},
 				"modules": {
 					"name": "Modules",
-					"template": "docs",
 					"target": "build/modules.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/build/modules",
 					"content": [
-						"build/modules/*.md"
+						"intro.md",
+						"*.md"
 					]
 				}
 			}
 		},
 		"generator": {
 			"name": "Generate",
-			"template": "docs",
 			"target": "generator/index.html",
-			"contentRoot": "v3",
+			"contentRoot": "v3/generator",
 			"content": [
-				"generator/intro.md",
-				"generator/*.md"
+				"intro.md",
+				"*.md"
 			],
 			"sections": {
 				"config": {
 					"name": "Config",
-					"template": "docs",
 					"target": "generator/config.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/generator/config",
 					"content": [
-						"generator/config/intro.md",
-						"generator/config/general.md",
-						"generator/config/config.md",
-						"generator/config/env.md",
-						"generator/config/data.md",
-						"generator/config/*.md"
+						"intro.md",
+						"general.md",
+						"config.md",
+						"env.md",
+						"data.md",
+						"*.md"
 					]
 				},
 				"usage": {
 					"name": "Usage",
-					"template": "docs",
 					"target": "generator/usage.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/generator/usage",
 					"content": [
-						"generator/usage/intro.md",
-						"generator/usage/*.md"
+						"intro.md",
+						"*.md"
 					]
 				}
 			}
 		},
 		"style": {
 			"name": "Style",
-			"template": "docs",
 			"target": "style/index.html",
-			"contentRoot": "v3",
+			"contentRoot": "v3/style",
 			"content": [
-				"style/intro.md",
-				"style/reset.md",
-				"style/print.md",
-				"style/legacy.md"
+				"intro.md",
+				"reset.md",
+				"print.md",
+				"legacy.md"
 			],
 			"sections": {
 				"variables": {
 					"name": "Variables",
-					"template": "docs",
 					"target": "style/variables.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/style/variables",
 					"content": [
-						"style/variables/intro.md",
-						"style/variables/base.md",
-						"style/variables/*.md"
+						"intro.md",
+						"base.md",
+						"*.md"
 					]
-				},
-				"customize": {
-					"name": "Customize",
-					"template": "customize",
-					"target": "style/customize.html",
-					"contentRoot": "v3",
-					"content": "pages/customize.md"
 				},
 				"mixins": {
 					"name": "Mixins",
-					"template": "docs",
 					"target": "style/mixins.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/style/mixins",
 					"content": [
-						"style/mixins/intro.md",
-						"style/mixins/*.md",
-						"!style/mixins/other.md",
-						"style/mixins/other.md"
+						"intro.md",
+						"*.md",
+						"!other.md",
+						"other.md"
 					]
 				},
 				"classes": {
 					"name": "Classes",
-					"template": "docs",
 					"target": "style/classes.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/style/classes",
 					"content": [
-						"style/classes/intro.md",
-						"style/classes/*.md"
+						"intro.md",
+						"*.md"
 					]
 				},
 				"styling": {
 					"name": "Styling",
-					"template": "docs",
 					"target": "style/styling.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/style/styling",
 					"content": [
-						"style/styling/intro.md",
-						"style/styling/*.md"
+						"intro.md",
+						"*.md"
 					]
 				}
 			}
 		},
 		"script": {
 			"name": "Script",
-			"template": "docs",
 			"target": "script/index.html",
-			"contentRoot": "v3",
+			"contentRoot": "v3/script",
 			"content": [
-				"script/intro.md",
-				"script/*.md"
+				"intro.md",
+				"*.md"
 			],
 			"sections": {
 				"core": {
 					"name": "Core",
-					"template": "docs",
 					"target": "script/core.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/core",
 					"content": [
-						"script/core/intro.md",
-						"script/core/fn.make.md",
-						"script/core/fn.extend.md",
-						"script/core/*.md"
+						"intro.md",
+						"fn.make.md",
+						"fn.extend.md",
+						"*.md"
 					]
 				},
 				"chain": {
 					"name": "Chain",
-					"template": "docs",
 					"target": "script/chain.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/chain",
 					"content": [
-						"script/chain/intro.md",
-						"script/chain/register.md",
-						"script/chain/core.md",
-						"script/chain/*.md"
+						"intro.md",
+						"register.md",
+						"core.md",
+						"*.md"
 					]
 				},
 				"animate": {
 					"name": "Animate",
-					"template": "docs",
 					"target": "script/animate.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/animate",
 					"content": [
-						"script/animate/intro.md",
-						"script/animate/*.md"
+						"intro.md",
+						"*.md"
 					]
 				},
 				"assets": {
 					"name": "Assets",
-					"template": "docs",
 					"target": "script/assets.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/assets",
 					"content": [
-						"script/assets/intro.md",
-						"script/assets/*.md"
+						"intro.md",
+						"*.md"
 					]
 				},
 				"data": {
 					"name": "Data",
-					"template": "docs",
 					"target": "script/data.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/data",
 					"content": [
-						"script/data/intro.md",
-						"script/data/*.md"
+						"intro.md",
+						"*.md"
 					]
 				},
 				"dom": {
 					"name": "DOM",
-					"template": "docs",
 					"target": "script/dom.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/dom",
 					"content": [
-						"script/dom/intro.md",
-						"script/dom/*.md"
+						"intro.md",
+						"*.md"
 					]
 				},
 				"events": {
 					"name": "Events",
-					"template": "docs",
 					"target": "script/events.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/events",
 					"content": [
-						"script/events/intro.md",
-						"script/events/*.md"
+						"intro.md",
+						"*.md"
 					]
 				},
 				"history": {
 					"name": "History",
-					"template": "docs",
 					"target": "script/history.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/history",
 					"content": [
-						"script/history/intro.md",
-						"script/history/init.md",
-						"script/history/*.md"
+						"intro.md",
+						"init.md",
+						"*.md"
 					]
 				},
 				"routes": {
 					"name": "Routes",
-					"template": "docs",
 					"target": "script/routes.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/routes",
 					"content": [
-						"script/routes/intro.md",
-						"script/routes/*.md"
+						"intro.md",
+						"*.md"
 					]
 				},
 				"screen": {
 					"name": "Screen",
-					"template": "docs",
 					"target": "script/screen.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/screen",
 					"content": [
-						"script/screen/intro.md",
-						"script/screen/values.md",
-						"script/screen/*.md"
+						"intro.md",
+						"values.md",
+						"*.md"
 					]
 				},
 				"view": {
 					"name": "View",
-					"template": "docs",
 					"target": "script/view.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/view",
 					"content": [
-						"script/view/intro.md",
-						"script/view/render.md",
-						"script/view/*.md"
+						"intro.md",
+						"app.md",
+						"render.md",
+						"*.md"
 					]
 				},
 				"polyfills": {
 					"name": "Polyfills",
-					"template": "docs",
 					"target": "script/polyfills.html",
-					"contentRoot": "v3",
+					"contentRoot": "v3/script/polyfills",
 					"content": [
-						"script/polyfills/intro.md",
-						"script/polyfills/*.md"
+						"intro.md",
+						"*.md"
 					]
 				}
 			}

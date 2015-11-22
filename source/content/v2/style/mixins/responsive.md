@@ -6,8 +6,8 @@ name: Responsive
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @maxWidth | unit | -- | Breakpoint maximum width | ✓ |
-| @rules | rules | -- | CSS rules | ✓ |
+| @maxWidth | unit | -- | Breakpoint maximum width | ✔ |
+| @rules | rules | -- | CSS rules | ✔ |
 
 ---code|modifier:split---
 

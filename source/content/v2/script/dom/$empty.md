@@ -7,11 +7,11 @@ heading: Remove child nodes from each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 
 ---code---
 
-```markup
+```html
 <div data-ref="bio">
 	<h1>John Smith</h1>
 	<p>Lorem ipsum dolor.</p>
@@ -24,6 +24,6 @@ heading: Remove child nodes from each matching selection
 Wee.$empty('ref:bio');
 ```
 
-```markup
+```html
 <div data-ref="bio"></div>
 ```

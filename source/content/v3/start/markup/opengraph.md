@@ -4,7 +4,7 @@ name: Open Graph
 
 The [Open Graph protocol](http://ogp.me/) enables any web page to become a rich object in a social graph. Both Facebook and Twitter leverage the protocol for pulling page context when sharing.
 
-```markup
+```html
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wee">
 <meta property="og:title" content="Front-End Framework" itemprop="name">

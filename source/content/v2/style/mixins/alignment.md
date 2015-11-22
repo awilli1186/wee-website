@@ -78,7 +78,7 @@ clear: left;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | preset | -- | Center, justify, left, right, baseline, bottom, middle, or top | ✓ |
+| @value | preset | -- | Center, justify, left, right, baseline, bottom, middle, or top | ✔ |
 
 ---code|modifier:split---
 
@@ -96,7 +96,7 @@ vertical-align: middle;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | value | -- | Alignment value | ✓ |
+| @value | value | -- | Alignment value | ✔ |
 
 ---code|modifier:split---
 
@@ -112,7 +112,7 @@ vertical-align: text-top;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | value | -- | Display value | ✓ |
+| @value | value | -- | Display value | ✔ |
 
 ---code|modifier:split---
 

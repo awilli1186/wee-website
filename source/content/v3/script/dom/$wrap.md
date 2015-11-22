@@ -7,8 +7,8 @@ heading: Wrap markup around each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| html | [function](/script/#functions), string | -- | Wrapper HTML or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| html | [function](/script/#functions), string | -- | Wrapper HTML or callback | ✔ |
 
 ---code|label:Markup---
 
@@ -18,9 +18,9 @@ Wee.$wrap('ref:element', '<div class="wrapper"></div>');
 
 ---code|modifier:stacked|label:Function---
 
-The current index is injected into the callback. The scope of ```this``` is the element.
+The current index is injected into the callback. The scope of `this` is the element.
 
-```markup
+```html
 <div class="library">
 	<ul class="books programming">
 		<li>Javascript: The Definitive Guide</li>
@@ -43,7 +43,7 @@ Wee.$wrap('.books', function(i) {
 });
 ```
 
-```markup
+```html
 <div class="library">
 	<div class="reference">
 		<ul class="books programming">

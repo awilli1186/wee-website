@@ -7,8 +7,8 @@ heading: Get or set the height of each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| value | [function](/script/#functions), string, number | -- | Height to set or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| value | [function](/script/#functions), string, number | -- | Height to set or callback | ✔ |
 
 ---code|type:number|modifier:split|label:Get---
 
@@ -32,9 +32,9 @@ Wee.$height('ref:element', '10rem');
 
 ---code|modifier:stacked|label:Function---
 
-The current index and height are injected into the callback. The scope of ```this``` is the element.
+The current index and height are injected into the callback. The scope of `this` is the element.
 
-```markup
+```html
 <div data-ref="example" style="height: 100px;"></div>
 ```
 

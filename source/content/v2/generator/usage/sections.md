@@ -4,7 +4,7 @@ name: Sections
 
 The sections tag pair iterates over the sections contained in the current section.
 
-```markup
+```html
 {{#!}}<ul>
 	{{#sections}}
 	<li>{{name}}</li>

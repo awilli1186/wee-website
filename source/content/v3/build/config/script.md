@@ -8,8 +8,11 @@ Wee comes with several standard JavaScript features such as asset loading, chain
 
 The core section allows you to enable or disable core features. For instance, if your project requires jQuery, you may choose not to include Wee's DOM and chaining.
 
+If an ID or class `namespace` is set all mixins will be prefixed to prevent collisions with class names since Less does not differentiate between the two. 
+
 ```javascript
 "core": {
+	"namespace": false,
 	"enable": true,
 	"features": {
 		"animate": true,

@@ -67,7 +67,7 @@ li:first-child:before {
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | keyword(s) | -- | List-style rules | ✓ |
+| @value | keyword(s) | -- | List-style rules | ✔ |
 
 ---code|modifier:split---
 

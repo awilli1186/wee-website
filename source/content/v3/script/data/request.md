@@ -7,7 +7,7 @@ heading: Make Ajax request based on specified options
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| options | object | -- | Request options below | ✓ |
+| options | object | -- | Request options below | ✔ |
 
 ---variables|label:Options Object---
 
@@ -23,7 +23,7 @@ heading: Make Ajax request based on specified options
 | method | string | get | Request verb (get, post, put, etc) in lowercase ||
 | scope | object | -- | Callback scope ||
 | success | [function](/script/#functions) | -- | Success callback ||
-| url | string | -- | URL endpoint to request | ✓ |
+| url | string | -- | URL endpoint to request | ✔ |
 
 ---code|label:Get---
 

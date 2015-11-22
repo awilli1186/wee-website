@@ -31,16 +31,14 @@ Wee.fn.make('search', {
 			}
 		});
 
-		$(Wee._body).on('click', function(e) {
-			// TODO: Resolve issue
-
-			//setTimeout(function() {
-			//	if (scope.$private.$active) {
-			//		if (e.target !== $('ref:searchInput')[0]) {
-			//			scope.collapse();
-			//		}
-			//	}
-			//}, 100);
+		$($._body).on('click', function(e) {
+			setTimeout(function() {
+				if (scope.$private.$active) {
+					if (e.target !== $('ref:searchInput')[0]) {
+						scope.collapse();
+					}
+				}
+			}, 100);
 		});
 	},
 	collapse: function() {

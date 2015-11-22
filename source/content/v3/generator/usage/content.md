@@ -4,7 +4,7 @@ name: Content
 
 With the content tag pair a section's content can be looped through.
 
-```markup
+```html
 {{#!}}{{#content|tag}}
 <h1>{{name}}</h1>
 <div>
@@ -17,7 +17,7 @@ With the content tag pair a section's content can be looped through.
 
 The input tag returns the raw markdown content before processing. The output tag returns the processed content.
 
-```markup
+```html
 {{#!}}{{#content}}
 	{{input}}
 	{{output}}

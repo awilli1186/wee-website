@@ -32,7 +32,7 @@ right: 2rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | keyword | -- | Positioning | ✓ |
+| @value | keyword | -- | Positioning | ✔ |
 | @top | unit | -- | Top ||
 | @right | unit | -- | Right ||
 | @bottom | unit | -- | Bottom ||

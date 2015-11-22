@@ -9,8 +9,8 @@ Partials are code snippets that can be reused throughout the current request lif
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| name | string | -- | Partial name | ✓ |
-| value | string | -- | Partial value | ✓ |
+| name | string | -- | Partial name | ✔ |
+| value | string | -- | Partial value | ✔ |
 
 ---code---
 

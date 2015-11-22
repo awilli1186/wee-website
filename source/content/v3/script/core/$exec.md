@@ -7,7 +7,7 @@ heading: Execute specified function or controller method
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| fn | [function](/script/#functions), array | -- | Functions to execute | ✓ |
+| fn | [function](/script/#functions), array | -- | Functions to execute | ✔ |
 | options | object | -- | Function options below ||
 
 ---variables---
@@ -48,4 +48,4 @@ Wee.$exec([
 
 ---note---
 
-**Note:** This method is mostly intended for external use although it can be used anywhere. Controller methods are best executed in the form of ```Wee.controllerName.methodName()```.
+**Note:** This method is mostly intended for external use although it can be used anywhere. Controller methods are best executed in the form of `Wee.controllerName.methodName()`.

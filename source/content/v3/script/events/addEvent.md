@@ -7,9 +7,9 @@ heading: Add a custom event
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| name | string | -- | Event name | ✓ |
-| on | function | -- | Enable function | ✓ |
-| off | function | -- | Disable function | ✓ |
+| name | string | -- | Event name | ✔ |
+| on | function | -- | Enable function | ✔ |
+| off | function | -- | Disable function | ✔ |
 
 ---code---
 

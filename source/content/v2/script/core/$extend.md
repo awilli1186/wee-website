@@ -8,7 +8,7 @@ heading: Extend target object with source object
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | target | object | -- | Target object ||
-| source | object | -- | Source object | ✓ |
+| source | object | -- | Source object | ✔ |
 | deep | boolean | false | Deep nesting ||
 
 ---doc|label:Clone Object---

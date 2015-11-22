@@ -8,7 +8,7 @@ related: $next
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 | filter | [selection](/script#selection) | -- | Filter selection ||
 | options | object | -- | [Callback options](/script/#functions) ||
 
@@ -20,7 +20,7 @@ Wee.$prev();
 
 ---code|label:Filtered---
 
-```markup
+```html
 <ul>
 	<li>John Doe</li>
 	<li>John Smith</li>
@@ -35,6 +35,6 @@ Wee.$prev();
 Wee.$prev('ref:name');
 ```
 
-```markup
+```html
 <li>John Smith</li>
 ```

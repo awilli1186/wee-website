@@ -19,7 +19,7 @@ heading: Get currently bound URI values or set URI data with a specified string 
 
 ---doc|label:Get---
 
-Based on ```https://www.weepower.com/script/routes?success=yes#uri``` the following object would be returned.
+Based on "https://www.weepower.com/script/routes?success=yes#uri" the following object would be returned.
 
 ---code|type:object|modifier:split---
 

@@ -46,7 +46,7 @@ visibility: visible;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @width | unit | -- | Width | ✓ |
+| @width | unit | -- | Width | ✔ |
 | @height | unit | -- | Height ||
 
 ---code|modifier:split---

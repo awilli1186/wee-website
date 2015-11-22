@@ -7,8 +7,8 @@ heading: Transition an attribute or property value
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| props | object | -- | Key/value object of attributes or properties | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| props | object | -- | Key/value object of attributes or properties | ✔ |
 | options | object | -- | Object parameters below ||
 
 ---variables|label:Options Object---

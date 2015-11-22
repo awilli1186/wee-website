@@ -1,9 +1,7 @@
-/* global ga, tinyscrollbar */
+/* global ga */
 
 Wee.fn.make('docs', {
 	init: function() {
-		var scope = this;
-
 		Wee.screen.map([
 			{
 				max: 2,
@@ -40,7 +38,7 @@ Wee.fn.make('docs', {
 			},
 			request: {
 				success: function() {
-					//ga('send', 'pageview');
+					ga('send', 'pageview');
 				}
 			}
 		});

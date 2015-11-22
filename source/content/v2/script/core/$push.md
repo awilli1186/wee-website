@@ -7,8 +7,8 @@ heading: Push value into global array
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | Reference to push the value into | ✓ |
-| a | string, any | -- | Storage value or key for value | ✓ |
+| key | string | -- | Reference to push the value into | ✔ |
+| a | string, any | -- | Storage value or key for value | ✔ |
 | b | any | -- | Storage value ||
 
 ---code---

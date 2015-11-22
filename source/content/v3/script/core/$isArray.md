@@ -7,7 +7,7 @@ heading: Determine if value is an array
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| value | any | -- | Value to evaluate | ✓ |
+| value | any | -- | Value to evaluate | ✔ |
 
 ---code|type:boolean|modifier:split---
 

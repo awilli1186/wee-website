@@ -7,8 +7,8 @@ heading: Get or set the width of each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| value | [function](/script/#functions), string | -- | Width to set or callback | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| value | [function](/script/#functions), string | -- | Width to set or callback | ✔ |
 
 ---code|type:number|modifier:split|label:Get---
 
@@ -32,9 +32,9 @@ Wee.$width('ref:element', '10rem');
 
 ---code|modifier:stacked|label:Function---
 
-The current index and width are injected into the callback. The scope of ```this``` is the element.
+The current index and width are injected into the callback. The scope of `this` is the element.
 
-```markup
+```html
 <div data-ref="example" style="width: 100px;"></div>
 ```
 

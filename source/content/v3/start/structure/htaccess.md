@@ -9,7 +9,7 @@ Regardless if you're running an Apache-compatible web server the principles stil
 
 The maintenance block serves as a quick mechanism to toggle a temporary redirect to a maintenance page. It also has an IP exclusion to ensure that internal traffic can still access the full site.
 
-```htaccess
+```apache
 #RewriteCond %{REQUEST_URI} !^/maintenance\.html$
 #RewriteCond %{REMOTE_ADDR} !^123\.456\.789\.
 #RewriteCond $1 !^(assets) [NC]
@@ -20,7 +20,7 @@ The maintenance block serves as a quick mechanism to toggle a temporary redirect
 
 A couple basic Apache settings are made and the X-UA-Compatible header and encoding are set. If uncommented the two corresponding meta tags should be removed from the HTML head. 
 
-```htaccess
+```apache
 RewriteEngine On
 Options +FollowSymLinks -Indexes -MultiViews
 
@@ -37,7 +37,7 @@ AddCharset utf-8 .atom .css .geojson .js .json .manifest .map .rss .xml
 
 ---code|label:Remote Assets---
 
-```htaccess
+```apache
 # Cross-origin images
 <FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
 	SetEnvIf Origin ":" IS_CORS
@@ -52,19 +52,19 @@ AddCharset utf-8 .atom .css .geojson .js .json .manifest .map .rss .xml
 
 ---code|label:Errors---
 
-```htaccess
+```apache
 ErrorDocument 404 /404.html
 ```
 
 ---code|label:Project---
 
-```htaccess
+```apache
 # Custom redirects and rewrites
 ```
 
 ---code|label:Rewrites---
 
-```htaccess
+```apache
 # Force www
 RewriteCond %{HTTP_HOST} ^weepower\.com$ [NC]
 RewriteRule ^(.*)$ http://www.weepower.com/$1 [R=301,L]

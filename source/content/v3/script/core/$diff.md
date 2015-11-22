@@ -7,8 +7,8 @@ heading: Generate a delta from two objects
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| a | object | -- | Original object | ✓ |
-| b | object | -- | Compared object | ✓ |
+| a | object | -- | Original object | ✔ |
+| b | object | -- | Compared object | ✔ |
 
 ---code|type:object|modifier:split---
 

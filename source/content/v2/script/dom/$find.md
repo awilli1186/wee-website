@@ -7,8 +7,8 @@ heading: Get unique filtered descendants from each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| parent | [selection](/script#selection) | -- | Parent selection | ✓ |
-| filter | [selection](/script#selection) | -- | Filter selection | ✓ |
+| parent | [selection](/script#selection) | -- | Parent selection | ✔ |
+| filter | [selection](/script#selection) | -- | Filter selection | ✔ |
 
 ---code---
 

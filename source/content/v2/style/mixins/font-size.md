@@ -22,8 +22,8 @@ font-size: 2rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | :------: |
-| @value | unit | -- | Font size rules | ✓ |
-| @lineHeight | unit | -- | Line height rules | ✓ |
+| @value | unit | -- | Font size rules | ✔ |
+| @lineHeight | unit | -- | Line height rules | ✔ |
 
 ---code|modifier:split---
 

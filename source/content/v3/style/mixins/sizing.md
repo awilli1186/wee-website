@@ -6,7 +6,7 @@ name: Sizing
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | unit | -- | Width or Height | ✓ |
+| @value | unit | -- | Width or Height | ✔ |
 | @maxWidth, @maxHeight | unit | -- | Maximum ||
 
 ---code|modifier:split---
@@ -27,7 +27,7 @@ max-height: 40%;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @value | unit | -- | Minimum or maximum | ✓ |
+| @value | unit | -- | Minimum or maximum | ✔ |
 
 ---code|modifier:split---
 
@@ -57,7 +57,7 @@ min-height: 3rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @width | unit | -- | Width or Width/Height | ✓ |
+| @width | unit | -- | Width or Width/Height | ✔ |
 | @height | unit | -- | Height ||
 
 ---code|modifier:split---
@@ -103,7 +103,7 @@ max-width: 4rem;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @size | unit | -- | Width &amp; height | ✓ |
+| @size | unit | -- | Width &amp; height | ✔ |
 
 ---code|modifier:split---
 
@@ -160,7 +160,7 @@ padding-top: 75%;
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @diameter | unit | -- | Diameter | ✓ |
+| @diameter | unit | -- | Diameter | ✔ |
 | @crop | boolean | false | Crop ||
 | @display | block, inline | block | Display value ||
 

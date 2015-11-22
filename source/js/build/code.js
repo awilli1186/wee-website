@@ -1,19 +1,28 @@
-/* global Prism */
+/* global hljs */
 
 Wee.fn.make('code', {
 	init: function() {
-		var scope = this;
+		var priv = this.$private,
+			$code = $('pre code');
 
-		Prism.highlightAll();
+		$code.each(function(el) {
+			hljs.highlightBlock(el);
+		});
 
-		$('pre code').on('dblclick', function() {
-			scope.$private.selectCode(this);
+		$code.on('dblclick', function(el) {
+			priv.selectCode(el);
 		});
 	}
 }, {
+	/**
+	 * Select all markup in a code block
+	 *
+	 * @private
+	 * @param {HTMLElement} el - target code wrapper
+	 */
 	selectCode: function(el) {
-		var range = Wee._doc.createRange(),
-			sel = Wee._win.getSelection();
+		var range = $._doc.createRange(),
+			sel = $._win.getSelection();
 
 		range.selectNodeContents(el);
 

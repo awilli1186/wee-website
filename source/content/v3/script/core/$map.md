@@ -9,8 +9,8 @@ The callback receives the current element as well as the index.
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | array, [selection](/script#selection) | -- | Array or selection | ✓ |
-| fn | [function](/script/#functions) | -- | Callback function | ✓ |
+| target | array, [selection](/script#selection) | -- | Array or selection | ✔ |
+| fn | [function](/script/#functions) | -- | Callback function | ✔ |
 | options | object | -- | Callback options below ||
 
 ---variables---

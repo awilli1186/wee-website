@@ -7,8 +7,8 @@ heading: Get attribute of first matching selection or set attribute of each matc
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| a | string, object | -- | Attribute to get or set or an object | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| a | string, object | -- | Attribute to get or set or an object | ✔ |
 | b | [function](/script/#functions), string | -- | Value to assign to attribute ||
 
 ---code|type:string|modifier:split|label:Get---

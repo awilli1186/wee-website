@@ -7,8 +7,8 @@ heading: Execute event for each matching selection
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
-| event | string | -- | Event name | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
+| event | string | -- | Event name | ✔ |
 
 ---code---
 

@@ -7,18 +7,38 @@ heading: Bind element events and form submit events to PJAX
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| TODO | TODO | -- | TODO ||
+| events | object | -- | {event: selector} object to bind | ✔ |
+| a | object, [selection](/script#selection) | -- | Context or same options available to [go method](#go) ||
+| context | [selection](/script#selection) | document | Context selection ||
 
----doc|label:Set---
-
-TODO
-
----code|type:string|modifier:split---
+---code|label:Basic---
 
 ```javascript
-TODO
+Wee.history.bind({
+	click: 'a',
+	submit: '.element'
+});
 ```
 
+---code|label:Advanced---
+
 ```javascript
-TODO
+Wee.history.bind({
+		click: 'a:not([data-static])'
+	},
+	'ref:element',
+	{
+		extensions: [
+			'html',
+			'php',
+		],
+		partials: 'title, .js-sidebar, ref:inner',
+		request: {
+			root: '/pjax',
+			success: function() {
+				ga('send', 'pageview');
+			}
+		}
+	}
+});
 ```

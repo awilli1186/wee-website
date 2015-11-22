@@ -7,7 +7,7 @@ heading: Get the position of the first matching selection relative to its offset
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 
 ---code|type:object|modifier:split---
 

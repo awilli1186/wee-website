@@ -11,11 +11,11 @@ By default the polyfill will replace the source of any linked SVG files with a P
 
 ---code|modifier:split---
 
-```markup
+```html
 <img src="/assets/img/wee.svg" alt="Wee">
 ```
 
-```markup
+```html
 <img src="/assets/img/wee.png" alt="Wee">
 ```
 
@@ -23,12 +23,12 @@ By default the polyfill will replace the source of any linked SVG files with a P
 
 If you need to specify the fallback set the ```data-fallback``` attribute. This is useful if the fallback path is different than the originally linked SVG, it is in a different format than PNG, or you are using ```<svg>``` directly in your markup.
 
-```markup
+```html
 <svg viewBox="0 0 501.3 165.7" role="img" aria-label="Wee" data-fallback="/assets/img/wee.png">
 	<path fill="#fff" d="M481.2 111c-39.2 23.3-67.8 38.3-84.2"></path>
 </svg>
 ```
 
-```markup
+```html
 <img src="/assets/img/wee.png" role="img" aria-label="Wee">
 ```

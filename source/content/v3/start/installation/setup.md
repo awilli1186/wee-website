@@ -2,13 +2,15 @@
 name: Setup
 ---
 
+1. Install the latest [Node.js](http://nodejs.org).
+2. Install the [Wee CLI](https://github.com/weepower/wee-cli) by running `npm install -g wee-cli`
+3. Navigate to your project in the command line and run `npm install` to install [Wee core](https://github.com/weepower/wee-core) and its dependencies.
+
 There are a couple tools you'll need to start and compile a Wee project.
 
 The first tool you'll need is [Node.js](http://www.nodejs.org/).  If you think you may already have Node installed, open Terminal (Mac) or Command Line (Windows) and type `node -v` to execute a command that checks the version.
 
 If Node responds, check that version against the latest version at [Nodejs.org](http://www.nodejs.org/).  If you get no response, or if you have an older version, then download and install the latest version.  Node also includes npm (Node Package Manager) which is used to install dependencies.
-
-Next, you'll need to install the Grunt CLI (Command Line Interface) globally using npm.  To do this, you may need to use sudo (OS X, *nix, BSD etc) or run Command Line as Administrator (Windows):
 
 There are two ways to download Wee:
 * [Download the latest release](https://github.com/weepower/wee/archive/master.zip) or

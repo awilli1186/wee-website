@@ -7,7 +7,7 @@ heading: Execute matching observed callbacks
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | Storage reference | ✓ |
+| key | string | -- | Storage reference | ✔ |
 
 ---code|type:string|modifier:split---
 

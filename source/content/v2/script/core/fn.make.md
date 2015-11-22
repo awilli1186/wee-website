@@ -9,8 +9,8 @@ Controllers serve as the wrapper for all custom script. They can be created per 
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| name | string | -- | Namespace of the controller | ✓ |
-| pub | object | -- | Public methods and variables | ✓ |
+| name | string | -- | Namespace of the controller | ✔ |
+| pub | object | -- | Public methods and variables | ✔ |
 | priv | object | -- | Private methods and variables ||
 
 ---code|label:Public---

@@ -12,10 +12,10 @@ Introduced in IE11, the browserconfig file dictates icon configuration for Windo
 <browserconfig>
 	<msapplication>
 		<tile>
-			<square70x70logo src="/assets/img/icons/tileicon.png"/>
-			<square150x150logo src="/assets/img/icons/tileicon.png"/>
-			<square310x310logo src="/assets/img/icons/tileicon.png"/>
-			<wide310x150logo src="/assets/img/icons/tileicon-wide.png"/>
+			<square70x70logo src="/assets/img/icons/tile.png"/>
+			<square150x150logo src="/assets/img/icons/tile.png"/>
+			<square310x310logo src="/assets/img/icons/tile.png"/>
+			<wide310x150logo src="/assets/img/icons/tile-wide.png"/>
 			<TileColor>#168eaf</TileColor>
 		</tile>
 	</msapplication>

@@ -33,7 +33,7 @@ fill: rgba(155, 155, 155, .5);
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| light, dark | keyword | -- | Light or dark preset | ✓ |
+| light, dark | keyword | -- | Light or dark preset | ✔ |
 | @opacity | unit | [@defaultOpacity](/style/variables#miscellaneous) = .2 | Fill opacity ||
 
 ---code|modifier:split---

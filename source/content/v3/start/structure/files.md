@@ -1,5 +1,6 @@
 ---
 name: Files
+path: /
 ---
 
 ---collapsible---
@@ -8,7 +9,6 @@ name: Files
 * .gitattributes
 * .gitignore
 * package.json
-* wee.js
 * wee.json
 * node_modules/
 * public/
@@ -30,7 +30,6 @@ name: Files
 			* vendor/
 		* custom/
 			* ie8.less
-			* ie9.less
 			* mixins.less
 			* print.less
 			* screen.less
@@ -49,9 +48,10 @@ name: Files
 		* logo.svg
 		* share.png
 		* icons/
-			* tileicon.png
-			* tileicon-wide.png
-			* touchicon.png
+			* pin.svg
+			* tile.png
+			* tile-wide.png
+			* touch.png
 	* js/
 		* build/
 			* vendor/

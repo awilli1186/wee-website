@@ -9,7 +9,7 @@ The ready function will wait for the page to finish loading else immediately exe
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| fn | [function](/script/#functions), array | -- | Document ready function(s) | ✓ |
+| fn | [function](/script/#functions), array | -- | Document ready function(s) | ✔ |
 
 ---code|modifier:stacked---
 

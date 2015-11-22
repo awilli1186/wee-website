@@ -7,7 +7,7 @@ heading: Remove each matching selection from the document
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| target | [selection](/script#selection) | -- | Target selection | ✓ |
+| target | [selection](/script#selection) | -- | Target selection | ✔ |
 | context | [selection](/script#selection) | document | Context selection ||
 
 ---code---
