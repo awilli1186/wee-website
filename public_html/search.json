@@ -2509,20 +2509,8 @@
 	},
 	
 	{
-		"title": "ES5 Shim",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/script/polyfills#es5-shim"
-	},
-	
-	{
-		"title": "HTML5 Shiv",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/script/polyfills#html5-shiv"
-	},
-	
-	{
 		"title": "Polyfills",
-		"description": "Patching legacy browsers for a JavaScript consistency",
+		"description": "Patching legacy IE JavaScript support",
 		"url": "http://www.weepower.dev/v3/script/polyfills"
 	},
 	
@@ -2533,21 +2521,9 @@
 	},
 	
 	{
-		"title": "Sizzle",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/script/polyfills#sizzle"
-	},
-	
-	{
 		"title": "Slice",
 		"description": "",
 		"url": "http://www.weepower.dev/v3/script/polyfills#slice"
-	},
-	
-	{
-		"title": "SVG",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/script/polyfills#svg"
 	},
 	
 	{
@@ -2842,12 +2818,6 @@
 		"title": "Style",
 		"description": "Normalize your brand with Wee's mixin library",
 		"url": "http://www.weepower.dev/v3/style"
-	},
-	
-	{
-		"title": "Legacy",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/style#legacy"
 	},
 	
 	{

@@ -51,13 +51,6 @@ This works the same as the CSS section. If you have Javascript files that you wo
 
 ```javascript
 "compile": {
-	"ie8.min.js": [
-		"polyfill/es5-shim.js",
-		"polyfill/html5shiv.js",
-		"polyfill/sizzle.js",
-		"polyfill/wee.svg.js",
-		"custom/ie8.js"
-	],
 	"ie9.min.js": [
 		"polyfill/wee.placeholder.js",
 		"polyfill/wee.slice.js"

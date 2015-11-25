@@ -37,13 +37,7 @@
 &lt;meta property=&quot;og:description&quot; content=&quot;Blueprint for modern web development.&quot; itemprop=&quot;description&quot;&gt;
 &lt;meta property=&quot;og:url&quot; content=&quot;https://www.weepower.com&quot; itemprop=&quot;url&quot;&gt;
 &lt;meta property=&quot;og:image&quot; content=&quot;https://www.weepower.com/assets/img/share.png&quot; itemprop=&quot;image&quot;&gt;
-</code></pre></div><div class="doc__note"><p><strong>Note:</strong> In the sample HTML Wee dual-purposes the Open Graph tags as Schema properties for the WebPage scope defined on the document root.</p></div></div><div class="doc"><h2 class="doc__title">Legacy <a href="#legacy" id="legacy" class="doc__anchor">#</a></h2><div class="doc__content"><p>Wee works hard to maintain compatibility with IE8 and IE9 which requires <a href="http://www.quirksmode.org/css/condcom.html">conditionally serving</a> specific rules and polyfills. If you aren’t supporting legacy browsers feel free to remove them.</p><pre><code class="language-html">&lt;!--[if lt IE 9]&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/ie8.min.css&quot;&gt;
-&lt;script src=&quot;/assets/js/ie8.min.js&quot;&gt;&lt;/script&gt;
-&lt;![endif]--&gt;
-
-&lt;!--[if lte IE 9]&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/ie9.min.css&quot;&gt;
+</code></pre></div><div class="doc__note"><p><strong>Note:</strong> In the sample HTML Wee dual-purposes the Open Graph tags as Schema properties for the WebPage scope defined on the document root.</p></div></div><div class="doc"><h2 class="doc__title">Legacy <a href="#legacy" id="legacy" class="doc__anchor">#</a></h2><div class="doc__content"><p>Wee works hard to maintain compatibility with IE9 which requires <a href="http://www.quirksmode.org/css/condcom.html">conditionally serving</a> specific rules and polyfills. If you aren’t supporting legacy browsers feel free to remove this.</p><pre><code class="language-html">&lt;!--[if lte IE 9]&gt;
 &lt;script src=&quot;/assets/js/ie9.min.js&quot;&gt;&lt;/script&gt;
 &lt;![endif]--&gt;
 </code></pre></div></div><div class="doc"><h2 class="doc__title">ARIA <a href="#aria" id="aria" class="doc__anchor">#</a></h2><div class="doc__content"><p><a href="http://www.w3.org/WAI/intro/aria">WAI-ARIA</a> defines a way to make web content and applications more accessible to those with disabilities. It especially helps with dynamic content and JavaScript widgets.</p><pre><code class="language-html">&lt;header role=&quot;banner&quot;&gt;&lt;/header&gt;

@@ -1,9 +1,9 @@
 ---
 name: Polyfills
-heading: Patching legacy browsers for a JavaScript consistency
+heading: Patching legacy IE JavaScript support
 global:
   seoTitle: JavaScript Polyfills
-  deoDesc: Wee patches legacy browsers for a consistent JavaScript API by using a collection of polyfills to support HTML5, ES5, placeholders, SVGs, and more.
+  deoDesc: Wee patches IE9 for a consistent JavaScript API using a couple critical polyfills to support placeholders and slicing NodeLists.
 ---
 
-Polyfills are used to patch browser incompatibilities and inconsistencies. Wee ships with a few basic components. If you don't need them just remove them from the legacy [compile array](/build/config#project).
+Polyfills are used to patch browser incompatibilities and inconsistencies. Wee ships with a couple basic components. If you don't need them just remove them from the IE9 [compile array](/build/config#project).

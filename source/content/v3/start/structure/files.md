@@ -29,7 +29,6 @@ path: /
 		* build/
 			* vendor/
 		* custom/
-			* ie8.less
 			* mixins.less
 			* print.less
 			* screen.less
@@ -44,7 +43,6 @@ path: /
 			* vendor/
 	* fonts/
 	* img/
-		* logo.png
 		* logo.svg
 		* share.png
 		* icons/
@@ -56,17 +54,12 @@ path: /
 		* build/
 			* vendor/
 		* custom/
-			* ie8.js
 			* script.js
 		* lib/
 			* vendor/
 		* polyfill/
-			* es5-shim.js
-			* html5shiv.js
-			* sizzle.js
 			* wee.placeholder.js
 			* wee.slice.js
-			* wee.svg.js
 		* tests/
 			* config.js
 			* functional/

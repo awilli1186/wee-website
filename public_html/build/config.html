@@ -73,19 +73,6 @@
     &quot;**/*.css&quot;,
     &quot;!**/*.less&quot;
 ]
-</code></pre></div><h3 class="doc__label doc__code__label">Legacy</h3><div class="doc__code"><p>Wee has a few built-in legacy features for IE8 that can optionally be modified or disabled.</p><pre><code class="language-javascript">&quot;legacy&quot;: {
-    &quot;enable&quot;: true,
-    &quot;watch&quot;: false,
-    &quot;breakpoint&quot;: 4,
-    &quot;rootSize&quot;: &quot;62.5%&quot;,
-    &quot;dest&quot;: &quot;ie8.min.css&quot;,
-    &quot;build&quot;: [
-        &quot;custom/ie8.less&quot;
-    ],
-    &quot;compile&quot;: {
-
-    }
-}
 </code></pre></div></div><div class="doc"><h2 class="doc__title">Script <a href="#script" id="script" class="doc__anchor">#</a></h2><div class="doc__content"><p>Wee comes with several standard JavaScript features such as asset loading, chaining, DOM manipulations, event binding and more. You can also compile and/or build in your own scripts.</p></div><h3 class="doc__label doc__code__label">Core</h3><div class="doc__code"><p>The core section allows you to enable or disable core features. For instance, if your project requires jQuery, you may choose not to include Wee’s DOM and chaining.</p><p>If an ID or class <code>namespace</code> is set all mixins will be prefixed to prevent collisions with class names since Less does not differentiate between the two.</p><pre><code class="language-javascript">&quot;core&quot;: {
     &quot;namespace&quot;: false,
     &quot;enable&quot;: true,
@@ -108,13 +95,6 @@
     &quot;path/files/two.js&quot;
 ]
 </code></pre></div><h3 class="doc__label doc__code__label">Compile</h3><div class="doc__code"><p>This works the same as the CSS section. If you have Javascript files that you would like to compile and minify, but not include in your primary Javascript output, this is where you can specify them.</p><pre><code class="language-javascript">&quot;compile&quot;: {
-    &quot;ie8.min.js&quot;: [
-        &quot;polyfill/es5-shim.js&quot;,
-        &quot;polyfill/html5shiv.js&quot;,
-        &quot;polyfill/sizzle.js&quot;,
-        &quot;polyfill/wee.svg.js&quot;,
-        &quot;custom/ie8.js&quot;
-    ],
     &quot;ie9.min.js&quot;: [
         &quot;polyfill/wee.placeholder.js&quot;,
         &quot;polyfill/wee.slice.js&quot;

@@ -76,23 +76,3 @@ You can use any globbing conventions (such as wildcards and exclusions).
 	"!**/*.less"
 ]
 ```
-
----code|label:Legacy---
-
-Wee has a few built-in legacy features for IE8 that can optionally be modified or disabled.
-
-```javascript
-"legacy": {
-	"enable": true,
-	"watch": false,
-	"breakpoint": 4,
-	"rootSize": "62.5%",
-	"dest": "ie8.min.css",
-	"build": [
-		"custom/ie8.less"
-	],
-	"compile": {
-
-	}
-}
-```
