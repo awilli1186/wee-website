@@ -1,6 +1,6 @@
 ---
 name: Style Build
-description: Wee builds CSS in the following sequence
+heading: Wee builds CSS in the following sequence
 ---
 
 1. The primary stylesheet compiles to `public/assets/css/screen.min.css` from the following:

@@ -1,6 +1,6 @@
 ---
 name: Script Build
-description: Wee builds JavaScript in the following sequence
+heading: Wee builds JavaScript in the following sequence
 ---
 
 1. The primary script compiles to `public/assets/js/script.min.js` from the following:

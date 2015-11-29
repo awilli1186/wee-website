@@ -4,6 +4,8 @@ name: Style
 
 The core block allows disabling styling features as well as setting breakpoint values. By setting any key to false that feature or breakpoint is suppressed.
 
+If an ID or class "namespace" is set all mixins will be prefixed to prevent collisions with class names since Less does not differentiate between the two. 
+
 ```javascript
 "core": {
 	"namespace": false,

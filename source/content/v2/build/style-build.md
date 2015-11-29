@@ -1,6 +1,6 @@
 ---
 name: Style Build
-description: Wee Grunt builds the styles in the following sequence
+heading: Wee Grunt builds the styles in the following sequence
 ---
 
 1. style.min.css - this is the primary CSS file. The following items are 

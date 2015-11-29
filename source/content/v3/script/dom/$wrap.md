@@ -23,7 +23,7 @@ The current index is injected into the callback. The scope of `this` is the elem
 ```html
 <div class="library">
 	<ul class="books programming">
-		<li>Javascript: The Definitive Guide</li>
+		<li>JavaScript: The Definitive Guide</li>
 		<li>Mastering Regular Expressions</li>
 	</ul>
 	<ul class="books technique">
@@ -47,7 +47,7 @@ Wee.$wrap('.books', function(i) {
 <div class="library">
 	<div class="reference">
 		<ul class="books programming">
-			<li>Javascript: The Definitive Guide</li>
+			<li>JavaScript: The Definitive Guide</li>
 			<li>Mastering Regular Expressions</li>
 		</ul>
 	</div>

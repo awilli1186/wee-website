@@ -1,6 +1,6 @@
 ---
 name: Tasks
-description: Command line tasks for compiling your project
+heading: Command line tasks for compiling your project
 ---
 
 ---code|label:Default---

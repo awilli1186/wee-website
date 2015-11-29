@@ -5,4 +5,4 @@ global:
   seoTitle: JavaScript Packaging
 ---
 
-Modules are an excellent way to separate your codebase out into isolated, reusable sections of Javascript and CSS. This can be very useful for reusability and maintainability of a large website, or simply a way of abstracting common functionalities into a sharable format.
+Modules are an excellent way to separate your codebase out into isolated, reusable sections of JavaScript and CSS. This can be very useful for reusability and maintainability of a large website, or simply a way of abstracting common functionalities into a sharable format.

@@ -2,7 +2,7 @@
 name: Server
 ---
 
-When Wee is running and serving your site through the proxy, you can chose to have it mirror actions between connected browsers. That means if you have a browser open to your proxy URL on perhaps a mobile device on the same network, and your local development device, when you scroll or click or take an action on one browser, it will be replicated on the other.
+When Wee is running and serving your site through the proxy, you can chose to have it mirror actions between connected browsers. That means if you have a browser open to your proxy URL on perhaps a mobile device on the same network, and your local development device, when you scroll, click, or take an action on one browser, it will be replicated in the other.
 
 ```javascript
 "ghostMode": true
@@ -18,7 +18,7 @@ If you need to override the host do it here. By default your current public IP w
 
 ---code|label:Port---
 
-If for some reason you are having a port conflict, you can change the port here.
+If for some reason you are having a port conflict, you can update the port here.
 
 ```javascript
 "port": 9000
@@ -55,7 +55,7 @@ This allows you to enable or disable reloading whenever CSS, JS, or static files
 
 ---code|label:Tasks---
 
-With the `wee run:local` task, Wee needs to know what your local server address is for the proxy. It then uses the proxy to sit between your browser and the development server so it can inject CSS changes, or reload the page for static and JavaScript changes.
+With the `wee run:local` task, Wee needs to know what your local server address is for the proxy. It then uses the proxy to sit between your browser and the development server to inject changes.
 
 With `wee run:static` you can set whether to use HTTPS.
 

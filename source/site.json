@@ -123,22 +123,11 @@
 			"content": [
 				"intro.md",
 				"features.md",
-				"compatibility.md",
-				"bugs.md",
-				"versioning.md",
-				"community.md",
-				"license.md"
+				"prerequisites.md",
+				"setup.md",
+				"*.md"
 			],
 			"sections": {
-				"installation": {
-					"name": "Installation",
-					"target": "start/installation.html",
-					"contentRoot": "v3/start/installation",
-					"content": [
-						"intro.md",
-						"*.md"
-					]
-				},
 				"structure": {
 					"name": "Structure",
 					"target": "start/structure.html",
@@ -174,7 +163,7 @@
 			"contentRoot": "v3/build",
 			"content": [
 				"intro.md",
-				"tasks.md",
+				"commands.md",
 				"*.md"
 			],
 			"sections": {
@@ -191,14 +180,15 @@
 						"server.md"
 					]
 				},
-				"validation": {
-					"name": "Validation",
-					"target": "build/validation.html",
-					"contentRoot": "v3/build/validation",
+				"commands": {
+					"name": "Commands",
+					"target": "build/commands.html",
+					"contentRoot": "v3/build/commands",
 					"content": [
 						"intro.md",
-						"task.md",
-						"*.md"
+						"*.md",
+						"!custom.md",
+						"custom.md"
 					]
 				},
 				"modules": {

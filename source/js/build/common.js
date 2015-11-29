@@ -3,6 +3,37 @@ Wee.fn.make('common', {
 		var scope = this,
 			$body = $(Wee._body);
 
+		// Mobile navigation
+		Wee.screen.map([
+			{
+				max: 3,
+				callback: function() {
+					var $nav = $('ref:headerNav'),
+						$header = $('ref:header');
+
+					$nav.hide();
+
+					$nav.appendTo($header);
+				}
+			},
+			{
+				min: 4,
+				init: false,
+				callback: function() {
+					var $nav = $('ref:headerNav'),
+						$pull = $('ref:pull');
+
+					$nav.show();
+
+					$nav.insertAfter($pull);
+				}
+			}
+		]);
+
+		$('ref:pull').on('click', function() {
+			$('ref:headerNav').toggle();
+		});
+
 		// Setup color scheme picker
 		this.$private.setScheme();
 

@@ -22,7 +22,7 @@ To accommodate different publish configurations, Wee needs to know your director
 
 ---note---
 
-**Note:** The `root` path is your public HTML directory. Common values include `www`, `public`, and `public_html`.
+**Note:** The "root" path is your public HTML directory. Common values include "www", "public", and "public_html".
 
 ---code|label:Global Data---
 
@@ -40,7 +40,7 @@ To access global script data use the following syntax:
 Wee.$get('global.brandColor');
 ```
 
-Style data can simply be accessed by the key name in Less as follows:
+Style data can be accessed by the key name in Less as follows:
 
 ```less
 body {

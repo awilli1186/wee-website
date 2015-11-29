@@ -18,7 +18,7 @@ The maintenance block serves as a quick mechanism to toggle a temporary redirect
 
 ---code|label:Setup---
 
-A couple basic Apache settings are made and the X-UA-Compatible header and encoding are set. If uncommented the two corresponding meta tags should be removed from the HTML head. 
+A couple basic Apache settings are made and the X-UA-Compatible header and encoding are set. If uncommented the two corresponding meta tags should be removed from the [HTML head](/start/markup#meta). 
 
 ```apache
 RewriteEngine On

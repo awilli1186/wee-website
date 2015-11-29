@@ -1,6 +1,6 @@
 ---
 name: Script Build
-description: Wee Grunt builds scripts in the following sequence
+heading: Wee Grunt builds scripts in the following sequence
 ---
 
 1. script.min.js - this is the primary script file. It is compiled from the following:

@@ -50,7 +50,7 @@
 	
 	{
 		"title": "Script Build",
-		"description": "",
+		"description": "Wee Grunt builds scripts in the following sequence",
 		"url": "http://www.weepower.dev/v2/build#script-build"
 	},
 	
@@ -62,13 +62,13 @@
 	
 	{
 		"title": "Style Build",
-		"description": "",
+		"description": "Wee Grunt builds the styles in the following sequence",
 		"url": "http://www.weepower.dev/v2/build#style-build"
 	},
 	
 	{
 		"title": "Tasks",
-		"description": "",
+		"description": "Command line tasks for compiling your project",
 		"url": "http://www.weepower.dev/v2/build#tasks"
 	},
 	
@@ -1597,6 +1597,42 @@
 	},
 	
 	{
+		"title": "Custom",
+		"description": "",
+		"url": "http://www.weepower.dev/v3/build/commands#custom"
+	},
+	
+	{
+		"title": "Commands",
+		"description": "Wee includes helpful commands and allows you to register your own",
+		"url": "http://www.weepower.dev/v3/build/commands"
+	},
+	
+	{
+		"title": "Make",
+		"description": "",
+		"url": "http://www.weepower.dev/v3/build/commands#make"
+	},
+	
+	{
+		"title": "Reset",
+		"description": "",
+		"url": "http://www.weepower.dev/v3/build/commands#reset"
+	},
+	
+	{
+		"title": "Update",
+		"description": "",
+		"url": "http://www.weepower.dev/v3/build/commands#update"
+	},
+	
+	{
+		"title": "Validate",
+		"description": "",
+		"url": "http://www.weepower.dev/v3/build/commands#validate"
+	},
+	
+	{
 		"title": "General",
 		"description": "",
 		"url": "http://www.weepower.dev/v3/build/config#general"
@@ -1657,39 +1693,27 @@
 	},
 	
 	{
+		"title": "Run",
+		"description": "Command line tasks for building your project",
+		"url": "http://www.weepower.dev/v3/build#run"
+	},
+	
+	{
 		"title": "Script Build",
-		"description": "",
+		"description": "Wee builds JavaScript in the following sequence",
 		"url": "http://www.weepower.dev/v3/build#script-build"
 	},
 	
 	{
 		"title": "Style Build",
-		"description": "",
+		"description": "Wee builds CSS in the following sequence",
 		"url": "http://www.weepower.dev/v3/build#style-build"
 	},
 	
 	{
-		"title": "Tasks",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/build#tasks"
-	},
-	
-	{
-		"title": "Validation",
-		"description": "Ensure consistent code quality and style",
-		"url": "http://www.weepower.dev/v3/build/validation"
-	},
-	
-	{
-		"title": "Script",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/build/validation#script"
-	},
-	
-	{
-		"title": "Task",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/build/validation#task"
+		"title": "Testing",
+		"description": "Easily drop in functional and unit test using Intern",
+		"url": "http://www.weepower.dev/v3/build#testing"
 	},
 	
 	{
@@ -1738,6 +1762,12 @@
 		"title": "Generator",
 		"description": "Static builder for style guides, documentation, or entire sites",
 		"url": "http://www.weepower.dev/v3/generator"
+	},
+	
+	{
+		"title": "Task",
+		"description": "",
+		"url": "http://www.weepower.dev/v3/generator#task"
 	},
 	
 	{
@@ -2641,18 +2671,6 @@
 	},
 	
 	{
-		"title": "Bugs",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/start#bugs"
-	},
-	
-	{
-		"title": "Community",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/start#community"
-	},
-	
-	{
 		"title": "Compatibility",
 		"description": "Wee officially supports the following minimum browser versions",
 		"url": "http://www.weepower.dev/v3/start#compatibility"
@@ -2662,18 +2680,6 @@
 		"title": "Features",
 		"description": "",
 		"url": "http://www.weepower.dev/v3/start#features"
-	},
-	
-	{
-		"title": "Installation",
-		"description": "What you'll need to start a Wee project",
-		"url": "http://www.weepower.dev/v3/start/installation"
-	},
-	
-	{
-		"title": "Setup",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/start/installation#setup"
 	},
 	
 	{
@@ -2743,6 +2749,18 @@
 	},
 	
 	{
+		"title": "Prerequisites",
+		"description": "There are a couple tools you'll need to build a project",
+		"url": "http://www.weepower.dev/v3/start#prerequisites"
+	},
+	
+	{
+		"title": "Setup",
+		"description": "",
+		"url": "http://www.weepower.dev/v3/start#setup"
+	},
+	
+	{
 		"title": "browserconfig",
 		"description": "",
 		"url": "http://www.weepower.dev/v3/start/structure#browserconfig"
@@ -2776,12 +2794,6 @@
 		"title": "robots",
 		"description": "",
 		"url": "http://www.weepower.dev/v3/start/structure#robots"
-	},
-	
-	{
-		"title": "Versioning",
-		"description": "",
-		"url": "http://www.weepower.dev/v3/start#versioning"
 	},
 	
 	{

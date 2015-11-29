@@ -68,39 +68,45 @@ body {
 		}
 		tr {
 			&:nth-child(odd) td {
-				.background(@lighter);
+				.background(@dark-6);
 			}
 		}
 		table {
 			caption {
-				.background(@lighter);
+				.background(@dark-6);
 				.lighterGray();
 			}
 		}
 		code {
-			.background(@lighter);
+			.background(@dark-6);
 			.color(@light);
 		}
 		pre {
 			code {
-				.background(@darker);
+				.background(@dark3);
 			}
 		}
 		.header {
 			.background(@dark);
-			.border-color(@darker);
+			.border-color(@dark6);
 			&__logo {
 				&:hover {
 					path {
-						.fill(@gray);
+						.fill(@lighterGray);
 					}
 				}
 				path {
 					.fill(@white);
 				}
 			}
-			&__title {
+			&__pull {
 				.white();
+				&:hover {
+					.lighterGray();
+				}
+			}
+			&__title {
+				.color(@light);
 			}
 			&__button {
 				.background(@dark);
@@ -130,17 +136,17 @@ body {
 			}
 			&__toggle {
 				&:before {
-					.background(@darkest);
+					.background(@dark9);
 				}
 				&:after {
-					.background(@lightest);
-					.border-color(@darkest);
+					.background(@dark-12);
+					.border-color(@dark9);
 					.left(0);
 				}
 			}
 		}
 		.search {
-			.background(@darkest);
+			.background(@dark9);
 			&__input {
 				.color(@light);
 			}
@@ -155,14 +161,14 @@ body {
 				}
 			}
 			&__results {
-				.background(@darker);
+				.background(@dark3);
 				&:before {
-					.background(@darker);
+					.background(@dark3);
 				}
 				&__entry {
 					&:hover,
 					&.-is-active {
-						.background(@darkest);
+						.background(@dark9);
 					}
 				}
 			}
@@ -171,14 +177,15 @@ body {
 			.white();
 		}
 		.home-label {
-			.border(top; @lightest);
+			.border(top; @dark-12);
+			.color(@dark-30);
 		}
 		.components {
-			.background(@darker);
+			.background(@dark3);
 		}
 		.highlights {
 			&__item {
-				.border(@lightest);
+				.border(@dark-12);
 			}
 		}
 
@@ -192,15 +199,15 @@ body {
 			}
 		}
 		.topnav {
-			.border-color(@darker);
+			.border-color(@dark3);
 			a {
 				&.-is-active {
-					.background(@darker);
+					.background(@dark3);
 				}
 			}
 		}
 		.subnav {
-			.background(@darker);
+			.background(@dark3);
 		}
 
 		.doc {
@@ -231,7 +238,7 @@ body {
 			}
 			&__note {
 				p {
-					.background(@darkest);
+					.background(@dark9);
 				}
 				code {
 					.background(@dark);
@@ -240,7 +247,7 @@ body {
 			}
 			&__notice {
 				p {
-					.color(@darkest);
+					.color(@dark9);
 				}
 			}
 		}
@@ -402,15 +409,14 @@ body {
 	.border(bottom; @light);
 	.fill();
 	.fixed(0; false; false; 0);
-	.height(7);
 	.padded();
 	.z-index(1000);
 	&__root {
-		.align(middle);
+		.align(top);
 		.height(7);
-		.inline-block(9);
-		.padding(right; 1.8);
-		.padding(top; 1.9);
+		.inline-block(8.6);
+		.padding(right; 1.4);
+		.padding(top; 2.1);
 	}
 	&__logo {
 		&:hover {
@@ -422,62 +428,47 @@ body {
 			.fill(@primary);
 		}
 	}
-	&__content {
-		.hide();
+	&__pull {
+		.align(top);
+		.cursor();
+		.inline-block();
+		.margin(top; 1.8);
+		.primary();
+		.user-select();
+		&:hover {
+			.color(@linkColorHover);
+		}
+		&:after {
+			.content(@iconMenu);
+			.font(wee; 1.6; false; 2);
+		}
+	}
+	&__right {
+		.right();
 	}
 	&__title {
-		.font-size(2.1; 3);
+		.font-size(1.9; 1.4);
 		.font-weight(300);
-		.inline();
+		.hide();
+		.padding(top; 2.1);
 		.spaced(0);
 		.primary();
 	}
-	&__checkbox {
-		.absolute(-10);
-	}
 	&__nav {
-		.right();
+		.align(top);
 	}
 	&__button {
 		.background(@bodyBackground);
 		.font-weight(400);
-		.margin(right; 6.4);
+		.margin(left; .6);
 		.margin(top; 1.5);
 		.primary();
-		&:first-child {
-			.margin(right; .6);
-		}
-	}
-	&__download {
-		.background(@primary);
-		.hide-text();
-		&,
-		&:before {
-			.absolute(0; 0);
-			.square(7);
-		}
-		&:before {
-			.align(center);
-			.content(@iconDownload);
-			.font(wee; 2; false; 7rem);
-			.text-indent(0);
-		}
-		&,
-		&:hover,
-		&:active {
-			.white();
-		}
-		&:hover {
-			.background(@buttonBackgroundHover);
-		}
-		&:active {
-			.background(@buttonBackgroundActive);
-		}
 	}
 }
 .switch {
 	.absolute(2.5; 50%);
 	.cursor();
+	.hide();
 	&:hover {
 		&:before {
 			.gray();
@@ -509,13 +500,17 @@ body {
 			.shadow(dark; 15%; 1px; 2px; 2px);
 		}
 	}
+	&__checkbox {
+		.absolute(-10);
+	}
 }
 .search {
 	.background(@light);
 	.crop();
 	.cursor();
+	.inline-block();
+	.margin(right; 2);
 	.margin(top; 1.5);
-	.margin(right; 6.4);
 	.padding(left; 3.9);
 	.relative();
 	.rounded(5);

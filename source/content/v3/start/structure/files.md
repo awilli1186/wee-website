@@ -24,7 +24,6 @@ path: /
 	* .jscs.json
 	* .jshintrc
 	* commands/
-		* example.js
 	* css/
 		* build/
 			* vendor/
@@ -64,5 +63,5 @@ path: /
 			* config.js
 			* functional/
 			* unit/
-				* example.js
+		* views/
 	* modules/

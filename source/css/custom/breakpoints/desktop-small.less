@@ -4,9 +4,51 @@
 
 .header {
 	.padded(3.4);
-	&__content {
-		.inline();
+	&__right {
+		.padding(right; 6);
 	}
+	&__pull {
+		.hide();
+	}
+	&__title,
+	&__nav {
+		.inline-block();
+	}
+	&__nav {
+		.margin(left; .6);
+	}
+	&__download {
+		.background(@primary);
+		.hide-text();
+		&,
+		&:before {
+			.absolute(0; 0);
+			.square(7);
+		}
+		&:before {
+			.align(center);
+			.content(@iconDownload);
+			.font(wee; 2; false; 7rem);
+			.text-indent(0);
+		}
+		&,
+		&:hover,
+		&:active {
+			.white();
+		}
+		&:hover {
+			.background(@buttonBackgroundHover);
+		}
+		&:active {
+			.background(@buttonBackgroundActive);
+		}
+	}
+}
+.switch {
+	.show();
+}
+.search {
+	.margin(right; 0);
 }
 
 
@@ -31,6 +73,7 @@
 
 .hero {
 	.font-size(4.2);
+	.padding(vertical; 21; 10);
 }
 .features {
 	&__item {
