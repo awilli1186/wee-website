@@ -1,9 +1,11 @@
 {{> header}}
 
-<main class="container" role="main">
-	{{ #content }}
-		{{ output|raw }}
-	{{ /content }}
+<main role="main">
+	<p class="container hero">
+		{{ #content|each }}
+			{{ input }}
+		{{ /content }}
+	</p>
 </main>
 
 {{> footer }}

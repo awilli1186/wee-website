@@ -1,17 +1,21 @@
 {{> header}}
 
 <main role="main">
-	<p class="container hero">Welcome to Wee, a lightweight front-end framework for logically building complex, responsive web projects.</p>
+	<p class="container hero">
+		{{ #content|each }}
+			{{ input }}
+		{{ /content }}
+	</p>
 
 	<section class="container blog-preview">
 		<h2 class="home-label">Blog</h2>
 		<div class="blog-preview__columns">
 			<div class="blog-preview__left">
 				<h3 class="blog-preview__title"><a href="/blog/wee-3-released">Wee 3 Released</a></h3>
-				<p class="blog-preview__copy">With dozens of new features and improvements, Wee 3 is the biggest release ever.</p>
+				<p class="blog-preview__copy">With dozens of new features and improvements, Wee 3 is a massive update and an exciting evolution. Read more for all the details.</p>
 			</div>
 			<div class="blog-preview__right">
-				<a href="/blog/wee-3-released" class="button">Read More</a>
+				<a href="/blog/wee-3-released" class="button">Read more</a>
 			</div>
 		</div>
 	</section>
@@ -21,15 +25,15 @@
 		<ul class="features__list">
 			<li class="features__item">
 				<h3 class="features__title"><a href="/start/structure">Logical structure</a></h3>
-				<p class="features__copy">Wee is organized in a simple, scalable hierarchy with a consistent structure for both style and scripts.</p>
+				<p class="features__copy">Wee is organized in a simple, scalable hierarchy with a consistent structure for both script and style.</p>
 			</li>
 			<li class="features__item">
-				<h3 class="features__title"><a href="/script">JavaScript foundation</a></h3>
-				<p class="features__copy">Wee's core JavaScript library brings sanity to what can often become a daisy-chained nightmare.</p>
+				<h3 class="features__title"><a href="/script">Script foundation</a></h3>
+				<p class="features__copy">The core Wee JavaScript library brings sanity to what can often become a bloated, daisy-chained nightmare.</p>
 			</li>
 			<li class="features__item">
 				<h3 class="features__title"><a href="/script">Advanced scripting</a></h3>
-				<p class="features__copy">Built-in animation, asset loading, Ajax, event binding, HTML5 History, routing, and breakpoint syncing features.</p>
+				<p class="features__copy">Powerful animation, asset loading, Ajax, event binding, HTML5 History, routing, and responsive features.</p>
 			</li>
 			<li class="features__item">
 				<h3 class="features__title"><a href="/script/view">Data binding</a></h3>
@@ -40,16 +44,16 @@
 				<p class="features__copy">With mobile traffic exceeding 50% its no longer a question of building responsive but how. Wee answers that.</p>
 			</li>
 			<li class="features__item">
-				<h3 class="features__title"><a href="/build">Build process</a></h3>
+				<h3 class="features__title"><a href="/build">Automated building</a></h3>
 				<p class="features__copy">Compiling, minifying, and optimizing can be painful, but Wee manages it all with a simple JSON config file.</p>
 			</li>
 			<li class="features__item">
-				<h3 class="features__title"><a href="/build/modules">Module extension</a></h3>
-				<p class="features__copy">Wee modules plug into both the build process and Less/JavaScript for seamless extensibility.</p>
+				<h3 class="features__title"><a href="/build/modules">Modular extension</a></h3>
+				<p class="features__copy">Wee modules plug into both the build process and core JavaScript and Less for seamless extensibility.</p>
 			</li>
 			<li class="features__item">
 				<h3 class="features__title"><a href="/generator">Static generator</a></h3>
-				<p class="features__copy">Originating from a need for a living style guide generator this feature evolved to build full sites like this one.</p>
+				<p class="features__copy">Originating from a living style guide generator this feature evolved to power complex sites like this one.</p>
 			</li>
 		</ul>
 	</section>
@@ -72,7 +76,7 @@
 			<ol class="components__list">
 				<li class="components__item">
 					<h3 class="components__title">Agency inspired</h3>
-					<p class="components__copy">Wee is used every day by the <a href="https://www.caddis.co">Caddis</a> development team. It's designed to solve real problems in real projects.</p>
+					<p class="components__copy">Wee is used every day by the team at <a href="https://www.caddis.co">Caddis</a>. It's designed to solve real problems in real projects.</p>
 				</li>
 				<li class="components__item">
 					<h3 class="components__title">Moving forward</h3>

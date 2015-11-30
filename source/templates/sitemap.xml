@@ -10,7 +10,7 @@
 				<loc>{{ $root.site.domain }}/{{ $key }}</loc>
 				<changefreq>daily</changefreq>
 			</url>
-			{{ #sections }}
+			{{ #sections|each }}
 				{{ #data.excludeSitemap|isEmpty }}
 					<url>
 						<loc>{{ $root.site.domain }}/{{ ../$key }}/{{ $key }}</loc>
@@ -20,7 +20,7 @@
 			{{ /sections }}
 		{{ /data.excludeSitemap }}
 	{{ /site.sections }}
-	{{ #content }}
+	{{ #content|each }}
 		<url>
 			<loc>{{ $root.site.domain }}/blog/{{ sourceName|slug }}</loc>
 			<changefreq>weekly</changefreq>

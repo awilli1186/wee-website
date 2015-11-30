@@ -1,7 +1,7 @@
 ---
 name: Classes
 heading: A handful of time-saving helper classes
-path: /css/wee.mixins.less
+path: https://github.com/weepower/wee-core/tree/master/css/wee.mixins.less
 global:
   seoTitle: Helper Classes
 ---

@@ -4,6 +4,7 @@ excerpt: It's only been a few weeks since Wee 2.1 was released but we've worked 
 global:
   seoTitle: Wee 2.2.0 Released
   seoDesc: This release brings more polish, useful feature additions, and a handful of bug fixes.
+  bodyClass: blog
 ---
 
 It's only been a few weeks since Wee 2.1 was released but we've worked through the bug reports and completed our target enhancements for 2.2 ahead of schedule.

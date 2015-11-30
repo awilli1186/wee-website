@@ -4,6 +4,7 @@ excerpt: Apparently we were kidding about 2.3 being the last 2.x release. There 
 global:
   seoTitle: Wee 2.4.0 Released
   seoDesc: Apparently we were kidding about 2.3 being the last 2.x release. This is the final minor release before Wee 3, seriously.
+  bodyClass: blog
 ---
 
 We're anxious to complete Wee 3 development but this release brings some important improvements that couldn't wait.

@@ -7,7 +7,8 @@ Wee.routes.map({
 		],
 		'$any': [
 			'code',
-			'sidebar'
+			'sidebar',
+			'link'
 		]
 	},
 	'start': {

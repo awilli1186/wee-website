@@ -1,6 +1,6 @@
 ---
 name: Files
-path: /
+path: https://github.com/weepower/wee/tree/master/
 ---
 
 ---collapsible---

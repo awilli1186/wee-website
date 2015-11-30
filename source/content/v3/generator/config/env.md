@@ -2,19 +2,33 @@
 name: Env
 ---
 
-This is where you will specify environment-specific configuration values for use in your templates.
+This is where you can specify environment-specific config values for use in your templates.
 
 ```javascript
 "env": {
 	"prod": {
 		"domain": "https://www.weepower.com",
-		"cdnUrl": "https://cdn.weepower.com",
+		"cdnUrl": "https://cdn.weepower.com"
 	},
 	"default": {
 		"domain": "https://weepower.dev",
-		"cdnUrl": "",
+		"cdnUrl": ""
 	}
 }
+```
+
+Here is an couple examples how you might use them.
+
+```javascript
+{{ #! }}
+{{ #site.env|is('prod') }}
+	<script>
+	// Google Analytics script
+	ga('create', '{{ site.analyticsID }}', 'auto');
+	ga('send', 'pageview');
+	</script>
+{{ /site.env }}
+{{ /#! }}
 ```
 
 ---code|label:Environment Building---

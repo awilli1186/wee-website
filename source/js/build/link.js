@@ -2,26 +2,31 @@ Wee.fn.make('link', {
 	init: function() {
 		var $link = $('.intro__link');
 
-		if ($link.length && $link.attr('href').indexOf('assets') !== -1) {
+		if ($link.length) {
 			Wee.data.request({
-				url: '/assets/js/map.json',
+				url: '/map.json',
 				json: true,
 				success: function(json) {
 					var href = $link.attr('href'),
 						split = href.split('/'),
 						section = split.slice(-2, -1),
-						file = split.slice(-1),
-						data = json[section][file];
+						file = split.slice(-1);
 
-					$('.doc__anchor').each(function(el) {
-						var $this = $(el),
-							id = $this.attr('id');
+					if (json[section] && json[section][file]) {
+						var data = json[section][file];
 
-						if (data[id]) {
-							$this.parent()
-								.append('<a href="' + href + '#L' + data[id] + '" class="doc__link">→</a>');
-						}
-					});
+						$('.doc__anchor').each(function(el) {
+							var $el = $(el),
+								id = $el.attr('id');
+
+							if (data[id]) {
+								$el.parent()
+									.append('<a href="' + href + '#L' + data[id] + '" class="doc__link">' +
+										'<span class="souce-link">View on GitHub</span>' +
+										'</a>');
+							}
+						});
+					}
 				}
 			});
 		}

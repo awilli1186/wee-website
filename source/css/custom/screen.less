@@ -211,6 +211,9 @@ body {
 		}
 
 		.doc {
+			&__variables {
+				.border-color(@dark-12);
+			}
 			&__code {
 				&.-boolean,
 				&.-object,
@@ -263,57 +266,45 @@ body {
 		.tex .hljs-special {
 			color: #93c763;
 		}
-
 		.hljs-number {
 			color: #ffcd22;
 		}
-
 		.hljs {
 			color: #e0e2e4;
 		}
-
 		.css .hljs-tag,
 		.css .hljs-pseudo {
 			color: #d0d2b5;
 		}
-
 		.hljs-attribute,
 		.hljs .hljs-constant {
 			color: #668bb0;
 		}
-
 		.xml .hljs-attribute {
 			color: #b3b689;
 		}
-
 		.xml .hljs-tag .hljs-value {
 			color: #e8e2b7;
 		}
-
 		.hljs-code,
 		.hljs-class .hljs-title,
 		.hljs-header {
 			color: white;
 		}
-
 		.hljs-class,
 		.hljs-hexcolor {
 			color: #93c763;
 		}
-
 		.hljs-regexp {
 			color: #d39745;
 		}
-
 		.hljs-at_rule,
 		.hljs-at_rule .hljs-keyword {
 			color: #a082bd;
 		}
-
 		.hljs-doctype {
 			color: #557182;
 		}
-
 		.hljs-link_url,
 		.hljs-tag,
 		.hljs-tag .hljs-title,
@@ -343,11 +334,9 @@ body {
 		.hljs-name {
 			color: #8cbbad;
 		}
-
 		.hljs-string {
 			color: #ec7600;
 		}
-
 		.hljs-comment,
 		.hljs-annotation,
 		.hljs-blockquote,
@@ -360,7 +349,6 @@ body {
 		.tex .hljs-formula {
 			color: #818e96;
 		}
-
 		.hljs-keyword,
 		.hljs-literal,
 		.css .hljs-id,
@@ -382,7 +370,6 @@ body {
 		.hljs-status {
 			font-weight: bold;
 		}
-
 		.coffeescript .javascript,
 		.javascript .xml,
 		.tex .hljs-formula,
@@ -568,7 +555,7 @@ body {
 			.spaced(0);
 			&:hover,
 			&.-is-active {
-				.background(@lightDark);
+				.background(@light4);
 			}
 		}
 		&__link {
@@ -619,7 +606,6 @@ body {
 	&__links {
 		.font-size(1.2);
 		.inline-list(1.2);
-		.uppercase();
 		.margin(.8; 0);
 	}
 }
@@ -922,6 +908,7 @@ body {
 		.spaced(.6);
 	}
 	&__variables {
+		.border(left; 3px; @lighterGray);
 		.responsive-table();
 		+ .doc__variables__label {
 			.gray();
@@ -1100,7 +1087,6 @@ body {
 \*------------------------------------*/
 
 .blog {
-	.background();
 	&-comments {
 		.margin(top; 6);
 	}
@@ -1119,7 +1105,6 @@ body {
 	color: #998;
 	font-style: italic;
 }
-
 .hljs-keyword,
 .css .rule .hljs-keyword,
 .hljs-winutils,
@@ -1130,32 +1115,27 @@ body {
 	color: #333;
 	font-weight: bold;
 }
-
 .hljs-number,
 .hljs-hexcolor,
 .ruby .hljs-constant {
 	color: #008080;
 }
-
 .hljs-string,
 .hljs-tag .hljs-value,
 .hljs-doctag,
 .tex .hljs-formula {
 	color: #d14;
 }
-
 .hljs-title,
 .hljs-id,
 .scss .hljs-preprocessor {
 	color: #900;
 	font-weight: bold;
 }
-
 .hljs-list .hljs-keyword,
 .hljs-subst {
 	font-weight: normal;
 }
-
 .hljs-class .hljs-title,
 .hljs-type,
 .vhdl .hljs-literal,
@@ -1163,7 +1143,6 @@ body {
 	color: #458;
 	font-weight: bold;
 }
-
 .hljs-tag,
 .hljs-tag .hljs-title,
 .hljs-rule .hljs-property,
@@ -1171,18 +1150,15 @@ body {
 	color: #000080;
 	font-weight: normal;
 }
-
 .hljs-attribute,
 .hljs-variable,
 .lisp .hljs-body,
 .hljs-name {
 	color: #008080;
 }
-
 .hljs-regexp {
 	color: #009926;
 }
-
 .hljs-symbol,
 .ruby .hljs-symbol .hljs-string,
 .lisp .hljs-keyword,
@@ -1192,11 +1168,9 @@ body {
 .hljs-prompt {
 	color: #990073;
 }
-
 .hljs-built_in {
 	color: #0086b3;
 }
-
 .hljs-preprocessor,
 .hljs-pragma,
 .hljs-pi,
@@ -1206,19 +1180,15 @@ body {
 	color: #999;
 	font-weight: bold;
 }
-
 .hljs-deletion {
 	background: #fdd;
 }
-
 .hljs-addition {
 	background: #dfd;
 }
-
 .diff .hljs-change {
 	background: #0086b3;
 }
-
 .hljs-chunk {
 	color: #aaa;
 }

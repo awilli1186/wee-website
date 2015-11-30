@@ -2,7 +2,7 @@
 name: Legacy
 ---
 
-Wee works hard to maintain compatibility with IE9 which requires [conditionally serving](http://www.quirksmode.org/css/condcom.html) specific rules and polyfills. If you aren't supporting legacy browsers feel free to remove this. 
+Wee maintains compatibility with IE9 which requires [conditionally serving](http://www.quirksmode.org/css/condcom.html) specific rules and polyfills. If you aren't supporting legacy browsers feel free to remove this. 
 
 ```html
 <!--[if lte IE 9]>

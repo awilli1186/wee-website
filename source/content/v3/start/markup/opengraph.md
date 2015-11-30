@@ -2,7 +2,7 @@
 name: Open Graph
 ---
 
-The [Open Graph protocol](http://ogp.me/) enables any web page to become a rich object in a social graph. Both Facebook and Twitter leverage the protocol for pulling page context when sharing.
+The [Open Graph protocol](http://ogp.me) enables any web page to become a rich object in a social graph. Both Facebook and Twitter leverage the tags for extracting page context when sharing.
 
 ```html
 <meta property="og:type" content="website">
@@ -15,4 +15,4 @@ The [Open Graph protocol](http://ogp.me/) enables any web page to become a rich 
 
 ---note---
 
-**Note:** In the sample HTML Wee dual-purposes the Open Graph tags as Schema properties for the WebPage scope defined on the document root.
+**Note:** In the sample HTML Wee dual-purposes the Open Graph tags as [Schema properties](#schema) for the WebPage scope defined on the document root.

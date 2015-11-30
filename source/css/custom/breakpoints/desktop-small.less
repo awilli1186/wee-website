@@ -89,9 +89,6 @@
 	# Docs
 \*------------------------------------*/
 
-.output {
-	.background(transparent);
-}
 .doc {
 	&__anchor {
 		.visible();
@@ -128,21 +125,7 @@
 	}
 	&__methods {
 		ul {
-			-moz-column-count: 3;
-			-webkit-column-count: 3;
-			column-count: 3;
+			.columns(3);
 		}
 	}
-}
-
-
-
-
-
-/*------------------------------------*\
-	# Blog
-\*------------------------------------*/
-
-.blog {
-	.padding(left; 18);
 }

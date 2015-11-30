@@ -2,14 +2,14 @@
 
 Wee.fn.make('code', {
 	init: function() {
-		var priv = this.$private,
-			$code = $('pre code');
+		var priv = this.$private;
 
-		$code.each(function(el) {
+		// Highlight code blocks
+		$('pre code').each(function(el) {
 			hljs.highlightBlock(el);
 		});
 
-		$code.on('dblclick', function(el) {
+		$('code').on('dblclick', function(e, el) {
 			priv.selectCode(el);
 		});
 	}

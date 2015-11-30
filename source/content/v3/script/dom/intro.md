@@ -1,7 +1,7 @@
 ---
 name: DOM
 heading: Easily interface with the DOM for updates and retrieval
-path: /js/wee.dom.js
+path: https://github.com/weepower/wee-core/tree/master/js/wee.dom.js
 global:
   seoTitle: DOM Interaction
   seoDesc: Easily interface with the DOM for updates and retrieval with an API similar to jQuery.

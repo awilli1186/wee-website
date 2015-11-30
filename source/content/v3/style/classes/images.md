@@ -49,4 +49,4 @@ margin-left: 2rem;
 
 ---note---
 
-**Note:** The `img-left` and `img-right` class names can be overridden in `variables.less`.
+**Note:** The "img-left" and "img-right" class names can be overridden in variables.less.

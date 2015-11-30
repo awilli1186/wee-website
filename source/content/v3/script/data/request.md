@@ -23,6 +23,7 @@ heading: Make Ajax request based on specified options
 | method | string | get | Request verb (get, post, put, etc) in lowercase ||
 | scope | object | -- | Callback scope ||
 | success | [function](/script/#functions) | -- | Success callback ||
+| type | string | -- | form, html, json, or xml to toggle content type header ||
 | url | string | -- | URL endpoint to request | ✔ |
 
 ---code|label:Get---

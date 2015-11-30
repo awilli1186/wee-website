@@ -1604,7 +1604,7 @@
 	
 	{
 		"title": "Commands",
-		"description": "Wee includes helpful commands and allows you to register your own",
+		"description": "Wee includes an extensible CLI with some useful default commands",
 		"url": "http://www.weepower.dev/v3/build/commands"
 	},
 	
@@ -1712,7 +1712,7 @@
 	
 	{
 		"title": "Testing",
-		"description": "Easily drop in functional and unit test using Intern",
+		"description": "Easily drop in functional and unit tests using Intern",
 		"url": "http://www.weepower.dev/v3/build#testing"
 	},
 	
@@ -1754,7 +1754,7 @@
 	
 	{
 		"title": "Features",
-		"description": "",
+		"description": "The site generator is feature-rich and includes the following",
 		"url": "http://www.weepower.dev/v3/generator#features"
 	},
 	
@@ -2822,13 +2822,13 @@
 	
 	{
 		"title": "Not Printed",
-		"description": "If print styling is enabled exclude content from being printed",
+		"description": "If print styling is enabled exclude elements from being printed",
 		"url": "http://www.weepower.dev/v3/style/classes#not-printed"
 	},
 	
 	{
 		"title": "Style",
-		"description": "Normalize your brand with Wee's mixin library",
+		"description": "Normalize your styling with Wee's mixin library",
 		"url": "http://www.weepower.dev/v3/style"
 	},
 	

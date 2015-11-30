@@ -2,7 +2,7 @@
 name: ARIA
 ---
 
-[WAI-ARIA](http://www.w3.org/WAI/intro/aria) defines a way to make web content and applications more accessible to those with disabilities. It especially helps with dynamic content and JavaScript controls.
+[WAI-ARIA](http://www.w3.org/WAI/intro/aria) defines methods to ensure web content and applications are accessible to those with disabilities. It especially helps with dynamic content and JavaScript controls.
 
 ```html
 <header role="banner"></header>

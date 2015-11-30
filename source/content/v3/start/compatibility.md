@@ -3,6 +3,6 @@ name: Compatibility
 heading: Wee officially supports the following minimum browser versions
 ---
 
-| IE  | Edge | Chrome | Firefox | Safari | iOS Safari | Android |
-| -- | -- | -- | -- | -- | -- | -- |
-| 9 | 20 | 30 | 29 | 6.1 | 6.1 | 4.1 |
+Chrome | Edge | Firefox | IE | Safari |
+-- | -- | -- | -- | -- |
+30 | 20 | 29 | 9 | 7.1 |

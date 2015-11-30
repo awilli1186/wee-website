@@ -8,7 +8,7 @@ You can disable all generator integration by setting enable to false. Add as man
 "generator": {
 	"enable": true,
 	"build": [
-		"source/modules/guide/config.json"
+		"source/modules/guide/generate.json"
 	]
 }
 ```

@@ -1,9 +1,9 @@
 ---
 name: browserconfig
-path: /public/browserconfig.xml
+path: https://github.com/weepower/wee/tree/master/public/browserconfig.xml
 ---
 
-Introduced in IE11, the browserconfig file dictates icon configuration for Windows 8. By default the browser will look for the file in the root of the website.
+Introduced in IE11, the [browserconfig file](https://msdn.microsoft.com/en-us/library/dn320426(v=vs.85).aspx) defines the icon configuration for Windows. By default the browser will look for the file in the root of the website.
 
 ---code---
 

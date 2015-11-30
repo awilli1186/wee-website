@@ -40,8 +40,8 @@ Wee outputs one primary CSS file. The build array specifies additional CSS or Le
 
 ```javascript
 "build": [
-	"path/files/one.css",
-	"path/files/two.less"
+	"path/to/one.css",
+	"path/to/two.less"
 ]
 ```
 
@@ -56,11 +56,11 @@ If you have CSS or Less files that you would like to compile, but not include in
 ```javascript
 "compile": {
 	"array.css": [
-		"path/files/one.css",
-		"path/files/two.less"
+		"path/to/one.css",
+		"path/to/two.less"
 	],
-	"ie9.min.css": "/source/css/custom/ie9.less",
-	"globbing.css": "path/files/*.less"
+	"ie9.min.css": "./source/css/custom/ie9.less",
+	"globbing.css": "path/to/*.less"
 }
 ```
 

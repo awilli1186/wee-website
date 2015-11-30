@@ -14,11 +14,9 @@ $('.class1, .class2');
 $('.parent > .child');
 ```
 
----doc|label:References---
-
-References are a distinctive approach to selecting elements. They are cached when the page loads making them extremely quick to reference and are more visually distinct in markup than `js-` classes. Anywhere you can pass a standard selector you can also pass a 'ref:name' string.
-
 ---code|modifier:split---
+
+References are a logical approach to selecting elements. They are cached when the page loads making them extremely quick to reference and are more visually distinct in markup than `js-` classes. Anywhere you can pass a standard selector you can also pass a 'ref:name' string.
 
 ```javascript
 <div data-ref="element"></div>
@@ -30,13 +28,11 @@ $('ref:element');
 
 ---note---
 
-**Note:** References can't be chained like `$('ref:element .child')`. To scope a selection within a reference pass the ref selector as the context argument like `$('.child', 'ref:element')`.
-
----doc---
-
-If multiple references are set with the same name they are pushed into an array an can be targeted with a single ref selection. You can also provide a comma-delimited list of multiple refs.
+**Note:** References can't be used in subset selectors like `$('ref:element .child')`. To scope a selection within a reference pass the ref selector as the context argument like `$('.child', 'ref:element')`.
 
 ---code|modifier:split---
+
+If multiple references are set with the same name they are pushed into an array an can be targeted with a single ref selection. You can also provide a comma-delimited list of multiple refs.
 
 ```javascript
 <div data-ref="element"></div>
@@ -48,11 +44,11 @@ $('ref:element').on('click', function() {
 	// Method logic
 });
 
-$('ref:element2').on('click', function() {
+$('ref:element, ref:element2').on('click', function() {
 	// Method logic
 });
 ```
 
 ---note---
 
-**Note:** `Wee.$setRef()` can be called to update the ref cache.
+**Note:** `Wee.$setRef()` can be called to update the ref cache as needed.

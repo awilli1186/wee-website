@@ -10,7 +10,7 @@ When Wee is running and serving your site through the proxy, you can chose to ha
 
 ---code|label:Host---
 
-If you need to override the host do it here. By default your current public IP will be used.
+If you need to override the hostname do it here. By default your current public IP will be used.
 
 ```javascript
 "host": "auto"
@@ -36,7 +36,7 @@ Add paths to the injection array to dynamically add them to your pages requested
 
 ---code|label:Reload---
 
-This allows you to enable or disable reloading whenever CSS, JS, or static files change, but it also allows you to specify only certain paths and extensions to watch for efficiency.
+This allows you to enable or disable reloading whenever CSS, JavaScript, or static files change. It also allows  specifying certain paths and extensions to watch for efficiency.
 
 ```javascript
 "reload": {
@@ -55,7 +55,7 @@ This allows you to enable or disable reloading whenever CSS, JS, or static files
 
 ---code|label:Tasks---
 
-With the `wee run:local` task, Wee needs to know what your local server address is for the proxy. It then uses the proxy to sit between your browser and the development server to inject changes.
+With the `wee run:local` task, Wee needs to know your local server address. It then uses a proxy to sit between your browser and the development server to inject changes.
 
 With `wee run:static` you can set whether to use HTTPS.
 

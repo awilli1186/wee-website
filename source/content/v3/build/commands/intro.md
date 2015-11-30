@@ -1,4 +1,4 @@
 ---
 name: Commands
-heading: Wee includes helpful commands and allows you to register your own
+heading: Wee includes an extensible CLI with some useful default commands
 ---

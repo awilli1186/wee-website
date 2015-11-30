@@ -28,9 +28,8 @@
 		}
 	},
 	"data": {
-		"version": "3.0.0",
+		"version": "3.0",
 		"analyticsID": "UA-40595891-1",
-		"gitHubRoot": "https://github.com/weepower/wee/tree/master",
 		"social": {
 			"twitter": "weecss",
 			"googlePageID": "+weecss"
@@ -69,7 +68,8 @@
 			"name": "Homepage",
 			"data": {
 				"excludeNav": true,
-				"excludeSitemap": true
+				"excludeSitemap": true,
+				"bodyClass": "page"
 			},
 			"template": "index",
 			"target": "index.html",
@@ -81,7 +81,8 @@
 			"name": "Page Not Found",
 			"data": {
 				"excludeNav": true,
-				"excludeSitemap": true
+				"excludeSitemap": true,
+				"bodyClass": "page"
 			},
 			"template": "404",
 			"target": "404.html",
@@ -92,7 +93,8 @@
 			"data": {
 				"excludeNav": true,
 				"seoTitle": "Development Blog",
-				"seoDesc": "Stay up to date with the latest Wee news and development."
+				"seoDesc": "Stay up to date with the latest Wee news and development.",
+				"bodyClass": "blog"
 			},
 			"template": "blog",
 			"target": [

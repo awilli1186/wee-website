@@ -13,7 +13,8 @@ This is where you will specify the different sections of your site, and informat
 		},
 		"template": "index",
 		"target": "public_html/index.html",
-		"content": "content/home/body.md"
+		"contentRoot": "home",
+		"content": "body.md"
 	},
 	"blog": {
 		"name": "Blog",
@@ -29,7 +30,7 @@ This is where you will specify the different sections of your site, and informat
 				"target": [
 					"public_html/blog/{{sourceName|slug}}.html"
 				],
-				"content": "content/blog/*.md"
+				"content": "blog/*.md"
 			}
 		}
 	}
@@ -46,11 +47,11 @@ The name for the section is set here and available to the template.
 
 ---code|label:Data---
 
-Any custom data that you may need for a section can be stored in the data object.
+Any custom data that you may need for a section can be stored in the data object. They are accessible via `{{ section.sectionVariable }}` tags.
 
 ```javascript
 "data": {
-	
+	"sectionVariable": "value"
 }
 ```
 

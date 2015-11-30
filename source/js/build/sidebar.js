@@ -29,15 +29,18 @@ Wee.fn.make('sidebar', {
 		$topnav.append(wrapper);
 		tinyscrollbar($topnav[0]);
 
-		$subnav.append(wrapper);
-		this.scroller = tinyscrollbar($subnav[0]);
+		if ($subnav.length) {
+			$subnav.append(wrapper);
+			this.scroller = tinyscrollbar($subnav[0]);
+		}
 	},
 
 	/**
 	 * Set proper offset on page load and anchor click
 	 */
 	setOffsets: function() {
-		var $body = $(Wee._body),
+		var scope = this,
+			$body = $(Wee._body),
 			offset = 98;
 
 		// Position initial anchor
@@ -46,12 +49,13 @@ Wee.fn.make('sidebar', {
 		}
 
 		// Bind subnav anchor position
-		this.offsets = [];
+		scope.offsets = [];
 
-		this.$subnavLinks.each(function(el) {
+		scope.$subnavLinks.each(function(el) {
 			var $el = $(el),
 				$targ = $($el.attr('href')),
-				top = $targ.offset().top;
+				top = $targ.offset().top,
+				activeClass = '-is-active';
 
 			$el.add($targ).on('click', function(e, el) {
 				location.hash = el.hash;
@@ -59,12 +63,13 @@ Wee.fn.make('sidebar', {
 				$targ[0].blur();
 				$body.scrollTop(top - offset);
 
+				scope.$subnavLinks.removeClass(activeClass);
+				$(el).addClass(activeClass);
+
 				e.preventDefault();
 			});
 
-			this.offsets.push(top);
-		}, {
-			scope: this
+			scope.offsets.push(top);
 		});
 	},
 

@@ -2,7 +2,7 @@
 name: Functions
 ---
 
-Wee brings a unique approach to referencing functions. Wherever you can provide a callback you can also use a 'controllerName:methodName' string. You can also always use a standard generic function or function reference.
+Wee exposes a unique option to referencing functions. Wherever you can provide a callback you can also use a 'controllerName:methodName' string. You can also always use a standard generic function or function reference.
 
 ---code|modifier:split---
 
@@ -37,7 +37,7 @@ When executing multiple methods you can use an array format. You can also mix me
 Wee.routes.map({
 	$any: [
 		'controllerName:methodName',
-		'controllerName:secondMethodName',
+		Wee.controllerName.methodName,
 		function() {
 			// Callback logic
 		}

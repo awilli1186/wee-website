@@ -1,35 +1,31 @@
 {{> header }}
+{{> sidebar }}
 
-<div class="canvas-outer">
-	<div class="canvas-inner">
-		{{> sidebar }}
+<div class="container output" data-ref="primary">
+	<main class="main" role="main">
+		<ol class="breadcrumb" itemprop="breadcrumb">
+			<li>
+				<a href="/" rel="home" itemprop="url"><span itemprop="title">Home</span></a>
+			</li>
+			<li>
+				<a href="/blog">Blog</a>
+			</li>
+			<li>{{ section.name }}</li>
+		</ol>
 
-		<div class="container output" data-ref="primary">
-			<main role="main">
-				<ol class="breadcrumb" itemprop="breadcrumb">
-					<li>
-						<a href="/" rel="home" itemprop="url"><span itemprop="title">Home</span></a>
-					</li>
-					<li>
-						<a href="/blog">Blog</a>
-					</li>
-					<li>{{ section.name }}</li>
-				</ol>
+		{{ #content|each }}
+			<div class="intro">
+				<h1 class="intro__title">{{ name }}</h1>
+				{{ #heading|notEmpty }}
+					<p class="intro__heading">{{ heading }}</p>
+				{{ /heading }}
+			</div>
 
-				{{ #content|each }}
-					<div class="intro">
-						<h1 class="intro__title">{{ name }}</h1>
-						{{ #heading|notEmpty }}
-							<p class="intro__heading">{{ heading }}</p>
-						{{ /heading }}
-					</div>
-					{{ output|raw }}
-				{{ /content }}
+			{{ output|raw }}
+		{{ /content }}
 
-				<div class="blog-comments" id="disqus_thread"></div>
-			</main>
-		</div>
-	</div>
+		<div class="blog-comments" id="disqus_thread"></div>
+	</main>
 </div>
 
 {{> footer }}

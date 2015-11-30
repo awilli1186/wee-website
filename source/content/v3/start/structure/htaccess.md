@@ -1,6 +1,6 @@
 ---
 name: htaccess
-path: /public/.htaccess
+path: https://github.com/weepower/wee/tree/master/public/.htaccess
 ---
 
 Regardless if you're running an Apache-compatible web server the principles still apply. Avoid serving content from duplicate sources and present a consistent URL structure. Use this as a starting point.
@@ -35,7 +35,9 @@ AddDefaultCharset utf-8
 AddCharset utf-8 .atom .css .geojson .js .json .manifest .map .rss .xml
 ```
 
----code|label:Remote Assets---
+---code|label:HTTP Access Control---
+
+[CORS headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) open up web servers for cross-domain access. This is particularly helpful when serving assets through a pull CDN zone.
 
 ```apache
 # Cross-origin images
@@ -52,17 +54,23 @@ AddCharset utf-8 .atom .css .geojson .js .json .manifest .map .rss .xml
 
 ---code|label:Errors---
 
+It's important to intercept common HTTP errors on the host level with custom pages.
+
 ```apache
 ErrorDocument 404 /404.html
 ```
 
 ---code|label:Project---
 
+Add your project's specific rules to this section. 
+
 ```apache
 # Custom redirects and rewrites
 ```
 
 ---code|label:Rewrites---
+
+Without specific redirects most servers will allow multiple URLs to access the same endpoint. Funnel requests through redirect logic to ensure there is only one true canonical address.
 
 ```apache
 # Force www

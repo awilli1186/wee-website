@@ -4,6 +4,7 @@ excerpt: 2.1 marks a major milestone for Wee and brings some exciting new featur
 global:
   seoTitle: Wee 2.1.0 Released
   seoDesc: A new feature-packed version of Wee has been released.
+  bodyClass: blog
 ---
 
 2.1 marks a major milestone for Wee and brings some exciting new features. It's been 5 months since Wee 2.0.5 was released but we've been hard at work with over 200 commits and endless hours of polishing.

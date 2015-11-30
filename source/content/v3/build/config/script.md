@@ -33,7 +33,7 @@ The core section allows you to enable or disable core features. For instance, if
 
 ---code|label:Build---
 
-This works the same as the CSS section. You can build any script into Wee's primary compiled file.
+This works the same as the CSS section. You can build any script into the primary compiled file.
 
 ```javascript
 "build": [
@@ -57,7 +57,7 @@ This works the same as the CSS section. If you have JavaScript files that you wo
 
 ---code|label:Validate---
 
-The validation section controls which settings are used for [JSCS](http://jscs.info/) and [JSHint](http://jshint.com/) code style and quality tools. Set either to false to disable the tool otherwise you can update the path to point to any config file or modify the default files provided in the project root. Setting watch to false disables continuous validation and only [validates on demand](/build/commands#validate).
+The validation section controls which settings are used for [JSCS](http://jscs.info) and [JSHint](http://jshint.com) code style and quality tools. Set either to false to disable them otherwise you can update the path to point to any config file or modify the default files provided in the source directory. Setting watch to false disables continuous validation and only allows [on-demand validation](/build/commands#validate).
 
 ```javascript
 "validate": {
@@ -69,7 +69,7 @@ The validation section controls which settings are used for [JSCS](http://jscs.i
 
 ---code|label:Source Maps---
 
-Source maps allow supporting browsers to map compiled and minified code to original source scripts. This is useful for debugging errors.
+Source maps allow modern browsers to map compiled and minified code to original source scripts. This is useful when tuning and debugging.
 
 ```javascript
 "sourceMaps": true

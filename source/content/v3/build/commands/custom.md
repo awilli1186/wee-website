@@ -30,4 +30,11 @@ You can register your own commands by adding JavaScript files to the `source/com
 })();
 ```
 
-You can see here that a configuration object is passed through to the command. Options are passed through in the form of `wee copy:option1:option2` and arguments are passed with `--arg1=value1 --arg2=value2`.
+A configuration object is passed to the command module with the following properties:
+
+* options - Command line options as defined below
+* args - Command line arguments as defined below
+* rootPath - The full system path to the root of the project
+* project - The ensire JSON configuration from wee.json
+
+Options are set in the form of `wee copy:option1:option2` and arguments with `--arg1=value1 --arg2=value2`.

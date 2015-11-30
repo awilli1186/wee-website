@@ -20,11 +20,6 @@
 			</url>
 			
 				
-					<url>
-						<loc>http://www.weepower.dev//</loc>
-						<changefreq>daily</changefreq>
-					</url>
-				
 			
 		
 	
@@ -36,7 +31,14 @@
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>http://www.weepower.dev/structure/structure</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/markup/markup</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -51,7 +53,21 @@
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>http://www.weepower.dev/config/config</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/commands/commands</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/modules/modules</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -66,7 +82,14 @@
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>http://www.weepower.dev/config/config</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/usage/usage</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -81,7 +104,28 @@
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>http://www.weepower.dev/variables/variables</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/mixins/mixins</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/classes/classes</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/styling/styling</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -96,7 +140,84 @@
 			
 				
 					<url>
-						<loc>http://www.weepower.dev//</loc>
+						<loc>http://www.weepower.dev/core/core</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/chain/chain</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/animate/animate</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/assets/assets</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/data/data</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/dom/dom</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/events/events</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/history/history</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/routes/routes</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/screen/screen</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/view/view</loc>
+						<changefreq>daily</changefreq>
+					</url>
+				
+			
+				
+					<url>
+						<loc>http://www.weepower.dev/polyfills/polyfills</loc>
 						<changefreq>daily</changefreq>
 					</url>
 				
@@ -105,7 +226,27 @@
 	
 	
 		<url>
-			<loc>http://www.weepower.dev/blog/sel</loc>
+			<loc>http://www.weepower.dev/blog/wee-2-1-released</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+	
+		<url>
+			<loc>http://www.weepower.dev/blog/wee-2-2-released</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+	
+		<url>
+			<loc>http://www.weepower.dev/blog/wee-2-3-released</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+	
+		<url>
+			<loc>http://www.weepower.dev/blog/wee-2-4-released</loc>
+			<changefreq>weekly</changefreq>
+		</url>
+	
+		<url>
+			<loc>http://www.weepower.dev/blog/wee-3-released</loc>
 			<changefreq>weekly</changefreq>
 		</url>
 	

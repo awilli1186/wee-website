@@ -1,8 +1,7 @@
 ---
 name: Features
+heading: The site generator is feature-rich and includes the following
 ---
-
-The site generator is feature rich and includes the following components:
 
 * Multiple template support
 * Content aggregation through source globbing

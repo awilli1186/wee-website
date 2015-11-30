@@ -2,7 +2,7 @@
 name: Config
 ---
 
-The config object allows you to enable or disable core features of the generator.
+The config object allows you to enable or disable core generator features.
 
 ```javascript
 "config": {
@@ -12,16 +12,18 @@ The config object allows you to enable or disable core features of the generator
 	"removeIndex": true,
 	"removeTrailingSlashes": true,
 	"paths": {
+		"content": "content",
+		"helpers": "helpers",
 		"partials": "partials",
-		"templates": "templates",
-		"extensions": "extensions"
+		"target": "../../../public/guide/",
+		"templates": "templates"
 	}
 }
 ```
 
 ---code|label:Watching---
 
-Setting this to true will make toggle the Wee build process to watch for changes.
+Setting this to true will set the Wee build process to watch for changes.
 
 ```javascript
 "watch": true
@@ -61,12 +63,14 @@ Similar to removeIndex, this will remove trailing slashes from any output paths.
 
 ---code|label:Paths---
 
-Here you can set the paths for partials, templates, and extensions. By default they are at the same level as the site config file.
+Here you can set the default root paths for content, helpers, partials, and templates. By default they are at the same level as the site config file. You also set the target path which is where the output section targets are relative to.
 
 ```javascript
 "paths": {
+	"content": "content",
+	"helpers": "helpers",
 	"partials": "partials",
-	"templates": "templates",
-	"extensions": "extensions"
+	"target": "../../../public/guide/",
+	"templates": "templates"
 }
 ```

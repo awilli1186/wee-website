@@ -2,7 +2,7 @@
 name: Data
 ---
 
-Any custom data that you may need for your site can be stored here. It can be nested as deep as needed and the values are accessible in the templates.
+Any custom data that you may need for your site can be stored here. They can be nested as deep as necessary and the values are accessible in the templates.
 
 ```javascript
 "data": {
@@ -13,6 +13,12 @@ Any custom data that you may need for your site can be stored here. It can be ne
 		"googlePageID": "+weecss"
 	}
 }
+```
+
+You can use them for paths and versions for instance.
+
+```javascript
+<script src="{{ site.assetUrl }}/js/script.min.js?v{{ site.jsVersion }}"></script>
 ```
 
 ---note---
