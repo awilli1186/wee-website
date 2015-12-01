@@ -23,7 +23,7 @@ Wee.view.addHelper('upper', function() {
 ---code|type:string|modifier:split---
 
 ```javascript
-var template = '{{#!}}My name is {{name|upper}}.{{/!}}',
+var template = '{{ #! }}My name is {{ name|upper }}.{{ /! }}',
 	data = {
 		name: 'john'
 	};
@@ -46,7 +46,7 @@ Wee.view.addHelper('starts', function(num) {
 ---code|type:string|modifier:stacked---
 
 ```javascript
-var template = '{{#!}}{{name}} starts with {{name|starts(5)}}.{{/!}}',
+var template = '{{ #! }}{{ name }} starts with {{ name|starts(5) }}.{{ /! }}',
 	data = {
 		name: 'Rhinoceros'
 	};

@@ -3,7 +3,7 @@ name: addEasing
 heading: Add additional easing function(s)
 ---
 
-Register custom easing functions for fine-tuned control of the animation. The function accepts a single dynamic coefficient variable to mathematically manipulate when responding.
+Register custom easing functions for fine-tuned animation control. The function accepts a single dynamic coefficient variable to mathematically manipulate when responding.
 
 ---variables---
 

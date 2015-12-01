@@ -14,7 +14,7 @@ heading: Load specified assets with specified set of options
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | async | boolean | true | Load assets asynchronously, only applicable to scripts ||
-| cache | boolean | true | Cache-bust requests with random querystring ||
+| cache | boolean | true | Bust request cache with random querystring ||
 | css | string, array | -- | Single CSS path or array of CSS paths | ✔ |
 | error | [function](/script/#functions) | -- | Failure callback ||
 | files | string, array | -- | Single file path or array of file paths | ✔ |
@@ -28,7 +28,7 @@ heading: Load specified assets with specified set of options
 
 ```javascript
 Wee.assets.load({
-	files: '/samples/alert.js'
+	files: '/path/to/alert.js'
 });
 ```
 
@@ -38,9 +38,9 @@ Wee.assets.load({
 Wee.assets.load({
 	root: 'https://cdn.weepower.com',
 	files: [
-		'/samples/alert.js',
-		'/samples/override.css',
-		'/samples/sample.png'
+		'/path/to/alert.js',
+		'/path/to/override.css',
+		'/path/to/sample.png'
 	],
 	success: function() {
 		// Success logic
@@ -53,7 +53,7 @@ Wee.assets.load({
 
 ---note---
 
-**Note:** If an absolute url beginning with //, http://, or https:// is requested it will bypass the root if set.
+**Note:** If an absolute URL beginning with "//", "http://", or "https://" is requested the root option will be ignored.
 
 ---code|label:Group---
 
@@ -61,7 +61,7 @@ By providing a group name you can optionally check against the group later for c
 
 ```javascript
 Wee.assets.load({
-	files: '/samples/alert.js',
+	files: '/path/to/alert.js',
 	group: 'dynamicAssets'
 });
 ```

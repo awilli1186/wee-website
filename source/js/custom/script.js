@@ -14,6 +14,9 @@ Wee.routes.map({
 	'start': {
 		'structure': 'structure'
 	},
+	'build': {
+		'modules': 'structure'
+	},
 	'blog': {
 		'$slug': 'blog'
 	},

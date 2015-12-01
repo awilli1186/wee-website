@@ -25,7 +25,7 @@ Wee.view.addFilter('isNumber', function() {
 ---code|type:string|modifier:stacked---
 
 ```javascript
-var template = '{{#!}}{{#age|isNumber}}I am {{age}} years old.{{/age}}{{/!}}',
+var template = '{{ #! }}{{ #age|isNumber }}I am {{ age }} years old.{{ /age }}{{ /! }}',
 	data = {
 		age: 30
 	};
@@ -52,7 +52,7 @@ Wee.view.addFilter('range', function(offset, limit) {
 ---code|type:string|modifier:stacked---
 
 ```javascript
-var template = '{{#!}}{{#names|range(2, 5)}}{{.}} {{/names}}{{/!}}',
+var template = '{{ #! }}{{ #names|range(2, 5) }}{{ . }} {{ /names }}{{ /! }}',
 	data = {
 		names: [
 			'John',

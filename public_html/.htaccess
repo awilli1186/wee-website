@@ -1,14 +1,4 @@
 #------------------------------------
-	# Maintenance
-#------------------------------------
-
-#RewriteCond %{REQUEST_URI} !^/maintenance\.html$
-#RewriteCond %{REMOTE_ADDR} !^123\.456\.789\.
-#RewriteCond $1 !^(assets) [NC]
-#RewriteRule ^(.*)$ /maintenance.html [R=307,L]
-
-
-#------------------------------------
 	# Setup
 #------------------------------------
 
@@ -53,8 +43,7 @@ ErrorDocument 404 /404.html
 	# Project
 #------------------------------------
 
-Redirect 301 /start/compiling /build
-Redirect 301 /style/mixins-2 /style/mixins
+Redirect 301 /build/commands /build/validation
 
 
 #------------------------------------

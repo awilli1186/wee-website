@@ -4,7 +4,6 @@ excerpt: This is an exciting release because it's the final push before Wee 3. W
 global:
   seoTitle: Wee 2.3.0 Released
   seoDesc: This is an exciting release because it's the final push before Wee 3 is released.
-  bodyClass: blog
 ---
 
 We've been hard at work to get this final Wee 2.x release published. There are a couple bug fixes and a handful of enhancements and new features.

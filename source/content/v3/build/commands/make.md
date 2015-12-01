@@ -1,23 +1,45 @@
 ---
 name: Make
+heading: Quickly scaffold core Wee structures
 ---
 
-The make commands allow you to quickly scaffold core Wee structures.
+---variables|label:Controller---
 
----code|label:Controller---
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| name | string | -- | camelCase controller name | ✔ |
+
+---code---
 
 ```bash
-wee reset
+wee make:controller --name=controllerName
 ```
 
----code|label:Module---
+---variables|label:Module---
+
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| name | string | -- | camelCase module name | ✔ |
+| author | string | -- | Module author ||
+| autoload | boolean | true | Autoload toggle ||
+| extension | boolean | false | Extension toggle ||
+| website | string | -- | Website reference ||
+| description | string | -- | Internal module description ||
+
+---code---
 
 ```bash
-wee reset
+wee make:module --name=moduleName --extension=true
 ```
 
----code|label:Test---
+---variables|label:Test---
+
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| name | string | -- | Title Cased test name | ✔ |
+
+---code---
 
 ```bash
-wee reset
+wee make:test --name="Test Name"
 ```

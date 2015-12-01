@@ -3,7 +3,9 @@ name: Testing
 heading: Easily drop in functional and unit tests using Intern
 ---
 
-Kick off JavaScript unit tests using [Intern](https://theintern.github.io). Read more about [testing in Wee](#testing).
+[Intern](https://theintern.github.io) is a comprehensive framework for testing web projects. By default in Wee it requires [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) be installed. To change that or customize anything about the Intern setup modify source/js/test/config.js.
+
+Run the following command to kick off JavaScript tests.
 
 ```bash
 wee test

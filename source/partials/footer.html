@@ -13,6 +13,9 @@
 		</ul>
 	</footer>
 
+	{{ #site.env|is('prod') }}
+	<script src="https://d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js" data-apikey="1387d7b8dddfe06ddab3ac5fcfd8c9a0"></script>
+	{{ /site.env }}
 	<script src="{{ site.assetUrl }}/js/script.min.js?v{{ site.jsVersion }}"></script>
 </body>
 </html>

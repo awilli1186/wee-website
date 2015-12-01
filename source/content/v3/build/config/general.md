@@ -5,7 +5,7 @@ name: General
 The name property is for internal reference only.
 
 ```javascript
-"name": "Project Name",
+"name": "Project Name"
 ```
 
 ---code|label:Paths---

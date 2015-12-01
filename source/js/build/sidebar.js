@@ -26,8 +26,10 @@ Wee.fn.make('sidebar', {
 			$topnav = $('ref:topnav'),
 			$subnav = $('ref:subnav');
 
-		$topnav.append(wrapper);
-		tinyscrollbar($topnav[0]);
+		if ($topnav.length) {
+			$topnav.append(wrapper);
+			tinyscrollbar($topnav[0]);
+		}
 
 		if ($subnav.length) {
 			$subnav.append(wrapper);

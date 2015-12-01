@@ -5,7 +5,7 @@
 .header {
 	.padded(3.4);
 	&__right {
-		.padding(right; 6);
+		.padding(right; 5.4);
 	}
 	&__pull {
 		.hide();
@@ -16,6 +16,9 @@
 	}
 	&__nav {
 		.margin(left; .6);
+	}
+	&__button {
+		.width(auto);
 	}
 	&__download {
 		.background(@primary);
@@ -30,11 +33,6 @@
 			.content(@iconDownload);
 			.font(wee; 2; false; 7rem);
 			.text-indent(0);
-		}
-		&,
-		&:hover,
-		&:active {
-			.white();
 		}
 		&:hover {
 			.background(@buttonBackgroundHover);

@@ -28,7 +28,7 @@ This is where you will specify the different sections of your site, and informat
 				"name": "Entries",
 				"template": "entry",
 				"target": [
-					"public_html/blog/{{sourceName|slug}}.html"
+					"public_html/blog/{{ sourceName|slug }}.html"
 				],
 				"content": "blog/*.md"
 			}

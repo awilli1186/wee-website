@@ -5,12 +5,12 @@ name: Content
 With the content tag pair a section's content can be looped through.
 
 ```html
-{{#!}}{{#content|tag}}
-<h1>{{name}}</h1>
+{{ #! }}{{ #content|tag }}
+<h1>{{ name }}</h1>
 <div>
-	{{output|raw}}
+	{{ output|raw }}
 </div>
-{{/content}}{{/!}}
+{{ /content }}{{ /! }}
 ```
 
 ---code|label:Input & Output---
@@ -18,10 +18,10 @@ With the content tag pair a section's content can be looped through.
 The input tag returns the raw markdown content before processing. The output tag returns the processed content.
 
 ```html
-{{#!}}{{#content}}
-	{{input}}
-	{{output}}
-{{/content}}{{/!}}
+{{ #! }}{{ #content }}
+	{{ input }}
+	{{ output }}
+{{ /content }}{{ /! }}
 ```
 
 ---note---

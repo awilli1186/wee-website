@@ -34,22 +34,12 @@
 			"twitter": "weecss",
 			"googlePageID": "+weecss"
 		},
-		"cssVersion": 5,
-		"cssLegacyVersion": 2,
-		"jsVersion": 3,
-		"jsLegacyVersion": 1
+		"cssVersion": 6,
+		"cssLegacyVersion": 3,
+		"jsVersion": 4,
+		"jsLegacyVersion": 2
 	},
 	"sections": {
-		"sitemap": {
-			"name": "Sitemap",
-			"data": {
-				"excludeNav": true,
-				"excludeSitemap": true
-			},
-			"template": "sitemap.xml",
-			"target": "sitemap.xml",
-			"content": "blog/*.md"
-		},
 		"search": {
 			"name": "Search",
 			"data": {
@@ -108,7 +98,8 @@
 					"name": "Entries",
 					"data": {
 						"excludeNav": true,
-						"excludeSitemap": true
+						"excludeSitemap": true,
+						"bodyClass": "blog"
 					},
 					"template": "entry",
 					"target": [
@@ -199,6 +190,7 @@
 					"contentRoot": "v3/build/modules",
 					"content": [
 						"intro.md",
+						"structure.md",
 						"*.md"
 					]
 				}

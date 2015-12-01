@@ -63,8 +63,8 @@
 							<h3 class="doc__label doc__{{ name }}__label">{{ label }}</h3>
 						{{ /label }}
 						<div class="doc__{{ name }}
-							{{ #type|notEmpty }} doc__{{ name }} -{{ type }}{{ /type }}
-							{{ #modifier|notEmpty }} doc__{{ name }} -{{ modifier }}{{ /modifier }}
+							{{ #type|notEmpty }} -{{ type }}{{ /type }}
+							{{ #modifier|notEmpty }} -{{ modifier }}{{ /modifier }}
 						">
 							{{ output|raw }}
 						</div>

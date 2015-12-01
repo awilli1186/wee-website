@@ -3,18 +3,19 @@ name: Map
 heading: Watch single or set of screen events with specified options
 ---
 
----variables|class:table--variables---
+---variables---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | sets | object, array | -- | Object parameters below | ✔ |
 
----variables|class:table--variables|label:Set Object---
+---variables|label:Set Object---
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | args | array | -- | Callback arguments ||
 | callback | [function](/script/#functions) | -- | Matching callback | ✔ |
+| each | boolean | false | Execute callback for each matching breakpoint | ✔ |
 | init | boolean | true | Immediately evaluate breakpoint logic ||
 | max | number | -- | Maximum breakpoint value ||
 | min | number | -- | Minimum breakpoint value ||
@@ -25,7 +26,7 @@ heading: Watch single or set of screen events with specified options
 
 ---doc---
 
-You can setup as many breakpoint sets as you need. They are added to a global window resize event that evaluates against all stored rules.
+You can setup as many breakpoint sets as you need. They are added to a global window resize event that evaluates once against all stored rules.
 
 ---code|label:Single---
 
@@ -42,14 +43,14 @@ Wee.screen.map({
 
 An object with the direction, size, previous size, and init status is passed as the first callback argument.
 
----variables|class:table--response---
+---variables---
 
 | Variable | Type | Description |
 | -- | -- | -- |
 | dir | number | 1 if sized up, 0 if sized down |
-| size | number | 1-6 representing current value |
-| prev | number | 1-6 representing previous value |
 | init | boolean | true if run initially, else false |
+| prev | number | 1-6 representing previous value |
+| size | number | 1-6 representing current value |
 
 ---code|label:Multiple---
 

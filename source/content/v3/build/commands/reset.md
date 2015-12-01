@@ -1,8 +1,7 @@
 ---
 name: Reset
+heading: Remove unnecessary files and sample assets from the default install
 ---
-
-Run this task to remove unnecessary repo files and sample assets from the default Wee install.
 
 ```bash
 wee reset

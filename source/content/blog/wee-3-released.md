@@ -4,12 +4,11 @@ excerpt: With dozens of new features and improvements, Wee 3 is a massive update
 global:
   seoTitle: Wee 3 Released
   seoDesc: 6 months in the making, Wee 3 is a massive update and an exciting evolution. Read more for all the details.
-  bodyClass: blog
 ---
 
-It's been 6 months since Wee 2.4 was released and 2.5 years since the initial public availability. A lot has changed in that time. The framework has grown from essentially an HTML boilerplate and mixin library to an all-in-one platform that meets all the requirements of many projects. The best part of all this is that the additional compiled size if you enable all the new features is only ~3KB gzipped.
+It's been 6 months since Wee 2.4 was published and 2.5 years since the initial public release. A lot has changed in that time. The framework has grown from an HTML boilerplate and mixin library to an all-in-one tool that satisfies the requirements of many projects. The best part is that the additional compiled size with all the features enabled is only ~3KB gzipped in Wee 3.
 
-There were a few primary objectives with this release. One was to pull out the library and build process into an npm module. This makes updating simple - just run `npm update` and you're done. There was also considerable work to bring consistency between the APIs and quite a bit of deprecated code was removed. There are also a few new major features including the HTML5 History interface and data-binding applications.
+There were a few primary objectives with this release. One was to pull out the library and build process into an npm module. This makes updating simple - just run `npm update` and you're done. There was also considerable work to bring consistency between the APIs and quite a bit of deprecated code was removed. There are also new major features including the HTML5 History interface and data-binding applications.
 
 You can read the [full release notes](https://github.com/weepower/wee/releases/tag/3.0.0) on GitHub but here are some of the highlights:
 

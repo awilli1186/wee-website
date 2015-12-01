@@ -1,11 +1,12 @@
 {{> header}}
 
 <main role="main">
-	<p class="container hero">
+	<div class="container hero -error">
 		{{ #content|each }}
-			{{ input }}
+			<h1>{{ name }}</h1>
+			{{ output|raw }}
 		{{ /content }}
-	</p>
+	</div>
 </main>
 
 {{> footer }}

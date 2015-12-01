@@ -17,7 +17,7 @@ heading: Transition an attribute or property value
 | -- | -- | -- | -- | -- |
 | complete | [function](/script/#functions) | -- | Callback function ||
 | duration | number | 400 | Transition duration in milliseconds ||
-| ease | string | 'ease' | Name of registered easing function ||
+| ease | string | 'ease' | ease, linear, or name of registered easing ||
 
 ---code|label:Simple---
 
