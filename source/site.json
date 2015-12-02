@@ -1,5 +1,5 @@
 {
-	"name": "Documentation",
+	"name": "Wee",
 	"config": {
 		"watch": true,
 		"minify": true,
@@ -34,10 +34,10 @@
 			"twitter": "weecss",
 			"googlePageID": "+weecss"
 		},
-		"cssVersion": 6,
-		"cssLegacyVersion": 3,
-		"jsVersion": 4,
-		"jsLegacyVersion": 2
+		"cssVersion": 7,
+		"cssLegacyVersion": 4,
+		"jsVersion": 5,
+		"jsLegacyVersion": 3
 	},
 	"sections": {
 		"search": {

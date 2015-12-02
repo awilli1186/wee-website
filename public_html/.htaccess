@@ -43,7 +43,7 @@ ErrorDocument 404 /404.html
 	# Project
 #------------------------------------
 
-Redirect 301 /build/commands /build/validation
+Redirect 301 /build/validation /build/commands
 
 
 #------------------------------------

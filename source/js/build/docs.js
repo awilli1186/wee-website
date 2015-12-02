@@ -4,16 +4,6 @@ Wee.fn.make('docs', {
 	init: function() {
 		Wee.screen.map([
 			{
-				max: 2,
-				once: true,
-				callback: function() {
-					// Mobile navigation
-					//$('ref:mobileNav').on('click', function() {
-					//	$('ref:inner').toggleClass(activeClass);
-					//});
-				}
-			},
-			{
 				min: 3,
 				once: true,
 				scope: this,
@@ -32,8 +22,19 @@ Wee.fn.make('docs', {
 			begin: function(conf) {
 				if (conf.path === '/') {
 					Wee._win.location = '/';
-
 					return false;
+				}
+
+				if (/^\/blog/.test(conf.path)) {
+					$(Wee._body).removeClass('docs')
+						.addClass('blog');
+
+					$('ref:subnav').remove();
+				} else if (! $('ref:subnav').length) {
+					$(Wee._body).removeClass('blog')
+						.addClass('docs');
+
+					$('ref:topnav').after('<div class="sidebar subnav" data-ref="sidebar subnav"><div class="viewport"><div class="overview"><h3>Contents</h3><ul class="sublinks"></ul></div></div>');
 				}
 			},
 			request: {
