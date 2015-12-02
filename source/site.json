@@ -36,8 +36,8 @@
 		},
 		"cssVersion": 7,
 		"cssLegacyVersion": 4,
-		"jsVersion": 5,
-		"jsLegacyVersion": 3
+		"jsVersion": 6,
+		"jsLegacyVersion": 4
 	},
 	"sections": {
 		"search": {

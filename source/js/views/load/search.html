@@ -1,0 +1,10 @@
+{{ #hits|each }}
+	<li class="search__results__entry">
+		<a href="{{ url }}" class="search__results__link">
+		<h4 class="search__results__title">{{ title }}</h4>
+			{{ #description|notEmpty }}
+				<p class="search__results__desc">{{ description }}</p>
+			{{ /description }}
+		</a>
+	</li>
+{{ /hits }}

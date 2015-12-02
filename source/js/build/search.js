@@ -100,6 +100,8 @@ Wee.fn.make('search', {
 		}
 	},
 	query: function(val) {
+		var scope = this;
+
 		Wee.data.request({
 			url: 'https://llxgy0e3h1-dsn.algolia.net/1/indexes/docs',
 			data: {
@@ -110,30 +112,18 @@ Wee.fn.make('search', {
 			},
 			jsonp: true,
 			success: function(data) {
-				var content = '';
+				var $output = $('ref:searchOutput');
 
 				if (data.nbHits > 0) {
-					data.hits.forEach(function (obj) {
-						content += Wee.view.render(
-							'<li class="search__results__entry">' +
-							'<a href="{{url}}" class="search__results__link">' +
-							'<h4 class="search__results__title">{{title}}</h4>' +
-							'{{#description|notEmpty}}' +
-							'<p class="search__results__desc">{{description}}</p>' +
-							'{{/description}}' +
-							'</a>' +
-							'</li>',
-							obj
-						);
-					});
+					var content = Wee.view.render('search', data);
+
+					$('ref:searchResults').html(content);
+					$output.show();
 				} else {
-					$('ref:searchOutput').hide();
+					$output.hide();
 				}
 
-				$('ref:searchOutput').show()
-					.find('ref:searchResults').html(content);
-
-				Wee.search.processing = false;
+				scope.processing = false;
 			}
 		});
 	}

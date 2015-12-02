@@ -15,7 +15,7 @@ heading: Watch single or set of screen events with specified options
 | -- | -- | -- | -- | -- |
 | args | array | -- | Callback arguments ||
 | callback | [function](/script/#functions) | -- | Matching callback | ✔ |
-| each | boolean | false | Execute callback for each matching breakpoint | ✔ |
+| each | boolean | false | Execute callback for each matching breakpoint ||
 | init | boolean | true | Immediately evaluate breakpoint logic ||
 | max | number | -- | Maximum breakpoint value ||
 | min | number | -- | Minimum breakpoint value ||
