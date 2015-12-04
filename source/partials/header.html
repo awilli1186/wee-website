@@ -30,7 +30,7 @@
 	<meta property="og:description" content="{{ seoDesc }}" itemprop="description">
 	{{ /seoDesc }}
 	<meta property="og:url" content="{{ url }}" itemprop="url">
-	<meta property="og:image" content="{{ site.cdnUrl }}{{ #shareImage|notEmpty }}{{ shareImage }}{{ else }}{{ site.assetUrl }}/img/share.png{{ /shareImage }}" itemprop="image">
+	<meta property="og:image" content="{{ site.assetUrl }}{{ #shareImage|notEmpty }}{{ shareImage }}{{ else }}/img/share.png{{ /shareImage }}" itemprop="image">
 
 	<link rel="stylesheet" href="{{ site.assetUrl }}/css/style.min.css?v{{ site.cssVersion }}">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
