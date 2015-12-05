@@ -19,23 +19,23 @@
 		"default": {
 			"domain": "http://www.weepower.dev",
 			"cdnUrl": "",
-			"assetUrl": "/assets"
+			"assetUrl": "/assets",
+			"analyticsID": "UA-40595891-2"
 		},
 		"prod": {
 			"domain": "https://www.weepower.com",
 			"cdnUrl": "https://cdn.weepower.com",
-			"assetUrl": "https://cdn.weepower.com/assets"
+			"assetUrl": "https://cdn.weepower.com/assets",
+			"analyticsID": "UA-40595891-1"
 		}
 	},
 	"data": {
 		"version": "3.0",
-		"analyticsID": "UA-40595891-1",
 		"social": {
 			"twitter": "weecss",
 			"googlePageID": "+weecss"
 		},
-		"cssVersion": 7,
-		"cssLegacyVersion": 4,
+		"cssVersion": 8,
 		"jsVersion": 6,
 		"jsLegacyVersion": 4
 	},

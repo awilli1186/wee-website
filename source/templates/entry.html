@@ -10,9 +10,13 @@
 				</a>
 			</li>
 			<li>
-				<a href="/blog">Blog</a>
+				<a href="/blog">
+					<span itemprop="title">Blog</span>
+				</a>
 			</li>
-			<li>{{ section.name }}</li>
+			<li>
+				<span itemprop="title">{{ section.name }}</span>
+			</li>
 		</ol>
 
 		{{ #content|each }}

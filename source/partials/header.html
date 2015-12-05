@@ -39,19 +39,14 @@
 	<script src="{{ site.assetUrl }}/js/ie9.min.js?v{{ site.jsLegacyVersion }}"></script>
 	<![endif]-->
 
-	{{ #site.env|is('prod') }}
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', '{{ site.analyticsID }}', 'auto');
 	ga('send', 'pageview');
 	</script>
-	{{ else }}
-	<script>
-	var ga = function(){};
-	</script>
-	{{ /site.env }}
 </head>
 <body class="{{ bodyClass||'docs' }} -dark">
 	<header role="banner" class="header" data-ref="header">
@@ -65,14 +60,16 @@
 		{{ else }}
 		<h1 class="header__title">Blueprint for modern web development</h1>
 		{{ /bodyClass }}
+
 		<div class="switch" data-ref="switch">
 			<div class="switch__toggle">
 				<input type="checkbox" class="switch__checkbox">
 			</div>
 		</div>
+
 		<div class="header__right">
 			{{ #bodyClass|not('page') }}
-			<div class="search" data-ref="search">
+			<div class="search" role="search" data-ref="search">
 				<div class="search__button" role="button" data-ref="searchButton"></div>
 				<input type="search" placeholder="Search" class="search__input" data-ref="searchInput">
 				<div class="search__results js-hide" data-ref="searchOutput">
