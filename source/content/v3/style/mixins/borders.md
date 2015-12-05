@@ -53,7 +53,6 @@ border: 4px dotted #f00;
 ```
 
 ```css
-border: 2px solid #000000;
 border: 2px solid rgba(0, 0, 0, 0.4);
 ```
 
@@ -94,7 +93,6 @@ border-top: 1px solid #00f;
 ```
 
 ```css
-border: 3px dotted #ffffff;
 border: 3px dotted rgba(255, 255, 255, 0.5);
 ```
 
@@ -136,8 +134,6 @@ border-right: 2px dotted #ff0000;
 ```
 
 ```css
-border-top: 1px solid #000000;
-border-bottom: 1px solid #000000;
 border-top: 1px solid rgba(0, 0, 0, 0.4);
 border-bottom: 1px solid rgba(0, 0, 0, 0.4);
 ```

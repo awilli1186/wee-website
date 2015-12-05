@@ -29,7 +29,7 @@
 					"tabletPortrait": 768,
 					"desktopSmall": 1024,
 					"desktopMedium": 1280,
-					"desktopLarge": 1440
+					"desktopLarge": false
 				}
 			}
 		},

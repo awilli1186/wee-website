@@ -1,19 +1,21 @@
 Wee.fn.make('common', {
 	init: function() {
 		var scope = this,
-			$body = $(Wee._body);
+			$body = $(Wee._body),
+			$header = $('ref:header'),
+			$switch = $('ref:switch');
 
 		// Mobile navigation
 		Wee.screen.map([
 			{
 				max: 3,
 				callback: function() {
-					var $nav = $('ref:headerNav'),
-						$header = $('ref:header');
+					var $nav = $('ref:headerNav');
 
 					$nav.hide();
 
 					$nav.appendTo($header);
+					$switch.appendTo($nav);
 				}
 			},
 			{
@@ -26,6 +28,7 @@ Wee.fn.make('common', {
 					$nav.show();
 
 					$nav.insertAfter($pull);
+					$switch.appendTo($header);
 				}
 			}
 		]);
@@ -37,7 +40,7 @@ Wee.fn.make('common', {
 		// Setup color scheme picker
 		this.$private.setScheme();
 
-		$('ref:switch').on('click', function() {
+		$switch.on('click', function() {
 			$body.addClass('-is-changing');
 
 			scope.$private.setScheme(true);

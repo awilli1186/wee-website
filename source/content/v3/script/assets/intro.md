@@ -1,8 +1,7 @@
 ---
 name: Assets
 heading: Dynamic loading for JavaScript, CSS, and images
-intro: true
-path: https://github.com/weepower/wee-core/tree/master/js/wee.assets.js
+path: https://github.com/weepower/wee-core/blob/master/js/wee.assets.js
 global:
   seoTitle: Asset Loading
   seoDesc: Load what you need on demand to optimize page speed and preserve bandwidth with Wee's asset loader.

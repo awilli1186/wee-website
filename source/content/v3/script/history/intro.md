@@ -1,8 +1,7 @@
 ---
 name: History
 heading: HTML5 history and PJAX helper to create dynamic experiences
-intro: true
-path: https://github.com/weepower/wee-core/tree/master/js/wee.history.js
+path: https://github.com/weepower/wee-core/blob/master/js/wee.history.js
 global:
   seoTitle: HTML History Navigation
 ---

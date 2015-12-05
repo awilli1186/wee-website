@@ -1,6 +1,7 @@
 ---
 name: Style
 heading: Normalize your styling with Wee's mixin library
+path: https://github.com/weepower/wee-core/blob/master/css
 global:
   seoTitle: Style Normalization
 ---

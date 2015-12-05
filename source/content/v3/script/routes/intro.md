@@ -1,7 +1,7 @@
 ---
 name: Routes
 heading: Associate request endpoints to callbacks
-path: https://github.com/weepower/wee-core/tree/master/js/wee.routes.js
+path: https://github.com/weepower/wee-core/blob/master/js/wee.routes.js
 global:
   seoTitle: JavaScript Routing
   seoDesc: Associate request endpoints to callbacks for independence between your markup and script using Wee's powerful JavaScript routing library.

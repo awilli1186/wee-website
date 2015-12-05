@@ -35,9 +35,9 @@
 			"twitter": "weecss",
 			"googlePageID": "+weecss"
 		},
-		"cssVersion": 8,
+		"cssVersion": 9,
 		"jsVersion": 6,
-		"jsLegacyVersion": 4
+		"jsLegacyVersion": 5
 	},
 	"sections": {
 		"search": {

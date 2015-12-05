@@ -48,7 +48,6 @@ background: #00f url('../img/bg.png') no-repeat;
 | -- | -- | -- | -- | -- |
 | @color | color | -- | Background color | ✔ |
 | @opacity | unit | -- | Background opacity | ✔ |
-| @fallback | color | [@color](/style/variables#colors) | Fallback background color ||
 
 ---code|modifier:split---
 
@@ -57,7 +56,6 @@ background: #00f url('../img/bg.png') no-repeat;
 ```
 
 ```css
-background-color: #00f;
 background-color: rgba(0, 0, 255, 0.2);
 ```
 
@@ -96,7 +94,6 @@ background: #00f url('../img/bg.png') 10% 15% no-repeat;
 ```
 
 ```css
-background-color: #fff;
 background-color: rgba(255, 255, 255, 0.5);
 ```
 

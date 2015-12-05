@@ -5,7 +5,8 @@
 .header {
 	.padded(3.4);
 	&__right {
-		.padding(right; 5.4);
+		.padding(right; 9);
+		.right(0);
 	}
 	&__pull {
 		.hide();
@@ -15,7 +16,7 @@
 		.inline-block();
 	}
 	&__nav {
-		.margin(left; .6);
+		.margin(left; 2);
 	}
 	&__button {
 		.width(auto);
@@ -23,6 +24,11 @@
 	&__download {
 		.background(@primary);
 		.hide-text();
+		&,
+		&:hover,
+		&:active {
+			.white();
+		}
 		&,
 		&:before {
 			.absolute(0; 0);
@@ -43,7 +49,7 @@
 	}
 }
 .switch {
-	.show();
+	.absolute(2.5; 50%);
 }
 .search {
 	.margin(right; 0);

@@ -1,7 +1,7 @@
 ---
 name: Screen
 heading: Attach events to matching breakpoint rules
-path: https://github.com/weepower/wee-core/tree/master/js/wee.screen.js
+path: https://github.com/weepower/wee-core/blob/master/js/wee.screen.js
 global:
   seoTitle: Media Queries
   seoDesc: Wee syncs breakpoint changes between CSS and JavaScript through a simple numeric system.

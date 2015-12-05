@@ -61,12 +61,6 @@
 		<h1 class="header__title">Blueprint for modern web development</h1>
 		{{ /bodyClass }}
 
-		<div class="switch" data-ref="switch">
-			<div class="switch__toggle">
-				<input type="checkbox" class="switch__checkbox">
-			</div>
-		</div>
-
 		<div class="header__right">
 			{{ #bodyClass|not('page') }}
 			<div class="search" role="search" data-ref="search">
@@ -87,5 +81,11 @@
 				<a href="https://github.com/weepower/wee" class="button header__button">GitHub</a>
 				<a href="https://github.com/weepower/wee/archive/master.zip" class="header__download">Download {{ site.version }}</a>
 			</nav>
+		</div>
+
+		<div class="switch" data-ref="switch">
+			<div class="switch__toggle">
+				<input type="checkbox" class="switch__checkbox">
+			</div>
 		</div>
 	</header>
