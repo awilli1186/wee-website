@@ -33,7 +33,7 @@ var template = '{{ #! }}{{ #age|isNumber }}I am {{ age }} years old.{{ /age }}{{
 Wee.view.render(template, data);
 ```
 
-```javascript
+```html
 "I am 30 years old."
 ```
 

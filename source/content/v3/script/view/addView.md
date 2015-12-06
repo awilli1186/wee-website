@@ -27,7 +27,7 @@ var template = '{{ #! }}{{> copyright }}{{ /! }}',
 Wee.view.render(template, data);
 ```
 
-```javascript
+```html
 "<small>&copy; 2015</small>"
 ```
 
