@@ -28,7 +28,7 @@ Here is an couple examples how you might use them.
 	ga('send', 'pageview');
 	</script>
 {{ /site.env }}
-{{ /#! }}
+{{ /! }}
 ```
 
 ---code|label:Environment Building---
