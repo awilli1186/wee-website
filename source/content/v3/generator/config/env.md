@@ -17,7 +17,7 @@ This is where you can specify environment-specific config values for use in your
 }
 ```
 
-Here is an couple examples how you might use them.
+Here are a couple examples of how you might use them.
 
 ```javascript
 {{ #! }}

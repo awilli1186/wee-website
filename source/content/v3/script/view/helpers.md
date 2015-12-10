@@ -3,7 +3,7 @@ name: Helpers
 heading: Add helper to run additional processing on tag data
 ---
 
-Properties of the tag that the helper is being called on can be accessed via the current scope `this`. These include ```val```, ```data```, ```root```, ```tag```, ```index```, and ```fallback```.
+Helpers have access to certain properties via the current scope `this`. All helpers have access to `val`, `data`, `root`, `tag`, and `index`. Tag pairs have a unique property `empty` and single tags have the unique property `fallback`. A common use for helpers is filtering tag data. Default helpers used for filtering tag pairs include `is`, `not`, `isEmpty`, and `notEmpty`.  
 
 ---variables---
 
@@ -57,3 +57,66 @@ Wee.view.render(template, data);
 ```javascript
 "Rhinoceros starts with Rhino."
 ```
+
+---code|label:Boolean Response---
+
+Returning true or false determines if the current tag pair should be parsed or skip to the next evaluation.
+
+```javascript
+Wee.view.addHelper('isNumber', function() {
+	return typeof this.val == 'number';
+});
+```
+
+---code|type:string|modifier:stacked---
+
+```javascript
+var template = '{{ #! }}{{ #age|isNumber }}I am {{ age }} years old.{{ /age }}{{ /! }}',
+	data = {
+		age: 30
+	};
+
+Wee.view.render(template, data);
+```
+
+```html
+"I am 30 years old."
+```
+
+---code|label:Data Modification---
+
+By modifying the value of `this.data` the remaining template parsing can be manipulated. The following extracts a range of data from a larger set of data.
+
+```javascript
+Wee.view.addHelper('range', function(offset, limit) {
+	this.data[this.tag] = this.val.filter(function(el, i) {
+		return i >= offset && i < limit;
+	});
+});
+```
+
+---code|type:string|modifier:stacked---
+
+```javascript
+var template = '{{ #! }}{{ #names|range(2, 5) }}{{ . }} {{ /names }}{{ /! }}',
+	data = {
+		names: [
+			'John',
+			'Jane',
+			'Jim',
+			'Janice',
+			'Jacob',
+			'Jasper'
+		]
+	};
+
+Wee.view.render(template, data);
+```
+
+```javascript
+"Jim Janice Jacob"
+```
+
+---note---
+
+**Note:** Both filters and helpers can take any number of parameters.
