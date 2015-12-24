@@ -107,3 +107,21 @@ Wee.fn.make('controllerName', {
 ---note---
 
 **Note:** The construct and destruct methods can be placed in the public object and/or the private object.
+
+---code|label:Inheritance---
+
+You can easily leverage existing controllers to extend into new controllers by using 'childController:parentController' controller name syntax.
+
+```javascript
+Wee.fn.make('parentName', {
+	_construct: function() {
+		// Base construct logic
+	}
+});
+
+Wee.fn.make('childName:parentName', {
+	init: function() {
+		// Child init logic
+	}
+});
+```

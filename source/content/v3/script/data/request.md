@@ -14,6 +14,7 @@ heading: Make Ajax request based on specified options
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | args | array | -- | Callback arguments appended after default parameters ||
+| complete | [function](/script/#functions) | -- | Complete callback ||
 | data | object | -- | Object to serialize and pass along with request ||
 | error | [function](/script/#functions) | -- | Failure callback ||
 | headers | object | -- | {key: val} object of request headers ||
@@ -21,7 +22,10 @@ heading: Make Ajax request based on specified options
 | jsonp | boolean, string | false | Boolean or override name for callback query string parameter ||
 | jsonpCallback | string | -- | Override the name of the JSONP callback function ||
 | method | string | get | Request verb (get, post, put, etc) in lowercase ||
+| processData | boolean | true | Post data in the body if applicable ||
+| root | string | -- | Prepended request path ||
 | scope | object | -- | Callback scope ||
+| send | [function](/script/#functions) | -- | Send callback ||
 | success | [function](/script/#functions) | -- | Success callback ||
 | type | string | -- | form, html, json, or xml to toggle content type header ||
 | url | string | -- | URL endpoint to request | ✔ |

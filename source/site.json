@@ -7,6 +7,9 @@
 		"removeIndex": true,
 		"removeTrailingSlashes": false,
 		"defaultTemplate": "docs",
+		"removeExtensions": [
+			"html"
+		],
 		"paths": {
 			"content": "content",
 			"target": "../public_html",
@@ -17,7 +20,7 @@
 	},
 	"env": {
 		"default": {
-			"domain": "http://www.weepower.dev",
+			"domain": "https://www.weepower.dev",
 			"cdnUrl": "",
 			"assetUrl": "/assets",
 			"analyticsID": "UA-40595891-2"
@@ -30,7 +33,7 @@
 		}
 	},
 	"data": {
-		"version": "3.0",
+		"version": "3.1",
 		"social": {
 			"twitter": "weecss",
 			"googlePageID": "+weecss"

@@ -1,4 +1,8 @@
 Wee.view.addHelper('slug', function() {
+	if (! this.val) {
+		return '';
+	}
+
 	var val = this.val.toLowerCase()
 		.replace(/\s+/g, '-')
 		.replace(/[^\w\-]+/g, '')

@@ -82,6 +82,7 @@
 	],
 	"requireDollarBeforejQueryAssignment": true,
 	"requireDotNotation": true,
+	"requireEarlyReturn": true,
 	"requireLineBreakAfterVariableAssignment": true,
 	"requireMultipleVarDecl": true,
 	"requireObjectKeysOnNewLine": true,

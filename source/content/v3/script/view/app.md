@@ -47,3 +47,7 @@ Wee.app.make('todo', {
 	}
 });
 ```
+
+---note---
+
+**Note:** Since applications are a type of controller all the standard scoped controller methods are available as properties on the app.

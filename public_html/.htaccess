@@ -13,7 +13,10 @@ Header always append X-Frame-Options SAMEORIGIN
 
 # Character set
 AddDefaultCharset utf-8
-AddCharset utf-8 .atom .css .geojson .js .json .manifest .map .rss .xml
+AddCharset utf-8 .atom .css .geojson .js .json .jsonld .manifest .map .rss .xml
+
+# HTTP Strict Transport Security
+Header always set Strict-Transport-Security "max-age=7776000; includeSubDomains"
 
 
 #------------------------------------
@@ -21,13 +24,13 @@ AddCharset utf-8 .atom .css .geojson .js .json .manifest .map .rss .xml
 #------------------------------------
 
 # Cross-origin images
-<FilesMatch "\.(bmp|cur|gif|ico|jpe?g|png|svgz?|webp)$">
+<FilesMatch "\.(bmp|gif|ico|jpe?g|png|svg|webp)$">
 	SetEnvIf Origin ":" IS_CORS
 	Header set Access-Control-Allow-Origin "*" env=IS_CORS
 </FilesMatch>
 
  # Cross-origin web fonts
-<FilesMatch "\.(eot|otf|tt[cf]|woff2?)$">
+<FilesMatch "\.(eot|otf|ttf|woff2?)$">
 	Header set Access-Control-Allow-Origin "*"
 </FilesMatch>
 
@@ -51,16 +54,12 @@ Redirect 301 /build/validation /build/commands
 #------------------------------------
 
 # Force www
-#RewriteCond %{HTTP_HOST} ^weepower\.com$ [NC]
-#RewriteRule ^(.*)$ http://www.weepower.com/$1 [R=301,L]
-
-# Remove www (don't use both force and remove)
-#RewriteCond %{HTTP_HOST} !^.weepower\.com$ [NC]
-#RewriteRule ^(.*)$ http://weepower.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^weepower\.dev [NC]
+RewriteRule ^(.*)$ https://www.weepower.dev/$1 [R=301,L]
 
 # Force SSL
-#RewriteCond %{HTTPS} !on
-#RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 # Remove trailing slash
 RewriteCond %{REQUEST_FILENAME} !-d

@@ -1,7 +1,7 @@
 {
 	"js": {
-		"wee.chain.animate.js": {
-			"tween": 15
+		"wee.chain.view.js": {
+			"render": 11
 		},
 		"wee.chain.events.js": {
 			"on": 18,
@@ -9,56 +9,22 @@
 			"bound": 44,
 			"trigger": 54
 		},
-		"wee.assets.js": {
-			"root": 99,
-			"load": 122,
-			"remove": 201,
-			"ready": 234
-		},
-		"wee.chain.view.js": {
-			"render": 11
+		"wee.chain.animate.js": {
+			"tween": 15
 		},
 		"config.js": {},
 		"wee.animate.js": {
 			"ease": 8,
 			"linear": 11,
 			"tween": 28,
-			"addeasing": 107
-		},
-		"wee.chain.js": {
-			"chain": 49,
-			"each": 84,
-			"map": 100,
-			"reverse": 109,
-			"setref": 126,
-			"setvar": 135,
-			"toarray": 144
-		},
-		"wee.data.js": {
-			"request": 138
+			"addeasing": 95
 		},
 		"wee.screen.js": {
 			"size": 132,
-			"map": 156,
-			"run": 169,
-			"reset": 176
+			"map": 155,
+			"run": 168,
+			"reset": 175
 		},
-		"wee.routes.js": {
-			"num": 7,
-			"uri": 172,
-			"segments": 207,
-			"map": 220,
-			"addfilter": 242,
-			"run": 254
-		},
-		"wee.events.js": {
-			"on": 145,
-			"off": 177,
-			"bound": 210,
-			"trigger": 256,
-			"addevent": 275
-		},
-		"wee.touch.js": {},
 		"wee.chain.dom.js": {
 			"add": 13,
 			"addclass": 30,
@@ -122,22 +88,26 @@
 			"input": 42,
 			"textarea": 58
 		},
+		"wee.data.js": {
+			"request": 136
+		},
 		"wee.view.js": {
 			"is": 16,
 			"not": 19,
 			"isempty": 22,
 			"notempty": 25,
-			"make": 440,
-			"pause": 466,
-			"resume": 475,
-			"render": 499,
-			"addhelper": 516,
-			"addview": 526
+			"make": 432,
+			"destroy": 458,
+			"pause": 469,
+			"resume": 478,
+			"render": 502,
+			"addhelper": 517,
+			"addview": 527
 		},
 		"wee.history.js": {
 			"init": 149,
-			"bind": 203,
-			"go": 275
+			"bind": 210,
+			"go": 282
 		},
 		"wee.dom.js": {
 			"addclass": 89,
@@ -186,50 +156,81 @@
 			"siblings": 1122,
 			"slice": 1154,
 			"text": 1169,
-			"toggle": 1195,
-			"toggleclass": 1210,
-			"val": 1238,
-			"width": 1279,
-			"wrap": 1327,
-			"wrapinner": 1361
+			"toggle": 1193,
+			"toggleclass": 1208,
+			"val": 1236,
+			"width": 1277,
+			"wrap": 1325,
+			"wrapinner": 1359
 		},
 		"wee.js": {
-			"make": 450,
-			"extend": 876,
-			"sel": 495,
-			"parsehtml": 590,
-			"set": 1241,
-			"get": 1232,
-			"push": 1259,
-			"concat": 1268,
-			"merge": 1277,
-			"has": 1250,
-			"drop": 1286,
-			"observe": 1293,
-			"unobserve": 1300,
-			"trigger": 1307,
-			"each": 749,
-			"env": 783,
-			"envsecure": 813,
-			"exec": 826,
-			"diff": 896,
-			"equals": 907,
-			"isarray": 917,
-			"isfunction": 927,
-			"isobject": 937,
-			"isstring": 947,
-			"map": 961,
-			"serialize": 993,
-			"unserialize": 1018,
-			"setref": 1044,
-			"setvar": 1074,
-			"toarray": 1093,
-			"type": 1103,
-			"unique": 1116,
-			"chain": 1125,
-			"destroy": 1316,
-			"ready": 1359
-		}
+			"make": 473,
+			"extend": 923,
+			"sel": 541,
+			"parsehtml": 636,
+			"set": 1293,
+			"get": 1284,
+			"push": 1311,
+			"concat": 1320,
+			"merge": 1329,
+			"has": 1302,
+			"drop": 1338,
+			"observe": 1345,
+			"unobserve": 1352,
+			"trigger": 1359,
+			"each": 796,
+			"env": 830,
+			"envsecure": 860,
+			"exec": 873,
+			"diff": 943,
+			"equals": 954,
+			"isarray": 964,
+			"isfunction": 974,
+			"isobject": 984,
+			"isstring": 994,
+			"map": 1008,
+			"serialize": 1040,
+			"unserialize": 1065,
+			"setref": 1091,
+			"setvar": 1121,
+			"toarray": 1140,
+			"type": 1150,
+			"unique": 1163,
+			"chain": 1172,
+			"destroy": 1368,
+			"ready": 1430
+		},
+		"wee.chain.js": {
+			"chain": 49,
+			"each": 84,
+			"map": 99,
+			"reverse": 108,
+			"setref": 125,
+			"setvar": 134,
+			"toarray": 143
+		},
+		"wee.routes.js": {
+			"num": 7,
+			"uri": 172,
+			"segments": 207,
+			"map": 220,
+			"addfilter": 242,
+			"run": 254
+		},
+		"wee.assets.js": {
+			"root": 99,
+			"load": 122,
+			"remove": 201,
+			"ready": 234
+		},
+		"wee.events.js": {
+			"on": 145,
+			"off": 177,
+			"bound": 210,
+			"trigger": 256,
+			"addevent": 275
+		},
+		"wee.touch.js": {}
 	},
 	"css": {
 		"wee.variables.less": {
