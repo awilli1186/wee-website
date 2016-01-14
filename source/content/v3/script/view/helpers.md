@@ -119,4 +119,4 @@ Wee.view.render(template, data);
 
 ---note---
 
-**Note:** Both filters and helpers can take any number of parameters.
+**Note:** Helpers can take any number of parameters.

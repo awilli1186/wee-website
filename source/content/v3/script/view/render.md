@@ -171,6 +171,8 @@ var template = '{{ #! }}<p>My Name is {{ firstName }}{{ #lastName|notEmpty }} {{
 		'<ul>{{ #children }}' +
 			'<li>{{ name }} - {{ age }}</li>' +
 		'{{ /children }}</ul>' +
+	'{{ else }}' +
+		'<p>I have no children.</p>' +
 	'{{ /children }}{{ /! }}',
 	data = {
 		firstName: 'John',
