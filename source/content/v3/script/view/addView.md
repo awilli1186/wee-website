@@ -55,3 +55,6 @@ Wee.app.make('appName', {
 	}
 });
 ```
+
+Adding view files into the `js/views/load` directory will automatically add the view into
+Wee's data store when the build process is run.

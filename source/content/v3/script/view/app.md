@@ -21,6 +21,8 @@ heading: Create dynamic data-driven interfaces
 ---code---
 
 Applications are the glue between the [renderer](#render) and [observables](/script/core#observe).
+Updating properties in an app's data model triggers the view to update the DOM with the associated
+changes allowing for complex, data-bound interfaces.
 
 ```javascript
 Wee.app.make('todo', {
@@ -48,6 +50,15 @@ Wee.app.make('todo', {
 });
 ```
 
+```javascript
+Wee.app.todo.$set('newProperty', 'data-binding at work'); 
+
+// Add new item to end of the todo list
+Wee.app.todo.$push('todo', {
+	label: 'Add something dynamic'
+});
+```
+
 ---note---
 
-**Note:** Since applications are a type of controller all the standard scoped controller methods are available as properties on the app.
+**Note:** Since applications are a type of controller, all the standard scoped controller methods are available as properties on the app.
