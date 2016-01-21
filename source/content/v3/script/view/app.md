@@ -24,9 +24,35 @@ Applications are the glue between the [renderer](#render) and [observables](/scr
 Updating properties in an app's data model triggers the view to update the DOM with the associated
 changes allowing for complex, data-bound interfaces.
 
+---code|label:Create View---
+
+
+```html
+// js/views/load/todo.html
+{{ #! }}
+<ul class="todo">
+	{{ #todo|each }}
+		<li class="todo__item{{ #done }} -is-done{{ /done }}">
+			<div class="todo__toggle" data-ref="toggle" data-id="{{ # }}"></div>
+			<span class="todo__label">{{ label }}</span>
+		</li>
+	{{ /todo }}
+</ul>
+{{ /! }}
+```
+
+---note---
+
+**Note:** Adding html view files into the `js/views/load` directory will automatically add the view into
+Wee's data store when the build process is run. These auto-loaded views can be accessed directly when
+creating an app. Wee modules adhere to this same structure. 
+
+---code|label:Create App---
+
 ```javascript
 Wee.app.make('todo', {
-	view: 'ref:todo',
+	target: 'ref:todo', // DOM location for app to render
+	view: 'todo', // If accessing view from module, 'moduleName.fileName'
 	model: {
 		todo: [
 			{
@@ -50,7 +76,14 @@ Wee.app.make('todo', {
 });
 ```
 
+---note---
+
+**Note:** Since applications are a type of controller, all the standard scoped controller methods are available as properties on the app.
+
+---code|label:Update App Data Model---
+
 ```javascript
+// Add new property to app model
 Wee.app.todo.$set('newProperty', 'data-binding at work'); 
 
 // Add new item to end of the todo list
@@ -58,7 +91,3 @@ Wee.app.todo.$push('todo', {
 	label: 'Add something dynamic'
 });
 ```
-
----note---
-
-**Note:** Since applications are a type of controller, all the standard scoped controller methods are available as properties on the app.
