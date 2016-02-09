@@ -60,6 +60,16 @@ text-transform: uppercase;
 text-transform: uppercase;
 ```
 
+---code|modifier:split|label:Wrap---
+
+```less
+.wrap();
+```
+
+```css
+white-space: initial;
+```
+
 ---code|modifier:split|label:No-Wrap---
 
 ```less
@@ -72,14 +82,19 @@ white-space: nowrap;
 
 ---code|modifier:split|label:Ellipsis---
 
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| @maxWidth | keyword | -- | Maximum width for element ||
+
 ```less
-.ellipsis();
+.ellipsis(20);
 ```
 
 ```css
 overflow-x: hidden;
 text-overflow: ellipsis;
 white-space: nowrap;
+max-width: 20rem;
 ```
 
 ---code|modifier:split|label:Underline---
@@ -175,6 +190,38 @@ text-decoration: #00f dotted underline;
 
 ```css
 outline: thin dotted;
+```
+
+---variables|label:Text Overflow---
+
+| Variable | Type | Default | Description | Require |
+| -- | -- | -- | -- | -- |
+| @value | keyword | -- | Element text overflow value ||
+
+---code|modifier:split---
+
+```less
+.text-overflow(clip);
+```
+
+```css
+text-overflow: clip;
+```
+
+---variables|label:White Space---
+
+| Variable | Type | Default | Description | Require |
+| -- | -- | -- | -- | -- |
+| @value | keyword | -- | Element white space value ||
+
+---code|modifier:split---
+
+```less
+.white-space(initial);
+```
+
+```css
+white-space: initial;
 ```
 
 ---variables|label:Letter Spacing---

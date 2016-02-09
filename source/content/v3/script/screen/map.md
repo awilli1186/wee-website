@@ -19,6 +19,7 @@ heading: Watch single or set of screen events with specified options
 | init | boolean | true | Immediately evaluate breakpoint logic ||
 | max | number | -- | Maximum breakpoint value ||
 | min | number | -- | Minimum breakpoint value ||
+| namespace | string | -- | Event namespace for granular resetting ||
 | once | boolean | false | Disable callback after first execution ||
 | scope | object | -- | Callback scope ||
 | size | number | -- | Specific breakpoint value ||

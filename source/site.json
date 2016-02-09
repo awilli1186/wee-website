@@ -33,14 +33,14 @@
 		}
 	},
 	"data": {
-		"version": "3.1",
+		"version": "3.2",
 		"social": {
 			"twitter": "weecss",
 			"googlePageID": "+weecss"
 		},
-		"cssVersion": 11,
-		"jsVersion": 7,
-		"jsLegacyVersion": 6
+		"cssVersion": 12,
+		"jsVersion": 8,
+		"jsLegacyVersion": 7
 	},
 	"sections": {
 		"search": {

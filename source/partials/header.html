@@ -56,20 +56,20 @@
 			</svg>
 		</a>
 		{{ #bodyClass|not('page') }}
-		<span class="header__title">{{ site.version }}</span>
+			<span class="header__title">{{ site.version }}</span>
 		{{ else }}
-		<h1 class="header__title">Blueprint for modern web development</h1>
+			<h1 class="header__title">Blueprint for modern web development</h1>
 		{{ /bodyClass }}
 
 		<div class="header__right">
 			{{ #bodyClass|not('page') }}
-			<div class="search" role="search" data-ref="search">
-				<div class="search__button" role="button" data-ref="searchButton"></div>
-				<input type="search" placeholder="Search" class="search__input" data-ref="searchInput">
-				<div class="search__results js-hide" data-ref="searchOutput">
-					<ol class="search__results__list" data-ref="searchResults"></ol>
+				<div class="search" role="search" data-ref="search">
+					<div class="search__button" role="button" data-ref="searchButton"></div>
+					<input type="search" placeholder="Search" class="search__input" data-ref="searchInput">
+					<div class="search__results js-hide" data-ref="searchOutput">
+						<ol class="search__results__list" data-ref="searchResults"></ol>
+					</div>
 				</div>
-			</div>
 			{{ /bodyClass }}
 
 			<div class="header__pull" data-ref="pull"></div>
