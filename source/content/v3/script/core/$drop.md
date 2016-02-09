@@ -7,8 +7,8 @@ heading: Remove key or value from global array
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| key | string | -- | Storage reference | ✔ |
-| value | any | -- | Storage key or value | ✔ |
+| key | string | -- | Storage reference or value | ✔ |
+| value | any | -- | Storage key, value, or prepend value ||
 | prepend | boolean | false | Prepend value to storage ||
 
 ---code|type:array|modifier:split|label:Key---

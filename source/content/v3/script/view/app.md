@@ -14,7 +14,7 @@ heading: Create dynamic data-driven interfaces
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| model | object | -- | Data object to bind to view | ✔ |
+| model | object | {} | Data object to bind to view ||
 | target | [selection](/script#selection) | -- | If view isn't a selection the DOM target ||
 | view | [selection](/script#selection), string | -- | The DOM view or a view string/reference | ✔ |
 
