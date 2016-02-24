@@ -197,6 +197,17 @@ body {
 				.white();
 			}
 		}
+		.sidebar-toggle {
+			&:after {
+				.background(@dark9);
+				.gray();
+			}
+			&:hover {
+				&:after {
+					.lightGray();
+				}
+			}
+		}
 		.topnav {
 			.border-color(@dark6);
 			a {
@@ -709,10 +720,14 @@ body {
 .topnav {
 	.absolute(0; false; false; -18);
 	.border(right; @light);
+	.transition(left);
 	a {
 		&.-is-active {
 			.background(@light);
 		}
+	}
+	&.-is-active {
+		.left(0);
 	}
 }
 .subnav {
@@ -738,6 +753,31 @@ body {
 	&.-deprecated {
 		a {
 			.lightGray();
+		}
+	}
+}
+.sidebar-toggle {
+	.cursor();
+	.fixed(false; false; 2; 2);
+	.z-index(200);
+	&:after {
+		.align(center);
+		.background(@light);
+		.circle(4.5);
+		.content(@iconChevron);
+		.font(wee; 1.7; false; 2);
+		.gray();
+		.padding(.7; 0; 0; .4);
+		.transition(transform);
+	}
+	&:hover {
+		&:after {
+			.darkGray();
+		}
+	}
+	&.-is-active {
+		&:after {
+			.rotate(-180deg);
 		}
 	}
 }
@@ -858,11 +898,15 @@ body {
 	.hide();
 }
 .output {
+	.left(0);
 	.max-width(800px);
 	.padding(vertical; 9.8; 4);
 	.relative();
-	.transition(margin-left);
+	.transition();
 	.z-index(100);
+	&.-is-active {
+		.left(18);
+	}
 	.footer {
 		.margin(top; 6);
 	}
