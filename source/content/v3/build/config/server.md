@@ -2,7 +2,7 @@
 name: Server
 ---
 
-When Wee is running and serving your site through the proxy, you can chose to have it mirror actions between connected browsers. That means if you have a browser open to your proxy URL on perhaps a mobile device on the same network, and your local development device, when you scroll, click, or take an action on one browser, it will be replicated in the other.
+When Wee is running and serving your site through the proxy, you can choose to have it mirror actions between connected browsers. That means if you have a browser open to your proxy URL on perhaps a mobile device on the same network, and your local development device, when you scroll, click, or take an action on one browser, it will be replicated in the other.
 
 ```javascript
 "ghostMode": true

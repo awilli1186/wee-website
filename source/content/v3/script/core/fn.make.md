@@ -35,7 +35,7 @@ Wee.controllerName.init();
 
 ---note---
 
-**Note:** To create a new instance of a controller use the following syntax: `var instance = Wee.fn.controllerName();`
+**Note:** To create a new instance of a controller use the following syntax: <br> `var instance = new Wee.fn.controllerName();`
 
 ---code|label:Private/Public---
 
