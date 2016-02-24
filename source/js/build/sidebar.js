@@ -2,6 +2,12 @@
 
 Wee.fn.make('sidebar', {
 	init: function() {
+		var isActive = '-is-active',
+			$sidebarToggle = $('ref:sidebarToggle'),
+			$headerNav = $('ref:headerNav'),
+			$primary = $('ref:primary'),
+			$topNav = $('ref:topnav');
+
 		this.$subnavLinks = $('a', 'ref:subnav');
 		this.active = false;
 
@@ -16,6 +22,32 @@ Wee.fn.make('sidebar', {
 			init: true,
 			scope: this
 		});
+
+		Wee.screen.map([
+			{
+				max: 3,
+				callback: function() {
+					$sidebarToggle.on('click', function() {
+						$primary.toggleClass(isActive);
+						$topNav.toggleClass(isActive);
+						$sidebarToggle.toggleClass(isActive);
+
+						if (! $headerNav.hasClass('js-hide')) {
+							$headerNav.hide();
+						}
+					});
+				}
+			},
+			{
+				min: 4,
+				callback: function() {
+					if ($primary.hasClass(isActive)) {
+						$primary.removeClass(isActive);
+						$topNav.removeClass(isActive);
+					}
+				}
+			}
+		]);
 	},
 
 	/**
