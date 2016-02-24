@@ -39,8 +39,8 @@
 			"googlePageID": "+weecss"
 		},
 		"cssVersion": 14,
-		"jsVersion": 11,
-		"jsLegacyVersion": 10
+		"jsVersion": 12,
+		"jsLegacyVersion": 11
 	},
 	"sections": {
 		"search": {

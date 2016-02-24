@@ -12,7 +12,7 @@ Wee.fn.make('sidebar', {
 		this.$subnavLinks = $('a', 'ref:subnav');
 		this.active = false;
 
-		if (this.scroller) {wee
+		if (this.scroller) {
 			this.scroller.update();
 		}
 
