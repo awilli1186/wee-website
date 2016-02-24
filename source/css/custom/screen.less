@@ -26,6 +26,9 @@
 
 .load-font(wee);
 
+body {
+	.crop(horizontal);
+}
 .breadcrumb {
 	.font-size(1.2);
 	.gray();
@@ -118,10 +121,16 @@ body {
 			}
 		}
 		.footer {
+			.left(0);
+			.relative();
+			.transition(left);
 			&__license {
 				&:before {
 					.white();
 				}
+			}
+			&.-is-active {
+				.left(18);
 			}
 		}
 		.switch {
