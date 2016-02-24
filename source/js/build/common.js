@@ -1,12 +1,12 @@
 Wee.fn.make('common', {
 	init: function() {
 		var scope = this,
-			$body = $(Wee._body),
+			$body = $($._body),
 			$header = $('ref:header'),
 			$switch = $('ref:switch');
 
 		// Mobile navigation
-		Wee.screen.map([
+		$.screen.map([
 			{
 				max: 3,
 				callback: function() {
@@ -64,7 +64,7 @@ Wee.fn.make('common', {
 				});
 			}
 		}, {
-			delegate: Wee._body
+			delegate: $._body
 		});
 	}
 }, {
@@ -91,7 +91,7 @@ Wee.fn.make('common', {
 
 		document.cookie = 'dark:' + this.dark + ';expires=' + d.toUTCString();
 
-		$(Wee._body).toggleClass('-dark', this.dark);
+		$($._body).toggleClass('-dark', this.dark);
 	},
 
 	/**

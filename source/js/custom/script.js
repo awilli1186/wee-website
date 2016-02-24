@@ -1,4 +1,4 @@
-Wee.routes.map({
+$.routes.map({
 	'$any:once': 'common',
 	'$seg': {
 		'$any:once': [
@@ -25,4 +25,4 @@ Wee.routes.map({
 	}
 });
 
-Wee.ready('routes:run');
+$.ready('routes:run');

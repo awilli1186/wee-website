@@ -115,7 +115,7 @@ Wee.fn.make('search', {
 				var $output = $('ref:searchOutput');
 
 				if (data.nbHits > 0) {
-					var content = Wee.view.render('search', data);
+					var content = $.view.render('search', data);
 
 					$('ref:searchResults').html(content);
 					$output.show();
