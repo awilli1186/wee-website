@@ -26,25 +26,21 @@ Wee.fn.make('sidebar', {
 		Wee.screen.map([
 			{
 				max: 3,
+				once: true,
 				callback: function() {
 					$sidebarToggle.on('click', function() {
 						$primary.toggleClass(isActive);
 						$topNav.toggleClass(isActive);
 						$sidebarToggle.toggleClass(isActive);
-
-						if (! $headerNav.hasClass('js-hide')) {
-							$headerNav.hide();
-						}
+						$headerNav.hide();
 					});
 				}
 			},
 			{
 				min: 4,
 				callback: function() {
-					if ($primary.hasClass(isActive)) {
-						$primary.removeClass(isActive);
-						$topNav.removeClass(isActive);
-					}
+					$primary.removeClass(isActive);
+					$topNav.removeClass(isActive);
 				}
 			}
 		]);
