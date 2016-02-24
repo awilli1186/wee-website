@@ -2,7 +2,7 @@
 
 Wee.fn.make('docs', {
 	init: function() {
-		Wee.screen.map([
+		$.screen.map([
 			{
 				min: 3,
 				once: true,
@@ -14,24 +14,22 @@ Wee.fn.make('docs', {
 			}
 		]);
 
-		Wee.history.init({
+		$.history.init({
 			partials: 'title, main, .sublinks',
-			bind: {
-				click: 'a'
-			},
+			bind: true,
 			begin: function(conf) {
 				if (conf.path === '/') {
-					Wee._win.location = '/';
+					$._win.location = '/';
 					return false;
 				}
 
 				if (/^\/blog/.test(conf.path)) {
-					$(Wee._body).removeClass('docs')
+					$($._body).removeClass('docs')
 						.addClass('blog');
 
 					$('ref:subnav').remove();
 				} else if (! $('ref:subnav').length) {
-					$(Wee._body).removeClass('blog')
+					$($._body).removeClass('blog')
 						.addClass('docs');
 
 					$('ref:topnav').after('<div class="sidebar subnav" data-ref="sidebar subnav"><div class="viewport"><div class="overview"><h3>Contents</h3><ul class="sublinks"></ul></div></div>');

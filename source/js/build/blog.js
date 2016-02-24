@@ -1,8 +1,8 @@
 Wee.fn.make('blog', {
 	init: function() {
-		Wee._win.disqus_shortname = 'weepower'; // jscs:ignore
+		$._win.disqus_shortname = 'weepower'; // jscs:ignore
 
-		Wee.assets.load({
+		$.assets.load({
 			files: 'https://' + disqus_shortname + '.disqus.com/embed.js' // jscs:ignore
 		});
 	}

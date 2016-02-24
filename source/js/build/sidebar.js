@@ -11,11 +11,11 @@ Wee.fn.make('sidebar', {
 		this.$subnavLinks = $('a', 'ref:subnav');
 		this.active = false;
 
-		if (this.scroller) {
+		if (this.scroller) {wee
 			this.scroller.update();
 		}
 
-		$(Wee._win).on({
+		$($._win).on({
 			resize: this.setOffsets,
 			scroll: this.setActive
 		}, {
@@ -23,7 +23,7 @@ Wee.fn.make('sidebar', {
 			scope: this
 		});
 
-		Wee.screen.map([
+		$.screen.map([
 			{
 				max: 3,
 				once: true,
@@ -70,7 +70,7 @@ Wee.fn.make('sidebar', {
 	 */
 	setOffsets: function() {
 		var scope = this,
-			$body = $(Wee._body),
+			$body = $($._body),
 			offset = 98;
 
 		// Position initial anchor
@@ -107,7 +107,7 @@ Wee.fn.make('sidebar', {
 	 * Handle active navigation selection
 	 */
 	setActive: function() {
-		var min = $(Wee._win).scrollTop() + 98,
+		var min = $($._win).scrollTop() + 98,
 			activeClass = '-is-active',
 			i = 0;
 
