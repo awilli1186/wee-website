@@ -6,6 +6,7 @@ Wee.fn.make('sidebar', {
 			$sidebarToggle = $('ref:sidebarToggle'),
 			$headerNav = $('ref:headerNav'),
 			$primary = $('ref:primary'),
+			$footer = $('ref:footer'),
 			$topNav = $('ref:topnav');
 
 		this.$subnavLinks = $('a', 'ref:subnav');
@@ -25,22 +26,25 @@ Wee.fn.make('sidebar', {
 
 		$.screen.map([
 			{
-				max: 3,
+				max: 2,
 				once: true,
 				callback: function() {
 					$sidebarToggle.on('click', function() {
 						$primary.toggleClass(isActive);
 						$topNav.toggleClass(isActive);
 						$sidebarToggle.toggleClass(isActive);
+						$footer.toggleClass(isActive);
 						$headerNav.hide();
 					});
 				}
 			},
 			{
-				min: 4,
+				min: 3,
 				callback: function() {
 					$primary.removeClass(isActive);
 					$topNav.removeClass(isActive);
+					$footer.removeClass(isActive);
+					$sidebarToggle.removeClass(isActive);
 				}
 			}
 		]);
