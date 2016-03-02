@@ -49,7 +49,7 @@ link: /script/dom
 * [$(sel).replaceWith(source)](/script/dom#replacewith)
 * [$(sel).scrollLeft(value)](/script/dom#scrollleft)
 * [$(sel).scrollTop(value)](/script/dom#scrolltop)
-* [$(sel).serialize(value)](/script/dom#serializeform)
+* [$(sel).serialize(json)](/script/dom#serializeform)
 * [$(sel).show()](/script/dom#show)
 * [$(sel).siblings(filter)](/script/dom#siblings)
 * [$(sel).slice(start, end)](/script/dom#slice)
