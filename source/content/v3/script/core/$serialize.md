@@ -13,15 +13,18 @@ heading: Serialize object
 
 ```javascript
 Wee.$serialize({
-	key1: 'value 1',
-	key2: 'value 2'
+	key1: 123,
+	key2: [
+		'value 1',
+		'value 2'
+	]
 });
 ```
 
 ```javascript
-key1=value+1&key2=value+2
+key1=123&key2[]=value+1&key2[]=value+2
 ```
 
 ---note---
 
-**Note:** Only the first level of the object and those with string values are serialized.
+**Note:** Only the first level of the object is serialized.

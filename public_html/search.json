@@ -3,1687 +3,1687 @@
 	{
 		"title": "Custom",
 		"description": "Tap into the Wee CLI with your own commands",
-		"url": "https://www.weepower.dev/v3/build/commands#custom"
+		"url": "https://www.weepower.com/v3/build/commands#custom"
 	},
 	
 	{
 		"title": "Commands",
 		"description": "Wee includes an extensible CLI with some useful default commands",
-		"url": "https://www.weepower.dev/v3/build/commands"
+		"url": "https://www.weepower.com/v3/build/commands"
 	},
 	
 	{
 		"title": "Make",
 		"description": "Quickly scaffold core Wee structures",
-		"url": "https://www.weepower.dev/v3/build/commands#make"
+		"url": "https://www.weepower.com/v3/build/commands#make"
 	},
 	
 	{
 		"title": "Reset",
 		"description": "Remove unnecessary files and sample assets from the default install",
-		"url": "https://www.weepower.dev/v3/build/commands#reset"
+		"url": "https://www.weepower.com/v3/build/commands#reset"
 	},
 	
 	{
 		"title": "Update",
 		"description": "Get notified if there is a newer version of Wee",
-		"url": "https://www.weepower.dev/v3/build/commands#update"
+		"url": "https://www.weepower.com/v3/build/commands#update"
 	},
 	
 	{
 		"title": "Validate",
 		"description": "Enforce code quality and formatting",
-		"url": "https://www.weepower.dev/v3/build/commands#validate"
+		"url": "https://www.weepower.com/v3/build/commands#validate"
 	},
 	
 	{
 		"title": "General",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/build/config#general"
+		"url": "https://www.weepower.com/v3/build/config#general"
 	},
 	
 	{
 		"title": "Generator",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/build/config#generator"
+		"url": "https://www.weepower.com/v3/build/config#generator"
 	},
 	
 	{
 		"title": "Configuration",
 		"description": "Building your project with Wee is easy",
-		"url": "https://www.weepower.dev/v3/build/config"
+		"url": "https://www.weepower.com/v3/build/config"
 	},
 	
 	{
 		"title": "Script",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/build/config#script"
+		"url": "https://www.weepower.com/v3/build/config#script"
 	},
 	
 	{
 		"title": "Server",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/build/config#server"
+		"url": "https://www.weepower.com/v3/build/config#server"
 	},
 	
 	{
 		"title": "Style",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/build/config#style"
+		"url": "https://www.weepower.com/v3/build/config#style"
 	},
 	
 	{
 		"title": "Build",
 		"description": "Process to compile, optimize, and minify your project",
-		"url": "https://www.weepower.dev/v3/build"
+		"url": "https://www.weepower.com/v3/build"
 	},
 	
 	{
 		"title": "Config",
 		"description": "Modules are configured much like the Wee core",
-		"url": "https://www.weepower.dev/v3/build/modules#config"
+		"url": "https://www.weepower.com/v3/build/modules#config"
 	},
 	
 	{
 		"title": "Modules",
 		"description": "Logically group script and style for internal use or distribution",
-		"url": "https://www.weepower.dev/v3/build/modules"
+		"url": "https://www.weepower.com/v3/build/modules"
 	},
 	
 	{
 		"title": "Structure",
 		"description": "Similar organization to the core Wee setup",
-		"url": "https://www.weepower.dev/v3/build/modules#structure"
+		"url": "https://www.weepower.com/v3/build/modules#structure"
 	},
 	
 	{
 		"title": "Run",
 		"description": "Command line tasks for building your project",
-		"url": "https://www.weepower.dev/v3/build#run"
+		"url": "https://www.weepower.com/v3/build#run"
 	},
 	
 	{
 		"title": "Script Build",
 		"description": "Wee builds JavaScript in the following sequence",
-		"url": "https://www.weepower.dev/v3/build#script-build"
+		"url": "https://www.weepower.com/v3/build#script-build"
 	},
 	
 	{
 		"title": "Style Build",
 		"description": "Wee builds CSS in the following sequence",
-		"url": "https://www.weepower.dev/v3/build#style-build"
+		"url": "https://www.weepower.com/v3/build#style-build"
 	},
 	
 	{
 		"title": "Testing",
 		"description": "Easily drop in functional and unit tests using Intern",
-		"url": "https://www.weepower.dev/v3/build#testing"
+		"url": "https://www.weepower.com/v3/build#testing"
 	},
 	
 	{
 		"title": "Views",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/build#views"
+		"url": "https://www.weepower.com/v3/build#views"
 	},
 	
 	{
 		"title": "Config",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/config#config"
+		"url": "https://www.weepower.com/v3/generator/config#config"
 	},
 	
 	{
 		"title": "Data",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/config#data"
+		"url": "https://www.weepower.com/v3/generator/config#data"
 	},
 	
 	{
 		"title": "Env",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/config#env"
+		"url": "https://www.weepower.com/v3/generator/config#env"
 	},
 	
 	{
 		"title": "General",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/config#general"
+		"url": "https://www.weepower.com/v3/generator/config#general"
 	},
 	
 	{
 		"title": "Configuration",
 		"description": "Site generator settings and preferences",
-		"url": "https://www.weepower.dev/v3/generator/config"
+		"url": "https://www.weepower.com/v3/generator/config"
 	},
 	
 	{
 		"title": "Sections",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/config#sections"
+		"url": "https://www.weepower.com/v3/generator/config#sections"
 	},
 	
 	{
 		"title": "Features",
 		"description": "The site generator is feature-rich and includes the following",
-		"url": "https://www.weepower.dev/v3/generator#features"
+		"url": "https://www.weepower.com/v3/generator#features"
 	},
 	
 	{
 		"title": "Generator",
 		"description": "Static builder for style guides, documentation, or entire sites",
-		"url": "https://www.weepower.dev/v3/generator"
+		"url": "https://www.weepower.com/v3/generator"
 	},
 	
 	{
 		"title": "Task",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator#task"
+		"url": "https://www.weepower.com/v3/generator#task"
 	},
 	
 	{
 		"title": "Blocks",
 		"description": "Blocks allow you to create and control modular sections of content",
-		"url": "https://www.weepower.dev/v3/generator/usage#blocks"
+		"url": "https://www.weepower.com/v3/generator/usage#blocks"
 	},
 	
 	{
 		"title": "Content",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/usage#content"
+		"url": "https://www.weepower.com/v3/generator/usage#content"
 	},
 	
 	{
 		"title": "Data",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/usage#data"
+		"url": "https://www.weepower.com/v3/generator/usage#data"
 	},
 	
 	{
 		"title": "Usage",
 		"description": "Build complex pages and sites with Wee",
-		"url": "https://www.weepower.dev/v3/generator/usage"
+		"url": "https://www.weepower.com/v3/generator/usage"
 	},
 	
 	{
 		"title": "Parent",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/usage#parent"
+		"url": "https://www.weepower.com/v3/generator/usage#parent"
 	},
 	
 	{
 		"title": "Sections",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/usage#sections"
+		"url": "https://www.weepower.com/v3/generator/usage#sections"
 	},
 	
 	{
 		"title": "Site",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/usage#site"
+		"url": "https://www.weepower.com/v3/generator/usage#site"
 	},
 	
 	{
 		"title": "Target, Path &amp; URL",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/generator/usage#target-path-url"
+		"url": "https://www.weepower.com/v3/generator/usage#target-path-url"
 	},
 	
 	{
 		"title": "addEasing",
 		"description": "Add additional easing function(s)",
-		"url": "https://www.weepower.dev/v3/script/animate#addeasing"
+		"url": "https://www.weepower.com/v3/script/animate#addeasing"
 	},
 	
 	{
 		"title": "Animate",
 		"description": "Smoothly transition attribute or property values",
-		"url": "https://www.weepower.dev/v3/script/animate"
+		"url": "https://www.weepower.com/v3/script/animate"
 	},
 	
 	{
 		"title": "Tween",
 		"description": "Transition an attribute or property value",
-		"url": "https://www.weepower.dev/v3/script/animate#tween"
+		"url": "https://www.weepower.com/v3/script/animate#tween"
 	},
 	
 	{
 		"title": "Assets",
 		"description": "Dynamic loading for JavaScript, CSS, and images",
-		"url": "https://www.weepower.dev/v3/script/assets"
+		"url": "https://www.weepower.com/v3/script/assets"
 	},
 	
 	{
 		"title": "Load",
 		"description": "Load specified assets with specified set of options",
-		"url": "https://www.weepower.dev/v3/script/assets#load"
+		"url": "https://www.weepower.com/v3/script/assets#load"
 	},
 	
 	{
 		"title": "Ready",
 		"description": "When specified references are ready execute callback",
-		"url": "https://www.weepower.dev/v3/script/assets#ready"
+		"url": "https://www.weepower.com/v3/script/assets#ready"
 	},
 	
 	{
 		"title": "Remove",
 		"description": "Remove one or more files from the DOM",
-		"url": "https://www.weepower.dev/v3/script/assets#remove"
+		"url": "https://www.weepower.com/v3/script/assets#remove"
 	},
 	
 	{
 		"title": "Root",
 		"description": "Get current asset root or set with specified value",
-		"url": "https://www.weepower.dev/v3/script/assets#root"
+		"url": "https://www.weepower.com/v3/script/assets#root"
 	},
 	
 	{
 		"title": "Animate",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/chain#animate"
+		"url": "https://www.weepower.com/v3/script/chain#animate"
 	},
 	
 	{
 		"title": "Core",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/chain#core"
+		"url": "https://www.weepower.com/v3/script/chain#core"
 	},
 	
 	{
 		"title": "DOM",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/chain#dom"
+		"url": "https://www.weepower.com/v3/script/chain#dom"
 	},
 	
 	{
 		"title": "Events",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/chain#events"
+		"url": "https://www.weepower.com/v3/script/chain#events"
 	},
 	
 	{
 		"title": "Chain",
 		"description": "Method chaining",
-		"url": "https://www.weepower.dev/v3/script/chain"
+		"url": "https://www.weepower.com/v3/script/chain"
 	},
 	
 	{
 		"title": "Register",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/chain#register"
+		"url": "https://www.weepower.com/v3/script/chain#register"
 	},
 	
 	{
 		"title": "Shortcuts",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/chain#shortcuts"
+		"url": "https://www.weepower.com/v3/script/chain#shortcuts"
 	},
 	
 	{
 		"title": "View",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/chain#view"
+		"url": "https://www.weepower.com/v3/script/chain#view"
 	},
 	
 	{
 		"title": "$",
 		"description": "Get matches to specified selector or return parsed HTML",
-		"url": "https://www.weepower.dev/v3/script/core#"
+		"url": "https://www.weepower.com/v3/script/core#"
 	},
 	
 	{
 		"title": "$concat",
 		"description": "Concatenate values into global storage",
-		"url": "https://www.weepower.dev/v3/script/core#concat"
+		"url": "https://www.weepower.com/v3/script/core#concat"
 	},
 	
 	{
 		"title": "$diff",
 		"description": "Generate a delta from two objects",
-		"url": "https://www.weepower.dev/v3/script/core#diff"
+		"url": "https://www.weepower.com/v3/script/core#diff"
 	},
 	
 	{
 		"title": "$drop",
 		"description": "Remove key or value from global array",
-		"url": "https://www.weepower.dev/v3/script/core#drop"
+		"url": "https://www.weepower.com/v3/script/core#drop"
 	},
 	
 	{
 		"title": "$each",
 		"description": "Execute function for each matching selection",
-		"url": "https://www.weepower.dev/v3/script/core#each"
+		"url": "https://www.weepower.com/v3/script/core#each"
 	},
 	
 	{
 		"title": "$env",
 		"description": "Get current environment or set current environment against specified object",
-		"url": "https://www.weepower.dev/v3/script/core#env"
+		"url": "https://www.weepower.com/v3/script/core#env"
 	},
 	
 	{
 		"title": "$envSecure",
 		"description": "Determine if the current environment is SSL encrypted",
-		"url": "https://www.weepower.dev/v3/script/core#envsecure"
+		"url": "https://www.weepower.com/v3/script/core#envsecure"
 	},
 	
 	{
 		"title": "$equals",
 		"description": "Compare two values for strict equality",
-		"url": "https://www.weepower.dev/v3/script/core#equals"
+		"url": "https://www.weepower.com/v3/script/core#equals"
 	},
 	
 	{
 		"title": "$exec",
 		"description": "Execute specified function or controller method",
-		"url": "https://www.weepower.dev/v3/script/core#exec"
+		"url": "https://www.weepower.com/v3/script/core#exec"
 	},
 	
 	{
 		"title": "$extend",
 		"description": "Extend target object with source object(s)",
-		"url": "https://www.weepower.dev/v3/script/core#extend"
+		"url": "https://www.weepower.com/v3/script/core#extend"
 	},
 	
 	{
 		"title": "$get",
 		"description": "Get global variable",
-		"url": "https://www.weepower.dev/v3/script/core#get"
+		"url": "https://www.weepower.com/v3/script/core#get"
 	},
 	
 	{
 		"title": "$has",
 		"description": "Check if storage criteria is set",
-		"url": "https://www.weepower.dev/v3/script/core#has"
+		"url": "https://www.weepower.com/v3/script/core#has"
 	},
 	
 	{
 		"title": "$isArray",
 		"description": "Determine if value is an array",
-		"url": "https://www.weepower.dev/v3/script/core#isarray"
+		"url": "https://www.weepower.com/v3/script/core#isarray"
 	},
 	
 	{
 		"title": "$isFunction",
 		"description": "Determine if value is a function",
-		"url": "https://www.weepower.dev/v3/script/core#isfunction"
+		"url": "https://www.weepower.com/v3/script/core#isfunction"
 	},
 	
 	{
 		"title": "$isObject",
 		"description": "Determine if value is an object",
-		"url": "https://www.weepower.dev/v3/script/core#isobject"
+		"url": "https://www.weepower.com/v3/script/core#isobject"
 	},
 	
 	{
 		"title": "$isString",
 		"description": "Determine if value is a string",
-		"url": "https://www.weepower.dev/v3/script/core#isstring"
+		"url": "https://www.weepower.com/v3/script/core#isstring"
 	},
 	
 	{
 		"title": "$map",
 		"description": "Translate items in an array or selection to new array",
-		"url": "https://www.weepower.dev/v3/script/core#map"
+		"url": "https://www.weepower.com/v3/script/core#map"
 	},
 	
 	{
 		"title": "$merge",
 		"description": "Extend object into global storage",
-		"url": "https://www.weepower.dev/v3/script/core#merge"
+		"url": "https://www.weepower.com/v3/script/core#merge"
 	},
 	
 	{
 		"title": "$observe",
 		"description": "Attach callback to data storage change",
-		"url": "https://www.weepower.dev/v3/script/core#observe"
+		"url": "https://www.weepower.com/v3/script/core#observe"
 	},
 	
 	{
 		"title": "$parseHTML",
 		"description": "Create document fragment from an HTML string",
-		"url": "https://www.weepower.dev/v3/script/core#parsehtml"
+		"url": "https://www.weepower.com/v3/script/core#parsehtml"
 	},
 	
 	{
 		"title": "$push",
 		"description": "Push value into global array",
-		"url": "https://www.weepower.dev/v3/script/core#push"
+		"url": "https://www.weepower.com/v3/script/core#push"
 	},
 	
 	{
 		"title": "$serialize",
 		"description": "Serialize object",
-		"url": "https://www.weepower.dev/v3/script/core#serialize"
+		"url": "https://www.weepower.com/v3/script/core#serialize"
 	},
 	
 	{
 		"title": "$set",
 		"description": "Set global variable",
-		"url": "https://www.weepower.dev/v3/script/core#set"
+		"url": "https://www.weepower.com/v3/script/core#set"
 	},
 	
 	{
 		"title": "$setRef",
 		"description": "Add ref elements to datastore",
-		"url": "https://www.weepower.dev/v3/script/core#setref"
+		"url": "https://www.weepower.com/v3/script/core#setref"
 	},
 	
 	{
 		"title": "$setVar",
 		"description": "Add metadata variables to datastore",
-		"url": "https://www.weepower.dev/v3/script/core#setvar"
+		"url": "https://www.weepower.com/v3/script/core#setvar"
 	},
 	
 	{
 		"title": "$toArray",
 		"description": "Cast value to array if it isn't one",
-		"url": "https://www.weepower.dev/v3/script/core#toarray"
+		"url": "https://www.weepower.com/v3/script/core#toarray"
 	},
 	
 	{
 		"title": "$trigger",
 		"description": "Execute matching observed callbacks",
-		"url": "https://www.weepower.dev/v3/script/core#trigger"
+		"url": "https://www.weepower.com/v3/script/core#trigger"
 	},
 	
 	{
 		"title": "$type",
 		"description": "Determine the JavaScript type of an object",
-		"url": "https://www.weepower.dev/v3/script/core#type"
+		"url": "https://www.weepower.com/v3/script/core#type"
 	},
 	
 	{
 		"title": "$unique",
 		"description": "Create new array with only unique values from source array",
-		"url": "https://www.weepower.dev/v3/script/core#unique"
+		"url": "https://www.weepower.com/v3/script/core#unique"
 	},
 	
 	{
 		"title": "$unobserve",
 		"description": "Remove callback from data storage change",
-		"url": "https://www.weepower.dev/v3/script/core#unobserve"
+		"url": "https://www.weepower.com/v3/script/core#unobserve"
 	},
 	
 	{
 		"title": "$unserialize",
 		"description": "Convert serialized string back into an object",
-		"url": "https://www.weepower.dev/v3/script/core#unserialize"
+		"url": "https://www.weepower.com/v3/script/core#unserialize"
 	},
 	
 	{
 		"title": "fn.extend",
 		"description": "Extend existing controller with additional methods and properties",
-		"url": "https://www.weepower.dev/v3/script/core#fn.extend"
+		"url": "https://www.weepower.com/v3/script/core#fn.extend"
 	},
 	
 	{
 		"title": "fn.make",
 		"description": "Create namespaced controller",
-		"url": "https://www.weepower.dev/v3/script/core#fn.make"
+		"url": "https://www.weepower.com/v3/script/core#fn.make"
 	},
 	
 	{
 		"title": "Core",
 		"description": "Foundation of utilities, helpers, and controller structure",
-		"url": "https://www.weepower.dev/v3/script/core"
+		"url": "https://www.weepower.com/v3/script/core"
 	},
 	
 	{
 		"title": "Ready",
 		"description": "Execute specified function when document is ready",
-		"url": "https://www.weepower.dev/v3/script/core#ready"
+		"url": "https://www.weepower.com/v3/script/core#ready"
 	},
 	
 	{
 		"title": "Data",
 		"description": "Data request and binding functions",
-		"url": "https://www.weepower.dev/v3/script/data"
+		"url": "https://www.weepower.com/v3/script/data"
 	},
 	
 	{
 		"title": "Request",
 		"description": "Make Ajax request based on specified options",
-		"url": "https://www.weepower.dev/v3/script/data#request"
+		"url": "https://www.weepower.com/v3/script/data#request"
 	},
 	
 	{
 		"title": "$addClass",
 		"description": "Add classes to each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#addclass"
+		"url": "https://www.weepower.com/v3/script/dom#addclass"
 	},
 	
 	{
 		"title": "$after",
 		"description": "Insert selection or markup after each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#after"
+		"url": "https://www.weepower.com/v3/script/dom#after"
 	},
 	
 	{
 		"title": "$append",
 		"description": "Append selection or markup after each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#append"
+		"url": "https://www.weepower.com/v3/script/dom#append"
 	},
 	
 	{
 		"title": "$attr",
 		"description": "Get attribute of first matching selection or set attribute of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#attr"
+		"url": "https://www.weepower.com/v3/script/dom#attr"
 	},
 	
 	{
 		"title": "$before",
 		"description": "Insert selection or markup before each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#before"
+		"url": "https://www.weepower.com/v3/script/dom#before"
 	},
 	
 	{
 		"title": "$children",
 		"description": "Get unique direct children of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#children"
+		"url": "https://www.weepower.com/v3/script/dom#children"
 	},
 	
 	{
 		"title": "$clone",
 		"description": "Clone each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#clone"
+		"url": "https://www.weepower.com/v3/script/dom#clone"
 	},
 	
 	{
 		"title": "$closest",
 		"description": "Get unique closest ancestors of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#closest"
+		"url": "https://www.weepower.com/v3/script/dom#closest"
 	},
 	
 	{
 		"title": "$contains",
 		"description": "Determine if any matching parent selection contains descendant selection",
-		"url": "https://www.weepower.dev/v3/script/dom#contains"
+		"url": "https://www.weepower.com/v3/script/dom#contains"
 	},
 	
 	{
 		"title": "$contents",
 		"description": "Get unique content of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#contents"
+		"url": "https://www.weepower.com/v3/script/dom#contents"
 	},
 	
 	{
 		"title": "$css",
 		"description": "Get CSS value of first matching selection or set value of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#css"
+		"url": "https://www.weepower.com/v3/script/dom#css"
 	},
 	
 	{
 		"title": "$data",
 		"description": "Get data of first matching selection or set data of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#data"
+		"url": "https://www.weepower.com/v3/script/dom#data"
 	},
 	
 	{
 		"title": "$empty",
 		"description": "Remove child nodes from each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#empty"
+		"url": "https://www.weepower.com/v3/script/dom#empty"
 	},
 	
 	{
 		"title": "$eq",
 		"description": "Get indexed node of matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#eq"
+		"url": "https://www.weepower.com/v3/script/dom#eq"
 	},
 	
 	{
 		"title": "$filter",
 		"description": "Return a filtered subset of elements from a matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#filter"
+		"url": "https://www.weepower.com/v3/script/dom#filter"
 	},
 	
 	{
 		"title": "$find",
 		"description": "Get unique filtered descendants from each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#find"
+		"url": "https://www.weepower.com/v3/script/dom#find"
 	},
 	
 	{
 		"title": "$first",
 		"description": "Get the first element of a matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#first"
+		"url": "https://www.weepower.com/v3/script/dom#first"
 	},
 	
 	{
 		"title": "$hasClass",
 		"description": "Determine if the matching selection has a class",
-		"url": "https://www.weepower.dev/v3/script/dom#hasclass"
+		"url": "https://www.weepower.com/v3/script/dom#hasclass"
 	},
 	
 	{
 		"title": "$height",
 		"description": "Get or set the height of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#height"
+		"url": "https://www.weepower.com/v3/script/dom#height"
 	},
 	
 	{
 		"title": "$hide",
 		"description": "Hide each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#hide"
+		"url": "https://www.weepower.com/v3/script/dom#hide"
 	},
 	
 	{
 		"title": "$html",
 		"description": "Get inner HTML of first selection or set each matching selection's HTML",
-		"url": "https://www.weepower.dev/v3/script/dom#html"
+		"url": "https://www.weepower.com/v3/script/dom#html"
 	},
 	
 	{
 		"title": "$index",
 		"description": "Get the zero-based index of a matching selection relative to it's siblings",
-		"url": "https://www.weepower.dev/v3/script/dom#index"
+		"url": "https://www.weepower.com/v3/script/dom#index"
 	},
 	
 	{
 		"title": "$insertAfter",
 		"description": "Insert each matching source selection element after each matching target selection",
-		"url": "https://www.weepower.dev/v3/script/dom#insertafter"
+		"url": "https://www.weepower.com/v3/script/dom#insertafter"
 	},
 	
 	{
 		"title": "$insertBefore",
 		"description": "Insert each matching source selection element before each matching target selection",
-		"url": "https://www.weepower.dev/v3/script/dom#insertbefore"
+		"url": "https://www.weepower.com/v3/script/dom#insertbefore"
 	},
 	
 	{
 		"title": "$is",
 		"description": "Determine if at least one matching selection matches a specified criteria",
-		"url": "https://www.weepower.dev/v3/script/dom#is"
+		"url": "https://www.weepower.com/v3/script/dom#is"
 	},
 	
 	{
 		"title": "$last",
 		"description": "Get the last element of a matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#last"
+		"url": "https://www.weepower.com/v3/script/dom#last"
 	},
 	
 	{
 		"title": "$next",
 		"description": "Get the unique next sibling of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#next"
+		"url": "https://www.weepower.com/v3/script/dom#next"
 	},
 	
 	{
 		"title": "$not",
 		"description": "Returns elements not matching the filtered selection",
-		"url": "https://www.weepower.dev/v3/script/dom#not"
+		"url": "https://www.weepower.com/v3/script/dom#not"
 	},
 	
 	{
 		"title": "$offset",
 		"description": "Get the offset position of a matching selection relative to the document",
-		"url": "https://www.weepower.dev/v3/script/dom#offset"
+		"url": "https://www.weepower.com/v3/script/dom#offset"
 	},
 	
 	{
 		"title": "$parent",
 		"description": "Get unique parent from each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#parent"
+		"url": "https://www.weepower.com/v3/script/dom#parent"
 	},
 	
 	{
 		"title": "$parents",
 		"description": "Get unique ancestors of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#parents"
+		"url": "https://www.weepower.com/v3/script/dom#parents"
 	},
 	
 	{
 		"title": "$position",
 		"description": "Get the position of the first matching selection relative to its offset parent",
-		"url": "https://www.weepower.dev/v3/script/dom#position"
+		"url": "https://www.weepower.com/v3/script/dom#position"
 	},
 	
 	{
 		"title": "$prepend",
 		"description": "Prepend selection or markup before each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#prepend"
+		"url": "https://www.weepower.com/v3/script/dom#prepend"
 	},
 	
 	{
 		"title": "$prev",
 		"description": "Get the unique previous sibling of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#prev"
+		"url": "https://www.weepower.com/v3/script/dom#prev"
 	},
 	
 	{
 		"title": "$prop",
 		"description": "Get property of first matching selection or set property of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#prop"
+		"url": "https://www.weepower.com/v3/script/dom#prop"
 	},
 	
 	{
 		"title": "$remove",
 		"description": "Remove each matching selection from the document",
-		"url": "https://www.weepower.dev/v3/script/dom#remove"
+		"url": "https://www.weepower.com/v3/script/dom#remove"
 	},
 	
 	{
 		"title": "$removeAttr",
 		"description": "Remove specified attribute of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#removeattr"
+		"url": "https://www.weepower.com/v3/script/dom#removeattr"
 	},
 	
 	{
 		"title": "$removeClass",
 		"description": "Remove classes from each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#removeclass"
+		"url": "https://www.weepower.com/v3/script/dom#removeclass"
 	},
 	
 	{
 		"title": "$replaceWith",
 		"description": "Replace each matching selection with selection or markup",
-		"url": "https://www.weepower.dev/v3/script/dom#replacewith"
+		"url": "https://www.weepower.com/v3/script/dom#replacewith"
 	},
 	
 	{
 		"title": "$scrollLeft",
 		"description": "Get or set the X scroll position of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#scrollleft"
+		"url": "https://www.weepower.com/v3/script/dom#scrollleft"
 	},
 	
 	{
 		"title": "$scrollTop",
 		"description": "Get or set the Y scroll position of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#scrolltop"
+		"url": "https://www.weepower.com/v3/script/dom#scrolltop"
 	},
 	
 	{
 		"title": "$serializeForm",
 		"description": "Serialize input values from first matching form selection",
-		"url": "https://www.weepower.dev/v3/script/dom#serializeform"
+		"url": "https://www.weepower.com/v3/script/dom#serializeform"
 	},
 	
 	{
 		"title": "$show",
 		"description": "Show each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#show"
+		"url": "https://www.weepower.com/v3/script/dom#show"
 	},
 	
 	{
 		"title": "$siblings",
 		"description": "Get unique siblings of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#siblings"
+		"url": "https://www.weepower.com/v3/script/dom#siblings"
 	},
 	
 	{
 		"title": "$slice",
 		"description": "Get subset of selection matches from specified range",
-		"url": "https://www.weepower.dev/v3/script/dom#slice"
+		"url": "https://www.weepower.com/v3/script/dom#slice"
 	},
 	
 	{
 		"title": "$text",
 		"description": "Get inner text of first selection or set each matching selection's text",
-		"url": "https://www.weepower.dev/v3/script/dom#text"
+		"url": "https://www.weepower.com/v3/script/dom#text"
 	},
 	
 	{
 		"title": "$toggle",
 		"description": "Toggle the display of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#toggle"
+		"url": "https://www.weepower.com/v3/script/dom#toggle"
 	},
 	
 	{
 		"title": "$toggleClass",
 		"description": "Toggle adding and removing class(es) from the specified element",
-		"url": "https://www.weepower.dev/v3/script/dom#toggleclass"
+		"url": "https://www.weepower.com/v3/script/dom#toggleclass"
 	},
 	
 	{
 		"title": "$val",
 		"description": "Get value of first matching selection or set values of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#val"
+		"url": "https://www.weepower.com/v3/script/dom#val"
 	},
 	
 	{
 		"title": "$width",
 		"description": "Get or set the width of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#width"
+		"url": "https://www.weepower.com/v3/script/dom#width"
 	},
 	
 	{
 		"title": "$wrap",
 		"description": "Wrap markup around each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#wrap"
+		"url": "https://www.weepower.com/v3/script/dom#wrap"
 	},
 	
 	{
 		"title": "$wrapInner",
 		"description": "Wrap markup around the content of each matching selection",
-		"url": "https://www.weepower.dev/v3/script/dom#wrapinner"
+		"url": "https://www.weepower.com/v3/script/dom#wrapinner"
 	},
 	
 	{
 		"title": "DOM",
 		"description": "Easily interface with the DOM for updates and retrieval",
-		"url": "https://www.weepower.dev/v3/script/dom"
+		"url": "https://www.weepower.com/v3/script/dom"
 	},
 	
 	{
 		"title": "addEvent",
 		"description": "Add a custom event",
-		"url": "https://www.weepower.dev/v3/script/events#addevent"
+		"url": "https://www.weepower.com/v3/script/events#addevent"
 	},
 	
 	{
 		"title": "Bound",
 		"description": "Get currently bound events to optional specified element, event, and function",
-		"url": "https://www.weepower.dev/v3/script/events#bound"
+		"url": "https://www.weepower.com/v3/script/events#bound"
 	},
 	
 	{
 		"title": "Events",
 		"description": "Event binding to attach functionality to elements",
-		"url": "https://www.weepower.dev/v3/script/events"
+		"url": "https://www.weepower.com/v3/script/events"
 	},
 	
 	{
 		"title": "Off",
 		"description": "Remove specified function to specified element and optional event and function",
-		"url": "https://www.weepower.dev/v3/script/events#off"
+		"url": "https://www.weepower.com/v3/script/events#off"
 	},
 	
 	{
 		"title": "On",
 		"description": "Bind specified function to specified element and event",
-		"url": "https://www.weepower.dev/v3/script/events#on"
+		"url": "https://www.weepower.com/v3/script/events#on"
 	},
 	
 	{
 		"title": "Touch",
 		"description": "Standard swipe events are available out of the box",
-		"url": "https://www.weepower.dev/v3/script/events#touch"
+		"url": "https://www.weepower.com/v3/script/events#touch"
 	},
 	
 	{
 		"title": "Trigger",
 		"description": "Execute event for each matching selection",
-		"url": "https://www.weepower.dev/v3/script/events#trigger"
+		"url": "https://www.weepower.com/v3/script/events#trigger"
 	},
 	
 	{
 		"title": "Functions",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script#functions"
+		"url": "https://www.weepower.com/v3/script#functions"
 	},
 	
 	{
 		"title": "Globals",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script#globals"
+		"url": "https://www.weepower.com/v3/script#globals"
 	},
 	
 	{
 		"title": "Bind",
 		"description": "Bind element events and form submit events to PJAX",
-		"url": "https://www.weepower.dev/v3/script/history#bind"
+		"url": "https://www.weepower.com/v3/script/history#bind"
 	},
 	
 	{
 		"title": "Go",
 		"description": "Navigate to a new path or within the browser history",
-		"url": "https://www.weepower.dev/v3/script/history#go"
+		"url": "https://www.weepower.com/v3/script/history#go"
 	},
 	
 	{
 		"title": "Init",
 		"description": "Set the initial state and popstate event, and bind global actions",
-		"url": "https://www.weepower.dev/v3/script/history#init"
+		"url": "https://www.weepower.com/v3/script/history#init"
 	},
 	
 	{
 		"title": "History",
 		"description": "HTML5 history and PJAX helper to create dynamic experiences",
-		"url": "https://www.weepower.dev/v3/script/history"
+		"url": "https://www.weepower.com/v3/script/history"
 	},
 	
 	{
 		"title": "Script",
 		"description": "Simple APIs to interact with the DOM and organize your logic",
-		"url": "https://www.weepower.dev/v3/script"
+		"url": "https://www.weepower.com/v3/script"
 	},
 	
 	{
 		"title": "Polyfills",
 		"description": "Patching legacy IE JavaScript support",
-		"url": "https://www.weepower.dev/v3/script/polyfills"
+		"url": "https://www.weepower.com/v3/script/polyfills"
 	},
 	
 	{
 		"title": "Placeholder",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/polyfills#placeholder"
+		"url": "https://www.weepower.com/v3/script/polyfills#placeholder"
 	},
 	
 	{
 		"title": "Slice",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/polyfills#slice"
+		"url": "https://www.weepower.com/v3/script/polyfills#slice"
 	},
 	
 	{
 		"title": "addFilter",
 		"description": "Add conditional route filter",
-		"url": "https://www.weepower.dev/v3/script/routes#addfilter"
+		"url": "https://www.weepower.com/v3/script/routes#addfilter"
 	},
 	
 	{
 		"title": "Routes",
 		"description": "Associate request endpoints to callbacks",
-		"url": "https://www.weepower.dev/v3/script/routes"
+		"url": "https://www.weepower.com/v3/script/routes"
 	},
 	
 	{
 		"title": "Map",
 		"description": "Retrieve or add route endpoints to route storage",
-		"url": "https://www.weepower.dev/v3/script/routes#map"
+		"url": "https://www.weepower.com/v3/script/routes#map"
 	},
 	
 	{
 		"title": "Run",
 		"description": "Process stored route options with optional config",
-		"url": "https://www.weepower.dev/v3/script/routes#run"
+		"url": "https://www.weepower.com/v3/script/routes#run"
 	},
 	
 	{
 		"title": "Segments",
 		"description": "Get all segments or single segment at index",
-		"url": "https://www.weepower.dev/v3/script/routes#segments"
+		"url": "https://www.weepower.com/v3/script/routes#segments"
 	},
 	
 	{
 		"title": "URI",
 		"description": "Get currently bound URI values or set URI data with a specified string or value object",
-		"url": "https://www.weepower.dev/v3/script/routes#uri"
+		"url": "https://www.weepower.com/v3/script/routes#uri"
 	},
 	
 	{
 		"title": "Screen",
 		"description": "Attach events to matching breakpoint rules",
-		"url": "https://www.weepower.dev/v3/script/screen"
+		"url": "https://www.weepower.com/v3/script/screen"
 	},
 	
 	{
 		"title": "Map",
 		"description": "Watch single or set of screen events with specified options",
-		"url": "https://www.weepower.dev/v3/script/screen#map"
+		"url": "https://www.weepower.com/v3/script/screen#map"
 	},
 	
 	{
 		"title": "Reset",
 		"description": "Reset all bound events",
-		"url": "https://www.weepower.dev/v3/script/screen#reset"
+		"url": "https://www.weepower.com/v3/script/screen#reset"
 	},
 	
 	{
 		"title": "Run",
 		"description": "Evaluate the current breakpoint",
-		"url": "https://www.weepower.dev/v3/script/screen#run"
+		"url": "https://www.weepower.com/v3/script/screen#run"
 	},
 	
 	{
 		"title": "Size",
 		"description": "Get current screen value",
-		"url": "https://www.weepower.dev/v3/script/screen#size"
+		"url": "https://www.weepower.com/v3/script/screen#size"
 	},
 	
 	{
 		"title": "Values",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script/screen#values"
+		"url": "https://www.weepower.com/v3/script/screen#values"
 	},
 	
 	{
 		"title": "Selection",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/script#selection"
+		"url": "https://www.weepower.com/v3/script#selection"
 	},
 	
 	{
 		"title": "addView",
 		"description": "Add views to store for on-demand reference",
-		"url": "https://www.weepower.dev/v3/script/view#addview"
+		"url": "https://www.weepower.com/v3/script/view#addview"
 	},
 	
 	{
 		"title": "App",
 		"description": "Create dynamic data-driven interfaces",
-		"url": "https://www.weepower.dev/v3/script/view#app"
+		"url": "https://www.weepower.com/v3/script/view#app"
 	},
 	
 	{
 		"title": "Helpers",
 		"description": "Add helper to run additional processing on tag data",
-		"url": "https://www.weepower.dev/v3/script/view#helpers"
+		"url": "https://www.weepower.com/v3/script/view#helpers"
 	},
 	
 	{
 		"title": "View",
 		"description": "Powerful template rendering engine for dynamic data",
-		"url": "https://www.weepower.dev/v3/script/view"
+		"url": "https://www.weepower.com/v3/script/view"
 	},
 	
 	{
 		"title": "Render",
 		"description": "Parse data into template string",
-		"url": "https://www.weepower.dev/v3/script/view#render"
+		"url": "https://www.weepower.com/v3/script/view#render"
 	},
 	
 	{
 		"title": "Compatibility",
 		"description": "Wee officially supports the following minimum browser versions",
-		"url": "https://www.weepower.dev/v3/start#compatibility"
+		"url": "https://www.weepower.com/v3/start#compatibility"
 	},
 	
 	{
 		"title": "Features",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start#features"
+		"url": "https://www.weepower.com/v3/start#features"
 	},
 	
 	{
 		"title": "Get Started",
 		"description": "Methodically build complex, responsive web projects",
-		"url": "https://www.weepower.dev/v3/start"
+		"url": "https://www.weepower.com/v3/start"
 	},
 	
 	{
 		"title": "ARIA",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/markup#aria"
+		"url": "https://www.weepower.com/v3/start/markup#aria"
 	},
 	
 	{
 		"title": "Doctype",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/markup#doctype"
+		"url": "https://www.weepower.com/v3/start/markup#doctype"
 	},
 	
 	{
 		"title": "Icons",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/markup#icons"
+		"url": "https://www.weepower.com/v3/start/markup#icons"
 	},
 	
 	{
 		"title": "Markup",
 		"description": "An example of responsible HTML development",
-		"url": "https://www.weepower.dev/v3/start/markup"
+		"url": "https://www.weepower.com/v3/start/markup"
 	},
 	
 	{
 		"title": "Legacy",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/markup#legacy"
+		"url": "https://www.weepower.com/v3/start/markup#legacy"
 	},
 	
 	{
 		"title": "Meta",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/markup#meta"
+		"url": "https://www.weepower.com/v3/start/markup#meta"
 	},
 	
 	{
 		"title": "Open Graph",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/markup#opengraph"
+		"url": "https://www.weepower.com/v3/start/markup#opengraph"
 	},
 	
 	{
 		"title": "Publisher",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/markup#publisher"
+		"url": "https://www.weepower.com/v3/start/markup#publisher"
 	},
 	
 	{
 		"title": "Schema",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/markup#schema"
+		"url": "https://www.weepower.com/v3/start/markup#schema"
 	},
 	
 	{
 		"title": "Twitter Cards",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/markup#twitter"
+		"url": "https://www.weepower.com/v3/start/markup#twitter"
 	},
 	
 	{
 		"title": "Prerequisites",
 		"description": "There are a couple tools you'll need to build a project",
-		"url": "https://www.weepower.dev/v3/start#prerequisites"
+		"url": "https://www.weepower.com/v3/start#prerequisites"
 	},
 	
 	{
 		"title": "Setup",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start#setup"
+		"url": "https://www.weepower.com/v3/start#setup"
 	},
 	
 	{
 		"title": "browserconfig",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/structure#browserconfig"
+		"url": "https://www.weepower.com/v3/start/structure#browserconfig"
 	},
 	
 	{
 		"title": "Files",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/structure#files"
+		"url": "https://www.weepower.com/v3/start/structure#files"
 	},
 	
 	{
 		"title": "htaccess",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/structure#htaccess"
+		"url": "https://www.weepower.com/v3/start/structure#htaccess"
 	},
 	
 	{
 		"title": "humans",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/structure#humans"
+		"url": "https://www.weepower.com/v3/start/structure#humans"
 	},
 	
 	{
 		"title": "Structure",
 		"description": "Simple organization that's easy to navigate and extend",
-		"url": "https://www.weepower.dev/v3/start/structure"
+		"url": "https://www.weepower.com/v3/start/structure"
 	},
 	
 	{
 		"title": "robots",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/start/structure#robots"
+		"url": "https://www.weepower.com/v3/start/structure#robots"
 	},
 	
 	{
 		"title": "Container",
 		"description": "Create a centered container based on @minWidth, @maxWidth, and @padContainer",
-		"url": "https://www.weepower.dev/v3/style/classes#container"
+		"url": "https://www.weepower.com/v3/style/classes#container"
 	},
 	
 	{
 		"title": "JS Hide",
 		"description": "Used by the core Wee script to toggle visibility",
-		"url": "https://www.weepower.dev/v3/style/classes#hide"
+		"url": "https://www.weepower.com/v3/style/classes#hide"
 	},
 	
 	{
 		"title": "Image Align",
 		"description": "Perfect for alignment of images in content blocks",
-		"url": "https://www.weepower.dev/v3/style/classes#images"
+		"url": "https://www.weepower.com/v3/style/classes#images"
 	},
 	
 	{
 		"title": "Classes",
 		"description": "A handful of time-saving helper classes",
-		"url": "https://www.weepower.dev/v3/style/classes"
+		"url": "https://www.weepower.com/v3/style/classes"
 	},
 	
 	{
 		"title": "Not Printed",
 		"description": "If print styling is enabled exclude elements from being printed",
-		"url": "https://www.weepower.dev/v3/style/classes#not-printed"
+		"url": "https://www.weepower.com/v3/style/classes#not-printed"
 	},
 	
 	{
 		"title": "Style",
 		"description": "Normalize your styling with Wee's mixin library",
-		"url": "https://www.weepower.dev/v3/style"
+		"url": "https://www.weepower.com/v3/style"
 	},
 	
 	{
 		"title": "Alignment",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#alignment"
+		"url": "https://www.weepower.com/v3/style/mixins#alignment"
 	},
 	
 	{
 		"title": "Animation",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#animation"
+		"url": "https://www.weepower.com/v3/style/mixins#animation"
 	},
 	
 	{
 		"title": "Backgrounds",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#backgrounds"
+		"url": "https://www.weepower.com/v3/style/mixins#backgrounds"
 	},
 	
 	{
 		"title": "Blocks",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#blocks"
+		"url": "https://www.weepower.com/v3/style/mixins#blocks"
 	},
 	
 	{
 		"title": "Borders",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#borders"
+		"url": "https://www.weepower.com/v3/style/mixins#borders"
 	},
 	
 	{
 		"title": "Box Shadows",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#box-shadows"
+		"url": "https://www.weepower.com/v3/style/mixins#box-shadows"
 	},
 	
 	{
 		"title": "Colors",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#colors"
+		"url": "https://www.weepower.com/v3/style/mixins#colors"
 	},
 	
 	{
 		"title": "Content",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#content"
+		"url": "https://www.weepower.com/v3/style/mixins#content"
 	},
 	
 	{
 		"title": "Display",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#display"
+		"url": "https://www.weepower.com/v3/style/mixins#display"
 	},
 	
 	{
 		"title": "Filters",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#filters"
+		"url": "https://www.weepower.com/v3/style/mixins#filters"
 	},
 	
 	{
 		"title": "Font Family",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#font-family"
+		"url": "https://www.weepower.com/v3/style/mixins#font-family"
 	},
 	
 	{
 		"title": "Font Loading",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#font-loading"
+		"url": "https://www.weepower.com/v3/style/mixins#font-loading"
 	},
 	
 	{
 		"title": "Font Selection",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#font-selection"
+		"url": "https://www.weepower.com/v3/style/mixins#font-selection"
 	},
 	
 	{
 		"title": "Font Size",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#font-size"
+		"url": "https://www.weepower.com/v3/style/mixins#font-size"
 	},
 	
 	{
 		"title": "Font Style",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#font-style"
+		"url": "https://www.weepower.com/v3/style/mixins#font-style"
 	},
 	
 	{
 		"title": "Font Weight",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#font-weight"
+		"url": "https://www.weepower.com/v3/style/mixins#font-weight"
 	},
 	
 	{
 		"title": "Forms",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#forms"
+		"url": "https://www.weepower.com/v3/style/mixins#forms"
 	},
 	
 	{
 		"title": "Grid",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#grid"
+		"url": "https://www.weepower.com/v3/style/mixins#grid"
 	},
 	
 	{
 		"title": "Inline Grid",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#inline-grid"
+		"url": "https://www.weepower.com/v3/style/mixins#inline-grid"
 	},
 	
 	{
 		"title": "Mixins",
 		"description": "Shortcuts to save you time and make your code more readable",
-		"url": "https://www.weepower.dev/v3/style/mixins"
+		"url": "https://www.weepower.com/v3/style/mixins"
 	},
 	
 	{
 		"title": "Line Height",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#line-height"
+		"url": "https://www.weepower.com/v3/style/mixins#line-height"
 	},
 	
 	{
 		"title": "Lists",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#lists"
+		"url": "https://www.weepower.com/v3/style/mixins#lists"
 	},
 	
 	{
 		"title": "Margin",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#margin"
+		"url": "https://www.weepower.com/v3/style/mixins#margin"
 	},
 	
 	{
 		"title": "Multiple Columns",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#multiple-columns"
+		"url": "https://www.weepower.com/v3/style/mixins#multiple-columns"
 	},
 	
 	{
 		"title": "Opacity",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#opacity"
+		"url": "https://www.weepower.com/v3/style/mixins#opacity"
 	},
 	
 	{
 		"title": "Other",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#other"
+		"url": "https://www.weepower.com/v3/style/mixins#other"
 	},
 	
 	{
 		"title": "Padding",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#padding"
+		"url": "https://www.weepower.com/v3/style/mixins#padding"
 	},
 	
 	{
 		"title": "Position",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#position"
+		"url": "https://www.weepower.com/v3/style/mixins#position"
 	},
 	
 	{
 		"title": "Responsive",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#responsive"
+		"url": "https://www.weepower.com/v3/style/mixins#responsive"
 	},
 	
 	{
 		"title": "Rounded Corners",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#rounded-corners"
+		"url": "https://www.weepower.com/v3/style/mixins#rounded-corners"
 	},
 	
 	{
 		"title": "Shapes",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#shapes"
+		"url": "https://www.weepower.com/v3/style/mixins#shapes"
 	},
 	
 	{
 		"title": "Sizing",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#sizing"
+		"url": "https://www.weepower.com/v3/style/mixins#sizing"
 	},
 	
 	{
 		"title": "SVG",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#svg"
+		"url": "https://www.weepower.com/v3/style/mixins#svg"
 	},
 	
 	{
 		"title": "Tables",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#tables"
+		"url": "https://www.weepower.com/v3/style/mixins#tables"
 	},
 	
 	{
 		"title": "Text Shadows",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#text-shadows"
+		"url": "https://www.weepower.com/v3/style/mixins#text-shadows"
 	},
 	
 	{
 		"title": "Text Styling",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#text-styling"
+		"url": "https://www.weepower.com/v3/style/mixins#text-styling"
 	},
 	
 	{
 		"title": "Transforms",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#transforms"
+		"url": "https://www.weepower.com/v3/style/mixins#transforms"
 	},
 	
 	{
 		"title": "Transitions",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/mixins#transitions"
+		"url": "https://www.weepower.com/v3/style/mixins#transitions"
 	},
 	
 	{
 		"title": "Print",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style#print"
+		"url": "https://www.weepower.com/v3/style#print"
 	},
 	
 	{
 		"title": "Reset",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style#reset"
+		"url": "https://www.weepower.com/v3/style#reset"
 	},
 	
 	{
 		"title": "Address",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#address"
+		"url": "https://www.weepower.com/v3/style/styling#address"
 	},
 	
 	{
 		"title": "Blockquote",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#blockquote"
+		"url": "https://www.weepower.com/v3/style/styling#blockquote"
 	},
 	
 	{
 		"title": "Buttons",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#buttons"
+		"url": "https://www.weepower.com/v3/style/styling#buttons"
 	},
 	
 	{
 		"title": "Code",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#code"
+		"url": "https://www.weepower.com/v3/style/styling#code"
 	},
 	
 	{
 		"title": "Description List",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#description-list"
+		"url": "https://www.weepower.com/v3/style/styling#description-list"
 	},
 	
 	{
 		"title": "Figure",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#figure"
+		"url": "https://www.weepower.com/v3/style/styling#figure"
 	},
 	
 	{
 		"title": "Headings",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#headings"
+		"url": "https://www.weepower.com/v3/style/styling#headings"
 	},
 	
 	{
 		"title": "Inline",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#inline"
+		"url": "https://www.weepower.com/v3/style/styling#inline"
 	},
 	
 	{
 		"title": "Inputs",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#inputs"
+		"url": "https://www.weepower.com/v3/style/styling#inputs"
 	},
 	
 	{
 		"title": "Styling",
 		"description": "Highly configurable default element styling",
-		"url": "https://www.weepower.dev/v3/style/styling"
+		"url": "https://www.weepower.com/v3/style/styling"
 	},
 	
 	{
 		"title": "Ordered List",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#ordered-list"
+		"url": "https://www.weepower.com/v3/style/styling#ordered-list"
 	},
 	
 	{
 		"title": "Paragraph",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#paragraph"
+		"url": "https://www.weepower.com/v3/style/styling#paragraph"
 	},
 	
 	{
 		"title": "Selects",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#selects"
+		"url": "https://www.weepower.com/v3/style/styling#selects"
 	},
 	
 	{
 		"title": "Table",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#table"
+		"url": "https://www.weepower.com/v3/style/styling#table"
 	},
 	
 	{
 		"title": "Unordered List",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/styling#unordered-list"
+		"url": "https://www.weepower.com/v3/style/styling#unordered-list"
 	},
 	
 	{
 		"title": "Addresses",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#addresses"
+		"url": "https://www.weepower.com/v3/style/variables#addresses"
 	},
 	
 	{
 		"title": "Base",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#base"
+		"url": "https://www.weepower.com/v3/style/variables#base"
 	},
 	
 	{
 		"title": "Buttons",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#buttons"
+		"url": "https://www.weepower.com/v3/style/variables#buttons"
 	},
 	
 	{
 		"title": "Code",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#code"
+		"url": "https://www.weepower.com/v3/style/variables#code"
 	},
 	
 	{
 		"title": "Colors",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#colors"
+		"url": "https://www.weepower.com/v3/style/variables#colors"
 	},
 	
 	{
 		"title": "Fonts",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#fonts"
+		"url": "https://www.weepower.com/v3/style/variables#fonts"
 	},
 	
 	{
 		"title": "Forms",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#forms"
+		"url": "https://www.weepower.com/v3/style/variables#forms"
 	},
 	
 	{
 		"title": "Grayscale",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#grayscale"
+		"url": "https://www.weepower.com/v3/style/variables#grayscale"
 	},
 	
 	{
 		"title": "Headings",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#headings"
+		"url": "https://www.weepower.com/v3/style/variables#headings"
 	},
 	
 	{
 		"title": "Horizontal Rules",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#horizontal-rules"
+		"url": "https://www.weepower.com/v3/style/variables#horizontal-rules"
 	},
 	
 	{
 		"title": "Images",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#images"
+		"url": "https://www.weepower.com/v3/style/variables#images"
 	},
 	
 	{
 		"title": "Variables",
 		"description": "Configuration for every aspect of your styling baseline",
-		"url": "https://www.weepower.dev/v3/style/variables"
+		"url": "https://www.weepower.com/v3/style/variables"
 	},
 	
 	{
 		"title": "Layout",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#layout"
+		"url": "https://www.weepower.com/v3/style/variables#layout"
 	},
 	
 	{
 		"title": "Links",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#links"
+		"url": "https://www.weepower.com/v3/style/variables#links"
 	},
 	
 	{
 		"title": "Lists",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#lists"
+		"url": "https://www.weepower.com/v3/style/variables#lists"
 	},
 	
 	{
 		"title": "Miscellaneous",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#miscellaneous"
+		"url": "https://www.weepower.com/v3/style/variables#miscellaneous"
 	},
 	
 	{
 		"title": "Paragraphs",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#paragraphs"
+		"url": "https://www.weepower.com/v3/style/variables#paragraphs"
 	},
 	
 	{
 		"title": "Print",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#print"
+		"url": "https://www.weepower.com/v3/style/variables#print"
 	},
 	
 	{
 		"title": "Quotes",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#quotes"
+		"url": "https://www.weepower.com/v3/style/variables#quotes"
 	},
 	
 	{
 		"title": "Tables",
 		"description": "",
-		"url": "https://www.weepower.dev/v3/style/variables#tables"
+		"url": "https://www.weepower.com/v3/style/variables#tables"
 	}
 	
 ]

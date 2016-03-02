@@ -36,7 +36,7 @@ Wee.animate.tween('ref:element', {
 }, {
 	duration: 500,
 	ease: 'linear',
-	completed: function() {
+	complete: function() {
 		// Complete logic
 	}
 });
