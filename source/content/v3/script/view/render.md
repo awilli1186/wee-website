@@ -62,7 +62,7 @@ Wee.view.render(template, data);
 "Charlie's dad is Jimmy and his grandad is John."
 ```
 
----code|type:string|modifier:stacked|label:Functions---
+---code|type:string|modifier:stacked|label:Helpers---
    
 ```javascript
 var template = '{{ #! }}My name is {{ firstName }}{{ #lastName|notEmpty }} {{ lastName }}{{ /lastName }}{{ /! }}',
@@ -79,6 +79,13 @@ Wee.view.render(template, data);
 ```
 
 ---code|type:string|modifier:stacked|label:Loop Variables---
+
+Within tag pairs there are a handful of variables made available automatically.
+
+* {{ #! }}{{ $key }}{{ /! }} - The key when iterating over an object
+* {{ #! }}{{ . }}{{ /! }} - The single currently iterated value
+* {{ #! }}{{ # }}{{ /! }} - Zero-based loop index
+* {{ #! }}{{ ## }}{{ /! }} - One-based loop index
 
 ```javascript
 var template = '{{ #! }}{{ #names }}{{ # }} | {{ ## }} | {{ . }} | {{ $key }}<br>{{ /names }}{{ /! }}',
@@ -99,65 +106,6 @@ Wee.view.render(template, data);
 1 | 2 | 42 | Jane<br>
 2 | 3 | 18 | Jimmy<br>
 3 | 4 | 15 | Jenny<br>
-```
-
----code|type:string|modifier:stacked|label:Functions---
-
-Functions can also be set in the data object. See the example below.
-
-```javascript
-var data = {
-	firstName: 'John',
-	lastName: 'Doe',
-	pets: true,
-	dogs: [
-		'Molly',
-		'Ginger',
-		'Keith'
-	],
-	cats: [
-		'Napoleon'
-	],
-	sister: {
-		firstName: 'Jessica'
-	}
-};
-```
-
-```javascript
-data.petCount = function(data, obj, index) {
-	return data.dogs.length + data.cats.length;
-};
-```
-
-```javascript
-data.petName = function(data, obj, index) {
-	var resp = '';
-
-	if ((index + 1) === obj.dogs.length) {
-		resp = ' and ';
-	} else if (index > 0) {
-		resp = ', ';
-	}
-
-	resp += obj.dogs[index];
-
-	return resp;
-};
-```
-
-```javascript
-var template = '{{ #! }}My name is {{ firstName }}{{ #lastName|notEmpty }} {{ lastName }}{{ /lastName }}. ' +
-	'{{ #pets|notEmpty }}' +
-	'I have had {{ petCount }} pets. My dogs names are {{ #dogs }}{{ $root.petName }}{{ /dogs }}. ' +
-	'I have a sister {{ sister.firstName }}.' +
-	'{{ /pets }}{{ /! }}';
-
-Wee.view.render(template, data);
-```
-
-```javascript
-"My name is John Doe. I have had 4 pets. My dogs names are Molly, Ginger and Keith. I have a sister Jessica."
 ```
 
 ---code|type:string|modifier:stacked|label:Advanced---
