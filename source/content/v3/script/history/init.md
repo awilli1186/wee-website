@@ -64,7 +64,7 @@ options.request.send();
 ```
 
 ```javascript
-options.request.success(xhr);
+options.request.success(data);
 ```
 
 ```javascript
