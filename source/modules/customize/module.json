@@ -9,12 +9,12 @@
 
 	},
 	"style": {
-
+		
 	},
 	"script": {
 
 	},
 	"dependencies": {
-		"wee": "^2.3.0"
+		"wee": "^3.2.1"
 	}
 }
