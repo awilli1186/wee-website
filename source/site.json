@@ -43,6 +43,14 @@
 		"jsLegacyVersion": 11
 	},
 	"sections": {
+		"customize": {
+			"name": "Customize",
+			"data": {
+				"excludeNav": true
+			},
+			"template": "customize.html",
+			"target": "customize.html"
+		},
 		"search": {
 			"name": "Search",
 			"data": {

@@ -20,9 +20,7 @@ $.routes.map({
 	'blog': {
 		'$slug': 'blog'
 	},
-	'style': {
-		'customize': 'customize'
-	}
+	'customize': 'customize'
 });
 
 $.ready('routes:run');

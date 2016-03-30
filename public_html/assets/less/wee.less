@@ -1,0 +1,41 @@
+@import (reference) '../less/wee.variables.less'; // Core configuration
+@import '../less/wee.reset.less';                 // Reset
+.wee-reset();
+@import '../less/wee.mixins.less';                // Mixins
+
+// Inject imports
+@import "../less/components/wee.code.less";
+@import "../less/components/wee.forms.less";
+@import "../less/components/wee.buttons.less";
+@import "../less/components/wee.tables.less";
+
+// Responsive
+@import "../less/wee.responsive.less";
+
+// Print
+@media print {
+	@import (inline) "../less/wee.print.less";
+}
+
+// Framework
+@responsivePath: 'custom/breakpoints';
+@legacyMode: false;
+
+
+/*------------------------------------*\
+	# Global Variables
+\*------------------------------------*/
+
+@codeEnabled: true;
+@tableEnabled: true;
+@formEnabled: true;
+@buttonEnabled: true;
+@responsiveEnabled: true;
+@printEnabled: true;
+
+@mobileLandscapeWidth: false;
+@tabletPortraitWidth: false;
+@desktopSmallWidth: false;
+@desktopMediumWidth: false;
+@desktopLargeWidth: false;
+@responsiveOffset: false;

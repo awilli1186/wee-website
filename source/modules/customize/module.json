@@ -5,14 +5,14 @@
 	"homepage": "https://www.weepower.com",
 	"author": "Wee",
 	"autoload": false,
+	"extension": true,
 	"data": {
 
 	},
-	"style": {
-		
-	},
 	"script": {
-
+		"compile": {
+			"refresh.js": "refresh.js"
+		}
 	},
 	"dependencies": {
 		"wee": "^3.2.1"

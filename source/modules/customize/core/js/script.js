@@ -1,15 +1,14 @@
 Wee.fn.make('customize', {
 	init: function() {
-		this.$private('initScrolling');
-		this.$private('initAccordion');
-		this.$private('initAutoComplete');
-		this.$private('initPreview');
-		this.$private('initModal');
-		this.$private('initSelectAll');
-		this.$private('getColors');
+		this.$private.initScrolling();
+		this.$private.initAccordion();
+		this.$private.initAutoComplete();
+		this.$private.initPreview();
+		this.$private.initModal();
+		this.$private.initSelectAll();
+		this.$private.getColors();
 	}
-},
-{
+}, {
 	getColors: function() {
 		var scope = this,
 			match = /color|(\|false)?/g,
