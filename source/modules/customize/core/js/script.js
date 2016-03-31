@@ -44,6 +44,7 @@ Wee.fn.make('customize', {
 
 		$('ref:toggle').on('click', function() {
 			$(this).next().toggleClass('js-hide');
+			$(this).toggleClass('-is-active');
 
 			scope.updateScrollbar();
 		});
