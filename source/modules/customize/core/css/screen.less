@@ -38,6 +38,7 @@ body,
 #global {
 	.accordion {
 		&__toggle,
+		&__content,
 		&__content label {
 			.black();
 		}
@@ -60,6 +61,7 @@ body,
 		}
 		&.-is-active {
 			.background(@light4);
+			.opacity(1);
 			&:after {
 				.opacity(1);
 				.rotate(90);
@@ -220,10 +222,20 @@ iframe {
 .heading {
 	.font(@headingFont; 3.6; 100; 1.4);
 	.spaced(2);
+	&:after {
+		.background(@lighterGray);
+		.block();
+		.content();
+		.fill();
+		.height(.1);
+		.margin(vertical; 1.5; 4);
+	}
 }
-.hr {
-	.border(top; @lighterGray);
-	.margin(vertical; 1.5; 4);
+.cite,
+.link,
+.quote {
+	.block();
+	.spaced(2);
 }
 footer {
 	.align(center);
