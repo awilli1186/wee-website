@@ -34,8 +34,8 @@ Wee.fn.make('customize', {
 			this.scrollbar = tinyscrollbar(el);
 		});
 	},
-	updateScrollbar: function() {
-		tinyscrollbar($('.scrollable')[0]).update();
+	updateScrollbar: function(position) {
+		tinyscrollbar($('.scrollable')[0]).update(position);
 	},
 	initAccordion: function() {
 		var scope = this;
@@ -43,10 +43,12 @@ Wee.fn.make('customize', {
 		Wee.$setRef();
 
 		$('ref:toggle').on('click', function() {
+			var scrollAmount = Math.abs($('.accordion').css('top').replace('px', ''));
+
 			$(this).next().toggleClass('js-hide');
 			$(this).toggleClass('-is-active');
 
-			scope.updateScrollbar();
+			scope.updateScrollbar($(this).offset().top + scrollAmount - $(this).height());
 		});
 	},
 	initAutoComplete: function() {

@@ -1,210 +1,335 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<title>Customize Preview | Wee</title>
-
-	<link rel="stylesheet/less" type="text/css" href="/assets/less/wee.less">
-	<link rel="stylesheet" href="/assets/modules/customize/style.min.css">
-	<style>
-		body {
-			padding: 30px 0;
-		}
-	</style>
-</head>
-<body>
-<div class="container">
-	<h2 class="heading">Colors</h2>
-	<ol class="colors">
-		<li class="color --white">@white</li>
-		<li class="color --lightest-gray">@lightestGray</li>
-		<li class="color --lighter-gray">@lighterGray</li>
-		<li class="color --light-gray">@lightGray</li>
-		<li class="color --gray">@gray</li>
-		<li class="color --dark-gray">@darkGray</li>
-		<li class="color --darker-gray">@darkerGray</li>
-		<li class="color --darkest-gray">@darkestGray</li>
-		<li class="color --black">@black</li>
-	</ol>
-	<h2 class="heading">Typography</h2>
-	<h1>H1 Heading</h1>
-	<h2>H2 Heading</h2>
-	<h3>H3 Heading</h3>
-	<h4>H4 Heading</h4>
-	<h5>H5 Heading</h5>
-	<h6>H6 Heading</h6>
-	<a href="#" class="link">Link style</a>
-	<q class="quote">This is a quote.</q>
-	<cite class="cite">This is a cite.</cite>
-	<p>This is <mark>marked</mark> text.</p>
-	<h2 class="heading">Paragraph</h2>
-	<p>
-		Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing
-		elit. Mauris id	ultrices tellus, sit amet finibus nulla. Proin
-		dapibus augue nec magna iaculis ultrices. Integer vestibulum at
-		neque eget faucibus. Aenean eget leo ac odio aliquet egestas. Mauris
-		sed justo sed justo mattis feugiat.
-	</p>
-	<p>
-		Pellentesque dapibus et mauris ut commodo. Curabitur commodo
-		volutpat libero sed sagittis. Aliquam placerat rhoncus tempor. Nunc
-		lobortis lacinia volutpat. Vivamus et ex vel augue sagittis euismod.
-	</p>
-	<h2 class="heading">Blockquote</h2>
-	<blockquote>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		<cite>John Doe</cite>
-	</blockquote>
-	<h2 class="heading">Address</h2>
-	<address>
-		<strong>Address</strong><br>
-		123 Main Street<br>
-		City, ST 12345
-	</address>
-	<h2 class="heading">Image</h2>
-	<figure>
-		<figcaption><b>Fig. 3.2 |</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit by <a href="#">eiusmod tempor</a></figcaption>
-	</figure>
-	<h2 class="heading">List</h2>
-	<ul>
-		<li>Unordered list
-			<ul>
-				<li>Unordered list</li>
-				<li>Unordered list
+	<head>
+		<title>Customize Preview | Wee</title>
+		<link rel="stylesheet/less" type="text/css" href="/assets/less/wee.less">
+		<style>
+			body {
+				padding: 30px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="pattern">
+				<h2 class="heading">Colors</h2>
+				<div class="pattern__sub">
+					<ol class="colors">
+						<li class="color --white">@white</li>
+						<li class="color --lightest-gray">@lightestGray</li>
+						<li class="color --lighter-gray">@lighterGray</li>
+						<li class="color --light-gray">@lightGray</li>
+						<li class="color --gray">@gray</li>
+						<li class="color --dark-gray">@darkGray</li>
+						<li class="color --darker-gray">@darkerGray</li>
+						<li class="color --darkest-gray">@darkestGray</li>
+						<li class="color --black">@black</li>
+					</ol>
+				</div>
+			</div>
+			<div class="pattern">
+				<h2 class="heading">Typography</h2>
+				<div class="pattern__sub">
+					<h3 class="heading -subtitle">Fonts</h3>
+					<table>
+						<tbody>
+							<tr>
+								<th scope="row">Base</th>
+								<td class="font">@baseFont</td>
+								<td class="fonts__family -base"></td>
+							</tr>
+							<tr>
+								<th scope="row">Heading</th>
+								<td class="font -heading">@headingFont</td>
+								<td class="fonts__family -heading"></td>
+							</tr>
+							<tr>
+								<th scope="row">Description Title</th>
+								<td class="font -desc-title">@dtFont</td>
+								<td class="fonts__family -description-title"></td>
+							</tr>
+							<tr>
+								<th scope="row">Description</th>
+								<td class="font -desc">@ddFont</td>
+								<td class="fonts__family -description"></td>
+							</tr>
+							<tr>
+								<th scope="row">Quote</th>
+								<td class="font -quote">@quoteFont</td>
+								<td class="fonts__family -quote"></td>
+							</tr>
+							<tr>
+								<th scope="row">Cite</th>
+								<td class="font -cite">@citeFont</td>
+								<td class="fonts__family -cite"></td>
+							</tr>
+							<tr>
+								<th scope="row">Address</th>
+								<td class="font -address">@addressFont</td>
+								<td class="fonts__family -address"></td>
+							</tr>
+							<tr>
+								<th scope="row">Code</th>
+								<td class="font -code">@codeFont</td>
+								<td class="fonts__family -code"></td>
+							</tr>
+							<tr>
+								<th scope="row">Code Block</th>
+								<td class="font -block">@codeBlockFont</td>
+								<td class="fonts__family -code-block"></td>
+							</tr>
+							<tr>
+								<th scope="row">Input</th>
+								<td class="font -input">@inputFont</td>
+								<td class="fonts__family -input"></td>
+							</tr>
+							<tr>
+								<th scope="row">Legend</th>
+								<td class="font -legend">@legendFont</td>
+								<td class="fonts__family -legend"></td>
+							</tr>
+							<tr>
+								<th scope="row">Button</th>
+								<td class="font -button">@buttonFont</td>
+								<td class="fonts__family -button"></td>
+							</tr>
+						</tbody>
+					</table>
+					<h1>Heading <code>&lt;h1&gt;</code></h1>
+					<h2>Heading <code>&lt;h2&gt;</code></h2>
+					<h3>Heading <code>&lt;h3&gt;</code></h3>
+					<h4>Heading <code>&lt;h4&gt;</code></h4>
+					<h5>Heading <code>&lt;h5&gt;</code></h5>
+					<h6>Heading <code>&lt;h6&gt;</code></h6>
+					<ul class="unstyled">
+						<li><a href="#">Link style</a></li>
+						<li><strong>Strong defines important text</strong></li>
+						<li><em>The em tag renders as emphasized text</em></li>
+						<li>The <b>b tag</b> visually weights text without added importance</li>
+						<li>The <i>i tag</i> visually differentiates text without emphasis</li>
+						<li>The <u>u tag</u> renders text with an underline</li>
+						<li><s>This text has a strikethrough</s></li>
+						<li><del>This is deleted text</del> and <ins>this text is inserted</ins></li>
+						<li>Superscript<sup>&trade;</sup></li>
+						<li>Subscript for things like H<sub>2</sub>O</li>
+						<li><small>Small text is small for fine print</small></li>
+						<li><abbr title="Cascading Style Sheets">CSS</abbr> is a style sheet language</li>
+						<li><q cite="https://www.weepower.com">This inline quote has a cite reference</q></li>
+						<li><cite>This is a citation</cite></li>
+						<li>The <dfn>dfn tag</dfn> renders a definition</li>
+						<li>The <mark>mark tag</mark> highlights specific text</li>
+						<li>Styling <code>inline code</code> is easy</li>
+						<li><samp>This is sample output</samp></li>
+						<li>The variable element, such as <var>x</var> / <var>y</var> = <var>z</var></li>
+						<li>The relative time is <time datetime="2014-02-14T08:00">2 weeks</time></li>
+					</ul>
+				</div>
+			</div>
+			<div class="pattern">
+				<h2 class="heading">Paragraph</h2>
+				<div class="pattern__sub">
+					<p>
+						Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing
+						elit. Mauris id	ultrices tellus, sit amet finibus nulla. Proin
+						dapibus augue nec magna iaculis ultrices. Integer vestibulum at
+						neque eget faucibus. Aenean eget leo ac odio aliquet egestas. Mauris
+						sed justo sed justo mattis feugiat.
+					</p>
+					<p>
+						Pellentesque dapibus et mauris ut commodo. Curabitur commodo
+						volutpat libero sed sagittis. Aliquam placerat rhoncus tempor. Nunc
+						lobortis lacinia volutpat. Vivamus et ex vel augue sagittis euismod.
+					</p>
+				</div>
+			</div>
+			<div class="pattern">
+				<h2 class="heading">Blockquote</h2>
+				<div class="pattern__sub">
+					<blockquote>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						<cite>John Doe</cite>
+					</blockquote>
+				</div>
+			</div>
+			<div class="pattern">
+				<h2 class="heading">Address</h2>
+				<div class="pattern__sub">
+					<address>
+						<strong>Address</strong><br>
+						123 Main Street<br>
+						City, ST 12345
+					</address>
+				</div>
+			</div>
+			<div class="pattern">
+				<h2 class="heading">Image</h2>
+				<div class="pattern__sub">
+					<figure>
+						<figcaption><b>Fig. 3.2 |</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit by <a href="#">eiusmod tempor</a></figcaption>
+					</figure>
+				</div>
+			</div>
+			<div class="pattern">
+				<h2 class="heading">List</h2>
+				<div class="pattern__sub">
 					<ul>
+						<li>Unordered list
+							<ul>
+								<li>Unordered list</li>
+								<li>Unordered list
+									<ul>
+										<li>Unordered list</li>
+										<li>Unordered list</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
 						<li>Unordered list</li>
 						<li>Unordered list</li>
 					</ul>
-				</li>
-			</ul>
-		</li>
-		<li>Unordered list</li>
-		<li>Unordered list</li>
-	</ul>
-	<ol>
-		<li>Ordered list
-			<ol>
-				<li>Ordered list</li>
-				<li>Ordered list
 					<ol>
+						<li>Ordered list
+							<ol>
+								<li>Ordered list</li>
+								<li>Ordered list
+									<ol>
+										<li>Ordered list</li>
+										<li>Ordered list</li>
+									</ol>
+								</li>
+							</ol>
+						</li>
 						<li>Ordered list</li>
 						<li>Ordered list</li>
 					</ol>
-				</li>
-			</ol>
-		</li>
-		<li>Ordered list</li>
-		<li>Ordered list</li>
-	</ol>
-	<h2 class="heading">Description List</h2>
-	<dl>
-		<dt>Description list title</dt>
-		<dd>Description list item</dd>
-	</dl>
-	<h2 class="heading">Code</h2>
-	<pre><code class="html">&lt;pre&gt;
-	&lt;code&gt;test code&lt;/code&gt;
-	&lt;/pre&gt;</code></pre>
-	<h2 class="heading">Form</h2>
-	<form action="#" class="index-form">
-		<div class="index-form-split">
-			<div class="index-form-column">
-				<fieldset>
-					<legend>Text Input</legend>
-					<input type="email" name="name" placeholder="Email Address" required>
-					<div class="inline-field">
-						<label for="name2">Full Name</label>
-						<input type="text" name="name2" value="" placeholder="Your Name" id="name2" disabled>
-					</div>
-					<label for="textarea">Message</label>
-					<textarea name="textarea" id="textarea" rows="3" required></textarea>
-					<div class="inline-field">
-						<label for="textarea2">Inline Message</label>
-						<textarea name="textarea2" id="textarea2" rows="4" placeholder="Short message here..."></textarea>
-					</div>
-				</fieldset>
+				</div>
 			</div>
-			<div class="index-form-column">
-				<fieldset>
-					<legend>Selection</legend>
-					<select name="selection">
-						<option value="1">Lorem</option>
-						<option value="2">Ipsum</option>
-						<option value="3">Dolor</option>
-					</select>
-					<label for="multi-selection">Multiple Selection</label>
-					<select name="multi-selection" id="multi-selection" multiple>
-						<optgroup label="Grouping">
-							<option value="1">Lorem</option>
-							<option value="2">Ipsum</option>
-							<option value="3">Dolor</option>
-						</optgroup>
-					</select>
-					<div class="inline-field">
-						<label for="inline-selection">Inline Selection</label>
-						<select name="inline-selection" id="inline-selection" multiple>
-							<option value="1">Lorem</option>
-							<option value="2">Ipsum</option>
-							<option value="3">Dolor</option>
-						</select>
-					</div>
-					<div class="inline-field">
-						<input type="checkbox" name="checkbox" id="checkbox">
-						<label for="checkbox">Lorem ipsum dolor sit amet</label>
-					</div>
-					<div class="inline-field">
-						<input type="radio" name="radio" id="radio">
-						<label for="radio">Lorem ipsum dolor sit amet</label>
-					</div>
-					<div class="inline-field">
-						<input type="radio" name="radio" id="radio2">
-						<label for="radio2">Lorem ipsum dolor sit amet</label>
-					</div>
-				</fieldset>
+			<div class="pattern">
+				<h2 class="heading">Description List</h2>
+				<div class="pattern__sub">
+					<dl>
+						<dt>Description list title</dt>
+						<dd>Description list item</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="pattern">
+				<h2 class="heading">Code</h2>
+				<div class="pattern__sub">
+					<pre><code class="html">&lt;pre&gt;
+					&lt;code&gt;test code&lt;/code&gt;
+					&lt;/pre&gt;</code></pre>
+				</div>
+			</div>
+			<div class="pattern">
+				<h2 class="heading">Form</h2>
+				<div class="pattern__sub">
+					<form action="#" class="index-form">
+						<div class="index-form-split">
+							<div class="index-form-column">
+								<fieldset>
+									<legend>Text Input</legend>
+									<input type="email" name="name" placeholder="Email Address" required>
+									<div class="inline-field">
+										<label for="name2">Full Name</label>
+										<input type="text" name="name2" value="" placeholder="Your Name" id="name2" disabled>
+									</div>
+									<label for="textarea">Message</label>
+									<textarea name="textarea" id="textarea" rows="3" required></textarea>
+									<div class="inline-field">
+										<label for="textarea2">Inline Message</label>
+										<textarea name="textarea2" id="textarea2" rows="4" placeholder="Short message here..."></textarea>
+									</div>
+								</fieldset>
+							</div>
+							<div class="index-form-column">
+								<fieldset>
+									<legend>Selection</legend>
+									<select name="selection">
+										<option value="1">Lorem</option>
+										<option value="2">Ipsum</option>
+										<option value="3">Dolor</option>
+									</select>
+									<label for="multi-selection">Multiple Selection</label>
+									<select name="multi-selection" id="multi-selection" multiple>
+										<optgroup label="Grouping">
+											<option value="1">Lorem</option>
+											<option value="2">Ipsum</option>
+											<option value="3">Dolor</option>
+										</optgroup>
+									</select>
+									<div class="inline-field">
+										<label for="inline-selection">Inline Selection</label>
+										<select name="inline-selection" id="inline-selection" multiple>
+											<option value="1">Lorem</option>
+											<option value="2">Ipsum</option>
+											<option value="3">Dolor</option>
+										</select>
+									</div>
+									<div class="inline-field">
+										<input type="checkbox" name="checkbox" id="checkbox">
+										<label for="checkbox">Lorem ipsum dolor sit amet</label>
+									</div>
+									<div class="inline-field">
+										<input type="radio" name="radio" id="radio">
+										<label for="radio">Lorem ipsum dolor sit amet</label>
+									</div>
+									<div class="inline-field">
+										<input type="radio" name="radio" id="radio2">
+										<label for="radio2">Lorem ipsum dolor sit amet</label>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+						<input type="submit" value="Submit" class="button-colored">
+						<input type="reset" value="Clear">
+						<input type="submit" value="Disabled" disabled>
+					</form>
+				</div>
+			</div>
+			<div class="pattern">
+				<h2 class="heading">Table</h2>
+				<div class="pattern__sub">
+					<table itemscope itemtype="http://schema.org/Table">
+						<caption itemprop="about">Caption</caption>
+						<thead>
+							<tr>
+								<th>Heading</th>
+								<th>Heading</th>
+								<th>Heading</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+							</tr>
+							<tr>
+								<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td>Footer</td>
+								<td>Footer</td>
+								<td>Footer</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
 			</div>
 		</div>
-		<input type="submit" value="Submit" class="button-colored">
-		<input type="reset" value="Clear">
-		<input type="submit" value="Disabled" disabled>
-	</form>
-	<h2 class="heading">Table</h2>
-	<table itemscope itemtype="http://schema.org/Table">
-		<caption itemprop="about">Caption</caption>
-		<thead>
-			<tr>
-				<th>Heading</th>
-				<th>Heading</th>
-				<th>Heading</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-			</tr>
-			<tr>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-			</tr>
-		</tbody>
-		<tfoot>
-			<tr>
-				<td>Footer</td>
-				<td>Footer</td>
-				<td>Footer</td>
-			</tr>
-		</tfoot>
-	</table>
-</div>
 
-<script src="/assets/modules/customize/refresh.js"></script>
-<script>
-less = {
-	env: 'development',
-	logLevel: 1
-};
-</script>
-<script src="/assets/js/lib/vendor/less.min.js"></script>
-</body>
+	<script src="/assets/modules/customize/refresh.js"></script>
+	<script>
+	less = {
+		env: 'development',
+		logLevel: 1
+	};
+	</script>
+	<script src="/assets/js/lib/vendor/less.min.js"></script>
+	</body>
 </html>

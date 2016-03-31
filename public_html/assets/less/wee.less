@@ -1,7 +1,9 @@
 @import (reference) '../less/wee.variables.less'; // Core configuration
+
 @import '../less/wee.reset.less';                 // Reset
 .wee-reset();
-@import '../less/wee.mixins.less';                // Mixins
+
+@import '../less/wee.mixins.less';                // Core mixins
 
 // Inject imports
 @import "../less/components/wee.code.less";
@@ -19,7 +21,6 @@
 
 // Framework
 @responsivePath: 'custom/breakpoints';
-@legacyMode: false;
 
 
 /*------------------------------------*\
@@ -39,3 +40,110 @@
 @desktopMediumWidth: false;
 @desktopLargeWidth: false;
 @responsiveOffset: false;
+
+
+/*------------------------------------*\
+	# iFrame styling
+\*------------------------------------*/
+
+.contain {
+	.fill(both);
+}
+.pattern {
+	.border(left; #e7eaeb; .2);
+	.padded(4);
+	&__sub {
+		.padding(left; 2);
+	}
+}
+.main {
+	.padding(3; 15);
+}
+.font {
+	&:after {
+		.content(@baseFont);
+		.right();
+	}
+	&.-heading {
+		&:after {
+			.content(@headingFont);
+		}
+	}
+	&.-desc-title {
+		&:after {
+			.content(@dtFont);
+		}
+	}
+	&.-desc {
+		&:after {
+			.content(@ddFont);
+		}
+	}
+	&.-quote {
+		&:after {
+			.content(@quoteFont);
+		}
+	}
+	&.-cite {
+		&:after {
+			.content(@citeFont);
+		}
+	}
+	&.-address {
+		&:after {
+			.content(@addressFont);
+		}
+	}
+	&.-code {
+		&:after {
+			.content(@codeFont);
+		}
+	}
+	&.-block {
+		&:after {
+			.content(@codeBlockFont);
+		}
+	}
+	&.-input {
+		&:after {
+			.content(@inputFont);
+		}
+	}
+	&.-legend {
+		&:after {
+			.content(@legendFont);
+		}
+	}
+	&.-button {
+		&:after {
+			.content(@buttonFont);
+		}
+	}
+}
+.heading {
+	.font(@headingFont; 3.2; 700; 1.4);
+	.spaced(2);
+	&.-subtitle {
+		.font-size(2.2);
+	}
+}
+.unstyled {
+	.unstyled();
+}
+footer {
+	.align(center);
+	.padding(top; 3);
+	small {
+		.font-size(1.3; 1.4em);
+		.spaced-block(1);
+	}
+	ul {
+		.font-size(1.4);
+		.inline-list(.8);
+	}
+	a {
+		&:hover {
+			.underline();
+		}
+	}
+}
