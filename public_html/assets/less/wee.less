@@ -52,7 +52,7 @@
 .pattern {
 	.border(left; #e7eaeb; .2);
 	.padded(4);
-	.spaced(4);
+	.spaced(5);
 	&__sub {
 		.padding(left; 2);
 	}
@@ -70,8 +70,9 @@
 \*------------------------------------*/
 
 .color {
+	.width(38);
 	&:after {
-		.padding(left; 2);
+		.right();
 	}
 	&.-white {
 		&:after {
@@ -119,6 +120,11 @@
 		}
 	}
 }
+
+
+
+
+
 /*------------------------------------*\
 	# Font styling
 \*------------------------------------*/
@@ -239,6 +245,9 @@
 }
 .unstyled {
 	.unstyled();
+	li {
+		.spaced(1);
+	}
 }
 footer {
 	.align(center);

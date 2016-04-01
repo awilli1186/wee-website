@@ -136,7 +136,7 @@ Wee.fn.make('customize', {
 					}
 
 					if (matches.length) {
-						for (var i = 0 ; i < matches.length ; i++) {
+						for (var i = 0; i < matches.length; i++) {
 							list += '<li class="suggestion">' + matches[i];
 
 							if (scope.colorValues[matches[i]]) {
