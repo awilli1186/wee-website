@@ -52,6 +52,7 @@
 .pattern {
 	.border(left; #e7eaeb; .2);
 	.padded(4);
+	.spaced(4);
 	&__sub {
 		.padding(left; 2);
 	}
@@ -59,6 +60,69 @@
 .main {
 	.padding(3; 15);
 }
+
+
+
+
+
+/*------------------------------------*\
+	# Color styling
+\*------------------------------------*/
+
+.color {
+	&:after {
+		.padding(left; 2);
+	}
+	&.-white {
+		&:after {
+			.content(@white);
+		}
+	}
+	&.-lightest-gray {
+		&:after {
+			.content(@lightestGray);
+		}
+	}
+	&.-lighter-gray {
+		&:after {
+			.content(@lighterGray);
+		}
+	}
+	&.-light-gray {
+		&:after {
+			.content(@lightGray);
+		}
+	}
+	&.-gray {
+		&:after {
+			.content(@gray);
+		}
+	}
+	&.-dark-gray {
+		&:after {
+			.content(@darkGray);
+		}
+	}
+	&.-darker-gray {
+		&:after {
+			.content(@darkerGray);
+		}
+	}
+	&.-darkest-gray {
+		&:after {
+			.content(@darkestGray;);
+		}
+	}
+	&.-black {
+		&:after {
+			.content(@black);
+		}
+	}
+}
+/*------------------------------------*\
+	# Font styling
+\*------------------------------------*/
+
 .font {
 	&:after {
 		.content(@baseFont);
@@ -120,11 +184,57 @@
 		}
 	}
 }
+
+
+
+
+
+/*------------------------------------*\
+	# Heading styling
+\*------------------------------------*/
+.label {
+	&:after {
+		.font-size(1.4);
+		.font-weight(100);
+		.lightGray();
+		.padding(left; 2);
+	}
+	&.-h1 {
+		&:after {
+			.content(unit(@h1, @defaultUnit));
+		}
+	}
+	&.-h2 {
+		&:after {
+			.content(unit(@h2, @defaultUnit));
+		}
+	}
+	&.-h3 {
+		&:after {
+			.content(unit(@h3, @defaultUnit));
+		}
+	}
+	&.-h4 {
+		&:after {
+			.content(unit(@h4, @defaultUnit));
+		}
+	}
+	&.-h5 {
+		&:after {
+			.content(unit(@h5, @defaultUnit));
+		}
+	}
+	&.-h6 {
+		&:after {
+			.content(unit(@h6, @defaultUnit));
+		}
+	}
+}
 .heading {
-	.font(@headingFont; 3.2; 700; 1.4);
+	.font(@headingFont; 2.2; 700; 1.4);
 	.spaced(2);
 	&.-subtitle {
-		.font-size(2.2);
+		.font-size(1.8);
 	}
 }
 .unstyled {

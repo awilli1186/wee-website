@@ -33,6 +33,9 @@ body,
 .overview {
 	.absolute(0; false; false; 0);
 	.padding(top; 3);
+	&.-is-active {
+		.transition(top; .2s; ease-in-out);
+	}
 }
 #global {
 	.accordion {

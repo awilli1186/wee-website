@@ -38,17 +38,25 @@ Wee.fn.make('customize', {
 		tinyscrollbar($('.scrollable')[0]).update(position);
 	},
 	initAccordion: function() {
-		var scope = this;
+		var scope = this,
+			$overview = $('.overview'),
+			isActive = '-is-active';
 
 		Wee.$setRef();
 
 		$('ref:toggle').on('click', function() {
 			var scrollAmount = Math.abs($('.accordion').css('top').replace('px', ''));
 
+			$overview.addClass(isActive);
+
 			$(this).next().toggleClass('js-hide');
 			$(this).toggleClass('-is-active');
 
 			scope.updateScrollbar($(this).offset().top + scrollAmount - $(this).height());
+
+			setTimeout(function() {
+				$overview.removeClass(isActive);
+			}, 300);
 		});
 	},
 	initAutoComplete: function() {
