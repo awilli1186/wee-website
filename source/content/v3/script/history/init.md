@@ -16,6 +16,7 @@ heading: Set the initial state and popstate event, and bind global actions
 | bind | object | -- | [Bind object format](#bind) ||
 | extensions | array | -- | Whitelist of path extensions to support ||
 | partials | [selection](/script#selection) | 'title, main' | Elements to replace from response ||
+| processErrors | boolean | false | Process replacements on error responses ||
 | push | boolean | true | Push the path to the browser URL ||
 | request | object | -- | Pass-through object to [Wee.data](/script/data#request) ||
 | run | boolean | true | Evaluate routing rules ||
@@ -38,6 +39,7 @@ Wee.history.init({
 		'php',
 	],
 	partials: 'title, .js-sidebar, ref:inner',
+	processErrors: true,
 	request: {
 		root: '/pjax',
 		success: function() {
@@ -64,7 +66,7 @@ options.request.send();
 ```
 
 ```javascript
-options.request.success(xhr);
+options.request.success(data);
 ```
 
 ```javascript

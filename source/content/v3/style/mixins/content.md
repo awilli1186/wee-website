@@ -8,6 +8,7 @@ name: Content
 | -- | -- | -- | -- | -- |
 | @value | string, keyword | ' ' | Content ||
 | @font | string, keyword | false | Font family ||
+| @size | unit | false | Font size ||
 
 ---code|modifier:split---
 
@@ -22,12 +23,13 @@ content: 'text';
 ---code|modifier:split---
 
 ```less
-.content(example; Georgia);
+.content(example; Georgia; 2);
 ```
 
 ```css
 content: 'example';
 font-family: Georgia;
+font-size: 2rem;
 ```
 
 ---variables|label:Prefix, Suffix & Bookends---

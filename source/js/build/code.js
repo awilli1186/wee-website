@@ -5,9 +5,9 @@ Wee.fn.make('code', {
 		var priv = this.$private;
 
 		// Highlight code blocks
-		$('pre code').each(function(el) {
-			hljs.highlightBlock(el);
-		});
+		$('pre code').each(
+			hljs.highlightBlock
+		);
 
 		$('code').on('dblclick', function(e, el) {
 			priv.selectCode(el);

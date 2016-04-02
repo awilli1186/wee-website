@@ -11,6 +11,7 @@ The core section allows you to enable or disable core features. For instance, if
 ```javascript
 "core": {
 	"enable": true,
+	"namespace": "Wee",
 	"features": {
 		"animate": true,
 		"assets": true,
