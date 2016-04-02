@@ -17,6 +17,7 @@ heading: Navigate to a new path or within the browser history
 | extensions | array | -- | Whitelist of path extensions to support ||
 | partials | [selection](/script#selection) | 'title, main' | Elements to replace from response ||
 | path | string | -- | Path to local resource | ✔ |
+| processErrors | boolean | false | Process replacements on error responses ||
 | push | boolean | true | Push the path to the browser URL ||
 | request | object | -- | Pass-through object to [Wee.data](/script/data#request) ||
 | run | boolean | true | Evaluate routing rules ||
