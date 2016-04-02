@@ -10,9 +10,9 @@ heading: Standard swipe events are available out of the box
 | distance | integer | 50 | Minimum swipe distance in pixels ||
 | movement | integer | 25 | Maximum opposing shift in pixels ||
 
-The `swipeLeft`, `swipeRight`, `swipeUp`, and `swipeDown` events are available and work just like standard events.
-
 ---code---
+
+The `swipeLeft`, `swipeRight`, `swipeUp`, and `swipeDown` events are available and work just like standard events.
 
 ```javascript
 Wee.on('ref:element', 'swipeRight', function() {
