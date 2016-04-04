@@ -7,6 +7,7 @@ body,
 .canvas-outer,
 .canvas-inner,
 .preview {
+	.background(@white);
 	.fill(vertical);
 }
 
@@ -19,10 +20,9 @@ body,
 \*------------------------------------*/
 
 .sidebar {
-	.absolute(0; false; false; 0);
+	.absolute(7; false; false; 0);
 	.background(@white);
 	.margin(0);
-	.padding(top; 3);
 	.size(36; 100%);
 }
 .viewport {
@@ -32,7 +32,7 @@ body,
 }
 .overview {
 	.absolute(0; false; false; 0);
-	.padding(top; 3);
+	.padding(vertical; 0; 11);
 	&.-is-active {
 		.transition(top; .2s; ease-in-out);
 	}
@@ -54,7 +54,6 @@ body,
 }
 .accordion {
 	.margin(0);
-	.padding(top; 7);
 	.size(100%; auto);
 	&__toggle {
 		.cursor();
