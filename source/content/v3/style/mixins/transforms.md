@@ -42,19 +42,19 @@ transform: rotate(30deg);
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| @deg | integer | 1 | Scale ||
-
+| @value, x, y | integer, keyword | 1 | Scale or dimension ||
+| @value | integer | 1 | Scale ||
 
 ---code|modifier:split---
 
 ```less
-.scale(2);
+.scale(x; 2);
 ```
 
 ```css
--ms-transform: scale(2);
--webkit-transform: scale(2);
-transform: scale(2);
+-ms-transform: scaleX(2);
+-webkit-transform: scaleX(2);
+transform: scaleX(2);
 ```
 
 ---variables|label:Skew---

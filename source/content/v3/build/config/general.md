@@ -47,3 +47,11 @@ body {
 	color: @brandColor;
 }
 ```
+
+---code|label:Default Command---
+
+By default if you execute `wee` the `wee run:static` command is run. You can override that value with any working command in this field.
+
+```javascript
+"defaultCommand": "run:static"
+```
