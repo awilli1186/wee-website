@@ -6,7 +6,7 @@ Wee.fn.make('code', {
 
 		// Highlight code blocks
 		$('pre code').each(function(el) {
-			//hljs.highlightBlock(el);
+			hljs.highlightBlock(el);
 		});
 
 		$('code').on('dblclick', function(e, el) {
