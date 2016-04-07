@@ -70,53 +70,124 @@
 \*------------------------------------*/
 
 .color {
-	.width(38);
-	&:after {
-		.right();
+	.max-width(80);
+}
+.color {
+	.align(center);
+	.background(@white);
+	.font-size(1.2);
+	.gray();
+	.inline-block(13);
+	.margin(right; 1);
+	.rounded();
+	.shadow(dark; 10%; 0; 1px; 1px);
+	.spaced(1);
+	&:before {
+		.block();
+		.color();
+		.height(4.5);
+		.line-height(45px);
+		.rounded(top);
+	}
+	&.-primary {
+		&:before {
+			.background(@primary);
+			.content(@primary);
+			.white();
+		}
+	}
+	&.-secondary {
+		&:before {
+			.background(@secondary);
+			.content(@secondary);
+			.white();
+		}
+	}
+	&.-tertiary {
+		&:before {
+			.background(@tertiary);
+			.content(@tertiary);
+			.white();
+		}
+	}
+	&.-info {
+		&:before {
+			.background(@info);
+			.content(@info);
+			.white();
+		}
+	}
+	&.-success {
+		&:before {
+			.background(@success);
+			.content(@success);
+			.white();
+		}
+	}
+	&.-warning {
+		&:before {
+			.background(@warning);
+			.content(@warning);
+			.white();
+		}
 	}
 	&.-white {
-		&:after {
+		&:before {
+			.background(@white);
 			.content(@white);
 		}
 	}
 	&.-lightest-gray {
-		&:after {
+		&:before {
+			.background(@lightestGray);
 			.content(@lightestGray);
 		}
 	}
 	&.-lighter-gray {
-		&:after {
+		&:before {
+			.background(@lighterGray);
 			.content(@lighterGray);
 		}
 	}
 	&.-light-gray {
-		&:after {
+		&:before {
+			.background(@lightGray);
 			.content(@lightGray);
 		}
 	}
 	&.-gray {
-		&:after {
+		&:before {
+			.background(@gray);
 			.content(@gray);
+			.white();
 		}
 	}
 	&.-dark-gray {
-		&:after {
+		&:before {
+			.background(@darkGray);
 			.content(@darkGray);
+			.white();
 		}
 	}
 	&.-darker-gray {
-		&:after {
+		&:before {
+			.background(@darkerGray);
 			.content(@darkerGray);
+			.white();
 		}
 	}
 	&.-darkest-gray {
-		&:after {
-			.content(@darkestGray;);
+		&:before {
+			.background(@darkestGray);
+			.content(@darkestGray);
+			.white();
 		}
 	}
 	&.-black {
-		&:after {
+		&:before {
+			.background(@black);
 			.content(@black);
+			.white();
 		}
 	}
 }
