@@ -278,32 +278,38 @@
 	}
 	&.-h1 {
 		&:after {
-			.content(unit(@h1, @defaultUnit));
+			@fontSize: unit(@h1, @defaultUnit);
+			.content('@{fontSize} (@{headingLineHeight})');
 		}
 	}
 	&.-h2 {
 		&:after {
-			.content(unit(@h2, @defaultUnit));
+			@fontSize: unit(@h2, @defaultUnit);
+			.content('@{fontSize} (@{headingLineHeight})');
 		}
 	}
 	&.-h3 {
 		&:after {
-			.content(unit(@h3, @defaultUnit));
+			@fontSize: unit(@h3, @defaultUnit);
+			.content('@{fontSize} (@{headingLineHeight})');
 		}
 	}
 	&.-h4 {
 		&:after {
-			.content(unit(@h4, @defaultUnit));
+			@fontSize: unit(@h4, @defaultUnit);
+			.content('@{fontSize} (@{headingLineHeight})');
 		}
 	}
 	&.-h5 {
 		&:after {
-			.content(unit(@h5, @defaultUnit));
+			@fontSize: unit(@h5, @defaultUnit);
+			.content('@{fontSize} (@{headingLineHeight})');
 		}
 	}
 	&.-h6 {
 		&:after {
-			.content(unit(@h6, @defaultUnit));
+			@fontSize: unit(@h6, @defaultUnit);
+			.content('@{fontSize} (@{headingLineHeight})');
 		}
 	}
 }
