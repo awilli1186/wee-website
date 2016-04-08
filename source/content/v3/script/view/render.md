@@ -116,9 +116,9 @@ The render method does more than simple variable output. It can traverse as deep
 var template = '{{ #! }}<p>My Name is {{ firstName }}{{ #lastName|notEmpty }} {{ lastName }}{{ /lastName }}</p>' +
 	'{{ #children|notEmpty }}' +
 		'<p>My Children are:</p>' +
-		'<ul>{{ #children }}' +
+		'<ul>{{ #.|each }}' +
 			'<li>{{ name }} - {{ age }}</li>' +
-		'{{ /children }}</ul>' +
+		'{{ /. }}</ul>' +
 	'{{ else }}' +
 		'<p>I have no children.</p>' +
 	'{{ /children }}{{ /! }}',
