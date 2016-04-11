@@ -101,9 +101,9 @@ Wee.view.render(template, data);
 </code></pre></div><h3 class="doc__label doc__code__label">Advanced</h3><div class="doc__code -string -stacked"><p>The render method does more than simple variable output. It can traverse as deep into the provided object as you need for multi-level output.</p><pre><code class="language-javascript">var template = '&lt;p&gt;My Name is {{ firstName }}{{ #lastName|notEmpty }} {{ lastName }}{{ /lastName }}&lt;/p&gt;' +
     '{{ #children|notEmpty }}' +
         '&lt;p&gt;My Children are:&lt;/p&gt;' +
-        '&lt;ul&gt;{{ #children }}' +
+        '&lt;ul&gt;{{ #.|each }}' +
             '&lt;li&gt;{{ name }} - {{ age }}&lt;/li&gt;' +
-        '{{ /children }}&lt;/ul&gt;' +
+        '{{ /. }}&lt;/ul&gt;' +
     '{{ else }}' +
         '&lt;p&gt;I have no children.&lt;/p&gt;' +
     '{{ /children }}',
