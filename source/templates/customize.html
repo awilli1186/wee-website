@@ -4,9 +4,9 @@
 	<link rel="stylesheet" href="{{ site.assetUrl }}/modules/customize/style.min.css">
 	<div class="canvas-outer">
 		<div class="canvas-inner" data-ref="inner">
-			<div class="scrollable sidebar" data-ref="scrollable">
+			<div class="scrollable sidebar" data-ref="topnav">
 				<div class="viewport">
-					<form name="variables" class="overview accordion">
+					<div class="overview accordion" data-ref="variables">
 						<h2 class="accordion__toggle" data-ref="toggle">Layout</h2>
 
 						<div class="accordion__content js-hide">
@@ -38,12 +38,9 @@
 							<select
 								name="@padContainer"
 								id="padContainer"
-								data-validate="selection"
 							>
-								<option value="true" selected>
-									true
-								</option>
-								<option value="false">false</option>
+								<option value="true" selected>Yes</option>
+								<option value="false">No</option>
 							</select>
 							<label for="gridMargin">Grid Margin</label>
 							<input
@@ -51,7 +48,7 @@
 								name="@gridMargin"
 								value="5%"
 								id="gridMargin"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 							<label for="gridColumns">Grid Columns</label>
 							<input
@@ -61,13 +58,21 @@
 								id="gridColumns"
 								data-validate="number"
 							>
+							<label for="gridSpaceless">Grid Spaceless</label>
+							<select
+								name="@gridSpaceless"
+								id="gridSpaceless"
+							>
+								<option value="true">Yes</option>
+								<option value="false" selected>No</option>
+							</select>
 							<label for="blockMarginBottom">Block Margin Bottom</label>
 							<input
 								type="text"
 								name="@blockMarginBottom"
 								value="4"
 								id="blockMarginBottom"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 						</div>
 
@@ -102,6 +107,7 @@
 								data-validate="color"
 							>
 						</div>
+
 						<h2 class="accordion__toggle" data-ref="toggle">Notice Colors</h2>
 
 						<div class="accordion__content js-hide">
@@ -150,7 +156,7 @@
 							<input
 								type="text"
 								name="@lightestGray"
-								value="#f2f2f2"
+								value="darken(#fff, 4%)"
 								id="lightestGray"
 								class="color"
 								data-validate="color"
@@ -159,7 +165,7 @@
 							<input
 								type="text"
 								name="@lighterGray"
-								value="#e6e6e6"
+								value="darken(#fff, 10%)"
 								id="lighterGray"
 								class="color"
 								data-validate="color"
@@ -168,7 +174,7 @@
 							<input
 								type="text"
 								name="@lightGray"
-								value="#bfbfbf"
+								value="darken(#fff, 25%)"
 								id="lightGray"
 								class="color"
 								data-validate="color"
@@ -177,7 +183,7 @@
 							<input
 								type="text"
 								name="@gray"
-								value="#a6a6a6"
+								value="darken(#fff, 35%)"
 								id="gray"
 								class="color"
 								data-validate="color"
@@ -186,7 +192,7 @@
 							<input
 								type="text"
 								name="@darkGray"
-								value="#737373"
+								value="darken(#fff, 55%)"
 								id="darkGray"
 								class="color"
 								data-validate="color"
@@ -195,7 +201,7 @@
 							<input
 								type="text"
 								name="@darkerGray"
-								value="#595959"
+								value="darken(#fff, 65%)"
 								id="darkerGray"
 								class="color"
 								data-validate="color"
@@ -204,7 +210,7 @@
 							<input
 								type="text"
 								name="@darkestGray"
-								value="#404040"
+								value="darken(#fff, 75%)"
 								id="darkestGray"
 								class="color"
 								data-validate="color"
@@ -227,11 +233,28 @@
 							<select
 								name="@defaultUnit"
 								id="defaultUnit"
-								data-validate="selection"
 							>
-								<option value="px">px</option>
 								<option value="em">em</option>
+								<option value="px">px</option>
 								<option value="rem" selected>rem</option>
+							</select>
+							<label for="defaultFontSizeUnit">Default Font Size Unit</label>
+							<select
+								name="@defaultFontSizeUnit"
+								id="defaultFontSizeUnit"
+							>
+								<option value="em">em</option>
+								<option value="px">px</option>
+								<option value="rem" selected>rem</option>
+							</select>
+							<label for="defaultLineHeightUnit">Default Line Height Unit</label>
+							<select
+								name="@defaultLineHeightUnit"
+								id="defaultLineHeightUnit"
+							>
+								<option value="em" selected>em</option>
+								<option value="px">px</option>
+								<option value="rem">rem</option>
 							</select>
 							<label for="rootFontSize">Root Font Size</label>
 							<input
@@ -245,11 +268,10 @@
 							<input
 								type="text"
 								name="@baseColor"
-								value="#404040"
+								value="@darkestGray"
 								id="baseColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="baseFont">Font</label>
 							<input
@@ -271,7 +293,6 @@
 							<select
 								name="@baseFontWeight"
 								id="baseFontWeight"
-								data-validate="selection"
 							>
 								<option value="100">100 &mdash; Thin</option>
 								<option value="200">200 &mdash; Extra Light</option>
@@ -309,51 +330,91 @@
 							<input
 								type="text"
 								name="@linkColor"
-								value="#167da3"
+								value="@primary"
 								id="linkColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="linkColorHover">Hover Color</label>
 							<input
 								type="text"
 								name="@linkColorHover"
-								value="#105b76"
+								value="darken(@linkColor, 10%)"
 								id="linkColorHover"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="linkColorActive">Active Color</label>
 							<input
 								type="text"
 								name="@linkColorActive"
-								value="#0a3849"
+								value="darken(@linkColor, 20%)"
 								id="linkColorActive"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="linkDecoration">Decoration</label>
 							<select
 								name="@linkDecoration"
 								id="linkDecoration"
-								data-validate="selection"
 							>
-								<option value="none" selected>none</option>
-								<option value="underline">underline</option>
+								<option value="none" selected>None</option>
+								<option value="underline">Underline</option>
 							</select>
 							<label for="linkDecorationHover">Hover Decoration</label>
 							<select
 								name="@linkDecorationHover"
 								id="linkDecorationHover"
-								data-validate="selection"
 							>
-								<option value="none">none</option>
-								<option value="underline">underline</option>
-								<option value="false" selected>false</option>
+								<option value="none">None</option>
+								<option value="underline">Underline</option>
+								<option value="false" selected>False</option>
 							</select>
+						</div>
+
+						<h2 class="accordion__toggle" data-ref="toggle">Paragraphs</h2>
+
+						<div class="accordion__content js-hide">
+							<label for="paragraphColor">Color</label>
+							<input
+								type="text"
+								name="@paragraphColor"
+								value="@baseColor"
+								id="paragraphColor"
+								class="color"
+								data-validate="color|false"
+							>
+							<label for="paragraphFontWeight">Font Weight</label>
+							<select
+								name="@paragraphFontWeight"
+								id="paragraphFontWeight"
+							>
+								<option value="100">100 &mdash; Thin</option>
+								<option value="200">200 &mdash; Extra Light</option>
+								<option value="300">300 &mdash; Light</option>
+								<option value="normal" selected>400 &mdash; Normal</option>
+								<option value="500">500 &mdash; Medium</option>
+								<option value="600">600 &mdash; Semi Bold</option>
+								<option value="bold">700 &mdash; Bold</option>
+								<option value="800">800 &mdash; Extra Bold</option>
+								<option value="900">900 &mdash; Black</option>
+							</select>
+							<label for="paragraphLineHeight">Line Height</label>
+							<input
+								type="text"
+								name="@paragraphLineHeight"
+								value="1.7em"
+								id="paragraphLineHeight"
+								data-validate="unit|false"
+							>
+							<label for="paragraphMarginBottom">Margin Bottom</label>
+							<input
+								type="text"
+								name="@paragraphMarginBottom"
+								value="2"
+								id="paragraphMarginBottom"
+								data-validate="unit|false"
+							>
 						</div>
 
 						<h2 class="accordion__toggle" data-ref="toggle">Headings</h2>
@@ -363,11 +424,10 @@
 							<input
 								type="text"
 								name="@headingColor"
-								value="#404040"
+								value="@baseColor"
 								id="headingColor"
 								class="color"
-								data-validate="color"
-								data-useVar="true"
+								data-validate="color|false"
 							>
 							<label for="headingFont">Font</label>
 							<input
@@ -381,7 +441,6 @@
 							<select
 								name="@headingFontWeight"
 								id="headingFontWeight"
-								data-validate="selection"
 							>
 								<option value="100">100 &mdash; Thin</option>
 								<option value="200">200 &mdash; Extra Light</option>
@@ -413,7 +472,7 @@
 							<input
 								type="text"
 								name="@h1"
-								value="4"
+								value="3.6"
 								id="h1"
 								data-validate="unit"
 							>
@@ -421,7 +480,7 @@
 							<input
 								type="text"
 								name="@h2"
-								value="3.6"
+								value="3.2"
 								id="h2"
 								data-validate="unit"
 							>
@@ -429,7 +488,7 @@
 							<input
 								type="text"
 								name="@h3"
-								value="3.2"
+								value="2.8"
 								id="h3"
 								data-validate="unit"
 							>
@@ -437,7 +496,7 @@
 							<input
 								type="text"
 								name="@h4"
-								value="2.8"
+								value="2.4"
 								id="h4"
 								data-validate="unit"
 							>
@@ -445,7 +504,7 @@
 							<input
 								type="text"
 								name="@h5"
-								value="2.4"
+								value="2"
 								id="h5"
 								data-validate="unit"
 							>
@@ -453,56 +512,8 @@
 							<input
 								type="text"
 								name="@h6"
-								value="2"
+								value="1.6"
 								id="h6"
-								data-validate="unit"
-							>
-						</div>
-
-						<h2 class="accordion__toggle" data-ref="toggle">Paragraphs</h2>
-
-						<div class="accordion__content js-hide">
-							<label for="paragraphColor">Color</label>
-							<input
-								type="text"
-								name="@paragraphColor"
-								value="#404040"
-								id="paragraphColor"
-								class="color"
-								data-validate="color"
-								data-useVar="true"
-
-							>
-							<label for="paragraphFontWeight">Font Weight</label>
-							<select
-								name="@paragraphFontWeight"
-								id="paragraphFontWeight"
-								data-validate="selection"
-							>
-								<option value="100">100 &mdash; Thin</option>
-								<option value="200">200 &mdash; Extra Light</option>
-								<option value="300">300 &mdash; Light</option>
-								<option value="normal" selected>400 &mdash; Normal</option>
-								<option value="500">500 &mdash; Medium</option>
-								<option value="600">600 &mdash; Semi Bold</option>
-								<option value="bold">700 &mdash; Bold</option>
-								<option value="800">800 &mdash; Extra Bold</option>
-								<option value="900">900 &mdash; Black</option>
-							</select>
-							<label for="paragraphLineHeight">Line Height</label>
-							<input
-								type="text"
-								name="@paragraphLineHeight"
-								value="1.8em"
-								id="paragraphLineHeight"
-								data-validate="unit"
-							>
-							<label for="paragraphMarginBottom">Margin Bottom</label>
-							<input
-								type="text"
-								name="@paragraphMarginBottom"
-								value="2"
-								id="paragraphMarginBottom"
 								data-validate="unit"
 							>
 						</div>
@@ -525,6 +536,14 @@
 								value="'sprite.png'"
 								id="spriteFilename"
 								data-validate="file"
+							>
+							<label for="retinaSuffix">Retina Suffix</label>
+							<input
+								type="text"
+								name="@retinaSuffix"
+								value="-2x"
+								id="retinaSuffix"
+								data-validate="string"
 							>
 							<label for="retinaSpriteWidth">Retina Sprite Width</label>
 							<input
@@ -561,14 +580,6 @@
 								id="imageMarginSide"
 								data-validate="unit"
 							>
-							<label for="retinaSuffix">Retina Suffix</label>
-							<input
-								type="text"
-								name="@retinaSuffix"
-								value="-2x"
-								id="retinaSuffix"
-								data-validate="string"
-							>
 
 							<h3 class="accordion__content-subheading">Figures</h3>
 
@@ -576,11 +587,10 @@
 							<input
 								type="text"
 								name="@figureBorderColor"
-								value="#bfbfbf"
+								value="false"
 								id="figureBorderColor"
 								class="color"
 								data-validate="color|false"
-								data-useVar="true"
 							>
 							<label for="figureRounded">Rounded</label>
 							<input
@@ -594,9 +604,9 @@
 							<input
 								type="text"
 								name="@figurePadding"
-								value="4"
+								value="@blockMarginBottom"
 								id="figurePadding"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 
 							<h3 class="accordion__content-subheading">Figure Captions</h3>
@@ -605,27 +615,25 @@
 							<input
 								type="text"
 								name="@figCaptionColor"
-								value="#737373"
+								value="@darkGray"
 								id="figCaptionColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="figCaptionFontStyle">Font Style</label>
 							<select
 								name="@figCaptionFontStyle"
 								id="figCaptionFontStyle"
-								data-validate="selection"
 							>
-								<option value="normal">normal</option>
-								<option value="italic" selected>italic</option>
-								<option value="oblique">oblique</option>
+								<option value="italic" selected>Ttalic</option>
+								<option value="normal">Normal</option>
+								<option value="oblique">Oblique</option>
 							</select>
 							<label for="figCaptionLineHeight">Line Height</label>
 							<input
 								type="text"
 								name="@figCaptionLineHeight"
-								value="1.8em"
+								value="@paragraphLineHeight"
 								id="figCaptionLineHeight"
 								data-validate="unit"
 							>
@@ -661,18 +669,13 @@
 								id="fontPath"
 								data-validate="path"
 							>
-							<label for="woff2Enabled">WOFF 2 Enabled</label>
+							<label for="woff2Enabled">WOFF2 Enabled</label>
 							<select
 								name="@woff2Enabled"
 								id="woff2Enabled"
-								data-validate="selection"
 							>
-								<option value="true">
-									true
-								</option>
-								<option value="false" selected>
-									false
-								</option>
+								<option value="true" selected>Yes</option>
+								<option value="false">No</option>
 							</select>
 						</div>
 
@@ -683,17 +686,16 @@
 							<input
 								type="text"
 								name="@listColor"
-								value="#404040"
+								value="@paragraphColor"
 								id="listColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="listLineHeight">Line Height</label>
 							<input
 								type="text"
 								name="@listLineHeight"
-								value="1.8em"
+								value="@paragraphLineHeight"
 								id="listLineHeight"
 								data-validate="unit"
 							>
@@ -701,7 +703,7 @@
 							<input
 								type="text"
 								name="@listMarginBottom"
-								value="2"
+								value="@paragraphMarginBottom"
 								id="listMarginBottom"
 								data-validate="unit"
 							>
@@ -717,32 +719,30 @@
 							<select
 								name="@listBulletStyle"
 								id="listBulletStyle"
-								data-validate="selection"
 							>
-								<option value="disc" selected>disc</option>
+								<option value="armenian">armenian</option>
 								<option value="circle">circle</option>
-								<option value="square">square</option>
 								<option value="decimal">decimal</option>
 								<option value="decimal-leading-zero">decimal-leading-zero</option>
-								<option value="lower-roman">lower-roman</option>
-								<option value="upper-roman">upper-roman</option>
-								<option value="lower-greek">lower-greek</option>
-								<option value="lower-latin">lower-latin</option>
-								<option value="upper-latin">upper-latin</option>
-								<option value="armenian">armenian</option>
+								<option value="disc" selected>disc</option>
 								<option value="georgian">georgian</option>
 								<option value="lower-alpha">lower-alpha</option>
-								<option value="upper-alpha">upper-alpha</option>
+								<option value="lower-greek">lower-greek</option>
+								<option value="lower-latin">lower-latin</option>
+								<option value="lower-roman">lower-roman</option>
 								<option value="none">none</option>
+								<option value="square">square</option>
+								<option value="upper-alpha">upper-alpha</option>
+								<option value="upper-latin">upper-latin</option>
+								<option value="upper-roman">upper-roman</option>
 							</select>
 							<label for="listBulletPosition">Bullet Position</label>
 							<select
 								name="@listBulletPosition"
 								id="listBulletPosition"
-								data-validate="selection"
 							>
-								<option value="inside" selected>inside</option>
-								<option value="outside">outside</option>
+								<option value="inside" selected>Inside</option>
+								<option value="outside">Outside</option>
 							</select>
 							<label for="nestedListMarginLeft">Nested List Left Margin</label>
 							<input
@@ -767,7 +767,7 @@
 							<input
 								type="text"
 								name="@dlMarginBottom"
-								value="4"
+								value="@blockMarginBottom"
 								id="dlMarginBottom"
 								data-validate="unit"
 							>
@@ -778,17 +778,16 @@
 							<input
 								type="text"
 								name="@dtColor"
-								value="#595959"
+								value="@darkerGray"
 								id="dtColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="dtFont">Font</label>
 							<input
 								type="text"
 								name="@dtFont"
-								value="Tahoma, Geneva, sans-serif"
+								value="@headingFont"
 								id="dtFont"
 								data-validate="font"
 							>
@@ -815,17 +814,16 @@
 							<input
 								type="text"
 								name="@ddColor"
-								value="#a6a6a6"
+								value="@gray"
 								id="ddColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="ddFont">Font</label>
 							<input
 								type="text"
 								name="@ddFont"
-								value="Arial, Helvetica, sans-serif"
+								value="@baseFont"
 								id="ddFont"
 								data-validate="font"
 							>
@@ -833,7 +831,7 @@
 							<input
 								type="text"
 								name="@ddFontSize"
-								value="1.6"
+								value="@baseFontSize"
 								id="ddFontSize"
 								data-validate="unit"
 							>
@@ -843,7 +841,7 @@
 								name="@ddMarginBottom"
 								value="1"
 								id="ddMarginBottom"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 						</div>
 
@@ -854,17 +852,16 @@
 							<input
 								type="text"
 								name="@quoteColor"
-								value="#404040"
+								value="@darkestGray"
 								id="quoteColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="quoteFont">Font</label>
 							<input
 								type="text"
 								name="@quoteFont"
-								value="Georgia, Times"
+								value="Georgia, Times, serif"
 								id="quoteFont"
 								data-validate="font"
 							>
@@ -880,17 +877,15 @@
 							<select
 								name="@quoteFontStyle"
 								id="quoteFontStyle"
-								data-validate="selection"
 							>
-								<option value="normal">normal</option>
 								<option value="italic" selected>italic</option>
+								<option value="normal">normal</option>
 								<option value="oblique">oblique</option>
 							</select>
 							<label for="quoteFontWeight">Font Weight</label>
 							<select
 								name="@quoteFontWeight"
-								id="quotehFontWeight"
-								data-validate="selection"
+								id="quoteFontWeight"
 							>
 								<option value="100">100 &mdash; Thin</option>
 								<option value="200">200 &mdash; Extra Light</option>
@@ -910,31 +905,13 @@
 								id="quoteLineHeight"
 								data-validate="unit"
 							>
-							<label for="quoteBorderColor">Border Color</label>
-							<input
-								type="text"
-								name="@quoteBorderColor"
-								value="#a6a6a6"
-								id="quoteBorderColor"
-								class="color"
-								data-validate="color"
-								data-useVar="true"
-							>
-							<label for="quoteBorderWidth">Border Width</label>
-							<input
-								type="text"
-								name="@quoteBorderWidth"
-								value="5px"
-								id="quoteBorderWidth"
-								data-validate="unit|false"
-							>
 							<label for="quotePaddingHorizontal">Horizontal Padding</label>
 							<input
 								type="text"
 								name="@quotePaddingHorizontal"
 								value="2em"
 								id="quotePaddingHorizontal"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 							<label for="quotePaddingVertical">Vertical Padding</label>
 							<input
@@ -942,7 +919,7 @@
 								name="@quotePaddingVertical"
 								value="1em"
 								id="quotePaddingVertical"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 
 							<h3 class="accordion__content-subheading">Cites</h3>
@@ -951,17 +928,16 @@
 							<input
 								type="text"
 								name="@citeColor"
-								value="#a6a6a6"
+								value="@gray"
 								id="citeColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="citeFont">Font</label>
 							<input
 								type="text"
 								name="@citeFont"
-								value="Arial, Helvetica, sans-serif"
+								value="@baseFont"
 								id="citeFont"
 								data-validate="font"
 							>
@@ -977,17 +953,15 @@
 							<select
 								name="@citeFontStyle"
 								id="citeFontStyle"
-								data-validate="selection"
 							>
-								<option value="normal" selected>normal</option>
 								<option value="italic">italic</option>
+								<option value="normal" selected>normal</option>
 								<option value="oblique">oblique</option>
 							</select>
 							<label for="citeFontWeight">Font Weight</label>
 							<select
 								name="@citeFontWeight"
 								id="citeFontWeight"
-								data-validate="selection"
 							>
 								<option value="100">100 &mdash; Thin</option>
 								<option value="200">200 &mdash; Extra Light</option>
@@ -1032,11 +1006,10 @@
 							<input
 								type="text"
 								name="@ruleColor"
-								value="#bfbfbf"
+								value="@lightGray"
 								id="ruleColor"
 								class="color"
-								data-validate="color"
-								data-useVar="true"
+								data-validate="color|false"
 							>
 							<label for="ruleHeight">Height</label>
 							<input
@@ -1050,18 +1023,17 @@
 							<select
 								name="@ruleStyle"
 								id="ruleStyle"
-								data-validate="selection"
 							>
-								<option value="none">none</option>
-								<option value="dotted">dotted</option>
-								<option value="dashed">dashed</option>
-								<option value="solid" selected>solid</option>
+								<option value="dashed">Dashed</option>
+								<option value="dotted">Dotted</option>
+								<option value="none">None</option>
+								<option value="solid" selected>Solid</option>
 							</select>
 							<label for="ruleMargin">Margin</label>
 							<input
 								type="text"
 								name="@ruleMargin"
-								value="4"
+								value="@blockMarginBottom"
 								id="ruleMargin"
 								data-validate="unit"
 							>
@@ -1074,17 +1046,16 @@
 							<input
 								type="text"
 								name="@addressColor"
-								value="#404040"
+								value="@darkestGray"
 								id="addressColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="addressFont">Font</label>
 							<input
 								type="text"
 								name="@addressFont"
-								value="Arial, Helvetica, sans-serif"
+								value="@baseFont"
 								id="addressFont"
 								data-validate="font"
 							>
@@ -1092,7 +1063,7 @@
 							<input
 								type="text"
 								name="@addressFontSize"
-								value="1.6"
+								value="@baseFontSize"
 								id="addressFontSize"
 								data-validate="unit"
 							>
@@ -1100,7 +1071,6 @@
 							<select
 								name="@addressFontWeight"
 								id="addressFontWeight"
-								data-validate="selection"
 							>
 								<option value="100">100 &mdash; Thin</option>
 								<option value="200">200 &mdash; Extra Light</option>
@@ -1116,17 +1086,16 @@
 							<select
 								name="@addressFontStyle"
 								id="addressFontStyle"
-								data-validate="selection"
 							>
-								<option value="normal" selected>normal</option>
-								<option value="italic">italic</option>
-								<option value="oblique">oblique</option>
+								<option value="italic">Italic</option>
+								<option value="normal" selected>Normal</option>
+								<option value="oblique">Oblique</option>
 							</select>
 							<label for="addressLineHeight">Line Height</label>
 							<input
 								type="text"
 								name="@addressLineHeight"
-								value="1.8em"
+								value="@paragraphLineHeight"
 								id="addressLineHeight"
 								data-validate="unit"
 							>
@@ -1139,7 +1108,7 @@
 							<input
 								type="text"
 								name="@smallFontSize"
-								value="0.8em"
+								value=".8em"
 								id="smallFontSize"
 								data-validate="unit"
 							>
@@ -1147,17 +1116,16 @@
 							<input
 								type="text"
 								name="@selectionColor"
-								value="#fff"
+								value="@white"
 								id="selectionColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="selectionBackground">Selection Background</label>
 							<input
 								type="text"
 								name="@selectionBackground"
-								value="#167da3"
+								value="@linkColor"
 								id="selectionBackground"
 								class="color"
 								data-validate="color"
@@ -1166,7 +1134,6 @@
 							<select
 								name="@boldFontWeight"
 								id="boldFontWeight"
-								data-validate="selection"
 							>
 								<option value="100">100 &mdash; Thin</option>
 								<option value="200">200 &mdash; Extra Light</option>
@@ -1182,7 +1149,6 @@
 							<select
 								name="@normalFontWeight"
 								id="normalFontWeight"
-								data-validate="selection"
 							>
 								<option value="100">100 &mdash; Thin</option>
 								<option value="200">200 &mdash; Extra Light</option>
@@ -1198,11 +1164,10 @@
 							<input
 								type="text"
 								name="@markColor"
-								value="#404040"
+								value="@baseColor"
 								id="markColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="markBackground">Mark Background</label>
 							<input
@@ -1212,14 +1177,29 @@
 								id="markBackground"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
+							>
+							<label for="defaultRadius">Default Radius</label>
+							<input
+								type="text"
+								name="@defaultRadius"
+								value="3px"
+								id="defaultRadius"
+								data-validate="unit|false"
 							>
 							<label for="defaultOpacity">Default Opacity</label>
 							<input
 								type="text"
 								name="@defaultOpacity"
-								value="0.2"
+								value=".2"
 								id="defaultOpacity"
+								data-validate="unit"
+							>
+							<label for="defaultDuration">Default Duration</label>
+							<input
+								type="text"
+								name="@defaultDuration"
+								value=".2s"
+								id="defaultDuration"
 								data-validate="unit"
 							>
 							<label for="defaultTiming">Default Timing</label>
@@ -1230,23 +1210,14 @@
 								id="defaultTiming"
 								data-validate="string"
 							>
-							<label for="defaultDuration">Default Duration</label>
-							<input
-								type="text"
-								name="@defaultDuration"
-								value="0.2s"
-								id="defaultDuration"
-								data-validate="unit"
-							>
 							<label for="abbrUnderline">Abbreviation Underline</label>
 							<select
 								name="@abbrUnderline"
 								id="abbrUnderline"
-								data-validate="selection"
 							>
-								<option value="dotted" selected>dotted</option>
-								<option value="solid">solid</option>
-								<option value="none">none</option>
+								<option value="dotted" selected>Dotted</option>
+								<option value="none">None</option>
+								<option value="solid">Solid</option>
 							</select>
 						</div>
 
@@ -1257,11 +1228,10 @@
 							<input
 								type="text"
 								name="@codeColor"
-								value="#404040"
+								value="@darkestGray"
 								id="codeColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="codeFont">Font</label>
 							<input
@@ -1275,7 +1245,7 @@
 							<input
 								type="text"
 								name="@codeFontSize"
-								value="1.6"
+								value="@baseFontSize"
 								id="codeFontSize"
 								data-validate="unit"
 							>
@@ -1291,11 +1261,10 @@
 							<input
 								type="text"
 								name="@codeBackground"
-								value="#e6e6e6"
+								value="@lighterGray"
 								id="codeBackground"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="codeBorderColor">Border Color</label>
 							<input
@@ -1305,31 +1274,30 @@
 								id="codeBorderColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="codeRounded">Rounded</label>
 							<input
 								type="text"
 								name="@codeRounded"
-								value="3px"
+								value="false"
 								id="codeRounded"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 							<label for="codePaddingHorizontal">Horizontal Padding</label>
 							<input
 								type="text"
 								name="@codePaddingHorizontal"
-								value="0.5em"
+								value=".5em"
 								id="codePaddingHorizontal"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 							<label for="codePaddingVertical">Vertical Padding</label>
 							<input
 								type="text"
 								name="@codePaddingVertical"
-								value="0.2em"
+								value=".2em"
 								id="codePaddingVertical"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 
 						<h3 class="accordion__content-subheading">Code Blocks</h3>
@@ -1338,17 +1306,16 @@
 							<input
 								type="text"
 								name="@codeBlockColor"
-								value="#f2f2f2"
+								value="@lightestGray"
 								id="codeBlockColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="codeBlockFont">Font</label>
 							<input
 								type="text"
 								name="@codeBlockFont"
-								value="monospace"
+								value="@codeFont"
 								id="codeBlockFont"
 								data-validate="font"
 							>
@@ -1364,7 +1331,7 @@
 							<input
 								type="text"
 								name="@codeBlockLineHeight"
-								value="1.8em"
+								value="@paragraphLineHeight"
 								id="codeBlockLineHeight"
 								data-validate="unit"
 							>
@@ -1374,24 +1341,21 @@
 								name="@codeBlockTabSize"
 								value="4"
 								id="codeBlockTabSize"
-								data-validate="unit"
+								data-validate="number"
 							>
 							<label for="codeBlockWrap">Wrap</label>
 							<select
 								name="@codeBlockWrap"
 								id="codeBlockWrap"
-								data-validate="selection"
 							>
-								<option value="false" selected>
-									false
-								</option>
-								<option value="true">true</option>
+								<option value="false" selected>No</option>
+								<option value="true">Yes</option>
 							</select>
 							<label for="codeBlockMarginBottom">Margin Bottom</label>
 							<input
 								type="text"
 								name="@codeBlockMarginBottom"
-								value="4"
+								value="@blockMarginBottom"
 								id="codeBlockMarginBottom"
 								data-validate="unit"
 							>
@@ -1399,17 +1363,16 @@
 							<input
 								type="text"
 								name="@codeBlockBackground"
-								value="#404040"
+								value="@darkestGray"
 								id="codeBlockBackground"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="codeBlockBorderColor">Border Color</label>
 							<input
 								type="text"
 								name="@codeBlockBorderColor"
-								value="false"
+								value="@codeBorderColor"
 								id="codeBlockBorderColor"
 								class="color"
 								data-validate="color|false"
@@ -1418,7 +1381,7 @@
 							<input
 								type="text"
 								name="@codeBlockRounded"
-								value="3px"
+								value="false"
 								id="codeBlockRounded"
 								data-validate="unit|false"
 							>
@@ -1428,7 +1391,7 @@
 								name="@codeBlockPaddingHorizontal"
 								value="2"
 								id="codeBlockPaddingHorizontal"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 							<label for="codeBlockPaddingVertical">Padding Vertical</label>
 							<input
@@ -1436,7 +1399,7 @@
 								name="@codeBlockPaddingVertical"
 								value="1.4"
 								id="codeBlockPaddingVertical"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 						</div>
 
@@ -1445,39 +1408,20 @@
 						<div class="accordion__content js-hide">
 							<h3 class="accordion__content-subheading">Inputs</h3>
 
-							<label for="inputEnableInnerShadow">Enable Inner Shadow</label>
-							<select
-								name="@inputEnableInnerShadow"
-								id="inputEnableInnerShadow"
-								data-validate="selection"
-							>
-								<option value="true">true</option>
-								<option value="false" selected>false</option>
-							</select>
-							<label for="inputEnableFocusOuterShadow">Enable Focus Outer Shadow</label>
-							<select
-								name="@inputEnableFocusOuterShadow"
-								id="inputEnableFocusOuterShadow"
-								data-validate="selection"
-							>
-								<option value="true" selected>true</option>
-								<option value="false">false</option>
-							</select>
 							<label for="inputColor">Color</label>
 							<input
 								type="text"
 								name="@inputColor"
-								value="#595959"
+								value="@darkerGray"
 								id="inputColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputFont">Font</label>
 							<input
 								type="text"
 								name="@inputFont"
-								value="Arial, Helvetica, sans-serif"
+								value="@baseFont"
 								id="inputFont"
 								data-validate="font"
 							>
@@ -1485,15 +1429,30 @@
 							<input
 								type="text"
 								name="@inputFontSize"
-								value="1.6"
+								value="@baseFontSize"
 								id="inputFontSize"
 								data-validate="unit"
 							>
+							<label for="inputFontWeight">Font Weight</label>
+							<select
+								name="@inputFontWeight"
+								id="inputFontWeight"
+							>
+								<option value="100">100 &mdash; Thin</option>
+								<option value="200">200 &mdash; Extra Light</option>
+								<option value="300">300 &mdash; Light</option>
+								<option value="normal" selected>400 &mdash; Normal</option>
+								<option value="500">500 &mdash; Medium</option>
+								<option value="600">600 &mdash; Semi Bold</option>
+								<option value="bold">700 &mdash; Bold</option>
+								<option value="800">800 &mdash; Extra Bold</option>
+								<option value="900">900 &mdash; Black</option>
+							</select>
 							<label for="inputBackground">Background</label>
 							<input
 								type="text"
 								name="@inputBackground"
-								value="#fff"
+								value="@white"
 								id="inputBackground"
 								class="color"
 								data-validate="color"
@@ -1502,31 +1461,28 @@
 							<input
 								type="text"
 								name="@inputBorderColor"
-								value="#bfbfbf"
+								value="@lighterGray"
 								id="inputBorderColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderColorHover">Hover Border Color</label>
 							<input
 								type="text"
 								name="@inputBorderColorHover"
-								value="#a6a6a6"
+								value="darken(@inputBorderColor, 10%)"
 								id="inputBorderColorHover"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderColorFocus">Focus Border Color</label>
 							<input
 								type="text"
 								name="@inputBorderColorFocus"
-								value="#8c8c8c"
+								value="darken(@inputBorderColor, 20%)"
 								id="inputBorderColorFocus"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderWidth">Border Width</label>
 							<input
@@ -1540,7 +1496,7 @@
 							<input
 								type="text"
 								name="@inputRounded"
-								value="3px"
+								value="@defaultRadius"
 								id="inputRounded"
 								data-validate="unit|false"
 							>
@@ -1564,7 +1520,7 @@
 							<input
 								type="text"
 								name="@inputPaddingHorizontal"
-								value="0.8"
+								value="1.6"
 								id="inputPaddingHorizontal"
 								data-validate="unit"
 							>
@@ -1572,7 +1528,7 @@
 							<input
 								type="text"
 								name="@inputPaddingVertical"
-								value="0.4"
+								value="1"
 								id="inputPaddingVertical"
 								data-validate="unit"
 							>
@@ -1588,11 +1544,10 @@
 							<input
 								type="text"
 								name="@inputPlaceholderColor"
-								value="#bfbfbf"
+								value="lighten(@inputColor, 40%)"
 								id="inputPlaceholderColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 
 							<h3 class="accordion__content-subheading">Invalid Inputs</h3>
@@ -1601,21 +1556,19 @@
 							<input
 								type="text"
 								name="@inputColorInvalid"
-								value="#781111"
+								value="darken(@inputBorderColorInvalid, 10%)"
 								id="inputColorInvalid"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBackgroundInvalid">Background</label>
 							<input
 								type="text"
 								name="@inputBackgroundInvalid"
-								value="#fff"
+								value="@white"
 								id="inputBackgroundInvalid"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderColorInvalid">Border Color</label>
 							<input
@@ -1625,27 +1578,24 @@
 								id="inputBorderColorInvalid"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderColorInvalidHover">Hover Border Color</label>
 							<input
 								type="text"
 								name="@inputBorderColorInvalidHover"
-								value="#781111"
+								value="darken(@inputBorderColorInvalid, 10%)"
 								id="inputBorderColorInvalidHover"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderColorInvalidFocus">Focus Border Color</label>
 							<input
 								type="text"
 								name="@inputBorderColorInvalidFocus"
-								value="#4b0b0b"
+								value="darken(@inputBorderColorInvalid, 20%)"
 								id="inputBorderColorInvalidFocus"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderWidthInvalid">Border Width</label>
 							<input
@@ -1662,51 +1612,46 @@
 							<input
 								type="text"
 								name="@inputColorRequired"
-								value="#737373"
+								value="darken(@inputBorderColorRequired, 10%)"
 								id="inputColorRequired"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBackgroundRequired">Background</label>
 							<input
 								type="text"
 								name="@inputBackgroundRequired"
-								value="#fff"
+								value="@white"
 								id="inputBackgroundRequired"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderColorRequired">Border Color</label>
 							<input
 								type="text"
 								name="@inputBorderColorRequired"
-								value="#737373"
+								value="@darkGray"
 								id="inputBorderColorRequired"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderColorRequiredHover">Hover Border Color</label>
 							<input
 								type="text"
 								name="@inputBorderColorRequiredHover"
-								value="#595959"
+								value="darken(@inputBorderColorRequired, 10%)"
 								id="inputBorderColorRequiredHover"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderColorRequiredFocus">Focus Border Color</label>
 							<input
 								type="text"
 								name="@inputBorderColorRequiredFocus"
-								value="#404040"
+								value="darken(@inputBorderColorRequired, 20%)"
 								id="inputBorderColorRequiredFocus"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderWidthRequired">Border Width</label>
 							<input
@@ -1723,21 +1668,19 @@
 							<input
 								type="text"
 								name="@inputColorDisabled"
-								value="#737373"
+								value="@darkGray"
 								id="inputColorDisabled"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBackgroundDisabled">Background</label>
 							<input
 								type="text"
 								name="@inputBackgroundDisabled"
-								value="#f2f2f2"
+								value="@lightestGray"
 								id="inputBackgroundDisabled"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="inputBorderWidthDisabled">Border Width</label>
 							<input
@@ -1751,11 +1694,10 @@
 							<select
 								name="@inputCursorDisabled"
 								id="inputCursorDisabled"
-								data-validate="selection"
 							>
-								<option value="auto">auto</option>
-								<option value="default">default</option>
-								<option value="not-allowed" selected>not-allowed</option>
+								<option value="auto">Auto</option>
+								<option value="default">Default</option>
+								<option value="not-allowed" selected>Not-Allowed</option>
 							</select>
 
 							<h3 class="accordion__content-subheading">Selects</h3>
@@ -1783,7 +1725,7 @@
 							<input
 								type="text"
 								name="@checkboxMarginRight"
-								value="0.5"
+								value=".5"
 								id="checkboxMarginRight"
 								data-validate="unit"
 							>
@@ -1810,18 +1752,17 @@
 							<select
 								name="@textareaResize"
 								id="textareaResize"
-								data-validate="selection"
 							>
-								<option value="none">none</option>
-								<option value="horizontal">horizontal</option>
-								<option value="vertical" selected>vertical</option>
-								<option value="both">both</option>
+								<option value="both">Both</option>
+								<option value="horizontal">Horizontal</option>
+								<option value="none">None</option>
+								<option value="vertical" selected>Vertical</option>
 							</select>
 							<label for="textareaPaddingHorizontal">Padding Horizontal</label>
 							<input
 								type="text"
 								name="@textareaPaddingHorizontal"
-								value="1"
+								value="1.6"
 								id="textareaPaddingHorizontal"
 								data-validate="unit"
 							>
@@ -1840,17 +1781,16 @@
 							<input
 								type="text"
 								name="@legendColor"
-								value="#595959"
+								value="@darkerGray"
 								id="legendColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="legendFont">Font</label>
 							<input
 								type="text"
 								name="@legendFont"
-								value="Arial, Helvetica, sans-serif"
+								value="@baseFont"
 								id="legendFont"
 								data-validate="font"
 							>
@@ -1868,7 +1808,7 @@
 								name="@legendMarginBottom"
 								value="1.4"
 								id="legendMarginBottom"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 
 							<h3 class="accordion__content-subheading">Labels</h3>
@@ -1877,7 +1817,6 @@
 							<select
 								name="@labelFontWeight"
 								id="labelFontWeight"
-								data-validate="selection"
 							>
 								<option value="100">100 &mdash; Thin</option>
 								<option value="200">200 &mdash; Extra Light</option>
@@ -1901,9 +1840,9 @@
 							<input
 								type="text"
 								name="@labelMarginBottom"
-								value="0.4"
+								value=".4"
 								id="labelMarginBottom"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 							<label for="labelMarginRight">Margin Right</label>
 							<input
@@ -1911,7 +1850,7 @@
 								name="@labelMarginRight"
 								value="1"
 								id="labelMarginRight"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 						</div>
 
@@ -1922,26 +1861,24 @@
 							<select
 								name="@buttonStyled"
 								id="buttonStyled"
-								data-validate="selection"
 							>
-								<option value="true" selected>true</option>
-								<option value="false">false</option>
+								<option value="true" selected>Yes</option>
+								<option value="false">No</option>
 							</select>
 							<label for="buttonColor">Color</label>
 							<input
 								type="text"
 								name="@buttonColor"
-								value="#ffffff"
+								value="@white"
 								id="buttonColor"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="buttonFont">Font</label>
 							<input
 								type="text"
 								name="@buttonFont"
-								value="Arial, Helvetica, sans-serif"
+								value="@baseFont"
 								id="buttonFont"
 								data-validate="font"
 							>
@@ -1949,7 +1886,7 @@
 							<input
 								type="text"
 								name="@buttonFontSize"
-								value="1.6"
+								value="@baseFontSize"
 								id="buttonFontSize"
 								data-validate="unit"
 							>
@@ -1957,7 +1894,6 @@
 							<select
 								name="@buttonFontWeight"
 								id="buttonFontWeight"
-								data-validate="selection"
 							>
 								<option value="100">100 &mdash; Thin</option>
 								<option value="200">200 &mdash; Extra Light</option>
@@ -1981,7 +1917,7 @@
 							<input
 								type="text"
 								name="@buttonPaddingVertical"
-								value="1.4"
+								value="1.3"
 								id="buttonPaddingVertical"
 								data-validate="unit"
 							>
@@ -1989,45 +1925,15 @@
 							<input
 								type="text"
 								name="@buttonMarginBottom"
-								value="0"
+								value="false"
 								id="buttonMarginBottom"
-								data-validate="unit"
-							>
-							<label for="buttonBevelEnabled">Bevel Enabled</label>
-							<select
-								name="@buttonBevelEnabled"
-								id="buttonBevelEnabled"
-								data-validate="selection"
-							>
-								<option value="false" selected>
-									false
-								</option>
-								<option value="true">true</option>
-							</select>
-							<label for="buttonBevelColor">Bevel Color</label>
-							<select
-								name="@buttonBevelColor"
-								id="buttonBevelColor"
-								data-validate="selection"
-							>
-								<option value="light" selected>
-									light
-								</option>
-								<option value="dark">dark</option>
-							</select>
-							<label for="buttonBevelOpacity">Bevel Opacity</label>
-							<input
-								type="text"
-								name="@buttonBevelOpacity"
-								value="30%"
-								id="buttonBevelOpacity"
-								data-validate="unit"
+								data-validate="unit|false"
 							>
 							<label for="buttonRounded">Rounded</label>
 							<input
 								type="text"
 								name="@buttonRounded"
-								value="3px"
+								value="@defaultRadius"
 								id="buttonRounded"
 								data-validate="unit|false"
 							>
@@ -2035,40 +1941,36 @@
 							<select
 								name="@buttonTransitionEnabled"
 								id="buttonTransitionEnabled"
-								data-validate="selection"
 							>
-								<option value="true" selected>true</option>
-								<option value="false">false</option>
+								<option value="true">Yes</option>
+								<option value="false" selected>No</option>
 							</select>
 							<label for="buttonBackground">Background</label>
 							<input
 								type="text"
 								name="@buttonBackground"
-								value="#737373"
+								value="@darkGray"
 								id="buttonBackground"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="buttonBackgroundHover">Hover Background</label>
 							<input
 								type="text"
 								name="@buttonBackgroundHover"
-								value="#666666"
+								value="darken(@buttonBackground, 5%)"
 								id="buttonBackgroundHover"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="buttonBackgroundActive">Active Background</label>
 							<input
 								type="text"
 								name="@buttonBackgroundActive"
-								value="#595959"
+								value="darken(@buttonBackground, 10%)"
 								id="buttonBackgroundActive"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="buttonBorderColor">Border Color</label>
 							<input
@@ -2086,7 +1988,7 @@
 							<input
 								type="text"
 								name="@coloredButtonClassModifier"
-								value="-colored"
+								value="button-colored"
 								id="coloredButtonClassModifier"
 								data-validate="string"
 							>
@@ -2095,50 +1997,45 @@
 								class="color"
 								type="text"
 								name="@coloredButtonColor"
-								value="#fff"
+								value="@white"
 								id="coloredButtonColor"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="coloredButtonBackground">Background</label>
 							<input
 								class="color"
 								type="text"
 								name="@coloredButtonBackground"
-								value="#006e8c"
+								value="@linkColor"
 								id="coloredButtonBackground"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="coloredButtonBackgroundHover">Hover Background</label>
 							<input
 								class="color"
 								type="text"
 								name="@coloredButtonBackgroundHover"
-								value="#005a73"
+								value="darken(@coloredButtonBackground, 5%)"
 								id="coloredButtonBackgroundHover"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="coloredButtonBackgroundActive">Active Background</label>
 							<input
 								class="color"
 								type="text"
 								name="@coloredButtonBackgroundActive"
-								value="#004659"
+								value="darken(@coloredButtonBackground, 10%)"
 								id="coloredButtonBackgroundActive"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="coloredButtonBorderColor">Border Color</label>
 							<input
 								class="color"
 								type="text"
 								name="@coloredButtonBorderColor"
-								value="#005a73"
+								value="false"
 								id="coloredButtonBorderColor"
-								data-validate="color"
-								data-useVar="true"
+								data-validate="color|false"
 							>
 
 							<h3 class="accordion__content-subheading">Disabled Buttons</h3>
@@ -2156,40 +2053,36 @@
 								class="color"
 								type="text"
 								name="@disabledButtonColor"
-								value="#737373"
+								value="@darkGray"
 								id="disabledButtonColor"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="disabledButtonBackground">Background</label>
 							<input
 								class="color"
 								type="text"
 								name="@disabledButtonBackground"
-								value="#bfbfbf"
+								value="@lightGray"
 								id="disabledButtonBackground"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="disabledButtonBorderColor">Border Color</label>
 							<input
 								class="color"
 								type="text"
 								name="@disabledButtonBorderColor"
-								value="#b3b3b3"
+								value="false"
 								id="disabledButtonBorderColor"
-								data-validate="color"
-								data-useVar="true"
+								data-validate="color|false"
 							>
 							<label for="disabledButtonCursor">Cursor</label>
 							<select
 								name="@disabledButtonCursor"
 								id="disabledButtonCursor"
-								data-validate="selection"
 							>
-								<option value="auto">auto</option>
-								<option value="default">default</option>
-								<option value="not-allowed" selected>not-allowed</option>
+								<option value="auto">Auto</option>
+								<option value="default">Default</option>
+								<option value="not-allowed" selected>Not-Allowed</option>
 							</select>
 						</div>
 
@@ -2200,28 +2093,25 @@
 							<select
 								name="@tableStyled"
 								id="tableStyled"
-								data-validate="selection"
 							>
-								<option value="true" selected>true</option>
-								<option value="false">false</option>
+								<option value="true" selected>Yes</option>
+								<option value="false">No</option>
 							</select>
 							<label for="tableBordered">Bordered</label>
 							<select
 								name="@tableBordered"
 								id="tableBordered"
-								data-validate="selection"
 							>
-								<option value="true" selected>true</option>
-								<option value="false">false</option>
+								<option value="true">Yes</option>
+								<option value="false" selected>No</option>
 							</select>
 							<label for="tableStriped">Striped</label>
 							<select
 								name="@tableStriped"
 								id="tableStriped"
-								data-validate="selection"
 							>
-								<option value="true" selected>true</option>
-								<option value="false">false</option>
+								<option value="true" selected>Yes</option>
+								<option value="false">No</option>
 							</select>
 							<label for="tableFontSize">Font Size</label>
 							<input
@@ -2254,7 +2144,7 @@
 							<input
 								type="text"
 								name="@tableCellLineHeight"
-								value="1.8em"
+								value="@paragraphLineHeight"
 								id="tableCellLineHeight"
 								data-validate="unit"
 							>
@@ -2262,17 +2152,16 @@
 							<input
 								type="text"
 								name="@tableCellBorderColor"
-								value="#bfbfbf"
+								value="@lighterGray"
 								id="tableCellBorderColor"
 								class="color"
-								data-validate="color"
-								data-useVar="true"
+								data-validate="color|false"
 							>
 							<label for="tableCellPaddingHorizontal">Horizontal Padding</label>
 							<input
 								type="text"
 								name="@tableCellPaddingHorizontal"
-								value="0.8"
+								value="1.6"
 								id="tableCellPaddingHorizontal"
 								data-validate="unit"
 							>
@@ -2280,7 +2169,7 @@
 							<input
 								type="text"
 								name="@tableCellPaddingVertical"
-								value="0.6"
+								value=".6"
 								id="tableCellPaddingVertical"
 								data-validate="unit"
 							>
@@ -2291,20 +2180,18 @@
 							<select
 								name="@tableCaptionFontStyle"
 								id="tableCaptionFontStyle"
-								data-validate="selection"
 							>
-								<option value="normal">normal</option>
-								<option value="italic" selected>italic</option>
+								<option value="italic" selected>Italic</option>
+								<option value="normal">Normal</option>
 							</select>
 							<label for="tableCaptionBackground">Background</label>
 							<input
 								type="text"
 								name="@tableCaptionBackground"
-								value="#f2f2f2"
+								value="@lightestGray"
 								id="tableCaptionBackground"
 								class="color"
-								data-validate="color"
-								data-useVar="true"
+								data-validate="color|false"
 							>
 							<label for="tableCaptionPaddingVertical">Vertical Padding</label>
 							<input
@@ -2318,7 +2205,7 @@
 							<input
 								type="text"
 								name="@tableCaptionPaddingHorizontal"
-								value="0.8"
+								value="@tableCellPaddingHorizontal"
 								id="tableCaptionPaddingHorizontal"
 								data-validate="unit"
 							>
@@ -2329,36 +2216,35 @@
 							<input
 								type="text"
 								name="@tableStripedBackground"
-								value="#f2f2f2"
+								value="@lightestGray"
 								id="tableStripedBackground"
 								class="color"
 								data-validate="color"
-								data-useVar="true"
 							>
 							<label for="tableStripedPosition">Striped Position</label>
 							<select
 								name="@tableStripedPosition"
 								id="tableStripedPosition"
-								data-validate="selection"
 							>
-								<option value="odd" selected>odd</option>
-								<option value="even">even</option>
+								<option value="even">Even</option>
+								<option value="odd" selected>Odd</option>
 							</select>
 						</div>
-					</form>
-					<button class="button-colored show-code" type="button" data-ref="show-code">Show Code</button>
+					</div>
 				</div>
+
+				<button class="button-colored show-code" data-ref="showCode">Generate Variables</button>
 			</div>
-			<div class="preview">
-				<iframe src="/preview.html" id="previewFrame" data-ref="previewFrame">
-					<p>iFrames must be supported.</p>
-				</iframe>
+
+			<div class="preview -is-loading" data-ref="preview">
+				<iframe src="/preview.html" class="preview__frame" data-ref="previewFrame"></iframe>
 			</div>
+
+			<div class="preview js-hide" data-ref="output"></div>
 		</div>
 	</div>
-	<div id="message-bar" data-ref="message-bar"></div>
-	<div id="overlay" data-ref="overlay"></div>
-	<div id="modal" data-ref="modal"></div>
+
+	<div class="message" data-ref="messageBar"></div>
 
 	<script src="{{ site.assetUrl }}/js/script.min.js?v{{ site.jsVersion }}"></script>
 	<script src="{{ site.assetUrl }}/modules/customize/script.min.js"></script>

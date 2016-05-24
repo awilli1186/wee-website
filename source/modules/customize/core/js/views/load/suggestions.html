@@ -1,0 +1,12 @@
+{{ #suggestions|notEmpty }}
+	<ul class="suggestions" data-ref="suggestions">
+		{{ #.|each }}
+			<li class="suggestion">
+				{{ name }}
+				{{ #color }}
+					<div class="suggestion__swatch" style="background: {{ . }}">
+				{{ /color }}
+			</li>
+		{{ /. }}
+	</ul>
+{{ /suggestions }}

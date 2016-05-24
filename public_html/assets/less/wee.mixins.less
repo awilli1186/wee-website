@@ -922,8 +922,11 @@
 .content (@value: ''; ...) {
 	content: ~"'@{value}'";
 }
-.content (@value; @font) {
+.content (@value; @font; ...) {
 	font-family: @font;
+}
+.content (@value; @font; @size) {
+	.font-size(@size);
 }
 .prefix (@value: '-'; @margin: .5em; @font: false; @color: false) {
 	&:before {
@@ -1104,10 +1107,10 @@
 	.filter('drop-shadow(@{x} @{y} @{blur} @{color})');
 }
 .drop-shadow (light; @opacity: @defaultOpacity; @x: 1px; @y: 1px; @blur: 0) {
-	.filter('drop-shadow(@{x} @{y} @{blur} rgba(255, 255, 255, @{opacity})');
+	.filter('drop-shadow(@{x} @{y} @{blur} rgba(255, 255, 255, @{opacity}))');
 }
 .drop-shadow (dark; @opacity: @defaultOpacity; @x: 1px; @y: 1px; @blur: 0) {
-	.filter('drop-shadow(@{x} @{y} @{blur} rgba(0, 0, 0, @{opacity})');
+	.filter('drop-shadow(@{x} @{y} @{blur} rgba(0, 0, 0, @{opacity}))');
 }
 
 
@@ -1135,27 +1138,16 @@
 		font-family: ~'@{name}';
 		font-style: @style;
 		font-weight: @weight;
-		src: url('@{fontPath}@{file}.eot');
 		.check () when (@woff2Enabled = true) {
-			src: url('@{fontPath}@{file}.eot?#iefix') format('embedded-opentype'),
-				 url('@{fontPath}@{file}.woff2') format('woff2'),
+			src: url('@{fontPath}@{file}.woff2') format('woff2'),
 				 url('@{fontPath}@{file}.woff') format('woff'),
 				 url('@{fontPath}@{file}.ttf') format('truetype');
 		}
 		.check () when (default()) {
-			src: url('@{fontPath}@{file}.eot?#iefix') format('embedded-opentype'),
-				 url('@{fontPath}@{file}.woff') format('woff'),
+			src: url('@{fontPath}@{file}.woff') format('woff'),
 				 url('@{fontPath}@{file}.ttf') format('truetype');
 		}
 		.check();
-	}
-
-	// Window Chrome fix
-	@media screen and (-webkit-min-device-pixel-ratio: 0) {
-		@font-face {
-			font-family: ~'@{name}';
-			src: url('@{fontPath}@{file}.svg#@{name}') format('svg');
-		}
 	}
 }
 
@@ -2422,8 +2414,14 @@
 .rotate (@angle: 45) {
 	.transform(rotate(unit(@angle, deg)));
 }
-.scale (@deg: 1) {
-	.transform(scale(@deg));
+.scale (x; @value: 1) {
+	.transform(scaleX(@value));
+}
+.scale (y; @value: 1) {
+	.transform(scaleY(@value));
+}
+.scale (@value: 1) when (default()) {
+	.transform(scale(@value));
 }
 .skew (x; @x: 45) {
 	.transform(skewX(unit(@x, deg)));

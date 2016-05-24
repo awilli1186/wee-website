@@ -1,554 +1,423 @@
+/* global jscolor */
+
 Wee.fn.make('customize', {
 	init: function() {
-		this.$private.initScrolling();
-		this.$private.initAccordion();
-		this.$private.initAutoComplete();
-		this.$private.initPreview();
-		this.$private.initModal();
-		this.$private.initSelectAll();
-		this.$private.getColors();
+		var priv = this.$private;
+		priv.preview = $('ref:previewFrame')[0].contentWindow;
+		priv.$variables = $('ref:variables');
+		priv.$colors = $('.color');
+
+		Wee.sidebar.initScrolling();
+
+		priv.initAccordion();
+		priv.initGenerate();
+		priv.getColors();
+		priv.bindSelects();
+		priv.initSuggestions();
+
+		priv.preview.onload = function() {
+			priv.setupPickers();
+
+			priv.preview.less.pageLoadFinished.then(function() {
+				$('ref:preview').removeClass('-is-loading');
+			});
+		};
 	}
 }, {
-	getColors: function() {
-		var scope = this,
-			match = /color|(\|false)?/g,
-			colors = $('input').filter(function(i, el) {
-				var validateColor = $(el).data('validate');
-
-				return match.test(validateColor);
-			});
-
-		scope.colorValues = [];
-
-		colors.each(function(el) {
-			var $el = $(el);
-
-			scope.colorValues[$el.attr('name')] = $el.val();
-		});
-	},
-	initScrolling: function() {
-		$('ref:scrollable').each(function(el) {
-			$(el).append('<div class="scrollbar"><div class="track">' +
-				'<div class="thumb"></div></div></div>');
-
-			this.scrollbar = tinyscrollbar(el);
-		});
-	},
-	updateScrollbar: function(position) {
-		tinyscrollbar($('.scrollable')[0]).update(position);
-	},
 	initAccordion: function() {
 		var scope = this,
-			$overview = $('.overview'),
-			isActive = '-is-active';
-
-		Wee.$setRef();
+			activeClass = '-is-active';
 
 		$('ref:toggle').on('click', function() {
-			var scrollAmount = Math.abs($('.accordion').css('top').replace('px', ''));
+			var $el = $(this),
+				scroll = Wee.sidebar.topScroller,
+				active = $el.hasClass(activeClass),
+				top = $el.position().top;
 
-			$overview.addClass(isActive);
+			$el.next().toggle();
 
-			$(this).next().toggleClass('js-hide');
-			$(this).toggleClass('-is-active');
-
-			scope.updateScrollbar($(this).offset().top + scrollAmount - $(this).height());
-
-			setTimeout(function() {
-				$overview.removeClass(isActive);
-			}, 300);
-		});
-	},
-	initAutoComplete: function() {
-		var scope = this,
-			keyCodes = {
-				arrowDown: 40,
-				arrowUp: 38,
-				enter: 13,
-				esc: 27,
-				shift: 16,
-				tab: 9
-			},
-			preview = $('ref:previewFrame')[0].contentWindow,
-			regexp = /(@[\da-z-_]+$)/i;
-
-		$('input').on({
-			keyup: function(e, el) {
-				var $next = $(this).next(), // Michael - revisit
-					value = el.value,
-					match = value.match(regexp),
-					matches = [],
-					list = '',
-					$currentSelection = false;
-
-				if (scope.autocompleteShowing && e.keyCode === keyCodes.shift) {
-					scope.shiftHeld = false;
-				} else if ((scope.autocompleteShowing && e.keyCode === keyCodes.arrowUp) ||
-					(scope.shiftHeld && e.keyCode === keyCodes.tab)) {
-					if (scope.$currentSelection !==
-						undefined && scope.$currentSelection[0] !==
-						$('.suggestions').children().first()[0] // Michael - ref
-					) {
-						$currentSelection = scope.$currentSelection.prev();
-						scope.$currentSelection.removeClass('current-selection');
-					}
-
-					if ($currentSelection) {
-						$currentSelection.addClass('current-selection');
-						scope.$currentSelection = $currentSelection;
-					}
-				} else if (scope.autocompleteShowing && e.keyCode ===
-					keyCodes.arrowDown || e.keyCode === keyCodes.tab
-				) {
-					if (scope.$currentSelection !== undefined &&
-						scope.$currentSelection[0] !==
-						$('.suggestions').children().last()[0]
-					) {
-						$currentSelection = scope.$currentSelection.next();
-						scope.$currentSelection.removeClass('current-selection');
-					} else if (scope.$currentSelection === undefined) {
-						$currentSelection = $('.suggestions').children().first();
-					}
-
-					if ($currentSelection) {
-						$currentSelection.addClass('current-selection');
-						scope.$currentSelection = $currentSelection;
-					}
-				} else if (scope.autocompleteShowing && e.keyCode === keyCodes.enter) {
-					if (scope.$currentSelection !== undefined) {
-						$(el).val(scope.$currentSelection.text());
-						scope.$currentSelection = undefined;
-					}
-
-					scope.removeSuggestions();
-					scope.processChange(el);
-				} else if (scope.autocompleteShowing && e.keyCode === keyCodes.esc) {
-					scope.removeSuggestions();
-				} else if (regexp.test(value)) {
-					scope.autocompleteShowing = true;
-					scope.$currentSelection = undefined;
-
-					for (var name in preview.weeVariables) {
-						if (name.substr(1).toLowerCase()
-							.indexOf(match[0].substr(1).toLowerCase()) !== -1) {
-							matches.push(name);
-						}
-					}
-
-					if (matches.length) {
-						for (var i = 0; i < matches.length; i++) {
-							list += '<li class="suggestion">' + matches[i];
-
-							if (scope.colorValues[matches[i]]) {
-								list += '<span class="color-preview" style="background: ' +
-								scope.colorValues[matches[i]] + '"></span>';
-							}
-
-							list += '</li>';
-
-							if (i === 4) {
-								break;
-							}
-						}
-
-						if ($next.is('.suggestions')) {
-							$next.empty().append(list);
-						} else {
-							$(this).after('<ul class="suggestions">' + list + '</ul>');
-						}
-					} else {
-						scope.removeSuggestions();
-					}
-				} else {
-					scope.removeSuggestions();
-				}
-			},
-			keydown: function(e) {
-				if (scope.autocompleteShowing && e.keyCode === keyCodes.shift) {
-					scope.shiftHeld = true;
-				} else if (e.which === keyCodes.tab && scope.autocompleteShowing) {
-					e.preventDefault();
-				}
-
-				if (scope.autocompleteShowing) {
-					if (e.keyCode === keyCodes.arrowUp ||
-						e.keyCode === keyCodes.arrowDown) {
-						e.preventDefault();
-					}
-				}
-			},
-			blur: function() {
-				Wee._win.setTimeout(function() {
-					scope.removeSuggestions();
-				}, 200);
-			},
-			click: function() {
-				this.select();
+			if (! active) {
+				$el.addClass(activeClass);
+			} else {
+				$el.removeClass(activeClass);
+				top = Math.min(top, scope.$variables.height() - scroll.viewportSize);
 			}
-		});
 
-		$(Wee._body).on('click', function(e) {
-			if ($(e.target).not('input') && $(e.target).not('.autocomplete__item')) {
-				scope.removeSuggestions();
-			}
-		});
-
-		$('.suggestion').on('click', function(e) {
-			var $target = $(e.target),
-				inputEl = $target.parent().prev().sel[0];
-
-			$(inputEl).val($target.text());
-			scope.removeSuggestions();
-			scope.processChange(inputEl);
-		}, {
-			delegate: '.accordion__content'
-		});
-	},
-	removeSuggestions: function() {
-		$('.suggestions').remove();
-		this.autocompleteShowing = false;
-	},
-	initModal: function() {
-		var scope = this,
-			preview = $('ref:previewFrame')[0].contentWindow;
-
-		$('ref:show-code').on('click', function(e) {
-			var template,
-				file,
-				variables = preview.weeVariables;
-
-			e.preventDefault();
-
-			Wee.data.request({
-				url: '/wee_variables.less',
-				success: function(data) {
-					template = data;
-					file = Wee.view.render(template, variables);
-					scope.showModal(file);
-				},
-				failure: function(data) {
-					scope.showMessage(data.status + ' (' + data.statusText + ')');
-				}
+			scope.$variables.tween({
+				top: top * -1
 			});
-		});
 
-		$('ref:overlay').on('click', function() {
-			scope.hideModal();
+			scroll.update(top);
 		});
 	},
-	showModal: function(file) {
-		$('ref:overlay').addClass('-is-active');
-		$('ref:modal').html('<pre><code>' +
-			file + '</code></pre>').addClass('-is-active');
+
+	initGenerate: function() {
+		var scope = this,
+			$button = $('ref:showCode'),
+			$preview = $('ref:preview'),
+			$output = $('ref:output');
+
+		$button.on('click', function() {
+			if (scope.codeVisible) {
+				scope.codeVisible = false;
+
+				$output.hide();
+				$preview.show();
+				$button.text('Generate Variables');
+			} else {
+				Wee.data.request({
+					url: '/assets/less/template.less',
+					cache: true,
+					success: function(data) {
+						var temp = $.view.render(data, scope.preview.weeVariables);
+						scope.codeVisible = true;
+
+						$preview.hide();
+						$output.html('<pre><code>' + temp + '</code></pre>')
+							.show();
+						Wee.code.init();
+						$button.text('Hide Variables');
+					}
+				});
+			}
+		});
 	},
-	hideModal: function() {
-		$('ref:modal').removeClass('-is-active');
-		$('ref:overlay').removeClass('-is-active');
+
+	getColors: function() {
+		this.colorValues = this.$colors.map(function(el) {
+			return el.getAttribute('name');
+		});
 	},
-	initPreview: function() {
+
+	bindSelects: function() {
 		var scope = this;
 
-		$('input, select').on('change', function(e, el) {
-			e.preventDefault();
-
-			setTimeout(function() {
-				if (! scope.autocompleteShowing) {
-					scope.processChange(el);
-				}
-			}, 100);
-		});
-
-		$('form').on('submit', function(e) {
-			e.preventDefault();
-
-			return;
+		scope.$variables.find('select').on('change', function(e, el) {
+			scope.process(el);
 		});
 	},
-	processChange: function(el) {
-		var preview = $('ref:previewFrame')[0].contentWindow;
 
-		if (this.isRecursive(el)) {
-			this.showMessage('Recursive variable definition for ' + el.name);
-			this.resetInput(el);
-		} else {
-			var parse = this.parseValue(el.value);
+	initSuggestions: function() {
+		var scope = this;
 
-			if (! parse.valid) {
-				this.showMessage('Parsing error: ' + parse.response);
-				this.resetInput(el);
+		scope.$variables.find('input').on({
+			keydown: function(e, el) {
+				if (scope.pickers.hasOwnProperty(el.id)) {
+					scope.pickers[el.id].hide();
+				}
+
+				if (e.keyCode === 40 || e.keyCode === 38) {
+					e.preventDefault();
+				}
+			},
+			keyup: function(e, el) {
+				scope.suggest(e.keyCode, el);
+				e.preventDefault();
+			},
+			blur: function(e, el) {
+				if (scope.pickers.hasOwnProperty(el.id)) {
+					scope.pickers[el.id].hide();
+				}
+
+				scope.process(el);
+				scope.hideResults();
+			},
+			'click focus': function() {
+				scope.hideResults();
+			}
+		});
+	},
+
+	suggest: function(key, el) {
+		var scope = this,
+			activeClass = '-is-active';
+
+		if (scope.$active) {
+			scope.$active.removeClass(activeClass);
+		}
+
+		if (key === 38 || key === 40) {
+			if (scope.$active) {
+				scope.$active = key === 40 ?
+					scope.$active.next() :
+					scope.$active.prev();
 			} else {
-				var validate = this.validate(parse.response, el);
+				scope.$entries = $('ref:suggestions').children();
 
-				if (! validate.valid) {
-					this.showMessage('Validation error: ' + validate.response);
-					this.resetInput(el);
+				if (scope.$entries.length) {
+					scope.$active = key === 40 ?
+						scope.$entries.first() :
+						scope.$entries.last();
 				} else {
-					preview.setVal(el.name, el.value.trim());
+					scope.$active = false;
+				}
+			}
 
-					if (this.colorValues[el.name]) {
-						this.colorValues[el.name] = el.value.trim();
-					}
+			if (scope.$active.length) {
+				scope.$active.addClass(activeClass);
+			} else {
+				scope.$active = false;
+			}
+		} else if (key === 13) {
+			if (scope.$active) {
+				el.value = scope.$active.text();
+			}
 
-					if ($(el).data('useVar') !== 'true') {
-						$(el).val(validate.response);
-						el.defaultValue = validate.response;
+			el.blur();
+		} else if (key === 27) {
+			scope.hideResults();
+		} else if (el.value.length) {
+			scope.showResults(el);
+		}
+	},
+
+	showResults: function(el) {
+		var view = $.view.render('customize.suggestions', {
+			suggestions: this.getMatches(el)
+		});
+
+		$('ref:suggestions').remove();
+		$(el).after(view);
+
+		this.suggestions = true;
+	},
+
+	getMatches: function(el) {
+		var scope = this,
+			val = el.value,
+			isColor = scope.pickers.hasOwnProperty(el.id),
+			matches = Object.keys(scope.preview.weeVariables).filter(function(el) {
+				var color = scope.pickers.hasOwnProperty(el.substr(1));
+
+				return el.indexOf(val) > -1 &&
+					((isColor && color) || (! isColor && ! color));
+			}).slice(0, 8);
+
+		return matches.map(function(el) {
+			var result = {
+				name: el
+			};
+
+			if (isColor) {
+				result.color = scope.pickers[el.substr(1)]
+					.toHEXString()
+					.toLowerCase();
+			}
+
+			return result;
+		});
+	},
+
+	hideResults: function() {
+		this.suggestions = false;
+		this.$active = false;
+
+		$('ref:suggestions').remove();
+	},
+
+	setupPickers: function() {
+		var scope = this;
+		scope.pickers = [];
+
+		scope.$colors.each(function(el) {
+			var color = scope.parseValue(el.value).response,
+				picker = new jscolor(el, {
+					backgroundColor: 'transparent',
+					borderWidth: 0,
+					insetColor: '#fff',
+					padding: 15,
+					shadow: false,
+					uppercase: false,
+					valueElement: null,
+					width: 225,
+					onFineChange: function() {
+						var val = this.toHEXString().toLowerCase();
+
+						el.value = val;
+						scope.processColor(el, val);
 					}
+				});
+			scope.pickers[el.id] = picker;
+
+			el.setAttribute('data-prev', el.value);
+			el.setAttribute('data-value', color);
+
+			picker.fromString(color);
+		});
+	},
+
+	process: function(el) {
+		var scope = this,
+			val = el.value.trim(),
+			error;
+
+		if (el.name.indexOf(val) > -1) {
+			error = 'Recursive variable definition for ' + el.name;
+		} else {
+			var validate = scope.validate(el);
+
+			if (! validate.valid) {
+				error = 'Validation error: ' + validate.response;
+			} else {
+				if (scope.colorValues.indexOf(el.name) > -1) {
+					var parse = scope.parseValue(val),
+						resp = parse.response;
+
+					if (! parse.valid) {
+						error = resp;
+					} else {
+						if (resp[0] !== '#') {
+							resp = this.preview.less.data.colors[resp];
+						}
+
+						scope.processColor(el, resp);
+					}
+				} else {
+					var values = [];
+					values[el.name] = val;
+
+					scope.preview.update(values);
+					el.setAttribute('data-value', val);
 				}
 			}
 		}
 
-		this.autocompleteShowing = false;
+		if (error) {
+			scope.showMessage(error);
+			el.value = el.getAttribute('data-prev') || el.defaultValue;
+		} else {
+			el.setAttribute('data-prev', val);
+		}
 	},
-	isRecursive: function(el) {
-		var match = new RegExp(el.name);
 
-		return match.test(el.value);
-	},
-	resetInput: function(input) {
-		$(input).val(input.defaultValue);
-	},
-	showMessage: function(message) {
-		var $messageBar = $('ref:message-bar'),
-			hideMessage = function() {
-				$messageBar.removeClass('-is-active');
-			};
-
-		$messageBar.html('<span>' + message + '</span>').addClass('-is-active');
-		setTimeout(hideMessage, 4000);
-	},
-	parseValue: function(value) {
-		var preview = $('ref:previewFrame')[0].contentWindow,
-			vars = preview.less.Parser.serializeVars(preview.weeVariables),
-			css = vars + '#foo { value: ' + value + '; }',
+	parseValue: function(val) {
+		var vars = this.preview.less.Parser.serializeVars(
+				this.preview.weeVariables
+			),
+			css = vars + '#foo { value: ' + val + '; }',
 			result = {};
 
-		preview.less.render(css, function(error, output) {
-			error ?
-				result = {
-					valid: false,
-					response: error.message
-				} :
-				result = {
-					valid: true,
-					response: output.css.match(/(?:: )(.*)(?=;)/)[1]
-				};
+		this.preview.less.render(css, function(err, output) {
+			result = err ? {
+				valid: false,
+				response: err.message
+			} : {
+				valid: true,
+				response: output.css.match(/(?:: )(.*)(?=;)/)[1]
+			};
 		});
 
 		return result;
 	},
-	validate: function(val, el) {
+
+	processColor: function(el, val) {
 		var scope = this,
-			types = $(el).data('validate').split('|'),
-			result = {};
+			values = [];
 
-		types.forEach(function(type) {
-			if (type === 'unit') {
-				result = scope.isUnit(val);
+		if (! val) {
+			val = false;
+		}
 
-				if (result.valid) {
-					return;
-				}
-			} else if (type === 'number') {
-				result = scope.isNumber(val);
+		scope.pickers[el.id].fromString(val || '#fff');
+		el.setAttribute('data-value', val);
 
-				if (result.valid) {
-					return;
-				}
-			} else if (type === 'color') {
-				result = scope.isColor(val);
+		values[el.name] = val;
 
-				if (result.valid) {
-					return;
-				}
-			} else if (type === 'font') {
-				result = scope.isFont(val);
+		scope.processDependencies(el.name, el.value, val, values);
+		scope.preview.update(values);
+	},
 
-				if (result.valid) {
-					return;
-				}
-			} else if (type === 'path') {
-				result = scope.isPath(val);
+	processDependencies: function(name, value, val, values) {
+		var scope = this;
 
-				if (result.valid) {
-					return;
-				}
-			} else if (type === 'file') {
-				result = scope.isFile(val);
+		scope.$colors.each(function(el) {
+			if (el.value.indexOf(name) > -1) {
+				values[el.name] = val;
+				scope.pickers[el.id].fromString(val);
+				el.setAttribute('data-prev', value);
+				scope.processDependencies(el.name, value, val, values);
+			}
+		});
+	},
 
-				if (result.valid) {
-					return;
-				}
-			} else if (type === 'entity') {
-				result = scope.isEntity(val);
+	rules: {
+		auto: function(val) {
+			return val.toLowerCase() === 'auto';
+		},
+		color: function(val) {
+			return /(^#[0-9a-f]{3,6}$)/i.test(val) ||
+				this.preview.less.data.colors.hasOwnProperty(val);
+		},
+		entity: function(val) {
+			return /(^'(\\[0-9a-f]{4})+'$)/i.test(val);
+		},
+		false: function(val) {
+			return val.toLowerCase() === 'false';
+		},
+		file: function(val) {
+			return /(^'([\w-]+\.[\w]+)'$)/.test(val);
+		},
+		font: function(val) {
+			var match = /(^"[\da-z]((-|_| )?[\da-z]+)*"$)|(^[\da-z]((-|_)?[\da-z]+)*$)/i;
 
-				if (result.valid) {
-					return;
-				}
-			} else if (type === 'selection' || type === 'string') {
-				result = {
-					valid: true,
-					response: val
-				};
+			return val.split(',').every(function(value) {
+				return match.test(value.trim());
+			});
+		},
+		number: function(val) {
+			return /(^[1-9][0-9]*$)/.test(val);
+		},
+		path: function(val) {
+			return /(^'(\.\.\/)*([\w]+\/)*'$)/.test(val);
+		},
+		unit: function(val) {
+			return /(^((\.\d+)|(\d+(\.\d+)?)(%|px|em|rem)?)$)/.test(val);
+		}
+	},
 
-				return;
-			} else if (type === 'false' || type === 'auto') {
-				if (val.toLowerCase() === 'false' ||
-					val.toLowerCase() === 'auto') {
-					result = {
+	validate: function(el) {
+		var val = el.value,
+			types = el.getAttribute('data-validate'),
+			result = {
+				valid: true
+			};
+
+		if (val.indexOf('@') > -1 || val.indexOf('(') > -1) {
+			val = this.parseValue(val).response;
+		}
+
+		if (types) {
+			var arr = types.split('|');
+
+			for (var i = 0; i < arr.length; i++) {
+				var type = arr[i];
+
+				if (this.rules[type].call(this, val)) {
+					return {
 						valid: true,
 						response: val
 					};
-
-					return;
+				} else {
+					result = {
+						valid: false,
+						response: 'Value must match type ' + arr.join(' or ')
+					};
 				}
 			}
-		});
+		}
 
 		return result;
 	},
-	isUnit: function(val) {
-		var match = /(^((\.\d+)|(\d+(\.\d+)?)(%|px|em|rem)?)$)/;
 
-		if (match.test(val)) {
-			return {
-				valid: true,
-				response: val
-			};
-		}
+	showMessage: function(message) {
+		var $bar = $('ref:messageBar'),
+			activeClass = '-is-active';
 
-		return {
-			valid: false,
-			response: 'Not a valid unit.'
-		};
-	},
-	isNumber: function(val) {
-		var match = /(^[1-9][0-9]*$)/;
+		$bar.text(message)
+			.addClass(activeClass);
 
-		if (match.test(val)) {
-			return {
-				valid: true,
-				response: val
-			};
-		}
-
-		return {
-			valid: false,
-			response: 'Not a valid number.'
-		};
-	},
-	isColor: function(val) {
-		var scope = this,
-			colors = $('ref:previewFrame')[0].contentWindow.less.data.colors,
-			match = /(^#[0-9a-f]{3,6}$)/i;
-
-		if (match.test(val)) {
-			return {
-				valid: true,
-				response: val
-			};
-		} else if (scope.isColorKeyword(val, colors)) {
-			return {
-				valid: true,
-				response: colors[val]
-			};
-		}
-
-		return {
-			valid: false,
-			response: 'Not a valid color.'
-		};
-	},
-	isColorKeyword: function(val, colors) {
-		for (var color in colors) {
-			if (val === color) {
-				return true;
-			}
-		}
-
-		return false;
-	},
-	isFont: function(val) {
-		var stack = val.split(','),
-			match = /(^"[\da-z]((-|_| )?[\da-z]+)*"$)|(^[\da-z]((-|_)?[\da-z]+)*$)/i,
-			isMatch = function(value) {
-				return match.test(value.trim());
-			};
-
-		if (stack.every(isMatch)) {
-			return {
-				valid: true,
-				response: val
-			};
-		}
-
-		return {
-			valid: false,
-			response: 'Not a valid font or font stack.'
-		};
-	},
-	isPath: function(val) {
-		var match = /(^'(\.\.\/)*([\w]+\/)*'$)/;
-
-		if (match.test(val)) {
-			return {
-				valid: true,
-				response: val
-			};
-		}
-
-		return {
-			valid: false,
-			response: 'Not a valid path.'
-		};
-	},
-	isFile: function(val) {
-		var match = /(^'([\w-]+\.[\w]+)'$)/;
-
-		if (match.test(val)) {
-			return {
-				valid: true,
-				response: val
-			};
-		}
-
-		return {
-			valid: false,
-			response: 'Not a valid file.'
-		};
-	},
-	isEntity: function(val) {
-		var match = /(^'(\\[0-9a-f]{4})+'$)/i;
-
-		if (match.test(val)) {
-			return {
-				valid: true,
-				response: val
-			};
-		}
-
-		return {
-			valid: false,
-			response: 'Not a valid entity.'
-		};
-	},
-	initSelectAll: function() {
-		$('ref:modal').on('click', function(e, el) {
-			if (window.getSelection !== undefined &&
-				document.createRange !== undefined) {
-				var range = document.createRange();
-
-				range.selectNodeContents(el);
-				var sel = window.getSelection();
-
-				sel.removeAllRanges();
-				sel.addRange(range);
-			} else if (document.selection !== undefined &&
-			document.body.createTextRange !== undefined) {
-				var textRange = document.body.createTextRange();
-
-				textRange.moveToElementText(el);
-				textRange.select();
-			}
-		});
+		setTimeout(function() {
+			$bar.removeClass(activeClass);
+		}, 3500);
 	}
 });
