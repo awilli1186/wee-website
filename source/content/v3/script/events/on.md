@@ -19,6 +19,7 @@ heading: Bind specified function to specified element and event
 | args | array | -- | Callback arguments ||
 | context | [selection](/script#selection) | -- | Context selection ||
 | delegate | [selection](/script#selection) | -- | Delegate selection ||
+| namespace | string | -- | Apply namespace to all events ||
 | once | boolean | false | Remove the event after first execution ||
 | scope | object | -- | Callback scope ||
 
