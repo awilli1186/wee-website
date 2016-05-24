@@ -34,7 +34,7 @@ $('ref:element');
 
 ---doc---
 
-If multiple references are set with the same name they are pushed into an array an can be targeted with a single ref selection. You can also provide a comma-delimited list of multiple refs.
+If multiple references are set with the same name they are pushed into an array and can be targeted with a single ref selection. You can also provide a comma-delimited list of multiple refs.
 
 ---code|modifier:split---
 
