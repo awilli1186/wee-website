@@ -280,15 +280,6 @@
 						"intro.md",
 						"*.md"
 					]
-				},
-				"styling": {
-					"name": "Styling",
-					"target": "style/styling.html",
-					"contentRoot": "v3/style/styling",
-					"content": [
-						"intro.md",
-						"*.md"
-					]
 				}
 			}
 		},

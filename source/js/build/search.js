@@ -18,7 +18,9 @@ Wee.fn.make('search', {
 
 		$('ref:searchInput').on({
 			keydown: function(e) {
-				if (e.keyCode === 40 || e.keyCode === 38) {
+				var code = e.keyCode;
+
+				if (code === 40 || code === 38) {
 					e.preventDefault();
 				}
 			},
@@ -48,7 +50,7 @@ Wee.fn.make('search', {
 		$('ref:searchOutput').hide();
 	}
 }, {
-	process: function(key, value) {
+	process: function(key, val) {
 		var scope = this,
 			activeClass = '-is-active';
 
@@ -82,21 +84,17 @@ Wee.fn.make('search', {
 			location.href = scope.$active.find('a')[0].href;
 		} else if (key === 27 || key === 9) {
 			scope.$public.collapse();
-		} else {
-			var val = value;
+		} else if (val.length > 2) {
+			if (! scope.processing) {
+				scope.processing = true;
 
-			if (val.length > 2) {
-				if (! scope.processing) {
-					scope.processing = true;
-
-					setTimeout(function() {
-						scope.query(val);
-					}, 500);
-				}
-			} else {
-				$('ref:searchOutput').hide();
-				scope.$public.collapse();
+				setTimeout(function() {
+					scope.query(val);
+				}, 500);
 			}
+		} else {
+			$('ref:searchOutput').hide();
+			scope.$public.collapse();
 		}
 	},
 	query: function(val) {

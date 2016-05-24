@@ -46,7 +46,13 @@
 	}
 }
 .switch {
-	.absolute(2.5; 50%);
+	.absolute(2.5);
+	.docs & {
+		.left(22);
+	}
+}
+.search {
+	.margin(right; 2);
 }
 
 
@@ -89,7 +95,7 @@
 
 .doc {
 	&__anchor {
-		.visible();
+		.opaque();
 	}
 	&__variables {
 		th,

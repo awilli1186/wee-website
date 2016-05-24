@@ -12,8 +12,8 @@ Wee.fn.make('sidebar', {
 		this.$subnavLinks = $('a', 'ref:subnav');
 		this.active = false;
 
-		if (this.scroller) {
-			this.scroller.update();
+		if (this.subScroller) {
+			this.subScroller.update();
 		}
 
 		$($._win).on({
@@ -60,12 +60,12 @@ Wee.fn.make('sidebar', {
 
 		if ($topnav.length) {
 			$topnav.append(wrapper);
-			tinyscrollbar($topnav[0]);
+			this.topScroller = tinyscrollbar($topnav[0]);
 		}
 
 		if ($subnav.length) {
 			$subnav.append(wrapper);
-			this.scroller = tinyscrollbar($subnav[0]);
+			this.subScroller = tinyscrollbar($subnav[0]);
 		}
 	},
 
