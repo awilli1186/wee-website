@@ -22,12 +22,11 @@ Wee.fn.make('common', {
 				min: 4,
 				init: false,
 				callback: function() {
-					var $nav = $('ref:headerNav'),
-						$pull = $('ref:pull');
+					var $nav = $('ref:headerNav');
 
 					$nav.show();
 
-					$nav.insertAfter($pull);
+					$nav.insertAfter('ref:pull');
 					$switch.appendTo($header);
 				}
 			}
@@ -38,7 +37,7 @@ Wee.fn.make('common', {
 		});
 
 		// Setup color scheme picker
-		this.$private.setScheme();
+		scope.$private.setScheme();
 
 		$switch.on('click', function() {
 			$body.addClass('-is-changing');

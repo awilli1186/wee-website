@@ -43,6 +43,14 @@
 		"jsLegacyVersion": 12
 	},
 	"sections": {
+		"customize": {
+			"name": "Customize",
+			"data": {
+				"excludeNav": true
+			},
+			"template": "customize.html",
+			"target": "customize.html"
+		},
 		"search": {
 			"name": "Search",
 			"data": {
@@ -268,15 +276,6 @@
 					"name": "Classes",
 					"target": "style/classes.html",
 					"contentRoot": "v3/style/classes",
-					"content": [
-						"intro.md",
-						"*.md"
-					]
-				},
-				"styling": {
-					"name": "Styling",
-					"target": "style/styling.html",
-					"contentRoot": "v3/style/styling",
 					"content": [
 						"intro.md",
 						"*.md"

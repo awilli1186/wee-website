@@ -2,16 +2,31 @@
 	# Layout
 \*------------------------------------*/
 
-@minWidth: {{@minWidth}};  // min container width, false to disable
-@maxWidth: {{@maxWidth}}; // max container width, false to disable
+@minWidth: {{@minWidth}};
+@maxWidth: {{@maxWidth}};
 
-@bumperPadding: {{@bumperPadding}};  // bumper padding on containers, false to disable
-@padContainer: {{@padContainer}}; // enable bumperPadding on containers
+@bumperPadding: {{@bumperPadding}};
+@padContainer: {{@padContainer}};
 
-@gridMargin: {{@gridMargin}}; // default margin for spaced columns
-@gridColumns: {{@gridColumns}}; // default number of columns in grid
+@gridMargin: {{@gridMargin}};
+@gridColumns: {{@gridColumns}};
 
-@blockMarginBottom: {{@blockMarginBottom}}; // default spacing for lists, form elements, and other blocks
+@gridSpaceless: {{@gridSpaceless}};
+
+@blockMarginBottom: {{@blockMarginBottom}};
+
+
+/*------------------------------------*\
+	# Colors
+\*------------------------------------*/
+
+@primary: {{@primary}};
+@secondary: {{@secondary}};
+@tertiary: {{@tertiary}};
+
+@info: {{@info}};
+@success: {{@success}};
+@warning: {{@warning}};
 
 
 /*------------------------------------*\
@@ -33,8 +48,15 @@
 	# Base
 \*------------------------------------*/
 
-@defaultUnit: {{@defaultUnit}};    // unitless value default
-@rootFontSize: {{@rootFontSize}}; // root font size (62.5% = 10px, 100% = 16px)
+// Default units
+
+@defaultUnit: {{@defaultUnit}};
+@defaultFontSizeUnit: {{@defaultFontSizeUnit}};
+@defaultLineHeightUnit: {{@defaultLineHeightUnit}};
+
+// Root sizing
+
+@rootFontSize: {{@rootFontSize}};
 
 // All rem-based units are relative to the root size above
 
@@ -44,7 +66,7 @@
 @baseFontWeight: {{@baseFontWeight}};
 @baseLineHeight: {{@baseLineHeight}};
 
-@bodyBackground: {{@bodyBackground}}; // false to disable
+@bodyBackground: {{@bodyBackground}};
 
 
 /*------------------------------------*\
@@ -55,8 +77,8 @@
 @linkColorHover: {{@linkColorHover}};
 @linkColorActive: {{@linkColorActive}};
 
-@linkDecoration: {{@linkDecoration}};       // none, underline
-@linkDecorationHover: {{@linkDecorationHover}}; // none, underline, false
+@linkDecoration: {{@linkDecoration}};
+@linkDecorationHover: {{@linkDecorationHover}};
 
 
 /*------------------------------------*\
@@ -81,25 +103,20 @@
 
 @headingMarginBottom: {{@headingMarginBottom}};
 
-@h1: {{@h1}}; // font sizes
+@h1: {{@h1}};
 @h2: {{@h2}};
 @h3: {{@h3}};
 @h4: {{@h4}};
 @h5: {{@h5}};
 @h6: {{@h6}};
 
-// Subheadings
-
-@subHeadingColor: {{@subHeadingColor}};
-@subHeadingFontWeight: {{@subHeadingFontWeight}};
-
 
 /*------------------------------------*\
 	# Images
 \*------------------------------------*/
 
-@imagePath: {{@imagePath}};         // absolute or relative path
-@spriteFilename: {{@spriteFilename}}; // relative to image path above
+@imagePath: {{@imagePath}};
+@spriteFilename: {{@spriteFilename}};
 
 @retinaSpriteWidth: {{@retinaSpriteWidth}};
 @retinaSpriteHeight: {{@retinaSpriteHeight}};
@@ -109,12 +126,12 @@
 @imageMarginBottom: {{@imageMarginBottom}};
 @imageMarginSide: {{@imageMarginSide}};
 
-@retinaSuffix: {{@retinaSuffix}}; // retina filename suffix
+@retinaSuffix: {{@retinaSuffix}};
 
 // Figures
 
-@figureBorderColor: {{@figureBorderColor}}; // false to disable
-@figureRounded: {{@figureRounded}};          // false to disable
+@figureBorderColor: {{@figureBorderColor}};
+@figureRounded: {{@figureRounded}};
 
 @figurePadding: {{@figurePadding}};
 
@@ -134,9 +151,9 @@
 	# Fonts
 \*------------------------------------*/
 
-@fontPath: {{@fontPath}}; // absolute or relative path
+@fontPath: {{@fontPath}};
 
-@woff2Enabled: {{@woff2Enabled}}; // true to enable
+@woff2Enabled: {{@woff2Enabled}};
 
 
 /*------------------------------------*\
@@ -147,14 +164,14 @@
 @listLineHeight: {{@listLineHeight}};
 
 @listMarginBottom: {{@listMarginBottom}};
-@listMarginLeft: {{@listMarginLeft}}; // false to disable
+@listMarginLeft: {{@listMarginLeft}};
 
-@listBulletStyle: {{@listBulletStyle}};      // disc, circle, square, etc
-@listBulletPosition: {{@listBulletPosition}}; // inside or outside
+@listBulletStyle: {{@listBulletStyle}};
+@listBulletPosition: {{@listBulletPosition}};
 
 @nestedListMarginLeft: {{@nestedListMarginLeft}};
 
-@liMarginBottom: {{@liMarginBottom}}; // false to disable
+@liMarginBottom: {{@liMarginBottom}};
 
 // Description Lists
 
@@ -187,10 +204,6 @@
 @quoteFontStyle: {{@quoteFontStyle}};
 @quoteFontWeight: {{@quoteFontWeight}};
 @quoteLineHeight: {{@quoteLineHeight}};
-
-// DEPRECATED
-@quoteBorderColor: {{@quoteBorderColor}};
-@quoteBorderWidth: {{@quoteBorderWidth}}; // false to disable
 
 @quotePaddingHorizontal: {{@quotePaddingHorizontal}};
 @quotePaddingVertical: {{@quotePaddingVertical}};
@@ -246,11 +259,12 @@
 @markColor: {{@markColor}};
 @markBackground: {{@markBackground}};
 
+@defaultRadius: {{@defaultRadius}};
 @defaultOpacity: {{@defaultOpacity}};
 @defaultDuration: {{@defaultDuration}};
 @defaultTiming: {{@defaultTiming}};
 
-@abbrUnderline: {{@abbrUnderline}}; // dotted, solid, none
+@abbrUnderline: {{@abbrUnderline}};
 
 
 /*------------------------------------*\
@@ -280,8 +294,8 @@
 
 @codeBlockBackground: {{@codeBlockBackground}};
 
-@codeBlockBorderColor: {{@codeBlockBorderColor}}; // false to disable
-@codeBlockRounded: {{@codeBlockRounded}};         // false to disable
+@codeBlockBorderColor: {{@codeBlockBorderColor}};
+@codeBlockRounded: {{@codeBlockRounded}};
 
 @codeBlockPaddingHorizontal: {{@codeBlockPaddingHorizontal}};
 @codeBlockPaddingVertical: {{@codeBlockPaddingVertical}};
@@ -293,23 +307,21 @@
 
 // Inputs
 
-@inputEnableInnerShadow: {{@inputEnableInnerShadow}};
-@inputEnableFocusOuterShadow: {{@inputEnableFocusOuterShadow}};
-
 @inputColor: {{@inputColor}};
 @inputFont: {{@inputFont}};
 @inputFontSize: {{@inputFontSize}};
+@inputFontWeight: {{@inputFontWeight}};
 
 @inputBackground: {{@inputBackground}};
 
 @inputBorderColor: {{@inputBorderColor}};
 @inputBorderColorHover: {{@inputBorderColorHover}};
 @inputBorderColorFocus: {{@inputBorderColorFocus}};
-@inputBorderWidth: {{@inputBorderWidth}}; // false to disable
-@inputRounded: {{@inputRounded}}; // false to disable
+@inputBorderWidth: {{@inputBorderWidth}};
+@inputRounded: {{@inputRounded}};
 
-@inputMinWidth: {{@inputMinWidth}}; // false to disable
-@inputMinHeight: {{@inputMinHeight}}; // false to disable
+@inputMinWidth: {{@inputMinWidth}};
+@inputMinHeight: {{@inputMinHeight}};
 
 @inputPaddingHorizontal: {{@inputPaddingHorizontal}};
 @inputPaddingVertical: {{@inputPaddingVertical}};
@@ -327,7 +339,7 @@
 @inputBorderColorInvalid: {{@inputBorderColorInvalid}};
 @inputBorderColorInvalidHover: {{@inputBorderColorInvalidHover}};
 @inputBorderColorInvalidFocus: {{@inputBorderColorInvalidFocus}};
-@inputBorderWidthInvalid: {{@inputBorderWidthInvalid}}; // false to disable
+@inputBorderWidthInvalid: {{@inputBorderWidthInvalid}};
 
 // Required Inputs
 
@@ -338,7 +350,7 @@
 @inputBorderColorRequired: {{@inputBorderColorRequired}};
 @inputBorderColorRequiredHover: {{@inputBorderColorRequiredHover}};
 @inputBorderColorRequiredFocus: {{@inputBorderColorRequiredFocus}};
-@inputBorderWidthRequired: {{@inputBorderWidthRequired}}; // false to disable
+@inputBorderWidthRequired: {{@inputBorderWidthRequired}};
 
 // Disabled Inputs
 
@@ -346,7 +358,7 @@
 
 @inputBackgroundDisabled: {{@inputBackgroundDisabled}};
 
-@inputBorderWidthDisabled: {{@inputBorderWidthDisabled}}; // false to disable
+@inputBorderWidthDisabled: {{@inputBorderWidthDisabled}};
 
 @inputCursorDisabled: {{@inputCursorDisabled}};
 
@@ -363,7 +375,7 @@
 
 @textareaLineHeight: {{@textareaLineHeight}};
 @textareaMinHeight: {{@textareaMinHeight}};
-@textareaResize: {{@textareaResize}}; // none, horizontal, vertical, both
+@textareaResize: {{@textareaResize}};
 @textareaPaddingHorizontal: {{@textareaPaddingHorizontal}};
 @textareaPaddingVertical: {{@textareaPaddingVertical}};
 
@@ -400,11 +412,7 @@
 
 @buttonMarginBottom: {{@buttonMarginBottom}};
 
-@buttonBevelEnabled: {{@buttonBevelEnabled}};
-@buttonBevelColor: {{@buttonBevelColor}}; // dark, light
-@buttonBevelOpacity: {{@buttonBevelOpacity}};
-
-@buttonRounded: {{@buttonRounded}}; // false to disable
+@buttonRounded: {{@buttonRounded}};
 
 @buttonTransitionEnabled: {{@buttonTransitionEnabled}};
 
@@ -412,13 +420,13 @@
 @buttonBackgroundHover: {{@buttonBackgroundHover}};
 @buttonBackgroundActive: {{@buttonBackgroundActive}};
 
-@buttonBorderColor: {{@buttonBorderColor}}; // false to disable
+@buttonBorderColor: {{@buttonBorderColor}};
 
 // Colored Buttons
 
 @coloredButtonClassModifier: {{@coloredButtonClassModifier}};
 
-@coloredButtonColor: {{@coloredButtonColor}}; // font color
+@coloredButtonColor: {{@coloredButtonColor}};
 
 @coloredButtonBackground: {{@coloredButtonBackground}};
 @coloredButtonBackgroundHover: {{@coloredButtonBackgroundHover}};
@@ -443,9 +451,9 @@
 	# Tables
 \*------------------------------------*/
 
-@tableStyled: {{@tableStyled}};   // apply base styling by default
-@tableBordered: {{@tableBordered}}; // apply outer border by default
-@tableStriped: {{@tableStriped}};  // apply striping by default
+@tableStyled: {{@tableStyled}};
+@tableBordered: {{@tableBordered}};
+@tableStriped: {{@tableStriped}};
 
 @tableFontSize: {{@tableFontSize}};
 
@@ -473,4 +481,11 @@
 // Striping
 
 @tableStripedBackground: {{@tableStripedBackground}};
-@tableStripedPosition: {{@tableStripedPosition}}; // even, odd
+@tableStripedPosition: {{@tableStripedPosition}};
+
+
+/*------------------------------------*\
+	# Print
+\*------------------------------------*/
+
+@printPageMargin: {{@printPageMargin}};

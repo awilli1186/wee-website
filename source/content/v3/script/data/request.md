@@ -14,6 +14,7 @@ heading: Make Ajax request based on specified options
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
 | args | array | -- | Callback arguments appended after default parameters ||
+| cache | boolean | true | disable automatic cache-busting query string
 | complete | [function](/script/#functions) | -- | Complete callback ||
 | data | object | -- | Object to serialize and pass along with request ||
 | error | [function](/script/#functions) | -- | Failure callback ||

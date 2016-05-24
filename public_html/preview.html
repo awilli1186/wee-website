@@ -1,212 +1,320 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Customize Preview | Wee</title>
-
-	<link rel="stylesheet/less" href="/assets/modules/customize/wee.less">
-	<style>
-		body {
-			padding: 30px 0;
-		}
-	</style>
+	<title>Customize | Wee</title>
+	<link rel="stylesheet/less" href="/assets/less/wee.less">
 </head>
 <body>
-<div class="container">
-	<h2>Colors</h2>
-
-	<ol class="colors">
-		<li class="color --white">@white</li>
-		<li class="color --lightest-gray">@lightestGray</li>
-		<li class="color --lighter-gray">@lighterGray</li>
-		<li class="color --light-gray">@lightGray</li>
-		<li class="color --gray">@gray</li>
-		<li class="color --dark-gray">@darkGray</li>
-		<li class="color --darker-gray">@darkerGray</li>
-		<li class="color --darkest-gray">@darkestGray</li>
-		<li class="color --black">@black</li>
-	</ol>
-
-	<h2>Text Styling</h2>
-
-	<h1>H1 Heading</h1>
-	<h2>H2 Heading</h2>
-	<h3>H3 Heading</h3>
-	<h4>H4 Heading</h4>
-	<h5>H5 Heading</h5>
-	<h6>H6 Heading</h6>
-
-	<p>
-		Paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing
-		elit. Mauris id	ultrices tellus, sit amet finibus nulla. Proin
-		dapibus augue nec magna iaculis ultrices. Integer vestibulum at
-		neque eget faucibus. Aenean eget leo ac odio aliquet egestas. Mauris
-		sed justo sed justo mattis feugiat.
-	</p>
-	<p>
-		Pellentesque dapibus et mauris ut commodo. Curabitur commodo
-		volutpat libero sed sagittis. Aliquam placerat rhoncus tempor. Nunc
-		lobortis lacinia volutpat. Vivamus et ex vel augue sagittis euismod.
-	</p>
-
-	<blockquote>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		<cite>John Doe</cite>
-	</blockquote>
-
-	<address>
-		<strong>Address</strong><br>
-		123 Main Street<br>
-		City, ST 12345
-
-	</address>
-
-	<a href="#">Link style</a>
-
-	<ul>
-		<li>Unordered list
-			<ul>
-				<li>Unordered list</li>
-				<li>Unordered list
-					<ul>
-						<li>Unordered list</li>
-						<li>Unordered list</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-		<li>Unordered list</li>
-		<li>Unordered list</li>
-	</ul>
-	<ol>
-		<li>Ordered list
-			<ol>
-				<li>Ordered list</li>
-				<li>Ordered list
-					<ol>
-						<li>Ordered list</li>
-						<li>Ordered list</li>
-					</ol>
-				</li>
+	<div class="wrapper">
+		<div class="pattern">
+			<h2 class="pattern__title">Brand Colors</h2>
+			<ol class="swatches">
+				<li class="swatch -primary">@primary</li>
+				<li class="swatch -secondary">@secondary</li>
+				<li class="swatch -tertiary">@tertiary</li>
 			</ol>
-		</li>
-		<li>Ordered list</li>
-		<li>Ordered list</li>
-	</ol>
-	<dl>
-		<dt>Definition list title</dt>
-		<dd>Definition list item</dd>
-	</dl>
-	<pre><code>&lt;pre&gt;
-	&lt;code&gt;test code&lt;/code&gt;
-	&lt;/pre&gt;</code></pre>
-	<h2 class="heading">Image Styling</h2>
-	<hr class="hr">
-	<figure>
-		<figcaption><b>Fig. 3.2 |</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit by <a href="#">eiusmod tempor</a></figcaption>
-	</figure>
-	<h2 class="heading">Form Styling</h2>
-	<hr class="hr">
-	<form action="#" class="index-form">
-		<div class="index-form-split">
-			<div class="index-form-column">
-				<fieldset>
-					<legend>Text Input</legend>
-					<input type="email" name="name" placeholder="Email Address" required>
-					<div class="inline-field">
-						<label for="name2">Full Name</label>
-						<input type="text" name="name2" value="" placeholder="Your Name" id="name2" disabled>
-					</div>
-					<label for="textarea">Message</label>
-					<textarea name="textarea" id="textarea" rows="3" required></textarea>
-					<div class="inline-field">
-						<label for="textarea2">Inline Message</label>
-						<textarea name="textarea2" id="textarea2" rows="4" placeholder="Short message here..."></textarea>
-					</div>
-				</fieldset>
-			</div>
-			<div class="index-form-column">
-				<fieldset>
-					<legend>Selection</legend>
-					<select name="selection">
-						<option value="1">Lorem</option>
-						<option value="2">Ipsum</option>
-						<option value="3">Dolor</option>
-					</select>
-					<label for="multi-selection">Multiple Selection</label>
-					<select name="multi-selection" id="multi-selection" multiple>
-						<optgroup label="Grouping">
-							<option value="1">Lorem</option>
-							<option value="2">Ipsum</option>
-							<option value="3">Dolor</option>
-						</optgroup>
-					</select>
-					<div class="inline-field">
-						<label for="inline-selection">Inline Selection</label>
-						<select name="inline-selection" id="inline-selection" multiple>
-							<option value="1">Lorem</option>
-							<option value="2">Ipsum</option>
-							<option value="3">Dolor</option>
-						</select>
-					</div>
-					<div class="inline-field">
-						<input type="checkbox" name="checkbox" id="checkbox">
-						<label for="checkbox">Lorem ipsum dolor sit amet</label>
-					</div>
-					<div class="inline-field">
-						<input type="radio" name="radio" id="radio">
-						<label for="radio">Lorem ipsum dolor sit amet</label>
-					</div>
-					<div class="inline-field">
-						<input type="radio" name="radio" id="radio2">
-						<label for="radio2">Lorem ipsum dolor sit amet</label>
-					</div>
-				</fieldset>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Notice Colors</h2>
+			<ol class="swatches">
+				<li class="swatch -info">@info</li>
+				<li class="swatch -success">@success</li>
+				<li class="swatch -warning">@warning</li>
+			</ol>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Grayscale</h2>
+			<ol class="swatches">
+				<li class="swatch -white">@white</li>
+				<li class="swatch -lightest-gray">@lightestGray</li>
+				<li class="swatch -lighter-gray">@lighterGray</li>
+				<li class="swatch -light-gray">@lightGray</li>
+				<li class="swatch -gray">@gray</li>
+				<li class="swatch -dark-gray">@darkGray</li>
+				<li class="swatch -darker-gray">@darkerGray</li>
+				<li class="swatch -darkest-gray">@darkestGray</li>
+				<li class="swatch -black">@black</li>
+			</ol>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Code</h2>
+			<p>A <code>&lt;code&gt;</code> element wrapped in a <code>&lt;pre&gt;</code> element is used to generate code example blocks.</p>
+			<pre><code>.selector {
+	color: #ccc;
+}</code></pre>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Figure</h2>
+			<figure itemscope itemtype="http://schema.org/ImageObject">
+				<img src="https://placehold.it/1600x800" alt="Figure Image" itemprop="contentUrl">
+				<figcaption itemprop="description">
+					<b>Fig. 3.2</b> Lorem ipsum dolor sit amet by <a href="#">eiusmod tempor</a>
+				</figcaption>
+			</figure>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Table</h2>
+			<div class="responsive-table">
+				<table itemscope itemtype="http://schema.org/Table">
+					<caption itemprop="about">Caption ipsum dolor sit amet</caption>
+					<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>Lorem ipsum dolor</td>
+						<td>Lorem ipsum dolor</td>
+						<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum dolor</td>
+						<td>Lorem ipsum dolor</td>
+						<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+					</tr>
+					<tr>
+						<td>Lorem ipsum dolor</td>
+						<td>Lorem ipsum dolor</td>
+						<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+					</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
-		<input type="submit" value="Submit" class="button-colored">
-		<input type="reset" value="Clear">
-		<input type="submit" value="Disabled" disabled>
-	</form>
-	<h2 class="heading">Table Styling</h2>
-	<hr class="hr">
-	<table itemscope itemtype="http://schema.org/Table">
-		<caption itemprop="about">Caption</caption>
-		<thead>
-			<tr>
-				<th>Heading</th>
-				<th>Heading</th>
-				<th>Heading</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-			</tr>
-			<tr>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-				<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
-			</tr>
-		</tbody>
-		<tfoot>
-			<tr>
-				<td>Footer</td>
-				<td>Footer</td>
-				<td>Footer</td>
-			</tr>
-		</tfoot>
-	</table>
-</div>
 
-<script src="/assets/modules/customize/refresh.js"></script>
-<script>
-less = {
-	env: 'development',
-	logLevel: 1
-};
-</script>
-<script src="/assets/js/lib/vendor/less.min.js"></script>
+		<div class="pattern">
+			<h2 class="pattern__title">Buttons</h2>
+			<button>Standard</button>
+			<button class="button-colored">Colored</button>
+			<button disabled>Disabled</button>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Input fields</h2>
+			<input type="email" name="name" placeholder="Email address" required>
+
+			<label for="message">Message</label><textarea name="message" placeholder="Comment here..." id="message"></textarea>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Select fields</h2>
+			<select name="selection">
+				<option value="1">Lorem</option>
+				<option value="2">Ipsum</option>
+				<option value="3">Dolor</option>
+			</select>
+
+			<label for="multi-selection">Multiple Selection</label>
+			<select name="multi-selection" id="multi-selection" multiple>
+				<optgroup label="Grouping">
+					<option value="1">Lorem</option>
+					<option value="2">Ipsum</option>
+					<option value="3">Dolor</option>
+				</optgroup>
+			</select>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Description list</h2>
+			<dl>
+				<dt>Lorem ipsum dolor</dt>
+				<dd>Sit amet, consectetur adipiscing elit.</dd>
+				<dt>Lorem ipsum dolor</dt>
+				<dd>Sit amet, consectetur adipiscing elit.</dd>
+			</dl>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Ordered list</h2>
+			<ol>
+				<li>Lorem ipsum dolor
+					<ol>
+						<li>Lorem ipsum dolor
+							<ul>
+								<li>Lorem ipsum dolor</li>
+							</ul>
+						</li>
+						<li>Lorem ipsum dolor
+							<ol>
+								<li>Lorem ipsum dolor</li>
+								<li>Lorem ipsum dolor</li>
+							</ol>
+						</li>
+					</ol>
+				</li>
+				<li>Lorem ipsum dolor</li>
+				<li>Lorem ipsum dolor</li>
+			</ol>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Unordered list</h2>
+			<ul>
+				<li>Lorem ipsum dolor
+					<ul>
+						<li>Lorem ipsum dolor
+							<ul>
+								<li>Lorem ipsum dolor</li>
+								<li>Lorem ipsum dolor</li>
+							</ul>
+						</li>
+						<li>Lorem ipsum dolor
+							<ol>
+								<li>Lorem ipsum dolor</li>
+								<li>Lorem ipsum dolor</li>
+							</ol>
+						</li>
+					</ul>
+				</li>
+				<li>Lorem ipsum dolor</li>
+				<li>Lorem ipsum dolor</li>
+			</ul>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Typography</h2>
+			<div class="responsive-table">
+				<table class="tabular fonts">
+					<tbody>
+					<tr>
+						<th scope="row">Base</th>
+						<td>@baseFont</td>
+						<td class="fonts__family -base"></td>
+					</tr>
+					<tr>
+						<th scope="row">Heading</th>
+						<td>@headingFont</td>
+						<td class="fonts__family -heading"></td>
+					</tr>
+					<tr>
+						<th scope="row">Description Title</th>
+						<td>@dtFont</td>
+						<td class="fonts__family -description-title"></td>
+					</tr>
+					<tr>
+						<th scope="row">Description</th>
+						<td>@ddFont</td>
+						<td class="fonts__family -description"></td>
+					</tr>
+					<tr>
+						<th scope="row">Quote</th>
+						<td>@quoteFont</td>
+						<td class="fonts__family -quote"></td>
+					</tr>
+					<tr>
+						<th scope="row">Cite</th>
+						<td>@citeFont</td>
+						<td class="fonts__family -cite"></td>
+					</tr>
+					<tr>
+						<th scope="row">Address</th>
+						<td>@addressFont</td>
+						<td class="fonts__family -address"></td>
+					</tr>
+					<tr>
+						<th scope="row">Code</th>
+						<td>@codeFont</td>
+						<td class="fonts__family -code"></td>
+					</tr>
+					<tr>
+						<th scope="row">Code Block</th>
+						<td>@codeBlockFont</td>
+						<td class="fonts__family -code-block"></td>
+					</tr>
+					<tr>
+						<th scope="row">Input</th>
+						<td>@inputFont</td>
+						<td class="fonts__family -input"></td>
+					</tr>
+					<tr>
+						<th scope="row">Legend</th>
+						<td>@legendFont</td>
+						<td class="fonts__family -legend"></td>
+					</tr>
+					<tr>
+						<th scope="row">Button</th>
+						<td>@buttonFont</td>
+						<td class="fonts__family -button"></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Headings</h2>
+			<h1>Heading <code>&lt;h1&gt;</code></h1>
+			<h2>Heading <code>&lt;h2&gt;</code></h2>
+			<h3>Heading <code>&lt;h3&gt;</code></h3>
+			<h4>Heading <code>&lt;h4&gt;</code></h4>
+			<h5>Heading <code>&lt;h5&gt;</code></h5>
+			<h6>Heading <code>&lt;h6&gt;</code></h6>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Paragraph</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nibh sapien, porttitor non nibh et, sodales cursus est. Cras nec tristique sem. Nam ex nulla, sagittis a facilisis ac, suscipit at justo. Etiam lectus massa, aliquam ornare ligula quis, tempus dictum odio. Duis ac porttitor sapien. Nulla a nibh in libero imperdiet tempor gravida non magna. Nullam pulvinar nibh sit amet blandit iaculis.</p>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Inline</h2>
+			<ul class="unstyled">
+				<li><a href="#">This is a simple link</a></li>
+				<li><strong>Strong defines important text</strong></li>
+				<li><em>The em tag renders as emphasized text</em></li>
+				<li>The <b>b tag</b> visually weights text without added importance</li>
+				<li>The <i>i tag</i> visually differentiates text without emphasis</li>
+				<li>The <u>u tag</u> renders text with an underline</li>
+				<li><s>This text has a strikethrough</s></li>
+				<li><del>This is deleted text</del> and <ins>this text is inserted</ins></li>
+				<li>Superscript<sup>&trade;</sup></li>
+				<li>Subscript for things like H<sub>2</sub>O</li>
+				<li><small>Small text is small for fine print</small></li>
+				<li><abbr title="Cascading Style Sheets">CSS</abbr> is a style sheet language</li>
+				<li><q cite="https://www.weepower.com">This inline quote has a cite reference</q></li>
+				<li><cite>This is a citation</cite></li>
+				<li>The <dfn>dfn tag</dfn> renders a definition</li>
+				<li>The <mark>mark tag</mark> highlights specific text</li>
+				<li>Styling <code>inline code</code> is easy</li>
+				<li><samp>This is sample output</samp></li>
+				<li>The variable element, such as <var>x</var> / <var>y</var> = <var>z</var></li>
+				<li>The relative time is <time datetime="2014-02-14T08:00">2 weeks</time></li>
+			</ul>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Address</h2>
+			<address itemscope itemtype="http://schema.org/PostalAddress">
+				<strong itemprop="name">Company Name</strong><br>
+				<span itemprop="streetAddress">123 Main Street</span><br>
+				<span itemprop="addressLocality">City</span>, <abbr title="State" itemprop="addressRegion">ST</abbr> <span itemprop="postalCode">12345</span>
+			</address>
+		</div>
+
+		<div class="pattern">
+			<h2 class="pattern__title">Blockquote</h2>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ullamcorper bibendum nisl, eu aliquam libero luctus in. Cras eleifend, arcu ut varius suscipit, sem purus vehicula tortor, et iaculis ligula magna et magna. Integer et lacus enim.</p>
+				<cite><a href="#">John Doe</a></cite>
+			</blockquote>
+		</div>
+	</div>
+
+	<script src="/assets/modules/customize/refresh.js"></script>
+	<script>
+	less = {
+		env: 'development',
+		logLevel: 1
+	};
+	</script>
+	<script src="/assets/js/lib/vendor/less.min.js"></script>
 </body>
 </html>

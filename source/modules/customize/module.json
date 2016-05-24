@@ -5,16 +5,12 @@
 	"homepage": "https://www.weepower.com",
 	"author": "Wee",
 	"autoload": false,
-	"data": {
-
-	},
-	"style": {
-
-	},
 	"script": {
-
+		"compile": {
+			"refresh.js": "js/refresh.js"
+		}
 	},
 	"dependencies": {
-		"wee": "^2.3.0"
+		"wee": "^3.3.1"
 	}
 }
