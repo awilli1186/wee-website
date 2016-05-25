@@ -13,7 +13,7 @@ heading: Get inner HTML of first selection or set each matching selection's HTML
 ---code---
 
 ```html
-<div class="ref:element"><h1>Heading</h1></div>
+<div data-ref="element"><h1>Heading</h1></div>
 ```
 
 ---code|type:string|modifier:split|label:Get---
