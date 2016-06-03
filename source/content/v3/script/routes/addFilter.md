@@ -13,15 +13,15 @@ heading: Add conditional route filter
 ---code|label:Single---
 
 ```javascript
-Wee.animate.addFilter('isInternal', function(t) {
-	return t / 2;
+Wee.routes.addFilter('isInternal', function(seg) {
+	return ['admin', 'protected'].indexOf(seg) > -1;
 });
 ```
 
 ---code|label:Multiple---
 
 ```javascript
-Wee.routes.addRoute({
+Wee.routes.addFilter({
 	isInternal: function(seg) {
 		return ['admin', 'protected'].indexOf(seg) > -1;
 	},
