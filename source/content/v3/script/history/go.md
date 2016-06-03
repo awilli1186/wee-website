@@ -38,8 +38,10 @@ Wee.history.go({
 Wee.history.go({
 	path: '/page/path',
 	partials: '.element',
-	complete: function() {
-		// Complete logic
+	request: {
+		complete: function() {
+			// Complete logic
+		}
 	}
 });
 ```
