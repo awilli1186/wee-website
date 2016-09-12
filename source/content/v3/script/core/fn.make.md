@@ -12,6 +12,13 @@ Controllers serve as the wrapper for custom script. They can be created per page
 | name | string | -- | Controller name | ✔ |
 | pub | object | -- | Public methods and properties | ✔ |
 | priv | object | -- | Private methods and properties ||
+| options | object | -- | Object properties below ||
+
+---variables|label:Options Object---
+
+| Variable | Type | Default | Description | Required |
+| -- | -- | -- | -- | -- |
+| args | object | -- | passed to _construct method (both public and private) if defined ||
 
 ---code|label:Public---
 
@@ -92,6 +99,51 @@ Wee.fn.make('controllerName', {
 });
 ```
 
+---note---
+
+**Note:** You can pass a config object to controller constructors.
+
+---code|modifier:split---
+
+```javascript
+Wee.fn.make('controllerName', {
+	_construct: function(options) {
+		this.publicVar = options.publicVar;
+	}
+}, {
+	_construct: function(options) {
+		this.privateVar = options.privateVar;
+	}
+}, {
+	args: {
+		publicVar: 'public',
+		privateVar: 'private'
+	}
+});
+
+console.log(Wee.controllerName.publicVar);
+console.log(Wee.controllerName.privateVar);
+```
+
+```
+'public'
+'private'
+```
+
+---code|modifier:split---
+
+```javascript
+var instance = Wee.fn.controllerName({
+	publicVar: 'another public'
+});
+
+console.log(instance.publicVar);
+```
+
+```
+'another public'
+```
+
 ---code|label:Destructor---
 
 The destruct method is executed to perform additional clean up or other actions when the controller is destroyed using `this.$destroy()` or `Wee.controllerName.$destroy()` outside the controller.
@@ -114,14 +166,14 @@ You can easily leverage existing controllers to extend into new controllers by u
 
 ```javascript
 Wee.fn.make('parentName', {
-	_construct: function() {
-		// Base construct logic
+	base: function() {
+		// Base logic
 	}
 });
 
 Wee.fn.make('childName:parentName', {
 	init: function() {
-		// Child init logic
+		this.base();
 	}
 });
 ```
