@@ -9,13 +9,16 @@
 		fs = require('fs');
 
 	module.exports = function(config) {
-		var auth = 'Basic ' +
-				new Buffer(config.args.user + ':' + config.args.pass)
-					.toString('base64'),
+		var auth = 'Basic ' + new Buffer(config.args.user + ':' + config.args.pass)
+				.toString('base64'),
+			twoFactorPass = config.args.twoFactor,
 			apiResponses = {},
 			hostname = 'api.github.com',
 			contentPath = '/repos/weepower/wee-core/contents/',
 			branch = config.args.branch || 'master';
+
+		// TODO: Add 'getAuth' method that will conditionally add access token as
+		// TODO: authorization header value. Tried once and failed. Resorted to twoFactor.
 
 		var getData = function(options, callback) {
 			server.get(options, function(res) {
@@ -123,7 +126,8 @@
 			path: '/repos/weepower/wee-core/git/refs/heads/' + branch,
 			headers: {
 				'user-agent': 'weepower',
-				'authorization': auth
+				'authorization': auth,
+				'X-GitHub-OTP': twoFactorPass
 			}
 		}, function(data) {
 			var treePath = '/repos/weepower/wee-core/git/trees/' +
@@ -139,7 +143,8 @@
 				path: treePath,
 				headers: {
 					'user-agent': 'weepower',
-					'authorization': auth
+					'authorization': auth,
+					'X-GitHub-OTP': twoFactorPass
 				}
 			}, function(data) {
 				var filePaths = {
@@ -190,7 +195,8 @@
 						headers: {
 							'user-agent': 'weepower',
 							'authorization': auth,
-							'Accept': 'application/vnd.github.v3.raw+json'
+							'Accept': 'application/vnd.github.v3.raw+json',
+							'X-GitHub-OTP': twoFactorPass
 						}
 					}, function(data) {
 						var segments = path.split('/'),
