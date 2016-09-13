@@ -18,7 +18,8 @@ Controllers serve as the wrapper for custom script. They can be created per page
 
 | Variable | Type | Default | Description | Required |
 | -- | -- | -- | -- | -- |
-| args | object | -- | passed to _construct method (both public and private) if defined ||
+| args | object | -- | Passed to _construct method (both public and private) if defined ||
+| instance | boolean | true | Instructs make method to instantiate controller ||
 
 ---code|label:Public---
 
